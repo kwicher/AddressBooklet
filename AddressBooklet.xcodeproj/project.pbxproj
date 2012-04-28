@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D548C93C154CB0FD00501B41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D548C93B154CB0FD00501B41 /* Cocoa.framework */; };
+		D548C93E154CB0FD00501B41 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D548C93D154CB0FD00501B41 /* MacRuby.framework */; };
+		D548C945154CB0FD00501B41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D548C943154CB0FD00501B41 /* InfoPlist.strings */; };
+		D548C947154CB0FD00501B41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D548C946154CB0FD00501B41 /* main.m */; };
+		D548C94C154CB0FD00501B41 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D548C94A154CB0FD00501B41 /* MainMenu.xib */; };
+		D548C94F154CB0FD00501B41 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = D548C94E154CB0FD00501B41 /* rb_main.rb */; };
+		D548C951154CB0FD00501B41 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = D548C950154CB0FD00501B41 /* AppDelegate.rb */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D548C937154CB0FD00501B41 /* AddressBooklet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressBooklet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D548C93B154CB0FD00501B41 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D548C93D154CB0FD00501B41 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
+		D548C942154CB0FD00501B41 /* AddressBooklet-Info.plist */ = {isa = PBXFileReference; path = "AddressBooklet-Info.plist"; sourceTree = "<group>"; };
+		D548C944154CB0FD00501B41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D548C946154CB0FD00501B41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D548C948154CB0FD00501B41 /* AddressBooklet-Prefix.pch */ = {isa = PBXFileReference; path = "AddressBooklet-Prefix.pch"; sourceTree = "<group>"; };
+		D548C94B154CB0FD00501B41 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D548C94E154CB0FD00501B41 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		D548C950154CB0FD00501B41 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D548C934154CB0FD00501B41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D548C93C154CB0FD00501B41 /* Cocoa.framework in Frameworks */,
+				D548C93E154CB0FD00501B41 /* MacRuby.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D548C92C154CB0FC00501B41 = {
+			isa = PBXGroup;
+			children = (
+				D548C940154CB0FD00501B41 /* AddressBooklet */,
+				D548C93A154CB0FD00501B41 /* Frameworks */,
+				D548C938154CB0FD00501B41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D548C938154CB0FD00501B41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D548C937154CB0FD00501B41 /* AddressBooklet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D548C93A154CB0FD00501B41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D548C93B154CB0FD00501B41 /* Cocoa.framework */,
+				D548C93D154CB0FD00501B41 /* MacRuby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D548C940154CB0FD00501B41 /* AddressBooklet */ = {
+			isa = PBXGroup;
+			children = (
+				D548C950154CB0FD00501B41 /* AppDelegate.rb */,
+				D548C949154CB0FD00501B41 /* Resources */,
+				D548C94D154CB0FD00501B41 /* Other Sources */,
+				D548C941154CB0FD00501B41 /* Supporting Files */,
+			);
+			path = AddressBooklet;
+			sourceTree = "<group>";
+		};
+		D548C941154CB0FD00501B41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D548C942154CB0FD00501B41 /* AddressBooklet-Info.plist */,
+				D548C943154CB0FD00501B41 /* InfoPlist.strings */,
+				D548C946154CB0FD00501B41 /* main.m */,
+				D548C948154CB0FD00501B41 /* AddressBooklet-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D548C949154CB0FD00501B41 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D548C94A154CB0FD00501B41 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D548C94D154CB0FD00501B41 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D548C94E154CB0FD00501B41 /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		D548C93F154CB0FD00501B41 /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed";
+			buildConfigurationList = D548C957154CB0FD00501B41 /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			dependencies = (
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		D548C936154CB0FD00501B41 /* AddressBooklet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D548C954154CB0FD00501B41 /* Build configuration list for PBXNativeTarget "AddressBooklet" */;
+			buildPhases = (
+				D548C933154CB0FD00501B41 /* Sources */,
+				D548C934154CB0FD00501B41 /* Frameworks */,
+				D548C935154CB0FD00501B41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AddressBooklet;
+			productName = AddressBooklet;
+			productReference = D548C937154CB0FD00501B41 /* AddressBooklet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D548C92E154CB0FC00501B41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = MiK;
+			};
+			buildConfigurationList = D548C931154CB0FC00501B41 /* Build configuration list for PBXProject "AddressBooklet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D548C92C154CB0FC00501B41;
+			productRefGroup = D548C938154CB0FD00501B41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D548C936154CB0FD00501B41 /* AddressBooklet */,
+				D548C93F154CB0FD00501B41 /* Deployment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D548C935154CB0FD00501B41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D548C945154CB0FD00501B41 /* InfoPlist.strings in Resources */,
+				D548C94C154CB0FD00501B41 /* MainMenu.xib in Resources */,
+				D548C94F154CB0FD00501B41 /* rb_main.rb in Resources */,
+				D548C951154CB0FD00501B41 /* AppDelegate.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D548C933154CB0FD00501B41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D548C947154CB0FD00501B41 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D548C943154CB0FD00501B41 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D548C944154CB0FD00501B41 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D548C94A154CB0FD00501B41 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D548C94B154CB0FD00501B41 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D548C952154CB0FD00501B41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D548C953154CB0FD00501B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D548C955154CB0FD00501B41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AddressBooklet/AddressBooklet-Prefix.pch";
+				INFOPLIST_FILE = "AddressBooklet/AddressBooklet-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D548C956154CB0FD00501B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AddressBooklet/AddressBooklet-Prefix.pch";
+				INFOPLIST_FILE = "AddressBooklet/AddressBooklet-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D548C958154CB0FD00501B41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		D548C959154CB0FD00501B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D548C931154CB0FC00501B41 /* Build configuration list for PBXProject "AddressBooklet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D548C952154CB0FD00501B41 /* Debug */,
+				D548C953154CB0FD00501B41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D548C954154CB0FD00501B41 /* Build configuration list for PBXNativeTarget "AddressBooklet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D548C955154CB0FD00501B41 /* Debug */,
+				D548C956154CB0FD00501B41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D548C957154CB0FD00501B41 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D548C958154CB0FD00501B41 /* Debug */,
+				D548C959154CB0FD00501B41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D548C92E154CB0FC00501B41 /* Project object */;
+}
