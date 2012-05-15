@@ -7,26 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D5447D371555E1C8009F38EA /* MyElementView.rb in Resources */ = {isa = PBXBuildFile; fileRef = D5447D361555E1C7009F38EA /* MyElementView.rb */; };
 		D548C93C154CB0FD00501B41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D548C93B154CB0FD00501B41 /* Cocoa.framework */; };
 		D548C93E154CB0FD00501B41 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D548C93D154CB0FD00501B41 /* MacRuby.framework */; };
 		D548C945154CB0FD00501B41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D548C943154CB0FD00501B41 /* InfoPlist.strings */; };
 		D548C947154CB0FD00501B41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D548C946154CB0FD00501B41 /* main.m */; };
-		D548C94C154CB0FD00501B41 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D548C94A154CB0FD00501B41 /* MainMenu.xib */; };
 		D548C94F154CB0FD00501B41 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = D548C94E154CB0FD00501B41 /* rb_main.rb */; };
 		D548C951154CB0FD00501B41 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = D548C950154CB0FD00501B41 /* AppDelegate.rb */; };
+		D548C95B154CB1C400501B41 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D548C95A154CB1C400501B41 /* AddressBook.framework */; };
+		D548C990154D700F00501B41 /* SearchWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D548C98F154D700F00501B41 /* SearchWindow.xib */; };
+		D548C992154D702700501B41 /* SearchWindow.rb in Resources */ = {isa = PBXBuildFile; fileRef = D548C991154D702700501B41 /* SearchWindow.rb */; };
+		D5A6D5D0154E03520055F524 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A6D5CF154E03520055F524 /* MainMenu.xib */; };
+		D5A6D5D2154E07EF0055F524 /* ResultsTableController.rb in Resources */ = {isa = PBXBuildFile; fileRef = D5A6D5D1154E07EF0055F524 /* ResultsTableController.rb */; };
+		D5A6D5D9154F67E70055F524 /* ShareDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = D5A6D5D8154F67E70055F524 /* ShareDelegate.rb */; };
+		D5C6ADA81561C336007710C8 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C6ADA71561C336007710C8 /* CoreFoundation.framework */; };
+		D5C6ADAA1561C874007710C8 /* AB_icons.icns in Resources */ = {isa = PBXBuildFile; fileRef = D5C6ADA91561C874007710C8 /* AB_icons.icns */; };
+		D5E21EA7155F1045002CD21D /* Info.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5E21EA6155F1045002CD21D /* Info.xib */; };
+		D5E21EAA155F1371002CD21D /* AB_icons.icns in Resources */ = {isa = PBXBuildFile; fileRef = D5E21EA9155F1371002CD21D /* AB_icons.icns */; };
+		D5E21EB0155F3272002CD21D /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5E21EAF155F3272002CD21D /* Settings.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D5447D361555E1C7009F38EA /* MyElementView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = MyElementView.rb; sourceTree = "<group>"; };
 		D548C937154CB0FD00501B41 /* AddressBooklet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressBooklet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D548C93B154CB0FD00501B41 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D548C93D154CB0FD00501B41 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
-		D548C942154CB0FD00501B41 /* AddressBooklet-Info.plist */ = {isa = PBXFileReference; path = "AddressBooklet-Info.plist"; sourceTree = "<group>"; };
+		D548C942154CB0FD00501B41 /* AddressBooklet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AddressBooklet-Info.plist"; sourceTree = "<group>"; };
 		D548C944154CB0FD00501B41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D548C946154CB0FD00501B41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D548C948154CB0FD00501B41 /* AddressBooklet-Prefix.pch */ = {isa = PBXFileReference; path = "AddressBooklet-Prefix.pch"; sourceTree = "<group>"; };
-		D548C94B154CB0FD00501B41 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D548C948154CB0FD00501B41 /* AddressBooklet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AddressBooklet-Prefix.pch"; sourceTree = "<group>"; };
 		D548C94E154CB0FD00501B41 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		D548C950154CB0FD00501B41 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		D548C95A154CB1C400501B41 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		D548C98F154D700F00501B41 /* SearchWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchWindow.xib; sourceTree = "<group>"; };
+		D548C991154D702700501B41 /* SearchWindow.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = SearchWindow.rb; sourceTree = "<group>"; };
+		D598DDBE156080AC0097C7C9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D5A6D5CF154E03520055F524 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		D5A6D5D1154E07EF0055F524 /* ResultsTableController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ResultsTableController.rb; sourceTree = "<group>"; };
+		D5A6D5D8154F67E70055F524 /* ShareDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ShareDelegate.rb; sourceTree = "<group>"; };
+		D5C6ADA71561C336007710C8 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		D5C6ADA91561C874007710C8 /* AB_icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AB_icons.icns; sourceTree = "<group>"; };
+		D5E21EA6155F1045002CD21D /* Info.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Info.xib; sourceTree = "<group>"; };
+		D5E21EA9155F1371002CD21D /* AB_icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AB_icons.icns; sourceTree = "<group>"; };
+		D5E21EAF155F3272002CD21D /* Settings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5C6ADA81561C336007710C8 /* CoreFoundation.framework in Frameworks */,
+				D548C95B154CB1C400501B41 /* AddressBook.framework in Frameworks */,
 				D548C93C154CB0FD00501B41 /* Cocoa.framework in Frameworks */,
 				D548C93E154CB0FD00501B41 /* MacRuby.framework in Frameworks */,
 			);
@@ -45,6 +70,7 @@
 		D548C92C154CB0FC00501B41 = {
 			isa = PBXGroup;
 			children = (
+				D5C6ADA91561C874007710C8 /* AB_icons.icns */,
 				D548C940154CB0FD00501B41 /* AddressBooklet */,
 				D548C93A154CB0FD00501B41 /* Frameworks */,
 				D548C938154CB0FD00501B41 /* Products */,
@@ -62,6 +88,9 @@
 		D548C93A154CB0FD00501B41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5C6ADA71561C336007710C8 /* CoreFoundation.framework */,
+				D598DDBE156080AC0097C7C9 /* AppKit.framework */,
+				D548C95A154CB1C400501B41 /* AddressBook.framework */,
 				D548C93B154CB0FD00501B41 /* Cocoa.framework */,
 				D548C93D154CB0FD00501B41 /* MacRuby.framework */,
 			);
@@ -72,6 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				D548C950154CB0FD00501B41 /* AppDelegate.rb */,
+				D548C991154D702700501B41 /* SearchWindow.rb */,
+				D5A6D5D1154E07EF0055F524 /* ResultsTableController.rb */,
+				D5447D361555E1C7009F38EA /* MyElementView.rb */,
 				D548C949154CB0FD00501B41 /* Resources */,
 				D548C94D154CB0FD00501B41 /* Other Sources */,
 				D548C941154CB0FD00501B41 /* Supporting Files */,
@@ -93,7 +125,12 @@
 		D548C949154CB0FD00501B41 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D548C94A154CB0FD00501B41 /* MainMenu.xib */,
+				D5E21EA9155F1371002CD21D /* AB_icons.icns */,
+				D548C98F154D700F00501B41 /* SearchWindow.xib */,
+				D5E21EAF155F3272002CD21D /* Settings.xib */,
+				D5E21EA6155F1045002CD21D /* Info.xib */,
+				D5A6D5CF154E03520055F524 /* MainMenu.xib */,
+				D5A6D5D8154F67E70055F524 /* ShareDelegate.rb */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -111,11 +148,12 @@
 /* Begin PBXLegacyTarget section */
 		D548C93F154CB0FD00501B41 /* Deployment */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "--compile --embed";
+			buildArgumentsString = "--compile --embed --bs";
 			buildConfigurationList = D548C957154CB0FD00501B41 /* Build configuration list for PBXLegacyTarget "Deployment" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/local/bin/macruby_deploy;
+			buildWorkingDirectory = "";
 			dependencies = (
 			);
 			name = Deployment;
@@ -148,7 +186,7 @@
 		D548C92E154CB0FC00501B41 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = MiK;
 			};
 			buildConfigurationList = D548C931154CB0FC00501B41 /* Build configuration list for PBXProject "AddressBooklet" */;
@@ -175,9 +213,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D548C945154CB0FD00501B41 /* InfoPlist.strings in Resources */,
-				D548C94C154CB0FD00501B41 /* MainMenu.xib in Resources */,
 				D548C94F154CB0FD00501B41 /* rb_main.rb in Resources */,
 				D548C951154CB0FD00501B41 /* AppDelegate.rb in Resources */,
+				D548C990154D700F00501B41 /* SearchWindow.xib in Resources */,
+				D548C992154D702700501B41 /* SearchWindow.rb in Resources */,
+				D5A6D5D0154E03520055F524 /* MainMenu.xib in Resources */,
+				D5A6D5D2154E07EF0055F524 /* ResultsTableController.rb in Resources */,
+				D5A6D5D9154F67E70055F524 /* ShareDelegate.rb in Resources */,
+				D5447D371555E1C8009F38EA /* MyElementView.rb in Resources */,
+				D5E21EA7155F1045002CD21D /* Info.xib in Resources */,
+				D5E21EAA155F1371002CD21D /* AB_icons.icns in Resources */,
+				D5E21EB0155F3272002CD21D /* Settings.xib in Resources */,
+				D5C6ADAA1561C874007710C8 /* AB_icons.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,14 +248,6 @@
 				D548C944154CB0FD00501B41 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		D548C94A154CB0FD00501B41 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D548C94B154CB0FD00501B41 /* en */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -262,15 +301,21 @@
 		D548C955154CB0FD00501B41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 				);
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AddressBooklet/AddressBooklet-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "AddressBooklet/AddressBooklet-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -278,15 +323,20 @@
 		D548C956154CB0FD00501B41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 				);
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AddressBooklet/AddressBooklet-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "AddressBooklet/AddressBooklet-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -322,6 +372,7 @@
 				D548C956154CB0FD00501B41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D548C957154CB0FD00501B41 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
 			isa = XCConfigurationList;
@@ -330,6 +381,7 @@
 				D548C959154CB0FD00501B41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
