@@ -6,7 +6,7 @@
 #  Copyright 2012 MiK. All rights reserved.
 #
 
-
+#Class for the table cell used as a table row
 class ResultCell < NSTableCellView
     #Table cell attributes
     attr_accessor :name
@@ -15,6 +15,8 @@ class ResultCell < NSTableCellView
     attr_accessor :table    
   
     #========
+    
+    #Show/hide the details popover in the response to mouse events
     def mouseEntered(theEvent)
         point = superview.superview.convertPoint(theEvent.locationInWindow, fromView:nil)
         @row=superview
@@ -32,13 +34,16 @@ class ResultCell < NSTableCellView
             @row.setBackgroundColor(NSColor.whiteColor)
             @table.setNeedsDisplayInRect(@row.frame)
         end
-
-    end
-    def mouseMoved(theEvent)
     end
     
-end
+    def mouseMoved(theEvent)
+    end
+    #========
 
+end
+#========
+
+#Controller for the table diplaying filtered results
 class ResultsTableController
     attr_accessor :results
     attr_accessor :results_view
@@ -48,37 +53,40 @@ class ResultsTableController
     attr_accessor :searchField
     attr_accessor :personId
 
+    
     def initialize
+
+        #Listen to the notifications about the current filtering results
         NSNotificationCenter.defaultCenter.addObserver(self,selector:"receiveNotification:", name:"viewControllerCNotification",object:@results)
+        #========
+
         @results=[]
 
         
     end
+    
+    #Update rows in the table with the current filtered results
     def receiveNotification(notification)
         @results = notification.object
-        updateResults
-    end
-    def updateResults
         @results_view.reloadData
     end
-        
+    #========
+    
     def awakeFromNib
         
         @results_view.dataSource = self
         @results_view.target=self
         @results_view.doubleAction="showInfo:"  
+        @results_view.action=nil
 
         
     end
    
     def numberOfRowsInTableView(view)
-        
         @results.size
-        
-                
     end
-
-
+    
+    #Setup the table view cell and define the mouse event tracking area
     def tableView(view, viewForTableColumn:column, row:index)
         
         cell=view.makeViewWithIdentifier(column.identifier, owner:self)
@@ -88,13 +96,18 @@ class ResultsTableController
         cell.parent=self
         return cell
     end
+    #========
+    
+    #Open AddressBook application
     def openAddressbook(sender)
         url = NSString.stringWithFormat("addressbook://%@", @personId)
         NSWorkspace.sharedWorkspace.openURL(NSURL.URLWithString(url))
         closeInfo(self)
         NSApp.delegate.hideSearch(nil)
     end
+    #========
 
+    #Display/hide the popover with the details
     def showInfo(theRow,rowNo)
             
         infoPopUp.showRelativeToRect(theRow,ofView:results_view, preferredEdge:NSMinXEdge)  
@@ -110,9 +123,11 @@ class ResultsTableController
         person.valueForProperty(KABPhoneProperty)? infoPopUp.phone.value.setStringValue(person.valueForProperty(KABPhoneProperty).valueAtIndex(0)) : infoPopUp.phone.value.setStringValue("-----")
         
     end
+  
     def closeInfo(sender)
         infoPopUp.close
     end
-    
+    #========
     
 end
+#========

@@ -15,6 +15,8 @@ class ResultCell < NSTableCellView
     attr_accessor :table    
   
     #========
+    
+    #Show/hide the details popover
     def mouseEntered(theEvent)
         point = superview.superview.convertPoint(theEvent.locationInWindow, fromView:nil)
         @row=superview
@@ -36,7 +38,8 @@ class ResultCell < NSTableCellView
     end
     def mouseMoved(theEvent)
     end
-    
+    #========
+
 end
 
 class ResultsTableController
@@ -48,17 +51,17 @@ class ResultsTableController
     attr_accessor :searchField
     attr_accessor :personId
 
+    
     def initialize
+        #Listen to the notifications about the current filtering results
         NSNotificationCenter.defaultCenter.addObserver(self,selector:"receiveNotification:", name:"viewControllerCNotification",object:@results)
         @results=[]
 
         
     end
+    
     def receiveNotification(notification)
         @results = notification.object
-        updateResults
-    end
-    def updateResults
         @results_view.reloadData
     end
         
@@ -67,6 +70,7 @@ class ResultsTableController
         @results_view.dataSource = self
         @results_view.target=self
         @results_view.doubleAction="showInfo:"  
+        @results_view.action=nil
 
         
     end
@@ -74,11 +78,10 @@ class ResultsTableController
     def numberOfRowsInTableView(view)
         
         @results.size
-        
-                
+    
     end
-
-
+    
+    #Setup the table view cell and define the mouse event tracking area
     def tableView(view, viewForTableColumn:column, row:index)
         
         cell=view.makeViewWithIdentifier(column.identifier, owner:self)
@@ -88,12 +91,16 @@ class ResultsTableController
         cell.parent=self
         return cell
     end
+    
+    #Open AddressBook application
     def openAddressbook(sender)
         url = NSString.stringWithFormat("addressbook://%@", @personId)
         NSWorkspace.sharedWorkspace.openURL(NSURL.URLWithString(url))
         closeInfo(self)
         NSApp.delegate.hideSearch(nil)
     end
+    #========
+
 
     def showInfo(theRow,rowNo)
             
