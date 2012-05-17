@@ -3,22 +3,22 @@ v5
 r1
 cCheck dependencies
 cProcessInfoPlistFile /Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app/Contents/Info.plist AddressBooklet/AddressBooklet-Info.plist
-cCompileC build/AddressBooklet.build/Debug/AddressBooklet.build/Objects-normal/x86_64/AddressBooklet_vers.o /Users/kwicher/github/AddressBooklet/build/AddressBooklet.build/Debug/AddressBooklet.build/DerivedSources/AddressBooklet_vers.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
 cProcessPCH /var/folders/mt/bwcx6f_j5ks82skkslg6wrbw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AddressBooklet-Prefix-hdqtelfuyrosuhdryjlmwafstveq/AddressBooklet-Prefix.pch.pth AddressBooklet/AddressBooklet-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/AddressBooklet.build/Debug/AddressBooklet.build/Objects-normal/x86_64/AddressBooklet_vers.o /Users/kwicher/github/AddressBooklet/build/AddressBooklet.build/Debug/AddressBooklet.build/DerivedSources/AddressBooklet_vers.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/AddressBooklet.build/Debug/AddressBooklet.build/Objects-normal/x86_64/main.o /Users/kwicher/github/AddressBooklet/AddressBooklet/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cLd /Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app/Contents/MacOS/AddressBooklet normal x86_64
-cCopyStringsFile /Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app/Contents/Resources/en.lproj/InfoPlist.strings AddressBooklet/en.lproj/InfoPlist.strings
 cCpResource AddressBooklet/rb_main.rb build/Debug/AddressBooklet.app/Contents/Resources/rb_main.rb
+cCopyStringsFile /Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app/Contents/Resources/en.lproj/InfoPlist.strings AddressBooklet/en.lproj/InfoPlist.strings
 cCpResource AddressBooklet/AppDelegate.rb build/Debug/AddressBooklet.app/Contents/Resources/AppDelegate.rb
 cCompileXIB /Users/kwicher/github/AddressBooklet/AddressBooklet/SearchWindow.xib
-cCpResource AddressBooklet/SearchWindow.rb build/Debug/AddressBooklet.app/Contents/Resources/SearchWindow.rb
 cCompileXIB /Users/kwicher/github/AddressBooklet/AddressBooklet/MainMenu.xib
 cCpResource AddressBooklet/ResultsTableController.rb build/Debug/AddressBooklet.app/Contents/Resources/ResultsTableController.rb
+cCpResource AddressBooklet/SearchWindow.rb build/Debug/AddressBooklet.app/Contents/Resources/SearchWindow.rb
+cCompileXIB /Users/kwicher/github/AddressBooklet/AddressBooklet/Info.xib
 cCpResource AddressBooklet/MyElementView.rb build/Debug/AddressBooklet.app/Contents/Resources/MyElementView.rb
 cCompileXIB /Users/kwicher/github/AddressBooklet/AddressBooklet/Settings.xib
 cCpResource ab.icns build/Debug/AddressBooklet.app/Contents/Resources/ab.icns
 cCpResource ab1.png build/Debug/AddressBooklet.app/Contents/Resources/ab1.png
-cCompileXIB /Users/kwicher/github/AddressBooklet/AddressBooklet/Info.xib
 cTouch /Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app
 
 N/Applications/Xcode.app/Contents/Developer/Library/Frameworks/MacRuby.framework/MacRuby
@@ -52,9 +52,9 @@ t1335654781
 s159
 
 N/Users/kwicher/github/AddressBooklet/AddressBooklet/AppDelegate.rb
-c000000004FB43E1A0000000000001FF6
-t1337212442
-s8182
+c000000004FB446690000000000001C6D
+t1337214569
+s7277
 
 N/Users/kwicher/github/AddressBooklet/AddressBooklet/Info.xib
 c000000004FB2E06C000000000000626A
@@ -135,7 +135,7 @@ t1337208767
 s2864
 
 N/Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app
-t1337212442
+t1337212678
 s102
 
 N/Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app/Contents/Info.plist
@@ -143,7 +143,7 @@ t1337208760
 s1499
 
 N/Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app/Contents/MacOS/AddressBooklet
-t1337208769
+t1337212678
 s9592
 
 N/Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app/Contents/PkgInfo
@@ -212,7 +212,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies3c67ef827664b541^b45b4b837664b541^---0#1#0#--18"Check dependencies36"463B04BF-B396-49CE-BC0D-7CC1F6ED3E2C-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies21218e478464b541^12c2ef478464b541^---0#1#0#--18"Check dependencies36"7A102E4A-2077-4694-9B78-90979277AC2D-
 
 CCompileC build/AddressBooklet.build/Debug/AddressBooklet.build/Objects-normal/x86_64/AddressBooklet_vers.o /Users/kwicher/github/AddressBooklet/build/AddressBooklet.build/Debug/AddressBooklet.build/DerivedSources/AddressBooklet_vers.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
 s358901560.033437
@@ -288,13 +288,13 @@ xAddressBooklet/en.lproj/InfoPlist.strings
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection46"Copy AddressBooklet/en.lproj/InfoPlist.strings187d51416764b541^e90e6e416764b541^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/kwicher/github/AddressBooklet/AddressBooklet/en.lproj/InfoPlist.strings0000000000000000^410"CopyStringsFile build/Debug/AddressBooklet.app/Contents/Resources/en.lproj/InfoPlist.strings AddressBooklet/en.lproj/InfoPlist.strings    cd /Users/kwicher/github/AddressBooklet    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding UTF-16 --outdir /Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app/Contents/Resources/en.lproj -- AddressBooklet/en.lproj/InfoPlist.strings36"995232C6-9B39-4BAC-920E-0DEFEE48AEF8-
 
 CCpResource AddressBooklet/AppDelegate.rb build/Debug/AddressBooklet.app/Contents/Resources/AppDelegate.rb
-s358905242.228564
-e358905242.342359
+s358908999.992692
+e358908999.995684
 r1
 xCpResource
 xAddressBooklet/AppDelegate.rb
 xbuild/Debug/AddressBooklet.app/Contents/Resources/AppDelegate.rb
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Copy build/Debug/AddressBooklet.app/Contents/Resources/AppDelegate.rbee983a9a7564b541^51827e9a7564b541^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app/Contents/Resources/AppDelegate.rb0000000000000000^521"CpResource AddressBooklet/AppDelegate.rb build/Debug/AddressBooklet.app/Contents/Resources/AppDelegate.rb    cd /Users/kwicher/github/AddressBooklet    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Users/kwicher/github/AddressBooklet/AddressBooklet/AppDelegate.rb /Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app/Contents/Resources36"9EBEA50C-8E3E-4B8B-9A6D-CC7582BBCB87-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Copy build/Debug/AddressBooklet.app/Contents/Resources/AppDelegate.rbc136fe478464b541^c07816488464b541^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app/Contents/Resources/AppDelegate.rb0000000000000000^521"CpResource AddressBooklet/AppDelegate.rb build/Debug/AddressBooklet.app/Contents/Resources/AppDelegate.rb    cd /Users/kwicher/github/AddressBooklet    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip /Users/kwicher/github/AddressBooklet/AddressBooklet/AppDelegate.rb /Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app/Contents/Resources36"CD8BA58E-6F7D-4FF0-B1D8-1730A77A71BB-
 
 CCpResource AddressBooklet/MyElementView.rb build/Debug/AddressBooklet.app/Contents/Resources/MyElementView.rb
 s358901569.608331
@@ -386,10 +386,10 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Precompile AddressBooklet/AddressBooklet-Prefix.pch51a308386764b541^36ad403f6764b541^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/kwicher/github/AddressBooklet/AddressBooklet/AddressBooklet-Prefix.pch0000000000000000^2618"ProcessPCH /var/folders/mt/bwcx6f_j5ks82skkslg6wrbw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AddressBooklet-Prefix-hdqtelfuyrosuhdryjlmwafstveq/AddressBooklet-Prefix.pch.pth AddressBooklet/AddressBooklet-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/kwicher/github/AddressBooklet    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -fobjc-gc-only -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -I/Users/kwicher/github/AddressBooklet/build/AddressBooklet.build/Debug/AddressBooklet.build/AddressBooklet.hmap -I/Users/kwicher/github/AddressBooklet/build/Debug/include -I/Users/kwicher/github/AddressBooklet/build/AddressBooklet.build/Debug/AddressBooklet.build/DerivedSources/x86_64 -I/Users/kwicher/github/AddressBooklet/build/AddressBooklet.build/Debug/AddressBooklet.build/DerivedSources -F/Users/kwicher/github/AddressBooklet/build/Debug -F/Applications/Xcode.app/Contents/Developer/Library/Frameworks --serialize-diagnostics /var/folders/mt/bwcx6f_j5ks82skkslg6wrbw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AddressBooklet-Prefix-hdqtelfuyrosuhdryjlmwafstveq/AddressBooklet-Prefix.pch.dia -c /Users/kwicher/github/AddressBooklet/AddressBooklet/AddressBooklet-Prefix.pch -o /var/folders/mt/bwcx6f_j5ks82skkslg6wrbw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AddressBooklet-Prefix-hdqtelfuyrosuhdryjlmwafstveq/AddressBooklet-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/mt/bwcx6f_j5ks82skkslg6wrbw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/AddressBooklet-Prefix-hdqtelfuyrosuhdryjlmwafstveq/AddressBooklet-Prefix.pch.d36"CA23459C-9173-497A-B167-87152C597C65-
 
 CTouch /Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app
-s358905478.573694
-e358905478.698854
+s358909000.011743
+e358909000.152241
 r1
 xTouch
 x/Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Touch /Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app2bfb92867664b541^7e53bc867664b541^---0#0#0#--171"Touch build/Debug/AddressBooklet.app    cd /Users/kwicher/github/AddressBooklet    /usr/bin/touch -c /Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app36"17849A8E-7048-4914-A890-3A66E229E98D-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Touch /Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app591303488464b541^e90e2a488464b541^---0#0#0#--171"Touch build/Debug/AddressBooklet.app    cd /Users/kwicher/github/AddressBooklet    /usr/bin/touch -c /Users/kwicher/github/AddressBooklet/build/Debug/AddressBooklet.app36"5F1CF5AC-0E7A-44A1-A418-FF3A5908F267-
 
