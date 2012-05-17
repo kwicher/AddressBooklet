@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import <Carbon/Carbon.h>
 #import <MacRuby/MacRuby.h>
 
 int main(int argc, char *argv[])
