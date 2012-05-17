@@ -67,30 +67,7 @@ class AppDelegate
           end)
  
     end
-    #Trying to runc carbon from Macruby :)
-    #def addHotKey2
-        
-        
-        #eventType=EventTypeSpec.new
-        #eventType.eventClass = KEventClassKeyboard
-        #eventType.eventKind = KEventHotKeyPressed
-        #myHotKeyHander=Proc.new do |nextHandler,theEvent,userData|
-            #GetEventParameter(theEvent,KEventParamDirectObject,TypeEventHotKeyID,
-    #       nil,EventHotKeyID.sizeof,nil,Pointer.new(hotKeyID))
-            #puts "ssss" if hotKeyID.id=1
-            #end
-        
-        #InstallApplicationEventHandler(myHotKeyHander,1,eventType,self,nil)
-        
-        #hotKeyID=EventHotKeyID.alloc.init 
-        #hotKeyRef=EventHotKeyRef.alloc.init
-        
-        #hotKeyID.signature='hk';
-        #hotKeyID.id	= 1;
-        
-        #error = RegisterEventHotKey(CmdKey+OptionKey, 52 , hotKeyID,
-            #GetEventDispatcherTarget, 0, Pointer.new(hotKeyRef))
-        #end
+
     def updateSearch(sender)
         a=sender.stringValue
         predicate=NSPredicate.predicateWithFormat("SELF[0] contains[c] \'#{a}\'")
