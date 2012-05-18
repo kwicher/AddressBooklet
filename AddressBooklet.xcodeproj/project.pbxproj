@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D50B93F21565C6D600A9AE92 /* README in Resources */ = {isa = PBXBuildFile; fileRef = D50B93F11565C6D600A9AE92 /* README */; };
+		D50B93F21565C6D600A9AE92 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D50B93F11565C6D600A9AE92 /* README.md */; };
 		D5447D371555E1C8009F38EA /* MyElementView.rb in Resources */ = {isa = PBXBuildFile; fileRef = D5447D361555E1C7009F38EA /* MyElementView.rb */; };
 		D548C93C154CB0FD00501B41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D548C93B154CB0FD00501B41 /* Cocoa.framework */; };
 		D548C93E154CB0FD00501B41 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D548C93D154CB0FD00501B41 /* MacRuby.framework */; };
@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D50B93F11565C6D600A9AE92 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		D50B93F11565C6D600A9AE92 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		D5447D361555E1C7009F38EA /* MyElementView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = MyElementView.rb; sourceTree = "<group>"; };
 		D548C937154CB0FD00501B41 /* AddressBooklet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressBooklet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D548C93B154CB0FD00501B41 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -69,7 +69,7 @@
 				D548C940154CB0FD00501B41 /* AddressBooklet */,
 				D548C93A154CB0FD00501B41 /* Frameworks */,
 				D548C938154CB0FD00501B41 /* Products */,
-				D50B93F11565C6D600A9AE92 /* README */,
+				D50B93F11565C6D600A9AE92 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,7 +218,7 @@
 				D5E21EB0155F3272002CD21D /* Settings.xib in Resources */,
 				D585AA9A15630D23001B464D /* ab.icns in Resources */,
 				D585AAA515631656001B464D /* ab1.png in Resources */,
-				D50B93F21565C6D600A9AE92 /* README in Resources */,
+				D50B93F21565C6D600A9AE92 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
