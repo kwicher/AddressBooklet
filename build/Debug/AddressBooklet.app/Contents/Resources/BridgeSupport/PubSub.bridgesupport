@@ -1,0 +1,113 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/JavaScriptCore.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<constant name='PSEnclosureDownloadStateDidChangeNotification' type='@'/>
+<constant name='PSErrorDomain' type='@'/>
+<constant name='PSFeedAddedEntriesKey' type='@'/>
+<constant name='PSFeedDidChangeEntryFlagsKey' type='@'/>
+<constant name='PSFeedEntriesChangedNotification' type='@'/>
+<constant name='PSFeedRefreshingNotification' type='@'/>
+<constant name='PSFeedRemovedEntriesKey' type='@'/>
+<constant name='PSFeedUpdatedEntriesKey' type='@'/>
+<enum name='PSAtomFormat' value='2'/>
+<enum name='PSEnclosureDownloadDidFail' value='4'/>
+<enum name='PSEnclosureDownloadDidFinish' value='3'/>
+<enum name='PSEnclosureDownloadIsActive' value='2'/>
+<enum name='PSEnclosureDownloadIsIdle' value='0'/>
+<enum name='PSEnclosureDownloadIsQueued' value='1'/>
+<enum name='PSEnclosureDownloadWasDeleted' value='5'/>
+<enum name='PSFeedSettingsIntervalDefault' value='0.0'/>
+<enum name='PSFeedSettingsIntervalNever' value='-1.0'/>
+<enum name='PSFeedSettingsUnlimitedSize' value='0'/>
+<enum name='PSInternalError' value='1'/>
+<enum name='PSLinkToAlternate' value='7'/>
+<enum name='PSLinkToAtom' value='2'/>
+<enum name='PSLinkToAtomService' value='3'/>
+<enum name='PSLinkToFOAF' value='4'/>
+<enum name='PSLinkToOther' value='0'/>
+<enum name='PSLinkToRSD' value='5'/>
+<enum name='PSLinkToRSS' value='1'/>
+<enum name='PSLinkToSelf' value='6'/>
+<enum name='PSNotAFeedError' value='2'/>
+<enum name='PSRSSFormat' value='1'/>
+<enum name='PSUnknownFormat' value='0'/>
+<class name='PSClient'>
+<method selector='addFeed:'>
+<retval type='B'/>
+</method>
+<method selector='isPrivate'>
+<retval type='B'/>
+</method>
+<method selector='removeFeed:'>
+<retval type='B'/>
+</method>
+<method selector='setPrivate:'>
+<arg type='B' index='0'/>
+</method>
+</class>
+<class name='PSEnclosure'>
+<method selector='download:'>
+<arg index='0' type_modifier='o'/>
+<retval type='B'/>
+</method>
+</class>
+<class name='PSEntry'>
+<method selector='isCurrent'>
+<retval type='B'/>
+</method>
+<method selector='isFlagged'>
+<retval type='B'/>
+</method>
+<method selector='isRead'>
+<retval type='B'/>
+</method>
+<method selector='setFlagged:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='setRead:'>
+<arg type='B' index='0'/>
+</method>
+</class>
+<class name='PSFeed'>
+<method selector='XMLRepresentationWithEntries:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='isRefreshing'>
+<retval type='B'/>
+</method>
+<method selector='refresh:'>
+<arg index='0' type_modifier='o'/>
+<retval type='B'/>
+</method>
+</class>
+<class name='PSFeedSettings'>
+<method selector='downloadsEnclosures'>
+<retval type='B'/>
+</method>
+<method selector='refreshesInBackground'>
+<retval type='B'/>
+</method>
+<method selector='setDownloadsEnclosures:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='setRefreshesInBackground:'>
+<arg type='B' index='0'/>
+</method>
+</class>
+<informal_protocol name='PSClientDelegate'>
+<method type64='v28@0:8@16i24' type='v16@0:4@8i12' selector='enclosure:downloadStateDidChange:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='feed:didAddEntries:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='feed:didChangeFlagsInEntries:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='feed:didRemoveEntriesWithIdentifiers:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='feed:didUpdateEntries:'/>
+<method type64='v24@0:8@16' type='v12@0:4@8' selector='feedDidBeginRefresh:'/>
+<method type64='v24@0:8@16' type='v12@0:4@8' selector='feedDidEndRefresh:'/>
+</informal_protocol>
+</signatures>

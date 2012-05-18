@@ -1,0 +1,52 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/SecurityInterface.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/PubSub.framework'/>
+<depends_on path='/System/Library/Frameworks/Quartz.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<function name='SSCenteredRectInRect' inline='true'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}'/>
+</function>
+<function name='SSRandomFloatBetween' inline='true'>
+<arg type64='d' type='f'/>
+<arg type64='d' type='f'/>
+<retval type64='d' type='f'/>
+</function>
+<function name='SSRandomIntBetween' inline='true'>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='SSRandomPointForSizeWithinRect' inline='true'>
+<arg type64='{CGSize=dd}' type='{_NSSize=ff}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}'/>
+<retval type64='{CGPoint=dd}' type='{_NSPoint=ff}'/>
+</function>
+<class name='ScreenSaverView'>
+<method selector='hasConfigureSheet'>
+<retval type='B'/>
+</method>
+<method selector='initWithFrame:isPreview:'>
+<arg type='B' index='1'/>
+</method>
+<method selector='isAnimating'>
+<retval type='B'/>
+</method>
+<method selector='isPreview'>
+<retval type='B'/>
+</method>
+<method selector='performGammaFade' class_method='true'>
+<retval type='B'/>
+</method>
+</class>
+</signatures>

@@ -1,0 +1,106 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Kerberos.framework'/>
+<struct name='mountinfo' type='{mountinfo=&quot;length&quot;s&quot;media&quot;I&quot;flags&quot;s&quot;media_specific&quot;[0c]}'/>
+<enum name='kAFPAllowSelfConnection' value='13'/>
+<enum name='kAFPAllowUNCHIBit' value='9'/>
+<enum name='kAFPAutomountedBit' value='4'/>
+<enum name='kAFPDontBrowse' value='6'/>
+<enum name='kAFPForceNewSessionBit' value='3'/>
+<enum name='kAFPMountAllVols' value='7'/>
+<enum name='kAFPMountPointProvidedBit' value='2'/>
+<enum name='kAFPNoNewMountBit' value='1'/>
+<enum name='kAFPNoNotify' value='5'/>
+<enum name='kAFPSoftMountBit' value='12'/>
+<enum name='kAFPSupressKeychainBit' value='8'/>
+<enum name='kAFPUseExistingMountBit' value='0'/>
+<function name='AFPMountURL'>
+<arg type='*'/>
+<arg type='*'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DisposeAFPURL'>
+<arg type='*'/>
+</function>
+<function name='IsAFPURL'>
+<arg type='*'/>
+<retval type='B'/>
+</function>
+<function name='NewAFPURL'>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<retval type='*'/>
+</function>
+<function name='ParseAFPURL'>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='afp_GetURLFromURLRemountInfo'>
+<arg type='^{mountinfo=sIs[0c]}'/>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='afp_LLMount'>
+<arg type='*'/>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='afp_LLMountAuth'>
+<arg type='*'/>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='^v'/>
+<arg type64='Q' type='L'/>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='afp_getMountURL'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='afp_getmountinfo'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<arg type='^{mountinfo=sIs[0c]}'/>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='afp_getmountinfosize'>
+<arg type='*'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+</signatures>

@@ -1,0 +1,257 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Carbon.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<struct name='DVCTransactionParams' type='{DVCTransactionParams=&quot;commandBufferPtr&quot;*&quot;commandLength&quot;I&quot;responseBufferPtr&quot;*&quot;responseBufferSize&quot;I&quot;responseHandler&quot;^^?}'/>
+<struct name='IDHDeviceConnectionEvent' type='{IDHDeviceConnectionEvent=&quot;eventHeader&quot;{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}}'/>
+<struct name='IDHDeviceFrameDroppedEvent' type='{IDHDeviceFrameDroppedEvent=&quot;eventHeader&quot;{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}&quot;totalDropped&quot;I&quot;newlyDropped&quot;I}'/>
+<struct name='IDHDeviceIOEnableEvent' type='{IDHDeviceIOEnableEvent=&quot;eventHeader&quot;{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}}'/>
+<struct name='IDHDeviceStatus' type='{IDHDeviceStatus=&quot;version&quot;I&quot;physicallyConnected&quot;B&quot;readEnabled&quot;B&quot;writeEnabled&quot;B&quot;exclusiveAccess&quot;B&quot;currentBandwidth&quot;I&quot;currentChannel&quot;I&quot;localNodeID&quot;^{OpaquePsuedoID}&quot;inputStandard&quot;s&quot;deviceActive&quot;B&quot;inputFormat&quot;C&quot;outputFormats&quot;I}'/>
+<struct name='IDHDimension' type='{IDHDimension=&quot;x&quot;i&quot;y&quot;i}'/>
+<struct name='IDHEventHeader' type='{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}'/>
+<struct name='IDHGenericEvent' type64='{IDHGenericEvent=&quot;eventHeader&quot;{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}&quot;pad&quot;[4I]}' type='{IDHGenericEvent=&quot;eventHeader&quot;{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}&quot;pad&quot;[4L]}'/>
+<struct name='IDHIsochInterval' type='{IDHIsochInterval=&quot;duration&quot;i&quot;scale&quot;i}'/>
+<struct name='IDHParameterBlock' type64='{IDHParameterBlock=&quot;reserved1&quot;I&quot;reserved2&quot;S&quot;buffer&quot;^v&quot;requestedCount&quot;Q&quot;actualCount&quot;Q&quot;completionProc&quot;^?&quot;refCon&quot;^v&quot;result&quot;s}' type='{IDHParameterBlock=&quot;reserved1&quot;I&quot;reserved2&quot;S&quot;buffer&quot;^v&quot;requestedCount&quot;I&quot;actualCount&quot;I&quot;completionProc&quot;^?&quot;refCon&quot;^v&quot;result&quot;s}'/>
+<struct name='IDHResolution' type='{IDHResolution=&quot;x&quot;I&quot;y&quot;I}'/>
+<opaque name='PsuedoID' type='^{OpaquePsuedoID=}'/>
+<enum name='kDeviceControlDoAVCTransactionSelect' value='1'/>
+<enum name='kIDHCancelNotificationSelect' value='12'/>
+<enum name='kIDHCancelPendingIOSelect' value='15'/>
+<enum name='kIDHCloseDeviceSelect' value='7'/>
+<enum name='kIDHCloseForReadTransactions' value='16'/>
+<enum name='kIDHCloseForWriteTransactions' value='32'/>
+<enum name='kIDHComponentType' value='1768451186'/>
+<enum name='kIDHDVCPro_25' value='30'/>
+<enum name='kIDHDVCPro_50' value='29'/>
+<enum name='kIDHDV_HD' value='2'/>
+<enum name='kIDHDV_SD' value='0'/>
+<enum name='kIDHDV_SDL' value='1'/>
+<enum name='kIDHDataBufferSizeAtomType' value='1684174182'/>
+<enum name='kIDHDataIODirectionAtomType' value='1684302194'/>
+<enum name='kIDHDataIntervalAtomType' value='1768846454'/>
+<enum name='kIDHDataSizeAtomType' value='1685285242'/>
+<enum name='kIDHDataTypeAtomType' value='1685354864'/>
+<enum name='kIDHDataTypeIsInput' value='1'/>
+<enum name='kIDHDataTypeIsInputAndOutput' value='4'/>
+<enum name='kIDHDataTypeIsOutput' value='2'/>
+<enum name='kIDHDefaultIOType' value='1684433263'/>
+<enum name='kIDHDeviceAtomType' value='1684371043'/>
+<enum name='kIDHDeviceIDEveryDevice' value64='4294967295' value='-1'/>
+<enum name='kIDHDeviceIDType' value='1685481828'/>
+<enum name='kIDHDeviceListAtomType' value='1684829044'/>
+<enum name='kIDHDisposeNotificationSelect' value='13'/>
+<enum name='kIDHErrCallNotSupported' value='-14116'/>
+<enum name='kIDHErrCompletionPending' value='-14111'/>
+<enum name='kIDHErrDeviceBusy' value='-14106'/>
+<enum name='kIDHErrDeviceCantRead' value='-14114'/>
+<enum name='kIDHErrDeviceCantWrite' value='-14115'/>
+<enum name='kIDHErrDeviceDisconnected' value='-14101'/>
+<enum name='kIDHErrDeviceInUse' value='-14104'/>
+<enum name='kIDHErrDeviceList' value='-14110'/>
+<enum name='kIDHErrDeviceNotConfigured' value='-14109'/>
+<enum name='kIDHErrDeviceNotOpened' value='-14105'/>
+<enum name='kIDHErrDeviceReadError' value='-14107'/>
+<enum name='kIDHErrDeviceTimeout' value='-14112'/>
+<enum name='kIDHErrDeviceWriteError' value='-14108'/>
+<enum name='kIDHErrInvalidDeviceID' value='-14102'/>
+<enum name='kIDHErrInvalidIndex' value='-14113'/>
+<enum name='kIDHEventDeviceAdded' value='1'/>
+<enum name='kIDHEventDeviceChanged' value='4'/>
+<enum name='kIDHEventDeviceRemoved' value='2'/>
+<enum name='kIDHEventEveryEvent' value='4294967295'/>
+<enum name='kIDHEventFrameDropped' value='16'/>
+<enum name='kIDHEventInvalid' value='0'/>
+<enum name='kIDHEventReadDisabled' value='32'/>
+<enum name='kIDHEventReadEnabled' value='8'/>
+<enum name='kIDHEventReserved2' value='128'/>
+<enum name='kIDHEventWriteDisabled' value='256'/>
+<enum name='kIDHEventWriteEnabled' value='64'/>
+<enum name='kIDHGetDeviceClockSelect' value='5'/>
+<enum name='kIDHGetDeviceConfigurationSelect' value='2'/>
+<enum name='kIDHGetDeviceControlSelect' value='16'/>
+<enum name='kIDHGetDeviceListSelect' value='1'/>
+<enum name='kIDHGetDeviceStatusSelect' value='4'/>
+<enum name='kIDHGetDeviceTimeSelect' value='18'/>
+<enum name='kIDHGetFormatSelect' value='20'/>
+<enum name='kIDHInterfaceVersion1' value='1'/>
+<enum name='kIDHInvalidDeviceID' value='0'/>
+<enum name='kIDHIsochMediaType' value='1635131424'/>
+<enum name='kIDHIsochModeAtomType' value='1836016741'/>
+<enum name='kIDHIsochServiceAtomType' value='1769172835'/>
+<enum name='kIDHIsochVersionAtomType' value='1769366898'/>
+<enum name='kIDHNameAtomType' value='1851878757'/>
+<enum name='kIDHNewNotificationSelect' value='10'/>
+<enum name='kIDHNotifyMeWhenSelect' value='11'/>
+<enum name='kIDHOpenDeviceSelect' value='6'/>
+<enum name='kIDHOpenForReadTransactions' value='1'/>
+<enum name='kIDHOpenForWriteTransactions' value='2'/>
+<enum name='kIDHOpenWithExclusiveAccess' value='4'/>
+<enum name='kIDHOpenWithHeldBuffers' value='8'/>
+<enum name='kIDHReadSelect' value='8'/>
+<enum name='kIDHReleaseBufferSelect' value='14'/>
+<enum name='kIDHSetDeviceConfigurationSelect' value='3'/>
+<enum name='kIDHSetFormatSelect' value='19'/>
+<enum name='kIDHSoundChannelCountAtomType' value='1667460724'/>
+<enum name='kIDHSoundMediaAtomType' value='1936684398'/>
+<enum name='kIDHSoundSampleRateAtomType' value='1936875892'/>
+<enum name='kIDHSoundSampleSizeAtomType' value='1936943482'/>
+<enum name='kIDHSoundTypeAtomType' value='1954115685'/>
+<enum name='kIDHSubtypeDV' value='1685463072'/>
+<enum name='kIDHSubtypeFireWireConference' value='1719100192'/>
+<enum name='kIDHUniqueIDType' value='1970170212'/>
+<enum name='kIDHUpdateDeviceListSelect' value='17'/>
+<enum name='kIDHUseCMPAtomType' value='1969450352'/>
+<enum name='kIDHVideoDecompressorAtomType' value='1684366191'/>
+<enum name='kIDHVideoDecompressorComponentAtomType' value='1668116596'/>
+<enum name='kIDHVideoDecompressorContinuousAtomType' value='1668247156'/>
+<enum name='kIDHVideoDecompressorTypeAtomType' value='1684370553'/>
+<enum name='kIDHVideoDimensionsAtomType' value='1684630894'/>
+<enum name='kIDHVideoMediaAtomType' value='1986618469'/>
+<enum name='kIDHVideoPixelTypeAtomType' value='1885960300'/>
+<enum name='kIDHVideoRefreshRateAtomType' value='1919247986'/>
+<enum name='kIDHVideoResolutionAtomType' value='1919251308'/>
+<enum name='kIDHWriteSelect' value='9'/>
+<function name='DeviceControlDoAVCTransaction'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='^{DVCTransactionParams=*I*I^^?}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DisposeIDHNotificationUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}' type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+</function>
+<function name='IDHCancelNotification'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHCancelPendingIO'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='^{IDHParameterBlock=IS^vQQ^?^vs}' type='^{IDHParameterBlock=IS^vII^?^vs}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHCloseDevice'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHDisposeNotification'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHGetDeviceClock'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='^^{ComponentRecord}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHGetDeviceConfiguration'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='^i' type='^{QTAtomSpec=^*i}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHGetDeviceControl'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='^^{ComponentInstanceRecord}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHGetDeviceList'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='^i' type='^^*'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHGetDeviceStatus'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='^i' type='^{QTAtomSpec=^*i}'/>
+<arg type='^{IDHDeviceStatus=IBBBBII^{OpaquePsuedoID}sBCI}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHGetDeviceTime'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='^{TimeRecord={wide=Ii}i^{TimeBaseRecord}}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHGetFormat'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHNewNotification'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='I' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}' type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHNotifyMeWhen'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHOpenDevice'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHRead'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='^{IDHParameterBlock=IS^vQQ^?^vs}' type='^{IDHParameterBlock=IS^vII^?^vs}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHReleaseBuffer'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='^{IDHParameterBlock=IS^vQQ^?^vs}' type='^{IDHParameterBlock=IS^vII^?^vs}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHSetDeviceConfiguration'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='^i' type='^{QTAtomSpec=^*i}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHSetFormat'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHUpdateDeviceList'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='^i' type='^^*'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='IDHWrite'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='^{IDHParameterBlock=IS^vQQ^?^vs}' type='^{IDHParameterBlock=IS^vII^?^vs}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='InvokeIDHNotificationUPP'>
+<arg type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}' type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}' type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='NewIDHNotificationUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}' type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}' type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</retval>
+</function>
+</signatures>

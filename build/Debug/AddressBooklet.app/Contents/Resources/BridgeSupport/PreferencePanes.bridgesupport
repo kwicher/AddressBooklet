@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Carbon.framework'/>
+<depends_on path='/System/Library/Frameworks/SecurityFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/SecurityInterface.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<constant name='NSPrefPaneHelpMenuAnchorKey' type='@'/>
+<constant name='NSPrefPaneHelpMenuInfoPListKey' type='@'/>
+<constant name='NSPrefPaneHelpMenuTitleKey' type='@'/>
+<constant name='NSPreferencePaneCancelUnselectNotification' type='@'/>
+<constant name='NSPreferencePaneDoUnselectNotification' type='@'/>
+<enum name='NSUnselectCancel' value='0'/>
+<enum name='NSUnselectLater' value='2'/>
+<enum name='NSUnselectNow' value='1'/>
+<class name='NSPreferencePane'>
+<method selector='autoSaveTextFields'>
+<retval type='B'/>
+</method>
+<method selector='isSelected'>
+<retval type='B'/>
+</method>
+<method selector='replyToShouldUnselect:'>
+<arg type='B' index='0'/>
+</method>
+</class>
+</signatures>

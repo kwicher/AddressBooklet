@@ -1,0 +1,837 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<struct name='CFDyLibPointers' type='{_CFDyLibPointers=&quot;pvfWriteFramework&quot;^v&quot;pvfInitializePlugin&quot;^v&quot;pvfIdentifyToken&quot;^v&quot;pvfFinalizePlugin&quot;^v&quot;pvfGetStatus&quot;^v&quot;pvfGetCapabilities&quot;^v&quot;pvfExtendedFeature&quot;^v&quot;pvfGenerateKeys&quot;^v&quot;pvfImportKey&quot;^v&quot;pvfExportKey&quot;^v&quot;pvfComputeCrypt&quot;^v&quot;pvfExtAuthenticate&quot;^v&quot;pvfListKeys&quot;^v&quot;pvfCreatePIN&quot;^v&quot;pvfVerifyPIN&quot;^v&quot;pvfChangePIN&quot;^v&quot;pvfUnblockPIN&quot;^v&quot;pvfListPINs&quot;^v&quot;pvfCreateObject&quot;^v&quot;pvfDeleteObject&quot;^v&quot;pvfWriteObject&quot;^v&quot;pvfReadObject&quot;^v&quot;pvfListObjects&quot;^v&quot;pvfLogoutAll&quot;^v&quot;pvfGetChallenge&quot;^v}'/>
+<struct name='LPCFDyLibPointers' type='{_LPCFDyLibPointers=&quot;pvfWriteFramework&quot;^v&quot;pvfInitializePlugin&quot;^v&quot;pvfIdentifyToken&quot;^v&quot;pvfFinalizePlugin&quot;^v&quot;pvfGetStatus&quot;^v&quot;pvfGetCapabilities&quot;^v&quot;pvfExtendedFeature&quot;^v&quot;pvfGenerateKeys&quot;^v&quot;pvfImportKey&quot;^v&quot;pvfExportKey&quot;^v&quot;pvfComputeCrypt&quot;^v&quot;pvfExtAuthenticate&quot;^v&quot;pvfListKeys&quot;^v&quot;pvfCreatePIN&quot;^v&quot;pvfVerifyPIN&quot;^v&quot;pvfChangePIN&quot;^v&quot;pvfUnblockPIN&quot;^v&quot;pvfListPINs&quot;^v&quot;pvfCreateObject&quot;^v&quot;pvfDeleteObject&quot;^v&quot;pvfWriteObject&quot;^v&quot;pvfReadObject&quot;^v&quot;pvfListObjects&quot;^v&quot;pvfLogoutAll&quot;^v&quot;pvfGetChallenge&quot;^v}'/>
+<struct name='LPSCARD_IO_REQUEST' type='{_SCARD_IO_REQUEST=&quot;dwProtocol&quot;I&quot;cbPciLength&quot;I}'/>
+<struct name='MSCCertACL' type='{_MSCCertACL=&quot;readPermission&quot;S&quot;writePermission&quot;S&quot;deletePermission&quot;S}'/>
+<struct name='MSCCryptInit' type='{_MSCCryptInit=&quot;keyNum&quot;C&quot;cipherMode&quot;C&quot;cipherDirection&quot;C&quot;optParams&quot;*&quot;optParamsSize&quot;S}'/>
+<struct name='MSCEventWaitInfo' type='{_MSCEventWaitInfo=&quot;arraySize&quot;I&quot;tokenArray&quot;^{_MSCLPTokenInfo=&quot;tokenName&quot;[150c]&quot;slotName&quot;[52c]&quot;svProvider&quot;[200c]&quot;tokenId&quot;[33C]&quot;tokenApp&quot;[64C]&quot;tokenAppLen&quot;I&quot;tokenIdLength&quot;I&quot;tokenState&quot;I&quot;tokenType&quot;I&quot;addParams&quot;^v&quot;addParamsSize&quot;I}&quot;appData&quot;^v&quot;callBack&quot;^?}'/>
+<struct name='MSCGenKeyParams' type='{_MSCGenKeyParams=&quot;algoType&quot;C&quot;keySize&quot;S&quot;privateKeyACL&quot;{_MSCKeyACL=&quot;readPermission&quot;S&quot;writePermission&quot;S&quot;usePermission&quot;S}&quot;publicKeyACL&quot;{_MSCKeyACL=&quot;readPermission&quot;S&quot;writePermission&quot;S&quot;usePermission&quot;S}&quot;privateKeyPolicy&quot;{_MSCKeyPolicy=&quot;cipherMode&quot;S&quot;cipherDirection&quot;S}&quot;publicKeyPolicy&quot;{_MSCKeyPolicy=&quot;cipherMode&quot;S&quot;cipherDirection&quot;S}&quot;keyGenOptions&quot;C&quot;pOptParams&quot;*&quot;optParamsSize&quot;I}'/>
+<struct name='MSCInitTokenParams' type='{_MSCInitTokenParams=&quot;transportKey&quot;[264C]&quot;transportKeyLen&quot;I&quot;transportBehavior&quot;C&quot;objectMemory&quot;I&quot;newTransportKey&quot;[264C]&quot;newTransportKeyLen&quot;I&quot;defaultCHV&quot;[264C]&quot;defaultCHVLen&quot;I&quot;defaultCHVTries&quot;C&quot;defaultCHVUnblock&quot;[264C]&quot;defaultCHVUnblockSize&quot;I&quot;defaultCHVUnblockTries&quot;C&quot;createObjectACL&quot;S&quot;createKeysACL&quot;S&quot;createPINsACL&quot;S&quot;maxNumberKeys&quot;C&quot;maxNumberPINs&quot;C&quot;maxNumberObjects&quot;S}'/>
+<struct name='MSCKeyACL' type='{_MSCKeyACL=&quot;readPermission&quot;S&quot;writePermission&quot;S&quot;usePermission&quot;S}'/>
+<struct name='MSCKeyInfo' type='{_MSCKeyInfo=&quot;keyNum&quot;C&quot;keyType&quot;C&quot;keyPartner&quot;C&quot;keyMapping&quot;C&quot;keySize&quot;S&quot;keyPolicy&quot;{_MSCKeyPolicy=&quot;cipherMode&quot;S&quot;cipherDirection&quot;S}&quot;keyACL&quot;{_MSCKeyACL=&quot;readPermission&quot;S&quot;writePermission&quot;S&quot;usePermission&quot;S}}'/>
+<struct name='MSCKeyPolicy' type='{_MSCKeyPolicy=&quot;cipherMode&quot;S&quot;cipherDirection&quot;S}'/>
+<struct name='MSCLPCertACL' type='{_MSCLPCertACL=&quot;readPermission&quot;S&quot;writePermission&quot;S&quot;deletePermission&quot;S}'/>
+<struct name='MSCLPCryptInit' type='{_MSCLPCryptInit=&quot;keyNum&quot;C&quot;cipherMode&quot;C&quot;cipherDirection&quot;C&quot;optParams&quot;*&quot;optParamsSize&quot;S}'/>
+<struct name='MSCLPEventWaitInfo' type='{_MSCLPEventWaitInfo=&quot;arraySize&quot;I&quot;tokenArray&quot;^{_MSCLPTokenInfo=&quot;tokenName&quot;[150c]&quot;slotName&quot;[52c]&quot;svProvider&quot;[200c]&quot;tokenId&quot;[33C]&quot;tokenApp&quot;[64C]&quot;tokenAppLen&quot;I&quot;tokenIdLength&quot;I&quot;tokenState&quot;I&quot;tokenType&quot;I&quot;addParams&quot;^v&quot;addParamsSize&quot;I}&quot;appData&quot;^v&quot;callBack&quot;^?}'/>
+<struct name='MSCLPGenKeyParams' type='{_MSCLPGenKeyParams=&quot;algoType&quot;C&quot;keySize&quot;S&quot;privateKeyACL&quot;{_MSCKeyACL=&quot;readPermission&quot;S&quot;writePermission&quot;S&quot;usePermission&quot;S}&quot;publicKeyACL&quot;{_MSCKeyACL=&quot;readPermission&quot;S&quot;writePermission&quot;S&quot;usePermission&quot;S}&quot;privateKeyPolicy&quot;{_MSCKeyPolicy=&quot;cipherMode&quot;S&quot;cipherDirection&quot;S}&quot;publicKeyPolicy&quot;{_MSCKeyPolicy=&quot;cipherMode&quot;S&quot;cipherDirection&quot;S}&quot;keyGenOptions&quot;C&quot;pOptParams&quot;*&quot;optParamsSize&quot;I}'/>
+<struct name='MSCLPInitTokenParams' type='{_MSCLPInitTokenParams=&quot;transportKey&quot;[264C]&quot;transportKeyLen&quot;I&quot;transportBehavior&quot;C&quot;objectMemory&quot;I&quot;newTransportKey&quot;[264C]&quot;newTransportKeyLen&quot;I&quot;defaultCHV&quot;[264C]&quot;defaultCHVLen&quot;I&quot;defaultCHVTries&quot;C&quot;defaultCHVUnblock&quot;[264C]&quot;defaultCHVUnblockSize&quot;I&quot;defaultCHVUnblockTries&quot;C&quot;createObjectACL&quot;S&quot;createKeysACL&quot;S&quot;createPINsACL&quot;S&quot;maxNumberKeys&quot;C&quot;maxNumberPINs&quot;C&quot;maxNumberObjects&quot;S}'/>
+<struct name='MSCLPKeyACL' type='{_MSCLPKeyACL=&quot;readPermission&quot;S&quot;writePermission&quot;S&quot;usePermission&quot;S}'/>
+<struct name='MSCLPKeyInfo' type='{_MSCLPKeyInfo=&quot;keyNum&quot;C&quot;keyType&quot;C&quot;keyPartner&quot;C&quot;keyMapping&quot;C&quot;keySize&quot;S&quot;keyPolicy&quot;{_MSCKeyPolicy=&quot;cipherMode&quot;S&quot;cipherDirection&quot;S}&quot;keyACL&quot;{_MSCKeyACL=&quot;readPermission&quot;S&quot;writePermission&quot;S&quot;usePermission&quot;S}}'/>
+<struct name='MSCLPKeyPolicy' type='{_MSCLPKeyPolicy=&quot;cipherMode&quot;S&quot;cipherDirection&quot;S}'/>
+<struct name='MSCLPObjectACL' type='{_MSCLPObjectACL=&quot;readPermission&quot;S&quot;writePermission&quot;S&quot;deletePermission&quot;S}'/>
+<struct name='MSCLPObjectInfo' type='{_MSCLPObjectInfo=&quot;objectID&quot;[16c]&quot;objectSize&quot;I&quot;objectACL&quot;{_MSCObjectACL=&quot;readPermission&quot;S&quot;writePermission&quot;S&quot;deletePermission&quot;S}}'/>
+<struct name='MSCLPStatusInfo' type='{_MSCLPStatusInfo=&quot;appVersion&quot;S&quot;swVersion&quot;S&quot;freeMemory&quot;I&quot;totalMemory&quot;I&quot;usedPINs&quot;C&quot;usedKeys&quot;C&quot;loggedID&quot;S}'/>
+<struct name='MSCLPTokenConnection' type='{_MSCLPTokenConnection=&quot;hContext&quot;i&quot;hCard&quot;i&quot;ioType&quot;^{_SCARD_IO_REQUEST=&quot;dwProtocol&quot;I&quot;cbPciLength&quot;I}&quot;pMac&quot;[128C]&quot;macSize&quot;I&quot;tokenLibHandle&quot;^v&quot;libPointers&quot;{_CFDyLibPointers=&quot;pvfWriteFramework&quot;^v&quot;pvfInitializePlugin&quot;^v&quot;pvfIdentifyToken&quot;^v&quot;pvfFinalizePlugin&quot;^v&quot;pvfGetStatus&quot;^v&quot;pvfGetCapabilities&quot;^v&quot;pvfExtendedFeature&quot;^v&quot;pvfGenerateKeys&quot;^v&quot;pvfImportKey&quot;^v&quot;pvfExportKey&quot;^v&quot;pvfComputeCrypt&quot;^v&quot;pvfExtAuthenticate&quot;^v&quot;pvfListKeys&quot;^v&quot;pvfCreatePIN&quot;^v&quot;pvfVerifyPIN&quot;^v&quot;pvfChangePIN&quot;^v&quot;pvfUnblockPIN&quot;^v&quot;pvfListPINs&quot;^v&quot;pvfCreateObject&quot;^v&quot;pvfDeleteObject&quot;^v&quot;pvfWriteObject&quot;^v&quot;pvfReadObject&quot;^v&quot;pvfListObjects&quot;^v&quot;pvfLogoutAll&quot;^v&quot;pvfGetChallenge&quot;^v}&quot;tokenInfo&quot;{_MSCTokenInfo=&quot;tokenName&quot;[150c]&quot;slotName&quot;[52c]&quot;svProvider&quot;[200c]&quot;tokenId&quot;[33C]&quot;tokenApp&quot;[64C]&quot;tokenAppLen&quot;I&quot;tokenIdLength&quot;I&quot;tokenState&quot;I&quot;tokenType&quot;I&quot;addParams&quot;^v&quot;addParamsSize&quot;I}&quot;loggedIDs&quot;C&quot;shareMode&quot;I&quot;rwCallback&quot;^?}'/>
+<struct name='MSCLPTokenInfo' type='{_MSCLPTokenInfo=&quot;tokenName&quot;[150c]&quot;slotName&quot;[52c]&quot;svProvider&quot;[200c]&quot;tokenId&quot;[33C]&quot;tokenApp&quot;[64C]&quot;tokenAppLen&quot;I&quot;tokenIdLength&quot;I&quot;tokenState&quot;I&quot;tokenType&quot;I&quot;addParams&quot;^v&quot;addParamsSize&quot;I}'/>
+<struct name='MSCObjectACL' type='{_MSCObjectACL=&quot;readPermission&quot;S&quot;writePermission&quot;S&quot;deletePermission&quot;S}'/>
+<struct name='MSCObjectInfo' type='{_MSCObjectInfo=&quot;objectID&quot;[16c]&quot;objectSize&quot;I&quot;objectACL&quot;{_MSCObjectACL=&quot;readPermission&quot;S&quot;writePermission&quot;S&quot;deletePermission&quot;S}}'/>
+<struct name='MSCStatusInfo' type='{_MSCStatusInfo=&quot;appVersion&quot;S&quot;swVersion&quot;S&quot;freeMemory&quot;I&quot;totalMemory&quot;I&quot;usedPINs&quot;C&quot;usedKeys&quot;C&quot;loggedID&quot;S}'/>
+<struct name='MSCTokenConnection' type='{_MSCTokenConnection=&quot;hContext&quot;i&quot;hCard&quot;i&quot;ioType&quot;^{_SCARD_IO_REQUEST=&quot;dwProtocol&quot;I&quot;cbPciLength&quot;I}&quot;pMac&quot;[128C]&quot;macSize&quot;I&quot;tokenLibHandle&quot;^v&quot;libPointers&quot;{_CFDyLibPointers=&quot;pvfWriteFramework&quot;^v&quot;pvfInitializePlugin&quot;^v&quot;pvfIdentifyToken&quot;^v&quot;pvfFinalizePlugin&quot;^v&quot;pvfGetStatus&quot;^v&quot;pvfGetCapabilities&quot;^v&quot;pvfExtendedFeature&quot;^v&quot;pvfGenerateKeys&quot;^v&quot;pvfImportKey&quot;^v&quot;pvfExportKey&quot;^v&quot;pvfComputeCrypt&quot;^v&quot;pvfExtAuthenticate&quot;^v&quot;pvfListKeys&quot;^v&quot;pvfCreatePIN&quot;^v&quot;pvfVerifyPIN&quot;^v&quot;pvfChangePIN&quot;^v&quot;pvfUnblockPIN&quot;^v&quot;pvfListPINs&quot;^v&quot;pvfCreateObject&quot;^v&quot;pvfDeleteObject&quot;^v&quot;pvfWriteObject&quot;^v&quot;pvfReadObject&quot;^v&quot;pvfListObjects&quot;^v&quot;pvfLogoutAll&quot;^v&quot;pvfGetChallenge&quot;^v}&quot;tokenInfo&quot;{_MSCTokenInfo=&quot;tokenName&quot;[150c]&quot;slotName&quot;[52c]&quot;svProvider&quot;[200c]&quot;tokenId&quot;[33C]&quot;tokenApp&quot;[64C]&quot;tokenAppLen&quot;I&quot;tokenIdLength&quot;I&quot;tokenState&quot;I&quot;tokenType&quot;I&quot;addParams&quot;^v&quot;addParamsSize&quot;I}&quot;loggedIDs&quot;C&quot;shareMode&quot;I&quot;rwCallback&quot;^?}'/>
+<struct name='MSCTokenInfo' type='{_MSCTokenInfo=&quot;tokenName&quot;[150c]&quot;slotName&quot;[52c]&quot;svProvider&quot;[200c]&quot;tokenId&quot;[33C]&quot;tokenApp&quot;[64C]&quot;tokenAppLen&quot;I&quot;tokenIdLength&quot;I&quot;tokenState&quot;I&quot;tokenType&quot;I&quot;addParams&quot;^v&quot;addParamsSize&quot;I}'/>
+<struct name='PSCARD_IO_REQUEST' type='{_SCARD_IO_REQUEST=&quot;dwProtocol&quot;I&quot;cbPciLength&quot;I}'/>
+<struct name='SCARD_IO_REQUEST' type='{_SCARD_IO_REQUEST=&quot;dwProtocol&quot;I&quot;cbPciLength&quot;I}'/>
+<struct name='SCARD_READERSTATE' type='{_SCARD_READERSTATE=&quot;szReader&quot;*&quot;pvUserData&quot;^v&quot;dwCurrentState&quot;I&quot;dwEventState&quot;I&quot;cbAtr&quot;I&quot;rgbAtr&quot;[33C]}'/>
+<struct name='SCARD_READERSTATE_A' type='{_SCARD_READERSTATE_A=&quot;szReader&quot;*&quot;pvUserData&quot;^v&quot;dwCurrentState&quot;I&quot;dwEventState&quot;I&quot;cbAtr&quot;I&quot;rgbAtr&quot;[33C]}'/>
+<constant name='g_rgSCardRawPci' type='{_SCARD_IO_REQUEST=II}'/>
+<constant name='g_rgSCardT0Pci' type='{_SCARD_IO_REQUEST=II}'/>
+<constant name='g_rgSCardT1Pci' type='{_SCARD_IO_REQUEST=II}'/>
+<string_constant name='MSC_TOKEN_EMPTY_STR' value='Token Removed'/>
+<string_constant name='MSC_TOKEN_UNKNOWN_STR' value='Token Unknown'/>
+<string_constant name='PCSCLITE_CONFIG_DIR' value='/etc'/>
+<string_constant name='PCSCLITE_CSOCK_NAME' value='/var/run/pcscd.comm'/>
+<string_constant name='PCSCLITE_IPC_DIR' value='/var/run'/>
+<string_constant name='PCSCLITE_PUBSHM_FILE' value='/var/run/pcscd.pub'/>
+<string_constant name='PCSCLITE_READER_CONFIG' value='/etc/reader.conf'/>
+<string_constant name='PCSCLITE_VERSION_NUMBER' value='1.4.0'/>
+<enum name='BLOCK_STATUS_BLOCKING' value='250'/>
+<enum name='BLOCK_STATUS_RESUME' value='255'/>
+<enum name='INFINITE' value='4294967295'/>
+<enum name='MAX_ATR_SIZE' value='33'/>
+<enum name='MAX_BUFFER_SIZE' value='264'/>
+<enum name='MAX_BUFFER_SIZE_EXTENDED' value='65546'/>
+<enum name='MAX_DEVICENAME' value='255'/>
+<enum name='MAX_LIBNAME' value='100'/>
+<enum name='MAX_READERNAME' value='52'/>
+<enum name='MSC_AUTH_FAILED' value='39938'/>
+<enum name='MSC_AUT_ALL' value='0'/>
+<enum name='MSC_AUT_KEY_0' value='256'/>
+<enum name='MSC_AUT_KEY_1' value='512'/>
+<enum name='MSC_AUT_KEY_2' value='1024'/>
+<enum name='MSC_AUT_KEY_3' value='2048'/>
+<enum name='MSC_AUT_KEY_4' value='4096'/>
+<enum name='MSC_AUT_KEY_5' value='8192'/>
+<enum name='MSC_AUT_NONE' value='65535'/>
+<enum name='MSC_AUT_PIN_0' value='1'/>
+<enum name='MSC_AUT_PIN_1' value='2'/>
+<enum name='MSC_AUT_PIN_2' value='4'/>
+<enum name='MSC_AUT_PIN_3' value='8'/>
+<enum name='MSC_AUT_PIN_4' value='16'/>
+<enum name='MSC_AUT_USR_0' value='16384'/>
+<enum name='MSC_AUT_USR_1' value='32768'/>
+<enum name='MSC_BLOB_ENC_CRYPT' value='1'/>
+<enum name='MSC_BLOB_ENC_PLAIN' value='0'/>
+<enum name='MSC_BLOCKSTATUS_BLOCKING' value='1'/>
+<enum name='MSC_BLOCKSTATUS_CANCELLING' value='2'/>
+<enum name='MSC_BLOCKSTATUS_RESUME' value='0'/>
+<enum name='MSC_CANCELLED' value='40016'/>
+<enum name='MSC_CAPABLE_3DES_3KEY' value='8192'/>
+<enum name='MSC_CAPABLE_3DES_CBC' value='16384'/>
+<enum name='MSC_CAPABLE_3DES_EBC' value='32768'/>
+<enum name='MSC_CAPABLE_3DES_ECB' value='65536'/>
+<enum name='MSC_CAPABLE_3DES_KEYGEN' value='4096'/>
+<enum name='MSC_CAPABLE_AES_CBC' value='8192'/>
+<enum name='MSC_CAPABLE_AES_ECB' value='32768'/>
+<enum name='MSC_CAPABLE_AES_KEYGEN' value='4096'/>
+<enum name='MSC_CAPABLE_DES_CBC' value='8192'/>
+<enum name='MSC_CAPABLE_DES_EBC' value='16384'/>
+<enum name='MSC_CAPABLE_DES_ECB' value='32768'/>
+<enum name='MSC_CAPABLE_DES_KEYGEN' value='4096'/>
+<enum name='MSC_CAPABLE_DSA_1024' value='4'/>
+<enum name='MSC_CAPABLE_DSA_2048' value='8'/>
+<enum name='MSC_CAPABLE_DSA_4096' value='16'/>
+<enum name='MSC_CAPABLE_DSA_512' value='1'/>
+<enum name='MSC_CAPABLE_DSA_768' value='2'/>
+<enum name='MSC_CAPABLE_DSA_KEYGEN' value='4096'/>
+<enum name='MSC_CAPABLE_IDEA_CBC' value='8192'/>
+<enum name='MSC_CAPABLE_IDEA_ECB' value='32768'/>
+<enum name='MSC_CAPABLE_IDEA_KEYGEN' value='4096'/>
+<enum name='MSC_CAPABLE_ID_STATE' value='1'/>
+<enum name='MSC_CAPABLE_OBJ_ZERO' value='65536'/>
+<enum name='MSC_CAPABLE_PIN_0_9' value='4'/>
+<enum name='MSC_CAPABLE_PIN_A_Z' value='1'/>
+<enum name='MSC_CAPABLE_PIN_CALC' value='16'/>
+<enum name='MSC_CAPABLE_PIN_HISTORY' value='4096'/>
+<enum name='MSC_CAPABLE_PIN_LEAVE' value='512'/>
+<enum name='MSC_CAPABLE_PIN_NONALPHA' value='32'/>
+<enum name='MSC_CAPABLE_PIN_RESET' value='256'/>
+<enum name='MSC_CAPABLE_PIN_SPACE' value='8'/>
+<enum name='MSC_CAPABLE_PIN_a_z' value='2'/>
+<enum name='MSC_CAPABLE_RANDOM_SEED' value='1'/>
+<enum name='MSC_CAPABLE_RSA_1024' value='4'/>
+<enum name='MSC_CAPABLE_RSA_2048' value='8'/>
+<enum name='MSC_CAPABLE_RSA_4096' value='16'/>
+<enum name='MSC_CAPABLE_RSA_512' value='1'/>
+<enum name='MSC_CAPABLE_RSA_768' value='2'/>
+<enum name='MSC_CAPABLE_RSA_KEYGEN' value='4096'/>
+<enum name='MSC_CAPABLE_RSA_NOPAD' value='8192'/>
+<enum name='MSC_CAPABLE_RSA_PKCS1' value='16384'/>
+<enum name='MSC_CIPHER_FINAL' value='3'/>
+<enum name='MSC_CIPHER_INIT' value='1'/>
+<enum name='MSC_CIPHER_PROCESS' value='2'/>
+<enum name='MSC_DIR_DECRYPT' value='4'/>
+<enum name='MSC_DIR_ENCRYPT' value='3'/>
+<enum name='MSC_DIR_SIGN' value='1'/>
+<enum name='MSC_DIR_VERIFY' value='2'/>
+<enum name='MSC_EJECT_TOKEN' value='3'/>
+<enum name='MSC_GEN_ALG_3DES' value='4'/>
+<enum name='MSC_GEN_ALG_3DES3' value='5'/>
+<enum name='MSC_GEN_ALG_DES' value='3'/>
+<enum name='MSC_GEN_ALG_DSA' value='2'/>
+<enum name='MSC_GEN_ALG_RSA' value='0'/>
+<enum name='MSC_GEN_ALG_RSA_CRT' value='1'/>
+<enum name='MSC_IDENTITY_BLOCKED' value='39948'/>
+<enum name='MSC_INCONSISTENT_STATUS' value='39940'/>
+<enum name='MSC_INCORRECT_ALG' value='39945'/>
+<enum name='MSC_INCORRECT_P1' value='39952'/>
+<enum name='MSC_INCORRECT_P2' value='39953'/>
+<enum name='MSC_INIT_DEFAULT_KEY' value='0'/>
+<enum name='MSC_INIT_IGNORE_KEY' value='1'/>
+<enum name='MSC_INIT_USE_KEY' value='2'/>
+<enum name='MSC_INSUFFICIENT_BUFFER' value='40017'/>
+<enum name='MSC_INTERNAL_ERROR' value='40191'/>
+<enum name='MSC_INVALID_HANDLE' value='40025'/>
+<enum name='MSC_INVALID_PARAMETER' value='39951'/>
+<enum name='MSC_KEYPOLICY_DIR_DECRYPT' value='2048'/>
+<enum name='MSC_KEYPOLICY_DIR_ENCRYPT' value='1024'/>
+<enum name='MSC_KEYPOLICY_DIR_SIGN' value='256'/>
+<enum name='MSC_KEYPOLICY_DIR_VERIFY' value='512'/>
+<enum name='MSC_KEYPOLICY_MODE_DES_CBC_NOPAD' value='8'/>
+<enum name='MSC_KEYPOLICY_MODE_DES_ECB_NOPAD' value='16'/>
+<enum name='MSC_KEYPOLICY_MODE_DSA_SHA' value='4'/>
+<enum name='MSC_KEYPOLICY_MODE_RSA_NOPAD' value='1'/>
+<enum name='MSC_KEYPOLICY_MODE_RSA_PAD_PKCS1' value='2'/>
+<enum name='MSC_KEY_3DES' value='7'/>
+<enum name='MSC_KEY_3DES3' value='8'/>
+<enum name='MSC_KEY_DES' value='6'/>
+<enum name='MSC_KEY_DSA_PRIVATE' value='5'/>
+<enum name='MSC_KEY_DSA_PUBLIC' value='4'/>
+<enum name='MSC_KEY_RSA_PRIVATE' value='2'/>
+<enum name='MSC_KEY_RSA_PRIVATE_CRT' value='3'/>
+<enum name='MSC_KEY_RSA_PUBLIC' value='1'/>
+<enum name='MSC_LEAVE_TOKEN' value='0'/>
+<enum name='MSC_LIST_ALL' value='3'/>
+<enum name='MSC_LIST_KNOWN' value='1'/>
+<enum name='MSC_LIST_SLOTS' value='2'/>
+<enum name='MSC_MAXSIZEOF_APDU_DATALEN' value='255'/>
+<enum name='MSC_MAXSIZE_AID' value='64'/>
+<enum name='MSC_MAXSIZE_BUFFER' value='264'/>
+<enum name='MSC_MAXSIZE_CERT_ISSUER' value='512'/>
+<enum name='MSC_MAXSIZE_CERT_SERIAL' value='512'/>
+<enum name='MSC_MAXSIZE_CERT_SUBJECT' value='512'/>
+<enum name='MSC_MAXSIZE_LABEL' value='32'/>
+<enum name='MSC_MAXSIZE_MAC' value='128'/>
+<enum name='MSC_MAXSIZE_OBJID' value='16'/>
+<enum name='MSC_MAXSIZE_SVCPROV' value='200'/>
+<enum name='MSC_MAXSIZE_TOKENAME' value='150'/>
+<enum name='MSC_MAXSIZE_TOKENARRAY' value='255'/>
+<enum name='MSC_MAX_KEYS' value='16'/>
+<enum name='MSC_MAX_PINS' value='8'/>
+<enum name='MSC_MODE_DES_CBC_NOPAD' value='32'/>
+<enum name='MSC_MODE_DES_ECB_NOPAD' value='33'/>
+<enum name='MSC_MODE_DSA_SHA' value='16'/>
+<enum name='MSC_MODE_RSA_NOPAD' value='0'/>
+<enum name='MSC_MODE_RSA_PAD_PKCS1' value='1'/>
+<enum name='MSC_NO_MEMORY_LEFT' value='39937'/>
+<enum name='MSC_NO_TIMEOUT' value='4294967295'/>
+<enum name='MSC_OBJECT_EXISTS' value='39944'/>
+<enum name='MSC_OBJECT_NOT_FOUND' value='39943'/>
+<enum name='MSC_OK' value='36864'/>
+<enum name='MSC_OPERATION_NOT_ALLOWED' value='39939'/>
+<enum name='MSC_OPT_DEFAULT' value='0'/>
+<enum name='MSC_OPT_DSA_GPQ' value='2'/>
+<enum name='MSC_OPT_RSA_PUB_EXP' value='1'/>
+<enum name='MSC_PERCENT_STEPSIZE' value='1000'/>
+<enum name='MSC_RESET_TOKEN' value='1'/>
+<enum name='MSC_SEQUENCE_END' value='39954'/>
+<enum name='MSC_SEQUENCE_NEXT' value='1'/>
+<enum name='MSC_SEQUENCE_RESET' value='0'/>
+<enum name='MSC_SERVICE_UNRESPONSIVE' value='40019'/>
+<enum name='MSC_SHARE_DIRECT' value='3'/>
+<enum name='MSC_SHARE_EXCLUSIVE' value='1'/>
+<enum name='MSC_SHARE_SHARED' value='2'/>
+<enum name='MSC_SHARING_VIOLATION' value='40032'/>
+<enum name='MSC_SIGNATURE_INVALID' value='39947'/>
+<enum name='MSC_SINGLE_READ_PACKET' value='255'/>
+<enum name='MSC_SIZEOF_KEYPACKET' value='200'/>
+<enum name='MSC_STATE_CHANGED' value='2'/>
+<enum name='MSC_STATE_EMPTY' value='16'/>
+<enum name='MSC_STATE_EXCLUSIVE' value='128'/>
+<enum name='MSC_STATE_INUSE' value='256'/>
+<enum name='MSC_STATE_MUTE' value='512'/>
+<enum name='MSC_STATE_PRESENT' value='32'/>
+<enum name='MSC_STATE_UNAVAILABLE' value='8'/>
+<enum name='MSC_STATE_UNAWARE' value='16384'/>
+<enum name='MSC_STATE_UNKNOWN' value='4'/>
+<enum name='MSC_SUCCESS' value='36864'/>
+<enum name='MSC_SUPPORT_3DES' value='32'/>
+<enum name='MSC_SUPPORT_AES' value='128'/>
+<enum name='MSC_SUPPORT_BLOWFISH' value='256'/>
+<enum name='MSC_SUPPORT_CHANGEPIN' value='256'/>
+<enum name='MSC_SUPPORT_COMPUTECRYPT' value='8'/>
+<enum name='MSC_SUPPORT_CREATEOBJECT' value='2048'/>
+<enum name='MSC_SUPPORT_CREATEPIN' value='64'/>
+<enum name='MSC_SUPPORT_DELETEOBJECT' value='4096'/>
+<enum name='MSC_SUPPORT_DES' value='16'/>
+<enum name='MSC_SUPPORT_DSA' value='2'/>
+<enum name='MSC_SUPPORT_ECURVE' value='4'/>
+<enum name='MSC_SUPPORT_ELGAMAL' value='8'/>
+<enum name='MSC_SUPPORT_EXPORTKEY' value='4'/>
+<enum name='MSC_SUPPORT_EXTAUTH' value='16'/>
+<enum name='MSC_SUPPORT_GENKEYS' value='1'/>
+<enum name='MSC_SUPPORT_GETCHALLENGE' value='131072'/>
+<enum name='MSC_SUPPORT_IDEA' value='64'/>
+<enum name='MSC_SUPPORT_IMPORTKEY' value='2'/>
+<enum name='MSC_SUPPORT_LISTKEYS' value='32'/>
+<enum name='MSC_SUPPORT_LISTOBJECTS' value='32768'/>
+<enum name='MSC_SUPPORT_LISTPINS' value='1024'/>
+<enum name='MSC_SUPPORT_LOGOUTALL' value='65536'/>
+<enum name='MSC_SUPPORT_MD5' value='2048'/>
+<enum name='MSC_SUPPORT_READOBJECT' value='16384'/>
+<enum name='MSC_SUPPORT_RSA' value='1'/>
+<enum name='MSC_SUPPORT_SHA1' value='1024'/>
+<enum name='MSC_SUPPORT_TWOFISH' value='512'/>
+<enum name='MSC_SUPPORT_UNBLOCKPIN' value='512'/>
+<enum name='MSC_SUPPORT_VERIFYPIN' value='128'/>
+<enum name='MSC_SUPPORT_WRITEOBJECT' value='8192'/>
+<enum name='MSC_TAG_CAPABLE_3DES' value='202'/>
+<enum name='MSC_TAG_CAPABLE_AES' value='204'/>
+<enum name='MSC_TAG_CAPABLE_BLOWFISH' value='205'/>
+<enum name='MSC_TAG_CAPABLE_DES' value='201'/>
+<enum name='MSC_TAG_CAPABLE_DSA' value='104'/>
+<enum name='MSC_TAG_CAPABLE_ECURVE' value='105'/>
+<enum name='MSC_TAG_CAPABLE_ELGAMAL' value='106'/>
+<enum name='MSC_TAG_CAPABLE_IDEA' value='203'/>
+<enum name='MSC_TAG_CAPABLE_ID_STATE' value='501'/>
+<enum name='MSC_TAG_CAPABLE_KEY_AUTH' value='180'/>
+<enum name='MSC_TAG_CAPABLE_MD5' value='207'/>
+<enum name='MSC_TAG_CAPABLE_OBJ_ATTR' value='301'/>
+<enum name='MSC_TAG_CAPABLE_OBJ_AUTH' value='303'/>
+<enum name='MSC_TAG_CAPABLE_OBJ_IDSIZE' value='302'/>
+<enum name='MSC_TAG_CAPABLE_OBJ_MAXNUM' value='304'/>
+<enum name='MSC_TAG_CAPABLE_PIN_ATTR' value='401'/>
+<enum name='MSC_TAG_CAPABLE_PIN_AUTH' value='407'/>
+<enum name='MSC_TAG_CAPABLE_PIN_CHARSET' value='405'/>
+<enum name='MSC_TAG_CAPABLE_PIN_MAXNUM' value='402'/>
+<enum name='MSC_TAG_CAPABLE_PIN_MAXSIZE' value='404'/>
+<enum name='MSC_TAG_CAPABLE_PIN_MINSIZE' value='403'/>
+<enum name='MSC_TAG_CAPABLE_PIN_POLICY' value='406'/>
+<enum name='MSC_TAG_CAPABLE_RANDOM' value='600'/>
+<enum name='MSC_TAG_CAPABLE_RANDOM_MAX' value='601'/>
+<enum name='MSC_TAG_CAPABLE_RANDOM_MIN' value='602'/>
+<enum name='MSC_TAG_CAPABLE_RSA' value='103'/>
+<enum name='MSC_TAG_CAPABLE_SHA1' value='208'/>
+<enum name='MSC_TAG_CAPABLE_TWOFISH' value='206'/>
+<enum name='MSC_TAG_SUPPORT_CRYPTOALG' value='102'/>
+<enum name='MSC_TAG_SUPPORT_FUNCTIONS' value='101'/>
+<enum name='MSC_TIMEOUT_OCCURRED' value='40020'/>
+<enum name='MSC_TOKEN_INSERTED' value='40023'/>
+<enum name='MSC_TOKEN_REMOVED' value='40021'/>
+<enum name='MSC_TOKEN_RESET' value='40022'/>
+<enum name='MSC_TOKEN_TYPE_KNOWN' value='4'/>
+<enum name='MSC_TOKEN_TYPE_REMOVED' value='1'/>
+<enum name='MSC_TOKEN_TYPE_RESET' value='8'/>
+<enum name='MSC_TOKEN_TYPE_UNKNOWN' value='2'/>
+<enum name='MSC_TOKEN_UNRESPONSIVE' value='40024'/>
+<enum name='MSC_TRANSPORT_ERROR' value='39950'/>
+<enum name='MSC_UNAUTHORIZED' value='39942'/>
+<enum name='MSC_UNRECOGNIZED_TOKEN' value='40018'/>
+<enum name='MSC_UNSPECIFIED_ERROR' value='39949'/>
+<enum name='MSC_UNSUPPORTED_FEATURE' value='39941'/>
+<enum name='MSC_ZF_DEFAULT' value='0'/>
+<enum name='MSC_ZF_WRITE_ZERO' value='1'/>
+<enum name='PCSCLITE_CLIENT_ATTEMPTS' value='120'/>
+<enum name='PCSCLITE_INFINITE_TIMEOUT' value='4320000'/>
+<enum name='PCSCLITE_MAX_APPLICATIONS' value='16'/>
+<enum name='PCSCLITE_MAX_APPLICATIONS_CONTEXTS' value='256'/>
+<enum name='PCSCLITE_MAX_APPLICATION_CONTEXTS' value='16'/>
+<enum name='PCSCLITE_MAX_APPLICATION_CONTEXT_CHANNELS' value='16'/>
+<enum name='PCSCLITE_MAX_CHANNELS' value='16'/>
+<enum name='PCSCLITE_MAX_COMSIZE' value='64'/>
+<enum name='PCSCLITE_MAX_CONTEXTS' value='16'/>
+<enum name='PCSCLITE_MAX_MESSAGE_SIZE' value='2048'/>
+<enum name='PCSCLITE_MAX_READERS_CONTEXTS' value='16'/>
+<enum name='PCSCLITE_MAX_READER_CONTEXT_CHANNELS' value='16'/>
+<enum name='PCSCLITE_MAX_THREADS' value='16'/>
+<enum name='PCSCLITE_MCLIENT_ATTEMPTS' value='20'/>
+<enum name='PCSCLITE_MSG_KEY_LEN' value='16'/>
+<enum name='PCSCLITE_RW_ATTEMPTS' value='100'/>
+<enum name='PCSCLITE_SERVER_ATTEMPTS' value='5'/>
+<enum name='PCSCLITE_STATUS_POLL_RATE' value='400000'/>
+<enum name='PCSCLITE_STATUS_WAIT' value='200000'/>
+<enum name='PCSCLITE_SVC_IDENTITY' value='16973824'/>
+<enum name='PCSCLITE_TRANSACTION_TIMEOUT' value='40'/>
+<enum name='SCARD_ABSENT' value='2'/>
+<enum name='SCARD_ATR_LENGTH' value='33'/>
+<enum name='SCARD_EJECT_CARD' value='3'/>
+<enum name='SCARD_E_BAD_SEEK' value='2148532265'/>
+<enum name='SCARD_E_CANCELLED' value='2148532226'/>
+<enum name='SCARD_E_CANT_DISPOSE' value='2148532238'/>
+<enum name='SCARD_E_CARD_UNSUPPORTED' value='2148532252'/>
+<enum name='SCARD_E_CERTIFICATE_UNAVAILABLE' value='2148532269'/>
+<enum name='SCARD_E_COMM_DATA_LOST' value='2148532271'/>
+<enum name='SCARD_E_DIR_NOT_FOUND' value='2148532259'/>
+<enum name='SCARD_E_DUPLICATE_READER' value='2148532251'/>
+<enum name='SCARD_E_FILE_NOT_FOUND' value='2148532260'/>
+<enum name='SCARD_E_ICC_CREATEORDER' value='2148532257'/>
+<enum name='SCARD_E_ICC_INSTALLATION' value='2148532256'/>
+<enum name='SCARD_E_INSUFFICIENT_BUFFER' value='2148532232'/>
+<enum name='SCARD_E_INVALID_ATR' value='2148532245'/>
+<enum name='SCARD_E_INVALID_CHV' value='2148532266'/>
+<enum name='SCARD_E_INVALID_HANDLE' value='2148532227'/>
+<enum name='SCARD_E_INVALID_PARAMETER' value='2148532228'/>
+<enum name='SCARD_E_INVALID_TARGET' value='2148532229'/>
+<enum name='SCARD_E_INVALID_VALUE' value='2148532241'/>
+<enum name='SCARD_E_NOT_READY' value='2148532240'/>
+<enum name='SCARD_E_NOT_TRANSACTED' value='2148532246'/>
+<enum name='SCARD_E_NO_ACCESS' value='2148532263'/>
+<enum name='SCARD_E_NO_DIR' value='2148532261'/>
+<enum name='SCARD_E_NO_FILE' value='2148532262'/>
+<enum name='SCARD_E_NO_KEY_CONTAINER' value='2148532272'/>
+<enum name='SCARD_E_NO_MEMORY' value='2148532230'/>
+<enum name='SCARD_E_NO_READERS_AVAILABLE' value='2148532270'/>
+<enum name='SCARD_E_NO_SERVICE' value='2148532253'/>
+<enum name='SCARD_E_NO_SMARTCARD' value='2148532236'/>
+<enum name='SCARD_E_NO_SUCH_CERTIFICATE' value='2148532268'/>
+<enum name='SCARD_E_PCI_TOO_SMALL' value='2148532249'/>
+<enum name='SCARD_E_PROTO_MISMATCH' value='2148532239'/>
+<enum name='SCARD_E_READER_UNAVAILABLE' value='2148532247'/>
+<enum name='SCARD_E_READER_UNSUPPORTED' value='2148532250'/>
+<enum name='SCARD_E_SERVER_TOO_BUSY' value='2148532273'/>
+<enum name='SCARD_E_SERVICE_STOPPED' value='2148532254'/>
+<enum name='SCARD_E_SHARING_VIOLATION' value='2148532235'/>
+<enum name='SCARD_E_SYSTEM_CANCELLED' value='2148532242'/>
+<enum name='SCARD_E_TIMEOUT' value='2148532234'/>
+<enum name='SCARD_E_UNEXPECTED' value='2148532255'/>
+<enum name='SCARD_E_UNKNOWN_CARD' value='2148532237'/>
+<enum name='SCARD_E_UNKNOWN_READER' value='2148532233'/>
+<enum name='SCARD_E_UNKNOWN_RES_MNG' value='2148532267'/>
+<enum name='SCARD_E_UNSUPPORTED_FEATURE' value='2148532255'/>
+<enum name='SCARD_E_WRITE_TOO_MANY' value='2148532264'/>
+<enum name='SCARD_F_COMM_ERROR' value='2148532243'/>
+<enum name='SCARD_F_INTERNAL_ERROR' value='2148532225'/>
+<enum name='SCARD_F_UNKNOWN_ERROR' value='2148532244'/>
+<enum name='SCARD_F_WAITED_TOO_LONG' value='2148532231'/>
+<enum name='SCARD_INSERTED' value='2'/>
+<enum name='SCARD_LEAVE_CARD' value='0'/>
+<enum name='SCARD_NEGOTIABLE' value='32'/>
+<enum name='SCARD_POWERED' value='16'/>
+<enum name='SCARD_PRESENT' value='4'/>
+<enum name='SCARD_PROTOCOL_ANY' value='3'/>
+<enum name='SCARD_PROTOCOL_RAW' value='4'/>
+<enum name='SCARD_PROTOCOL_T0' value='1'/>
+<enum name='SCARD_PROTOCOL_T1' value='2'/>
+<enum name='SCARD_PROTOCOL_T15' value='8'/>
+<enum name='SCARD_PROTOCOL_UNDEFINED' value='0'/>
+<enum name='SCARD_PROTOCOL_UNSET' value='0'/>
+<enum name='SCARD_P_SHUTDOWN' value='2148532248'/>
+<enum name='SCARD_REMOVED' value='4'/>
+<enum name='SCARD_RESET' value='1'/>
+<enum name='SCARD_RESET_CARD' value='1'/>
+<enum name='SCARD_SCOPE_GLOBAL' value='3'/>
+<enum name='SCARD_SCOPE_SYSTEM' value='2'/>
+<enum name='SCARD_SCOPE_TERMINAL' value='1'/>
+<enum name='SCARD_SCOPE_USER' value='0'/>
+<enum name='SCARD_SHARE_DIRECT' value='3'/>
+<enum name='SCARD_SHARE_EXCLUSIVE' value='1'/>
+<enum name='SCARD_SHARE_SHARED' value='2'/>
+<enum name='SCARD_SPECIFIC' value='64'/>
+<enum name='SCARD_STATE_ATRMATCH' value='64'/>
+<enum name='SCARD_STATE_CHANGED' value='2'/>
+<enum name='SCARD_STATE_EMPTY' value='16'/>
+<enum name='SCARD_STATE_EXCLUSIVE' value='128'/>
+<enum name='SCARD_STATE_IGNORE' value='1'/>
+<enum name='SCARD_STATE_INUSE' value='256'/>
+<enum name='SCARD_STATE_MUTE' value='512'/>
+<enum name='SCARD_STATE_PRESENT' value='32'/>
+<enum name='SCARD_STATE_UNAVAILABLE' value='8'/>
+<enum name='SCARD_STATE_UNAWARE' value='0'/>
+<enum name='SCARD_STATE_UNKNOWN' value='4'/>
+<enum name='SCARD_STATE_UNPOWERED' value='1024'/>
+<enum name='SCARD_SWALLOWED' value='8'/>
+<enum name='SCARD_S_SUCCESS' value='0'/>
+<enum name='SCARD_UNKNOWN' value='1'/>
+<enum name='SCARD_UNPOWER_CARD' value='2'/>
+<enum name='SCARD_W_CANCELLED_BY_USER' value='2148532334'/>
+<enum name='SCARD_W_CARD_NOT_AUTHENTICATED' value='2148532335'/>
+<enum name='SCARD_W_CHV_BLOCKED' value='2148532332'/>
+<enum name='SCARD_W_EOF' value='2148532333'/>
+<enum name='SCARD_W_INSERTED_CARD' value='2148532330'/>
+<enum name='SCARD_W_REMOVED_CARD' value='2148532329'/>
+<enum name='SCARD_W_RESET_CARD' value='2148532328'/>
+<enum name='SCARD_W_SECURITY_VIOLATION' value='2148532330'/>
+<enum name='SCARD_W_UNPOWERED_CARD' value='2148532327'/>
+<enum name='SCARD_W_UNRESPONSIVE_CARD' value='2148532326'/>
+<enum name='SCARD_W_UNSUPPORTED_CARD' value='2148532325'/>
+<enum name='SCARD_W_WRONG_CHV' value='2148532331'/>
+<function name='MSCBeginTransaction'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<retval type='I'/>
+</function>
+<function name='MSCCallbackCancelEvent'>
+<retval type='I'/>
+</function>
+<function name='MSCCallbackForTokenEvent'>
+<arg type='^{_MSCLPTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}'/>
+<arg type='I'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{_MSCLPTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}'/>
+<arg type='I'/>
+<arg type='^v'/>
+<retval type='I'/>
+</arg>
+<arg type='^v'/>
+<retval type='I'/>
+</function>
+<function name='MSCCancelEventWait'>
+<retval type='I'/>
+</function>
+<function name='MSCChangePIN'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='C'/>
+<arg type='*'/>
+<arg type='C'/>
+<arg type='*'/>
+<arg type='C'/>
+<retval type='I'/>
+</function>
+<function name='MSCClearReset'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<retval type='C'/>
+</function>
+<function name='MSCComputeCrypt'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='^{_MSCLPCryptInit=CCC*S}'/>
+<arg type='*'/>
+<arg type='I'/>
+<arg type='*'/>
+<arg type='^I'/>
+<retval type='I'/>
+</function>
+<function name='MSCCreateObject'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='*'/>
+<arg type='I'/>
+<arg type='^{_MSCLPObjectACL=SSS}'/>
+<retval type='I'/>
+</function>
+<function name='MSCCreatePIN'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='C'/>
+<arg type='C'/>
+<arg type='*'/>
+<arg type='I'/>
+<arg type='*'/>
+<arg type='C'/>
+<retval type='I'/>
+</function>
+<function name='MSCDeleteObject'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='*'/>
+<arg type='C'/>
+<retval type='I'/>
+</function>
+<function name='MSCEndTransaction'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='I'/>
+<retval type='I'/>
+</function>
+<function name='MSCEstablishConnection'>
+<arg type='^{_MSCLPTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}'/>
+<arg type='I'/>
+<arg type='*'/>
+<arg type='I'/>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<retval type='I'/>
+</function>
+<function name='MSCExportKey'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='C'/>
+<arg type='*'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<arg type='C'/>
+<retval type='I'/>
+</function>
+<function name='MSCExtAuthenticate'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='C'/>
+<arg type='C'/>
+<arg type='C'/>
+<arg type='*'/>
+<arg type='I'/>
+<retval type='I'/>
+</function>
+<function name='MSCExtendedFeature'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='I'/>
+<arg type='*'/>
+<arg type='I'/>
+<arg type='*'/>
+<arg type='^I'/>
+<retval type='I'/>
+</function>
+<function name='MSCGenerateKeys'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='C'/>
+<arg type='C'/>
+<arg type='^{_MSCLPGenKeyParams=CS{_MSCKeyACL=SSS}{_MSCKeyACL=SSS}{_MSCKeyPolicy=SS}{_MSCKeyPolicy=SS}C*I}'/>
+<retval type='I'/>
+</function>
+<function name='MSCGetCapabilities'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='I'/>
+<arg type='*'/>
+<arg type='^I'/>
+<retval type='I'/>
+</function>
+<function name='MSCGetChallenge'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='*'/>
+<arg type='S'/>
+<arg type='*'/>
+<arg type='S'/>
+<retval type='I'/>
+</function>
+<function name='MSCGetKeyAttributes'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='C'/>
+<arg type='^{_MSCLPKeyInfo=CCCCS{_MSCKeyPolicy=SS}{_MSCKeyACL=SSS}}'/>
+<retval type='I'/>
+</function>
+<function name='MSCGetObjectAttributes'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='*'/>
+<arg type='^{_MSCLPObjectInfo=[16c]I{_MSCObjectACL=SSS}}'/>
+<retval type='I'/>
+</function>
+<function name='MSCGetStatus'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='^{_MSCLPStatusInfo=SSIICCS}'/>
+<retval type='I'/>
+</function>
+<function name='MSCImportKey'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='C'/>
+<arg type='^{_MSCLPKeyACL=SSS}'/>
+<arg type='*'/>
+<arg type='I'/>
+<arg type='^{_MSCLPKeyPolicy=SS}'/>
+<arg type='^v'/>
+<arg type='C'/>
+<retval type='I'/>
+</function>
+<function name='MSCIsTokenChanged'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<retval type='C'/>
+</function>
+<function name='MSCIsTokenKnown'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<retval type='C'/>
+</function>
+<function name='MSCIsTokenMoved'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<retval type='C'/>
+</function>
+<function name='MSCIsTokenReset'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<retval type='C'/>
+</function>
+<function name='MSCListKeys'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='C'/>
+<arg type='^{_MSCLPKeyInfo=CCCCS{_MSCKeyPolicy=SS}{_MSCKeyACL=SSS}}'/>
+<retval type='I'/>
+</function>
+<function name='MSCListObjects'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='C'/>
+<arg type='^{_MSCLPObjectInfo=[16c]I{_MSCObjectACL=SSS}}'/>
+<retval type='I'/>
+</function>
+<function name='MSCListPINs'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='^S'/>
+<retval type='I'/>
+</function>
+<function name='MSCListTokens'>
+<arg type='I'/>
+<arg type='^{_MSCLPTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}'/>
+<arg type='^I'/>
+<retval type='I'/>
+</function>
+<function name='MSCLogoutAll'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<retval type='I'/>
+</function>
+<function name='MSCReadAllocateObject'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='*'/>
+<arg type='^*'/>
+<arg type='^I'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='i'/>
+<retval type='I'/>
+</arg>
+<arg type='^v'/>
+<retval type='I'/>
+</function>
+<function name='MSCReadObject'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='*'/>
+<arg type='I'/>
+<arg type='*'/>
+<arg type='I'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='i'/>
+<retval type='I'/>
+</arg>
+<arg type='^v'/>
+<retval type='I'/>
+</function>
+<function name='MSCReleaseConnection'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='I'/>
+<retval type='I'/>
+</function>
+<function name='MSCSelectAID'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='*'/>
+<arg type='I'/>
+<retval type='I'/>
+</function>
+<function name='MSCUnblockPIN'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='C'/>
+<arg type='*'/>
+<arg type='I'/>
+<retval type='I'/>
+</function>
+<function name='MSCVerifyPIN'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='C'/>
+<arg type='*'/>
+<arg type='I'/>
+<retval type='I'/>
+</function>
+<function name='MSCWaitForTokenEvent'>
+<arg type='^{_MSCLPTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}'/>
+<arg type='I'/>
+<arg type='I'/>
+<retval type='I'/>
+</function>
+<function name='MSCWriteFramework'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='^{_MSCLPInitTokenParams=[264C]ICI[264C]I[264C]IC[264C]ICSSSCCS}'/>
+<retval type='I'/>
+</function>
+<function name='MSCWriteObject'>
+<arg type='^{_MSCLPTokenConnection=ii^{_SCARD_IO_REQUEST=II}[128C]I^v{_CFDyLibPointers=^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v}{_MSCTokenInfo=[150c][52c][200c][33C][64C]IIII^vI}CI^?}'/>
+<arg type='*'/>
+<arg type='I'/>
+<arg type='*'/>
+<arg type='I'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='i'/>
+<retval type='I'/>
+</arg>
+<arg type='^v'/>
+<retval type='I'/>
+</function>
+<function name='SCardBeginTransaction'>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='SCardCancel'>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='SCardCancelTransaction'>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='SCardConnect'>
+<arg type='i'/>
+<arg type='*'/>
+<arg type='I'/>
+<arg type='I'/>
+<arg type='^i'/>
+<arg type='^I'/>
+<retval type='i'/>
+</function>
+<function name='SCardControl'>
+<arg type='i'/>
+<arg type='^v'/>
+<arg type='I'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type='i'/>
+</function>
+<function name='SCardControl132'>
+<arg type='i'/>
+<arg type='I'/>
+<arg type='^v'/>
+<arg type='I'/>
+<arg type='^v'/>
+<arg type='I'/>
+<arg type='^I'/>
+<retval type='i'/>
+</function>
+<function name='SCardDisconnect'>
+<arg type='i'/>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='SCardEndTransaction'>
+<arg type='i'/>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='SCardEstablishContext'>
+<arg type='I'/>
+<arg type='^v'/>
+<arg type='^v'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='SCardGetAttrib'>
+<arg type='i'/>
+<arg type='I'/>
+<arg type='*'/>
+<arg type='^I'/>
+<retval type='i'/>
+</function>
+<function name='SCardGetStatusChange'>
+<arg type='i'/>
+<arg type='I'/>
+<arg type='^{_LPSCARD_READERSTATE_A=*^vIII[33C]}'/>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='SCardIsValidContext'>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='SCardListReaderGroups'>
+<arg type='i'/>
+<arg type='*'/>
+<arg type='^I'/>
+<retval type='i'/>
+</function>
+<function name='SCardListReaders'>
+<arg type='i'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='^I'/>
+<retval type='i'/>
+</function>
+<function name='SCardReconnect'>
+<arg type='i'/>
+<arg type='I'/>
+<arg type='I'/>
+<arg type='I'/>
+<arg type='^I'/>
+<retval type='i'/>
+</function>
+<function name='SCardReleaseContext'>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='SCardSetAttrib'>
+<arg type='i'/>
+<arg type='I'/>
+<arg type='*'/>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='SCardSetTimeout'>
+<arg type='i'/>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='SCardStatus'>
+<arg type='i'/>
+<arg type='*'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<arg type='*'/>
+<arg type='^I'/>
+<retval type='i'/>
+</function>
+<function name='SCardTransmit'>
+<arg type='i'/>
+<arg type='^{_SCARD_IO_REQUEST=II}'/>
+<arg type='*'/>
+<arg type='I'/>
+<arg type='^{_SCARD_IO_REQUEST=II}'/>
+<arg type='*'/>
+<arg type='^I'/>
+<retval type='i'/>
+</function>
+<function name='SCardUnload'/>
+<function name='msc_error'>
+<arg type64='Q' type='L'/>
+<retval type='*'/>
+</function>
+<function name='pcsc_stringify_error'>
+<arg type='i'/>
+<retval type='*'/>
+</function>
+<function_alias name='SCardControl' original='SCardControl132'/>
+</signatures>

@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<opaque name='VDADecoder' type='^{OpaqueVDADecoder=}'/>
+<constant name='kVDADecoderConfiguration_Height' type='^{__CFString=}'/>
+<constant name='kVDADecoderConfiguration_SourceFormat' type='^{__CFString=}'/>
+<constant name='kVDADecoderConfiguration_Width' type='^{__CFString=}'/>
+<constant name='kVDADecoderConfiguration_avcCData' type='^{__CFString=}'/>
+<enum name='kVDADecoderConfigurationError' value='-12472'/>
+<enum name='kVDADecoderDecodeFlags_DontEmitFrame' value='1'/>
+<enum name='kVDADecoderDecoderFailedErr' value='-12473'/>
+<enum name='kVDADecoderFlush_EmitFrames' value='1'/>
+<enum name='kVDADecoderFormatNotSupportedErr' value='-12471'/>
+<enum name='kVDADecoderHardwareNotSupportedErr' value='-12470'/>
+<enum name='kVDADecoderNoErr' value='0'/>
+<function name='VDADecoderCreate'>
+<arg type='^{__CFDictionary=}'/>
+<arg type='^{__CFDictionary=}'/>
+<arg type='^^?'/>
+<arg type='^v'/>
+<arg type='^^{OpaqueVDADecoder}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='VDADecoderDecode'>
+<arg type='^{OpaqueVDADecoder=}'/>
+<arg type='I'/>
+<arg type='@'/>
+<arg type='^{__CFDictionary=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='VDADecoderDestroy'>
+<arg type='^{OpaqueVDADecoder=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='VDADecoderFlush'>
+<arg type='^{OpaqueVDADecoder=}'/>
+<arg type='I'/>
+<retval type64='i' type='l'/>
+</function>
+</signatures>

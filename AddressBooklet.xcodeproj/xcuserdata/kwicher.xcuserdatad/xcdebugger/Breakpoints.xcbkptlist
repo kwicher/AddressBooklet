@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AddressBooklet/AppDelegate.rb"
-         timestampString = "358896840.122893"
+         timestampString = "358994242.022192"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "27"
-         endingLineNumber = "27"
+         startingLineNumber = "29"
+         endingLineNumber = "29"
          landmarkName = "applicationDidFinishLaunching"
          landmarkType = "7">
       </FileBreakpoint>

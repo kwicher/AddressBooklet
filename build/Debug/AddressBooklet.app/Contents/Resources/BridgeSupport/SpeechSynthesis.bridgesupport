@@ -1,0 +1,516 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<struct name='DelimiterInfo' type='{DelimiterInfo=&quot;startDelimiter&quot;[2C]&quot;endDelimiter&quot;[2C]}'/>
+<struct name='PhonemeDescriptor' type='{PhonemeDescriptor=&quot;phonemeCount&quot;s&quot;thePhonemes&quot;[1{PhonemeInfo=&quot;opcode&quot;s&quot;phStr&quot;[16C]&quot;exampleStr&quot;[32C]&quot;hiliteStart&quot;s&quot;hiliteEnd&quot;s}]}'/>
+<struct name='PhonemeInfo' type='{PhonemeInfo=&quot;opcode&quot;s&quot;phStr&quot;[16C]&quot;exampleStr&quot;[32C]&quot;hiliteStart&quot;s&quot;hiliteEnd&quot;s}'/>
+<struct name='SpeechChannelRecord' opaque='true' type64='{SpeechChannelRecord=&quot;data&quot;[1q]}' type='{SpeechChannelRecord=&quot;data&quot;[1l]}'/>
+<struct name='SpeechErrorInfo' type64='{SpeechErrorInfo=&quot;count&quot;s&quot;oldest&quot;s&quot;oldPos&quot;q&quot;newest&quot;s&quot;newPos&quot;q}' type='{SpeechErrorInfo=&quot;count&quot;s&quot;oldest&quot;s&quot;oldPos&quot;l&quot;newest&quot;s&quot;newPos&quot;l}'/>
+<struct name='SpeechStatusInfo' type64='{SpeechStatusInfo=&quot;outputBusy&quot;B&quot;outputPaused&quot;B&quot;inputBytesLeft&quot;q&quot;phonemeCode&quot;s}' type='{SpeechStatusInfo=&quot;outputBusy&quot;B&quot;outputPaused&quot;B&quot;inputBytesLeft&quot;l&quot;phonemeCode&quot;s}'/>
+<struct name='SpeechVersionInfo' type='{SpeechVersionInfo=&quot;synthType&quot;I&quot;synthSubType&quot;I&quot;synthManufacturer&quot;I&quot;synthFlags&quot;i&quot;synthVersion&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}}'/>
+<struct name='SpeechXtndData' type='{SpeechXtndData=&quot;synthCreator&quot;I&quot;synthData&quot;[2C]}'/>
+<struct name='VoiceDescription' type64='{VoiceDescription=&quot;length&quot;i&quot;voice&quot;{VoiceSpec=&quot;creator&quot;I&quot;id&quot;I}&quot;version&quot;i&quot;name&quot;[64C]&quot;comment&quot;[256C]&quot;gender&quot;s&quot;age&quot;s&quot;script&quot;s&quot;language&quot;s&quot;region&quot;s&quot;reserved&quot;[4i]}' type='{VoiceDescription=&quot;length&quot;i&quot;voice&quot;{VoiceSpec=&quot;creator&quot;I&quot;id&quot;I}&quot;version&quot;i&quot;name&quot;[64C]&quot;comment&quot;[256C]&quot;gender&quot;s&quot;age&quot;s&quot;script&quot;s&quot;language&quot;s&quot;region&quot;s&quot;reserved&quot;[4l]}'/>
+<struct name='VoiceFileInfo' type64='{VoiceFileInfo=&quot;fileSpec&quot;{FSSpec=&quot;hidden&quot;[70C]}&quot;resID&quot;s}' type='{VoiceFileInfo=&quot;fileSpec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}&quot;resID&quot;s}'/>
+<struct name='VoiceSpec' type='{VoiceSpec=&quot;creator&quot;I&quot;id&quot;I}'/>
+<constant name='kSpeechAudioGraphProperty' type='^{__CFString=}'/>
+<constant name='kSpeechAudioUnitProperty' type='^{__CFString=}'/>
+<constant name='kSpeechCharacterModeProperty' type='^{__CFString=}'/>
+<constant name='kSpeechCommandDelimiterProperty' type='^{__CFString=}'/>
+<constant name='kSpeechCommandPrefix' type='^{__CFString=}'/>
+<constant name='kSpeechCommandSuffix' type='^{__CFString=}'/>
+<constant name='kSpeechCurrentVoiceProperty' type='^{__CFString=}'/>
+<constant name='kSpeechDictionaryAbbreviations' type='^{__CFString=}'/>
+<constant name='kSpeechDictionaryEntryPhonemes' type='^{__CFString=}'/>
+<constant name='kSpeechDictionaryEntrySpelling' type='^{__CFString=}'/>
+<constant name='kSpeechDictionaryLocaleIdentifier' type='^{__CFString=}'/>
+<constant name='kSpeechDictionaryModificationDate' type='^{__CFString=}'/>
+<constant name='kSpeechDictionaryPronunciations' type='^{__CFString=}'/>
+<constant name='kSpeechErrorCFCallBack' type='^{__CFString=}'/>
+<constant name='kSpeechErrorCallbackCharacterOffset' type='^{__CFString=}'/>
+<constant name='kSpeechErrorCallbackSpokenString' type='^{__CFString=}'/>
+<constant name='kSpeechErrorCount' type='^{__CFString=}'/>
+<constant name='kSpeechErrorNewest' type='^{__CFString=}'/>
+<constant name='kSpeechErrorNewestCharacterOffset' type='^{__CFString=}'/>
+<constant name='kSpeechErrorOldest' type='^{__CFString=}'/>
+<constant name='kSpeechErrorOldestCharacterOffset' type='^{__CFString=}'/>
+<constant name='kSpeechErrorsProperty' type='^{__CFString=}'/>
+<constant name='kSpeechInputModeProperty' type='^{__CFString=}'/>
+<constant name='kSpeechModeLiteral' type='^{__CFString=}'/>
+<constant name='kSpeechModeNormal' type='^{__CFString=}'/>
+<constant name='kSpeechModePhoneme' type='^{__CFString=}'/>
+<constant name='kSpeechModeText' type='^{__CFString=}'/>
+<constant name='kSpeechModeTune' type='^{__CFString=}'/>
+<constant name='kSpeechNoEndingProsody' type='^{__CFString=}'/>
+<constant name='kSpeechNoSpeechInterrupt' type='^{__CFString=}'/>
+<constant name='kSpeechNumberModeProperty' type='^{__CFString=}'/>
+<constant name='kSpeechOutputToAudioDeviceProperty' type='^{__CFString=}'/>
+<constant name='kSpeechOutputToExtAudioFileProperty' type='^{__CFString=}'/>
+<constant name='kSpeechOutputToFileURLProperty' type='^{__CFString=}'/>
+<constant name='kSpeechPhonemeCallBack' type='^{__CFString=}'/>
+<constant name='kSpeechPhonemeInfoExample' type='^{__CFString=}'/>
+<constant name='kSpeechPhonemeInfoHiliteEnd' type='^{__CFString=}'/>
+<constant name='kSpeechPhonemeInfoHiliteStart' type='^{__CFString=}'/>
+<constant name='kSpeechPhonemeInfoOpcode' type='^{__CFString=}'/>
+<constant name='kSpeechPhonemeInfoSymbol' type='^{__CFString=}'/>
+<constant name='kSpeechPhonemeOptionsProperty' type='^{__CFString=}'/>
+<constant name='kSpeechPhonemeSymbolsProperty' type='^{__CFString=}'/>
+<constant name='kSpeechPitchBaseProperty' type='^{__CFString=}'/>
+<constant name='kSpeechPitchModProperty' type='^{__CFString=}'/>
+<constant name='kSpeechPreflightThenPause' type='^{__CFString=}'/>
+<constant name='kSpeechRateProperty' type='^{__CFString=}'/>
+<constant name='kSpeechRecentSyncProperty' type='^{__CFString=}'/>
+<constant name='kSpeechRefConProperty' type='^{__CFString=}'/>
+<constant name='kSpeechResetProperty' type='^{__CFString=}'/>
+<constant name='kSpeechSpeechDoneCallBack' type='^{__CFString=}'/>
+<constant name='kSpeechStatusNumberOfCharactersLeft' type='^{__CFString=}'/>
+<constant name='kSpeechStatusOutputBusy' type='^{__CFString=}'/>
+<constant name='kSpeechStatusOutputPaused' type='^{__CFString=}'/>
+<constant name='kSpeechStatusPhonemeCode' type='^{__CFString=}'/>
+<constant name='kSpeechStatusProperty' type='^{__CFString=}'/>
+<constant name='kSpeechSyncCallBack' type='^{__CFString=}'/>
+<constant name='kSpeechSynthesizerInfoIdentifier' type='^{__CFString=}'/>
+<constant name='kSpeechSynthesizerInfoManufacturer' type='^{__CFString=}'/>
+<constant name='kSpeechSynthesizerInfoProperty' type='^{__CFString=}'/>
+<constant name='kSpeechSynthesizerInfoVersion' type='^{__CFString=}'/>
+<constant name='kSpeechTextDoneCallBack' type='^{__CFString=}'/>
+<constant name='kSpeechVoiceCreator' type='^{__CFString=}'/>
+<constant name='kSpeechVoiceID' type='^{__CFString=}'/>
+<constant name='kSpeechVolumeProperty' type='^{__CFString=}'/>
+<constant name='kSpeechWordCFCallBack' type='^{__CFString=}'/>
+<enum name='kAudioUnitProperty_SpeechChannel' value='3331'/>
+<enum name='kAudioUnitProperty_Voice' value='3330'/>
+<enum name='kAudioUnitSubType_SpeechSynthesis' value='1953788784'/>
+<enum name='kEndOfSentence' value='2'/>
+<enum name='kEndOfWord' value='1'/>
+<enum name='kFemale' value='2'/>
+<enum name='kImmediate' value='0'/>
+<enum name='kMale' value='1'/>
+<enum name='kNeuter' value='0'/>
+<enum name='kNoEndingProsody' value='1'/>
+<enum name='kNoSpeechInterrupt' value='2'/>
+<enum name='kPreflightThenPause' value='4'/>
+<enum name='kSpeechGenerateTune' value='1'/>
+<enum name='kSpeechRelativeDuration' value='4'/>
+<enum name='kSpeechRelativePitch' value='2'/>
+<enum name='kSpeechShowSyllables' value='8'/>
+<enum name='kTextToSpeechSynthType' value='1953788771'/>
+<enum name='kTextToSpeechVoiceBundleType' value='1953789538'/>
+<enum name='kTextToSpeechVoiceFileType' value='1953789542'/>
+<enum name='kTextToSpeechVoiceType' value='1953789540'/>
+<enum name='modeLiteral' value='1280594508'/>
+<enum name='modeNormal' value='1313821261'/>
+<enum name='modePhonemes' value='1346916174'/>
+<enum name='modeText' value='1413830740'/>
+<enum name='modeTune' value='1414876741'/>
+<enum name='soCharacterMode' value='1667785074'/>
+<enum name='soCommandDelimiter' value='1684826477'/>
+<enum name='soCurrentA5' value='1836663093'/>
+<enum name='soCurrentVoice' value='1668706168'/>
+<enum name='soErrorCallBack' value='1701995362'/>
+<enum name='soErrors' value='1701999215'/>
+<enum name='soInputMode' value='1768845428'/>
+<enum name='soNumberMode' value='1852662386'/>
+<enum name='soOutputToAudioDevice' value='1869635940'/>
+<enum name='soOutputToExtAudioFile' value='1869635960'/>
+<enum name='soOutputToFileWithCFURL' value='1869635942'/>
+<enum name='soPhonemeCallBack' value='1885889378'/>
+<enum name='soPhonemeOptions' value='1886351476'/>
+<enum name='soPhonemeSymbols' value='1885893497'/>
+<enum name='soPitchBase' value='1885495667'/>
+<enum name='soPitchMod' value='1886220132'/>
+<enum name='soRate' value='1918989413'/>
+<enum name='soRecentSync' value='1937337955'/>
+<enum name='soRefCon' value='1919247971'/>
+<enum name='soReset' value='1920165236'/>
+<enum name='soSoundOutput' value='1936614511'/>
+<enum name='soSpeechDoneCallBack' value='1935958882'/>
+<enum name='soStatus' value='1937006964'/>
+<enum name='soSyncCallBack' value='1937335138'/>
+<enum name='soSynthExtension' value='2020896356'/>
+<enum name='soSynthType' value='1986359923'/>
+<enum name='soTextDoneCallBack' value='1952736098'/>
+<enum name='soVoiceDescription' value='1768842863'/>
+<enum name='soVoiceFile' value='1718773094'/>
+<enum name='soVolume' value='1987013741'/>
+<enum name='soWordCallBack' value='2003067746'/>
+<function name='ContinueSpeech'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<retval type='s'/>
+</function>
+<function name='CopyPhonemesFromText'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type='^{__CFString=}'/>
+<arg type='^^{__CFString}' type_modifier='o'/>
+<retval type='s'/>
+</function>
+<function name='CopySpeechProperty'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type='^{__CFString=}'/>
+<arg type='^^v' type_modifier='o'/>
+<retval type='s'/>
+</function>
+<function name='CountVoices'>
+<arg type='^s' type_modifier='o'/>
+<retval type='s'/>
+</function>
+<function name='DisposeSpeechChannel'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<retval type='s'/>
+</function>
+<function name='DisposeSpeechDoneUPP'>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeSpeechErrorUPP'>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type='s'/>
+<arg type64='q' type='l'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeSpeechPhonemeUPP'>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeSpeechSyncUPP'>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type64='I' type='L'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeSpeechTextDoneUPP'>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type='^^v'/>
+<arg type64='^Q' type='^L'/>
+<arg type='^i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeSpeechWordUPP'>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type64='Q' type='L'/>
+<arg type='S'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='GetIndVoice'>
+<arg type='s'/>
+<arg type='^{VoiceSpec=II}' type_modifier='o'/>
+<retval type='s'/>
+</function>
+<function name='GetSpeechInfo'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type64='I' type='L'/>
+<arg type='^v' type_modifier='o'/>
+<retval type='s'/>
+</function>
+<function name='GetSpeechPitch'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type='^i' type_modifier='o'/>
+<retval type='s'/>
+</function>
+<function name='GetSpeechRate'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type='^i' type_modifier='o'/>
+<retval type='s'/>
+</function>
+<function name='GetVoiceDescription'>
+<arg type='^{VoiceSpec=II}' type_modifier='n'/>
+<arg type64='^{VoiceDescription=i{VoiceSpec=II}i[64C][256C]sssss[4i]}' type='^{VoiceDescription=i{VoiceSpec=II}i[64C][256C]sssss[4l]}' type_modifier='o'/>
+<arg type64='q' type='l'/>
+<retval type='s'/>
+</function>
+<function name='GetVoiceInfo'>
+<arg type='^{VoiceSpec=II}' type_modifier='n'/>
+<arg type64='I' type='L'/>
+<arg type='^v' type_modifier='o'/>
+<retval type='s'/>
+</function>
+<function name='InvokeSpeechDoneUPP'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type64='^v' type='l'/>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeSpeechErrorUPP'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type64='^v' type='l'/>
+<arg type='s'/>
+<arg type64='q' type='l'/>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type='s'/>
+<arg type64='q' type='l'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeSpeechPhonemeUPP'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type64='^v' type='l'/>
+<arg type='s'/>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeSpeechSyncUPP'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type64='^v' type='l'/>
+<arg type64='I' type='L'/>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type64='I' type='L'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeSpeechTextDoneUPP'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type64='^v' type='l'/>
+<arg c_array_length_in_arg='3' type='^^v' type_modifier='o'/>
+<arg type64='^Q' type='^L' type_modifier='o'/>
+<arg type='^i' type_modifier='o'/>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type='^^v'/>
+<arg type64='^Q' type='^L'/>
+<arg type='^i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeSpeechWordUPP'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type64='^v' type='l'/>
+<arg type64='Q' type='L'/>
+<arg type='S'/>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type64='Q' type='L'/>
+<arg type='S'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='MakeVoiceSpec'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^{VoiceSpec=II}' type_modifier='o'/>
+<retval type='s'/>
+</function>
+<function name='NewSpeechChannel'>
+<arg type='^{VoiceSpec=II}' type_modifier='o'/>
+<arg type='^^{SpeechChannelRecord}' type_modifier='o'/>
+<retval type='s'/>
+</function>
+<function name='NewSpeechDoneUPP'>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewSpeechErrorUPP'>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type='s'/>
+<arg type64='q' type='l'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type='s'/>
+<arg type64='q' type='l'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewSpeechPhonemeUPP'>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type='s'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewSpeechSyncUPP'>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type64='I' type='L'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type64='I' type='L'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewSpeechTextDoneUPP'>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type='^^v'/>
+<arg type64='^Q' type='^L'/>
+<arg type='^i'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type='^^v'/>
+<arg type64='^Q' type='^L'/>
+<arg type='^i'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewSpeechWordUPP'>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type64='Q' type='L'/>
+<arg type='S'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}'/>
+<arg type64='^v' type='l'/>
+<arg type64='Q' type='L'/>
+<arg type='S'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='PauseSpeechAt'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type64='i' type='l'/>
+<retval type='s'/>
+</function>
+<function name='SetSpeechInfo'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type64='I' type='L'/>
+<arg type='^v' type_modifier='n'/>
+<retval type='s'/>
+</function>
+<function name='SetSpeechPitch'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type64='i' type='l'/>
+<retval type='s'/>
+</function>
+<function name='SetSpeechProperty'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type='^{__CFString=}'/>
+<arg type='@'/>
+<retval type='s'/>
+</function>
+<function name='SetSpeechRate'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type64='i' type='l'/>
+<retval type='s'/>
+</function>
+<function name='SpeakBuffer'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
+<arg type64='Q' type='L'/>
+<arg type64='i' type='l'/>
+<retval type='s'/>
+</function>
+<function name='SpeakCFString'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFDictionary=}'/>
+<retval type='s'/>
+</function>
+<function name='SpeakString'>
+<arg type='*'/>
+<retval type='s'/>
+</function>
+<function name='SpeakText'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
+<arg type64='Q' type='L'/>
+<retval type='s'/>
+</function>
+<function name='SpeechBusy'>
+<retval type='s'/>
+</function>
+<function name='SpeechBusySystemWide'>
+<retval type='s'/>
+</function>
+<function name='SpeechManagerVersion'>
+<retval type='{NumVersion=CCCC}'/>
+</function>
+<function name='SpeechSynthesisRegisterModuleURL'>
+<arg type='^{__CFURL=}'/>
+<retval type='s'/>
+</function>
+<function name='SpeechSynthesisUnregisterModuleURL'>
+<arg type='^{__CFURL=}'/>
+<retval type='s'/>
+</function>
+<function name='StopSpeech'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<retval type='s'/>
+</function>
+<function name='StopSpeechAt'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type64='i' type='l'/>
+<retval type='s'/>
+</function>
+<function name='TextToPhonemes'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
+<arg type64='Q' type='L'/>
+<arg type='^*' type_modifier='n'/>
+<arg c_array_length_in_arg='5' type64='^q' type='^l' type_modifier='o'/>
+<retval type='s'/>
+</function>
+<function name='UseDictionary'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type='^*'/>
+<retval type='s'/>
+</function>
+<function name='UseSpeechDictionary'>
+<arg type64='^{SpeechChannelRecord=[1q]}' type='^{SpeechChannelRecord=[1l]}' type_modifier='n'/>
+<arg type='^{__CFDictionary=}'/>
+<retval type='s'/>
+</function>
+</signatures>

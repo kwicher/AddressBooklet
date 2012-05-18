@@ -1,0 +1,1279 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<struct name='ALMXGlyphEntry' type='{ALMXGlyphEntry=&quot;GlyphIndexOffset&quot;s&quot;HorizontalAdvance&quot;s&quot;XOffsetToHOrigin&quot;s&quot;VerticalAdvance&quot;s&quot;YOffsetToVOrigin&quot;s}'/>
+<struct name='ALMXHeader' type='{ALMXHeader=&quot;Version&quot;i&quot;Flags&quot;S&quot;NMasters&quot;S&quot;FirstGlyph&quot;S&quot;LastGlyph&quot;S&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
+<struct name='ATSFSSpec' type64='{ATSFSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}' type='{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}'/>
+<struct name='ATSFontFilter' type='{ATSFontFilter=&quot;version&quot;I&quot;filterSelector&quot;i&quot;filter&quot;(?=&quot;generationFilter&quot;I&quot;fontFamilyFilter&quot;I&quot;fontFamilyApplierFunctionFilter&quot;^?&quot;fontApplierFunctionFilter&quot;^?&quot;fontFileRefFilter&quot;^{FSRef})}'/>
+<struct name='ATSFontMetrics' type64='{ATSFontMetrics=&quot;version&quot;I&quot;ascent&quot;d&quot;descent&quot;d&quot;leading&quot;d&quot;avgAdvanceWidth&quot;d&quot;maxAdvanceWidth&quot;d&quot;minLeftSideBearing&quot;d&quot;minRightSideBearing&quot;d&quot;stemWidth&quot;d&quot;stemHeight&quot;d&quot;capHeight&quot;d&quot;xHeight&quot;d&quot;italicAngle&quot;d&quot;underlinePosition&quot;d&quot;underlineThickness&quot;d}' type='{ATSFontMetrics=&quot;version&quot;I&quot;ascent&quot;f&quot;descent&quot;f&quot;leading&quot;f&quot;avgAdvanceWidth&quot;f&quot;maxAdvanceWidth&quot;f&quot;minLeftSideBearing&quot;f&quot;minRightSideBearing&quot;f&quot;stemWidth&quot;f&quot;stemHeight&quot;f&quot;capHeight&quot;f&quot;xHeight&quot;f&quot;italicAngle&quot;f&quot;underlinePosition&quot;f&quot;underlineThickness&quot;f}'/>
+<struct name='ATSFontQuerySourceContext' type='{ATSFontQuerySourceContext=&quot;version&quot;I&quot;refCon&quot;^v&quot;retain&quot;^?&quot;release&quot;^?}'/>
+<struct name='ATSGlyphIdealMetrics' type64='{ATSGlyphIdealMetrics=&quot;advance&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;sideBearing&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;otherSideBearing&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}}' type='{ATSGlyphIdealMetrics=&quot;advance&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;sideBearing&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;otherSideBearing&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}}'/>
+<struct name='ATSGlyphScreenMetrics' type64='{ATSGlyphScreenMetrics=&quot;deviceAdvance&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;topLeft&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;height&quot;I&quot;width&quot;I&quot;sideBearing&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;otherSideBearing&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}}' type='{ATSGlyphScreenMetrics=&quot;deviceAdvance&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;topLeft&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;height&quot;I&quot;width&quot;I&quot;sideBearing&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;otherSideBearing&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}}'/>
+<struct name='ATSJustWidthDeltaEntryOverride' type='{ATSJustWidthDeltaEntryOverride=&quot;beforeGrowLimit&quot;i&quot;beforeShrinkLimit&quot;i&quot;afterGrowLimit&quot;i&quot;afterShrinkLimit&quot;i&quot;growFlags&quot;S&quot;shrinkFlags&quot;S}'/>
+<struct name='ATSLayoutRecord' type64='{ATSLayoutRecord=&quot;glyphID&quot;S&quot;flags&quot;I&quot;originalOffset&quot;Q&quot;realPos&quot;i}' type='{ATSLayoutRecord=&quot;glyphID&quot;S&quot;flags&quot;I&quot;originalOffset&quot;I&quot;realPos&quot;i}'/>
+<struct name='ATSPoint' type64='{CGPoint=&quot;x&quot;d&quot;y&quot;d}' type='{Float32Point=&quot;x&quot;f&quot;y&quot;f}'/>
+<struct name='ATSTrapezoid' type='{ATSTrapezoid=&quot;upperLeft&quot;{FixedPoint=&quot;x&quot;i&quot;y&quot;i}&quot;upperRight&quot;{FixedPoint=&quot;x&quot;i&quot;y&quot;i}&quot;lowerRight&quot;{FixedPoint=&quot;x&quot;i&quot;y&quot;i}&quot;lowerLeft&quot;{FixedPoint=&quot;x&quot;i&quot;y&quot;i}}'/>
+<struct name='ATSUCurvePath' type64='{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1I]&quot;vector&quot;[1{CGPoint=&quot;x&quot;d&quot;y&quot;d}]}' type='{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1L]&quot;vector&quot;[1{Float32Point=&quot;x&quot;f&quot;y&quot;f}]}'/>
+<struct name='ATSUCurvePaths' type64='{ATSUCurvePaths=&quot;contours&quot;I&quot;contour&quot;[1{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1I]&quot;vector&quot;[1{CGPoint=&quot;x&quot;d&quot;y&quot;d}]}]}' type='{ATSUCurvePaths=&quot;contours&quot;I&quot;contour&quot;[1{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1L]&quot;vector&quot;[1{Float32Point=&quot;x&quot;f&quot;y&quot;f}]}]}'/>
+<struct name='ATSULayoutOperationOverrideSpecifier' type='{ATSULayoutOperationOverrideSpecifier=&quot;operationSelector&quot;I&quot;overrideUPP&quot;^?}'/>
+<struct name='BslnFormat0Part' type='{BslnFormat0Part=&quot;deltas&quot;[32s]}'/>
+<struct name='BslnFormat1Part' type='{BslnFormat1Part=&quot;deltas&quot;[32s]&quot;mappingData&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
+<struct name='BslnFormat2Part' type='{BslnFormat2Part=&quot;stdGlyph&quot;S&quot;ctlPoints&quot;[32s]}'/>
+<struct name='BslnFormat3Part' type='{BslnFormat3Part=&quot;stdGlyph&quot;S&quot;ctlPoints&quot;[32s]&quot;mappingData&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
+<struct name='BslnTable' type='{BslnTable=&quot;version&quot;i&quot;format&quot;S&quot;defaultBaseline&quot;S&quot;parts&quot;(BslnFormatUnion=&quot;fmt0Part&quot;{BslnFormat0Part=&quot;deltas&quot;[32s]}&quot;fmt1Part&quot;{BslnFormat1Part=&quot;deltas&quot;[32s]&quot;mappingData&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}&quot;fmt2Part&quot;{BslnFormat2Part=&quot;stdGlyph&quot;S&quot;ctlPoints&quot;[32s]}&quot;fmt3Part&quot;{BslnFormat3Part=&quot;stdGlyph&quot;S&quot;ctlPoints&quot;[32s]&quot;mappingData&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}})}'/>
+<struct name='FMFilter' type64='{FMFilter=&quot;format&quot;I&quot;selector&quot;I&quot;filter&quot;(?=&quot;fontTechnologyFilter&quot;I&quot;fontContainerFilter&quot;{ATSFSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}&quot;generationFilter&quot;I&quot;fontFamilyCallbackFilter&quot;^?&quot;fontCallbackFilter&quot;^?&quot;fontDirectoryFilter&quot;{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2I]}&quot;fontFileRefFilter&quot;^{FSRef})}' type='{FMFilter=&quot;format&quot;I&quot;selector&quot;I&quot;filter&quot;(?=&quot;fontTechnologyFilter&quot;I&quot;fontContainerFilter&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}&quot;generationFilter&quot;I&quot;fontFamilyCallbackFilter&quot;^?&quot;fontCallbackFilter&quot;^?&quot;fontDirectoryFilter&quot;{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2L]}&quot;fontFileRefFilter&quot;^{FSRef})}'/>
+<struct name='FMFontDirectoryFilter' type64='{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2I]}' type='{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2L]}'/>
+<struct name='FMFontFamilyInstance' type='{FMFontFamilyInstance=&quot;fontFamily&quot;s&quot;fontStyle&quot;s}'/>
+<struct name='FMFontFamilyInstanceIterator' type64='{FMFontFamilyInstanceIterator=&quot;reserved&quot;[16I]}' type='{FMFontFamilyInstanceIterator=&quot;reserved&quot;[16L]}'/>
+<struct name='FMFontFamilyIterator' type64='{FMFontFamilyIterator=&quot;reserved&quot;[16I]}' type='{FMFontFamilyIterator=&quot;reserved&quot;[16L]}'/>
+<struct name='FMFontIterator' type64='{FMFontIterator=&quot;reserved&quot;[16I]}' type='{FMFontIterator=&quot;reserved&quot;[16L]}'/>
+<struct name='FontVariation' type='{FontVariation=&quot;name&quot;I&quot;value&quot;i}'/>
+<struct name='JustDirectionTable' type='{JustDirectionTable=&quot;justClass&quot;S&quot;widthDeltaClusters&quot;S&quot;postcomp&quot;S&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
+<struct name='JustPCAction' type='{JustPCAction=&quot;actionCount&quot;I&quot;actions&quot;[1{JustPCActionSubrecord=&quot;theClass&quot;S&quot;theType&quot;S&quot;length&quot;I&quot;data&quot;I}]}'/>
+<struct name='JustPCActionSubrecord' type='{JustPCActionSubrecord=&quot;theClass&quot;S&quot;theType&quot;S&quot;length&quot;I&quot;data&quot;I}'/>
+<struct name='JustPCConditionalAddAction' type='{JustPCConditionalAddAction=&quot;substThreshhold&quot;i&quot;addGlyph&quot;S&quot;substGlyph&quot;S}'/>
+<struct name='JustPCDecompositionAction' type='{JustPCDecompositionAction=&quot;lowerLimit&quot;i&quot;upperLimit&quot;i&quot;order&quot;S&quot;count&quot;S&quot;glyphs&quot;[1S]}'/>
+<struct name='JustPCDuctilityAction' type='{JustPCDuctilityAction=&quot;ductilityAxis&quot;I&quot;minimumLimit&quot;i&quot;noStretchValue&quot;i&quot;maximumLimit&quot;i}'/>
+<struct name='JustPCGlyphRepeatAddAction' type='{JustPCGlyphRepeatAddAction=&quot;flags&quot;S&quot;glyph&quot;S}'/>
+<struct name='JustPostcompTable' type='{JustPostcompTable=&quot;lookupTable&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
+<struct name='JustTable' type='{JustTable=&quot;version&quot;i&quot;format&quot;S&quot;horizHeaderOffset&quot;S&quot;vertHeaderOffset&quot;S}'/>
+<struct name='JustWidthDeltaEntry' type='{JustWidthDeltaEntry=&quot;justClass&quot;I&quot;beforeGrowLimit&quot;i&quot;beforeShrinkLimit&quot;i&quot;afterGrowLimit&quot;i&quot;afterShrinkLimit&quot;i&quot;growFlags&quot;S&quot;shrinkFlags&quot;S}'/>
+<struct name='JustWidthDeltaGroup' type='{JustWidthDeltaGroup=&quot;count&quot;I&quot;entries&quot;[1{JustWidthDeltaEntry=&quot;justClass&quot;I&quot;beforeGrowLimit&quot;i&quot;beforeShrinkLimit&quot;i&quot;afterGrowLimit&quot;i&quot;afterShrinkLimit&quot;i&quot;growFlags&quot;S&quot;shrinkFlags&quot;S}]}'/>
+<struct name='KernIndexArrayHeader' type='{KernIndexArrayHeader=&quot;glyphCount&quot;S&quot;kernValueCount&quot;C&quot;leftClassCount&quot;C&quot;rightClassCount&quot;C&quot;flags&quot;C&quot;kernValue&quot;[1s]&quot;leftClass&quot;[1C]&quot;rightClass&quot;[1C]&quot;kernIndex&quot;[1C]}'/>
+<struct name='KernKerningPair' type='{KernKerningPair=&quot;left&quot;S&quot;right&quot;S}'/>
+<struct name='KernOffsetTable' type='{KernOffsetTable=&quot;firstGlyph&quot;S&quot;nGlyphs&quot;S&quot;offsetTable&quot;[1S]}'/>
+<struct name='KernOrderedListEntry' type='{KernOrderedListEntry=&quot;pair&quot;{KernKerningPair=&quot;left&quot;S&quot;right&quot;S}&quot;value&quot;s}'/>
+<struct name='KernOrderedListHeader' type='{KernOrderedListHeader=&quot;nPairs&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S&quot;table&quot;[1S]}'/>
+<struct name='KernSimpleArrayHeader' type='{KernSimpleArrayHeader=&quot;rowWidth&quot;S&quot;leftOffsetTable&quot;S&quot;rightOffsetTable&quot;S&quot;theArray&quot;S&quot;firstTable&quot;[1S]}'/>
+<struct name='KernStateEntry' type='{KernStateEntry=&quot;newState&quot;S&quot;flags&quot;S}'/>
+<struct name='KernStateHeader' type='{KernStateHeader=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;valueTable&quot;S&quot;firstTable&quot;[1C]}'/>
+<struct name='KernSubtableHeader' type='{KernSubtableHeader=&quot;length&quot;i&quot;stInfo&quot;S&quot;tupleIndex&quot;s&quot;fsHeader&quot;(KernFormatSpecificHeader=&quot;orderedList&quot;{KernOrderedListHeader=&quot;nPairs&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S&quot;table&quot;[1S]}&quot;stateTable&quot;{KernStateHeader=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;valueTable&quot;S&quot;firstTable&quot;[1C]}&quot;simpleArray&quot;{KernSimpleArrayHeader=&quot;rowWidth&quot;S&quot;leftOffsetTable&quot;S&quot;rightOffsetTable&quot;S&quot;theArray&quot;S&quot;firstTable&quot;[1S]}&quot;indexArray&quot;{KernIndexArrayHeader=&quot;glyphCount&quot;S&quot;kernValueCount&quot;C&quot;leftClassCount&quot;C&quot;rightClassCount&quot;C&quot;flags&quot;C&quot;kernValue&quot;[1s]&quot;leftClass&quot;[1C]&quot;rightClass&quot;[1C]&quot;kernIndex&quot;[1C]})}'/>
+<struct name='KernTableHeader' type='{KernTableHeader=&quot;version&quot;i&quot;nTables&quot;i&quot;firstSubtable&quot;[1S]}'/>
+<struct name='KernVersion0Header' type='{KernVersion0Header=&quot;version&quot;S&quot;nTables&quot;S&quot;firstSubtable&quot;[1S]}'/>
+<struct name='KernVersion0SubtableHeader' type='{KernVersion0SubtableHeader=&quot;version&quot;S&quot;length&quot;S&quot;stInfo&quot;S&quot;fsHeader&quot;(KernFormatSpecificHeader=&quot;orderedList&quot;{KernOrderedListHeader=&quot;nPairs&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S&quot;table&quot;[1S]}&quot;stateTable&quot;{KernStateHeader=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;valueTable&quot;S&quot;firstTable&quot;[1C]}&quot;simpleArray&quot;{KernSimpleArrayHeader=&quot;rowWidth&quot;S&quot;leftOffsetTable&quot;S&quot;rightOffsetTable&quot;S&quot;theArray&quot;S&quot;firstTable&quot;[1S]}&quot;indexArray&quot;{KernIndexArrayHeader=&quot;glyphCount&quot;S&quot;kernValueCount&quot;C&quot;leftClassCount&quot;C&quot;rightClassCount&quot;C&quot;flags&quot;C&quot;kernValue&quot;[1s]&quot;leftClass&quot;[1C]&quot;rightClass&quot;[1C]&quot;kernIndex&quot;[1C]})}'/>
+<struct name='KerxControlPointAction' type='{KerxControlPointAction=&quot;markControlPoint&quot;S&quot;currControlPoint&quot;S}'/>
+<struct name='KerxControlPointEntry' type='{KerxControlPointEntry=&quot;newState&quot;S&quot;flags&quot;S&quot;actionIndex&quot;S}'/>
+<struct name='KerxControlPointHeader' type='{KerxControlPointHeader=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;flags&quot;I&quot;firstTable&quot;[1C]}'/>
+<struct name='KerxCoordinateAction' type='{KerxCoordinateAction=&quot;markX&quot;S&quot;markY&quot;S&quot;currX&quot;S&quot;currY&quot;S}'/>
+<struct name='KerxIndexArrayHeader' type='{KerxIndexArrayHeader=&quot;glyphCount&quot;S&quot;kernValueCount&quot;S&quot;leftClassCount&quot;S&quot;rightClassCount&quot;S&quot;flags&quot;S&quot;kernValue&quot;[1s]&quot;leftClass&quot;[1S]&quot;rightClass&quot;[1S]&quot;kernIndex&quot;[1S]}'/>
+<struct name='KerxKerningPair' type='{KerxKerningPair=&quot;left&quot;S&quot;right&quot;S}'/>
+<struct name='KerxOffsetTable' type64='{KerxOffsetTable=&quot;firstGlyph&quot;S&quot;nGlyphs&quot;S&quot;offsetTable&quot;[1I]}' type='{KerxOffsetTable=&quot;firstGlyph&quot;S&quot;nGlyphs&quot;S&quot;offsetTable&quot;[1L]}'/>
+<struct name='KerxOrderedListEntry' type='{KerxOrderedListEntry=&quot;pair&quot;{KerxKerningPair=&quot;left&quot;S&quot;right&quot;S}&quot;value&quot;s}'/>
+<struct name='KerxOrderedListHeader' type64='{KerxOrderedListHeader=&quot;nPairs&quot;I&quot;searchRange&quot;I&quot;entrySelector&quot;I&quot;rangeShift&quot;I&quot;table&quot;[1I]}' type='{KerxOrderedListHeader=&quot;nPairs&quot;I&quot;searchRange&quot;I&quot;entrySelector&quot;I&quot;rangeShift&quot;I&quot;table&quot;[1L]}'/>
+<struct name='KerxSimpleArrayHeader' type64='{KerxSimpleArrayHeader=&quot;rowWidth&quot;I&quot;leftOffsetTable&quot;I&quot;rightOffsetTable&quot;I&quot;theArray&quot;I&quot;firstTable&quot;[1I]}' type='{KerxSimpleArrayHeader=&quot;rowWidth&quot;I&quot;leftOffsetTable&quot;I&quot;rightOffsetTable&quot;I&quot;theArray&quot;I&quot;firstTable&quot;[1L]}'/>
+<struct name='KerxStateEntry' type='{KerxStateEntry=&quot;newState&quot;S&quot;flags&quot;S&quot;valueIndex&quot;S}'/>
+<struct name='KerxStateHeader' type='{KerxStateHeader=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;valueTable&quot;I&quot;firstTable&quot;[1C]}'/>
+<struct name='KerxSubtableHeader' type64='{KerxSubtableHeader=&quot;length&quot;I&quot;stInfo&quot;I&quot;tupleIndex&quot;I&quot;fsHeader&quot;(KerxFormatSpecificHeader=&quot;orderedList&quot;{KerxOrderedListHeader=&quot;nPairs&quot;I&quot;searchRange&quot;I&quot;entrySelector&quot;I&quot;rangeShift&quot;I&quot;table&quot;[1I]}&quot;stateTable&quot;{KerxStateHeader=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;valueTable&quot;I&quot;firstTable&quot;[1C]}&quot;simpleArray&quot;{KerxSimpleArrayHeader=&quot;rowWidth&quot;I&quot;leftOffsetTable&quot;I&quot;rightOffsetTable&quot;I&quot;theArray&quot;I&quot;firstTable&quot;[1I]}&quot;indexArray&quot;{KerxIndexArrayHeader=&quot;glyphCount&quot;S&quot;kernValueCount&quot;S&quot;leftClassCount&quot;S&quot;rightClassCount&quot;S&quot;flags&quot;S&quot;kernValue&quot;[1s]&quot;leftClass&quot;[1S]&quot;rightClass&quot;[1S]&quot;kernIndex&quot;[1S]}&quot;controlPoint&quot;{KerxControlPointHeader=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;flags&quot;I&quot;firstTable&quot;[1C]})}' type='{KerxSubtableHeader=&quot;length&quot;I&quot;stInfo&quot;I&quot;tupleIndex&quot;I&quot;fsHeader&quot;(KerxFormatSpecificHeader=&quot;orderedList&quot;{KerxOrderedListHeader=&quot;nPairs&quot;I&quot;searchRange&quot;I&quot;entrySelector&quot;I&quot;rangeShift&quot;I&quot;table&quot;[1L]}&quot;stateTable&quot;{KerxStateHeader=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;valueTable&quot;I&quot;firstTable&quot;[1C]}&quot;simpleArray&quot;{KerxSimpleArrayHeader=&quot;rowWidth&quot;I&quot;leftOffsetTable&quot;I&quot;rightOffsetTable&quot;I&quot;theArray&quot;I&quot;firstTable&quot;[1L]}&quot;indexArray&quot;{KerxIndexArrayHeader=&quot;glyphCount&quot;S&quot;kernValueCount&quot;S&quot;leftClassCount&quot;S&quot;rightClassCount&quot;S&quot;flags&quot;S&quot;kernValue&quot;[1s]&quot;leftClass&quot;[1S]&quot;rightClass&quot;[1S]&quot;kernIndex&quot;[1S]}&quot;controlPoint&quot;{KerxControlPointHeader=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;flags&quot;I&quot;firstTable&quot;[1C]})}'/>
+<struct name='KerxTableHeader' type64='{KerxTableHeader=&quot;version&quot;i&quot;nTables&quot;I&quot;firstSubtable&quot;[1I]}' type='{KerxTableHeader=&quot;version&quot;i&quot;nTables&quot;I&quot;firstSubtable&quot;[1L]}'/>
+<struct name='LcarCaretClassEntry' type='{LcarCaretClassEntry=&quot;count&quot;S&quot;partials&quot;[1S]}'/>
+<struct name='LcarCaretTable' type='{LcarCaretTable=&quot;version&quot;i&quot;format&quot;S&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
+<struct name='MortChain' type='{MortChain=&quot;defaultFlags&quot;I&quot;length&quot;I&quot;nFeatures&quot;S&quot;nSubtables&quot;S&quot;featureEntries&quot;[1{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}]}'/>
+<struct name='MortContextualSubtable' type='{MortContextualSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;substitutionTableOffset&quot;S}'/>
+<struct name='MortFeatureEntry' type='{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}'/>
+<struct name='MortInsertionSubtable' type='{MortInsertionSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}}'/>
+<struct name='MortLigatureSubtable' type='{MortLigatureSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;ligatureActionTableOffset&quot;S&quot;componentTableOffset&quot;S&quot;ligatureTableOffset&quot;S}'/>
+<struct name='MortRearrangementSubtable' type='{MortRearrangementSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}}'/>
+<struct name='MortSubtable' type='{MortSubtable=&quot;length&quot;S&quot;coverage&quot;S&quot;flags&quot;I&quot;u&quot;(MortSpecificSubtable=&quot;rearrangement&quot;{MortRearrangementSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}}&quot;contextual&quot;{MortContextualSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;substitutionTableOffset&quot;S}&quot;ligature&quot;{MortLigatureSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;ligatureActionTableOffset&quot;S&quot;componentTableOffset&quot;S&quot;ligatureTableOffset&quot;S}&quot;swash&quot;{MortSwashSubtable=&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}&quot;insertion&quot;{MortInsertionSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}})}'/>
+<struct name='MortSwashSubtable' type='{MortSwashSubtable=&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
+<struct name='MortTable' type='{MortTable=&quot;version&quot;i&quot;nChains&quot;I&quot;chains&quot;[1{MortChain=&quot;defaultFlags&quot;I&quot;length&quot;I&quot;nFeatures&quot;S&quot;nSubtables&quot;S&quot;featureEntries&quot;[1{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}]}]}'/>
+<struct name='MorxChain' type='{MorxChain=&quot;defaultFlags&quot;I&quot;length&quot;I&quot;nFeatures&quot;I&quot;nSubtables&quot;I&quot;featureEntries&quot;[1{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}]}'/>
+<struct name='MorxContextualSubtable' type='{MorxContextualSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;substitutionTableOffset&quot;I}'/>
+<struct name='MorxInsertionSubtable' type='{MorxInsertionSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;insertionGlyphTableOffset&quot;I}'/>
+<struct name='MorxLigatureSubtable' type='{MorxLigatureSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;ligatureActionTableOffset&quot;I&quot;componentTableOffset&quot;I&quot;ligatureTableOffset&quot;I}'/>
+<struct name='MorxRearrangementSubtable' type='{MorxRearrangementSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}}'/>
+<struct name='MorxSubtable' type='{MorxSubtable=&quot;length&quot;I&quot;coverage&quot;I&quot;flags&quot;I&quot;u&quot;(MorxSpecificSubtable=&quot;rearrangement&quot;{MorxRearrangementSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}}&quot;contextual&quot;{MorxContextualSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;substitutionTableOffset&quot;I}&quot;ligature&quot;{MorxLigatureSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;ligatureActionTableOffset&quot;I&quot;componentTableOffset&quot;I&quot;ligatureTableOffset&quot;I}&quot;swash&quot;{MortSwashSubtable=&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}&quot;insertion&quot;{MorxInsertionSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;insertionGlyphTableOffset&quot;I})}'/>
+<struct name='MorxTable' type='{MorxTable=&quot;version&quot;i&quot;nChains&quot;I&quot;chains&quot;[1{MorxChain=&quot;defaultFlags&quot;I&quot;length&quot;I&quot;nFeatures&quot;I&quot;nSubtables&quot;I&quot;featureEntries&quot;[1{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}]}]}'/>
+<struct name='OpbdSideValues' type='{OpbdSideValues=&quot;leftSideShift&quot;s&quot;topSideShift&quot;s&quot;rightSideShift&quot;s&quot;bottomSideShift&quot;s}'/>
+<struct name='OpbdTable' type='{OpbdTable=&quot;version&quot;i&quot;format&quot;S&quot;lookupTable&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
+<struct name='PropLookupSegment' type='{PropLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;S}'/>
+<struct name='PropLookupSingle' type='{PropLookupSingle=&quot;glyph&quot;S&quot;props&quot;S}'/>
+<struct name='PropTable' type='{PropTable=&quot;version&quot;i&quot;format&quot;S&quot;defaultProps&quot;S&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
+<struct name='ROTAGlyphEntry' type='{ROTAGlyphEntry=&quot;GlyphIndexOffset&quot;s&quot;HBaselineOffset&quot;s&quot;VBaselineOffset&quot;s}'/>
+<struct name='ROTAHeader' type='{ROTAHeader=&quot;Version&quot;i&quot;Flags&quot;S&quot;NMasters&quot;S&quot;FirstGlyph&quot;S&quot;LastGlyph&quot;S&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
+<struct name='SFNTLookupArrayHeader' type='{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}'/>
+<struct name='SFNTLookupBinarySearchHeader' type='{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}'/>
+<struct name='SFNTLookupSegment' type='{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}'/>
+<struct name='SFNTLookupSegmentHeader' type='{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}'/>
+<struct name='SFNTLookupSingle' type='{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}'/>
+<struct name='SFNTLookupSingleHeader' type='{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}'/>
+<struct name='SFNTLookupTable' type='{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}'/>
+<struct name='SFNTLookupTrimmedArrayHeader' type='{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]}'/>
+<struct name='STClassTable' type='{STClassTable=&quot;firstGlyph&quot;S&quot;nGlyphs&quot;S&quot;classes&quot;[1C]}'/>
+<struct name='STEntryOne' type='{STEntryOne=&quot;newState&quot;S&quot;flags&quot;S&quot;offset1&quot;S}'/>
+<struct name='STEntryTwo' type='{STEntryTwo=&quot;newState&quot;S&quot;flags&quot;S&quot;offset1&quot;S&quot;offset2&quot;S}'/>
+<struct name='STEntryZero' type='{STEntryZero=&quot;newState&quot;S&quot;flags&quot;S}'/>
+<struct name='STHeader' type='{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}'/>
+<struct name='STXClassTable' type='{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}'/>
+<struct name='STXEntryOne' type='{STXEntryOne=&quot;newState&quot;S&quot;flags&quot;S&quot;index1&quot;S}'/>
+<struct name='STXEntryTwo' type='{STXEntryTwo=&quot;newState&quot;S&quot;flags&quot;S&quot;index1&quot;S&quot;index2&quot;S}'/>
+<struct name='STXEntryZero' type='{STXEntryZero=&quot;newState&quot;S&quot;flags&quot;S}'/>
+<struct name='STXHeader' type='{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}'/>
+<struct name='TrakTable' type='{TrakTable=&quot;version&quot;i&quot;format&quot;S&quot;horizOffset&quot;S&quot;vertOffset&quot;S}'/>
+<struct name='TrakTableData' type='{TrakTableData=&quot;nTracks&quot;S&quot;nSizes&quot;S&quot;sizeTableOffset&quot;I&quot;trakTable&quot;[1{TrakTableEntry=&quot;track&quot;i&quot;nameTableIndex&quot;S&quot;sizesOffset&quot;S}]}'/>
+<struct name='TrakTableEntry' type='{TrakTableEntry=&quot;track&quot;i&quot;nameTableIndex&quot;S&quot;sizesOffset&quot;S}'/>
+<struct name='scalerPrerequisiteItem' type='{scalerPrerequisiteItem=&quot;enumeration&quot;i&quot;size&quot;i&quot;name&quot;[1C]}'/>
+<struct name='scalerStream' type='{scalerStream=&quot;streamRefCon&quot;^v&quot;targetVersion&quot;*&quot;types&quot;I&quot;action&quot;i&quot;memorySize&quot;I&quot;variationCount&quot;i&quot;variations&quot;^v&quot;info&quot;(?=&quot;font&quot;{?=&quot;encoding&quot;^S&quot;glyphBits&quot;^i&quot;name&quot;*}&quot;prerequisiteQuery&quot;{?=&quot;size&quot;i&quot;list&quot;^v}&quot;prerequisiteItem&quot;i&quot;variationQueryResult&quot;i)}'/>
+<struct name='scalerStreamData' type='{scalerStreamData=&quot;hexFlag&quot;i&quot;byteCount&quot;i&quot;data&quot;^v}'/>
+<struct name='sfntCMapEncoding' type='{sfntCMapEncoding=&quot;platformID&quot;S&quot;scriptID&quot;S&quot;offset&quot;I}'/>
+<struct name='sfntCMapExtendedSubHeader' type='{sfntCMapExtendedSubHeader=&quot;format&quot;S&quot;reserved&quot;S&quot;length&quot;I&quot;language&quot;I}'/>
+<struct name='sfntCMapHeader' type='{sfntCMapHeader=&quot;version&quot;S&quot;numTables&quot;S&quot;encoding&quot;[1{sfntCMapEncoding=&quot;platformID&quot;S&quot;scriptID&quot;S&quot;offset&quot;I}]}'/>
+<struct name='sfntCMapSubHeader' type='{sfntCMapSubHeader=&quot;format&quot;S&quot;length&quot;S&quot;languageID&quot;S}'/>
+<struct name='sfntDescriptorHeader' type='{sfntDescriptorHeader=&quot;version&quot;i&quot;descriptorCount&quot;i&quot;descriptor&quot;[1{sfntFontDescriptor=&quot;name&quot;I&quot;value&quot;i}]}'/>
+<struct name='sfntDirectory' type='{sfntDirectory=&quot;format&quot;I&quot;numOffsets&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S&quot;table&quot;[1{sfntDirectoryEntry=&quot;tableTag&quot;I&quot;checkSum&quot;I&quot;offset&quot;I&quot;length&quot;I}]}'/>
+<struct name='sfntDirectoryEntry' type='{sfntDirectoryEntry=&quot;tableTag&quot;I&quot;checkSum&quot;I&quot;offset&quot;I&quot;length&quot;I}'/>
+<struct name='sfntFeatureHeader' type='{sfntFeatureHeader=&quot;version&quot;i&quot;featureNameCount&quot;S&quot;featureSetCount&quot;S&quot;reserved&quot;i&quot;names&quot;[1{sfntFeatureName=&quot;featureType&quot;S&quot;settingCount&quot;S&quot;offsetToSettings&quot;i&quot;featureFlags&quot;S&quot;nameID&quot;S}]&quot;settings&quot;[1{sfntFontFeatureSetting=&quot;setting&quot;S&quot;nameID&quot;S}]&quot;runs&quot;[1{sfntFontRunFeature=&quot;featureType&quot;S&quot;setting&quot;S}]}'/>
+<struct name='sfntFeatureName' type='{sfntFeatureName=&quot;featureType&quot;S&quot;settingCount&quot;S&quot;offsetToSettings&quot;i&quot;featureFlags&quot;S&quot;nameID&quot;S}'/>
+<struct name='sfntFontDescriptor' type='{sfntFontDescriptor=&quot;name&quot;I&quot;value&quot;i}'/>
+<struct name='sfntFontFeatureSetting' type='{sfntFontFeatureSetting=&quot;setting&quot;S&quot;nameID&quot;S}'/>
+<struct name='sfntFontRunFeature' type='{sfntFontRunFeature=&quot;featureType&quot;S&quot;setting&quot;S}'/>
+<struct name='sfntInstance' type64='{sfntInstance=&quot;nameID&quot;s&quot;flags&quot;s&quot;coord&quot;[1i]}' type='{sfntInstance=&quot;nameID&quot;s&quot;flags&quot;s&quot;coord&quot;[1l]}'/>
+<struct name='sfntNameHeader' type='{sfntNameHeader=&quot;format&quot;S&quot;count&quot;S&quot;stringOffset&quot;S&quot;rec&quot;[1{sfntNameRecord=&quot;platformID&quot;S&quot;scriptID&quot;S&quot;languageID&quot;S&quot;nameID&quot;S&quot;length&quot;S&quot;offset&quot;S}]}'/>
+<struct name='sfntNameRecord' type='{sfntNameRecord=&quot;platformID&quot;S&quot;scriptID&quot;S&quot;languageID&quot;S&quot;nameID&quot;S&quot;length&quot;S&quot;offset&quot;S}'/>
+<struct name='sfntVariationAxis' type='{sfntVariationAxis=&quot;axisTag&quot;I&quot;minValue&quot;i&quot;defaultValue&quot;i&quot;maxValue&quot;i&quot;flags&quot;s&quot;nameID&quot;s}'/>
+<struct name='sfntVariationHeader' type64='{sfntVariationHeader=&quot;version&quot;i&quot;offsetToData&quot;S&quot;countSizePairs&quot;S&quot;axisCount&quot;S&quot;axisSize&quot;S&quot;instanceCount&quot;S&quot;instanceSize&quot;S&quot;axis&quot;[1{sfntVariationAxis=&quot;axisTag&quot;I&quot;minValue&quot;i&quot;defaultValue&quot;i&quot;maxValue&quot;i&quot;flags&quot;s&quot;nameID&quot;s}]&quot;instance&quot;[1{sfntInstance=&quot;nameID&quot;s&quot;flags&quot;s&quot;coord&quot;[1i]}]}' type='{sfntVariationHeader=&quot;version&quot;i&quot;offsetToData&quot;S&quot;countSizePairs&quot;S&quot;axisCount&quot;S&quot;axisSize&quot;S&quot;instanceCount&quot;S&quot;instanceSize&quot;S&quot;axis&quot;[1{sfntVariationAxis=&quot;axisTag&quot;I&quot;minValue&quot;i&quot;defaultValue&quot;i&quot;maxValue&quot;i&quot;flags&quot;s&quot;nameID&quot;s}]&quot;instance&quot;[1{sfntInstance=&quot;nameID&quot;s&quot;flags&quot;s&quot;coord&quot;[1l]}]}'/>
+<cftype name='ATSFontNotificationInfoRef' type='^{ATSFontNotificationInfoRef_=}'/>
+<cftype name='ATSFontNotificationRef' type='^{ATSFontNotificationRef_=}'/>
+<cftype name='ATSULineRef' type='^{ATSGlyphVector=}'/>
+<opaque name='ATSFontFamilyIterator' type='^{ATSFontFamilyIterator_=}'/>
+<opaque name='ATSFontIterator' type='^{ATSFontIterator_=}'/>
+<string_constant name='kATSFontNameTableBytes' nsstring='true' value='font name table bytes'/>
+<string_constant name='kATSFontNameTableCode' nsstring='true' value='font name code'/>
+<string_constant name='kATSFontNameTableLanguage' nsstring='true' value='font language code'/>
+<string_constant name='kATSFontNameTablePlatform' nsstring='true' value='font platform code'/>
+<string_constant name='kATSFontNameTableScript' nsstring='true' value='font script code'/>
+<string_constant name='kATSQueryClientPID' nsstring='true' value='ATS client pid'/>
+<string_constant name='kATSQueryFontName' nsstring='true' value='font name'/>
+<string_constant name='kATSQueryFontNameTableEntries' nsstring='true' value='font name table entries'/>
+<string_constant name='kATSQueryFontPostScriptName' nsstring='true' value='font PS name'/>
+<string_constant name='kATSQueryQDFamilyName' nsstring='true' value='font family name'/>
+<enum name='asciiDownloadStreamAction' value='1'/>
+<enum name='cexec68K' value='1'/>
+<enum name='cidType0StreamType' value='256'/>
+<enum name='cidType2StreamType' value='128'/>
+<enum name='cmapFontTableTag' value='1668112752'/>
+<enum name='descriptorFontTableTag' value='1717859171'/>
+<enum name='downloadStreamAction' value='0'/>
+<enum name='eexecBinaryModifierStreamType' value='65536'/>
+<enum name='encodingOnlyStreamAction' value='3'/>
+<enum name='evenOddModifierStreamType' value='32768'/>
+<enum name='featureFontTableTag' value='1717920116'/>
+<enum name='flattenedStreamType' value='64'/>
+<enum name='fontSizeQueryStreamAction' value='2'/>
+<enum name='kATSBoldQDStretch' value='98304'/>
+<enum name='kATSCubicCurveType' value='1'/>
+<enum name='kATSDeletedGlyphcode' value='65535'/>
+<enum name='kATSFileReferenceFilterSelector' value='10'/>
+<enum name='kATSFontAutoActivationAsk' value='4'/>
+<enum name='kATSFontAutoActivationDefault' value='0'/>
+<enum name='kATSFontAutoActivationDisabled' value='1'/>
+<enum name='kATSFontAutoActivationEnabled' value='2'/>
+<enum name='kATSFontContainerRefUnspecified' value='0'/>
+<enum name='kATSFontContextGlobal' value='1'/>
+<enum name='kATSFontContextLocal' value='2'/>
+<enum name='kATSFontContextUnspecified' value='0'/>
+<enum name='kATSFontFamilyRefUnspecified' value='0'/>
+<enum name='kATSFontFilterCurrentVersion' value='0'/>
+<enum name='kATSFontFilterSelectorFontApplierFunction' value='9'/>
+<enum name='kATSFontFilterSelectorFontFamily' value='7'/>
+<enum name='kATSFontFilterSelectorFontFamilyApplierFunction' value='8'/>
+<enum name='kATSFontFilterSelectorGeneration' value='3'/>
+<enum name='kATSFontFilterSelectorUnspecified' value='0'/>
+<enum name='kATSFontFormatUnspecified' value='0'/>
+<enum name='kATSFontNotifyActionDirectoriesChanged' value='2'/>
+<enum name='kATSFontNotifyActionFontsChanged' value='1'/>
+<enum name='kATSFontNotifyOptionDefault' value='0'/>
+<enum name='kATSFontNotifyOptionReceiveWhileSuspended' value='1'/>
+<enum name='kATSFontRefUnspecified' value='0'/>
+<enum name='kATSGenerationUnspecified' value='0'/>
+<enum name='kATSGlyphInfoAppleReserved' value='536608744'/>
+<enum name='kATSGlyphInfoByteSizeMask' value='7'/>
+<enum name='kATSGlyphInfoHasImposedWidth' value='16'/>
+<enum name='kATSGlyphInfoIsAttachment' value='2147483648'/>
+<enum name='kATSGlyphInfoIsLTHanger' value='1073741824'/>
+<enum name='kATSGlyphInfoIsRBHanger' value='536870912'/>
+<enum name='kATSGlyphInfoIsWhiteSpace' value='262144'/>
+<enum name='kATSGlyphInfoTerminatorGlyph' value='524288'/>
+<enum name='kATSInvalidFontAccess' value='-982'/>
+<enum name='kATSInvalidFontContainerAccess' value='-985'/>
+<enum name='kATSInvalidFontFamilyAccess' value='-981'/>
+<enum name='kATSInvalidFontTableAccess' value='-984'/>
+<enum name='kATSInvalidGlyphAccess' value='-986'/>
+<enum name='kATSItalicQDSkew' value='16384'/>
+<enum name='kATSIterationCompleted' value='-980'/>
+<enum name='kATSIterationScopeModified' value='-983'/>
+<enum name='kATSLineAppleReserved' value='4242538496'/>
+<enum name='kATSLineApplyAntiAliasing' value='2048'/>
+<enum name='kATSLineBreakToNearestCharacter' value='33554432'/>
+<enum name='kATSLineDisableAllBaselineAdjustments' value='524288'/>
+<enum name='kATSLineDisableAllGlyphMorphing' value='131072'/>
+<enum name='kATSLineDisableAllJustification' value='65536'/>
+<enum name='kATSLineDisableAllKerningAdjustments' value='262144'/>
+<enum name='kATSLineDisableAllLayoutOperations' value='2031616'/>
+<enum name='kATSLineDisableAllTrackingAdjustments' value='1048576'/>
+<enum name='kATSLineDisableAutoAdjustDisplayPos' value='16384'/>
+<enum name='kATSLineDisableNegativeJustification' value='8192'/>
+<enum name='kATSLineFillOutToWidth' value='256'/>
+<enum name='kATSLineFractDisable' value='64'/>
+<enum name='kATSLineHasNoHangers' value='2'/>
+<enum name='kATSLineHasNoOpticalAlignment' value='4'/>
+<enum name='kATSLineIgnoreFontLeading' value='1024'/>
+<enum name='kATSLineImposeNoAngleForEnds' value='128'/>
+<enum name='kATSLineIsDisplayOnly' value='1'/>
+<enum name='kATSLineKeepSpacesOutOfMargin' value='8'/>
+<enum name='kATSLineLastNoJustification' value='32'/>
+<enum name='kATSLineNoAntiAliasing' value='4096'/>
+<enum name='kATSLineNoLayoutOptions' value='0'/>
+<enum name='kATSLineNoSpecialJustification' value='16'/>
+<enum name='kATSLineTabAdjustEnabled' value='512'/>
+<enum name='kATSLineUseDeviceMetrics' value='16777216'/>
+<enum name='kATSLineUseQDRendering' value='32768'/>
+<enum name='kATSNoTracking' value='-2147483648'/>
+<enum name='kATSOptionFlagsActivateDisabled' value='32'/>
+<enum name='kATSOptionFlagsComposeFontPostScriptName' value='1'/>
+<enum name='kATSOptionFlagsDefault' value='0'/>
+<enum name='kATSOptionFlagsDefaultScope' value='0'/>
+<enum name='kATSOptionFlagsDoNotNotify' value='128'/>
+<enum name='kATSOptionFlagsIncludeDisabledMask' value='128'/>
+<enum name='kATSOptionFlagsIterateByPrecedenceMask' value='32'/>
+<enum name='kATSOptionFlagsIterationScopeMask' value='28672'/>
+<enum name='kATSOptionFlagsProcessSubdirectories' value='64'/>
+<enum name='kATSOptionFlagsRecordPersistently' value='262144'/>
+<enum name='kATSOptionFlagsRestrictedScope' value='8192'/>
+<enum name='kATSOptionFlagsUnRestrictedScope' value='4096'/>
+<enum name='kATSOptionFlagsUseDataFork' value='768'/>
+<enum name='kATSOptionFlagsUseDataForkAsResourceFork' value='256'/>
+<enum name='kATSOptionFlagsUseResourceFork' value='512'/>
+<enum name='kATSOtherCurveType' value='3'/>
+<enum name='kATSQuadCurveType' value='2'/>
+<enum name='kATSQueryActivateFontMessage' value='1635021665'/>
+<enum name='kATSRadiansFactor' value='1144'/>
+<enum name='kATSStyleAppleReserved' value='4294967288'/>
+<enum name='kATSStyleApplyAntiAliasing' value='2'/>
+<enum name='kATSStyleApplyHints' value='0'/>
+<enum name='kATSStyleNoAntiAliasing' value='4'/>
+<enum name='kATSStyleNoHinting' value='1'/>
+<enum name='kATSStyleNoOptions' value='0'/>
+<enum name='kATSULayoutOperationAppleReserved' value='4294967232'/>
+<enum name='kATSULayoutOperationBaselineAdjustment' value='8'/>
+<enum name='kATSULayoutOperationCallbackStatusContinue' value='1'/>
+<enum name='kATSULayoutOperationCallbackStatusHandled' value='0'/>
+<enum name='kATSULayoutOperationJustification' value='1'/>
+<enum name='kATSULayoutOperationKerningAdjustment' value='4'/>
+<enum name='kATSULayoutOperationMorph' value='2'/>
+<enum name='kATSULayoutOperationNone' value='0'/>
+<enum name='kATSULayoutOperationPostLayoutAdjustment' value='32'/>
+<enum name='kATSULayoutOperationTrackingAdjustment' value='16'/>
+<enum name='kATSUseCaretOrigins' value='0'/>
+<enum name='kATSUseDeviceOrigins' value='1'/>
+<enum name='kATSUseFractionalOrigins' value='2'/>
+<enum name='kATSUseGlyphAdvance' value='2147483647'/>
+<enum name='kATSUseLineHeight' value='2147483647'/>
+<enum name='kATSUseOriginFlags' value='3'/>
+<enum name='kAbbrevSquaredLigaturesOffSelector' value='15'/>
+<enum name='kAbbrevSquaredLigaturesOnSelector' value='14'/>
+<enum name='kAllCapsSelector' value='1'/>
+<enum name='kAllLowerCaseSelector' value='2'/>
+<enum name='kAllTypeFeaturesOffSelector' value='1'/>
+<enum name='kAllTypeFeaturesOnSelector' value='0'/>
+<enum name='kAllTypographicFeaturesType' value='0'/>
+<enum name='kAnnotationType' value='24'/>
+<enum name='kAsteriskToMultiplyOffSelector' value='3'/>
+<enum name='kAsteriskToMultiplyOnSelector' value='2'/>
+<enum name='kBSLNControlPointFormatNoMap' value='2'/>
+<enum name='kBSLNControlPointFormatWithMap' value='3'/>
+<enum name='kBSLNCurrentVersion' value='65536'/>
+<enum name='kBSLNDistanceFormatNoMap' value='0'/>
+<enum name='kBSLNDistanceFormatWithMap' value='1'/>
+<enum name='kBSLNHangingBaseline' value='3'/>
+<enum name='kBSLNIdeographicCenterBaseline' value='1'/>
+<enum name='kBSLNIdeographicLowBaseline' value='2'/>
+<enum name='kBSLNLastBaseline' value='31'/>
+<enum name='kBSLNMathBaseline' value='4'/>
+<enum name='kBSLNNoBaselineOverride' value='255'/>
+<enum name='kBSLNNumBaselineClasses' value='32'/>
+<enum name='kBSLNRomanBaseline' value='0'/>
+<enum name='kBSLNTag' value='1651731566'/>
+<enum name='kBoxAnnotationSelector' value='1'/>
+<enum name='kCJKItalicRomanOffSelector' value='3'/>
+<enum name='kCJKItalicRomanOnSelector' value='2'/>
+<enum name='kCJKItalicRomanSelector' value='1'/>
+<enum name='kCJKRomanSpacingType' value='103'/>
+<enum name='kCJKSymbolAltFiveSelector' value='5'/>
+<enum name='kCJKSymbolAltFourSelector' value='4'/>
+<enum name='kCJKSymbolAltOneSelector' value='1'/>
+<enum name='kCJKSymbolAltThreeSelector' value='3'/>
+<enum name='kCJKSymbolAltTwoSelector' value='2'/>
+<enum name='kCJKSymbolAlternativesType' value='29'/>
+<enum name='kCJKVerticalRomanCenteredSelector' value='0'/>
+<enum name='kCJKVerticalRomanHBaselineSelector' value='1'/>
+<enum name='kCJKVerticalRomanPlacementType' value='31'/>
+<enum name='kCanonicalCompositionOffSelector' value='1'/>
+<enum name='kCanonicalCompositionOnSelector' value='0'/>
+<enum name='kCharacterAlternativesType' value='17'/>
+<enum name='kCharacterShapeType' value='20'/>
+<enum name='kCircleAnnotationSelector' value='3'/>
+<enum name='kCommonLigaturesOffSelector' value='3'/>
+<enum name='kCommonLigaturesOnSelector' value='2'/>
+<enum name='kCompatibilityCompositionOffSelector' value='3'/>
+<enum name='kCompatibilityCompositionOnSelector' value='2'/>
+<enum name='kCursiveConnectionType' value='2'/>
+<enum name='kCursiveSelector' value='2'/>
+<enum name='kDecomposeDiacriticsSelector' value='2'/>
+<enum name='kDecorativeBordersSelector' value='4'/>
+<enum name='kDefaultCJKRomanSelector' value='2'/>
+<enum name='kDesignComplexityType' value='18'/>
+<enum name='kDesignLevel1Selector' value='0'/>
+<enum name='kDesignLevel2Selector' value='1'/>
+<enum name='kDesignLevel3Selector' value='2'/>
+<enum name='kDesignLevel4Selector' value='3'/>
+<enum name='kDesignLevel5Selector' value='4'/>
+<enum name='kDiacriticsType' value='9'/>
+<enum name='kDiagonalFractionsSelector' value='2'/>
+<enum name='kDiamondAnnotationSelector' value='8'/>
+<enum name='kDingbatsSelector' value='1'/>
+<enum name='kDiphthongLigaturesOffSelector' value='11'/>
+<enum name='kDiphthongLigaturesOnSelector' value='10'/>
+<enum name='kDisplayTextSelector' value='1'/>
+<enum name='kEngravedTextSelector' value='2'/>
+<enum name='kExpertCharactersSelector' value='10'/>
+<enum name='kExponentsOffSelector' value='9'/>
+<enum name='kExponentsOnSelector' value='8'/>
+<enum name='kFMCurrentFilterFormat' value='0'/>
+<enum name='kFMFontCallbackFilterSelector' value='5'/>
+<enum name='kFMFontContainerFilterSelector' value='2'/>
+<enum name='kFMFontDirectoryFilterSelector' value='6'/>
+<enum name='kFMFontFamilyCallbackFilterSelector' value='4'/>
+<enum name='kFMFontFileRefFilterSelector' value='10'/>
+<enum name='kFMFontTechnologyFilterSelector' value='1'/>
+<enum name='kFMGenerationFilterSelector' value='3'/>
+<enum name='kFMPostScriptFontTechnology' value='1954115633'/>
+<enum name='kFMTrueTypeFontTechnology' value='1953658213'/>
+<enum name='kFleuronsSelector' value='3'/>
+<enum name='kFontAlbanianLanguage' value='36'/>
+<enum name='kFontAmharicLanguage' value='85'/>
+<enum name='kFontAmharicScript' value='28'/>
+<enum name='kFontArabicLanguage' value='12'/>
+<enum name='kFontArabicScript' value='4'/>
+<enum name='kFontArmenianLanguage' value='51'/>
+<enum name='kFontArmenianScript' value='24'/>
+<enum name='kFontAssameseLanguage' value='68'/>
+<enum name='kFontAymaraLanguage' value='134'/>
+<enum name='kFontAzerbaijanArLanguage' value='50'/>
+<enum name='kFontAzerbaijaniLanguage' value='49'/>
+<enum name='kFontBasqueLanguage' value='129'/>
+<enum name='kFontBengaliLanguage' value='67'/>
+<enum name='kFontBengaliScript' value='13'/>
+<enum name='kFontBulgarianLanguage' value='44'/>
+<enum name='kFontBurmeseLanguage' value='77'/>
+<enum name='kFontBurmeseScript' value='19'/>
+<enum name='kFontByelorussianLanguage' value='46'/>
+<enum name='kFontCatalanLanguage' value='130'/>
+<enum name='kFontChewaLanguage' value='92'/>
+<enum name='kFontChineseScript' value='2'/>
+<enum name='kFontCopyrightName' value='0'/>
+<enum name='kFontCroatianLanguage' value='18'/>
+<enum name='kFontCustom16BitScript' value='2'/>
+<enum name='kFontCustom816BitScript' value='1'/>
+<enum name='kFontCustom8BitScript' value='0'/>
+<enum name='kFontCustomPlatform' value='4'/>
+<enum name='kFontCyrillicScript' value='7'/>
+<enum name='kFontCzechLanguage' value='38'/>
+<enum name='kFontDanishLanguage' value='7'/>
+<enum name='kFontDescriptionName' value='10'/>
+<enum name='kFontDesignerName' value='9'/>
+<enum name='kFontDesignerURLName' value='12'/>
+<enum name='kFontDevanagariScript' value='9'/>
+<enum name='kFontDutchLanguage' value='4'/>
+<enum name='kFontDzongkhaLanguage' value='137'/>
+<enum name='kFontEastEuropeanRomanScript' value='29'/>
+<enum name='kFontEnglishLanguage' value='0'/>
+<enum name='kFontEsperantoLanguage' value='94'/>
+<enum name='kFontEstonianLanguage' value='27'/>
+<enum name='kFontEthiopicScript' value='28'/>
+<enum name='kFontExtendedArabicScript' value='31'/>
+<enum name='kFontFaeroeseLanguage' value='30'/>
+<enum name='kFontFamilyName' value='1'/>
+<enum name='kFontFarsiLanguage' value='31'/>
+<enum name='kFontFinnishLanguage' value='13'/>
+<enum name='kFontFlemishLanguage' value='34'/>
+<enum name='kFontFrenchLanguage' value='1'/>
+<enum name='kFontFullName' value='4'/>
+<enum name='kFontGallaLanguage' value='87'/>
+<enum name='kFontGeezScript' value='28'/>
+<enum name='kFontGeorgianLanguage' value='52'/>
+<enum name='kFontGeorgianScript' value='23'/>
+<enum name='kFontGermanLanguage' value='2'/>
+<enum name='kFontGreekLanguage' value='14'/>
+<enum name='kFontGreekScript' value='6'/>
+<enum name='kFontGuaraniLanguage' value='133'/>
+<enum name='kFontGujaratiLanguage' value='69'/>
+<enum name='kFontGujaratiScript' value='11'/>
+<enum name='kFontGurmukhiScript' value='10'/>
+<enum name='kFontHebrewLanguage' value='10'/>
+<enum name='kFontHebrewScript' value='5'/>
+<enum name='kFontHindiLanguage' value='21'/>
+<enum name='kFontHungarianLanguage' value='26'/>
+<enum name='kFontISO10646_1993Semantics' value='2'/>
+<enum name='kFontIcelandicLanguage' value='15'/>
+<enum name='kFontIndonesianLanguage' value='81'/>
+<enum name='kFontIrishLanguage' value='35'/>
+<enum name='kFontItalianLanguage' value='3'/>
+<enum name='kFontJapaneseLanguage' value='11'/>
+<enum name='kFontJapaneseScript' value='1'/>
+<enum name='kFontJavaneseRomLanguage' value='138'/>
+<enum name='kFontKannadaLanguage' value='73'/>
+<enum name='kFontKannadaScript' value='16'/>
+<enum name='kFontKashmiriLanguage' value='61'/>
+<enum name='kFontKazakhLanguage' value='48'/>
+<enum name='kFontKhmerLanguage' value='78'/>
+<enum name='kFontKhmerScript' value='20'/>
+<enum name='kFontKirghizLanguage' value='54'/>
+<enum name='kFontKoreanLanguage' value='23'/>
+<enum name='kFontKoreanScript' value='3'/>
+<enum name='kFontKurdishLanguage' value='60'/>
+<enum name='kFontLaoLanguage' value='79'/>
+<enum name='kFontLaotianScript' value='22'/>
+<enum name='kFontLappishLanguage' value='29'/>
+<enum name='kFontLastReservedName' value='255'/>
+<enum name='kFontLatinLanguage' value='131'/>
+<enum name='kFontLatvianLanguage' value='28'/>
+<enum name='kFontLettishLanguage' value='28'/>
+<enum name='kFontLicenseDescriptionName' value='13'/>
+<enum name='kFontLicenseInfoURLName' value='14'/>
+<enum name='kFontLithuanianLanguage' value='24'/>
+<enum name='kFontMacCompatibleFullName' value='18'/>
+<enum name='kFontMacedonianLanguage' value='43'/>
+<enum name='kFontMacintoshPlatform' value='1'/>
+<enum name='kFontMalagasyLanguage' value='93'/>
+<enum name='kFontMalayArabicLanguage' value='84'/>
+<enum name='kFontMalayRomanLanguage' value='83'/>
+<enum name='kFontMalayalamLanguage' value='72'/>
+<enum name='kFontMalayalamScript' value='17'/>
+<enum name='kFontMalteseLanguage' value='16'/>
+<enum name='kFontManufacturerName' value='8'/>
+<enum name='kFontMarathiLanguage' value='66'/>
+<enum name='kFontMicrosoftPlatform' value='3'/>
+<enum name='kFontMicrosoftStandardScript' value='1'/>
+<enum name='kFontMicrosoftSymbolScript' value='0'/>
+<enum name='kFontMicrosoftUCS4Script' value='10'/>
+<enum name='kFontMoldavianLanguage' value='53'/>
+<enum name='kFontMongolianCyrLanguage' value='58'/>
+<enum name='kFontMongolianLanguage' value='57'/>
+<enum name='kFontMongolianScript' value='27'/>
+<enum name='kFontNepaliLanguage' value='64'/>
+<enum name='kFontNoLanguage' value='4294967295'/>
+<enum name='kFontNoLanguageCode' value='4294967295'/>
+<enum name='kFontNoName' value='4294967295'/>
+<enum name='kFontNoNameCode' value='4294967295'/>
+<enum name='kFontNoPlatform' value='4294967295'/>
+<enum name='kFontNoPlatformCode' value='4294967295'/>
+<enum name='kFontNoScript' value='4294967295'/>
+<enum name='kFontNoScriptCode' value='4294967295'/>
+<enum name='kFontNorwegianLanguage' value='9'/>
+<enum name='kFontOriyaLanguage' value='71'/>
+<enum name='kFontOriyaScript' value='12'/>
+<enum name='kFontOromoLanguage' value='87'/>
+<enum name='kFontPashtoLanguage' value='59'/>
+<enum name='kFontPersianLanguage' value='31'/>
+<enum name='kFontPolishLanguage' value='25'/>
+<enum name='kFontPortugueseLanguage' value='8'/>
+<enum name='kFontPostScriptCIDName' value='20'/>
+<enum name='kFontPostscriptName' value='6'/>
+<enum name='kFontPreferredFamilyName' value='16'/>
+<enum name='kFontPreferredSubfamilyName' value='17'/>
+<enum name='kFontPunjabiLanguage' value='70'/>
+<enum name='kFontQuechuaLanguage' value='132'/>
+<enum name='kFontRSymbolScript' value='8'/>
+<enum name='kFontReservedPlatform' value='2'/>
+<enum name='kFontRomanScript' value='0'/>
+<enum name='kFontRomanianLanguage' value='37'/>
+<enum name='kFontRuandaLanguage' value='90'/>
+<enum name='kFontRundiLanguage' value='91'/>
+<enum name='kFontRussian' value='7'/>
+<enum name='kFontRussianLanguage' value='32'/>
+<enum name='kFontSaamiskLanguage' value='29'/>
+<enum name='kFontSampleTextName' value='19'/>
+<enum name='kFontSanskritLanguage' value='65'/>
+<enum name='kFontSerbianLanguage' value='42'/>
+<enum name='kFontSimpChineseLanguage' value='33'/>
+<enum name='kFontSimpleChineseScript' value='25'/>
+<enum name='kFontSindhiLanguage' value='62'/>
+<enum name='kFontSindhiScript' value='31'/>
+<enum name='kFontSinhaleseLanguage' value='76'/>
+<enum name='kFontSinhaleseScript' value='18'/>
+<enum name='kFontSlavicScript' value='29'/>
+<enum name='kFontSlovakLanguage' value='39'/>
+<enum name='kFontSlovenianLanguage' value='40'/>
+<enum name='kFontSomaliLanguage' value='88'/>
+<enum name='kFontSpanishLanguage' value='6'/>
+<enum name='kFontStyleName' value='2'/>
+<enum name='kFontSundaneseRomLanguage' value='139'/>
+<enum name='kFontSwahiliLanguage' value='89'/>
+<enum name='kFontSwedishLanguage' value='5'/>
+<enum name='kFontTagalogLanguage' value='82'/>
+<enum name='kFontTajikiLanguage' value='55'/>
+<enum name='kFontTamilLanguage' value='74'/>
+<enum name='kFontTamilScript' value='14'/>
+<enum name='kFontTatarLanguage' value='135'/>
+<enum name='kFontTeluguLanguage' value='75'/>
+<enum name='kFontTeluguScript' value='15'/>
+<enum name='kFontThaiLanguage' value='22'/>
+<enum name='kFontThaiScript' value='21'/>
+<enum name='kFontTibetanLanguage' value='63'/>
+<enum name='kFontTibetanScript' value='26'/>
+<enum name='kFontTigrinyaLanguage' value='86'/>
+<enum name='kFontTradChineseLanguage' value='19'/>
+<enum name='kFontTrademarkName' value='7'/>
+<enum name='kFontTraditionalChineseScript' value='2'/>
+<enum name='kFontTurkishLanguage' value='17'/>
+<enum name='kFontTurkmenLanguage' value='56'/>
+<enum name='kFontUighurLanguage' value='136'/>
+<enum name='kFontUkrainianLanguage' value='45'/>
+<enum name='kFontUnicodeDefaultSemantics' value='0'/>
+<enum name='kFontUnicodePlatform' value='0'/>
+<enum name='kFontUnicodeV1_1Semantics' value='1'/>
+<enum name='kFontUnicodeV2_0BMPOnlySemantics' value='3'/>
+<enum name='kFontUnicodeV2_0FullCoverageSemantics' value='4'/>
+<enum name='kFontUnicodeV4_0VariationSequenceSemantics' value='5'/>
+<enum name='kFontUninterpretedScript' value='32'/>
+<enum name='kFontUniqueName' value='3'/>
+<enum name='kFontUrduLanguage' value='20'/>
+<enum name='kFontUzbekLanguage' value='47'/>
+<enum name='kFontVendorURLName' value='11'/>
+<enum name='kFontVersionName' value='5'/>
+<enum name='kFontVietnameseLanguage' value='80'/>
+<enum name='kFontVietnameseScript' value='30'/>
+<enum name='kFontWelshLanguage' value='128'/>
+<enum name='kFontYiddishLanguage' value='41'/>
+<enum name='kFormInterrobangOffSelector' value='7'/>
+<enum name='kFormInterrobangOnSelector' value='6'/>
+<enum name='kFractionsType' value='11'/>
+<enum name='kFullWidthCJKRomanSelector' value='3'/>
+<enum name='kFullWidthIdeographsSelector' value='0'/>
+<enum name='kFullWidthKanaSelector' value='0'/>
+<enum name='kHalfWidthCJKRomanSelector' value='0'/>
+<enum name='kHalfWidthIdeographsSelector' value='2'/>
+<enum name='kHalfWidthTextSelector' value='2'/>
+<enum name='kHanjaToHangulAltOneSelector' value='7'/>
+<enum name='kHanjaToHangulAltThreeSelector' value='9'/>
+<enum name='kHanjaToHangulAltTwoSelector' value='8'/>
+<enum name='kHanjaToHangulSelector' value='1'/>
+<enum name='kHideDiacriticsSelector' value='1'/>
+<enum name='kHiraganaToKatakanaSelector' value='2'/>
+<enum name='kHyphenToEnDashOffSelector' value='3'/>
+<enum name='kHyphenToEnDashOnSelector' value='2'/>
+<enum name='kHyphenToMinusOffSelector' value='1'/>
+<enum name='kHyphenToMinusOnSelector' value='0'/>
+<enum name='kHyphensToEmDashOffSelector' value='1'/>
+<enum name='kHyphensToEmDashOnSelector' value='0'/>
+<enum name='kIdeographicAltFiveSelector' value='5'/>
+<enum name='kIdeographicAltFourSelector' value='4'/>
+<enum name='kIdeographicAltOneSelector' value='1'/>
+<enum name='kIdeographicAltThreeSelector' value='3'/>
+<enum name='kIdeographicAltTwoSelector' value='2'/>
+<enum name='kIdeographicAlternativesType' value='30'/>
+<enum name='kIdeographicSpacingType' value='26'/>
+<enum name='kIlluminatedCapsSelector' value='3'/>
+<enum name='kInequalityLigaturesOffSelector' value='7'/>
+<enum name='kInequalityLigaturesOnSelector' value='6'/>
+<enum name='kInferiorsSelector' value='2'/>
+<enum name='kInitialCapsAndSmallCapsSelector' value='5'/>
+<enum name='kInitialCapsSelector' value='4'/>
+<enum name='kInternationalSymbolsSelector' value='5'/>
+<enum name='kInvalidFont' value='0'/>
+<enum name='kInvalidFontFamily' value='-1'/>
+<enum name='kInvalidGeneration' value='0'/>
+<enum name='kInvertedBoxAnnotationSelector' value='9'/>
+<enum name='kInvertedCircleAnnotationSelector' value='4'/>
+<enum name='kInvertedRoundedBoxAnnotationSelector' value='10'/>
+<enum name='kItalicCJKRomanType' value='32'/>
+<enum name='kJIS1978CharactersSelector' value='2'/>
+<enum name='kJIS1983CharactersSelector' value='3'/>
+<enum name='kJIS1990CharactersSelector' value='4'/>
+<enum name='kJUSTCurrentVersion' value='65536'/>
+<enum name='kJUSTKashidaPriority' value='0'/>
+<enum name='kJUSTLetterPriority' value='2'/>
+<enum name='kJUSTNullPriority' value='3'/>
+<enum name='kJUSTOverrideLimits' value='16384'/>
+<enum name='kJUSTOverridePriority' value='32768'/>
+<enum name='kJUSTOverrideUnlimited' value='8192'/>
+<enum name='kJUSTPriorityCount' value='4'/>
+<enum name='kJUSTPriorityMask' value='3'/>
+<enum name='kJUSTSpacePriority' value='1'/>
+<enum name='kJUSTStandardFormat' value='0'/>
+<enum name='kJUSTTag' value='1786082164'/>
+<enum name='kJUSTUnlimited' value='4096'/>
+<enum name='kJUSTnoGlyphcode' value='65535'/>
+<enum name='kJUSTpcConditionalAddAction' value='2'/>
+<enum name='kJUSTpcDecompositionAction' value='0'/>
+<enum name='kJUSTpcDuctilityAction' value='4'/>
+<enum name='kJUSTpcGlyphRepeatAddAction' value='5'/>
+<enum name='kJUSTpcGlyphStretchAction' value='3'/>
+<enum name='kJUSTpcUnconditionalAddAction' value='1'/>
+<enum name='kKERNCrossStream' value='16384'/>
+<enum name='kKERNCrossStreamResetNote' value='2'/>
+<enum name='kKERNCurrentVersion' value='65536'/>
+<enum name='kKERNFormatMask' value='255'/>
+<enum name='kKERNIndexArray' value='3'/>
+<enum name='kKERNLineEndKerning' value='2'/>
+<enum name='kKERNLineStart' value='1'/>
+<enum name='kKERNNoCrossKerning' value='4'/>
+<enum name='kKERNNoStakeNote' value='1'/>
+<enum name='kKERNNotApplied' value='1'/>
+<enum name='kKERNNotesRequested' value='8'/>
+<enum name='kKERNOrderedList' value='0'/>
+<enum name='kKERNResetCrossStream' value='32768'/>
+<enum name='kKERNSimpleArray' value='2'/>
+<enum name='kKERNStateTable' value='1'/>
+<enum name='kKERNTag' value='1801810542'/>
+<enum name='kKERNUnusedBits' value='7936'/>
+<enum name='kKERNVariation' value='8192'/>
+<enum name='kKERNVertical' value='32768'/>
+<enum name='kKERXActionOffsetMask' value='2147483647'/>
+<enum name='kKERXControlPoint' value='4'/>
+<enum name='kKERXCrossStream' value='1073741824'/>
+<enum name='kKERXCrossStreamResetNote' value='2'/>
+<enum name='kKERXCurrentVersion' value='131072'/>
+<enum name='kKERXFormatMask' value='255'/>
+<enum name='kKERXIndexArray' value='3'/>
+<enum name='kKERXLineEndKerning' value='2'/>
+<enum name='kKERXLineStart' value='1'/>
+<enum name='kKERXNoCrossKerning' value='4'/>
+<enum name='kKERXNoStakeNote' value='1'/>
+<enum name='kKERXNotApplied' value='1'/>
+<enum name='kKERXNotesRequested' value='8'/>
+<enum name='kKERXOrderedList' value='0'/>
+<enum name='kKERXResetCrossStream' value='32768'/>
+<enum name='kKERXSimpleArray' value='2'/>
+<enum name='kKERXStateTable' value='1'/>
+<enum name='kKERXTag' value='1801810552'/>
+<enum name='kKERXUnusedBits' value='536870656'/>
+<enum name='kKERXUsesCoordinates' value='-2147483648'/>
+<enum name='kKERXVariation' value='536870912'/>
+<enum name='kKERXVertical' value='-2147483648'/>
+<enum name='kKanaSpacingType' value='25'/>
+<enum name='kKanaToRomanizationSelector' value='4'/>
+<enum name='kKatakanaToHiraganaSelector' value='3'/>
+<enum name='kLCARCtlPointFormat' value='1'/>
+<enum name='kLCARCurrentVersion' value='65536'/>
+<enum name='kLCARLinearFormat' value='0'/>
+<enum name='kLCARTag' value='1818452338'/>
+<enum name='kLastFeatureType' value='-1'/>
+<enum name='kLetterCaseType' value='3'/>
+<enum name='kLigaturesType' value='1'/>
+<enum name='kLineFinalSwashesOffSelector' value='7'/>
+<enum name='kLineFinalSwashesOnSelector' value='6'/>
+<enum name='kLineInitialSwashesOffSelector' value='5'/>
+<enum name='kLineInitialSwashesOnSelector' value='4'/>
+<enum name='kLinguisticRearrangementOffSelector' value='1'/>
+<enum name='kLinguisticRearrangementOnSelector' value='0'/>
+<enum name='kLinguisticRearrangementType' value='5'/>
+<enum name='kLogosOffSelector' value='7'/>
+<enum name='kLogosOnSelector' value='6'/>
+<enum name='kLowerCaseNumbersSelector' value='0'/>
+<enum name='kMORTContextualType' value='1'/>
+<enum name='kMORTCoverDescending' value='16384'/>
+<enum name='kMORTCoverIgnoreVertical' value='8192'/>
+<enum name='kMORTCoverTypeMask' value='15'/>
+<enum name='kMORTCoverVertical' value='32768'/>
+<enum name='kMORTCurrInsertBefore' value='2048'/>
+<enum name='kMORTCurrInsertCountMask' value='992'/>
+<enum name='kMORTCurrInsertCountShift' value='5'/>
+<enum name='kMORTCurrInsertKashidaLike' value='8192'/>
+<enum name='kMORTCurrJustTableCountMask' value='127'/>
+<enum name='kMORTCurrJustTableCountShift' value='0'/>
+<enum name='kMORTCurrentVersion' value='65536'/>
+<enum name='kMORTDoInsertionsBefore' value='128'/>
+<enum name='kMORTInsertionType' value='5'/>
+<enum name='kMORTInsertionsCountMask' value='63'/>
+<enum name='kMORTIsSplitVowelPiece' value='64'/>
+<enum name='kMORTLigFormOffsetMask' value='1073741823'/>
+<enum name='kMORTLigFormOffsetShift' value='2'/>
+<enum name='kMORTLigLastAction' value='-2147483648'/>
+<enum name='kMORTLigStoreLigature' value='1073741824'/>
+<enum name='kMORTLigatureType' value='2'/>
+<enum name='kMORTMarkInsertBefore' value='1024'/>
+<enum name='kMORTMarkInsertCountMask' value='31'/>
+<enum name='kMORTMarkInsertCountShift' value='0'/>
+<enum name='kMORTMarkInsertKashidaLike' value='4096'/>
+<enum name='kMORTMarkJustTableCountMask' value='16256'/>
+<enum name='kMORTMarkJustTableCountShift' value='7'/>
+<enum name='kMORTRearrangementType' value='0'/>
+<enum name='kMORTSwashType' value='4'/>
+<enum name='kMORTTag' value='1836020340'/>
+<enum name='kMORTraCDx' value='6'/>
+<enum name='kMORTraCDxA' value='8'/>
+<enum name='kMORTraCDxAB' value='12'/>
+<enum name='kMORTraCDxBA' value='13'/>
+<enum name='kMORTraDCx' value='7'/>
+<enum name='kMORTraDCxA' value='9'/>
+<enum name='kMORTraDCxAB' value='14'/>
+<enum name='kMORTraDCxBA' value='15'/>
+<enum name='kMORTraDx' value='2'/>
+<enum name='kMORTraDxA' value='3'/>
+<enum name='kMORTraDxAB' value='10'/>
+<enum name='kMORTraDxBA' value='11'/>
+<enum name='kMORTraNoAction' value='0'/>
+<enum name='kMORTraxA' value='1'/>
+<enum name='kMORTraxAB' value='4'/>
+<enum name='kMORTraxBA' value='5'/>
+<enum name='kMORXCoverDescending' value='1073741824'/>
+<enum name='kMORXCoverIgnoreVertical' value='536870912'/>
+<enum name='kMORXCoverTypeMask' value='255'/>
+<enum name='kMORXCoverVertical' value='-2147483648'/>
+<enum name='kMORXCurrentVersion' value='131072'/>
+<enum name='kMORXTag' value='1836020344'/>
+<enum name='kMathSymbolsSelector' value='6'/>
+<enum name='kMathematicalExtrasType' value='15'/>
+<enum name='kMonospacedNumbersSelector' value='0'/>
+<enum name='kMonospacedTextSelector' value='1'/>
+<enum name='kNoAlternatesSelector' value='0'/>
+<enum name='kNoAnnotationSelector' value='0'/>
+<enum name='kNoCJKItalicRomanSelector' value='0'/>
+<enum name='kNoCJKSymbolAlternativesSelector' value='0'/>
+<enum name='kNoFractionsSelector' value='0'/>
+<enum name='kNoIdeographicAlternativesSelector' value='0'/>
+<enum name='kNoOrnamentsSelector' value='0'/>
+<enum name='kNoRubyKanaSelector' value='0'/>
+<enum name='kNoStyleOptionsSelector' value='0'/>
+<enum name='kNoTransliterationSelector' value='0'/>
+<enum name='kNonFinalSwashesOffSelector' value='9'/>
+<enum name='kNonFinalSwashesOnSelector' value='8'/>
+<enum name='kNormalPositionSelector' value='0'/>
+<enum name='kNumberCaseType' value='21'/>
+<enum name='kNumberSpacingType' value='6'/>
+<enum name='kOPBDControlPointFormat' value='1'/>
+<enum name='kOPBDCurrentVersion' value='65536'/>
+<enum name='kOPBDDistanceFormat' value='0'/>
+<enum name='kOPBDTag' value='1869636196'/>
+<enum name='kOrdinalsSelector' value='3'/>
+<enum name='kOrnamentSetsType' value='16'/>
+<enum name='kOverlappingCharactersType' value='13'/>
+<enum name='kPROPALDirectionClass' value='2'/>
+<enum name='kPROPANDirectionClass' value='6'/>
+<enum name='kPROPBNDirectionClass' value='19'/>
+<enum name='kPROPCSDirectionClass' value='7'/>
+<enum name='kPROPCanHangLTMask' value='16384'/>
+<enum name='kPROPCanHangRBMask' value='8192'/>
+<enum name='kPROPCurrentVersion' value='196608'/>
+<enum name='kPROPDirectionMask' value='31'/>
+<enum name='kPROPENDirectionClass' value='3'/>
+<enum name='kPROPESDirectionClass' value='4'/>
+<enum name='kPROPETDirectionClass' value='5'/>
+<enum name='kPROPIsFloaterMask' value='32768'/>
+<enum name='kPROPLDirectionClass' value='0'/>
+<enum name='kPROPLREDirectionClass' value='13'/>
+<enum name='kPROPLRODirectionClass' value='14'/>
+<enum name='kPROPNSMDirectionClass' value='18'/>
+<enum name='kPROPNumDirectionClasses' value='20'/>
+<enum name='kPROPONDirectionClass' value='11'/>
+<enum name='kPROPPDFDirectionClass' value='17'/>
+<enum name='kPROPPSDirectionClass' value='8'/>
+<enum name='kPROPPairOffsetMask' value='3840'/>
+<enum name='kPROPPairOffsetShift' value='8'/>
+<enum name='kPROPPairOffsetSign' value='7'/>
+<enum name='kPROPRDirectionClass' value='1'/>
+<enum name='kPROPRLEDirectionClass' value='15'/>
+<enum name='kPROPRLODirectionClass' value='16'/>
+<enum name='kPROPRightConnectMask' value='128'/>
+<enum name='kPROPSDirectionClass' value='9'/>
+<enum name='kPROPSENDirectionClass' value='12'/>
+<enum name='kPROPTag' value='1886547824'/>
+<enum name='kPROPUseRLPairMask' value='4096'/>
+<enum name='kPROPWSDirectionClass' value='10'/>
+<enum name='kPROPZeroReserved' value='96'/>
+<enum name='kParenthesisAnnotationSelector' value='5'/>
+<enum name='kPartiallyConnectedSelector' value='1'/>
+<enum name='kPeriodAnnotationSelector' value='6'/>
+<enum name='kPeriodsToEllipsisOffSelector' value='11'/>
+<enum name='kPeriodsToEllipsisOnSelector' value='10'/>
+<enum name='kPiCharactersSelector' value='2'/>
+<enum name='kPreventOverlapOffSelector' value='1'/>
+<enum name='kPreventOverlapOnSelector' value='0'/>
+<enum name='kProportionalCJKRomanSelector' value='1'/>
+<enum name='kProportionalIdeographsSelector' value='1'/>
+<enum name='kProportionalKanaSelector' value='1'/>
+<enum name='kProportionalNumbersSelector' value='1'/>
+<enum name='kProportionalTextSelector' value='0'/>
+<enum name='kQuarterWidthNumbersSelector' value='3'/>
+<enum name='kRareLigaturesOffSelector' value='5'/>
+<enum name='kRareLigaturesOnSelector' value='4'/>
+<enum name='kRebusPicturesOffSelector' value='9'/>
+<enum name='kRebusPicturesOnSelector' value='8'/>
+<enum name='kRequiredLigaturesOffSelector' value='1'/>
+<enum name='kRequiredLigaturesOnSelector' value='0'/>
+<enum name='kRomanNumeralAnnotationSelector' value='7'/>
+<enum name='kRomanizationToHiraganaSelector' value='5'/>
+<enum name='kRomanizationToKatakanaSelector' value='6'/>
+<enum name='kRoundedBoxAnnotationSelector' value='2'/>
+<enum name='kRubyKanaOffSelector' value='3'/>
+<enum name='kRubyKanaOnSelector' value='2'/>
+<enum name='kRubyKanaSelector' value='1'/>
+<enum name='kRubyKanaType' value='28'/>
+<enum name='kSFNTLookupSegmentArray' value='4'/>
+<enum name='kSFNTLookupSegmentSingle' value='2'/>
+<enum name='kSFNTLookupSimpleArray' value='0'/>
+<enum name='kSFNTLookupSingleTable' value='6'/>
+<enum name='kSFNTLookupTrimmedArray' value='8'/>
+<enum name='kSTClassDeletedGlyph' value='2'/>
+<enum name='kSTClassEndOfLine' value='3'/>
+<enum name='kSTClassEndOfText' value='0'/>
+<enum name='kSTClassOutOfBounds' value='1'/>
+<enum name='kSTLigActionMask' value='16383'/>
+<enum name='kSTMarkEnd' value='8192'/>
+<enum name='kSTNoAdvance' value='16384'/>
+<enum name='kSTRearrVerbMask' value='15'/>
+<enum name='kSTSetMark' value='32768'/>
+<enum name='kSTXHasLigAction' value='8192'/>
+<enum name='kShowDiacriticsSelector' value='0'/>
+<enum name='kSimplifiedCharactersSelector' value='1'/>
+<enum name='kSlashToDivideOffSelector' value='5'/>
+<enum name='kSlashToDivideOnSelector' value='4'/>
+<enum name='kSlashedZeroOffSelector' value='5'/>
+<enum name='kSlashedZeroOnSelector' value='4'/>
+<enum name='kSmallCapsSelector' value='3'/>
+<enum name='kSmartQuotesOffSelector' value='9'/>
+<enum name='kSmartQuotesOnSelector' value='8'/>
+<enum name='kSmartSwashType' value='8'/>
+<enum name='kSquaredLigaturesOffSelector' value='13'/>
+<enum name='kSquaredLigaturesOnSelector' value='12'/>
+<enum name='kStyleOptionsType' value='19'/>
+<enum name='kSubstituteVerticalFormsOffSelector' value='1'/>
+<enum name='kSubstituteVerticalFormsOnSelector' value='0'/>
+<enum name='kSuperiorsSelector' value='1'/>
+<enum name='kSymbolLigaturesOffSelector' value='17'/>
+<enum name='kSymbolLigaturesOnSelector' value='16'/>
+<enum name='kTRAKCurrentVersion' value='65536'/>
+<enum name='kTRAKTag' value='1953653099'/>
+<enum name='kTRAKUniformFormat' value='0'/>
+<enum name='kTallCapsSelector' value='5'/>
+<enum name='kTextSpacingType' value='22'/>
+<enum name='kThirdWidthNumbersSelector' value='2'/>
+<enum name='kTitlingCapsSelector' value='4'/>
+<enum name='kTraditionalAltFiveSelector' value='9'/>
+<enum name='kTraditionalAltFourSelector' value='8'/>
+<enum name='kTraditionalAltOneSelector' value='5'/>
+<enum name='kTraditionalAltThreeSelector' value='7'/>
+<enum name='kTraditionalAltTwoSelector' value='6'/>
+<enum name='kTraditionalCharactersSelector' value='0'/>
+<enum name='kTranscodingCompositionOffSelector' value='5'/>
+<enum name='kTranscodingCompositionOnSelector' value='4'/>
+<enum name='kTransliterationType' value='23'/>
+<enum name='kTypographicExtrasType' value='14'/>
+<enum name='kUnconnectedSelector' value='0'/>
+<enum name='kUnicodeDecompositionType' value='27'/>
+<enum name='kUpperAndLowerCaseSelector' value='0'/>
+<enum name='kUpperCaseNumbersSelector' value='1'/>
+<enum name='kVerticalFractionsSelector' value='1'/>
+<enum name='kVerticalPositionType' value='10'/>
+<enum name='kVerticalSubstitutionType' value='4'/>
+<enum name='kWordFinalSwashesOffSelector' value='3'/>
+<enum name='kWordFinalSwashesOnSelector' value='2'/>
+<enum name='kWordInitialSwashesOffSelector' value='1'/>
+<enum name='kWordInitialSwashesOnSelector' value='0'/>
+<enum name='nameFontTableTag' value='1851878757'/>
+<enum name='nonGlyphID' value='65535'/>
+<enum name='os2FontTableTag' value='1330851634'/>
+<enum name='portableStreamType' value='32'/>
+<enum name='prerequisiteItemStreamAction' value='5'/>
+<enum name='prerequisiteQueryStreamAction' value='4'/>
+<enum name='scalerSpecifcModifierMask' value='61440'/>
+<enum name='selectAllVariations' value='-1'/>
+<enum name='sizeof_sfntCMapEncoding' value='8'/>
+<enum name='sizeof_sfntCMapExtendedSubHeader' value='12'/>
+<enum name='sizeof_sfntCMapHeader' value='4'/>
+<enum name='sizeof_sfntCMapSubHeader' value='6'/>
+<enum name='sizeof_sfntDescriptorHeader' value='8'/>
+<enum name='sizeof_sfntDirectory' value='12'/>
+<enum name='sizeof_sfntInstance' value='4'/>
+<enum name='sizeof_sfntNameHeader' value='6'/>
+<enum name='sizeof_sfntNameRecord' value='12'/>
+<enum name='sizeof_sfntVariationAxis' value='20'/>
+<enum name='sizeof_sfntVariationHeader' value='16'/>
+<enum name='streamTypeModifierMask' value='-4096'/>
+<enum name='truetypeStreamType' value='1'/>
+<enum name='type1CFFStreamType' value='512'/>
+<enum name='type1StreamType' value='2'/>
+<enum name='type3StreamType' value='4'/>
+<enum name='type42GXStreamType' value='16'/>
+<enum name='type42StreamType' value='8'/>
+<enum name='unicodeMappingModifierStreamType' value='131072'/>
+<enum name='variationFontTableTag' value='1719034226'/>
+<enum name='variationPSOperatorStreamAction' value='7'/>
+<enum name='variationQueryStreamAction' value='6'/>
+<function name='ATSCreateFontQueryRunLoopSource'>
+<arg type64='q' type='l'/>
+<arg type64='q' type='l'/>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<arg type='@'/>
+<arg type='^v'/>
+<retval type='@'/>
+</arg>
+<arg type='^{ATSFontQuerySourceContext=I^v^?^?}'/>
+<retval already_retained='true' type='^{__CFRunLoopSource=}'/>
+</function>
+<function name='ATSFontActivateFromFileReference'>
+<arg type='^{FSRef=[80C]}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontActivateFromMemory'>
+<arg type='^v'/>
+<arg type64='Q' type='L'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontApplyFunction'>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontDeactivate'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontFamilyApplyFunction'>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontFamilyFindFromName'>
+<arg type='^{__CFString=}'/>
+<arg type64='I' type='L'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='ATSFontFamilyFindFromQuickDrawName'>
+<arg type='*'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='ATSFontFamilyGetEncoding'>
+<arg type64='I' type='L'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='ATSFontFamilyGetGeneration'>
+<arg type64='I' type='L'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='ATSFontFamilyGetName'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontFamilyGetQuickDrawName'>
+<arg type64='I' type='L'/>
+<arg type='*'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontFamilyIteratorCreate'>
+<arg type64='I' type='L'/>
+<arg type='^{ATSFontFilter=Ii(?=II^?^?^{FSRef})}'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<arg type='^^{ATSFontFamilyIterator_}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontFamilyIteratorNext'>
+<arg type='^{ATSFontFamilyIterator_=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontFamilyIteratorRelease'>
+<arg type='^^{ATSFontFamilyIterator_}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontFamilyIteratorReset'>
+<arg type64='I' type='L'/>
+<arg type='^{ATSFontFilter=Ii(?=II^?^?^{FSRef})}'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<arg type='^^{ATSFontFamilyIterator_}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontFindFromContainer'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='^I'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontFindFromName'>
+<arg type='^{__CFString=}'/>
+<arg type64='I' type='L'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='ATSFontFindFromPostScriptName'>
+<arg type='^{__CFString=}'/>
+<arg type64='I' type='L'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='ATSFontGetAutoActivationSettingForApplication'>
+<arg type='^{__CFURL=}'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='ATSFontGetContainer'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontGetContainerFromFileReference'>
+<arg type='^{FSRef=[80C]}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontGetFileReference'>
+<arg type64='I' type='L'/>
+<arg type='^{FSRef=[80C]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontGetFontFamilyResource'>
+<arg type64='I' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='^v'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontGetGeneration'>
+<arg type64='I' type='L'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='ATSFontGetGlobalAutoActivationSetting'>
+<retval type64='I' type='L'/>
+</function>
+<function name='ATSFontGetHorizontalMetrics'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type64='^{ATSFontMetrics=Idddddddddddddd}' type='^{ATSFontMetrics=Iffffffffffffff}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontGetName'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontGetPostScriptName'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontGetTable'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='^v'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontGetTableDirectory'>
+<arg type64='I' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='^v'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontGetVerticalMetrics'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type64='^{ATSFontMetrics=Idddddddddddddd}' type='^{ATSFontMetrics=Iffffffffffffff}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontIsEnabled'>
+<arg type64='I' type='L'/>
+<retval type='B'/>
+</function>
+<function name='ATSFontIteratorCreate'>
+<arg type64='I' type='L'/>
+<arg type='^{ATSFontFilter=Ii(?=II^?^?^{FSRef})}'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<arg type='^^{ATSFontIterator_}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontIteratorNext'>
+<arg type='^{ATSFontIterator_=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontIteratorRelease'>
+<arg type='^^{ATSFontIterator_}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontIteratorReset'>
+<arg type64='I' type='L'/>
+<arg type='^{ATSFontFilter=Ii(?=II^?^?^{FSRef})}'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<arg type='^^{ATSFontIterator_}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontNotificationSubscribe'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{ATSFontNotificationInfoRef_=}'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='i'/>
+<arg type='^v'/>
+<arg type='^^{ATSFontNotificationRef_}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontNotificationUnsubscribe'>
+<arg type='^{ATSFontNotificationRef_=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontNotify'>
+<arg type='i'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontSetAutoActivationSettingForApplication'>
+<arg type64='I' type='L'/>
+<arg type='^{__CFURL=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontSetEnabled'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSFontSetGlobalAutoActivationSetting'>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSGetGeneration'>
+<retval type64='I' type='L'/>
+</function>
+<function name='DisposeATSUDirectLayoutOperationOverrideUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^{ATSGlyphVector=}'/>
+<arg type64='^v' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</arg>
+</function>
+<function name='DisposeFMFontCallbackFilterUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+</function>
+<function name='DisposeFMFontFamilyCallbackFilterUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+</function>
+<function name='InvokeATSUDirectLayoutOperationOverrideUPP'>
+<arg type64='I' type='L'/>
+<arg type='^{ATSGlyphVector=}'/>
+<arg type64='^v' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^{ATSGlyphVector=}'/>
+<arg type64='^v' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='InvokeFMFontCallbackFilterUPP'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='InvokeFMFontFamilyCallbackFilterUPP'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='NewATSUDirectLayoutOperationOverrideUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^{ATSGlyphVector=}'/>
+<arg type64='^v' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^{ATSGlyphVector=}'/>
+<arg type64='^v' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</retval>
+</function>
+<function name='NewFMFontCallbackFilterUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</retval>
+</function>
+<function name='NewFMFontFamilyCallbackFilterUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</retval>
+</function>
+</signatures>

@@ -1,0 +1,343 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant name='ICButtonTypeCopy' type='@'/>
+<constant name='ICButtonTypeMail' type='@'/>
+<constant name='ICButtonTypePrint' type='@'/>
+<constant name='ICButtonTypeScan' type='@'/>
+<constant name='ICButtonTypeTransfer' type='@'/>
+<constant name='ICButtonTypeWeb' type='@'/>
+<constant name='ICCameraDeviceCanAcceptPTPCommands' type='@'/>
+<constant name='ICCameraDeviceCanDeleteAllFiles' type='@'/>
+<constant name='ICCameraDeviceCanDeleteOneFile' type='@'/>
+<constant name='ICCameraDeviceCanReceiveFile' type='@'/>
+<constant name='ICCameraDeviceCanSyncClock' type='@'/>
+<constant name='ICCameraDeviceCanTakePicture' type='@'/>
+<constant name='ICCameraDeviceCanTakePictureUsingShutterReleaseOnCamera' type='@'/>
+<constant name='ICDeleteAfterSuccessfulDownload' type='@'/>
+<constant name='ICDeviceCanEjectOrDisconnect' type='@'/>
+<constant name='ICDeviceLocationDescriptionBluetooth' type='@'/>
+<constant name='ICDeviceLocationDescriptionFireWire' type='@'/>
+<constant name='ICDeviceLocationDescriptionMassStorage' type='@'/>
+<constant name='ICDeviceLocationDescriptionUSB' type='@'/>
+<constant name='ICDownloadSidecarFiles' type='@'/>
+<constant name='ICDownloadsDirectoryURL' type='@'/>
+<constant name='ICLocalizedStatusNotificationKey' type='@'/>
+<constant name='ICOverwrite' type='@'/>
+<constant name='ICSaveAsFilename' type='@'/>
+<constant name='ICSavedAncillaryFiles' type='@'/>
+<constant name='ICSavedFilename' type='@'/>
+<constant name='ICScannerStatusRequestsOverviewScan' type='@'/>
+<constant name='ICScannerStatusWarmUpDone' type='@'/>
+<constant name='ICScannerStatusWarmingUp' type='@'/>
+<constant name='ICStatusNotificationKey' type='@'/>
+<constant name='ICTransportTypeBluetooth' type='@'/>
+<constant name='ICTransportTypeFireWire' type='@'/>
+<constant name='ICTransportTypeMassStorage' type='@'/>
+<constant name='ICTransportTypeTCPIP' type='@'/>
+<constant name='ICTransportTypeUSB' type='@'/>
+<enum name='ICDeviceLocationTypeBluetooth' value='2048'/>
+<enum name='ICDeviceLocationTypeBonjour' value='1024'/>
+<enum name='ICDeviceLocationTypeLocal' value='256'/>
+<enum name='ICDeviceLocationTypeMaskBluetooth' value='2048'/>
+<enum name='ICDeviceLocationTypeMaskBonjour' value='1024'/>
+<enum name='ICDeviceLocationTypeMaskLocal' value='256'/>
+<enum name='ICDeviceLocationTypeMaskRemote' value='65024'/>
+<enum name='ICDeviceLocationTypeMaskShared' value='512'/>
+<enum name='ICDeviceLocationTypeShared' value='512'/>
+<enum name='ICDeviceTypeCamera' value='1'/>
+<enum name='ICDeviceTypeMaskCamera' value='1'/>
+<enum name='ICDeviceTypeMaskScanner' value='2'/>
+<enum name='ICDeviceTypeScanner' value='2'/>
+<enum name='ICEXIFOrientation1' value='1'/>
+<enum name='ICEXIFOrientation2' value='2'/>
+<enum name='ICEXIFOrientation3' value='3'/>
+<enum name='ICEXIFOrientation4' value='4'/>
+<enum name='ICEXIFOrientation5' value='5'/>
+<enum name='ICEXIFOrientation6' value='6'/>
+<enum name='ICEXIFOrientation7' value='7'/>
+<enum name='ICEXIFOrientation8' value='8'/>
+<enum name='ICReturnCommunicationTimedOut' value='-9923'/>
+<enum name='ICReturnDeleteFilesCanceled' value='-9942'/>
+<enum name='ICReturnDeleteFilesFailed' value='-9941'/>
+<enum name='ICReturnDeviceFailedToCloseSession' value='-9928'/>
+<enum name='ICReturnDeviceFailedToOpenSession' value='-9927'/>
+<enum name='ICReturnDeviceIsPasscodeLocked' value='-9943'/>
+<enum name='ICReturnDownloadCanceled' value='-9937'/>
+<enum name='ICReturnDownloadFailed' value='-9934'/>
+<enum name='ICReturnFailedToCompletePassThroughCommand' value='-9936'/>
+<enum name='ICReturnFailedToCompleteSendMessageRequest' value='-9940'/>
+<enum name='ICReturnFailedToDisabeTethering' value='-9939'/>
+<enum name='ICReturnFailedToEnabeTethering' value='-9938'/>
+<enum name='ICReturnInvalidParam' value='-9922'/>
+<enum name='ICReturnReceivedUnsolicitedScannerErrorInfo' value='-9933'/>
+<enum name='ICReturnReceivedUnsolicitedScannerStatusInfo' value='-9932'/>
+<enum name='ICReturnScanOperationCanceled' value='-9924'/>
+<enum name='ICReturnScannerFailedToCompleteOverviewScan' value='-9930'/>
+<enum name='ICReturnScannerFailedToCompleteScan' value='-9931'/>
+<enum name='ICReturnScannerFailedToSelectFunctionalUnit' value='-9929'/>
+<enum name='ICReturnScannerInUseByLocalUser' value='-9925'/>
+<enum name='ICReturnScannerInUseByRemoteUser' value='-9926'/>
+<enum name='ICReturnSuccess' value='0'/>
+<enum name='ICReturnUploadFailed' value='-9935'/>
+<enum name='ICScannerBitDepth16Bits' value='16'/>
+<enum name='ICScannerBitDepth1Bit' value='1'/>
+<enum name='ICScannerBitDepth8Bits' value='8'/>
+<enum name='ICScannerColorDataFormatTypeChunky' value='0'/>
+<enum name='ICScannerColorDataFormatTypePlanar' value='1'/>
+<enum name='ICScannerDocumentType10' value='25'/>
+<enum name='ICScannerDocumentType10R' value='67'/>
+<enum name='ICScannerDocumentType110' value='72'/>
+<enum name='ICScannerDocumentType11R' value='69'/>
+<enum name='ICScannerDocumentType12R' value='70'/>
+<enum name='ICScannerDocumentType135' value='76'/>
+<enum name='ICScannerDocumentType2A0' value='18'/>
+<enum name='ICScannerDocumentType3R' value='61'/>
+<enum name='ICScannerDocumentType4A0' value='17'/>
+<enum name='ICScannerDocumentType4R' value='62'/>
+<enum name='ICScannerDocumentType5R' value='63'/>
+<enum name='ICScannerDocumentType6R' value='64'/>
+<enum name='ICScannerDocumentType8R' value='65'/>
+<enum name='ICScannerDocumentTypeA0' value='19'/>
+<enum name='ICScannerDocumentTypeA1' value='20'/>
+<enum name='ICScannerDocumentTypeA2' value='21'/>
+<enum name='ICScannerDocumentTypeA3' value='11'/>
+<enum name='ICScannerDocumentTypeA4' value='1'/>
+<enum name='ICScannerDocumentTypeA5' value='5'/>
+<enum name='ICScannerDocumentTypeA6' value='13'/>
+<enum name='ICScannerDocumentTypeA7' value='22'/>
+<enum name='ICScannerDocumentTypeA8' value='23'/>
+<enum name='ICScannerDocumentTypeA9' value='24'/>
+<enum name='ICScannerDocumentTypeAPSC' value='74'/>
+<enum name='ICScannerDocumentTypeAPSH' value='73'/>
+<enum name='ICScannerDocumentTypeAPSP' value='75'/>
+<enum name='ICScannerDocumentTypeB5' value='2'/>
+<enum name='ICScannerDocumentTypeBusinessCard' value='53'/>
+<enum name='ICScannerDocumentTypeC0' value='44'/>
+<enum name='ICScannerDocumentTypeC1' value='45'/>
+<enum name='ICScannerDocumentTypeC10' value='51'/>
+<enum name='ICScannerDocumentTypeC2' value='46'/>
+<enum name='ICScannerDocumentTypeC3' value='47'/>
+<enum name='ICScannerDocumentTypeC4' value='14'/>
+<enum name='ICScannerDocumentTypeC5' value='15'/>
+<enum name='ICScannerDocumentTypeC6' value='16'/>
+<enum name='ICScannerDocumentTypeC7' value='48'/>
+<enum name='ICScannerDocumentTypeC8' value='49'/>
+<enum name='ICScannerDocumentTypeC9' value='50'/>
+<enum name='ICScannerDocumentTypeDefault' value='0'/>
+<enum name='ICScannerDocumentTypeE' value='60'/>
+<enum name='ICScannerDocumentTypeISOB0' value='26'/>
+<enum name='ICScannerDocumentTypeISOB1' value='27'/>
+<enum name='ICScannerDocumentTypeISOB10' value='33'/>
+<enum name='ICScannerDocumentTypeISOB2' value='28'/>
+<enum name='ICScannerDocumentTypeISOB3' value='12'/>
+<enum name='ICScannerDocumentTypeISOB4' value='6'/>
+<enum name='ICScannerDocumentTypeISOB5' value='29'/>
+<enum name='ICScannerDocumentTypeISOB6' value='7'/>
+<enum name='ICScannerDocumentTypeISOB7' value='30'/>
+<enum name='ICScannerDocumentTypeISOB8' value='31'/>
+<enum name='ICScannerDocumentTypeISOB9' value='32'/>
+<enum name='ICScannerDocumentTypeJISB0' value='34'/>
+<enum name='ICScannerDocumentTypeJISB1' value='35'/>
+<enum name='ICScannerDocumentTypeJISB10' value='43'/>
+<enum name='ICScannerDocumentTypeJISB2' value='36'/>
+<enum name='ICScannerDocumentTypeJISB3' value='37'/>
+<enum name='ICScannerDocumentTypeJISB4' value='38'/>
+<enum name='ICScannerDocumentTypeJISB6' value='39'/>
+<enum name='ICScannerDocumentTypeJISB7' value='40'/>
+<enum name='ICScannerDocumentTypeJISB8' value='41'/>
+<enum name='ICScannerDocumentTypeJISB9' value='42'/>
+<enum name='ICScannerDocumentTypeLF' value='78'/>
+<enum name='ICScannerDocumentTypeMF' value='77'/>
+<enum name='ICScannerDocumentTypeS10R' value='68'/>
+<enum name='ICScannerDocumentTypeS12R' value='71'/>
+<enum name='ICScannerDocumentTypeS8R' value='66'/>
+<enum name='ICScannerDocumentTypeUSExecutive' value='10'/>
+<enum name='ICScannerDocumentTypeUSLedger' value='9'/>
+<enum name='ICScannerDocumentTypeUSLegal' value='4'/>
+<enum name='ICScannerDocumentTypeUSLetter' value='3'/>
+<enum name='ICScannerDocumentTypeUSStatement' value='52'/>
+<enum name='ICScannerFeatureTypeBoolean' value='2'/>
+<enum name='ICScannerFeatureTypeEnumeration' value='0'/>
+<enum name='ICScannerFeatureTypeRange' value='1'/>
+<enum name='ICScannerFeatureTypeTemplate' value='3'/>
+<enum name='ICScannerFunctionalUnitStateOverviewScanInProgress' value='4'/>
+<enum name='ICScannerFunctionalUnitStateReady' value='1'/>
+<enum name='ICScannerFunctionalUnitStateScanInProgress' value='2'/>
+<enum name='ICScannerFunctionalUnitTypeDocumentFeeder' value='3'/>
+<enum name='ICScannerFunctionalUnitTypeFlatbed' value='0'/>
+<enum name='ICScannerFunctionalUnitTypeNegativeTransparency' value='2'/>
+<enum name='ICScannerFunctionalUnitTypePositiveTransparency' value='1'/>
+<enum name='ICScannerMeasurementUnitCentimeters' value='1'/>
+<enum name='ICScannerMeasurementUnitInches' value='0'/>
+<enum name='ICScannerMeasurementUnitPicas' value='2'/>
+<enum name='ICScannerMeasurementUnitPixels' value='5'/>
+<enum name='ICScannerMeasurementUnitPoints' value='3'/>
+<enum name='ICScannerMeasurementUnitTwips' value='4'/>
+<enum name='ICScannerPixelDataTypeBW' value='0'/>
+<enum name='ICScannerPixelDataTypeCIEXYZ' value='8'/>
+<enum name='ICScannerPixelDataTypeCMY' value='4'/>
+<enum name='ICScannerPixelDataTypeCMYK' value='5'/>
+<enum name='ICScannerPixelDataTypeGray' value='1'/>
+<enum name='ICScannerPixelDataTypePalette' value='3'/>
+<enum name='ICScannerPixelDataTypeRGB' value='2'/>
+<enum name='ICScannerPixelDataTypeYUV' value='6'/>
+<enum name='ICScannerPixelDataTypeYUVK' value='7'/>
+<enum name='ICScannerTransferModeFileBased' value='0'/>
+<enum name='ICScannerTransferModeMemoryBased' value='1'/>
+<class name='ICCameraDevice'>
+<method selector='batteryLevelAvailable'>
+<retval type='B'/>
+</method>
+<method selector='isAccessRestrictedAppleDevice'>
+<retval type='B'/>
+</method>
+<method selector='setTetheredCaptureEnabled:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='tetheredCaptureEnabled'>
+<retval type='B'/>
+</method>
+</class>
+<class name='ICCameraItem'>
+<method selector='isInTemporaryStore'>
+<retval type='B'/>
+</method>
+<method selector='isLocked'>
+<retval type='B'/>
+</method>
+<method selector='isRaw'>
+<retval type='B'/>
+</method>
+<method selector='wasAddedAfterContentCatalogCompleted'>
+<retval type='B'/>
+</method>
+</class>
+<class name='ICDevice'>
+<method selector='hasConfigurableWiFiInterface'>
+<retval type='B'/>
+</method>
+<method selector='hasOpenSession'>
+<retval type='B'/>
+</method>
+<method selector='isRemote'>
+<retval type='B'/>
+</method>
+<method selector='isShared'>
+<retval type='B'/>
+</method>
+</class>
+<class name='ICDeviceBrowser'>
+<method selector='isBrowsing'>
+<retval type='B'/>
+</method>
+</class>
+<class name='ICScannerBandData'>
+<method selector='isBigEndian'>
+<retval type='B'/>
+</method>
+</class>
+<class name='ICScannerFeatureBoolean'>
+<method selector='setValue:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='value'>
+<retval type='B'/>
+</method>
+</class>
+<class name='ICScannerFunctionalUnit'>
+<method selector='acceptsThresholdForBlackAndWhiteScanning'>
+<retval type='B'/>
+</method>
+<method selector='canPerformOverviewScan'>
+<retval type='B'/>
+</method>
+<method selector='overviewScanInProgress'>
+<retval type='B'/>
+</method>
+<method selector='scanInProgress'>
+<retval type='B'/>
+</method>
+<method selector='setUsesThresholdForBlackAndWhiteScanning:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='usesThresholdForBlackAndWhiteScanning'>
+<retval type='B'/>
+</method>
+</class>
+<class name='ICScannerFunctionalUnitDocumentFeeder'>
+<method selector='documentLoaded'>
+<retval type='B'/>
+</method>
+<method selector='duplexScanningEnabled'>
+<retval type='B'/>
+</method>
+<method selector='reverseFeederPageOrder'>
+<retval type='B'/>
+</method>
+<method selector='setDuplexScanningEnabled:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='supportsDuplexScanning'>
+<retval type='B'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='deviceBrowser:didAddDevice:moreComing:'>
+<arg type='B' index='2'/>
+</method>
+<method selector='deviceBrowser:didRemoveDevice:moreGoing:'>
+<arg type='B' index='2'/>
+</method>
+</class>
+<informal_protocol name='ICCameraDeviceDelegate'>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='cameraDevice:didAddItem:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='cameraDevice:didAddItems:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='cameraDevice:didCompleteDeleteFilesWithError:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='cameraDevice:didReceiveMetadataForItem:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='cameraDevice:didReceivePTPEvent:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='cameraDevice:didReceiveThumbnailForItem:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='cameraDevice:didRemoveItem:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='cameraDevice:didRemoveItems:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='cameraDevice:didRenameItems:'/>
+<method type64='v24@0:8@16' type='v12@0:4@8' selector='cameraDeviceDidChangeCapability:'/>
+<method type64='v24@0:8@16' type='v12@0:4@8' selector='deviceDidBecomeReadyWithCompleteContentCatalog:'/>
+</informal_protocol>
+<informal_protocol name='ICCameraDeviceDownloadDelegate'>
+<method type64='v48@0:8@16@24@32^v40' type='v24@0:4@8@12@16^v20' selector='didDownloadFile:error:options:contextInfo:'/>
+<method type64='v40@0:8@16q24q32' type='v28@0:4@8q12q20' selector='didReceiveDownloadProgressForFile:downloadedBytes:maxBytes:'/>
+</informal_protocol>
+<informal_protocol name='ICDeviceBrowserDelegate'>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='deviceBrowser:deviceDidChangeName:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='deviceBrowser:deviceDidChangeSharingState:'/>
+<method type64='v36@0:8@16@24B32' type='v20@0:4@8@12B16' selector='deviceBrowser:didAddDevice:moreComing:'/>
+<method type64='v36@0:8@16@24B32' type='v20@0:4@8@12B16' selector='deviceBrowser:didRemoveDevice:moreGoing:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='deviceBrowser:requestsSelectDevice:'/>
+<method type64='v24@0:8@16' type='v12@0:4@8' selector='deviceBrowserDidEnumerateLocalDevices:'/>
+</informal_protocol>
+<informal_protocol name='ICDeviceDelegate'>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='device:didCloseSessionWithError:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='device:didEncounterError:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='device:didOpenSessionWithError:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='device:didReceiveButtonPress:'/>
+<method type64='v40@0:8@16@24@32' type='v20@0:4@8@12@16' selector='device:didReceiveCustomNotification:data:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='device:didReceiveStatusInformation:'/>
+<method type64='v24@0:8@16' type='v12@0:4@8' selector='deviceDidBecomeReady:'/>
+<method type64='v24@0:8@16' type='v12@0:4@8' selector='deviceDidChangeName:'/>
+<method type64='v24@0:8@16' type='v12@0:4@8' selector='deviceDidChangeSharingState:'/>
+<method type64='v24@0:8@16' type='v12@0:4@8' selector='didRemoveDevice:'/>
+</informal_protocol>
+<informal_protocol name='ICScannerDeviceDelegate'>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='scannerDevice:didCompleteOverviewScanWithError:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='scannerDevice:didCompleteScanWithError:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='scannerDevice:didScanToBandData:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='scannerDevice:didScanToURL:'/>
+<method type64='v40@0:8@16@24@32' type='v20@0:4@8@12@16' selector='scannerDevice:didScanToURL:data:'/>
+<method type64='v40@0:8@16@24@32' type='v20@0:4@8@12@16' selector='scannerDevice:didSelectFunctionalUnit:error:'/>
+<method type64='v24@0:8@16' type='v12@0:4@8' selector='scannerDeviceDidBecomeAvailable:'/>
+</informal_protocol>
+</signatures>

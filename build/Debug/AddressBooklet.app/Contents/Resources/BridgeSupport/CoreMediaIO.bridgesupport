@@ -1,0 +1,537 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenGL.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<struct name='CMIODeviceAVCCommand' type='{CMIODeviceAVCCommand=&quot;mCommand&quot;*&quot;mCommandLength&quot;I&quot;mResponse&quot;*&quot;mResponseLength&quot;I&quot;mResponseUsed&quot;I}'/>
+<struct name='CMIODeviceRS422Command' type='{CMIODeviceRS422Command=&quot;mCommand&quot;*&quot;mCommandLength&quot;I&quot;mResponse&quot;*&quot;mResponseLength&quot;I&quot;mResponseUsed&quot;I}'/>
+<struct name='CMIODeviceSMPTETimeCallback' type='{CMIODeviceSMPTETimeCallback=&quot;mGetSMPTETimeProc&quot;^?&quot;mRefCon&quot;^v}'/>
+<struct name='CMIODeviceStreamConfiguration' type64='{CMIODeviceStreamConfiguration=&quot;mNumberStreams&quot;I&quot;mNumberChannels&quot;[1I]}' type='{CMIODeviceStreamConfiguration=&quot;mNumberStreams&quot;I&quot;mNumberChannels&quot;[1L]}'/>
+<struct name='CMIOHardwarePlugInInterface' type='{CMIOHardwarePlugInInterface=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?&quot;Initialize&quot;^?&quot;InitializeWithObjectID&quot;^?&quot;Teardown&quot;^?&quot;ObjectShow&quot;^?&quot;ObjectHasProperty&quot;^?&quot;ObjectIsPropertySettable&quot;^?&quot;ObjectGetPropertyDataSize&quot;^?&quot;ObjectGetPropertyData&quot;^?&quot;ObjectSetPropertyData&quot;^?&quot;DeviceSuspend&quot;^?&quot;DeviceResume&quot;^?&quot;DeviceStartStream&quot;^?&quot;DeviceStopStream&quot;^?&quot;DeviceProcessAVCCommand&quot;^?&quot;DeviceProcessRS422Command&quot;^?&quot;StreamCopyBufferQueue&quot;^?&quot;StreamDeckPlay&quot;^?&quot;StreamDeckStop&quot;^?&quot;StreamDeckJog&quot;^?&quot;StreamDeckCueTo&quot;^?}'/>
+<struct name='CMIOObjectPropertyAddress' type='{CMIOObjectPropertyAddress=&quot;mSelector&quot;I&quot;mScope&quot;I&quot;mElement&quot;I}'/>
+<struct name='CMIOStreamDeck' type='{CMIOStreamDeck=&quot;mStatus&quot;I&quot;mState&quot;I&quot;mState2&quot;I}'/>
+<constant name='kCMIOBlockBufferAttachmentKey_CVPixelBufferReference' type='^{__CFString=}'/>
+<constant name='kCMIOSampleBufferAttachmentKey_CAAudioTimeStamp' type='^{__CFString=}'/>
+<constant name='kCMIOSampleBufferAttachmentKey_ClosedCaptionSampleBuffer' type='^{__CFString=}'/>
+<constant name='kCMIOSampleBufferAttachmentKey_DiscontinuityFlags' type='^{__CFString=}'/>
+<constant name='kCMIOSampleBufferAttachmentKey_HDV1_PackData' type='^{__CFString=}'/>
+<constant name='kCMIOSampleBufferAttachmentKey_HDV2_VAUX' type='^{__CFString=}'/>
+<constant name='kCMIOSampleBufferAttachmentKey_HostTime' type='^{__CFString=}'/>
+<constant name='kCMIOSampleBufferAttachmentKey_MuxedSourcePresentationTimeStamp' type='^{__CFString=}'/>
+<constant name='kCMIOSampleBufferAttachmentKey_NativeSMPTEFrameCount' type='^{__CFString=}'/>
+<constant name='kCMIOSampleBufferAttachmentKey_NoDataMarker' type='^{__CFString=}'/>
+<constant name='kCMIOSampleBufferAttachmentKey_NumberOfVideoFramesInBuffer' type='^{__CFString=}'/>
+<constant name='kCMIOSampleBufferAttachmentKey_NumberOfVideoFramesInGOP' type='^{__CFString=}'/>
+<constant name='kCMIOSampleBufferAttachmentKey_PulldownCadenceInfo' type='^{__CFString=}'/>
+<constant name='kCMIOSampleBufferAttachmentKey_RepeatedBufferContents' type='^{__CFString=}'/>
+<constant name='kCMIOSampleBufferAttachmentKey_SMPTETime' type='^{__CFString=}'/>
+<constant name='kCMIOSampleBufferAttachmentKey_SequenceNumber' type='^{__CFString=}'/>
+<constant name='kCMIOSampleBufferAttachmentKey_SourceAudioFormatDescription' type='^{__CFString=}'/>
+<enum name='kCMIOAVCDeviceType_DVCPro100_720p' value='1685481584'/>
+<enum name='kCMIOAVCDeviceType_DVCPro100_NTSC' value='1685467502'/>
+<enum name='kCMIOAVCDeviceType_DVCPro100_PAL' value='1685467504'/>
+<enum name='kCMIOAVCDeviceType_DVCPro50_NTSC' value='1685468526'/>
+<enum name='kCMIOAVCDeviceType_DVCPro50_PAL' value='1685468528'/>
+<enum name='kCMIOAVCDeviceType_DVCProHD_1080i50' value='1685481525'/>
+<enum name='kCMIOAVCDeviceType_DVCProHD_1080i60' value='1685481526'/>
+<enum name='kCMIOAVCDeviceType_DVCPro_NTSC' value='1685483630'/>
+<enum name='kCMIOAVCDeviceType_DVCPro_PAL' value='1685483632'/>
+<enum name='kCMIOAVCDeviceType_DV_NTSC' value='1685480224'/>
+<enum name='kCMIOAVCDeviceType_DV_PAL' value='1685480304'/>
+<enum name='kCMIOAVCDeviceType_MPEG2' value='1836082994'/>
+<enum name='kCMIOAVCDeviceType_Unknown' value='1970170734'/>
+<enum name='kCMIOBacklightCompensationControlClassID' value='1651207284'/>
+<enum name='kCMIOBlackLevelControlClassID' value='1651207286'/>
+<enum name='kCMIOBooleanControlClassID' value='1953458028'/>
+<enum name='kCMIOBooleanControlPropertyValue' value='1650685548'/>
+<enum name='kCMIOBrightnessControlClassID' value='1651665268'/>
+<enum name='kCMIOContrastControlClassID' value='1668576116'/>
+<enum name='kCMIOControlClassID' value='1633907820'/>
+<enum name='kCMIOControlPropertyElement' value='1667591277'/>
+<enum name='kCMIOControlPropertyScope' value='1668506480'/>
+<enum name='kCMIOControlPropertyVariant' value='1668702578'/>
+<enum name='kCMIODataDestinationControlClassID' value='1684370292'/>
+<enum name='kCMIODataSourceControlClassID' value='1685287523'/>
+<enum name='kCMIODeckShuttlePause' value='0'/>
+<enum name='kCMIODeckShuttlePlay1x' value='6'/>
+<enum name='kCMIODeckShuttlePlayFast' value='7'/>
+<enum name='kCMIODeckShuttlePlayFaster' value='8'/>
+<enum name='kCMIODeckShuttlePlayFastest' value='9'/>
+<enum name='kCMIODeckShuttlePlayHighSpeed' value='10'/>
+<enum name='kCMIODeckShuttlePlayNextFrame' value='1'/>
+<enum name='kCMIODeckShuttlePlayPreviousFrame' value='-1'/>
+<enum name='kCMIODeckShuttlePlaySlow1' value='3'/>
+<enum name='kCMIODeckShuttlePlaySlow2' value='4'/>
+<enum name='kCMIODeckShuttlePlaySlow3' value='5'/>
+<enum name='kCMIODeckShuttlePlaySlowest' value='2'/>
+<enum name='kCMIODeckShuttleReverse1x' value='-6'/>
+<enum name='kCMIODeckShuttleReverseFast' value='-7'/>
+<enum name='kCMIODeckShuttleReverseFaster' value='-8'/>
+<enum name='kCMIODeckShuttleReverseFastest' value='-9'/>
+<enum name='kCMIODeckShuttleReverseHighSpeed' value='-10'/>
+<enum name='kCMIODeckShuttleReverseSlow1' value='-3'/>
+<enum name='kCMIODeckShuttleReverseSlow2' value='-4'/>
+<enum name='kCMIODeckShuttleReverseSlow3' value='-5'/>
+<enum name='kCMIODeckShuttleReverseSlowest' value='-2'/>
+<enum name='kCMIODeckStateFastForward' value='6'/>
+<enum name='kCMIODeckStateFastRewind' value='7'/>
+<enum name='kCMIODeckStatePause' value='2'/>
+<enum name='kCMIODeckStatePlay' value='1'/>
+<enum name='kCMIODeckStatePlayReverse' value='5'/>
+<enum name='kCMIODeckStatePlaySlow' value='3'/>
+<enum name='kCMIODeckStateReverseSlow' value='4'/>
+<enum name='kCMIODeckStateStop' value='0'/>
+<enum name='kCMIODeckStatusBusy' value='1'/>
+<enum name='kCMIODeckStatusLocal' value='2'/>
+<enum name='kCMIODeckStatusNoDevice' value='7'/>
+<enum name='kCMIODeckStatusNotThreaded' value='3'/>
+<enum name='kCMIODeckStatusOpcode' value='5'/>
+<enum name='kCMIODeckStatusSearchingForDevice' value='6'/>
+<enum name='kCMIODeckStatusTapeInserted' value='4'/>
+<enum name='kCMIODeviceAVCSignalMode8mmNTSC' value='6'/>
+<enum name='kCMIODeviceAVCSignalMode8mmPAL' value='134'/>
+<enum name='kCMIODeviceAVCSignalModeAudio' value='32'/>
+<enum name='kCMIODeviceAVCSignalModeDVCPro100_50' value='240'/>
+<enum name='kCMIODeviceAVCSignalModeDVCPro100_60' value='112'/>
+<enum name='kCMIODeviceAVCSignalModeDVCPro25_525_60' value='120'/>
+<enum name='kCMIODeviceAVCSignalModeDVCPro25_625_50' value='248'/>
+<enum name='kCMIODeviceAVCSignalModeDVCPro50_525_60' value='116'/>
+<enum name='kCMIODeviceAVCSignalModeDVCPro50_625_50' value='244'/>
+<enum name='kCMIODeviceAVCSignalModeDVHS' value='1'/>
+<enum name='kCMIODeviceAVCSignalModeHD1125_60' value='8'/>
+<enum name='kCMIODeviceAVCSignalModeHD1250_50' value='136'/>
+<enum name='kCMIODeviceAVCSignalModeHDV1_50' value='144'/>
+<enum name='kCMIODeviceAVCSignalModeHDV1_60' value='16'/>
+<enum name='kCMIODeviceAVCSignalModeHDV2_50' value='154'/>
+<enum name='kCMIODeviceAVCSignalModeHDV2_60' value='26'/>
+<enum name='kCMIODeviceAVCSignalModeHi8NTSC' value='14'/>
+<enum name='kCMIODeviceAVCSignalModeHi8PAL' value='142'/>
+<enum name='kCMIODeviceAVCSignalModeMPEG12Mbps_50' value='148'/>
+<enum name='kCMIODeviceAVCSignalModeMPEG12Mbps_60' value='20'/>
+<enum name='kCMIODeviceAVCSignalModeMPEG25Mbps_50' value='144'/>
+<enum name='kCMIODeviceAVCSignalModeMPEG25Mbps_60' value='16'/>
+<enum name='kCMIODeviceAVCSignalModeMPEG6Mbps_50' value='152'/>
+<enum name='kCMIODeviceAVCSignalModeMPEG6Mbps_60' value='24'/>
+<enum name='kCMIODeviceAVCSignalModeMicroMV12Mbps_50' value='164'/>
+<enum name='kCMIODeviceAVCSignalModeMicroMV12Mbps_60' value='36'/>
+<enum name='kCMIODeviceAVCSignalModeMicroMV6Mbps_50' value='168'/>
+<enum name='kCMIODeviceAVCSignalModeMicroMV6Mbps_60' value='40'/>
+<enum name='kCMIODeviceAVCSignalModeSD525_60' value='0'/>
+<enum name='kCMIODeviceAVCSignalModeSD625_50' value='128'/>
+<enum name='kCMIODeviceAVCSignalModeSDL525_60' value='4'/>
+<enum name='kCMIODeviceAVCSignalModeSDL625_50' value='132'/>
+<enum name='kCMIODeviceAVCSignalModeSVHS525_60' value='13'/>
+<enum name='kCMIODeviceAVCSignalModeSVHS625_50' value='237'/>
+<enum name='kCMIODeviceAVCSignalModeVHSMESECAM' value='213'/>
+<enum name='kCMIODeviceAVCSignalModeVHSMPAL' value='37'/>
+<enum name='kCMIODeviceAVCSignalModeVHSNPAL' value='181'/>
+<enum name='kCMIODeviceAVCSignalModeVHSNTSC' value='5'/>
+<enum name='kCMIODeviceAVCSignalModeVHSPAL' value='165'/>
+<enum name='kCMIODeviceAVCSignalModeVHSSECAM' value='197'/>
+<enum name='kCMIODeviceClassID' value='1633969526'/>
+<enum name='kCMIODevicePermissionsError' value='560492391'/>
+<enum name='kCMIODevicePropertyAVCDeviceSignalMode' value='1886221165'/>
+<enum name='kCMIODevicePropertyAVCDeviceType' value='1886216564'/>
+<enum name='kCMIODevicePropertyCanProcessAVCCommand' value='1886216547'/>
+<enum name='kCMIODevicePropertyCanProcessRS422Command' value='1916023346'/>
+<enum name='kCMIODevicePropertyClientSyncDiscontinuity' value='1886217075'/>
+<enum name='kCMIODevicePropertyDeviceCanBeDefaultDevice' value='1684434036'/>
+<enum name='kCMIODevicePropertyDeviceHasChanged' value='1684629094'/>
+<enum name='kCMIODevicePropertyDeviceIsAlive' value='1818850926'/>
+<enum name='kCMIODevicePropertyDeviceIsRunning' value='1735354734'/>
+<enum name='kCMIODevicePropertyDeviceIsRunningSomewhere' value='1735356005'/>
+<enum name='kCMIODevicePropertyDeviceMaster' value='1886219880'/>
+<enum name='kCMIODevicePropertyDeviceUID' value='1969841184'/>
+<enum name='kCMIODevicePropertyExcludeNonDALAccess' value='1769500257'/>
+<enum name='kCMIODevicePropertyHogMode' value='1869180523'/>
+<enum name='kCMIODevicePropertyLatency' value='1819569763'/>
+<enum name='kCMIODevicePropertyLinkedCoreAudioDeviceUID' value='1886156132'/>
+<enum name='kCMIODevicePropertyModelUID' value='1836411236'/>
+<enum name='kCMIODevicePropertyPlugIn' value='1886156135'/>
+<enum name='kCMIODevicePropertySMPTETimeCallback' value='1886221155'/>
+<enum name='kCMIODevicePropertyScopeInput' value='1768845428'/>
+<enum name='kCMIODevicePropertyScopeOutput' value='1869968496'/>
+<enum name='kCMIODevicePropertyScopePlayThrough' value='1886679669'/>
+<enum name='kCMIODevicePropertyStreamConfiguration' value='1936482681'/>
+<enum name='kCMIODevicePropertyStreams' value='1937009955'/>
+<enum name='kCMIODevicePropertySuspendedByUser' value='1935833461'/>
+<enum name='kCMIODevicePropertyTransportType' value='1953653102'/>
+<enum name='kCMIODevicePropertyVideoDigitizerComponents' value='1986292071'/>
+<enum name='kCMIODeviceUnknown' value='0'/>
+<enum name='kCMIODeviceUnsupportedFormatError' value='560226676'/>
+<enum name='kCMIODirectionControlClassID' value='1684632165'/>
+<enum name='kCMIOExposureControlClassID' value='2020635506'/>
+<enum name='kCMIOFeatureControlClassID' value='1718903668'/>
+<enum name='kCMIOFeatureControlPropertyAbsoluteNative' value='1717792353'/>
+<enum name='kCMIOFeatureControlPropertyAbsoluteRange' value='1717789042'/>
+<enum name='kCMIOFeatureControlPropertyAbsoluteUnitName' value='1717794158'/>
+<enum name='kCMIOFeatureControlPropertyAbsoluteValue' value='1717789046'/>
+<enum name='kCMIOFeatureControlPropertyAutomaticManual' value='1717789037'/>
+<enum name='kCMIOFeatureControlPropertyConvertAbsoluteToNative' value='1717645934'/>
+<enum name='kCMIOFeatureControlPropertyConvertNativeToAbsolute' value='1718497889'/>
+<enum name='kCMIOFeatureControlPropertyNativeRange' value='1717792370'/>
+<enum name='kCMIOFeatureControlPropertyNativeValue' value='1717792374'/>
+<enum name='kCMIOFeatureControlPropertyOnOff' value='1717792623'/>
+<enum name='kCMIOFeatureControlPropertyTune' value='1717793902'/>
+<enum name='kCMIOFocusControlClassID' value='1717794163'/>
+<enum name='kCMIOGainControlClassID' value='1734437230'/>
+<enum name='kCMIOGammaControlClassID' value='1735224673'/>
+<enum name='kCMIOHardwareBadDeviceError' value='560227702'/>
+<enum name='kCMIOHardwareBadObjectError' value='560947818'/>
+<enum name='kCMIOHardwareBadPropertySizeError' value='561211770'/>
+<enum name='kCMIOHardwareBadStreamError' value='561214578'/>
+<enum name='kCMIOHardwareIllegalOperationError' value='1852797029'/>
+<enum name='kCMIOHardwareNoError' value='0'/>
+<enum name='kCMIOHardwareNotRunningError' value='1937010544'/>
+<enum name='kCMIOHardwareNotStoppedError' value='1920298528'/>
+<enum name='kCMIOHardwarePropertyDefaultInputDevice' value='1682533920'/>
+<enum name='kCMIOHardwarePropertyDefaultOutputDevice' value='1682929012'/>
+<enum name='kCMIOHardwarePropertyDeviceForUID' value='1685416292'/>
+<enum name='kCMIOHardwarePropertyDevices' value='1684370979'/>
+<enum name='kCMIOHardwarePropertyIsInitingOrExiting' value='1768845172'/>
+<enum name='kCMIOHardwarePropertyPlugInForBundleID' value='1885954665'/>
+<enum name='kCMIOHardwarePropertyProcessIsMaster' value='1835103092'/>
+<enum name='kCMIOHardwarePropertySleepingIsAllowed' value='1936483696'/>
+<enum name='kCMIOHardwarePropertySuspendedBySystem' value='1935833459'/>
+<enum name='kCMIOHardwarePropertyUnloadingIsAllowed' value='1970170980'/>
+<enum name='kCMIOHardwarePropertyUserSessionIsActiveOrHeadless' value='1970496882'/>
+<enum name='kCMIOHardwareSuspendedBySystemError' value='1684369017'/>
+<enum name='kCMIOHardwareUnknownPropertyError' value='2003332927'/>
+<enum name='kCMIOHardwareUnspecifiedError' value='2003329396'/>
+<enum name='kCMIOHardwareUnsupportedOperationError' value='1970171760'/>
+<enum name='kCMIOHueControlClassID' value='1752524064'/>
+<enum name='kCMIOInvalidSequenceNumber' value='18446744073709551615'/>
+<enum name='kCMIOIrisControlClassID' value='1769105779'/>
+<enum name='kCMIOJackControlClassID' value='1784767339'/>
+<enum name='kCMIOObjectClassID' value='1634689642'/>
+<enum name='kCMIOObjectClassIDWildcard' value='707406378'/>
+<enum name='kCMIOObjectPropertyClass' value='1668047219'/>
+<enum name='kCMIOObjectPropertyCreator' value='1869638759'/>
+<enum name='kCMIOObjectPropertyElementCategoryName' value='1818452846'/>
+<enum name='kCMIOObjectPropertyElementMaster' value='0'/>
+<enum name='kCMIOObjectPropertyElementName' value='1818454126'/>
+<enum name='kCMIOObjectPropertyElementNumberName' value='1818455662'/>
+<enum name='kCMIOObjectPropertyElementWildcard' value='4294967295'/>
+<enum name='kCMIOObjectPropertyListenerAdded' value='1818850145'/>
+<enum name='kCMIOObjectPropertyListenerRemoved' value='1818850162'/>
+<enum name='kCMIOObjectPropertyManufacturer' value='1819107691'/>
+<enum name='kCMIOObjectPropertyName' value='1819173229'/>
+<enum name='kCMIOObjectPropertyOwnedObjects' value='1870098020'/>
+<enum name='kCMIOObjectPropertyOwner' value='1937007734'/>
+<enum name='kCMIOObjectPropertyScopeGlobal' value='1735159650'/>
+<enum name='kCMIOObjectPropertyScopeWildcard' value='707406378'/>
+<enum name='kCMIOObjectPropertySelectorWildcard' value='707406378'/>
+<enum name='kCMIOObjectSystemObject' value='1'/>
+<enum name='kCMIOObjectUnknown' value='0'/>
+<enum name='kCMIOOpticalFilterClassID' value='1869637236'/>
+<enum name='kCMIOPanControlClassID' value='1885433376'/>
+<enum name='kCMIOPlugInClassID' value='1634757735'/>
+<enum name='kCMIOPlugInPropertyBundleID' value='1885956452'/>
+<enum name='kCMIOPowerLineFrequencyControlClassID' value='1886873201'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_BufferOverrun' value='128'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_ClientSyncDiscontinuity' value='1024'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_DataFormatChanged' value='8192'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_DataWasDropped' value='64'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_DataWasFlushed' value='32'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_DiscontinuityInDTS' value='256'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_DurationWasExtended' value='32768'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_MalformedData' value='16'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_NoDataMarker' value='4096'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_PacketError' value='4'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_RelatedToDiscontinuity' value='512'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_SleepWakeCycle' value='65536'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_StreamDiscontinuity' value='8'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_TimecodeDiscontinuity' value='2'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_TimingReferenceJumped' value='16384'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_TrickPlay' value='2048'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_UnknownDiscontinuity' value='1'/>
+<enum name='kCMIOSampleBufferNoDataEvent_DeviceDidNotSync' value='2'/>
+<enum name='kCMIOSampleBufferNoDataEvent_DeviceInWrongMode' value='3'/>
+<enum name='kCMIOSampleBufferNoDataEvent_NoMedia' value='1'/>
+<enum name='kCMIOSampleBufferNoDataEvent_ProcessingError' value='4'/>
+<enum name='kCMIOSampleBufferNoDataEvent_SleepWakeCycle' value='5'/>
+<enum name='kCMIOSampleBufferNoDataEvent_Unknown' value='0'/>
+<enum name='kCMIOSampleBufferNoDiscontinuities' value='0'/>
+<enum name='kCMIOSaturationControlClassID' value='1935766645'/>
+<enum name='kCMIOSelectorControlClassID' value='1936483188'/>
+<enum name='kCMIOSelectorControlPropertyAvailableItems' value='1935892841'/>
+<enum name='kCMIOSelectorControlPropertyCurrentItem' value='1935893353'/>
+<enum name='kCMIOSelectorControlPropertyItemName' value='1935894894'/>
+<enum name='kCMIOSharpnessControlClassID' value='1936224880'/>
+<enum name='kCMIOShutterControlClassID' value='1936225394'/>
+<enum name='kCMIOStreamClassID' value='1634956402'/>
+<enum name='kCMIOStreamPropertyCanProcessDeckCommand' value='1885627236'/>
+<enum name='kCMIOStreamPropertyClock' value='1886217068'/>
+<enum name='kCMIOStreamPropertyDeck' value='1684366187'/>
+<enum name='kCMIOStreamPropertyDeckCueing' value='1668638051'/>
+<enum name='kCMIOStreamPropertyDeckDropness' value='1685221232'/>
+<enum name='kCMIOStreamPropertyDeckFrameNumber' value='1952673636'/>
+<enum name='kCMIOStreamPropertyDeckLocal' value='1819239276'/>
+<enum name='kCMIOStreamPropertyDeckThreaded' value='1953002084'/>
+<enum name='kCMIOStreamPropertyDeviceSyncTimeoutInMSec' value='1886219826'/>
+<enum name='kCMIOStreamPropertyDirection' value='1935960434'/>
+<enum name='kCMIOStreamPropertyEndOfData' value='1886217572'/>
+<enum name='kCMIOStreamPropertyFirstOutputPresentationTimeStamp' value='1886351476'/>
+<enum name='kCMIOStreamPropertyFormatDescription' value='1885762592'/>
+<enum name='kCMIOStreamPropertyFormatDescriptions' value='1885762657'/>
+<enum name='kCMIOStreamPropertyFrameRate' value='1852207732'/>
+<enum name='kCMIOStreamPropertyFrameRates' value='1852207651'/>
+<enum name='kCMIOStreamPropertyLatency' value='1819569763'/>
+<enum name='kCMIOStreamPropertyNoDataEventCount' value='1886219827'/>
+<enum name='kCMIOStreamPropertyNoDataTimeoutInMSec' value='1886219825'/>
+<enum name='kCMIOStreamPropertyOutputBufferQueueSize' value='1886220145'/>
+<enum name='kCMIOStreamPropertyOutputBufferRepeatCount' value='1886220146'/>
+<enum name='kCMIOStreamPropertyOutputBufferUnderrunCount' value='1886220149'/>
+<enum name='kCMIOStreamPropertyOutputBuffersRequiredForStartup' value='1886220147'/>
+<enum name='kCMIOStreamPropertyStartingChannel' value='1935894638'/>
+<enum name='kCMIOStreamPropertyStillImage' value='1937010023'/>
+<enum name='kCMIOStreamPropertyStillImageFormatDescriptions' value='1937008244'/>
+<enum name='kCMIOStreamPropertyTerminalType' value='1952805485'/>
+<enum name='kCMIOStreamUnknown' value='0'/>
+<enum name='kCMIOSystemObjectClassID' value='1634957683'/>
+<enum name='kCMIOTemperatureControlClassID' value='1952804208'/>
+<enum name='kCMIOTiltControlClassID' value='1953066100'/>
+<enum name='kCMIOWhiteBalanceUControlClassID' value='2003329653'/>
+<enum name='kCMIOWhiteBalanceVControlClassID' value='2003329654'/>
+<enum name='kCMIOWhiteLevelControlClassID' value='2003332214'/>
+<enum name='kCMIOZoomControlClassID' value='2054123373'/>
+<function name='CMIODeviceProcessAVCCommand'>
+<arg type64='I' type='L'/>
+<arg type='^{CMIODeviceAVCCommand=*I*II}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIODeviceProcessRS422Command'>
+<arg type64='I' type='L'/>
+<arg type='^{CMIODeviceRS422Command=*I*II}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIODeviceStartStream'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIODeviceStopStream'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOObjectAddPropertyListener'>
+<arg type64='I' type='L'/>
+<arg type='^{CMIOObjectPropertyAddress=III}'/>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^{CMIOObjectPropertyAddress=III}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOObjectCreate'>
+<arg type='^^{CMIOHardwarePlugInInterface}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOObjectGetPropertyData'>
+<arg type64='I' type='L'/>
+<arg type='^{CMIOObjectPropertyAddress=III}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOObjectGetPropertyDataSize'>
+<arg type64='I' type='L'/>
+<arg type='^{CMIOObjectPropertyAddress=III}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOObjectHasProperty'>
+<arg type64='I' type='L'/>
+<arg type='^{CMIOObjectPropertyAddress=III}'/>
+<retval type='B'/>
+</function>
+<function name='CMIOObjectIsPropertySettable'>
+<arg type64='I' type='L'/>
+<arg type='^{CMIOObjectPropertyAddress=III}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOObjectPropertiesChanged'>
+<arg type='^^{CMIOHardwarePlugInInterface}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^{CMIOObjectPropertyAddress=III}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOObjectRemovePropertyListener'>
+<arg type64='I' type='L'/>
+<arg type='^{CMIOObjectPropertyAddress=III}'/>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^{CMIOObjectPropertyAddress=III}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOObjectSetPropertyData'>
+<arg type64='I' type='L'/>
+<arg type='^{CMIOObjectPropertyAddress=III}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOObjectShow'>
+<arg type64='I' type='L'/>
+</function>
+<function name='CMIOObjectsPublishedAndDied'>
+<arg type='^^{CMIOHardwarePlugInInterface}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOSampleBufferCopyNonRequiredAttachments'>
+<arg type='^{opaqueCMSampleBuffer=}'/>
+<arg type='^{opaqueCMSampleBuffer=}'/>
+<arg type='I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOSampleBufferCopySampleAttachments'>
+<arg type='^{opaqueCMSampleBuffer=}'/>
+<arg type='^{opaqueCMSampleBuffer=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOSampleBufferCreate'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{OpaqueCMBlockBuffer=}'/>
+<arg type='^{opaqueCMFormatDescription=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^{_CMSampleTimingInfo={?=qiIq}{?=qiIq}{?=qiIq}}'/>
+<arg type64='I' type='L'/>
+<arg type64='^Q' type='^I'/>
+<arg type='Q'/>
+<arg type64='I' type='L'/>
+<arg type='^^{opaqueCMSampleBuffer}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOSampleBufferCreateForImageBuffer'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__CVBuffer=}'/>
+<arg type='^{opaqueCMFormatDescription=}'/>
+<arg type='^{_CMSampleTimingInfo={?=qiIq}{?=qiIq}{?=qiIq}}'/>
+<arg type='Q'/>
+<arg type64='I' type='L'/>
+<arg type='^^{opaqueCMSampleBuffer}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOSampleBufferCreateNoDataMarker'>
+<arg type='^{__CFAllocator=}'/>
+<arg type64='I' type='L'/>
+<arg type='^{opaqueCMFormatDescription=}'/>
+<arg type='Q'/>
+<arg type64='I' type='L'/>
+<arg type='^^{opaqueCMSampleBuffer}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOSampleBufferGetDiscontinuityFlags'>
+<arg type='^{opaqueCMSampleBuffer=}'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='CMIOSampleBufferGetSequenceNumber'>
+<arg type='^{opaqueCMSampleBuffer=}'/>
+<retval type='Q'/>
+</function>
+<function name='CMIOSampleBufferSetDiscontinuityFlags'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{opaqueCMSampleBuffer=}'/>
+<arg type64='I' type='L'/>
+</function>
+<function name='CMIOSampleBufferSetSequenceNumber'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{opaqueCMSampleBuffer=}'/>
+<arg type='Q'/>
+</function>
+<function name='CMIOStreamClockConvertHostTimeToDeviceTime'>
+<arg type='Q'/>
+<arg type='@'/>
+<retval type='{_CMTime=qiIq}'/>
+</function>
+<function name='CMIOStreamClockCreate'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^v'/>
+<arg type='{_CMTime=qiIq}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOStreamClockInvalidate'>
+<arg type='@'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOStreamClockPostTimingEvent'>
+<arg type='{_CMTime=qiIq}'/>
+<arg type='Q'/>
+<arg type='B'/>
+<arg type='@'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOStreamCopyBufferQueue'>
+<arg type64='I' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+<arg type='^^{opaqueCMSimpleQueue}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOStreamDeckCueTo'>
+<arg type64='I' type='L'/>
+<arg type='Q'/>
+<arg type='B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOStreamDeckJog'>
+<arg type64='I' type='L'/>
+<arg type64='i' type='l'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOStreamDeckPlay'>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CMIOStreamDeckStop'>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+</signatures>

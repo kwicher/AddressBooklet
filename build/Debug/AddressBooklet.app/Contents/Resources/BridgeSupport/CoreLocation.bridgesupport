@@ -1,0 +1,102 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<struct name='CLLocationCoordinate2D' type='{_CLLocationCoordinate2D=&quot;latitude&quot;d&quot;longitude&quot;d}'/>
+<constant name='kCLDistanceFilterNone' type='d'/>
+<constant name='kCLErrorDomain' type='@'/>
+<constant name='kCLHeadingFilterNone' type='d'/>
+<constant name='kCLLocationAccuracyBest' type='d'/>
+<constant name='kCLLocationAccuracyBestForNavigation' type='d'/>
+<constant name='kCLLocationAccuracyHundredMeters' type='d'/>
+<constant name='kCLLocationAccuracyKilometer' type='d'/>
+<constant name='kCLLocationAccuracyNearestTenMeters' type='d'/>
+<constant name='kCLLocationAccuracyThreeKilometers' type='d'/>
+<constant name='kCLLocationCoordinate2DInvalid' type='{_CLLocationCoordinate2D=dd}'/>
+<enum name='CLDeviceOrientationFaceDown' value='6'/>
+<enum name='CLDeviceOrientationFaceUp' value='5'/>
+<enum name='CLDeviceOrientationLandscapeLeft' value='3'/>
+<enum name='CLDeviceOrientationLandscapeRight' value='4'/>
+<enum name='CLDeviceOrientationPortrait' value='1'/>
+<enum name='CLDeviceOrientationPortraitUpsideDown' value='2'/>
+<enum name='CLDeviceOrientationUnknown' value='0'/>
+<enum name='kCLAuthorizationStatusAuthorized' value='3'/>
+<enum name='kCLAuthorizationStatusDenied' value='2'/>
+<enum name='kCLAuthorizationStatusNotDetermined' value='0'/>
+<enum name='kCLAuthorizationStatusRestricted' value='1'/>
+<enum name='kCLErrorDenied' value='1'/>
+<enum name='kCLErrorGeocodeCanceled' value='8'/>
+<enum name='kCLErrorGeocodeFoundNoResult' value='7'/>
+<enum name='kCLErrorHeadingFailure' value='3'/>
+<enum name='kCLErrorLocationUnknown' value='0'/>
+<enum name='kCLErrorNetwork' value='2'/>
+<enum name='kCLErrorRegionMonitoringDenied' value='4'/>
+<enum name='kCLErrorRegionMonitoringFailure' value='5'/>
+<enum name='kCLErrorRegionMonitoringSetupDelayed' value='6'/>
+<function name='CLLocationCoordinate2DIsValid'>
+<arg type='{_CLLocationCoordinate2D=dd}'/>
+<retval type='B'/>
+</function>
+<function name='CLLocationCoordinate2DMake'>
+<arg type='d'/>
+<arg type='d'/>
+<retval type='{_CLLocationCoordinate2D=dd}'/>
+</function>
+<class name='CLLocation'>
+<method selector='coordinate'>
+<retval type='{_CLLocationCoordinate2D=dd}'/>
+</method>
+<method selector='initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:speed:timestamp:'>
+<arg type='{_CLLocationCoordinate2D=dd}' index='0'/>
+</method>
+<method selector='initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:timestamp:'>
+<arg type='{_CLLocationCoordinate2D=dd}' index='0'/>
+</method>
+</class>
+<class name='CLLocationManager'>
+<method selector='headingAvailable' class_method='true'>
+<retval type='B'/>
+</method>
+<method selector='headingAvailable'>
+<retval type='B'/>
+</method>
+<method selector='locationServicesEnabled' class_method='true'>
+<retval type='B'/>
+</method>
+<method selector='locationServicesEnabled'>
+<retval type='B'/>
+</method>
+<method selector='regionMonitoringAvailable' class_method='true'>
+<retval type='B'/>
+</method>
+<method selector='regionMonitoringEnabled' class_method='true'>
+<retval type='B'/>
+</method>
+<method selector='significantLocationChangeMonitoringAvailable' class_method='true'>
+<retval type='B'/>
+</method>
+</class>
+<class name='CLRegion'>
+<method selector='center'>
+<retval type='{_CLLocationCoordinate2D=dd}'/>
+</method>
+<method selector='containsCoordinate:'>
+<arg type='{_CLLocationCoordinate2D=dd}' index='0'/>
+<retval type='B'/>
+</method>
+<method selector='initCircularRegionWithCenter:radius:identifier:'>
+<arg type='{_CLLocationCoordinate2D=dd}' index='0'/>
+</method>
+</class>
+<informal_protocol name='CLLocationManagerDelegate'>
+<method type64='v28@0:8@16i24' type='v16@0:4@8i12' selector='locationManager:didChangeAuthorizationStatus:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='locationManager:didEnterRegion:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='locationManager:didExitRegion:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='locationManager:didFailWithError:'/>
+<method type64='v40@0:8@16@24@32' type='v20@0:4@8@12@16' selector='locationManager:didUpdateToLocation:fromLocation:'/>
+<method type64='v40@0:8@16@24@32' type='v20@0:4@8@12@16' selector='locationManager:monitoringDidFailForRegion:withError:'/>
+</informal_protocol>
+</signatures>

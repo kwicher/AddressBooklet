@@ -1,0 +1,152 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IMServicePlugIn.framework/Versions/A/Frameworks/IMServicePlugInSupport.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<opaque name='IMServicePlugInFileTransferInternal' type='^{_IMServicePlugInFileTransferInternal=}'/>
+<opaque name='IMServicePlugInFileTransferSessionInternal' type='^{_IMServicePlugInFileTransferSessionInternal=}'/>
+<opaque name='IMServicePlugInMessageInternal' type='^{_IMServicePlugInMessageInternal=}'/>
+<constant name='IMAccountSettingLoginHandle' type='@'/>
+<constant name='IMAccountSettingPassword' type='@'/>
+<constant name='IMAccountSettingServerHost' type='@'/>
+<constant name='IMAccountSettingServerPort' type='@'/>
+<constant name='IMAccountSettingUsesSSL' type='@'/>
+<constant name='IMAttributeBackgroundColor' type='@'/>
+<constant name='IMAttributeBaseWritingDirection' type='@'/>
+<constant name='IMAttributeBold' type='@'/>
+<constant name='IMAttributeFontFamily' type='@'/>
+<constant name='IMAttributeFontSize' type='@'/>
+<constant name='IMAttributeForegroundColor' type='@'/>
+<constant name='IMAttributeItalic' type='@'/>
+<constant name='IMAttributeLink' type='@'/>
+<constant name='IMAttributeMessageBackgroundColor' type='@'/>
+<constant name='IMAttributePreformatted' type='@'/>
+<constant name='IMAttributeStrikethrough' type='@'/>
+<constant name='IMAttributeUnderline' type='@'/>
+<constant name='IMGroupListDefaultGroup' type='@'/>
+<constant name='IMGroupListHandlesKey' type='@'/>
+<constant name='IMGroupListNameKey' type='@'/>
+<constant name='IMGroupListPermissionsKey' type='@'/>
+<constant name='IMHandleCapabilityChatRoom' type='@'/>
+<constant name='IMHandleCapabilityFileTransfer' type='@'/>
+<constant name='IMHandleCapabilityHandlePicture' type='@'/>
+<constant name='IMHandleCapabilityMessaging' type='@'/>
+<constant name='IMHandleCapabilityOfflineMessaging' type='@'/>
+<constant name='IMHandlePropertyAlias' type='@'/>
+<constant name='IMHandlePropertyAuthorizationStatus' type='@'/>
+<constant name='IMHandlePropertyAvailability' type='@'/>
+<constant name='IMHandlePropertyCapabilities' type='@'/>
+<constant name='IMHandlePropertyEmailAddress' type='@'/>
+<constant name='IMHandlePropertyFirstName' type='@'/>
+<constant name='IMHandlePropertyIdleDate' type='@'/>
+<constant name='IMHandlePropertyLastName' type='@'/>
+<constant name='IMHandlePropertyPictureData' type='@'/>
+<constant name='IMHandlePropertyPictureIdentifier' type='@'/>
+<constant name='IMHandlePropertyStatusMessage' type='@'/>
+<constant name='IMSessionPropertyAvailability' type='@'/>
+<constant name='IMSessionPropertyIdleDate' type='@'/>
+<constant name='IMSessionPropertyIsInvisible' type='@'/>
+<constant name='IMSessionPropertyPictureData' type='@'/>
+<constant name='IMSessionPropertyStatusMessage' type='@'/>
+<enum name='IMGroupListCanAddNewMembers' value='4'/>
+<enum name='IMGroupListCanRemoveMembers' value='8'/>
+<enum name='IMGroupListCanRenameGroup' value='2'/>
+<enum name='IMGroupListCanReorderGroup' value='1'/>
+<enum name='IMGroupListCanReorderMembers' value='16'/>
+<enum name='IMHandleAuthorizationStatusAccepted' value='0'/>
+<enum name='IMHandleAuthorizationStatusDeclined' value='2'/>
+<enum name='IMHandleAuthorizationStatusPending' value='1'/>
+<enum name='IMHandleAvailabilityAvailable' value='1'/>
+<enum name='IMHandleAvailabilityAway' value='0'/>
+<enum name='IMHandleAvailabilityOffline' value='-1'/>
+<enum name='IMHandleAvailabilityUnknown' value='-2'/>
+<enum name='IMSessionAvailabilityAvailable' value='1'/>
+<enum name='IMSessionAvailabilityAway' value='0'/>
+<class name='NSObject'>
+<method selector='plugInDidLogOutWithError:reconnect:'>
+<arg type='B' index='1'/>
+</method>
+</class>
+<informal_protocol name='IMServiceApplication'>
+<method type64='Vv16@0:8' type='Vv8@0:4' selector='plugInDidFailToAuthenticate'/>
+<method type64='Vv16@0:8' type='Vv8@0:4' selector='plugInDidLogIn'/>
+<method type64='Vv28@0:8@16B24' type='Vv16@0:4@8B12' selector='plugInDidLogOutWithError:reconnect:'/>
+<method type64='Vv32@0:8@16@24' type='Vv16@0:4@8@12' selector='plugInDidUpdateProperties:ofHandle:'/>
+</informal_protocol>
+<informal_protocol name='IMServiceApplicationChatRoomSupport'>
+<method type64='Vv32@0:8@16@24' type='Vv16@0:4@8@12' selector='handles:didJoinChatRoom:'/>
+<method type64='Vv32@0:8@16@24' type='Vv16@0:4@8@12' selector='handles:didLeaveChatRoom:'/>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='plugInDidJoinChatRoom:'/>
+<method type64='Vv32@0:8@16@24' type='Vv16@0:4@8@12' selector='plugInDidLeaveChatRoom:error:'/>
+<method type64='Vv40@0:8@16@24@32' type='Vv20@0:4@8@12@16' selector='plugInDidReceiveInvitation:forChatRoom:fromHandle:'/>
+<method type64='Vv40@0:8@16@24@32' type='Vv20@0:4@8@12@16' selector='plugInDidReceiveMessage:forChatRoom:fromHandle:'/>
+<method type64='Vv32@0:8@16@24' type='Vv16@0:4@8@12' selector='plugInDidReceiveNotice:forChatRoom:'/>
+<method type64='Vv40@0:8@16@24@32' type='Vv20@0:4@8@12@16' selector='plugInDidSendMessage:toChatRoom:error:'/>
+</informal_protocol>
+<informal_protocol name='IMServiceApplicationFileTransferSessionSupport'>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='plugInDidAcceptOutgoingFileTransferSession:'/>
+<method type64='Vv32@0:8@16@24' type='Vv16@0:4@8@12' selector='plugInDidFinishFileTransferSession:error:'/>
+<method type64='Vv32@0:8@16@24' type='Vv16@0:4@8@12' selector='plugInDidReceiveIncomingFileTransferSession:fromHandle:'/>
+</informal_protocol>
+<informal_protocol name='IMServiceApplicationGroupListAuthorizationSupport'>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='plugInDidReceiveAuthorizationRequestFromHandle:'/>
+</informal_protocol>
+<informal_protocol name='IMServiceApplicationGroupListSupport'>
+<method type64='Vv32@0:8@16@24' type='Vv16@0:4@8@12' selector='plugInDidUpdateGroupList:error:'/>
+</informal_protocol>
+<informal_protocol name='IMServiceApplicationInstantMessagingSupport'>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='handleDidStartTyping:'/>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='handleDidStopTyping:'/>
+<method type64='Vv32@0:8@16@24' type='Vv16@0:4@8@12' selector='plugInDidReceiveMessage:fromHandle:'/>
+<method type64='Vv40@0:8@16@24@32' type='Vv20@0:4@8@12@16' selector='plugInDidSendMessage:toHandle:error:'/>
+</informal_protocol>
+<informal_protocol name='IMServicePlugIn'>
+<method type64='@24@0:8@16' type='@12@0:4@8' selector='initWithServiceApplication:'/>
+<method type64='Vv16@0:8' type='Vv8@0:4' selector='login'/>
+<method type64='Vv16@0:8' type='Vv8@0:4' selector='logout'/>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='updateAccountSettings:'/>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInChatRoomSupport'>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='declineChatRoomInvitation:'/>
+<method type64='Vv40@0:8@16@24@32' type='Vv20@0:4@8@12@16' selector='inviteHandles:toChatRoom:withMessage:'/>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='joinChatRoom:'/>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='leaveChatRoom:'/>
+<method type64='Vv32@0:8@16@24' type='Vv16@0:4@8@12' selector='sendMessage:toChatRoom:'/>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInFileTransferSessionSupport'>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='acceptIncomingFileTransferSession:'/>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='cancelFileTransferSession:'/>
+<method type64='Vv32@0:8@16@24' type='Vv16@0:4@8@12' selector='startOutgoingFileTransferSession:toHandle:'/>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInGroupListAuthorizationSupport'>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='acceptAuthorizationRequestFromHandle:'/>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='declineAuthorizationRequestFromHandle:'/>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='sendAuthorizationRequestToHandle:'/>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInGroupListEditingSupport'>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='addGroups:'/>
+<method type64='Vv32@0:8@16@24' type='Vv16@0:4@8@12' selector='addHandles:toGroup:'/>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='removeGroups:'/>
+<method type64='Vv32@0:8@16@24' type='Vv16@0:4@8@12' selector='removeHandles:fromGroup:'/>
+<method type64='Vv32@0:8@16@24' type='Vv16@0:4@8@12' selector='renameGroup:toGroup:'/>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInGroupListHandlePictureSupport'>
+<method type64='Vv32@0:8@16@24' type='Vv16@0:4@8@12' selector='requestPictureForHandle:withIdentifier:'/>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInGroupListOrderingSupport'>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='reorderGroups:'/>
+<method type64='Vv32@0:8@16@24' type='Vv16@0:4@8@12' selector='reorderHandles:inGroup:'/>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInGroupListSupport'>
+<method type64='Vv16@0:8' type='Vv8@0:4' selector='requestGroupList'/>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInInstantMessagingSupport'>
+<method type64='Vv32@0:8@16@24' type='Vv16@0:4@8@12' selector='sendMessage:toHandle:'/>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='userDidStartTypingToHandle:'/>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='userDidStopTypingToHandle:'/>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInPresenceSupport'>
+<method type64='Vv24@0:8@16' type='Vv12@0:4@8' selector='updateSessionProperties:'/>
+</informal_protocol>
+</signatures>

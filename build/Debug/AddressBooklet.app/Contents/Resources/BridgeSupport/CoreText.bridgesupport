@@ -1,0 +1,1134 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework'/>
+<struct name='CTParagraphStyleSetting' type64='{CTParagraphStyleSetting=&quot;spec&quot;I&quot;valueSize&quot;Q&quot;value&quot;^v}' type='{CTParagraphStyleSetting=&quot;spec&quot;I&quot;valueSize&quot;I&quot;value&quot;^v}'/>
+<cftype name='CTFontCollectionRef' gettypeid_func='CTFontCollectionGetTypeID' type='^{__CTFontCollection=}' tollfree='NSCTFontCollection'/>
+<cftype name='CTFontDescriptorRef' gettypeid_func='CTFontDescriptorGetTypeID' type='^{__CTFontDescriptor=}' tollfree='NSCTFontDescriptor'/>
+<cftype name='CTFontRef' gettypeid_func='CTFontGetTypeID' type='^{__CTFont=}' tollfree='NSCTFont'/>
+<cftype name='CTFrameRef' gettypeid_func='CTFrameGetTypeID' type='^{__CTFrame=}' tollfree='__NSCFType'/>
+<cftype name='CTFramesetterRef' gettypeid_func='CTFramesetterGetTypeID' type='^{__CTFramesetter=}' tollfree='__NSCFType'/>
+<cftype name='CTGlyphInfoRef' gettypeid_func='CTGlyphInfoGetTypeID' type='^{__CTGlyphInfo=}' tollfree='NSCTGlyphInfo'/>
+<cftype name='CTLineRef' gettypeid_func='CTLineGetTypeID' type='^{__CTLine=}' tollfree='__NSCFType'/>
+<cftype name='CTMutableFontCollectionRef' gettypeid_func='CTFontCollectionGetTypeID' type='^{__CTFontCollection=}' tollfree='NSCTFontCollection'/>
+<cftype name='CTParagraphStyleRef' gettypeid_func='CTParagraphStyleGetTypeID' type='^{__CTParagraphStyle=}' tollfree='__NSCFType'/>
+<cftype name='CTRunRef' gettypeid_func='CTRunGetTypeID' type='^{__CTRun=}' tollfree='__NSCFType'/>
+<cftype name='CTTextTabRef' gettypeid_func='CTTextTabGetTypeID' type='^{__CTTextTab=}' tollfree='__NSCFType'/>
+<cftype name='CTTypesetterRef' gettypeid_func='CTTypesetterGetTypeID' type='^{__CTTypesetter=}' tollfree='__NSCFType'/>
+<constant name='kCTCharacterShapeAttributeName' type='^{__CFString=}'/>
+<constant name='kCTFontAttributeName' type='^{__CFString=}'/>
+<constant name='kCTFontBaselineAdjustAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontCascadeListAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontCharacterSetAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontCollectionDisallowAutoActivationOption' type='^{__CFString=}'/>
+<constant name='kCTFontCollectionIncludeDisabledFontsOption' type='^{__CFString=}'/>
+<constant name='kCTFontCollectionRemoveDuplicatesOption' type='^{__CFString=}'/>
+<constant name='kCTFontCopyrightNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontDescriptionNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontDesignerNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontDesignerURLNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontDisplayNameAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontEnabledAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontFamilyNameAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontFamilyNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontFeatureSelectorDefaultKey' type='^{__CFString=}'/>
+<constant name='kCTFontFeatureSelectorIdentifierKey' type='^{__CFString=}'/>
+<constant name='kCTFontFeatureSelectorNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontFeatureSelectorSettingKey' type='^{__CFString=}'/>
+<constant name='kCTFontFeatureSettingsAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontFeatureTypeExclusiveKey' type='^{__CFString=}'/>
+<constant name='kCTFontFeatureTypeIdentifierKey' type='^{__CFString=}'/>
+<constant name='kCTFontFeatureTypeNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontFeatureTypeSelectorsKey' type='^{__CFString=}'/>
+<constant name='kCTFontFeaturesAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontFixedAdvanceAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontFormatAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontFullNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontLanguagesAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontLicenseNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontLicenseURLNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontMacintoshEncodingsAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontManagerBundleIdentifier' type='^{__CFString=}'/>
+<constant name='kCTFontManagerErrorDomain' type='^{__CFString=}'/>
+<constant name='kCTFontManagerErrorFontURLsKey' type='^{__CFString=}'/>
+<constant name='kCTFontManagerRegisteredFontsChangedNotification' type='^{__CFString=}'/>
+<constant name='kCTFontManufacturerNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontMatrixAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontNameAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontOrientationAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontPostScriptCIDNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontPostScriptNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontPriorityAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontRegistrationScopeAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontSampleTextNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontSizeAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontSlantTrait' type='^{__CFString=}'/>
+<constant name='kCTFontStyleNameAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontStyleNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontSubFamilyNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontSymbolicTrait' type='^{__CFString=}'/>
+<constant name='kCTFontTrademarkNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontTraitsAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontURLAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontUniqueNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontVariationAttribute' type='^{__CFString=}'/>
+<constant name='kCTFontVariationAxisDefaultValueKey' type='^{__CFString=}'/>
+<constant name='kCTFontVariationAxisIdentifierKey' type='^{__CFString=}'/>
+<constant name='kCTFontVariationAxisMaximumValueKey' type='^{__CFString=}'/>
+<constant name='kCTFontVariationAxisMinimumValueKey' type='^{__CFString=}'/>
+<constant name='kCTFontVariationAxisNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontVendorURLNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontVersionNameKey' type='^{__CFString=}'/>
+<constant name='kCTFontWeightTrait' type='^{__CFString=}'/>
+<constant name='kCTFontWidthTrait' type='^{__CFString=}'/>
+<constant name='kCTForegroundColorAttributeName' type='^{__CFString=}'/>
+<constant name='kCTForegroundColorFromContextAttributeName' type='^{__CFString=}'/>
+<constant name='kCTFrameClippingPathsAttributeName' type='^{__CFString=}'/>
+<constant name='kCTFramePathClippingPathAttributeName' type='^{__CFString=}'/>
+<constant name='kCTFramePathFillRuleAttributeName' type='^{__CFString=}'/>
+<constant name='kCTFramePathWidthAttributeName' type='^{__CFString=}'/>
+<constant name='kCTFrameProgressionAttributeName' type='^{__CFString=}'/>
+<constant name='kCTGlyphInfoAttributeName' type='^{__CFString=}'/>
+<constant name='kCTKernAttributeName' type='^{__CFString=}'/>
+<constant name='kCTLigatureAttributeName' type='^{__CFString=}'/>
+<constant name='kCTParagraphStyleAttributeName' type='^{__CFString=}'/>
+<constant name='kCTRunDelegateAttributeName' type='^{__CFString=}'/>
+<constant name='kCTStrokeColorAttributeName' type='^{__CFString=}'/>
+<constant name='kCTStrokeWidthAttributeName' type='^{__CFString=}'/>
+<constant name='kCTSuperscriptAttributeName' type='^{__CFString=}'/>
+<constant name='kCTTabColumnTerminatorsAttributeName' type='^{__CFString=}'/>
+<constant name='kCTTypesetterOptionDisableBidiProcessing' type='^{__CFString=}'/>
+<constant name='kCTTypesetterOptionForcedEmbeddingLevel' type='^{__CFString=}'/>
+<constant name='kCTUnderlineColorAttributeName' type='^{__CFString=}'/>
+<constant name='kCTUnderlineStyleAttributeName' type='^{__CFString=}'/>
+<constant name='kCTVerticalFormsAttributeName' type='^{__CFString=}'/>
+<enum name='kCTAdobeCNS1CharacterCollection' value='1'/>
+<enum name='kCTAdobeGB1CharacterCollection' value='2'/>
+<enum name='kCTAdobeJapan1CharacterCollection' value='3'/>
+<enum name='kCTAdobeJapan2CharacterCollection' value='4'/>
+<enum name='kCTAdobeKorea1CharacterCollection' value='5'/>
+<enum name='kCTCenterTextAlignment' value='2'/>
+<enum name='kCTFontAlertHeaderFontType' value='18'/>
+<enum name='kCTFontApplicationFontType' value='9'/>
+<enum name='kCTFontBoldTrait' value='2'/>
+<enum name='kCTFontClarendonSerifsClass' value='1073741824'/>
+<enum name='kCTFontClassMaskShift' value='28'/>
+<enum name='kCTFontClassMaskTrait' value='-268435456'/>
+<enum name='kCTFontCollectionCopyDefaultOptions' value='0'/>
+<enum name='kCTFontCollectionCopyStandardSort' value='2'/>
+<enum name='kCTFontCollectionCopyUnique' value='1'/>
+<enum name='kCTFontColorGlyphsTrait' value='8192'/>
+<enum name='kCTFontCondensedTrait' value='64'/>
+<enum name='kCTFontControlContentFontType' value='26'/>
+<enum name='kCTFontDefaultOrientation' value='0'/>
+<enum name='kCTFontEmphasizedSystemDetailFontType' value='20'/>
+<enum name='kCTFontEmphasizedSystemFontType' value='3'/>
+<enum name='kCTFontExpandedTrait' value='32'/>
+<enum name='kCTFontFormatBitmap' value='5'/>
+<enum name='kCTFontFormatOpenTypePostScript' value='1'/>
+<enum name='kCTFontFormatOpenTypeTrueType' value='2'/>
+<enum name='kCTFontFormatPostScript' value='4'/>
+<enum name='kCTFontFormatTrueType' value='3'/>
+<enum name='kCTFontFormatUnrecognized' value='0'/>
+<enum name='kCTFontFreeformSerifsClass' value='1879048192'/>
+<enum name='kCTFontHorizontalOrientation' value='1'/>
+<enum name='kCTFontItalicTrait' value='1'/>
+<enum name='kCTFontLabelFontType' value='10'/>
+<enum name='kCTFontManagerAutoActivationDefault' value='0'/>
+<enum name='kCTFontManagerAutoActivationDisabled' value='1'/>
+<enum name='kCTFontManagerAutoActivationEnabled' value='2'/>
+<enum name='kCTFontManagerAutoActivationPromptUser' value='3'/>
+<enum name='kCTFontManagerErrorAlreadyRegistered' value='105'/>
+<enum name='kCTFontManagerErrorFileNotFound' value='101'/>
+<enum name='kCTFontManagerErrorInUse' value='202'/>
+<enum name='kCTFontManagerErrorInsufficientPermissions' value='102'/>
+<enum name='kCTFontManagerErrorInvalidFontData' value='104'/>
+<enum name='kCTFontManagerErrorNotRegistered' value='201'/>
+<enum name='kCTFontManagerErrorSystemRequired' value='202'/>
+<enum name='kCTFontManagerErrorUnrecognizedFormat' value='103'/>
+<enum name='kCTFontManagerScopeNone' value='0'/>
+<enum name='kCTFontManagerScopeProcess' value='1'/>
+<enum name='kCTFontManagerScopeSession' value='3'/>
+<enum name='kCTFontManagerScopeUser' value='2'/>
+<enum name='kCTFontMenuItemCmdKeyFontType' value='14'/>
+<enum name='kCTFontMenuItemFontType' value='12'/>
+<enum name='kCTFontMenuItemMarkFontType' value='13'/>
+<enum name='kCTFontMenuTitleFontType' value='11'/>
+<enum name='kCTFontMessageFontType' value='23'/>
+<enum name='kCTFontMiniEmphasizedSystemFontType' value='7'/>
+<enum name='kCTFontMiniSystemFontType' value='6'/>
+<enum name='kCTFontModernSerifsClass' value='805306368'/>
+<enum name='kCTFontMonoSpaceTrait' value='1024'/>
+<enum name='kCTFontNoFontType' value='4294967295'/>
+<enum name='kCTFontOldStyleSerifsClass' value='268435456'/>
+<enum name='kCTFontOptionsDefault' value='0'/>
+<enum name='kCTFontOptionsPreferSystemFont' value='4'/>
+<enum name='kCTFontOptionsPreventAutoActivation' value='1'/>
+<enum name='kCTFontOrnamentalsClass' value='-1879048192'/>
+<enum name='kCTFontPaletteFontType' value='24'/>
+<enum name='kCTFontPriorityComputer' value='30000'/>
+<enum name='kCTFontPriorityDynamic' value='50000'/>
+<enum name='kCTFontPriorityNetwork' value='20000'/>
+<enum name='kCTFontPriorityProcess' value='60000'/>
+<enum name='kCTFontPrioritySystem' value='10000'/>
+<enum name='kCTFontPriorityUser' value='40000'/>
+<enum name='kCTFontPushButtonFontType' value='16'/>
+<enum name='kCTFontSansSerifClass' value='-2147483648'/>
+<enum name='kCTFontScriptsClass' value='-1610612736'/>
+<enum name='kCTFontSlabSerifsClass' value='1342177280'/>
+<enum name='kCTFontSmallEmphasizedSystemFontType' value='5'/>
+<enum name='kCTFontSmallSystemFontType' value='4'/>
+<enum name='kCTFontSmallToolbarFontType' value='22'/>
+<enum name='kCTFontSymbolicClass' value='-1073741824'/>
+<enum name='kCTFontSystemDetailFontType' value='19'/>
+<enum name='kCTFontSystemFontType' value='2'/>
+<enum name='kCTFontTableAcnt' value='1633906292'/>
+<enum name='kCTFontTableAvar' value='1635148146'/>
+<enum name='kCTFontTableBASE' value='1111577413'/>
+<enum name='kCTFontTableBdat' value='1650745716'/>
+<enum name='kCTFontTableBhed' value='1651008868'/>
+<enum name='kCTFontTableBloc' value='1651273571'/>
+<enum name='kCTFontTableBsln' value='1651731566'/>
+<enum name='kCTFontTableCFF' value='1128678944'/>
+<enum name='kCTFontTableCmap' value='1668112752'/>
+<enum name='kCTFontTableCvar' value='1668702578'/>
+<enum name='kCTFontTableCvt' value='1668707360'/>
+<enum name='kCTFontTableDSIG' value='1146308935'/>
+<enum name='kCTFontTableEBDT' value='1161970772'/>
+<enum name='kCTFontTableEBLC' value='1161972803'/>
+<enum name='kCTFontTableEBSC' value='1161974595'/>
+<enum name='kCTFontTableFdsc' value='1717859171'/>
+<enum name='kCTFontTableFeat' value='1717920116'/>
+<enum name='kCTFontTableFmtx' value='1718449272'/>
+<enum name='kCTFontTableFpgm' value='1718642541'/>
+<enum name='kCTFontTableFvar' value='1719034226'/>
+<enum name='kCTFontTableGDEF' value='1195656518'/>
+<enum name='kCTFontTableGPOS' value='1196445523'/>
+<enum name='kCTFontTableGSUB' value='1196643650'/>
+<enum name='kCTFontTableGasp' value='1734439792'/>
+<enum name='kCTFontTableGlyf' value='1735162214'/>
+<enum name='kCTFontTableGvar' value='1735811442'/>
+<enum name='kCTFontTableHdmx' value='1751412088'/>
+<enum name='kCTFontTableHead' value='1751474532'/>
+<enum name='kCTFontTableHhea' value='1751672161'/>
+<enum name='kCTFontTableHmtx' value='1752003704'/>
+<enum name='kCTFontTableHsty' value='1752396921'/>
+<enum name='kCTFontTableJSTF' value='1246975046'/>
+<enum name='kCTFontTableJust' value='1786082164'/>
+<enum name='kCTFontTableKern' value='1801810542'/>
+<enum name='kCTFontTableKerx' value='1801810552'/>
+<enum name='kCTFontTableLTSH' value='1280594760'/>
+<enum name='kCTFontTableLcar' value='1818452338'/>
+<enum name='kCTFontTableLoca' value='1819239265'/>
+<enum name='kCTFontTableMaxp' value='1835104368'/>
+<enum name='kCTFontTableMort' value='1836020340'/>
+<enum name='kCTFontTableMorx' value='1836020344'/>
+<enum name='kCTFontTableName' value='1851878757'/>
+<enum name='kCTFontTableOS2' value='1330851634'/>
+<enum name='kCTFontTableOpbd' value='1869636196'/>
+<enum name='kCTFontTableOptionExcludeSynthetic' value='1'/>
+<enum name='kCTFontTableOptionNoOptions' value='0'/>
+<enum name='kCTFontTablePCLT' value='1346587732'/>
+<enum name='kCTFontTablePost' value='1886352244'/>
+<enum name='kCTFontTablePrep' value='1886545264'/>
+<enum name='kCTFontTableProp' value='1886547824'/>
+<enum name='kCTFontTableSbit' value='1935829364'/>
+<enum name='kCTFontTableSbix' value='1935829368'/>
+<enum name='kCTFontTableTrak' value='1953653099'/>
+<enum name='kCTFontTableVDMX' value='1447316824'/>
+<enum name='kCTFontTableVORG' value='1448038983'/>
+<enum name='kCTFontTableVhea' value='1986553185'/>
+<enum name='kCTFontTableVmtx' value='1986884728'/>
+<enum name='kCTFontTableZapf' value='1516335206'/>
+<enum name='kCTFontToolTipFontType' value='25'/>
+<enum name='kCTFontToolbarFontType' value='21'/>
+<enum name='kCTFontTransitionalSerifsClass' value='536870912'/>
+<enum name='kCTFontUIOptimizedTrait' value='4096'/>
+<enum name='kCTFontUnknownClass' value='0'/>
+<enum name='kCTFontUserFixedPitchFontType' value='1'/>
+<enum name='kCTFontUserFontType' value='0'/>
+<enum name='kCTFontUtilityWindowTitleFontType' value='17'/>
+<enum name='kCTFontVerticalOrientation' value='2'/>
+<enum name='kCTFontVerticalTrait' value='2048'/>
+<enum name='kCTFontViewsFontType' value='8'/>
+<enum name='kCTFontWindowTitleFontType' value='15'/>
+<enum name='kCTFramePathFillEvenOdd' value='0'/>
+<enum name='kCTFramePathFillWindingNumber' value='1'/>
+<enum name='kCTFrameProgressionRightToLeft' value='1'/>
+<enum name='kCTFrameProgressionTopToBottom' value='0'/>
+<enum name='kCTIdentityMappingCharacterCollection' value='0'/>
+<enum name='kCTJustifiedTextAlignment' value='3'/>
+<enum name='kCTLeftTextAlignment' value='0'/>
+<enum name='kCTLineBreakByCharWrapping' value='1'/>
+<enum name='kCTLineBreakByClipping' value='2'/>
+<enum name='kCTLineBreakByTruncatingHead' value='3'/>
+<enum name='kCTLineBreakByTruncatingMiddle' value='5'/>
+<enum name='kCTLineBreakByTruncatingTail' value='4'/>
+<enum name='kCTLineBreakByWordWrapping' value='0'/>
+<enum name='kCTLineTruncationEnd' value='1'/>
+<enum name='kCTLineTruncationMiddle' value='2'/>
+<enum name='kCTLineTruncationStart' value='0'/>
+<enum name='kCTNaturalTextAlignment' value='4'/>
+<enum name='kCTParagraphStyleSpecifierAlignment' value='0'/>
+<enum name='kCTParagraphStyleSpecifierBaseWritingDirection' value='13'/>
+<enum name='kCTParagraphStyleSpecifierCount' value='17'/>
+<enum name='kCTParagraphStyleSpecifierDefaultTabInterval' value='5'/>
+<enum name='kCTParagraphStyleSpecifierFirstLineHeadIndent' value='1'/>
+<enum name='kCTParagraphStyleSpecifierHeadIndent' value='2'/>
+<enum name='kCTParagraphStyleSpecifierLineBreakMode' value='6'/>
+<enum name='kCTParagraphStyleSpecifierLineHeightMultiple' value='7'/>
+<enum name='kCTParagraphStyleSpecifierLineSpacing' value='10'/>
+<enum name='kCTParagraphStyleSpecifierLineSpacingAdjustment' value='16'/>
+<enum name='kCTParagraphStyleSpecifierMaximumLineHeight' value='8'/>
+<enum name='kCTParagraphStyleSpecifierMaximumLineSpacing' value='14'/>
+<enum name='kCTParagraphStyleSpecifierMinimumLineHeight' value='9'/>
+<enum name='kCTParagraphStyleSpecifierMinimumLineSpacing' value='15'/>
+<enum name='kCTParagraphStyleSpecifierParagraphSpacing' value='11'/>
+<enum name='kCTParagraphStyleSpecifierParagraphSpacingBefore' value='12'/>
+<enum name='kCTParagraphStyleSpecifierTabStops' value='4'/>
+<enum name='kCTParagraphStyleSpecifierTailIndent' value='3'/>
+<enum name='kCTRightTextAlignment' value='1'/>
+<enum name='kCTRunStatusHasNonIdentityMatrix' value='4'/>
+<enum name='kCTRunStatusNoStatus' value='0'/>
+<enum name='kCTRunStatusNonMonotonic' value='2'/>
+<enum name='kCTRunStatusRightToLeft' value='1'/>
+<enum name='kCTUnderlinePatternDash' value='512'/>
+<enum name='kCTUnderlinePatternDashDot' value='768'/>
+<enum name='kCTUnderlinePatternDashDotDot' value='1024'/>
+<enum name='kCTUnderlinePatternDot' value='256'/>
+<enum name='kCTUnderlinePatternSolid' value='0'/>
+<enum name='kCTUnderlineStyleDouble' value='9'/>
+<enum name='kCTUnderlineStyleNone' value='0'/>
+<enum name='kCTUnderlineStyleSingle' value='1'/>
+<enum name='kCTUnderlineStyleThick' value='2'/>
+<enum name='kCTVersionNumber10_5' value='131072'/>
+<enum name='kCTVersionNumber10_5_2' value='131073'/>
+<enum name='kCTVersionNumber10_5_3' value='131074'/>
+<enum name='kCTVersionNumber10_5_5' value='131075'/>
+<enum name='kCTVersionNumber10_6' value='196608'/>
+<enum name='kCTVersionNumber10_7' value='262144'/>
+<enum name='kCTWritingDirectionLeftToRight' value='0'/>
+<enum name='kCTWritingDirectionNatural' value='-1'/>
+<enum name='kCTWritingDirectionRightToLeft' value='1'/>
+<function name='CTFontCollectionCopyExclusionDescriptors'>
+<arg type='^{__CTFontCollection=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontCollectionCopyFontAttribute'>
+<arg type='^{__CTFontCollection=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='I'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontCollectionCopyFontAttributes'>
+<arg type='^{__CTFontCollection=}'/>
+<arg type='^{__CFSet=}'/>
+<arg type='I'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontCollectionCopyQueryDescriptors'>
+<arg type='^{__CTFontCollection=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontCollectionCreateCopyWithFontDescriptors'>
+<arg type='^{__CTFontCollection=}'/>
+<arg type='^{__CFArray=}'/>
+<arg type='^{__CFDictionary=}'/>
+<retval already_retained='true' type='^{__CTFontCollection=}'/>
+</function>
+<function name='CTFontCollectionCreateFromAvailableFonts'>
+<arg type='^{__CFDictionary=}'/>
+<retval already_retained='true' type='^{__CTFontCollection=}'/>
+</function>
+<function name='CTFontCollectionCreateMatchingFontDescriptors'>
+<arg type='^{__CTFontCollection=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontCollectionCreateMatchingFontDescriptorsForFamily'>
+<arg type='^{__CTFontCollection=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFDictionary=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontCollectionCreateMatchingFontDescriptorsSortedWithCallback'>
+<arg type='^{__CTFontCollection=}'/>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type='^{__CTFontDescriptor=}'/>
+<arg type='^{__CTFontDescriptor=}'/>
+<arg type='^v'/>
+<retval type64='q' type='l'/>
+</arg>
+<arg type='^v' type_modifier='n'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontCollectionCreateMatchingFontDescriptorsWithOptions'>
+<arg type='^{__CTFontCollection=}'/>
+<arg type='^{__CFDictionary=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontCollectionCreateMutableCopy'>
+<arg type='^{__CTFontCollection=}'/>
+<retval already_retained='true' type='^{__CTFontCollection=}'/>
+</function>
+<function name='CTFontCollectionCreateWithFontDescriptors'>
+<arg type='^{__CFArray=}'/>
+<arg type='^{__CFDictionary=}'/>
+<retval already_retained='true' type='^{__CTFontCollection=}'/>
+</function>
+<function name='CTFontCollectionGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='CTFontCollectionSetExclusionDescriptors'>
+<arg type='^{__CTFontCollection=}'/>
+<arg type='^{__CFArray=}'/>
+</function>
+<function name='CTFontCollectionSetQueryDescriptors'>
+<arg type='^{__CTFontCollection=}'/>
+<arg type='^{__CFArray=}'/>
+</function>
+<function name='CTFontCopyAttribute'>
+<arg type='^{__CTFont=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='@'/>
+</function>
+<function name='CTFontCopyAvailableTables'>
+<arg type='^{__CTFont=}'/>
+<arg type='I'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontCopyCharacterSet'>
+<arg type='^{__CTFont=}'/>
+<retval already_retained='true' type='^{__CFCharacterSet=}'/>
+</function>
+<function name='CTFontCopyDisplayName'>
+<arg type='^{__CTFont=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='CTFontCopyFamilyName'>
+<arg type='^{__CTFont=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='CTFontCopyFeatureSettings'>
+<arg type='^{__CTFont=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontCopyFeatures'>
+<arg type='^{__CTFont=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontCopyFontDescriptor'>
+<arg type='^{__CTFont=}'/>
+<retval already_retained='true' type='^{__CTFontDescriptor=}'/>
+</function>
+<function name='CTFontCopyFullName'>
+<arg type='^{__CTFont=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='CTFontCopyGraphicsFont'>
+<arg type='^{__CTFont=}'/>
+<arg type='^^{__CTFontDescriptor}'/>
+<retval already_retained='true' type='^{CGFont=}'/>
+</function>
+<function name='CTFontCopyLocalizedName'>
+<arg type='^{__CTFont=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^^{__CFString}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='CTFontCopyName'>
+<arg type='^{__CTFont=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='CTFontCopyPostScriptName'>
+<arg type='^{__CTFont=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='CTFontCopySupportedLanguages'>
+<arg type='^{__CTFont=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontCopyTable'>
+<arg type='^{__CTFont=}'/>
+<arg type='I'/>
+<arg type='I'/>
+<retval already_retained='true' type='^{__CFData=}'/>
+</function>
+<function name='CTFontCopyTraits'>
+<arg type='^{__CTFont=}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='CTFontCopyVariation'>
+<arg type='^{__CTFont=}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='CTFontCopyVariationAxes'>
+<arg type='^{__CTFont=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontCreateCopyWithAttributes'>
+<arg type='^{__CTFont=}'/>
+<arg type64='d' type='f'/>
+<arg type64='^{CGAffineTransform=dddddd}' type='^{CGAffineTransform=ffffff}' type_modifier='n'/>
+<arg type='^{__CTFontDescriptor=}'/>
+<retval already_retained='true' type='^{__CTFont=}'/>
+</function>
+<function name='CTFontCreateCopyWithFamily'>
+<arg type='^{__CTFont=}'/>
+<arg type64='d' type='f'/>
+<arg type64='^{CGAffineTransform=dddddd}' type='^{CGAffineTransform=ffffff}' type_modifier='n'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CTFont=}'/>
+</function>
+<function name='CTFontCreateCopyWithSymbolicTraits'>
+<arg type='^{__CTFont=}'/>
+<arg type64='d' type='f'/>
+<arg type64='^{CGAffineTransform=dddddd}' type='^{CGAffineTransform=ffffff}' type_modifier='n'/>
+<arg type='I'/>
+<arg type='I'/>
+<retval already_retained='true' type='^{__CTFont=}'/>
+</function>
+<function name='CTFontCreateForString'>
+<arg type='^{__CTFont=}'/>
+<arg type='^{__CFString=}'/>
+<arg type64='{_CFRange=qq}' type='{_CFRange=ii}'/>
+<retval already_retained='true' type='^{__CTFont=}'/>
+</function>
+<function name='CTFontCreatePathForGlyph'>
+<arg type='^{__CTFont=}'/>
+<arg type='S'/>
+<arg type64='^{CGAffineTransform=dddddd}' type='^{CGAffineTransform=ffffff}'/>
+<retval already_retained='true' type='^{CGPath=}'/>
+</function>
+<function name='CTFontCreateUIFontForLanguage'>
+<arg type='I'/>
+<arg type64='d' type='f'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CTFont=}'/>
+</function>
+<function name='CTFontCreateWithFontDescriptor'>
+<arg type='^{__CTFontDescriptor=}'/>
+<arg type64='d' type='f'/>
+<arg type64='^{CGAffineTransform=dddddd}' type='^{CGAffineTransform=ffffff}' type_modifier='n'/>
+<retval already_retained='true' type='^{__CTFont=}'/>
+</function>
+<function name='CTFontCreateWithFontDescriptorAndOptions'>
+<arg type='^{__CTFontDescriptor=}'/>
+<arg type64='d' type='f'/>
+<arg type64='^{CGAffineTransform=dddddd}' type='^{CGAffineTransform=ffffff}'/>
+<arg type64='Q' type='L'/>
+<retval already_retained='true' type='^{__CTFont=}'/>
+</function>
+<function name='CTFontCreateWithGraphicsFont'>
+<arg type='^{CGFont=}'/>
+<arg type64='d' type='f'/>
+<arg type64='^{CGAffineTransform=dddddd}' type='^{CGAffineTransform=ffffff}' type_modifier='n'/>
+<arg type='^{__CTFontDescriptor=}'/>
+<retval already_retained='true' type='^{__CTFont=}'/>
+</function>
+<function name='CTFontCreateWithName'>
+<arg type='^{__CFString=}'/>
+<arg type64='d' type='f'/>
+<arg type64='^{CGAffineTransform=dddddd}' type='^{CGAffineTransform=ffffff}' type_modifier='n'/>
+<retval already_retained='true' type='^{__CTFont=}'/>
+</function>
+<function name='CTFontCreateWithNameAndOptions'>
+<arg type='^{__CFString=}'/>
+<arg type64='d' type='f'/>
+<arg type64='^{CGAffineTransform=dddddd}' type='^{CGAffineTransform=ffffff}'/>
+<arg type64='Q' type='L'/>
+<retval already_retained='true' type='^{__CTFont=}'/>
+</function>
+<function name='CTFontCreateWithPlatformFont'>
+<arg type64='I' type='L'/>
+<arg type64='d' type='f'/>
+<arg type64='^{CGAffineTransform=dddddd}' type='^{CGAffineTransform=ffffff}' type_modifier='n'/>
+<arg type='^{__CTFontDescriptor=}'/>
+<retval already_retained='true' type='^{__CTFont=}'/>
+</function>
+<function name='CTFontCreateWithQuickdrawInstance'>
+<arg type='*'/>
+<arg type='s'/>
+<arg type='C'/>
+<arg type64='d' type='f'/>
+<retval already_retained='true' type='^{__CTFont=}'/>
+</function>
+<function name='CTFontDescriptorCopyAttribute'>
+<arg type='^{__CTFontDescriptor=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='@'/>
+</function>
+<function name='CTFontDescriptorCopyAttributes'>
+<arg type='^{__CTFontDescriptor=}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='CTFontDescriptorCopyLocalizedAttribute'>
+<arg type='^{__CTFontDescriptor=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^^{__CFString}'/>
+<retval already_retained='true' type='@'/>
+</function>
+<function name='CTFontDescriptorCreateCopyWithAttributes'>
+<arg type='^{__CTFontDescriptor=}'/>
+<arg type='^{__CFDictionary=}'/>
+<retval already_retained='true' type='^{__CTFontDescriptor=}'/>
+</function>
+<function name='CTFontDescriptorCreateCopyWithFeature'>
+<arg type='^{__CTFontDescriptor=}'/>
+<arg type='^{__CFNumber=}'/>
+<arg type='^{__CFNumber=}'/>
+<retval already_retained='true' type='^{__CTFontDescriptor=}'/>
+</function>
+<function name='CTFontDescriptorCreateCopyWithVariation'>
+<arg type='^{__CTFontDescriptor=}'/>
+<arg type='^{__CFNumber=}'/>
+<arg type64='d' type='f'/>
+<retval already_retained='true' type='^{__CTFontDescriptor=}'/>
+</function>
+<function name='CTFontDescriptorCreateMatchingFontDescriptor'>
+<arg type='^{__CTFontDescriptor=}'/>
+<arg type='^{__CFSet=}'/>
+<retval already_retained='true' type='^{__CTFontDescriptor=}'/>
+</function>
+<function name='CTFontDescriptorCreateMatchingFontDescriptors'>
+<arg type='^{__CTFontDescriptor=}'/>
+<arg type='^{__CFSet=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontDescriptorCreateWithAttributes'>
+<arg type='^{__CFDictionary=}'/>
+<retval already_retained='true' type='^{__CTFontDescriptor=}'/>
+</function>
+<function name='CTFontDescriptorCreateWithNameAndSize'>
+<arg type='^{__CFString=}'/>
+<arg type64='d' type='f'/>
+<retval already_retained='true' type='^{__CTFontDescriptor=}'/>
+</function>
+<function name='CTFontDescriptorGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='CTFontDrawGlyphs'>
+<arg type='^{__CTFont=}'/>
+<arg type='^S'/>
+<arg type64='^{CGPoint=dd}' type='^{CGPoint=ff}'/>
+<arg type64='Q' type='L'/>
+<arg type='^{CGContext=}'/>
+</function>
+<function name='CTFontGetAdvancesForGlyphs'>
+<arg type='^{__CTFont=}'/>
+<arg type='I'/>
+<arg c_array_length_in_arg='4' type='^S' type_modifier='n'/>
+<arg c_array_length_in_arg='4' type64='^{CGSize=dd}' type='^{CGSize=ff}' type_modifier='o'/>
+<arg type64='q' type='l'/>
+<retval type='d'/>
+</function>
+<function name='CTFontGetAscent'>
+<arg type='^{__CTFont=}'/>
+<retval type64='d' type='f'/>
+</function>
+<function name='CTFontGetBoundingBox'>
+<arg type='^{__CTFont=}'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}' type='{CGRect={CGPoint=ff}{CGSize=ff}}'/>
+</function>
+<function name='CTFontGetBoundingRectsForGlyphs'>
+<arg type='^{__CTFont=}'/>
+<arg type='I'/>
+<arg c_array_length_in_arg='4' type='^S' type_modifier='n'/>
+<arg c_array_length_in_arg='4' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}' type='^{CGRect={CGPoint=ff}{CGSize=ff}}' type_modifier='o'/>
+<arg type64='q' type='l'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}' type='{CGRect={CGPoint=ff}{CGSize=ff}}'/>
+</function>
+<function name='CTFontGetCapHeight'>
+<arg type='^{__CTFont=}'/>
+<retval type64='d' type='f'/>
+</function>
+<function name='CTFontGetDescent'>
+<arg type='^{__CTFont=}'/>
+<retval type64='d' type='f'/>
+</function>
+<function name='CTFontGetGlyphCount'>
+<arg type='^{__CTFont=}'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='CTFontGetGlyphWithName'>
+<arg type='^{__CTFont=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='S'/>
+</function>
+<function name='CTFontGetGlyphsForCharacters'>
+<arg type='^{__CTFont=}'/>
+<arg c_array_length_in_arg='3' type='^S' type_modifier='n'/>
+<arg c_array_length_in_arg='3' type='^S' type_modifier='o'/>
+<arg type64='q' type='l'/>
+<retval type='B'/>
+</function>
+<function name='CTFontGetLeading'>
+<arg type='^{__CTFont=}'/>
+<retval type64='d' type='f'/>
+</function>
+<function name='CTFontGetLigatureCaretPositions'>
+<arg type='^{__CTFont=}'/>
+<arg type='S'/>
+<arg type64='^d' type='^f'/>
+<arg type64='q' type='l'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='CTFontGetMatrix'>
+<arg type='^{__CTFont=}'/>
+<retval type64='{CGAffineTransform=dddddd}' type='{CGAffineTransform=ffffff}'/>
+</function>
+<function name='CTFontGetPlatformFont'>
+<arg type='^{__CTFont=}'/>
+<arg type='^^{__CTFontDescriptor}'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='CTFontGetSize'>
+<arg type='^{__CTFont=}'/>
+<retval type64='d' type='f'/>
+</function>
+<function name='CTFontGetSlantAngle'>
+<arg type='^{__CTFont=}'/>
+<retval type64='d' type='f'/>
+</function>
+<function name='CTFontGetStringEncoding'>
+<arg type='^{__CTFont=}'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='CTFontGetSymbolicTraits'>
+<arg type='^{__CTFont=}'/>
+<retval type='I'/>
+</function>
+<function name='CTFontGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='CTFontGetUnderlinePosition'>
+<arg type='^{__CTFont=}'/>
+<retval type64='d' type='f'/>
+</function>
+<function name='CTFontGetUnderlineThickness'>
+<arg type='^{__CTFont=}'/>
+<retval type64='d' type='f'/>
+</function>
+<function name='CTFontGetUnitsPerEm'>
+<arg type='^{__CTFont=}'/>
+<retval type='I'/>
+</function>
+<function name='CTFontGetVerticalTranslationsForGlyphs'>
+<arg type='^{__CTFont=}'/>
+<arg c_array_length_in_arg='3' type='^S' type_modifier='n'/>
+<arg c_array_length_in_arg='3' type64='^{CGSize=dd}' type='^{CGSize=ff}' type_modifier='o'/>
+<arg type64='q' type='l'/>
+</function>
+<function name='CTFontGetXHeight'>
+<arg type='^{__CTFont=}'/>
+<retval type64='d' type='f'/>
+</function>
+<function name='CTFontManagerCompareFontFamilyNames'>
+<arg type='^v'/>
+<arg type='^v'/>
+<arg type='^v'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='CTFontManagerCopyAvailableFontFamilyNames'>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontManagerCopyAvailableFontURLs'>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontManagerCopyAvailablePostScriptNames'>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontManagerCreateFontDescriptorsFromURL'>
+<arg type='^{__CFURL=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='CTFontManagerCreateFontRequestRunLoopSource'>
+<arg type64='q' type='l'/>
+<arg function_pointer='true' type='@?'>
+<arg type='^{__CFDictionary=}'/>
+<arg type='i'/>
+<retval type='^{__CFArray=}'/>
+</arg>
+<retval already_retained='true' type='^{__CFRunLoopSource=}'/>
+</function>
+<function name='CTFontManagerEnableFontDescriptors'>
+<arg type='^{__CFArray=}'/>
+<arg type='B'/>
+</function>
+<function name='CTFontManagerGetAutoActivationSetting'>
+<arg type='^{__CFString=}'/>
+<retval type='I'/>
+</function>
+<function name='CTFontManagerGetScopeForURL'>
+<arg type='^{__CFURL=}'/>
+<retval type='I'/>
+</function>
+<function name='CTFontManagerIsSupportedFont'>
+<arg type='^{__CFURL=}'/>
+<retval type='B'/>
+</function>
+<function name='CTFontManagerRegisterFontsForURL'>
+<arg type='^{__CFURL=}'/>
+<arg type='I'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='CTFontManagerRegisterFontsForURLs'>
+<arg type='^{__CFArray=}'/>
+<arg type='I'/>
+<arg type='^^{__CFArray}'/>
+<retval type='B'/>
+</function>
+<function name='CTFontManagerSetAutoActivationSetting'>
+<arg type='^{__CFString=}'/>
+<arg type='I'/>
+</function>
+<function name='CTFontManagerUnregisterFontsForURL'>
+<arg type='^{__CFURL=}'/>
+<arg type='I'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='CTFontManagerUnregisterFontsForURLs'>
+<arg type='^{__CFArray=}'/>
+<arg type='I'/>
+<arg type='^^{__CFArray}'/>
+<retval type='B'/>
+</function>
+<function name='CTFrameDraw'>
+<arg type='^{__CTFrame=}'/>
+<arg type='^{CGContext=}'/>
+</function>
+<function name='CTFrameGetFrameAttributes'>
+<arg type='^{__CTFrame=}'/>
+<retval type='^{__CFDictionary=}'/>
+</function>
+<function name='CTFrameGetLineOrigins'>
+<arg type='^{__CTFrame=}'/>
+<arg type64='{_CFRange=qq}' type='{_CFRange=ii}'/>
+<arg type64='^{CGPoint=dd}' c_array_of_variable_length='true' type='^{CGPoint=ff}' type_modifier='o'/>
+</function>
+<function name='CTFrameGetLines'>
+<arg type='^{__CTFrame=}'/>
+<retval type='^{__CFArray=}'/>
+</function>
+<function name='CTFrameGetPath'>
+<arg type='^{__CTFrame=}'/>
+<retval type='^{CGPath=}'/>
+</function>
+<function name='CTFrameGetStringRange'>
+<arg type='^{__CTFrame=}'/>
+<retval type64='{_CFRange=qq}' type='{_CFRange=ii}'/>
+</function>
+<function name='CTFrameGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='CTFrameGetVisibleStringRange'>
+<arg type='^{__CTFrame=}'/>
+<retval type64='{_CFRange=qq}' type='{_CFRange=ii}'/>
+</function>
+<function name='CTFramesetterCreateFrame'>
+<arg type='^{__CTFramesetter=}'/>
+<arg type64='{_CFRange=qq}' type='{_CFRange=ii}'/>
+<arg type='^{CGPath=}'/>
+<arg type='^{__CFDictionary=}'/>
+<retval already_retained='true' type='^{__CTFrame=}'/>
+</function>
+<function name='CTFramesetterCreateWithAttributedString'>
+<arg type='^{__CFAttributedString=}'/>
+<retval already_retained='true' type='^{__CTFramesetter=}'/>
+</function>
+<function name='CTFramesetterGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='CTFramesetterGetTypesetter'>
+<arg type='^{__CTFramesetter=}'/>
+<retval type='^{__CTTypesetter=}'/>
+</function>
+<function name='CTFramesetterSuggestFrameSizeWithConstraints'>
+<arg type='^{__CTFramesetter=}'/>
+<arg type64='{_CFRange=qq}' type='{_CFRange=ii}'/>
+<arg type='^{__CFDictionary=}'/>
+<arg type64='{CGSize=dd}' type='{CGSize=ff}'/>
+<arg type64='^{_CFRange=qq}' type='^{_CFRange=ii}'/>
+<retval type64='{CGSize=dd}' type='{CGSize=ff}'/>
+</function>
+<function name='CTGetCoreTextVersion'>
+<retval type='I'/>
+</function>
+<function name='CTGlyphInfoCreateWithCharacterIdentifier'>
+<arg type='S'/>
+<arg type='S'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CTGlyphInfo=}'/>
+</function>
+<function name='CTGlyphInfoCreateWithGlyph'>
+<arg type='S'/>
+<arg type='^{__CTFont=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CTGlyphInfo=}'/>
+</function>
+<function name='CTGlyphInfoCreateWithGlyphName'>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CTFont=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CTGlyphInfo=}'/>
+</function>
+<function name='CTGlyphInfoGetCharacterCollection'>
+<arg type='^{__CTGlyphInfo=}'/>
+<retval type='S'/>
+</function>
+<function name='CTGlyphInfoGetCharacterIdentifier'>
+<arg type='^{__CTGlyphInfo=}'/>
+<retval type='S'/>
+</function>
+<function name='CTGlyphInfoGetGlyphName'>
+<arg type='^{__CTGlyphInfo=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='CTGlyphInfoGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='CTLineCreateJustifiedLine'>
+<arg type='^{__CTLine=}'/>
+<arg type64='d' type='f'/>
+<arg type='d'/>
+<retval already_retained='true' type='^{__CTLine=}'/>
+</function>
+<function name='CTLineCreateTruncatedLine'>
+<arg type='^{__CTLine=}'/>
+<arg type='d'/>
+<arg type='I'/>
+<arg type='^{__CTLine=}'/>
+<retval already_retained='true' type='^{__CTLine=}'/>
+</function>
+<function name='CTLineCreateWithAttributedString'>
+<arg type='^{__CFAttributedString=}'/>
+<retval already_retained='true' type='^{__CTLine=}'/>
+</function>
+<function name='CTLineDraw'>
+<arg type='^{__CTLine=}'/>
+<arg type='^{CGContext=}'/>
+</function>
+<function name='CTLineGetGlyphCount'>
+<arg type='^{__CTLine=}'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='CTLineGetGlyphRuns'>
+<arg type='^{__CTLine=}'/>
+<retval type='^{__CFArray=}'/>
+</function>
+<function name='CTLineGetImageBounds'>
+<arg type='^{__CTLine=}'/>
+<arg type='^{CGContext=}'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}' type='{CGRect={CGPoint=ff}{CGSize=ff}}'/>
+</function>
+<function name='CTLineGetOffsetForStringIndex'>
+<arg type='^{__CTLine=}'/>
+<arg type64='q' type='l'/>
+<arg type64='^d' type='^f' type_modifier='o'/>
+<retval type64='d' type='f'/>
+</function>
+<function name='CTLineGetPenOffsetForFlush'>
+<arg type='^{__CTLine=}'/>
+<arg type64='d' type='f'/>
+<arg type='d'/>
+<retval type='d'/>
+</function>
+<function name='CTLineGetStringIndexForPosition'>
+<arg type='^{__CTLine=}'/>
+<arg type64='{CGPoint=dd}' type='{CGPoint=ff}'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='CTLineGetStringRange'>
+<arg type='^{__CTLine=}'/>
+<retval type64='{_CFRange=qq}' type='{_CFRange=ii}'/>
+</function>
+<function name='CTLineGetTrailingWhitespaceWidth'>
+<arg type='^{__CTLine=}'/>
+<retval type='d'/>
+</function>
+<function name='CTLineGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='CTLineGetTypographicBounds'>
+<arg type='^{__CTLine=}'/>
+<arg type64='^d' type='^f' type_modifier='o'/>
+<arg type64='^d' type='^f' type_modifier='o'/>
+<arg type64='^d' type='^f' type_modifier='o'/>
+<retval type='d'/>
+</function>
+<function name='CTParagraphStyleCreate'>
+<arg c_array_length_in_arg='1' type64='^{CTParagraphStyleSetting=IQ^v}' type='^{CTParagraphStyleSetting=II^v}' type_modifier='n'/>
+<arg type64='q' type='l'/>
+<retval already_retained='true' type='^{__CTParagraphStyle=}'/>
+</function>
+<function name='CTParagraphStyleCreateCopy'>
+<arg type='^{__CTParagraphStyle=}'/>
+<retval already_retained='true' type='^{__CTParagraphStyle=}'/>
+</function>
+<function name='CTParagraphStyleGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='CTParagraphStyleGetValueForSpecifier'>
+<arg type='^{__CTParagraphStyle=}'/>
+<arg type='I'/>
+<arg type64='Q' type='L'/>
+<arg c_array_length_in_arg='2' type='^v' type_modifier='o'/>
+<retval type='B'/>
+</function>
+<function name='CTRunDraw'>
+<arg type='^{__CTRun=}'/>
+<arg type='^{CGContext=}'/>
+<arg type64='{_CFRange=qq}' type='{_CFRange=ii}'/>
+</function>
+<function name='CTRunGetAdvances'>
+<arg type='^{__CTRun=}'/>
+<arg type64='{_CFRange=qq}' type='{_CFRange=ii}'/>
+<arg type64='^{CGSize=dd}' type='^{CGSize=ff}'/>
+</function>
+<function name='CTRunGetAdvancesPtr'>
+<arg type='^{__CTRun=}'/>
+<retval type64='^{CGSize=dd}' type='^{CGSize=ff}'/>
+</function>
+<function name='CTRunGetAttributes'>
+<arg type='^{__CTRun=}'/>
+<retval type='^{__CFDictionary=}'/>
+</function>
+<function name='CTRunGetGlyphCount'>
+<arg type='^{__CTRun=}'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='CTRunGetGlyphs'>
+<arg type='^{__CTRun=}'/>
+<arg type64='{_CFRange=qq}' type='{_CFRange=ii}'/>
+<arg c_array_of_variable_length='true' type='^S' type_modifier='o'/>
+</function>
+<function name='CTRunGetGlyphsPtr'>
+<arg type='^{__CTRun=}'/>
+<retval type='^S'/>
+</function>
+<function name='CTRunGetImageBounds'>
+<arg type='^{__CTRun=}'/>
+<arg type='^{CGContext=}'/>
+<arg type64='{_CFRange=qq}' type='{_CFRange=ii}'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}' type='{CGRect={CGPoint=ff}{CGSize=ff}}'/>
+</function>
+<function name='CTRunGetPositions'>
+<arg type='^{__CTRun=}'/>
+<arg type64='{_CFRange=qq}' type='{_CFRange=ii}'/>
+<arg type64='^{CGPoint=dd}' c_array_of_variable_length='true' type='^{CGPoint=ff}' type_modifier='o'/>
+</function>
+<function name='CTRunGetPositionsPtr'>
+<arg type='^{__CTRun=}'/>
+<retval type64='^{CGPoint=dd}' type='^{CGPoint=ff}'/>
+</function>
+<function name='CTRunGetStatus'>
+<arg type='^{__CTRun=}'/>
+<retval type='I'/>
+</function>
+<function name='CTRunGetStringIndices'>
+<arg type='^{__CTRun=}'/>
+<arg type64='{_CFRange=qq}' type='{_CFRange=ii}'/>
+<arg type64='^q' c_array_of_variable_length='true' type='^i' type_modifier='o'/>
+</function>
+<function name='CTRunGetStringIndicesPtr'>
+<arg type='^{__CTRun=}'/>
+<retval type64='^q' type='^i'/>
+</function>
+<function name='CTRunGetStringRange'>
+<arg type='^{__CTRun=}'/>
+<retval type64='{_CFRange=qq}' type='{_CFRange=ii}'/>
+</function>
+<function name='CTRunGetTextMatrix'>
+<arg type='^{__CTRun=}'/>
+<retval type64='{CGAffineTransform=dddddd}' type='{CGAffineTransform=ffffff}'/>
+</function>
+<function name='CTRunGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='CTRunGetTypographicBounds'>
+<arg type='^{__CTRun=}'/>
+<arg type64='{_CFRange=qq}' type='{_CFRange=ii}'/>
+<arg type64='^d' type='^f' type_modifier='o'/>
+<arg type64='^d' type='^f' type_modifier='o'/>
+<arg type64='^d' type='^f' type_modifier='o'/>
+<retval type='d'/>
+</function>
+<function name='CTTextTabCreate'>
+<arg type='C'/>
+<arg type='d'/>
+<arg type='^{__CFDictionary=}'/>
+<retval already_retained='true' type='^{__CTTextTab=}'/>
+</function>
+<function name='CTTextTabGetAlignment'>
+<arg type='^{__CTTextTab=}'/>
+<retval type='C'/>
+</function>
+<function name='CTTextTabGetLocation'>
+<arg type='^{__CTTextTab=}'/>
+<retval type='d'/>
+</function>
+<function name='CTTextTabGetOptions'>
+<arg type='^{__CTTextTab=}'/>
+<retval type='^{__CFDictionary=}'/>
+</function>
+<function name='CTTextTabGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='CTTypesetterCreateLine'>
+<arg type='^{__CTTypesetter=}'/>
+<arg type64='{_CFRange=qq}' type='{_CFRange=ii}'/>
+<retval already_retained='true' type='^{__CTLine=}'/>
+</function>
+<function name='CTTypesetterCreateLineWithOffset'>
+<arg type='^{__CTTypesetter=}'/>
+<arg type64='{_CFRange=qq}' type='{_CFRange=ii}'/>
+<arg type='d'/>
+<retval already_retained='true' type='^{__CTLine=}'/>
+</function>
+<function name='CTTypesetterCreateWithAttributedString'>
+<arg type='^{__CFAttributedString=}'/>
+<retval already_retained='true' type='^{__CTTypesetter=}'/>
+</function>
+<function name='CTTypesetterCreateWithAttributedStringAndOptions'>
+<arg type='^{__CFAttributedString=}'/>
+<arg type='^{__CFDictionary=}'/>
+<retval already_retained='true' type='^{__CTTypesetter=}'/>
+</function>
+<function name='CTTypesetterGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='CTTypesetterSuggestClusterBreak'>
+<arg type='^{__CTTypesetter=}'/>
+<arg type64='q' type='l'/>
+<arg type='d'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='CTTypesetterSuggestClusterBreakWithOffset'>
+<arg type='^{__CTTypesetter=}'/>
+<arg type64='q' type='l'/>
+<arg type='d'/>
+<arg type='d'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='CTTypesetterSuggestLineBreak'>
+<arg type='^{__CTTypesetter=}'/>
+<arg type64='q' type='l'/>
+<arg type='d'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='CTTypesetterSuggestLineBreakWithOffset'>
+<arg type='^{__CTTypesetter=}'/>
+<arg type64='q' type='l'/>
+<arg type='d'/>
+<arg type='d'/>
+<retval type64='q' type='l'/>
+</function>
+</signatures>

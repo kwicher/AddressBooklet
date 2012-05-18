@@ -1,0 +1,26 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioUnit.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<enum name='AUViewParametersDisplayFlag' value='4'/>
+<enum name='AUViewPropertiesDisplayFlag' value='2'/>
+<enum name='AUViewTitleDisplayFlag' value='1'/>
+<class name='AUGenericView'>
+<method selector='setShowsExpertParameters:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='showsExpertParameters'>
+<retval type='B'/>
+</method>
+</class>
+<informal_protocol name='AUCustomViewPersistentData'>
+<method type64='@16@0:8' type='@8@0:4' selector='customViewPersistentData'/>
+<method type64='v24@0:8@16' type='v12@0:4@8' selector='setCustomViewPersistentData:'/>
+</informal_protocol>
+</signatures>

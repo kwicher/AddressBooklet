@@ -1,0 +1,1178 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<struct name='PMLanguageInfo' type='{PMLanguageInfo=&quot;level&quot;[33C]&quot;version&quot;[33C]&quot;release&quot;[33C]}'/>
+<struct name='PMPaperMargins' type='{PMRect=&quot;top&quot;d&quot;left&quot;d&quot;bottom&quot;d&quot;right&quot;d}'/>
+<struct name='PMRect' type='{PMRect=&quot;top&quot;d&quot;left&quot;d&quot;bottom&quot;d&quot;right&quot;d}'/>
+<struct name='PMResolution' type='{PMResolution=&quot;hRes&quot;d&quot;vRes&quot;d}'/>
+<opaque name='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+<opaque name='PMPaper' type='^{OpaquePMPaper=}'/>
+<opaque name='PMPreset' type='^{OpaquePMPreset=}'/>
+<opaque name='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+<opaque name='PMPrintSettings' type='^{OpaquePMPrintSettings=}'/>
+<opaque name='PMPrinter' type='^{OpaquePMPrinter=}'/>
+<opaque name='PMServer' type='^{OpaquePMServer=}'/>
+<string_constant name='SUMMARY_DISPLAY_ORDER' nsstring='true' value='Summary Display Order'/>
+<string_constant name='kAppPageSetupDialogTypeIDStr' nsstring='true' value='B9A0DA98-E57F-11D3-9E83-0050E4603277'/>
+<string_constant name='kAppPrintDialogTypeIDStr' nsstring='true' value='BCB07250-E57F-11D3-8CA6-0050E4603277'/>
+<string_constant name='kAppPrintThumbnailTypeIDStr' nsstring='true' value='9320FE03-B5D5-11D5-84D1-003065D6135E'/>
+<string_constant name='kDialogExtensionIntfIDStr' nsstring='true' value='A996FD7E-B738-11D3-8519-0050E4603277'/>
+<string_constant name='kGeneralPageSetupDialogTypeIDStr' nsstring='true' value='6E6ED964-B738-11D3-952F-0050E4603277'/>
+<string_constant name='kGeneralPrintDialogTypeIDStr' nsstring='true' value='C1BF838E-B72A-11D3-9644-0050E4603277'/>
+<string_constant name='kPDFWorkFlowItemURLKey' nsstring='true' value='itemURL'/>
+<string_constant name='kPDFWorkflowDisplayNameKey' nsstring='true' value='displayName'/>
+<string_constant name='kPDFWorkflowFolderURLKey' nsstring='true' value='folderURL'/>
+<string_constant name='kPDFWorkflowItemsKey' nsstring='true' value='items'/>
+<string_constant name='kPMApplicationColorMatching' nsstring='true' value='AP_ApplicationColorMatching'/>
+<string_constant name='kPMApplicationColorMatchingStr' value='AP_ApplicationColorMatching'/>
+<string_constant name='kPMBorderKey' nsstring='true' value='com.apple.print.PrintSettings.PMBorder'/>
+<string_constant name='kPMBorderStr' value='com.apple.print.PrintSettings.PMBorder'/>
+<string_constant name='kPMBorderTypeKey' nsstring='true' value='com.apple.print.PrintSettings.PMBorderType'/>
+<string_constant name='kPMBorderTypeStr' value='com.apple.print.PrintSettings.PMBorderType'/>
+<string_constant name='kPMCollateAEProp' value='collating'/>
+<string_constant name='kPMColorMatchingModeKey' nsstring='true' value='AP_ColorMatchingMode'/>
+<string_constant name='kPMColorMatchingModeStr' value='AP_ColorMatchingMode'/>
+<string_constant name='kPMColorMatchingPDEKindID' nsstring='true' value='com.apple.print.pde.ColorMatchingKind'/>
+<string_constant name='kPMColorPDEKindID' nsstring='true' value='com.apple.print.pde.ColorKind'/>
+<string_constant name='kPMColorSyncProfileIDKey' nsstring='true' value='com.apple.print.PrintSettings.PMColorSyncProfileID'/>
+<string_constant name='kPMColorSyncProfileIDStr' value='com.apple.print.PrintSettings.PMColorSyncProfileID'/>
+<string_constant name='kPMCopiesAEProp' value='copies'/>
+<string_constant name='kPMCopiesAndPagesPDEKindID' nsstring='true' value='com.apple.print.pde.CopiesAndPagesKind'/>
+<string_constant name='kPMCopiesKey' nsstring='true' value='com.apple.print.PrintSettings.PMCopies'/>
+<string_constant name='kPMCopiesStr' value='com.apple.print.PrintSettings.PMCopies'/>
+<string_constant name='kPMCopyCollateKey' nsstring='true' value='com.apple.print.PrintSettings.PMCopyCollate'/>
+<string_constant name='kPMCopyCollateStr' value='com.apple.print.PrintSettings.PMCopyCollate'/>
+<string_constant name='kPMCoverPageKey' nsstring='true' value='com.apple.print.PrintSettings.PMCoverPage'/>
+<string_constant name='kPMCoverPagePDEKindID' nsstring='true' value='com.apple.print.pde.CoverPageKind'/>
+<string_constant name='kPMCoverPageSourceKey' nsstring='true' value='com.apple.print.PrintSettings.PMCoverPageSource'/>
+<string_constant name='kPMCoverPageSourceStr' value='com.apple.print.PrintSettings.PMCoverPageSource'/>
+<string_constant name='kPMCoverPageStr' value='com.apple.print.PrintSettings.PMCoverPage'/>
+<string_constant name='kPMCustomPaperSizePDEKindID' nsstring='true' value='com.apple.print.pde.CustomPaperSizeKind'/>
+<string_constant name='kPMCustomProfilePathKey' nsstring='true' value='PMCustomProfilePath'/>
+<string_constant name='kPMCustomProfilePathStr' value='PMCustomProfilePath'/>
+<string_constant name='kPMDestinationPrinterIDKey' nsstring='true' value='DestinationPrinterID'/>
+<string_constant name='kPMDestinationPrinterIDStr' value='DestinationPrinterID'/>
+<string_constant name='kPMDestinationTypeKey' nsstring='true' value='com.apple.print.PrintSettings.PMDestinationType'/>
+<string_constant name='kPMDestinationTypeStr' value='com.apple.print.PrintSettings.PMDestinationType'/>
+<string_constant name='kPMDocumentFormatDefault' nsstring='true' value='com.apple.documentformat.default'/>
+<string_constant name='kPMDocumentFormatPDF' nsstring='true' value='application/pdf'/>
+<string_constant name='kPMDocumentFormatPostScript' nsstring='true' value='application/postscript'/>
+<string_constant name='kPMDuplexPDEKindID' nsstring='true' value='com.apple.print.pde.DuplexKind'/>
+<string_constant name='kPMDuplexingKey' nsstring='true' value='com.apple.print.PrintSettings.PMDuplexing'/>
+<string_constant name='kPMDuplexingStr' value='com.apple.print.PrintSettings.PMDuplexing'/>
+<string_constant name='kPMErrorHandlingAEProp' value='error handling'/>
+<string_constant name='kPMErrorHandlingPDEKindID' nsstring='true' value='com.apple.print.pde.ErrorHandlingKind'/>
+<string_constant name='kPMFaxAddressesPDEKindID' nsstring='true' value='com.apple.print.pde.FaxAddressesKind'/>
+<string_constant name='kPMFaxCoverPagePDEKindID' nsstring='true' value='com.apple.print.pde.FaxCoverPageKind'/>
+<string_constant name='kPMFaxCoverSheetKey' nsstring='true' value='faxCoverSheet'/>
+<string_constant name='kPMFaxCoverSheetMessageKey' nsstring='true' value='faxCoverSheetMessage'/>
+<string_constant name='kPMFaxCoverSheetMessageStr' value='faxCoverSheetMessage'/>
+<string_constant name='kPMFaxCoverSheetStr' value='faxCoverSheet'/>
+<string_constant name='kPMFaxDateLabelKey' nsstring='true' value='faxDateLabel'/>
+<string_constant name='kPMFaxDateLabelStr' value='faxDateLabel'/>
+<string_constant name='kPMFaxFromLabelKey' nsstring='true' value='faxFromLabel'/>
+<string_constant name='kPMFaxFromLabelStr' value='faxFromLabel'/>
+<string_constant name='kPMFaxModemPDEKindID' nsstring='true' value='com.apple.print.pde.FaxModemKind'/>
+<string_constant name='kPMFaxNumberAEProp' value='fax number'/>
+<string_constant name='kPMFaxNumberKey' nsstring='true' value='phone'/>
+<string_constant name='kPMFaxNumberStr' value='phone'/>
+<string_constant name='kPMFaxPrefixKey' nsstring='true' value='faxPrefix'/>
+<string_constant name='kPMFaxPrefixStr' value='faxPrefix'/>
+<string_constant name='kPMFaxSheetsLabelKey' nsstring='true' value='faxSheetsLabel'/>
+<string_constant name='kPMFaxSheetsLabelStr' value='faxSheetsLabel'/>
+<string_constant name='kPMFaxSubjectKey' nsstring='true' value='faxSubject'/>
+<string_constant name='kPMFaxSubjectLabelKey' nsstring='true' value='faxSubjectLabel'/>
+<string_constant name='kPMFaxSubjectLabelStr' value='faxSubjectLabel'/>
+<string_constant name='kPMFaxSubjectStr' value='faxSubject'/>
+<string_constant name='kPMFaxToKey' nsstring='true' value='faxTo'/>
+<string_constant name='kPMFaxToLabelKey' nsstring='true' value='faxToLabel'/>
+<string_constant name='kPMFaxToLabelStr' value='faxToLabel'/>
+<string_constant name='kPMFaxToStr' value='faxTo'/>
+<string_constant name='kPMFaxToneDialingKey' nsstring='true' value='faxToneDialing'/>
+<string_constant name='kPMFaxToneDialingStr' value='faxToneDialing'/>
+<string_constant name='kPMFaxUseSoundKey' nsstring='true' value='faxUseSound'/>
+<string_constant name='kPMFaxUseSoundStr' value='faxUseSound'/>
+<string_constant name='kPMFaxWaitForDialToneKey' nsstring='true' value='faxWaitForDialTone'/>
+<string_constant name='kPMFaxWaitForDialToneStr' value='faxWaitForDialTone'/>
+<string_constant name='kPMFeatureAEProp' value='printer features'/>
+<string_constant name='kPMFirstPageAEProp' value='starting page'/>
+<string_constant name='kPMFitToPageKey' nsstring='true' value='fit-to-page'/>
+<string_constant name='kPMFitToPageStr' value='fit-to-page'/>
+<string_constant name='kPMGraphicsContextCoreGraphics' nsstring='true' value='com.apple.graphicscontext.coregraphics'/>
+<string_constant name='kPMGraphicsContextDefault' nsstring='true' value='com.apple.graphicscontext.default'/>
+<string_constant name='kPMImagingOptionsPDEKindID' nsstring='true' value='com.apple.print.pde.ImagingOptionsKind'/>
+<string_constant name='kPMInkPDEKindID' nsstring='true' value='com.apple.print.pde.InkKind'/>
+<string_constant name='kPMInlineWorkflowKey' nsstring='true' value='inlineWorkflow'/>
+<string_constant name='kPMInlineWorkflowStr' value='inlineWorkflow'/>
+<string_constant name='kPMJobHoldUntilTimeKey' nsstring='true' value='com.apple.print.PrintSettings.PMJobHoldUntilTime'/>
+<string_constant name='kPMJobHoldUntilTimeStr' value='com.apple.print.PrintSettings.PMJobHoldUntilTime'/>
+<string_constant name='kPMJobPriorityKey' nsstring='true' value='com.apple.print.PrintSettings.PMJobPriority'/>
+<string_constant name='kPMJobPriorityStr' value='com.apple.print.PrintSettings.PMJobPriority'/>
+<string_constant name='kPMJobStateKey' nsstring='true' value='com.apple.print.PrintSettings.PMJobState'/>
+<string_constant name='kPMJobStateStr' value='com.apple.print.PrintSettings.PMJobState'/>
+<string_constant name='kPMLastPageAEProp' value='ending page'/>
+<string_constant name='kPMLayoutAcrossAEProp' value='pages across'/>
+<string_constant name='kPMLayoutColumnsKey' nsstring='true' value='com.apple.print.PrintSettings.PMLayoutColumns'/>
+<string_constant name='kPMLayoutColumnsStr' value='com.apple.print.PrintSettings.PMLayoutColumns'/>
+<string_constant name='kPMLayoutDirectionKey' nsstring='true' value='com.apple.print.PrintSettings.PMLayoutDirection'/>
+<string_constant name='kPMLayoutDirectionStr' value='com.apple.print.PrintSettings.PMLayoutDirection'/>
+<string_constant name='kPMLayoutDownAEProp' value='pages down'/>
+<string_constant name='kPMLayoutNUpKey' nsstring='true' value='com.apple.print.PrintSettings.PMLayoutNUp'/>
+<string_constant name='kPMLayoutNUpStr' value='com.apple.print.PrintSettings.PMLayoutNUp'/>
+<string_constant name='kPMLayoutPDEKindID' nsstring='true' value='com.apple.print.pde.LayoutUserOptionKind'/>
+<string_constant name='kPMLayoutRowsKey' nsstring='true' value='com.apple.print.PrintSettings.PMLayoutRows'/>
+<string_constant name='kPMLayoutRowsStr' value='com.apple.print.PrintSettings.PMLayoutRows'/>
+<string_constant name='kPMLayoutTileOrientationKey' nsstring='true' value='com.apple.print.PrintSettings.PMLayoutTileOrientation'/>
+<string_constant name='kPMLayoutTileOrientationStr' value='com.apple.print.PrintSettings.PMLayoutTileOrientation'/>
+<string_constant name='kPMMediaQualityPDEKindID' nsstring='true' value='com.apple.print.pde.MediaQualityPDEKind'/>
+<string_constant name='kPMMirrorKey' nsstring='true' value='mirror'/>
+<string_constant name='kPMMirrorStr' value='mirror'/>
+<string_constant name='kPMOutputFilenameKey' nsstring='true' value='com.apple.print.PrintSettings.PMOutputFilename'/>
+<string_constant name='kPMOutputFilenameStr' value='com.apple.print.PrintSettings.PMOutputFilename'/>
+<string_constant name='kPMOutputOptionsPDEKindID' nsstring='true' value='com.apple.print.pde.OutputOptionsKind'/>
+<string_constant name='kPMOutputOrderKey' nsstring='true' value='OutputOrder'/>
+<string_constant name='kPMOutputOrderStr' value='OutputOrder'/>
+<string_constant name='kPMPDFEffectsPDEKindID' nsstring='true' value='com.apple.print.pde.PDFEffects'/>
+<string_constant name='kPMPDFWorkFlowAEProp' value='PDF work flow'/>
+<string_constant name='kPMPPDDescriptionType' nsstring='true' value='PMPPDDescriptionType'/>
+<string_constant name='kPMPSErrorHandlerKey' nsstring='true' value='com.apple.print.PrintSettings.PMPSErrorHandler'/>
+<string_constant name='kPMPSErrorHandlerStr' value='com.apple.print.PrintSettings.PMPSErrorHandler'/>
+<string_constant name='kPMPSTraySwitchKey' nsstring='true' value='com.apple.print.PrintSettings.PMPSTraySwitch'/>
+<string_constant name='kPMPSTraySwitchStr' value='com.apple.print.PrintSettings.PMPSTraySwitch'/>
+<string_constant name='kPMPageAttributesKindID' nsstring='true' value='com.apple.print.pde.PageAttributesKind'/>
+<string_constant name='kPMPageSetKey' nsstring='true' value='page-set'/>
+<string_constant name='kPMPageSetStr' value='page-set'/>
+<string_constant name='kPMPageToPaperMappingAllowScalingUpKey' nsstring='true' value='com.apple.print.PageToPaperMappingAllowScalingUp'/>
+<string_constant name='kPMPageToPaperMappingAllowScalingUpStr' value='com.apple.print.PageToPaperMappingAllowScalingUp'/>
+<string_constant name='kPMPageToPaperMappingTypeKey' nsstring='true' value='com.apple.print.PageToPaperMappingType'/>
+<string_constant name='kPMPageToPaperMappingTypeStr' value='com.apple.print.PageToPaperMappingType'/>
+<string_constant name='kPMPageToPaperMediaNameKey' nsstring='true' value='com.apple.print.PageToPaperMappingMediaName'/>
+<string_constant name='kPMPageToPaperMediaNameStr' value='com.apple.print.PageToPaperMappingMediaName'/>
+<string_constant name='kPMPaperFeedPDEKindID' nsstring='true' value='com.apple.print.pde.PaperFeedKind'/>
+<string_constant name='kPMPaperHandlingPDEKindID' nsstring='true' value='com.apple.print.pde.PaperHandlingKind'/>
+<string_constant name='kPMPaperSourcePDEKindID' nsstring='true' value='com.apple.print.pde.PaperSourceKind'/>
+<string_constant name='kPMPresetAEProp' value='preset'/>
+<string_constant name='kPMPresetGraphicsTypeAll' nsstring='true' value='All'/>
+<string_constant name='kPMPresetGraphicsTypeGeneral' nsstring='true' value='General'/>
+<string_constant name='kPMPresetGraphicsTypeKey' nsstring='true' value='com.apple.print.preset.graphicsType'/>
+<string_constant name='kPMPresetGraphicsTypeNone' nsstring='true' value='None'/>
+<string_constant name='kPMPresetGraphicsTypePhoto' nsstring='true' value='Photo'/>
+<string_constant name='kPMPrimaryPaperFeedKey' nsstring='true' value='com.apple.print.PrintSettings.PMPrimaryPaperFeed'/>
+<string_constant name='kPMPrimaryPaperFeedStr' value='com.apple.print.PrintSettings.PMPrimaryPaperFeed'/>
+<string_constant name='kPMPrintSelectionOnlyKey' nsstring='true' value='com.apple.print.PrintSettings.PMPrintSelectionOnly'/>
+<string_constant name='kPMPrintSelectionOnlyStr' value='com.apple.print.PrintSettings.PMPrintSelectionOnly'/>
+<string_constant name='kPMPrintSelectionTitleKey' nsstring='true' value='com.apple.printSelection.title'/>
+<string_constant name='kPMPrintTimeAEProp' value='requested print time'/>
+<string_constant name='kPMPrinterFeaturesPDEKindID' nsstring='true' value='com.apple.print.pde.PrinterFeaturesKind'/>
+<string_constant name='kPMPriorityPDEKindID' nsstring='true' value='com.apple.print.pde.PriorityKind'/>
+<string_constant name='kPMRotationScalingPDEKindID' nsstring='true' value='com.apple.print.pde.RotationScalingKind'/>
+<string_constant name='kPMSandboxCompatiblePDEs' nsstring='true' value='PMSandboxCompatiblePDEs'/>
+<string_constant name='kPMSaveAsPDFAEProp' value='save as PDF'/>
+<string_constant name='kPMSaveAsPSAEProp' value='save as PS'/>
+<string_constant name='kPMSchedulerPDEKindID' nsstring='true' value='com.apple.print.pde.SchedulerKind'/>
+<string_constant name='kPMSecondaryPaperFeedKey' nsstring='true' value='com.apple.print.PrintSettings.PMSecondaryPaperFeed'/>
+<string_constant name='kPMSecondaryPaperFeedStr' value='com.apple.print.PrintSettings.PMSecondaryPaperFeed'/>
+<string_constant name='kPMSummaryPanelKindID' nsstring='true' value='com.apple.print.pde.SummaryKind'/>
+<string_constant name='kPMTargetPrinterAEProp' value='target printer'/>
+<string_constant name='kPMTotalBeginPagesKey' nsstring='true' value='com.apple.print.PrintSettings.PMTotalBeginPages'/>
+<string_constant name='kPMTotalBeginPagesStr' value='com.apple.print.PrintSettings.PMTotalBeginPages'/>
+<string_constant name='kPMTotalSidesImagedKey' nsstring='true' value='com.apple.print.PrintSettings.PMTotalSidesImaged'/>
+<string_constant name='kPMTotalSidesImagedStr' value='com.apple.print.PrintSettings.PMTotalSidesImaged'/>
+<string_constant name='kPMUniPrinterPDEKindID' nsstring='true' value='com.apple.print.pde.UniPrinterKind'/>
+<string_constant name='kPMUnsupportedPDEKindID' nsstring='true' value='com.apple.print.pde.UnsupportedPDEKind'/>
+<string_constant name='kPMVendorColorMatching' nsstring='true' value='AP_VendorColorMatching'/>
+<string_constant name='kPMVendorColorMatchingStr' value='AP_VendorColorMatching'/>
+<string_constant name='kPrinterModuleTypeIDStr' nsstring='true' value='BDB091F4-E57F-11D3-B5CC-0050E4603277'/>
+<enum name='PM_USE_SESSION_APIS' value='1'/>
+<enum name='kAllPPDDomains' value='1'/>
+<enum name='kCUPSPPDDomain' value='6'/>
+<enum name='kLocalPPDDomain' value='3'/>
+<enum name='kNetworkPPDDomain' value='4'/>
+<enum name='kPMAllocationFailure' value='-108'/>
+<enum name='kPMBorderDoubleHairline' value='2'/>
+<enum name='kPMBorderDoubleThickline' value='4'/>
+<enum name='kPMBorderSingleHairline' value='1'/>
+<enum name='kPMBorderSingleThickline' value='3'/>
+<enum name='kPMCMYKColorSpaceModel' value='3'/>
+<enum name='kPMCVMSymbolNotFound' value='-9662'/>
+<enum name='kPMCancel' value='128'/>
+<enum name='kPMCloseFailed' value='-9785'/>
+<enum name='kPMCollateAEKey' value='1819763564'/>
+<enum name='kPMCollateAEType' value='1651470188'/>
+<enum name='kPMColorSpaceModelCount' value='4'/>
+<enum name='kPMCopieAEType' value='1819242087'/>
+<enum name='kPMCopiesAEKey' value='1819763568'/>
+<enum name='kPMCoverPageAfter' value='3'/>
+<enum name='kPMCoverPageBefore' value='2'/>
+<enum name='kPMCoverPageDefault' value='1'/>
+<enum name='kPMCoverPageNone' value='1'/>
+<enum name='kPMCreateMessageFailed' value='-9620'/>
+<enum name='kPMDataFormatXMLCompressed' value='2'/>
+<enum name='kPMDataFormatXMLDefault' value='0'/>
+<enum name='kPMDataFormatXMLMinimal' value='1'/>
+<enum name='kPMDeleteSubTicketFailed' value='-9585'/>
+<enum name='kPMDestinationFax' value='3'/>
+<enum name='kPMDestinationFile' value='2'/>
+<enum name='kPMDestinationInvalid' value='0'/>
+<enum name='kPMDestinationPreview' value='4'/>
+<enum name='kPMDestinationPrinter' value='1'/>
+<enum name='kPMDestinationProcessPDF' value='5'/>
+<enum name='kPMDestinationTypeDefault' value='1'/>
+<enum name='kPMDevNColorSpaceModel' value='4'/>
+<enum name='kPMDocumentNotFound' value='-9644'/>
+<enum name='kPMDontSwitchPDEError' value='-9531'/>
+<enum name='kPMDuplexDefault' value='1'/>
+<enum name='kPMDuplexNoTumble' value='2'/>
+<enum name='kPMDuplexNone' value='1'/>
+<enum name='kPMDuplexTumble' value='3'/>
+<enum name='kPMEditRequestFailed' value='-9544'/>
+<enum name='kPMErrorHandlingAEKey' value='1819764072'/>
+<enum name='kPMErrorHandlingAEType' value='1701737837'/>
+<enum name='kPMErrorHandlingDetailedEnum' value='1819763828'/>
+<enum name='kPMErrorHandlingStandardEnum' value='1819767668'/>
+<enum name='kPMFaxNumberAEKey' value='1717663854'/>
+<enum name='kPMFaxNumberAEType' value='1413830740'/>
+<enum name='kPMFeatureAEKey' value='1819766886'/>
+<enum name='kPMFeatureAEType' value='1818850164'/>
+<enum name='kPMFeatureNotInstalled' value='-9533'/>
+<enum name='kPMFileOrDirOperationFailed' value='-9634'/>
+<enum name='kPMFirstPageAEKey' value='1819764336'/>
+<enum name='kPMFirstPageAEType' value='1819242087'/>
+<enum name='kPMFontNameTooLong' value='-9704'/>
+<enum name='kPMFontNotFound' value='-9703'/>
+<enum name='kPMGeneralCGError' value='-9705'/>
+<enum name='kPMGeneralError' value='-30870'/>
+<enum name='kPMGrayColorSpaceModel' value='1'/>
+<enum name='kPMHideInlineItems' value='0'/>
+<enum name='kPMIOAttrNotAvailable' value='-9787'/>
+<enum name='kPMIOMSymbolNotFound' value='-9661'/>
+<enum name='kPMInternalError' value='-30870'/>
+<enum name='kPMInvalidAllocator' value='-30890'/>
+<enum name='kPMInvalidCVMContext' value='-9665'/>
+<enum name='kPMInvalidCalibrationTarget' value='-30898'/>
+<enum name='kPMInvalidConnection' value='-30887'/>
+<enum name='kPMInvalidFileType' value='-30895'/>
+<enum name='kPMInvalidIOMContext' value='-9664'/>
+<enum name='kPMInvalidIndex' value='-30882'/>
+<enum name='kPMInvalidItem' value='-30892'/>
+<enum name='kPMInvalidJobID' value='-9666'/>
+<enum name='kPMInvalidJobTemplate' value='-30885'/>
+<enum name='kPMInvalidKey' value='-30888'/>
+<enum name='kPMInvalidLookupSpec' value='-9542'/>
+<enum name='kPMInvalidObject' value='-30896'/>
+<enum name='kPMInvalidPBMRef' value='-9540'/>
+<enum name='kPMInvalidPDEContext' value='-9530'/>
+<enum name='kPMInvalidPMContext' value='-9663'/>
+<enum name='kPMInvalidPageFormat' value='-30876'/>
+<enum name='kPMInvalidPaper' value='-30897'/>
+<enum name='kPMInvalidParameter' value='-50'/>
+<enum name='kPMInvalidPreset' value='-30899'/>
+<enum name='kPMInvalidPrintSession' value='-30879'/>
+<enum name='kPMInvalidPrintSettings' value='-30875'/>
+<enum name='kPMInvalidPrinter' value='-30880'/>
+<enum name='kPMInvalidPrinterAddress' value='-9780'/>
+<enum name='kPMInvalidPrinterInfo' value='-30886'/>
+<enum name='kPMInvalidReply' value='-30894'/>
+<enum name='kPMInvalidState' value='-9706'/>
+<enum name='kPMInvalidSubTicket' value='-9584'/>
+<enum name='kPMInvalidTicket' value='-30891'/>
+<enum name='kPMInvalidType' value='-30893'/>
+<enum name='kPMInvalidValue' value='-30889'/>
+<enum name='kPMItemIsLocked' value='-9586'/>
+<enum name='kPMJobBusy' value='-9642'/>
+<enum name='kPMJobCanceled' value='-9643'/>
+<enum name='kPMJobGetTicketBadFormatError' value='-9672'/>
+<enum name='kPMJobGetTicketReadError' value='-9673'/>
+<enum name='kPMJobManagerAborted' value='-9671'/>
+<enum name='kPMJobNotFound' value='-9641'/>
+<enum name='kPMJobStreamEndError' value='-9670'/>
+<enum name='kPMJobStreamOpenFailed' value='-9668'/>
+<enum name='kPMJobStreamReadFailed' value='-9669'/>
+<enum name='kPMKeyNotFound' value='-9589'/>
+<enum name='kPMKeyNotUnique' value='-9590'/>
+<enum name='kPMKeyOrValueNotFound' value='-9623'/>
+<enum name='kPMLandscape' value='2'/>
+<enum name='kPMLastErrorCodeToMakeMaintenanceOfThisListEasier' value='-9799'/>
+<enum name='kPMLastPageAEKey' value='1819765872'/>
+<enum name='kPMLastPageAEType' value='1819242087'/>
+<enum name='kPMLayoutAcrossAEKey' value='1819765857'/>
+<enum name='kPMLayoutAcrossAEType' value='1819242087'/>
+<enum name='kPMLayoutBottomTopLeftRight' value='7'/>
+<enum name='kPMLayoutBottomTopRightLeft' value='8'/>
+<enum name='kPMLayoutDownAEKey' value='1819765860'/>
+<enum name='kPMLayoutDownAEType' value='1819242087'/>
+<enum name='kPMLayoutLeftRightBottomTop' value='2'/>
+<enum name='kPMLayoutLeftRightTopBottom' value='1'/>
+<enum name='kPMLayoutRightLeftBottomTop' value='4'/>
+<enum name='kPMLayoutRightLeftTopBottom' value='3'/>
+<enum name='kPMLayoutTopBottomLeftRight' value='5'/>
+<enum name='kPMLayoutTopBottomRightLeft' value='6'/>
+<enum name='kPMLockIgnored' value='-30878'/>
+<enum name='kPMMessagingError' value='-9624'/>
+<enum name='kPMNoDefaultItem' value='-9500'/>
+<enum name='kPMNoDefaultPrinter' value='-30872'/>
+<enum name='kPMNoDefaultSettings' value='-9501'/>
+<enum name='kPMNoError' value='0'/>
+<enum name='kPMNoPrinterJobID' value='-9667'/>
+<enum name='kPMNoSelectedPrinters' value='-9541'/>
+<enum name='kPMNoSuchEntry' value='-30874'/>
+<enum name='kPMNotImplemented' value='-30873'/>
+<enum name='kPMObjectInUse' value='-30881'/>
+<enum name='kPMOpenFailed' value='-9781'/>
+<enum name='kPMOutOfScope' value='-30871'/>
+<enum name='kPMPDFWorkFlowAEKey' value='2003987302'/>
+<enum name='kPMPDFWorkFlowAEType' value='1970562616'/>
+<enum name='kPMPMSymbolNotFound' value='-9660'/>
+<enum name='kPMPageToPaperMappingNone' value='1'/>
+<enum name='kPMPageToPaperMappingScaleToFit' value='2'/>
+<enum name='kPMPaperTypeCoated' value='2'/>
+<enum name='kPMPaperTypeGlossy' value='4'/>
+<enum name='kPMPaperTypePlain' value='1'/>
+<enum name='kPMPaperTypePremium' value='3'/>
+<enum name='kPMPaperTypeTShirt' value='6'/>
+<enum name='kPMPaperTypeTransparency' value='5'/>
+<enum name='kPMPaperTypeUnknown' value='0'/>
+<enum name='kPMPermissionError' value='-9636'/>
+<enum name='kPMPluginNotFound' value='-9701'/>
+<enum name='kPMPluginRegisterationFailed' value='-9702'/>
+<enum name='kPMPortrait' value='1'/>
+<enum name='kPMPrBrowserNoUI' value='-9545'/>
+<enum name='kPMPresetAEKey' value='1886548852'/>
+<enum name='kPMPresetAEType' value='1970562616'/>
+<enum name='kPMPrintAllPages' value='-1'/>
+<enum name='kPMPrintSettingsAEType' value='1886610804'/>
+<enum name='kPMPrintTimeAEKey' value='1819767156'/>
+<enum name='kPMPrintTimeAEType' value='1818522656'/>
+<enum name='kPMPrinterAEType' value='1953656946'/>
+<enum name='kPMPrinterIdle' value='3'/>
+<enum name='kPMPrinterProcessing' value='4'/>
+<enum name='kPMPrinterStopped' value='5'/>
+<enum name='kPMQualityBest' value='13'/>
+<enum name='kPMQualityDraft' value='4'/>
+<enum name='kPMQualityHighest' value='15'/>
+<enum name='kPMQualityInkSaver' value='1'/>
+<enum name='kPMQualityLowest' value='0'/>
+<enum name='kPMQualityNormal' value='8'/>
+<enum name='kPMQualityPhoto' value='11'/>
+<enum name='kPMQueueAlreadyExists' value='-9639'/>
+<enum name='kPMQueueJobFailed' value='-9640'/>
+<enum name='kPMQueueNotFound' value='-9638'/>
+<enum name='kPMRGBColorSpaceModel' value='2'/>
+<enum name='kPMReadFailed' value='-9782'/>
+<enum name='kPMReadGotZeroData' value='-9788'/>
+<enum name='kPMReverseLandscape' value='4'/>
+<enum name='kPMReversePortrait' value='3'/>
+<enum name='kPMSaveAsPDFAEKey' value='1936745574'/>
+<enum name='kPMSaveAsPDFAEType' value='1718973036'/>
+<enum name='kPMSaveAsPSAEKey' value='1936749344'/>
+<enum name='kPMSaveAsPSAEType' value='1718973036'/>
+<enum name='kPMScalingCenterOnImgArea' value='6'/>
+<enum name='kPMScalingCenterOnPaper' value='5'/>
+<enum name='kPMScalingPinBottomLeft' value='3'/>
+<enum name='kPMScalingPinBottomRight' value='4'/>
+<enum name='kPMScalingPinTopLeft' value='1'/>
+<enum name='kPMScalingPinTopRight' value='2'/>
+<enum name='kPMServerAlreadyRunning' value='-9631'/>
+<enum name='kPMServerAttributeRestricted' value='-9633'/>
+<enum name='kPMServerCommunicationFailed' value='-9621'/>
+<enum name='kPMServerNotFound' value='-9630'/>
+<enum name='kPMServerSuspended' value='-9632'/>
+<enum name='kPMShowDefaultInlineItems' value='32768'/>
+<enum name='kPMShowInlineCopies' value='1'/>
+<enum name='kPMShowInlineOrientation' value='8'/>
+<enum name='kPMShowInlinePageRange' value='2'/>
+<enum name='kPMShowInlinePageRangeWithSelection' value='64'/>
+<enum name='kPMShowInlinePaperSize' value='4'/>
+<enum name='kPMShowInlineScale' value='128'/>
+<enum name='kPMShowPageAttributesPDE' value='256'/>
+<enum name='kPMShowPrintDialogAEType' value='1885629543'/>
+<enum name='kPMSimplexTumble' value='4'/>
+<enum name='kPMStatusFailed' value='-9784'/>
+<enum name='kPMStringConversionFailure' value='-30883'/>
+<enum name='kPMSubTicketNotFound' value='-9583'/>
+<enum name='kPMSyncRequestFailed' value='-9543'/>
+<enum name='kPMTargetPrinterAEKey' value='1953656946'/>
+<enum name='kPMTargetPrinterAEType' value='1413830740'/>
+<enum name='kPMTemplateIsLocked' value='-9588'/>
+<enum name='kPMTicketIsLocked' value='-9587'/>
+<enum name='kPMTicketTypeNotFound' value='-9580'/>
+<enum name='kPMUnableToFindProcess' value='-9532'/>
+<enum name='kPMUnexpectedImagingError' value='-9707'/>
+<enum name='kPMUnknownColorSpaceModel' value='0'/>
+<enum name='kPMUnknownDataType' value='-9591'/>
+<enum name='kPMUnknownMessage' value='-9637'/>
+<enum name='kPMUnlocked' value='0'/>
+<enum name='kPMUnsupportedConnection' value='-9786'/>
+<enum name='kPMUpdateTicketFailed' value='-9581'/>
+<enum name='kPMUserOrGroupNotFound' value='-9635'/>
+<enum name='kPMValidateTicketFailed' value='-9582'/>
+<enum name='kPMValueOutOfRange' value='-30877'/>
+<enum name='kPMWriteFailed' value='-9783'/>
+<enum name='kPMXMLParseError' value='-30884'/>
+<enum name='kSystemPPDDomain' value='2'/>
+<enum name='kUserPPDDomain' value='5'/>
+<function name='PMCGImageCreateWithEPSDataProvider'>
+<arg type='^{CGDataProvider=}'/>
+<arg type='^{CGImage=}'/>
+<retval already_retained='true' type='^{CGImage=}'/>
+</function>
+<function name='PMCopyAvailablePPDs'>
+<arg type='S'/>
+<arg type='^^{__CFArray}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMCopyLocalizedPPD'>
+<arg type='^{__CFURL=}'/>
+<arg type='^^{__CFURL}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMCopyPPDData'>
+<arg type='^{__CFURL=}'/>
+<arg type='^^{__CFData}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMCopyPageFormat'>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^{OpaquePMPageFormat=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMCopyPrintSettings'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMCreateGenericPrinter'>
+<arg type='^^{OpaquePMPrinter}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMCreatePageFormat'>
+<arg type='^^{OpaquePMPageFormat}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMCreatePageFormatWithPMPaper'>
+<arg type='^^{OpaquePMPageFormat}'/>
+<arg type='^{OpaquePMPaper=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMCreatePrintSettings'>
+<arg type='^^{OpaquePMPrintSettings}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMCreateSession'>
+<arg type='^^{OpaquePMPrintSession}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMFlattenPageFormatToCFData'>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^^{__CFData}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMFlattenPageFormatToURL'>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^{__CFURL=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMFlattenPrintSettingsToCFData'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^^{__CFData}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMFlattenPrintSettingsToURL'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^{__CFURL=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMGetAdjustedPageRect'>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^{PMRect=dddd}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMGetAdjustedPaperRect'>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^{PMRect=dddd}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMGetCollate'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMGetCopies'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMGetDuplex'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMGetFirstPage'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMGetLastPage'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMGetOrientation'>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^S'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMGetPageFormatExtendedData'>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMGetPageFormatPaper'>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^^{OpaquePMPaper}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMGetPageRange'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMGetPrintSettingsExtendedData'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMGetScale'>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMGetUnadjustedPageRect'>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^{PMRect=dddd}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMGetUnadjustedPaperRect'>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^{PMRect=dddd}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPageFormatCreateDataRepresentation'>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^^{__CFData}'/>
+<arg type='i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPageFormatCreateWithDataRepresentation'>
+<arg type='^{__CFData=}'/>
+<arg type='^^{OpaquePMPageFormat}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPageFormatGetPrinterID'>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPaperCreateCustom'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='^{PMRect=dddd}'/>
+<arg type='^^{OpaquePMPaper}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPaperCreateLocalizedName'>
+<arg type='^{OpaquePMPaper=}'/>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPaperGetHeight'>
+<arg type='^{OpaquePMPaper=}'/>
+<arg type='^d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPaperGetID'>
+<arg type='^{OpaquePMPaper=}'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPaperGetMargins'>
+<arg type='^{OpaquePMPaper=}'/>
+<arg type='^{PMRect=dddd}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPaperGetName'>
+<arg type='^{OpaquePMPaper=}'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPaperGetPPDPaperName'>
+<arg type='^{OpaquePMPaper=}'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPaperGetPrinterID'>
+<arg type='^{OpaquePMPaper=}'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPaperGetWidth'>
+<arg type='^{OpaquePMPaper=}'/>
+<arg type='^d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPaperIsCustom'>
+<arg type='^{OpaquePMPaper=}'/>
+<retval type='B'/>
+</function>
+<function name='PMPresetCopyName'>
+<arg type='^{OpaquePMPreset=}'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPresetCreatePrintSettings'>
+<arg type='^{OpaquePMPreset=}'/>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^^{OpaquePMPrintSettings}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPresetGetAttributes'>
+<arg type='^{OpaquePMPreset=}'/>
+<arg type='^^{__CFDictionary}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrintSettingsCopyAsDictionary'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^^{__CFDictionary}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrintSettingsCopyKeys'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^^{__CFArray}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrintSettingsCreateDataRepresentation'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^^{__CFData}'/>
+<arg type='i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrintSettingsCreateWithDataRepresentation'>
+<arg type='^{__CFData=}'/>
+<arg type='^^{OpaquePMPrintSettings}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrintSettingsGetJobName'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrintSettingsGetValue'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrintSettingsSetJobName'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^{__CFString=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrintSettingsSetValue'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='@'/>
+<arg type='B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrintSettingsToOptions'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^*'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrintSettingsToOptionsWithPrinterAndPageFormat'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^*'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterCopyDescriptionURL'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^^{__CFURL}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterCopyDeviceURI'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^^{__CFURL}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterCopyHostName'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterCopyPresets'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^^{__CFArray}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterCopyState'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^^{__CFDictionary}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterCreateFromPrinterID'>
+<arg type='^{__CFString=}'/>
+<retval type='^{OpaquePMPrinter=}'/>
+</function>
+<function name='PMPrinterCreatePaperInfoListForMenu'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^^{__CFArray}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterGetCommInfo'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^B'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterGetDriverCreator'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterGetDriverReleaseInfo'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^{VersRec={NumVersion=CCCC}s[256C][256C]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterGetID'>
+<arg type='^{OpaquePMPrinter=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='PMPrinterGetIndexedPrinterResolution'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type64='I' type='L'/>
+<arg type='^{PMResolution=dd}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterGetLanguageInfo'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^{PMLanguageInfo=[33C][33C][33C]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterGetLocation'>
+<arg type='^{OpaquePMPrinter=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='PMPrinterGetMakeAndModelName'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterGetMimeTypes'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^^{__CFArray}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterGetName'>
+<arg type='^{OpaquePMPrinter=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='PMPrinterGetOutputResolution'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^{PMResolution=dd}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterGetPaperList'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^^{__CFArray}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterGetPrinterResolutionCount'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterGetState'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^S'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterIsDefault'>
+<arg type='^{OpaquePMPrinter=}'/>
+<retval type='B'/>
+</function>
+<function name='PMPrinterIsFavorite'>
+<arg type='^{OpaquePMPrinter=}'/>
+<retval type='B'/>
+</function>
+<function name='PMPrinterIsPostScriptCapable'>
+<arg type='^{OpaquePMPrinter=}'/>
+<retval type='B'/>
+</function>
+<function name='PMPrinterIsPostScriptPrinter'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterIsRemote'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterPrintWithFile'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFURL=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterPrintWithProvider'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{CGDataProvider=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterSendCommand'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFDictionary=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterSetDefault'>
+<arg type='^{OpaquePMPrinter=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterSetOutputResolution'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^{PMResolution=dd}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMPrinterWritePostScriptToURL'>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFURL=}'/>
+<arg type='^{__CFURL=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMRelease'>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMRetain'>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMServerCreatePrinterList'>
+<arg type='^{OpaquePMServer=}'/>
+<arg type='^^{__CFArray}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMServerLaunchPrinterBrowser'>
+<arg type='^{OpaquePMServer=}'/>
+<arg type='^{__CFDictionary=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionBeginCGDocumentNoDialog'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^{OpaquePMPageFormat=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionBeginPageNoDialog'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^{PMRect=dddd}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionCopyDestinationFormat'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionCopyDestinationLocation'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^^{__CFURL}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionCopyOutputFormatList'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='S'/>
+<arg type='^^{__CFArray}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionCreatePageFormatList'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^{OpaquePMPrinter=}'/>
+<arg type='^^{__CFArray}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionCreatePrinterList'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^^{__CFArray}'/>
+<arg type64='^q' type='^i'/>
+<arg type='^^{OpaquePMPrinter}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionDefaultPageFormat'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^{OpaquePMPageFormat=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionDefaultPrintSettings'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionEndDocumentNoDialog'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionEndPageNoDialog'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionError'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionGetCGGraphicsContext'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^^{CGContext}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionGetCurrentPrinter'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^^{OpaquePMPrinter}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionGetDataFromSession'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionGetDestinationType'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^S'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionSetCurrentPMPrinter'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^{OpaquePMPrinter=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionSetDataInSession'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='@'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionSetDestination'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='S'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFURL=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionSetError'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type64='i' type='l'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionValidatePageFormat'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSessionValidatePrintSettings'>
+<arg type='^{OpaquePMPrintSession=}'/>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSetCollate'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSetCopies'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type64='I' type='L'/>
+<arg type='B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSetDuplex'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSetFirstPage'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type64='I' type='L'/>
+<arg type='B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSetLastPage'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type64='I' type='L'/>
+<arg type='B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSetOrientation'>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='S'/>
+<arg type='B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSetPageFormatExtendedData'>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSetPageRange'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSetPrintSettingsExtendedData'>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMSetScale'>
+<arg type='^{OpaquePMPageFormat=}'/>
+<arg type='d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMUnflattenPageFormatWithCFData'>
+<arg type='^{__CFData=}'/>
+<arg type='^^{OpaquePMPageFormat}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMUnflattenPageFormatWithURL'>
+<arg type='^{__CFURL=}'/>
+<arg type='^^{OpaquePMPageFormat}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMUnflattenPrintSettingsWithCFData'>
+<arg type='^{__CFData=}'/>
+<arg type='^^{OpaquePMPrintSettings}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMUnflattenPrintSettingsWithURL'>
+<arg type='^{__CFURL=}'/>
+<arg type='^^{OpaquePMPrintSettings}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMWorkflowCopyItems'>
+<arg type='^^{__CFArray}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMWorkflowSubmitPDFWithOptions'>
+<arg type='^{__CFURL=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='*'/>
+<arg type='^{__CFURL=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='PMWorkflowSubmitPDFWithSettings'>
+<arg type='^{__CFURL=}'/>
+<arg type='^{OpaquePMPrintSettings=}'/>
+<arg type='^{__CFURL=}'/>
+<retval type64='i' type='l'/>
+</function>
+<class name='NSObject'>
+<method selector='initWithBundle:'>
+<retval type='B'/>
+</method>
+<method selector='printWindowWillClose:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='restoreValuesAndReturnError:'>
+<retval type='B'/>
+</method>
+<method selector='saveValuesAndReturnError:'>
+<retval type='B'/>
+</method>
+<method selector='shouldHide'>
+<retval type='B'/>
+</method>
+<method selector='shouldPrint'>
+<retval type='B'/>
+</method>
+<method selector='shouldShowHelp'>
+<retval type='B'/>
+</method>
+<method selector='willChangePPDOptionKeyValue:ppdChoice:'>
+<retval type='B'/>
+</method>
+</class>
+<informal_protocol name='PDEPanel'>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='PPDOptionKeyValueDidChange:ppdChoice:'/>
+<method type64='@16@0:8' type='@8@0:4' selector='panelKind'/>
+<method type64='@16@0:8' type='@8@0:4' selector='panelName'/>
+<method type64='@16@0:8' type='@8@0:4' selector='panelView'/>
+<method type64='v20@0:8B16' type='v12@0:4B8' selector='printWindowWillClose:'/>
+<method type64='B24@0:8^@16' type='B12@0:4^@8' selector='restoreValuesAndReturnError:'/>
+<method type64='B24@0:8^@16' type='B12@0:4^@8' selector='saveValuesAndReturnError:'/>
+<method type64='B16@0:8' type='B8@0:4' selector='shouldHide'/>
+<method type64='B16@0:8' type='B8@0:4' selector='shouldPrint'/>
+<method type64='B16@0:8' type='B8@0:4' selector='shouldShowHelp'/>
+<method type64='@16@0:8' type='@8@0:4' selector='summaryInfo'/>
+<method type64='@16@0:8' type='@8@0:4' selector='supportedPPDOptionKeys'/>
+<method type64='v16@0:8' type='v8@0:4' selector='willShow'/>
+</informal_protocol>
+<informal_protocol name='PDEPlugIn'>
+<method type64='@32@0:8@16@24' type='@16@0:4@8@12' selector='PDEPanelsForType:withHostInfo:'/>
+<method type64='B24@0:8@16' type='B12@0:4@8' selector='initWithBundle:'/>
+</informal_protocol>
+<informal_protocol name='PDEPlugInCallbackProtocol'>
+<method type64='^{OpaquePMPrinter=}16@0:8' type='^{OpaquePMPrinter=}8@0:4' selector='PMPrinter'/>
+<method type64='^{OpaquePMPageFormat=}16@0:8' type='^{OpaquePMPageFormat=}8@0:4' selector='pageFormat'/>
+<method type64='v16@0:8' type='v8@0:4' selector='panelViewDidResize'/>
+<method type64='^{ppd_file_s=iiiiiiiiii*i^{ppd_emul_s}***********i^{ppd_group_s}i^{ppd_size_s}[2f][2f][4f]i^{ppd_const_s}i^*i^{ppd_profile_s}i^*i**ii^^{ppd_attr_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}^{_ppd_cache_s}}16@0:8' type='^{ppd_file_s=iiiiiiiiii*i^{ppd_emul_s}***********i^{ppd_group_s}i^{ppd_size_s}[2f][2f][4f]i^{ppd_const_s}i^*i^{ppd_profile_s}i^*i**ii^^{ppd_attr_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}^{_ppd_cache_s}}8@0:4' selector='ppdFile'/>
+<method type64='^{OpaquePMPrintSession=}16@0:8' type='^{OpaquePMPrintSession=}8@0:4' selector='printSession'/>
+<method type64='^{OpaquePMPrintSettings=}16@0:8' type='^{OpaquePMPrintSettings=}8@0:4' selector='printSettings'/>
+<method type64='B32@0:8@16@24' type='B16@0:4@8@12' selector='willChangePPDOptionKeyValue:ppdChoice:'/>
+</informal_protocol>
+</signatures>

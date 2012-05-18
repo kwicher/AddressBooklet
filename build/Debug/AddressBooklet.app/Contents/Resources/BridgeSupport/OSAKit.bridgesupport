@@ -1,0 +1,128 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/Carbon.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<constant name='OSAScriptErrorAppAddressKey' type='@'/>
+<constant name='OSAScriptErrorAppName' type='@'/>
+<constant name='OSAScriptErrorAppNameKey' type='@'/>
+<constant name='OSAScriptErrorBriefMessage' type='@'/>
+<constant name='OSAScriptErrorBriefMessageKey' type='@'/>
+<constant name='OSAScriptErrorExpectedTypeKey' type='@'/>
+<constant name='OSAScriptErrorMessage' type='@'/>
+<constant name='OSAScriptErrorMessageKey' type='@'/>
+<constant name='OSAScriptErrorNumber' type='@'/>
+<constant name='OSAScriptErrorNumberKey' type='@'/>
+<constant name='OSAScriptErrorOffendingObjectKey' type='@'/>
+<constant name='OSAScriptErrorPartialResultKey' type='@'/>
+<constant name='OSAScriptErrorRange' type='@'/>
+<constant name='OSAScriptErrorRangeKey' type='@'/>
+<constant name='OSAStorageApplicationBundleType' type='@'/>
+<constant name='OSAStorageApplicationType' type='@'/>
+<constant name='OSAStorageScriptBundleType' type='@'/>
+<constant name='OSAStorageScriptType' type='@'/>
+<constant name='OSAStorageTextType' type='@'/>
+<enum name='OSACompileIntoContext' value='2'/>
+<enum name='OSADontSetScriptLocation' value='16777216'/>
+<enum name='OSANull' value='0'/>
+<enum name='OSAPreventGetSource' value='1'/>
+<enum name='OSAScriptRecording' value='2'/>
+<enum name='OSAScriptRunning' value='1'/>
+<enum name='OSAScriptStopped' value='0'/>
+<enum name='OSAShowStartupScreen' value='536870912'/>
+<enum name='OSAStayOpenApplet' value='268435456'/>
+<enum name='OSASupportsAECoercion' value='8'/>
+<enum name='OSASupportsAESending' value='16'/>
+<enum name='OSASupportsCompiling' value='2'/>
+<enum name='OSASupportsConvenience' value='64'/>
+<enum name='OSASupportsDialects' value='128'/>
+<enum name='OSASupportsEventHandling' value='256'/>
+<enum name='OSASupportsGetSource' value='4'/>
+<enum name='OSASupportsRecording' value='32'/>
+<class name='OSALanguage'>
+<method selector='initWithComponent:'>
+<arg index='0' type_modifier='n'/>
+</method>
+<method selector='isThreadSafe'>
+<retval type='B'/>
+</method>
+</class>
+<class name='OSAScript'>
+<method selector='compileAndReturnError:'>
+<arg index='0' type_modifier='o'/>
+<retval type='B'/>
+</method>
+<method selector='compiledDataForType:usingStorageOptions:error:'>
+<arg index='2' type_modifier='o'/>
+</method>
+<method selector='executeAndReturnDisplayValue:error:'>
+<arg index='0' type_modifier='o'/>
+<arg index='1' type_modifier='o'/>
+</method>
+<method selector='executeAndReturnError:'>
+<arg index='0' type_modifier='o'/>
+</method>
+<method selector='executeAppleEvent:error:'>
+<arg index='1' type_modifier='o'/>
+</method>
+<method selector='executeHandlerWithName:arguments:error:'>
+<arg index='2' type_modifier='o'/>
+</method>
+<method selector='initWithCompiledData:error:'>
+<arg index='1' type_modifier='o'/>
+</method>
+<method selector='initWithContentsOfURL:error:'>
+<arg index='1' type_modifier='o'/>
+</method>
+<method selector='initWithContentsOfURL:language:error:'>
+<arg index='2' type_modifier='o'/>
+</method>
+<method selector='isCompiled'>
+<retval type='B'/>
+</method>
+<method selector='writeToURL:ofType:error:'>
+<arg index='2' type_modifier='o'/>
+<retval type='B'/>
+</method>
+<method selector='writeToURL:ofType:usingStorageOptions:error:'>
+<arg index='3' type_modifier='o'/>
+<retval type='B'/>
+</method>
+</class>
+<class name='OSAScriptController'>
+<method selector='isCompiling'>
+<retval type='B'/>
+</method>
+</class>
+<class name='OSAScriptView'>
+<method selector='indentsWrappedLines'>
+<retval type='B'/>
+</method>
+<method selector='setIndentsWrappedLines:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='setUsesScriptAssistant:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='setUsesTabs:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='setWrapsLines:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='usesScriptAssistant'>
+<retval type='B'/>
+</method>
+<method selector='usesTabs'>
+<retval type='B'/>
+</method>
+<method selector='wrapsLines'>
+<retval type='B'/>
+</method>
+</class>
+</signatures>

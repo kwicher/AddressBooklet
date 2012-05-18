@@ -1,0 +1,614 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<struct name='RArray' type64='{RArray=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;len&quot;q&quot;aux&quot;(?=&quot;capa&quot;q&quot;shared&quot;Q)&quot;ptr&quot;^Q}' type='{RArray=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;len&quot;l&quot;aux&quot;(?=&quot;capa&quot;l&quot;shared&quot;I)&quot;ptr&quot;^I}'/>
+<struct name='RBasic' type64='{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}' type='{RBasic=&quot;flags&quot;L&quot;klass&quot;I}'/>
+<struct name='RBignum' type64='{RBignum=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;sign&quot;c&quot;len&quot;q&quot;digits&quot;^v}' type='{RBignum=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;sign&quot;c&quot;len&quot;l&quot;digits&quot;^v}'/>
+<struct name='RClass' type64='{RClass=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;iv_tbl&quot;^{st_table}&quot;m_tbl&quot;^{st_table}&quot;super&quot;Q}' type='{RClass=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;iv_tbl&quot;^{st_table}&quot;m_tbl&quot;^{st_table}&quot;super&quot;I}'/>
+<struct name='RData' type64='{RData=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;dmark&quot;^v&quot;dfree&quot;^v&quot;data&quot;^v}' type='{RData=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;dmark&quot;^v&quot;dfree&quot;^v&quot;data&quot;^v}'/>
+<struct name='RFile' type64='{RFile=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;fptr&quot;^{rb_io_t}}' type='{RFile=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;fptr&quot;^{rb_io_t}}'/>
+<struct name='RFloat' type64='{RFloat=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;value&quot;d}' type='{RFloat=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;value&quot;d}'/>
+<struct name='RHash' type64='{RHash=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;tbl&quot;^{st_table}&quot;iter_lev&quot;i&quot;ifnone&quot;Q}' type='{RHash=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;tbl&quot;^{st_table}&quot;iter_lev&quot;i&quot;ifnone&quot;I}'/>
+<struct name='RObject' type64='{RObject=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;iv_tbl&quot;^{st_table}}' type='{RObject=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;iv_tbl&quot;^{st_table}}'/>
+<struct name='RRegexp' type64='{RRegexp=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;ptr&quot;^{re_pattern_buffer}&quot;len&quot;q&quot;str&quot;*}' type='{RRegexp=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;ptr&quot;^{re_pattern_buffer}&quot;len&quot;l&quot;str&quot;*}'/>
+<struct name='RString' type64='{RString=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;len&quot;q&quot;ptr&quot;*&quot;aux&quot;(?=&quot;capa&quot;q&quot;shared&quot;Q)}' type='{RString=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;len&quot;l&quot;ptr&quot;*&quot;aux&quot;(?=&quot;capa&quot;l&quot;shared&quot;I)}'/>
+<struct name='RStruct' type64='{RStruct=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;len&quot;q&quot;ptr&quot;^Q}' type='{RStruct=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;len&quot;l&quot;ptr&quot;^I}'/>
+<constant name='VALUE' type='i'/>
+<constant name='rb_Array' type='i'/>
+<constant name='rb_Float' type='i'/>
+<constant name='rb_Integer' type='i'/>
+<constant name='rb_String' type='i'/>
+<constant name='rb_alias' type='v'/>
+<constant name='rb_alias_variable' type='v'/>
+<constant name='rb_any_to_s' type='i'/>
+<constant name='rb_apply' type='i'/>
+<constant name='rb_ary_aref' type='i'/>
+<constant name='rb_ary_assoc' type='i'/>
+<constant name='rb_ary_clear' type='i'/>
+<constant name='rb_ary_cmp' type='i'/>
+<constant name='rb_ary_concat' type='i'/>
+<constant name='rb_ary_delete' type='i'/>
+<constant name='rb_ary_delete_at' type='i'/>
+<constant name='rb_ary_dup' type='i'/>
+<constant name='rb_ary_each' type='i'/>
+<constant name='rb_ary_entry' type='i'/>
+<constant name='rb_ary_freeze' type='i'/>
+<constant name='rb_ary_includes' type='i'/>
+<constant name='rb_ary_join' type='i'/>
+<constant name='rb_ary_new' type='i'/>
+<constant name='rb_ary_new2' type='i'/>
+<constant name='rb_ary_new3' type='i'/>
+<constant name='rb_ary_new4' type='i'/>
+<constant name='rb_ary_plus' type='i'/>
+<constant name='rb_ary_pop' type='i'/>
+<constant name='rb_ary_print_on' type='i'/>
+<constant name='rb_ary_push' type='i'/>
+<constant name='rb_ary_rassoc' type='i'/>
+<constant name='rb_ary_reverse' type='i'/>
+<constant name='rb_ary_shift' type='i'/>
+<constant name='rb_ary_sort' type='i'/>
+<constant name='rb_ary_sort_bang' type='i'/>
+<constant name='rb_ary_store' type='v'/>
+<constant name='rb_ary_to_ary' type='i'/>
+<constant name='rb_ary_to_s' type='i'/>
+<constant name='rb_ary_unshift' type='i'/>
+<constant name='rb_assoc_new' type='i'/>
+<constant name='rb_attr' type='v'/>
+<constant name='rb_attr_get' type='i'/>
+<constant name='rb_autoload' type='v'/>
+<constant name='rb_autoload_load' type='i'/>
+<constant name='rb_autoload_p' type='i'/>
+<constant name='rb_backref_get' type='i'/>
+<constant name='rb_backref_set' type='v'/>
+<constant name='rb_backtrace' type='v'/>
+<constant name='rb_big2dbl' type='d'/>
+<constant name='rb_big2long' type64='q' type='l'/>
+<constant name='rb_big2str' type='i'/>
+<constant name='rb_big2str0' type='i'/>
+<constant name='rb_big2ulong' type64='Q' type='L'/>
+<constant name='rb_big_2comp' type='v'/>
+<constant name='rb_big_and' type='i'/>
+<constant name='rb_big_clone' type='i'/>
+<constant name='rb_big_divmod' type='i'/>
+<constant name='rb_big_lshift' type='i'/>
+<constant name='rb_big_minus' type='i'/>
+<constant name='rb_big_mul' type='i'/>
+<constant name='rb_big_norm' type='i'/>
+<constant name='rb_big_or' type='i'/>
+<constant name='rb_big_plus' type='i'/>
+<constant name='rb_big_pow' type='i'/>
+<constant name='rb_big_rand' type='i'/>
+<constant name='rb_big_rshift' type='i'/>
+<constant name='rb_big_xor' type='i'/>
+<constant name='rb_block_call' type='i'/>
+<constant name='rb_block_dup' type='i'/>
+<constant name='rb_block_given_p' type='i'/>
+<constant name='rb_block_proc' type='i'/>
+<constant name='rb_call_super' type64='Q' type='L'/>
+<constant name='rb_catch' type='i'/>
+<constant name='rb_check_array_type' type='i'/>
+<constant name='rb_check_array_value' type='i'/>
+<constant name='rb_check_convert_type' type='i'/>
+<constant name='rb_check_frozen' type='v'/>
+<constant name='rb_check_inheritable' type='v'/>
+<constant name='rb_check_safe_obj' type='v'/>
+<constant name='rb_check_safe_str' type='v'/>
+<constant name='rb_check_string_type' type='i'/>
+<constant name='rb_check_to_integer' type='i'/>
+<constant name='rb_check_type' type='v'/>
+<constant name='rb_class2name' type='*'/>
+<constant name='rb_class_boot' type='i'/>
+<constant name='rb_class_inherited' type='i'/>
+<constant name='rb_class_inherited_p' type='i'/>
+<constant name='rb_class_init_copy' type='i'/>
+<constant name='rb_class_instance_methods' type='i'/>
+<constant name='rb_class_name' type='i'/>
+<constant name='rb_class_new' type='i'/>
+<constant name='rb_class_new_instance' type='i'/>
+<constant name='rb_class_path' type='i'/>
+<constant name='rb_class_private_instance_methods' type='i'/>
+<constant name='rb_class_protected_instance_methods' type='i'/>
+<constant name='rb_class_public_instance_methods' type='i'/>
+<constant name='rb_class_real' type='i'/>
+<constant name='rb_clear_cache' type='v'/>
+<constant name='rb_clear_cache_by_class' type='v'/>
+<constant name='rb_cmpint' type='i'/>
+<constant name='rb_compile_error' type='v'/>
+<constant name='rb_compile_error_append' type='v'/>
+<constant name='rb_const_defined' type='i'/>
+<constant name='rb_const_defined_at' type='i'/>
+<constant name='rb_const_defined_from' type='i'/>
+<constant name='rb_const_get' type='i'/>
+<constant name='rb_const_get_at' type='i'/>
+<constant name='rb_const_get_from' type='i'/>
+<constant name='rb_const_list' type='i'/>
+<constant name='rb_const_set' type='v'/>
+<constant name='rb_convert_type' type='i'/>
+<constant name='rb_copy_generic_ivar' type='v'/>
+<constant name='rb_cstr2inum' type='i'/>
+<constant name='rb_cstr_to_dbl' type='d'/>
+<constant name='rb_cstr_to_inum' type='i'/>
+<constant name='rb_cv_get' type='i'/>
+<constant name='rb_cv_set' type='v'/>
+<constant name='rb_cvar_defined' type='i'/>
+<constant name='rb_cvar_get' type='i'/>
+<constant name='rb_cvar_set' type='v'/>
+<constant name='rb_data_object_alloc' type64='Q' type='L'/>
+<constant name='rb_dbl2big' type='i'/>
+<constant name='rb_dbl_cmp' type='i'/>
+<constant name='rb_define_alias' type='v'/>
+<constant name='rb_define_alloc_func' type='v'/>
+<constant name='rb_define_attr' type='v'/>
+<constant name='rb_define_class' type64='Q' type='L'/>
+<constant name='rb_define_class_id' type='i'/>
+<constant name='rb_define_class_under' type64='Q' type='L'/>
+<constant name='rb_define_class_variable' type='v'/>
+<constant name='rb_define_const' type='v'/>
+<constant name='rb_define_global_const' type='v'/>
+<constant name='rb_define_global_function' type='v'/>
+<constant name='rb_define_hooked_variable' type='v'/>
+<constant name='rb_define_method' type='v'/>
+<constant name='rb_define_method_id' type='v'/>
+<constant name='rb_define_module' type64='Q' type='L'/>
+<constant name='rb_define_module_function' type='v'/>
+<constant name='rb_define_module_id' type='i'/>
+<constant name='rb_define_module_under' type64='Q' type='L'/>
+<constant name='rb_define_private_method' type='v'/>
+<constant name='rb_define_protected_method' type='v'/>
+<constant name='rb_define_readonly_variable' type='v'/>
+<constant name='rb_define_singleton_method' type='v'/>
+<constant name='rb_define_variable' type='v'/>
+<constant name='rb_define_virtual_variable' type='v'/>
+<constant name='rb_detach_process' type='i'/>
+<constant name='rb_during_gc' type='i'/>
+<constant name='rb_dvar_asgn' type='v'/>
+<constant name='rb_dvar_curr' type='i'/>
+<constant name='rb_dvar_defined' type='i'/>
+<constant name='rb_dvar_push' type='v'/>
+<constant name='rb_dvar_ref' type='i'/>
+<constant name='rb_each' type='i'/>
+<constant name='rb_ensure' type='i'/>
+<constant name='rb_enumeratorize' type='i'/>
+<constant name='rb_env_path_tainted' type='i'/>
+<constant name='rb_eql' type='i'/>
+<constant name='rb_equal' type64='Q' type='L'/>
+<constant name='rb_eval_cmd' type='i'/>
+<constant name='rb_eval_string' type64='Q' type='L'/>
+<constant name='rb_eval_string_protect' type64='Q' type='L'/>
+<constant name='rb_eval_string_wrap' type64='Q' type='L'/>
+<constant name='rb_exc_new' type='i'/>
+<constant name='rb_exc_new2' type='i'/>
+<constant name='rb_exc_new3' type='i'/>
+<constant name='rb_exec_end_proc' type='v'/>
+<constant name='rb_exec_recursive' type='i'/>
+<constant name='rb_extend_object' type='v'/>
+<constant name='rb_f_abort' type='i'/>
+<constant name='rb_f_exec' type='i'/>
+<constant name='rb_f_exit' type='i'/>
+<constant name='rb_f_global_variables' type='i'/>
+<constant name='rb_f_kill' type='i'/>
+<constant name='rb_f_lambda' type='i'/>
+<constant name='rb_f_require' type='i'/>
+<constant name='rb_f_sprintf' type='i'/>
+<constant name='rb_f_trace_var' type='i'/>
+<constant name='rb_f_untrace_var' type='i'/>
+<constant name='rb_file_const' type='v'/>
+<constant name='rb_file_directory_p' type='i'/>
+<constant name='rb_file_expand_path' type='i'/>
+<constant name='rb_file_open' type='i'/>
+<constant name='rb_file_s_expand_path' type='i'/>
+<constant name='rb_find_file' type='i'/>
+<constant name='rb_find_file_ext' type='i'/>
+<constant name='rb_fix2str' type='i'/>
+<constant name='rb_float_new' type='i'/>
+<constant name='rb_frame_last_func' type64='Q' type='L'/>
+<constant name='rb_frame_this_func' type64='Q' type='L'/>
+<constant name='rb_free_generic_ivar' type='v'/>
+<constant name='rb_frozen_class_p' type='v'/>
+<constant name='rb_funcall' type64='Q' type='L'/>
+<constant name='rb_funcall2' type64='Q' type='L'/>
+<constant name='rb_funcall3' type64='Q' type='L'/>
+<constant name='rb_funcall_rescue' type='i'/>
+<constant name='rb_gc' type='v'/>
+<constant name='rb_gc_call_finalizer_at_exit' type='v'/>
+<constant name='rb_gc_copy_finalizer' type='v'/>
+<constant name='rb_gc_disable' type='i'/>
+<constant name='rb_gc_enable' type='i'/>
+<constant name='rb_gc_finalize_deferred' type='v'/>
+<constant name='rb_gc_force_recycle' type='v'/>
+<constant name='rb_gc_mark' type='v'/>
+<constant name='rb_gc_mark_global_tbl' type='v'/>
+<constant name='rb_gc_mark_locations' type='v'/>
+<constant name='rb_gc_mark_maybe' type='v'/>
+<constant name='rb_gc_mark_parser' type='v'/>
+<constant name='rb_gc_mark_threads' type='v'/>
+<constant name='rb_gc_mark_trap_list' type='v'/>
+<constant name='rb_gc_register_address' type='v'/>
+<constant name='rb_gc_start' type='i'/>
+<constant name='rb_gc_unregister_address' type='v'/>
+<constant name='rb_generic_ivar_table' type='^{st_table=}'/>
+<constant name='rb_get_kcode' type='*'/>
+<constant name='rb_gets' type='i'/>
+<constant name='rb_glob' type='v'/>
+<constant name='rb_global_variable' type='v'/>
+<constant name='rb_globi' type='v'/>
+<constant name='rb_gv_get' type64='Q' type='L'/>
+<constant name='rb_gv_set' type64='Q' type='L'/>
+<constant name='rb_hash' type='i'/>
+<constant name='rb_hash_aref' type='i'/>
+<constant name='rb_hash_aset' type='i'/>
+<constant name='rb_hash_delete' type='i'/>
+<constant name='rb_hash_delete_if' type='i'/>
+<constant name='rb_hash_foreach' type='v'/>
+<constant name='rb_hash_freeze' type='i'/>
+<constant name='rb_hash_lookup' type='i'/>
+<constant name='rb_hash_new' type='i'/>
+<constant name='rb_id2name' type='*'/>
+<constant name='rb_id_attrset' type64='Q' type='L'/>
+<constant name='rb_include_module' type='v'/>
+<constant name='rb_inspect' type='i'/>
+<constant name='rb_inspecting_p' type='i'/>
+<constant name='rb_int2big' type='i'/>
+<constant name='rb_int2inum' type='i'/>
+<constant name='rb_intern' type64='Q' type='L'/>
+<constant name='rb_interrupt' type='v'/>
+<constant name='rb_io_addstr' type='i'/>
+<constant name='rb_io_binmode' type='i'/>
+<constant name='rb_io_close' type='i'/>
+<constant name='rb_io_eof' type='i'/>
+<constant name='rb_io_getc' type='i'/>
+<constant name='rb_io_gets' type='i'/>
+<constant name='rb_io_print' type='i'/>
+<constant name='rb_io_printf' type='i'/>
+<constant name='rb_io_puts' type='i'/>
+<constant name='rb_io_ungetc' type='i'/>
+<constant name='rb_io_write' type='i'/>
+<constant name='rb_is_class_id' type='i'/>
+<constant name='rb_is_const_id' type='i'/>
+<constant name='rb_is_instance_id' type='i'/>
+<constant name='rb_is_junk_id' type='i'/>
+<constant name='rb_is_local_id' type='i'/>
+<constant name='rb_iterate' type='i'/>
+<constant name='rb_iv_get' type='i'/>
+<constant name='rb_iv_set' type='i'/>
+<constant name='rb_ivar_defined' type='i'/>
+<constant name='rb_ivar_get' type='i'/>
+<constant name='rb_ivar_set' type='i'/>
+<constant name='rb_kcode_reset_option' type='v'/>
+<constant name='rb_kcode_set_option' type='v'/>
+<constant name='rb_lastline_get' type='i'/>
+<constant name='rb_lastline_set' type='v'/>
+<constant name='rb_length_by_each' type='i'/>
+<constant name='rb_load' type='v'/>
+<constant name='rb_load_file' type='v'/>
+<constant name='rb_load_protect' type='v'/>
+<constant name='rb_make_metaclass' type='i'/>
+<constant name='rb_mark_end_proc' type='v'/>
+<constant name='rb_mark_generic_ivar' type='v'/>
+<constant name='rb_mark_generic_ivar_tbl' type='v'/>
+<constant name='rb_mark_hash' type='v'/>
+<constant name='rb_mark_set' type='v'/>
+<constant name='rb_mark_tbl' type='v'/>
+<constant name='rb_marshal_dump' type='i'/>
+<constant name='rb_marshal_load' type='i'/>
+<constant name='rb_mem_clear' type='v'/>
+<constant name='rb_memcicmp' type='i'/>
+<constant name='rb_memcmp' type='i'/>
+<constant name='rb_memsearch' type64='q' type='l'/>
+<constant name='rb_method_boundp' type='i'/>
+<constant name='rb_method_dup' type='i'/>
+<constant name='rb_mod_ancestors' type='i'/>
+<constant name='rb_mod_class_variables' type='i'/>
+<constant name='rb_mod_const_at' type='^v'/>
+<constant name='rb_mod_const_missing' type='i'/>
+<constant name='rb_mod_const_of' type='^v'/>
+<constant name='rb_mod_constants' type='i'/>
+<constant name='rb_mod_include_p' type='i'/>
+<constant name='rb_mod_included_modules' type='i'/>
+<constant name='rb_mod_init_copy' type='i'/>
+<constant name='rb_mod_module_eval' type='i'/>
+<constant name='rb_mod_name' type='i'/>
+<constant name='rb_mod_remove_const' type='i'/>
+<constant name='rb_mod_remove_cvar' type='i'/>
+<constant name='rb_module_new' type='i'/>
+<constant name='rb_name_class' type='v'/>
+<constant name='rb_need_block' type='v'/>
+<constant name='rb_newobj' type64='Q' type='L'/>
+<constant name='rb_num2dbl' type='d'/>
+<constant name='rb_num2fix' type='i'/>
+<constant name='rb_num2long' type64='q' type='l'/>
+<constant name='rb_num2ulong' type64='Q' type='L'/>
+<constant name='rb_num_coerce_bin' type='i'/>
+<constant name='rb_num_coerce_cmp' type='i'/>
+<constant name='rb_num_coerce_relop' type='i'/>
+<constant name='rb_num_zerodiv' type='v'/>
+<constant name='rb_obj_alloc' type='i'/>
+<constant name='rb_obj_as_string' type='i'/>
+<constant name='rb_obj_call_init' type='v'/>
+<constant name='rb_obj_class' type='i'/>
+<constant name='rb_obj_classname' type='*'/>
+<constant name='rb_obj_clone' type='i'/>
+<constant name='rb_obj_dup' type='i'/>
+<constant name='rb_obj_freeze' type='i'/>
+<constant name='rb_obj_id' type='i'/>
+<constant name='rb_obj_infect' type='v'/>
+<constant name='rb_obj_init_copy' type='i'/>
+<constant name='rb_obj_instance_eval' type='i'/>
+<constant name='rb_obj_instance_variables' type='i'/>
+<constant name='rb_obj_is_instance_of' type='i'/>
+<constant name='rb_obj_is_kind_of' type='i'/>
+<constant name='rb_obj_method' type='i'/>
+<constant name='rb_obj_remove_instance_variable' type='i'/>
+<constant name='rb_obj_respond_to' type='i'/>
+<constant name='rb_obj_singleton_methods' type='i'/>
+<constant name='rb_obj_taint' type='i'/>
+<constant name='rb_obj_tainted' type='i'/>
+<constant name='rb_obj_untaint' type='i'/>
+<constant name='rb_p' type='v'/>
+<constant name='rb_parser_append_print' type='v'/>
+<constant name='rb_parser_while_loop' type='v'/>
+<constant name='rb_path2class' type='i'/>
+<constant name='rb_path_check' type='i'/>
+<constant name='rb_path_end' type='*'/>
+<constant name='rb_path_last_separator' type='*'/>
+<constant name='rb_path_next' type='*'/>
+<constant name='rb_path_skip_prefix' type='*'/>
+<constant name='rb_proc_call' type='i'/>
+<constant name='rb_proc_exec' type='i'/>
+<constant name='rb_proc_times' type='i'/>
+<constant name='rb_protect' type='i'/>
+<constant name='rb_protect_inspect' type='i'/>
+<constant name='rb_provide' type='v'/>
+<constant name='rb_provided' type='i'/>
+<constant name='rb_quad_pack' type='v'/>
+<constant name='rb_quad_unpack' type='i'/>
+<constant name='rb_range_beg_len' type='i'/>
+<constant name='rb_range_new' type='i'/>
+<constant name='rb_reg_last_match' type='i'/>
+<constant name='rb_reg_match' type='i'/>
+<constant name='rb_reg_match2' type='i'/>
+<constant name='rb_reg_match_last' type='i'/>
+<constant name='rb_reg_match_post' type='i'/>
+<constant name='rb_reg_match_pre' type='i'/>
+<constant name='rb_reg_new' type='i'/>
+<constant name='rb_reg_nth_defined' type='i'/>
+<constant name='rb_reg_nth_match' type='i'/>
+<constant name='rb_reg_options' type='i'/>
+<constant name='rb_remove_method' type='v'/>
+<constant name='rb_require' type='i'/>
+<constant name='rb_require_safe' type='i'/>
+<constant name='rb_rescue' type='i'/>
+<constant name='rb_rescue2' type='i'/>
+<constant name='rb_respond_to' type='i'/>
+<constant name='rb_scan_args' type='i'/>
+<constant name='rb_secure' type='v'/>
+<constant name='rb_secure_update' type='v'/>
+<constant name='rb_set_class_path' type='v'/>
+<constant name='rb_set_end_proc' type='v'/>
+<constant name='rb_set_kcode' type='v'/>
+<constant name='rb_set_safe_level' type='v'/>
+<constant name='rb_singleton_class' type='i'/>
+<constant name='rb_singleton_class_attached' type='v'/>
+<constant name='rb_singleton_class_clone' type='i'/>
+<constant name='rb_source_filename' type='*'/>
+<constant name='rb_str2cstr' type='*'/>
+<constant name='rb_str2inum' type='i'/>
+<constant name='rb_str_append' type='i'/>
+<constant name='rb_str_associate' type='v'/>
+<constant name='rb_str_associated' type='i'/>
+<constant name='rb_str_buf_append' type='i'/>
+<constant name='rb_str_buf_cat' type='i'/>
+<constant name='rb_str_buf_cat2' type='i'/>
+<constant name='rb_str_buf_new' type='i'/>
+<constant name='rb_str_buf_new2' type='i'/>
+<constant name='rb_str_cat' type='i'/>
+<constant name='rb_str_cat2' type='i'/>
+<constant name='rb_str_cmp' type='i'/>
+<constant name='rb_str_concat' type='i'/>
+<constant name='rb_str_dump' type='i'/>
+<constant name='rb_str_dup' type='i'/>
+<constant name='rb_str_dup_frozen' type='i'/>
+<constant name='rb_str_format' type='i'/>
+<constant name='rb_str_freeze' type='i'/>
+<constant name='rb_str_hash' type='i'/>
+<constant name='rb_str_inspect' type='i'/>
+<constant name='rb_str_intern' type='i'/>
+<constant name='rb_str_locktmp' type='i'/>
+<constant name='rb_str_modify' type='v'/>
+<constant name='rb_str_new' type='i'/>
+<constant name='rb_str_new2' type='i'/>
+<constant name='rb_str_new3' type='i'/>
+<constant name='rb_str_new4' type='i'/>
+<constant name='rb_str_new5' type='i'/>
+<constant name='rb_str_plus' type='i'/>
+<constant name='rb_str_resize' type='i'/>
+<constant name='rb_str_set_len' type='v'/>
+<constant name='rb_str_setter' type='v'/>
+<constant name='rb_str_split' type='i'/>
+<constant name='rb_str_substr' type='i'/>
+<constant name='rb_str_times' type='i'/>
+<constant name='rb_str_tmp_new' type='i'/>
+<constant name='rb_str_to_dbl' type='d'/>
+<constant name='rb_str_to_inum' type='i'/>
+<constant name='rb_str_to_str' type64='Q' type='L'/>
+<constant name='rb_str_unlocktmp' type='i'/>
+<constant name='rb_str_update' type='v'/>
+<constant name='rb_str_upto' type='i'/>
+<constant name='rb_string_value' type64='Q' type='L'/>
+<constant name='rb_string_value_cstr' type='*'/>
+<constant name='rb_string_value_ptr' type='*'/>
+<constant name='rb_struct_alloc' type='i'/>
+<constant name='rb_struct_aref' type='i'/>
+<constant name='rb_struct_aset' type='i'/>
+<constant name='rb_struct_define' type='i'/>
+<constant name='rb_struct_getmember' type='i'/>
+<constant name='rb_struct_iv_get' type='i'/>
+<constant name='rb_struct_members' type='i'/>
+<constant name='rb_struct_new' type='i'/>
+<constant name='rb_struct_s_members' type='i'/>
+<constant name='rb_svar' type='^i'/>
+<constant name='rb_sym_all_symbols' type='i'/>
+<constant name='rb_sym_interned_p' type='i'/>
+<constant name='rb_symname_p' type='i'/>
+<constant name='rb_sys_warning' type='v'/>
+<constant name='rb_syswait' type='v'/>
+<constant name='rb_tainted_str_new' type='i'/>
+<constant name='rb_tainted_str_new2' type='i'/>
+<constant name='rb_thread_alive_p' type='i'/>
+<constant name='rb_thread_alone' type='i'/>
+<constant name='rb_thread_atfork' type='v'/>
+<constant name='rb_thread_create' type='i'/>
+<constant name='rb_thread_current' type='i'/>
+<constant name='rb_thread_fd_close' type='v'/>
+<constant name='rb_thread_fd_writable' type='i'/>
+<constant name='rb_thread_interrupt' type='v'/>
+<constant name='rb_thread_kill' type='i'/>
+<constant name='rb_thread_local_aref' type='i'/>
+<constant name='rb_thread_local_aset' type='i'/>
+<constant name='rb_thread_main' type='i'/>
+<constant name='rb_thread_polling' type='v'/>
+<constant name='rb_thread_run' type='i'/>
+<constant name='rb_thread_schedule' type='v'/>
+<constant name='rb_thread_select' type='i'/>
+<constant name='rb_thread_signal_exit' type='v'/>
+<constant name='rb_thread_signal_raise' type='v'/>
+<constant name='rb_thread_sleep' type='v'/>
+<constant name='rb_thread_sleep_forever' type='v'/>
+<constant name='rb_thread_start_timer' type='v'/>
+<constant name='rb_thread_stop' type='i'/>
+<constant name='rb_thread_stop_timer' type='v'/>
+<constant name='rb_thread_trap_eval' type='v'/>
+<constant name='rb_thread_wait_fd' type='v'/>
+<constant name='rb_thread_wait_for' type='v'/>
+<constant name='rb_thread_wakeup' type='i'/>
+<constant name='rb_thread_wakeup_alive' type='i'/>
+<constant name='rb_time_new' type='i'/>
+<constant name='rb_to_id' type64='Q' type='L'/>
+<constant name='rb_to_int' type='i'/>
+<constant name='rb_trap_exec' type='v'/>
+<constant name='rb_trap_exit' type='v'/>
+<constant name='rb_uint2big' type='i'/>
+<constant name='rb_uint2inum' type='i'/>
+<constant name='rb_undef' type='v'/>
+<constant name='rb_undef_alloc_func' type='v'/>
+<constant name='rb_undef_method' type='v'/>
+<constant name='rb_values_at' type='i'/>
+<constant name='rb_waitpid' type='i'/>
+<constant name='rb_warn' type='v'/>
+<constant name='rb_warning' type='v'/>
+<constant name='rb_write_error' type='v'/>
+<constant name='rb_write_error2' type='v'/>
+<constant name='rb_yield' type='i'/>
+<constant name='rb_yield_splat' type='i'/>
+<constant name='rb_yield_values' type='i'/>
+<constant name='ruby_brace_expand' type='i'/>
+<constant name='ruby_brace_glob' type='i'/>
+<constant name='ruby_cleanup' type='i'/>
+<constant name='ruby_default_signal' type='v'/>
+<constant name='ruby_exec' type='i'/>
+<constant name='ruby_finalize' type='v'/>
+<constant name='ruby_glob' type='i'/>
+<constant name='ruby_globi' type='i'/>
+<constant name='ruby_incpush' type='v'/>
+<constant name='ruby_init' type='v'/>
+<constant name='ruby_init_loadpath' type='v'/>
+<constant name='ruby_load_script' type='v'/>
+<constant name='ruby_options' type='v'/>
+<constant name='ruby_parser_stack_on_heap' type='i'/>
+<constant name='ruby_process_options' type='v'/>
+<constant name='ruby_prog_init' type='v'/>
+<constant name='ruby_script' type='v'/>
+<constant name='ruby_set_argv' type='v'/>
+<constant name='ruby_set_current_source' type='v'/>
+<constant name='ruby_show_copyright' type='v'/>
+<constant name='ruby_show_version' type='v'/>
+<constant name='ruby_signal_name' type='*'/>
+<constant name='ruby_stack_check' type='i'/>
+<constant name='ruby_stack_length' type64='Q' type='L'/>
+<constant name='ruby_yyparse' type='i'/>
+<constant name='st_foreach_safe' type='v'/>
+<enum name='ELTS_SHARED' value='8192'/>
+<enum name='FIXNUM_FLAG' value='1'/>
+<enum name='FIXNUM_MAX' value64='4611686018427387903' value='1073741823'/>
+<enum name='FL_EXIVAR' value='512'/>
+<enum name='FL_FINALIZE' value='128'/>
+<enum name='FL_FREEZE' value='1024'/>
+<enum name='FL_MARK' value='64'/>
+<enum name='FL_SINGLETON' value='2048'/>
+<enum name='FL_TAINT' value='256'/>
+<enum name='FL_UMASK' value='522240'/>
+<enum name='FL_USER0' value='2048'/>
+<enum name='FL_USER1' value='4096'/>
+<enum name='FL_USER2' value='8192'/>
+<enum name='FL_USER3' value='16384'/>
+<enum name='FL_USER4' value='32768'/>
+<enum name='FL_USER5' value='65536'/>
+<enum name='FL_USER6' value='131072'/>
+<enum name='FL_USER7' value='262144'/>
+<enum name='FL_USHIFT' value='11'/>
+<enum name='HAVE_RB_DEFINE_ALLOC_FUNC' value='1'/>
+<enum name='ID_ALLOCATOR' value='1'/>
+<enum name='IMMEDIATE_MASK' value='3'/>
+<enum name='NORETURN_STYLE_NEW' value='1'/>
+<enum name='RB_CVAR_SET_4ARGS' value='1'/>
+<enum name='SYMBOL_FLAG' value='14'/>
+<enum name='T_ARRAY' value='9'/>
+<enum name='T_BIGNUM' value='13'/>
+<enum name='T_BLKTAG' value='59'/>
+<enum name='T_CLASS' value='3'/>
+<enum name='T_DATA' value='34'/>
+<enum name='T_FALSE' value='33'/>
+<enum name='T_FILE' value='14'/>
+<enum name='T_FIXNUM' value='10'/>
+<enum name='T_FLOAT' value='6'/>
+<enum name='T_HASH' value='11'/>
+<enum name='T_ICLASS' value='4'/>
+<enum name='T_MASK' value='63'/>
+<enum name='T_MATCH' value='35'/>
+<enum name='T_MODULE' value='5'/>
+<enum name='T_NIL' value='1'/>
+<enum name='T_NODE' value='63'/>
+<enum name='T_NONE' value='0'/>
+<enum name='T_OBJECT' value='2'/>
+<enum name='T_REGEXP' value='8'/>
+<enum name='T_SCOPE' value='62'/>
+<enum name='T_STRING' value='7'/>
+<enum name='T_STRUCT' value='12'/>
+<enum name='T_SYMBOL' value='36'/>
+<enum name='T_TRUE' value='32'/>
+<enum name='T_UNDEF' value='60'/>
+<enum name='T_VARMAP' value='61'/>
+<function name='RBApplicationInit'>
+<arg type='*'/>
+<arg type='i'/>
+<arg type='^*'/>
+<arg type='@'/>
+<retval type='i'/>
+</function>
+<function name='RBApplicationMain'>
+<arg type='*'/>
+<arg type='i'/>
+<arg type='^*'/>
+<retval type='i'/>
+</function>
+<function name='RBBundleInit'>
+<arg type='*'/>
+<arg type='#'/>
+<arg type='@'/>
+<retval type='i'/>
+</function>
+<function name='RBIsRubyThreadingSupported'>
+<retval type='B'/>
+</function>
+<function name='RBRubyCocoaInit'/>
+<function name='rb_genrand_int32'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_genrand_real'>
+<retval type='d'/>
+</function>
+<function name='ruby_init_stack'>
+<arg type='^i'/>
+</function>
+</signatures>

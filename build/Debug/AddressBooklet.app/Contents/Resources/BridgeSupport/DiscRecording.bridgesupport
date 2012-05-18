@@ -1,0 +1,1380 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/DiskArbitration.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<struct name='DRFileForkSizeInfo' type='{DRFileForkSizeInfo=&quot;fork&quot;I&quot;query&quot;I&quot;size&quot;Q}'/>
+<struct name='DRFileProductionInfo' type='{DRFileProductionInfo=&quot;requestedAddress&quot;Q&quot;buffer&quot;^v&quot;reqCount&quot;I&quot;actCount&quot;I&quot;blockSize&quot;I&quot;fork&quot;I}'/>
+<struct name='DRRefConCallbacks' type64='{DRRefConCallbacks=&quot;version&quot;Q&quot;retain&quot;^?&quot;release&quot;^?}' type='{DRRefConCallbacks=&quot;version&quot;L&quot;retain&quot;^?&quot;release&quot;^?}'/>
+<struct name='DRTrackProductionInfo' type='{DRTrackProductionInfo=&quot;buffer&quot;^v&quot;reqCount&quot;I&quot;actCount&quot;I&quot;flags&quot;I&quot;blockSize&quot;I&quot;requestedAddress&quot;Q}'/>
+<cftype name='DRBurnRef' gettypeid_func='DRBurnGetTypeID' type='^{__DRBurn=}'/>
+<cftype name='DRCDTextBlockRef' gettypeid_func='DRCDTextBlockGetTypeID' type='^{__DRCDTextBlock=}'/>
+<cftype name='DRDeviceRef' gettypeid_func='DRDeviceGetTypeID' type='^{__DRDevice=}'/>
+<cftype name='DREraseRef' gettypeid_func='DREraseGetTypeID' type='^{__DRErase=}'/>
+<cftype name='DRFileRef' gettypeid_func='DRFileGetTypeID' type='^{__DRFile=}'/>
+<cftype name='DRFolderRef' gettypeid_func='DRFolderGetTypeID' type='^{__DRFolder=}'/>
+<cftype name='DRNotificationCenterRef' gettypeid_func='DRNotificationCenterGetTypeID' type='^{__DRNotificationCenter=}'/>
+<cftype name='DRTrackRef' gettypeid_func='DRTrackGetTypeID' type='^{__DRTrack=}'/>
+<constant name='DRAbstractFile' type='@'/>
+<constant name='DRAccessDate' type='@'/>
+<constant name='DRAllFilesystems' type='@'/>
+<constant name='DRApplicationIdentifier' type='@'/>
+<constant name='DRAttributeModificationDate' type='@'/>
+<constant name='DRAudioFourChannelKey' type='@'/>
+<constant name='DRAudioPreEmphasisKey' type='@'/>
+<constant name='DRBackupDate' type='@'/>
+<constant name='DRBibliographicFile' type='@'/>
+<constant name='DRBlockSize' type='@'/>
+<constant name='DRBlockSizeKey' type='@'/>
+<constant name='DRBlockTypeKey' type='@'/>
+<constant name='DRBurnAppendableKey' type='@'/>
+<constant name='DRBurnCompletionActionEject' type='@'/>
+<constant name='DRBurnCompletionActionKey' type='@'/>
+<constant name='DRBurnCompletionActionMount' type='@'/>
+<constant name='DRBurnDoubleLayerL0DataZoneBlocksKey' type='@'/>
+<constant name='DRBurnFailureActionEject' type='@'/>
+<constant name='DRBurnFailureActionKey' type='@'/>
+<constant name='DRBurnFailureActionNone' type='@'/>
+<constant name='DRBurnOverwriteDiscKey' type='@'/>
+<constant name='DRBurnRequestedSpeedKey' type='@'/>
+<constant name='DRBurnStatusChangedNotification' type='@'/>
+<constant name='DRBurnStrategyBDDAO' type='@'/>
+<constant name='DRBurnStrategyCDSAO' type='@'/>
+<constant name='DRBurnStrategyCDTAO' type='@'/>
+<constant name='DRBurnStrategyDVDDAO' type='@'/>
+<constant name='DRBurnStrategyIsRequiredKey' type='@'/>
+<constant name='DRBurnStrategyKey' type='@'/>
+<constant name='DRBurnTestingKey' type='@'/>
+<constant name='DRBurnUnderrunProtectionKey' type='@'/>
+<constant name='DRBurnVerifyDiscKey' type='@'/>
+<constant name='DRCDTextArrangerKey' type='@'/>
+<constant name='DRCDTextCharacterCodeKey' type='@'/>
+<constant name='DRCDTextClosedKey' type='@'/>
+<constant name='DRCDTextComposerKey' type='@'/>
+<constant name='DRCDTextCopyrightAssertedForNamesKey' type='@'/>
+<constant name='DRCDTextCopyrightAssertedForSpecialMessagesKey' type='@'/>
+<constant name='DRCDTextCopyrightAssertedForTitlesKey' type='@'/>
+<constant name='DRCDTextDiscIdentKey' type='@'/>
+<constant name='DRCDTextGenreCodeKey' type='@'/>
+<constant name='DRCDTextGenreKey' type='@'/>
+<constant name='DRCDTextKey' type='@'/>
+<constant name='DRCDTextLanguageKey' type='@'/>
+<constant name='DRCDTextMCNISRCKey' type='@'/>
+<constant name='DRCDTextNSStringEncodingKey' type='@'/>
+<constant name='DRCDTextPerformerKey' type='@'/>
+<constant name='DRCDTextSizeKey' type='@'/>
+<constant name='DRCDTextSongwriterKey' type='@'/>
+<constant name='DRCDTextSpecialMessageKey' type='@'/>
+<constant name='DRCDTextTOC2Key' type='@'/>
+<constant name='DRCDTextTOCKey' type='@'/>
+<constant name='DRCDTextTitleKey' type='@'/>
+<constant name='DRContentModificationDate' type='@'/>
+<constant name='DRCopyrightFile' type='@'/>
+<constant name='DRCreationDate' type='@'/>
+<constant name='DRDVDCopyrightInfoKey' type='@'/>
+<constant name='DRDVDTimestampKey' type='@'/>
+<constant name='DRDataFormKey' type='@'/>
+<constant name='DRDataPreparer' type='@'/>
+<constant name='DRDefaultDate' type='@'/>
+<constant name='DRDeviceAppearedNotification' type='@'/>
+<constant name='DRDeviceBurnSpeedBD1x' type='f'/>
+<constant name='DRDeviceBurnSpeedCD1x' type='f'/>
+<constant name='DRDeviceBurnSpeedDVD1x' type='f'/>
+<constant name='DRDeviceBurnSpeedHDDVD1x' type='f'/>
+<constant name='DRDeviceBurnSpeedMax' type='f'/>
+<constant name='DRDeviceBurnSpeedsKey' type='@'/>
+<constant name='DRDeviceCanTestWriteCDKey' type='@'/>
+<constant name='DRDeviceCanTestWriteDVDKey' type='@'/>
+<constant name='DRDeviceCanUnderrunProtectCDKey' type='@'/>
+<constant name='DRDeviceCanUnderrunProtectDVDKey' type='@'/>
+<constant name='DRDeviceCanWriteBDKey' type='@'/>
+<constant name='DRDeviceCanWriteBDREKey' type='@'/>
+<constant name='DRDeviceCanWriteBDRKey' type='@'/>
+<constant name='DRDeviceCanWriteCDKey' type='@'/>
+<constant name='DRDeviceCanWriteCDRKey' type='@'/>
+<constant name='DRDeviceCanWriteCDRWKey' type='@'/>
+<constant name='DRDeviceCanWriteCDRawKey' type='@'/>
+<constant name='DRDeviceCanWriteCDSAOKey' type='@'/>
+<constant name='DRDeviceCanWriteCDTAOKey' type='@'/>
+<constant name='DRDeviceCanWriteCDTextKey' type='@'/>
+<constant name='DRDeviceCanWriteDVDDAOKey' type='@'/>
+<constant name='DRDeviceCanWriteDVDKey' type='@'/>
+<constant name='DRDeviceCanWriteDVDPlusRDoubleLayerKey' type='@'/>
+<constant name='DRDeviceCanWriteDVDPlusRKey' type='@'/>
+<constant name='DRDeviceCanWriteDVDPlusRWDoubleLayerKey' type='@'/>
+<constant name='DRDeviceCanWriteDVDPlusRWKey' type='@'/>
+<constant name='DRDeviceCanWriteDVDRAMKey' type='@'/>
+<constant name='DRDeviceCanWriteDVDRDualLayerKey' type='@'/>
+<constant name='DRDeviceCanWriteDVDRKey' type='@'/>
+<constant name='DRDeviceCanWriteDVDRWDualLayerKey' type='@'/>
+<constant name='DRDeviceCanWriteDVDRWKey' type='@'/>
+<constant name='DRDeviceCanWriteHDDVDKey' type='@'/>
+<constant name='DRDeviceCanWriteHDDVDRAMKey' type='@'/>
+<constant name='DRDeviceCanWriteHDDVDRDualLayerKey' type='@'/>
+<constant name='DRDeviceCanWriteHDDVDRKey' type='@'/>
+<constant name='DRDeviceCanWriteHDDVDRWDualLayerKey' type='@'/>
+<constant name='DRDeviceCanWriteHDDVDRWKey' type='@'/>
+<constant name='DRDeviceCanWriteISRCKey' type='@'/>
+<constant name='DRDeviceCanWriteIndexPointsKey' type='@'/>
+<constant name='DRDeviceCanWriteKey' type='@'/>
+<constant name='DRDeviceCurrentWriteSpeedKey' type='@'/>
+<constant name='DRDeviceDisappearedNotification' type='@'/>
+<constant name='DRDeviceFirmwareRevisionKey' type='@'/>
+<constant name='DRDeviceIORegistryEntryPathKey' type='@'/>
+<constant name='DRDeviceIsBusyKey' type='@'/>
+<constant name='DRDeviceIsTrayOpenKey' type='@'/>
+<constant name='DRDeviceLoadingMechanismCanEjectKey' type='@'/>
+<constant name='DRDeviceLoadingMechanismCanInjectKey' type='@'/>
+<constant name='DRDeviceLoadingMechanismCanOpenKey' type='@'/>
+<constant name='DRDeviceMaximumWriteSpeedKey' type='@'/>
+<constant name='DRDeviceMediaBSDNameKey' type='@'/>
+<constant name='DRDeviceMediaBlocksFreeKey' type='@'/>
+<constant name='DRDeviceMediaBlocksOverwritableKey' type='@'/>
+<constant name='DRDeviceMediaBlocksUsedKey' type='@'/>
+<constant name='DRDeviceMediaClassBD' type='@'/>
+<constant name='DRDeviceMediaClassCD' type='@'/>
+<constant name='DRDeviceMediaClassDVD' type='@'/>
+<constant name='DRDeviceMediaClassHDDVD' type='@'/>
+<constant name='DRDeviceMediaClassKey' type='@'/>
+<constant name='DRDeviceMediaClassUnknown' type='@'/>
+<constant name='DRDeviceMediaDoubleLayerL0DataZoneBlocksKey' type='@'/>
+<constant name='DRDeviceMediaFreeSpaceKey' type='@'/>
+<constant name='DRDeviceMediaInfoKey' type='@'/>
+<constant name='DRDeviceMediaIsAppendableKey' type='@'/>
+<constant name='DRDeviceMediaIsBlankKey' type='@'/>
+<constant name='DRDeviceMediaIsErasableKey' type='@'/>
+<constant name='DRDeviceMediaIsOverwritableKey' type='@'/>
+<constant name='DRDeviceMediaIsReservedKey' type='@'/>
+<constant name='DRDeviceMediaOverwritableSpaceKey' type='@'/>
+<constant name='DRDeviceMediaSessionCountKey' type='@'/>
+<constant name='DRDeviceMediaStateInTransition' type='@'/>
+<constant name='DRDeviceMediaStateKey' type='@'/>
+<constant name='DRDeviceMediaStateMediaPresent' type='@'/>
+<constant name='DRDeviceMediaStateNone' type='@'/>
+<constant name='DRDeviceMediaTrackCountKey' type='@'/>
+<constant name='DRDeviceMediaTypeBDR' type='@'/>
+<constant name='DRDeviceMediaTypeBDRE' type='@'/>
+<constant name='DRDeviceMediaTypeBDROM' type='@'/>
+<constant name='DRDeviceMediaTypeCDR' type='@'/>
+<constant name='DRDeviceMediaTypeCDROM' type='@'/>
+<constant name='DRDeviceMediaTypeCDRW' type='@'/>
+<constant name='DRDeviceMediaTypeDVDPlusR' type='@'/>
+<constant name='DRDeviceMediaTypeDVDPlusRDoubleLayer' type='@'/>
+<constant name='DRDeviceMediaTypeDVDPlusRW' type='@'/>
+<constant name='DRDeviceMediaTypeDVDPlusRWDoubleLayer' type='@'/>
+<constant name='DRDeviceMediaTypeDVDR' type='@'/>
+<constant name='DRDeviceMediaTypeDVDRAM' type='@'/>
+<constant name='DRDeviceMediaTypeDVDRDualLayer' type='@'/>
+<constant name='DRDeviceMediaTypeDVDROM' type='@'/>
+<constant name='DRDeviceMediaTypeDVDRW' type='@'/>
+<constant name='DRDeviceMediaTypeDVDRWDualLayer' type='@'/>
+<constant name='DRDeviceMediaTypeHDDVDR' type='@'/>
+<constant name='DRDeviceMediaTypeHDDVDRAM' type='@'/>
+<constant name='DRDeviceMediaTypeHDDVDRDualLayer' type='@'/>
+<constant name='DRDeviceMediaTypeHDDVDROM' type='@'/>
+<constant name='DRDeviceMediaTypeHDDVDRW' type='@'/>
+<constant name='DRDeviceMediaTypeHDDVDRWDualLayer' type='@'/>
+<constant name='DRDeviceMediaTypeKey' type='@'/>
+<constant name='DRDeviceMediaTypeUnknown' type='@'/>
+<constant name='DRDeviceMediaUsedSpaceKey' type='@'/>
+<constant name='DRDevicePhysicalInterconnectATAPI' type='@'/>
+<constant name='DRDevicePhysicalInterconnectFibreChannel' type='@'/>
+<constant name='DRDevicePhysicalInterconnectFireWire' type='@'/>
+<constant name='DRDevicePhysicalInterconnectKey' type='@'/>
+<constant name='DRDevicePhysicalInterconnectLocationExternal' type='@'/>
+<constant name='DRDevicePhysicalInterconnectLocationInternal' type='@'/>
+<constant name='DRDevicePhysicalInterconnectLocationKey' type='@'/>
+<constant name='DRDevicePhysicalInterconnectLocationUnknown' type='@'/>
+<constant name='DRDevicePhysicalInterconnectSCSI' type='@'/>
+<constant name='DRDevicePhysicalInterconnectUSB' type='@'/>
+<constant name='DRDeviceProductNameKey' type='@'/>
+<constant name='DRDeviceStatusChangedNotification' type='@'/>
+<constant name='DRDeviceSupportLevelAppleShipping' type='@'/>
+<constant name='DRDeviceSupportLevelAppleSupported' type='@'/>
+<constant name='DRDeviceSupportLevelKey' type='@'/>
+<constant name='DRDeviceSupportLevelNone' type='@'/>
+<constant name='DRDeviceSupportLevelUnsupported' type='@'/>
+<constant name='DRDeviceSupportLevelVendorSupported' type='@'/>
+<constant name='DRDeviceTrackInfoKey' type='@'/>
+<constant name='DRDeviceTrackRefsKey' type='@'/>
+<constant name='DRDeviceVendorNameKey' type='@'/>
+<constant name='DRDeviceWriteBufferSizeKey' type='@'/>
+<constant name='DRDeviceWriteCapabilitiesKey' type='@'/>
+<constant name='DREffectiveDate' type='@'/>
+<constant name='DREraseStatusChangedNotification' type='@'/>
+<constant name='DREraseTypeComplete' type='@'/>
+<constant name='DREraseTypeKey' type='@'/>
+<constant name='DREraseTypeQuick' type='@'/>
+<constant name='DRErrorStatusAdditionalSenseStringKey' type='@'/>
+<constant name='DRErrorStatusErrorInfoStringKey' type='@'/>
+<constant name='DRErrorStatusErrorKey' type='@'/>
+<constant name='DRErrorStatusErrorStringKey' type='@'/>
+<constant name='DRErrorStatusKey' type='@'/>
+<constant name='DRErrorStatusSenseCodeStringKey' type='@'/>
+<constant name='DRErrorStatusSenseKey' type='@'/>
+<constant name='DRExpirationDate' type='@'/>
+<constant name='DRFreeBlocksKey' type='@'/>
+<constant name='DRHFSPlus' type='@'/>
+<constant name='DRHFSPlusCatalogNodeID' type='@'/>
+<constant name='DRHFSPlusTextEncodingHint' type='@'/>
+<constant name='DRISO9660' type='@'/>
+<constant name='DRISO9660LevelOne' type='@'/>
+<constant name='DRISO9660LevelTwo' type='@'/>
+<constant name='DRISO9660VersionNumber' type='@'/>
+<constant name='DRISOLevel' type='@'/>
+<constant name='DRISOMacExtensions' type='@'/>
+<constant name='DRISORockRidgeExtensions' type='@'/>
+<constant name='DRIndexPointsKey' type='@'/>
+<constant name='DRInvisible' type='@'/>
+<constant name='DRJoliet' type='@'/>
+<constant name='DRLinkTypeFinderAlias' type='@'/>
+<constant name='DRLinkTypeHardLink' type='@'/>
+<constant name='DRLinkTypeSymbolicLink' type='@'/>
+<constant name='DRMacExtendedFinderFlags' type='@'/>
+<constant name='DRMacFileCreator' type='@'/>
+<constant name='DRMacFileType' type='@'/>
+<constant name='DRMacFinderFlags' type='@'/>
+<constant name='DRMacFinderHideExtension' type='@'/>
+<constant name='DRMacIconLocation' type='@'/>
+<constant name='DRMacScrollPosition' type='@'/>
+<constant name='DRMacWindowBounds' type='@'/>
+<constant name='DRMacWindowView' type='@'/>
+<constant name='DRMaxBurnSpeedKey' type='@'/>
+<constant name='DRMediaCatalogNumberKey' type='@'/>
+<constant name='DRNextWritableAddressKey' type='@'/>
+<constant name='DRPosixFileMode' type='@'/>
+<constant name='DRPosixGID' type='@'/>
+<constant name='DRPosixUID' type='@'/>
+<constant name='DRPreGapIsRequiredKey' type='@'/>
+<constant name='DRPreGapLengthKey' type='@'/>
+<constant name='DRPublisher' type='@'/>
+<constant name='DRRecordingDate' type='@'/>
+<constant name='DRSCMSCopyrightFree' type='@'/>
+<constant name='DRSCMSCopyrightProtectedCopy' type='@'/>
+<constant name='DRSCMSCopyrightProtectedOriginal' type='@'/>
+<constant name='DRSerialCopyManagementStateKey' type='@'/>
+<constant name='DRSessionFormatKey' type='@'/>
+<constant name='DRSessionNumberKey' type='@'/>
+<constant name='DRStatusCurrentSessionKey' type='@'/>
+<constant name='DRStatusCurrentSpeedKey' type='@'/>
+<constant name='DRStatusCurrentTrackKey' type='@'/>
+<constant name='DRStatusEraseTypeKey' type='@'/>
+<constant name='DRStatusPercentCompleteKey' type='@'/>
+<constant name='DRStatusProgressCurrentKPS' type='@'/>
+<constant name='DRStatusProgressCurrentXFactor' type='@'/>
+<constant name='DRStatusProgressInfoKey' type='@'/>
+<constant name='DRStatusStateDone' type='@'/>
+<constant name='DRStatusStateErasing' type='@'/>
+<constant name='DRStatusStateFailed' type='@'/>
+<constant name='DRStatusStateFinishing' type='@'/>
+<constant name='DRStatusStateKey' type='@'/>
+<constant name='DRStatusStateNone' type='@'/>
+<constant name='DRStatusStatePreparing' type='@'/>
+<constant name='DRStatusStateSessionClose' type='@'/>
+<constant name='DRStatusStateSessionOpen' type='@'/>
+<constant name='DRStatusStateTrackClose' type='@'/>
+<constant name='DRStatusStateTrackOpen' type='@'/>
+<constant name='DRStatusStateTrackWrite' type='@'/>
+<constant name='DRStatusStateVerifying' type='@'/>
+<constant name='DRStatusTotalSessionsKey' type='@'/>
+<constant name='DRStatusTotalTracksKey' type='@'/>
+<constant name='DRSubchannelDataFormKey' type='@'/>
+<constant name='DRSubchannelDataFormNone' type='@'/>
+<constant name='DRSubchannelDataFormPack' type='@'/>
+<constant name='DRSubchannelDataFormRaw' type='@'/>
+<constant name='DRSuppressMacSpecificFiles' type='@'/>
+<constant name='DRSynchronousBehaviorKey' type='@'/>
+<constant name='DRSystemIdentifier' type='@'/>
+<constant name='DRTrackISRCKey' type='@'/>
+<constant name='DRTrackIsEmptyKey' type='@'/>
+<constant name='DRTrackLengthKey' type='@'/>
+<constant name='DRTrackModeKey' type='@'/>
+<constant name='DRTrackNumberKey' type='@'/>
+<constant name='DRTrackPacketSizeKey' type='@'/>
+<constant name='DRTrackPacketTypeFixed' type='@'/>
+<constant name='DRTrackPacketTypeKey' type='@'/>
+<constant name='DRTrackPacketTypeVariable' type='@'/>
+<constant name='DRTrackStartAddressKey' type='@'/>
+<constant name='DRTrackTypeClosed' type='@'/>
+<constant name='DRTrackTypeIncomplete' type='@'/>
+<constant name='DRTrackTypeInvisible' type='@'/>
+<constant name='DRTrackTypeKey' type='@'/>
+<constant name='DRTrackTypeReserved' type='@'/>
+<constant name='DRUDF' type='@'/>
+<constant name='DRUDFApplicationIdentifierSuffix' type='@'/>
+<constant name='DRUDFExtendedFilePermissions' type='@'/>
+<constant name='DRUDFInterchangeLevel' type='@'/>
+<constant name='DRUDFMaxInterchangeLevel' type='@'/>
+<constant name='DRUDFMaxVolumeSequenceNumber' type='@'/>
+<constant name='DRUDFPrimaryVolumeDescriptorNumber' type='@'/>
+<constant name='DRUDFRealTimeFile' type='@'/>
+<constant name='DRUDFVersion102' type='@'/>
+<constant name='DRUDFVersion150' type='@'/>
+<constant name='DRUDFVolumeSequenceNumber' type='@'/>
+<constant name='DRUDFVolumeSetIdentifier' type='@'/>
+<constant name='DRUDFVolumeSetImplementationUse' type='@'/>
+<constant name='DRUDFVolumeSetTimestamp' type='@'/>
+<constant name='DRUDFWriteVersion' type='@'/>
+<constant name='DRVerificationTypeChecksum' type='@'/>
+<constant name='DRVerificationTypeKey' type='@'/>
+<constant name='DRVerificationTypeNone' type='@'/>
+<constant name='DRVerificationTypeProduceAgain' type='@'/>
+<constant name='DRVerificationTypeReceiveData' type='@'/>
+<constant name='DRVolumeCheckedDate' type='@'/>
+<constant name='DRVolumeCreationDate' type='@'/>
+<constant name='DRVolumeEffectiveDate' type='@'/>
+<constant name='DRVolumeExpirationDate' type='@'/>
+<constant name='DRVolumeModificationDate' type='@'/>
+<constant name='DRVolumeSet' type='@'/>
+<constant name='kDRAbstractFile' type='^{__CFString=}'/>
+<constant name='kDRAccessDate' type='^{__CFString=}'/>
+<constant name='kDRAllFilesystems' type='^{__CFString=}'/>
+<constant name='kDRApplicationIdentifier' type='^{__CFString=}'/>
+<constant name='kDRAttributeModificationDate' type='^{__CFString=}'/>
+<constant name='kDRAudioFourChannelKey' type='^{__CFString=}'/>
+<constant name='kDRAudioPreEmphasisKey' type='^{__CFString=}'/>
+<constant name='kDRBackupDate' type='^{__CFString=}'/>
+<constant name='kDRBibliographicFile' type='^{__CFString=}'/>
+<constant name='kDRBlockSize' type='^{__CFString=}'/>
+<constant name='kDRBlockSizeKey' type='^{__CFString=}'/>
+<constant name='kDRBlockTypeKey' type='^{__CFString=}'/>
+<constant name='kDRBufferZone1DataKey' type='^{__CFString=}'/>
+<constant name='kDRBurnAppendableKey' type='^{__CFString=}'/>
+<constant name='kDRBurnCompletionActionEject' type='^{__CFString=}'/>
+<constant name='kDRBurnCompletionActionKey' type='^{__CFString=}'/>
+<constant name='kDRBurnCompletionActionMount' type='^{__CFString=}'/>
+<constant name='kDRBurnDoubleLayerL0DataZoneBlocksKey' type='^{__CFString=}'/>
+<constant name='kDRBurnFailureActionEject' type='^{__CFString=}'/>
+<constant name='kDRBurnFailureActionKey' type='^{__CFString=}'/>
+<constant name='kDRBurnFailureActionNone' type='^{__CFString=}'/>
+<constant name='kDRBurnKey' type='^{__CFString=}'/>
+<constant name='kDRBurnOverwriteDiscKey' type='^{__CFString=}'/>
+<constant name='kDRBurnRequestedSpeedKey' type='^{__CFString=}'/>
+<constant name='kDRBurnStatusChangedNotification' type='^{__CFString=}'/>
+<constant name='kDRBurnStrategyBDDAO' type='^{__CFString=}'/>
+<constant name='kDRBurnStrategyCDSAO' type='^{__CFString=}'/>
+<constant name='kDRBurnStrategyCDTAO' type='^{__CFString=}'/>
+<constant name='kDRBurnStrategyDVDDAO' type='^{__CFString=}'/>
+<constant name='kDRBurnStrategyIsRequiredKey' type='^{__CFString=}'/>
+<constant name='kDRBurnStrategyKey' type='^{__CFString=}'/>
+<constant name='kDRBurnTestingKey' type='^{__CFString=}'/>
+<constant name='kDRBurnUnderrunProtectionKey' type='^{__CFString=}'/>
+<constant name='kDRBurnVerifyDiscKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextArrangerKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextCFStringEncodingKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextCharacterCodeKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextClosedKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextComposerKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextCopyrightAssertedForNamesKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextCopyrightAssertedForSpecialMessagesKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextCopyrightAssertedForTitlesKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextDiscIdentKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextGenreCodeKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextGenreKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextLanguageKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextMCNISRCKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextPerformerKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextSizeKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextSongwriterKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextSpecialMessageKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextTOC2Key' type='^{__CFString=}'/>
+<constant name='kDRCDTextTOCKey' type='^{__CFString=}'/>
+<constant name='kDRCDTextTitleKey' type='^{__CFString=}'/>
+<constant name='kDRContentModificationDate' type='^{__CFString=}'/>
+<constant name='kDRCopyrightFile' type='^{__CFString=}'/>
+<constant name='kDRCreationDate' type='^{__CFString=}'/>
+<constant name='kDRDVDCopyrightInfoKey' type='^{__CFString=}'/>
+<constant name='kDRDVDTimestampKey' type='^{__CFString=}'/>
+<constant name='kDRDataFormKey' type='^{__CFString=}'/>
+<constant name='kDRDataPreparer' type='^{__CFString=}'/>
+<constant name='kDRDefaultDate' type='^{__CFString=}'/>
+<constant name='kDRDeviceAppearedNotification' type='^{__CFString=}'/>
+<constant name='kDRDeviceBurnSpeedBD1x' type='f'/>
+<constant name='kDRDeviceBurnSpeedCD1x' type='f'/>
+<constant name='kDRDeviceBurnSpeedDVD1x' type='f'/>
+<constant name='kDRDeviceBurnSpeedHDDVD1x' type='f'/>
+<constant name='kDRDeviceBurnSpeedMax' type='f'/>
+<constant name='kDRDeviceBurnSpeedsKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanTestWriteCDKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanTestWriteDVDKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanUnderrunProtectCDKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanUnderrunProtectDVDKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteBDKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteBDREKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteBDRKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteCDKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteCDRKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteCDRWKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteCDRawKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteCDSAOKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteCDTAOKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteCDTextKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteDVDDAOKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteDVDKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteDVDPlusRDoubleLayerKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteDVDPlusRKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteDVDPlusRWDoubleLayerKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteDVDPlusRWKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteDVDRAMKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteDVDRDualLayerKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteDVDRKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteDVDRWDualLayerKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteDVDRWKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteHDDVDKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteHDDVDRAMKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteHDDVDRDualLayerKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteHDDVDRKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteHDDVDRWDualLayerKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteHDDVDRWKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteISRCKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteIndexPointsKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCanWriteKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceCurrentWriteSpeedKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceDisappearedNotification' type='^{__CFString=}'/>
+<constant name='kDRDeviceFirmwareRevisionKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceIORegistryEntryPathKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceIsBusyKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceIsTrayOpenKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceLoadingMechanismCanEjectKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceLoadingMechanismCanInjectKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceLoadingMechanismCanOpenKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMaximumWriteSpeedKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaBSDNameKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaBlocksFreeKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaBlocksOverwritableKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaBlocksUsedKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaClassBD' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaClassCD' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaClassDVD' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaClassHDDVD' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaClassKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaClassUnknown' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaDoubleLayerL0DataZoneBlocksKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaInfoKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaIsAppendableKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaIsBlankKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaIsErasableKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaIsOverwritableKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaIsReservedKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaSessionCountKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaStateInTransition' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaStateKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaStateMediaPresent' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaStateNone' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTrackCountKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeBDR' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeBDRE' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeBDROM' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeCDR' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeCDROM' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeCDRW' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeDVDPlusR' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeDVDPlusRDoubleLayer' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeDVDPlusRW' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeDVDPlusRWDoubleLayer' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeDVDR' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeDVDRAM' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeDVDRDualLayer' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeDVDROM' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeDVDRW' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeDVDRWDualLayer' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeHDDVDR' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeHDDVDRAM' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeHDDVDRDualLayer' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeHDDVDROM' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeHDDVDRW' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeHDDVDRWDualLayer' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceMediaTypeUnknown' type='^{__CFString=}'/>
+<constant name='kDRDevicePhysicalInterconnectATAPI' type='^{__CFString=}'/>
+<constant name='kDRDevicePhysicalInterconnectFibreChannel' type='^{__CFString=}'/>
+<constant name='kDRDevicePhysicalInterconnectFireWire' type='^{__CFString=}'/>
+<constant name='kDRDevicePhysicalInterconnectKey' type='^{__CFString=}'/>
+<constant name='kDRDevicePhysicalInterconnectLocationExternal' type='^{__CFString=}'/>
+<constant name='kDRDevicePhysicalInterconnectLocationInternal' type='^{__CFString=}'/>
+<constant name='kDRDevicePhysicalInterconnectLocationKey' type='^{__CFString=}'/>
+<constant name='kDRDevicePhysicalInterconnectLocationUnknown' type='^{__CFString=}'/>
+<constant name='kDRDevicePhysicalInterconnectSCSI' type='^{__CFString=}'/>
+<constant name='kDRDevicePhysicalInterconnectUSB' type='^{__CFString=}'/>
+<constant name='kDRDeviceProductNameKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceStatusChangedNotification' type='^{__CFString=}'/>
+<constant name='kDRDeviceSupportLevelAppleShipping' type='^{__CFString=}'/>
+<constant name='kDRDeviceSupportLevelAppleSupported' type='^{__CFString=}'/>
+<constant name='kDRDeviceSupportLevelKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceSupportLevelNone' type='^{__CFString=}'/>
+<constant name='kDRDeviceSupportLevelUnsupported' type='^{__CFString=}'/>
+<constant name='kDRDeviceSupportLevelVendorSupported' type='^{__CFString=}'/>
+<constant name='kDRDeviceTrackInfoKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceTrackRefsKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceVendorNameKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceWriteBufferSizeKey' type='^{__CFString=}'/>
+<constant name='kDRDeviceWriteCapabilitiesKey' type='^{__CFString=}'/>
+<constant name='kDREffectiveDate' type='^{__CFString=}'/>
+<constant name='kDREraseStatusChangedNotification' type='^{__CFString=}'/>
+<constant name='kDREraseTypeComplete' type='^{__CFString=}'/>
+<constant name='kDREraseTypeKey' type='^{__CFString=}'/>
+<constant name='kDREraseTypeQuick' type='^{__CFString=}'/>
+<constant name='kDRErrorStatusAdditionalSenseStringKey' type='^{__CFString=}'/>
+<constant name='kDRErrorStatusErrorInfoStringKey' type='^{__CFString=}'/>
+<constant name='kDRErrorStatusErrorKey' type='^{__CFString=}'/>
+<constant name='kDRErrorStatusErrorStringKey' type='^{__CFString=}'/>
+<constant name='kDRErrorStatusKey' type='^{__CFString=}'/>
+<constant name='kDRErrorStatusSenseCodeStringKey' type='^{__CFString=}'/>
+<constant name='kDRErrorStatusSenseKey' type='^{__CFString=}'/>
+<constant name='kDRExpirationDate' type='^{__CFString=}'/>
+<constant name='kDRFreeBlocksKey' type='^{__CFString=}'/>
+<constant name='kDRHFSPlus' type='^{__CFString=}'/>
+<constant name='kDRHFSPlusCatalogNodeID' type='^{__CFString=}'/>
+<constant name='kDRHFSPlusTextEncodingHint' type='^{__CFString=}'/>
+<constant name='kDRISO9660' type='^{__CFString=}'/>
+<constant name='kDRISO9660LevelOne' type='^{__CFString=}'/>
+<constant name='kDRISO9660LevelTwo' type='^{__CFString=}'/>
+<constant name='kDRISO9660VersionNumber' type='^{__CFString=}'/>
+<constant name='kDRISOLevel' type='^{__CFString=}'/>
+<constant name='kDRISOMacExtensions' type='^{__CFString=}'/>
+<constant name='kDRISORockRidgeExtensions' type='^{__CFString=}'/>
+<constant name='kDRIndexPointsKey' type='^{__CFString=}'/>
+<constant name='kDRInvisible' type='^{__CFString=}'/>
+<constant name='kDRJoliet' type='^{__CFString=}'/>
+<constant name='kDRMacExtendedFinderFlags' type='^{__CFString=}'/>
+<constant name='kDRMacFileCreator' type='^{__CFString=}'/>
+<constant name='kDRMacFileType' type='^{__CFString=}'/>
+<constant name='kDRMacFinderFlags' type='^{__CFString=}'/>
+<constant name='kDRMacFinderHideExtension' type='^{__CFString=}'/>
+<constant name='kDRMacIconLocation' type='^{__CFString=}'/>
+<constant name='kDRMacScrollPosition' type='^{__CFString=}'/>
+<constant name='kDRMacWindowBounds' type='^{__CFString=}'/>
+<constant name='kDRMacWindowView' type='^{__CFString=}'/>
+<constant name='kDRMaxBurnSpeedKey' type='^{__CFString=}'/>
+<constant name='kDRMediaCatalogNumberKey' type='^{__CFString=}'/>
+<constant name='kDRNextWritableAddressKey' type='^{__CFString=}'/>
+<constant name='kDRPosixFileMode' type='^{__CFString=}'/>
+<constant name='kDRPosixGID' type='^{__CFString=}'/>
+<constant name='kDRPosixUID' type='^{__CFString=}'/>
+<constant name='kDRPreGapIsRequiredKey' type='^{__CFString=}'/>
+<constant name='kDRPreGapLengthKey' type='^{__CFString=}'/>
+<constant name='kDRPublisher' type='^{__CFString=}'/>
+<constant name='kDRRecordingDate' type='^{__CFString=}'/>
+<constant name='kDRRefConCFTypeCallbacks' type64='{DRRefConCallbacks=Q^?^?}' type='{DRRefConCallbacks=L^?^?}'/>
+<constant name='kDRSCMSCopyrightFree' type='^{__CFString=}'/>
+<constant name='kDRSCMSCopyrightProtectedCopy' type='^{__CFString=}'/>
+<constant name='kDRSCMSCopyrightProtectedOriginal' type='^{__CFString=}'/>
+<constant name='kDRSerialCopyManagementStateKey' type='^{__CFString=}'/>
+<constant name='kDRSessionFormatKey' type='^{__CFString=}'/>
+<constant name='kDRSessionNumberKey' type='^{__CFString=}'/>
+<constant name='kDRStatusCurrentSessionKey' type='^{__CFString=}'/>
+<constant name='kDRStatusCurrentSpeedKey' type='^{__CFString=}'/>
+<constant name='kDRStatusCurrentTrackKey' type='^{__CFString=}'/>
+<constant name='kDRStatusEraseTypeKey' type='^{__CFString=}'/>
+<constant name='kDRStatusPercentCompleteKey' type='^{__CFString=}'/>
+<constant name='kDRStatusProgressCurrentKPS' type='^{__CFString=}'/>
+<constant name='kDRStatusProgressCurrentXFactor' type='^{__CFString=}'/>
+<constant name='kDRStatusProgressInfoKey' type='^{__CFString=}'/>
+<constant name='kDRStatusStateDone' type='^{__CFString=}'/>
+<constant name='kDRStatusStateErasing' type='^{__CFString=}'/>
+<constant name='kDRStatusStateFailed' type='^{__CFString=}'/>
+<constant name='kDRStatusStateFinishing' type='^{__CFString=}'/>
+<constant name='kDRStatusStateKey' type='^{__CFString=}'/>
+<constant name='kDRStatusStateNone' type='^{__CFString=}'/>
+<constant name='kDRStatusStatePreparing' type='^{__CFString=}'/>
+<constant name='kDRStatusStateSessionClose' type='^{__CFString=}'/>
+<constant name='kDRStatusStateSessionOpen' type='^{__CFString=}'/>
+<constant name='kDRStatusStateTrackClose' type='^{__CFString=}'/>
+<constant name='kDRStatusStateTrackOpen' type='^{__CFString=}'/>
+<constant name='kDRStatusStateTrackWrite' type='^{__CFString=}'/>
+<constant name='kDRStatusStateVerifying' type='^{__CFString=}'/>
+<constant name='kDRStatusTotalSessionsKey' type='^{__CFString=}'/>
+<constant name='kDRStatusTotalTracksKey' type='^{__CFString=}'/>
+<constant name='kDRSubchannelDataFormKey' type='^{__CFString=}'/>
+<constant name='kDRSubchannelDataFormNone' type='^{__CFString=}'/>
+<constant name='kDRSubchannelDataFormPack' type='^{__CFString=}'/>
+<constant name='kDRSubchannelDataFormRaw' type='^{__CFString=}'/>
+<constant name='kDRSuppressMacSpecificFiles' type='^{__CFString=}'/>
+<constant name='kDRSynchronousBehaviorKey' type='^{__CFString=}'/>
+<constant name='kDRSystemIdentifier' type='^{__CFString=}'/>
+<constant name='kDRTrackISRCKey' type='^{__CFString=}'/>
+<constant name='kDRTrackIsEmptyKey' type='^{__CFString=}'/>
+<constant name='kDRTrackLengthKey' type='^{__CFString=}'/>
+<constant name='kDRTrackModeKey' type='^{__CFString=}'/>
+<constant name='kDRTrackNumberKey' type='^{__CFString=}'/>
+<constant name='kDRTrackPacketSizeKey' type='^{__CFString=}'/>
+<constant name='kDRTrackPacketTypeFixed' type='^{__CFString=}'/>
+<constant name='kDRTrackPacketTypeKey' type='^{__CFString=}'/>
+<constant name='kDRTrackPacketTypeVariable' type='^{__CFString=}'/>
+<constant name='kDRTrackStartAddressKey' type='^{__CFString=}'/>
+<constant name='kDRTrackTypeClosed' type='^{__CFString=}'/>
+<constant name='kDRTrackTypeIncomplete' type='^{__CFString=}'/>
+<constant name='kDRTrackTypeInvisible' type='^{__CFString=}'/>
+<constant name='kDRTrackTypeKey' type='^{__CFString=}'/>
+<constant name='kDRTrackTypeReserved' type='^{__CFString=}'/>
+<constant name='kDRUDF' type='^{__CFString=}'/>
+<constant name='kDRUDFApplicationIdentifierSuffix' type='^{__CFString=}'/>
+<constant name='kDRUDFExtendedFilePermissions' type='^{__CFString=}'/>
+<constant name='kDRUDFInterchangeLevel' type='^{__CFString=}'/>
+<constant name='kDRUDFMaxInterchangeLevel' type='^{__CFString=}'/>
+<constant name='kDRUDFMaxVolumeSequenceNumber' type='^{__CFString=}'/>
+<constant name='kDRUDFPrimaryVolumeDescriptorNumber' type='^{__CFString=}'/>
+<constant name='kDRUDFRealTimeFile' type='^{__CFString=}'/>
+<constant name='kDRUDFVersion102' type='^{__CFString=}'/>
+<constant name='kDRUDFVersion150' type='^{__CFString=}'/>
+<constant name='kDRUDFVolumeSequenceNumber' type='^{__CFString=}'/>
+<constant name='kDRUDFVolumeSetIdentifier' type='^{__CFString=}'/>
+<constant name='kDRUDFVolumeSetImplementationUse' type='^{__CFString=}'/>
+<constant name='kDRUDFVolumeSetTimestamp' type='^{__CFString=}'/>
+<constant name='kDRUDFWriteVersion' type='^{__CFString=}'/>
+<constant name='kDRVerificationTypeChecksum' type='^{__CFString=}'/>
+<constant name='kDRVerificationTypeKey' type='^{__CFString=}'/>
+<constant name='kDRVerificationTypeNone' type='^{__CFString=}'/>
+<constant name='kDRVerificationTypeProduceAgain' type='^{__CFString=}'/>
+<constant name='kDRVerificationTypeReceiveData' type='^{__CFString=}'/>
+<constant name='kDRVolumeCheckedDate' type='^{__CFString=}'/>
+<constant name='kDRVolumeCreationDate' type='^{__CFString=}'/>
+<constant name='kDRVolumeEffectiveDate' type='^{__CFString=}'/>
+<constant name='kDRVolumeExpirationDate' type='^{__CFString=}'/>
+<constant name='kDRVolumeModificationDate' type='^{__CFString=}'/>
+<constant name='kDRVolumeSet' type='^{__CFString=}'/>
+<enum name='DRCDTextEncodingASCII' value='1'/>
+<enum name='DRCDTextEncodingISOLatin1Modified' value='5'/>
+<enum name='DRCDTextGenreCodeAdultContemporary' value='2'/>
+<enum name='DRCDTextGenreCodeAlternativeRock' value='3'/>
+<enum name='DRCDTextGenreCodeChildrens' value='4'/>
+<enum name='DRCDTextGenreCodeClassical' value='5'/>
+<enum name='DRCDTextGenreCodeContemporaryChristian' value='6'/>
+<enum name='DRCDTextGenreCodeCountry' value='7'/>
+<enum name='DRCDTextGenreCodeDance' value='8'/>
+<enum name='DRCDTextGenreCodeEasyListening' value='9'/>
+<enum name='DRCDTextGenreCodeErotic' value='10'/>
+<enum name='DRCDTextGenreCodeFolk' value='11'/>
+<enum name='DRCDTextGenreCodeGospel' value='12'/>
+<enum name='DRCDTextGenreCodeHipHop' value='13'/>
+<enum name='DRCDTextGenreCodeJazz' value='14'/>
+<enum name='DRCDTextGenreCodeLatin' value='15'/>
+<enum name='DRCDTextGenreCodeMusical' value='16'/>
+<enum name='DRCDTextGenreCodeNewAge' value='17'/>
+<enum name='DRCDTextGenreCodeOpera' value='18'/>
+<enum name='DRCDTextGenreCodeOperetta' value='19'/>
+<enum name='DRCDTextGenreCodePop' value='20'/>
+<enum name='DRCDTextGenreCodeRap' value='21'/>
+<enum name='DRCDTextGenreCodeReggae' value='22'/>
+<enum name='DRCDTextGenreCodeRhythmAndBlues' value='24'/>
+<enum name='DRCDTextGenreCodeRock' value='23'/>
+<enum name='DRCDTextGenreCodeSoundEffects' value='25'/>
+<enum name='DRCDTextGenreCodeSoundtrack' value='26'/>
+<enum name='DRCDTextGenreCodeSpokenWord' value='27'/>
+<enum name='DRCDTextGenreCodeUnknown' value='1'/>
+<enum name='DRCDTextGenreCodeWorldMusic' value='28'/>
+<enum name='DRFileForkData' value='0'/>
+<enum name='DRFileForkResource' value='1'/>
+<enum name='DRFilesystemInclusionMaskHFSPlus' value='8'/>
+<enum name='DRFilesystemInclusionMaskISO9660' value='1'/>
+<enum name='DRFilesystemInclusionMaskJoliet' value='2'/>
+<enum name='DRFilesystemInclusionMaskUDF' value='4'/>
+<enum name='DRFlagSubchannelDataRequested' value='2'/>
+<enum name='kDRAudioFileNotSupportedErr' value='2147614828'/>
+<enum name='kDRBadLayoutErr' value='2147614821'/>
+<enum name='kDRBlockSizeAudio' value='2352'/>
+<enum name='kDRBlockSizeDVDData' value='2048'/>
+<enum name='kDRBlockSizeMode1Data' value='2048'/>
+<enum name='kDRBlockSizeMode2Data' value='2332'/>
+<enum name='kDRBlockSizeMode2Form1Data' value='2048'/>
+<enum name='kDRBlockSizeMode2Form2Data' value='2324'/>
+<enum name='kDRBlockTypeAudio' value='0'/>
+<enum name='kDRBlockTypeDVDData' value='8'/>
+<enum name='kDRBlockTypeMode1Data' value='8'/>
+<enum name='kDRBlockTypeMode2Data' value='13'/>
+<enum name='kDRBlockTypeMode2Form1Data' value='10'/>
+<enum name='kDRBlockTypeMode2Form2Data' value='12'/>
+<enum name='kDRBurnMediaWriteFailureErr' value='2147614830'/>
+<enum name='kDRBurnNotAllowedErr' value='2147614817'/>
+<enum name='kDRBurnPowerCalibrationErr' value='2147614829'/>
+<enum name='kDRBurnUnderrunErr' value='2147614816'/>
+<enum name='kDRCDTextEncodingASCII' value='1536'/>
+<enum name='kDRCDTextEncodingISOLatin1Modified' value='513'/>
+<enum name='kDRCDTextGenreCodeAdultContemporary' value='2'/>
+<enum name='kDRCDTextGenreCodeAlternativeRock' value='3'/>
+<enum name='kDRCDTextGenreCodeChildrens' value='4'/>
+<enum name='kDRCDTextGenreCodeClassical' value='5'/>
+<enum name='kDRCDTextGenreCodeContemporaryChristian' value='6'/>
+<enum name='kDRCDTextGenreCodeCountry' value='7'/>
+<enum name='kDRCDTextGenreCodeDance' value='8'/>
+<enum name='kDRCDTextGenreCodeEasyListening' value='9'/>
+<enum name='kDRCDTextGenreCodeErotic' value='10'/>
+<enum name='kDRCDTextGenreCodeFolk' value='11'/>
+<enum name='kDRCDTextGenreCodeGospel' value='12'/>
+<enum name='kDRCDTextGenreCodeHipHop' value='13'/>
+<enum name='kDRCDTextGenreCodeJazz' value='14'/>
+<enum name='kDRCDTextGenreCodeLatin' value='15'/>
+<enum name='kDRCDTextGenreCodeMusical' value='16'/>
+<enum name='kDRCDTextGenreCodeNewAge' value='17'/>
+<enum name='kDRCDTextGenreCodeOpera' value='18'/>
+<enum name='kDRCDTextGenreCodeOperetta' value='19'/>
+<enum name='kDRCDTextGenreCodePop' value='20'/>
+<enum name='kDRCDTextGenreCodeRap' value='21'/>
+<enum name='kDRCDTextGenreCodeReggae' value='22'/>
+<enum name='kDRCDTextGenreCodeRhythmAndBlues' value='24'/>
+<enum name='kDRCDTextGenreCodeRock' value='23'/>
+<enum name='kDRCDTextGenreCodeSoundEffects' value='25'/>
+<enum name='kDRCDTextGenreCodeSoundtrack' value='26'/>
+<enum name='kDRCDTextGenreCodeSpokenWord' value='27'/>
+<enum name='kDRCDTextGenreCodeUnknown' value='1'/>
+<enum name='kDRCDTextGenreCodeWorldMusic' value='28'/>
+<enum name='kDRDataFormAudio' value='0'/>
+<enum name='kDRDataFormDVDData' value='16'/>
+<enum name='kDRDataFormMode1Data' value='16'/>
+<enum name='kDRDataFormMode2Data' value='32'/>
+<enum name='kDRDataFormMode2Form1Data' value='32'/>
+<enum name='kDRDataFormMode2Form2Data' value='32'/>
+<enum name='kDRDataProductionErr' value='2147614818'/>
+<enum name='kDRDeviceAccessErr' value='2147614752'/>
+<enum name='kDRDeviceBurnStrategyNotAvailableErr' value='2147615232'/>
+<enum name='kDRDeviceBusyErr' value='2147614753'/>
+<enum name='kDRDeviceCantWriteCDTextErr' value='2147615233'/>
+<enum name='kDRDeviceCantWriteISRCErr' value='2147615235'/>
+<enum name='kDRDeviceCantWriteIndexPointsErr' value='2147615234'/>
+<enum name='kDRDeviceCantWriteSCMSErr' value='2147615236'/>
+<enum name='kDRDeviceCommunicationErr' value='2147614754'/>
+<enum name='kDRDeviceInvalidErr' value='2147614755'/>
+<enum name='kDRDeviceNotReadyErr' value='2147614756'/>
+<enum name='kDRDeviceNotSupportedErr' value='2147614757'/>
+<enum name='kDRDevicePreGapLengthNotValidErr' value='2147615237'/>
+<enum name='kDRDoubleLayerL0AlreadySpecifiedErr' value='2147614827'/>
+<enum name='kDRDoubleLayerL0DataZoneBlocksParamErr' value='2147614826'/>
+<enum name='kDRFileForkData' value='0'/>
+<enum name='kDRFileForkResource' value='1'/>
+<enum name='kDRFileForkSizeActual' value='0'/>
+<enum name='kDRFileForkSizeEstimate' value='1'/>
+<enum name='kDRFileLocationConflictErr' value='2147614977'/>
+<enum name='kDRFileMessageForkSize' value='1718839674'/>
+<enum name='kDRFileMessagePostBurn' value='1886352244'/>
+<enum name='kDRFileMessagePreBurn' value='1886545184'/>
+<enum name='kDRFileMessageProduceData' value='1886547812'/>
+<enum name='kDRFileMessageRelease' value='1652122912'/>
+<enum name='kDRFileMessageVerificationStarting' value='1987208825'/>
+<enum name='kDRFileModifiedDuringBurnErr' value='2147614976'/>
+<enum name='kDRFilesystemMaskDefault' value='4294967295'/>
+<enum name='kDRFilesystemMaskHFSPlus' value='8'/>
+<enum name='kDRFilesystemMaskISO9660' value='1'/>
+<enum name='kDRFilesystemMaskJoliet' value='2'/>
+<enum name='kDRFilesystemMaskUDF' value='4'/>
+<enum name='kDRFilesystemsNotSupportedErr' value='2147614979'/>
+<enum name='kDRFirstErr' value='2147614720'/>
+<enum name='kDRFlagNoMoreData' value='1'/>
+<enum name='kDRFlagSubchannelDataRequested' value='2'/>
+<enum name='kDRFunctionNotSupportedErr' value='2147614823'/>
+<enum name='kDRInternalErr' value='2147614720'/>
+<enum name='kDRInvalidIndexPointsErr' value='2147614825'/>
+<enum name='kDRLinkTypeFinderAlias' value='3'/>
+<enum name='kDRLinkTypeHardLink' value='1'/>
+<enum name='kDRLinkTypeSymbolicLink' value='2'/>
+<enum name='kDRMediaBusyErr' value='2147614784'/>
+<enum name='kDRMediaInvalidErr' value='2147614790'/>
+<enum name='kDRMediaNotBlankErr' value='2147614788'/>
+<enum name='kDRMediaNotErasableErr' value='2147614789'/>
+<enum name='kDRMediaNotPresentErr' value='2147614785'/>
+<enum name='kDRMediaNotSupportedErr' value='2147614787'/>
+<enum name='kDRMediaNotWritableErr' value='2147614786'/>
+<enum name='kDRSessionFormatAudio' value='0'/>
+<enum name='kDRSessionFormatCDI' value='16'/>
+<enum name='kDRSessionFormatCDXA' value='32'/>
+<enum name='kDRSessionFormatDVDData' value='0'/>
+<enum name='kDRSessionFormatMode1Data' value='0'/>
+<enum name='kDRSpeedTestAlreadyRunningErr' value='2147614824'/>
+<enum name='kDRTooManyNameConflictsErr' value='2147614978'/>
+<enum name='kDRTooManyTracksForDVDErr' value='2147614820'/>
+<enum name='kDRTrackMessageEstimateLength' value='1702065257'/>
+<enum name='kDRTrackMessagePostBurn' value='1886352244'/>
+<enum name='kDRTrackMessagePreBurn' value='1886545184'/>
+<enum name='kDRTrackMessageProduceData' value='1886547812'/>
+<enum name='kDRTrackMessageProducePreGap' value='1886548082'/>
+<enum name='kDRTrackMessageVerificationDone' value='1986293614'/>
+<enum name='kDRTrackMessageVerificationStarting' value='1987277938'/>
+<enum name='kDRTrackMessageVerifyData' value='1987208825'/>
+<enum name='kDRTrackMessageVerifyPreGap' value='1987211378'/>
+<enum name='kDRTrackMode1Data' value='4'/>
+<enum name='kDRTrackMode2Data' value='4'/>
+<enum name='kDRTrackMode2Form1Data' value='4'/>
+<enum name='kDRTrackMode2Form2Data' value='4'/>
+<enum name='kDRTrackModeAudio' value='0'/>
+<enum name='kDRTrackModeDVDData' value='5'/>
+<enum name='kDRTrackReusedErr' value='2147614831'/>
+<enum name='kDRUserCanceledErr' value='2147614822'/>
+<enum name='kDRVerificationFailedErr' value='2147614819'/>
+<function name='DRAudioTrackCreate'>
+<arg type='^{FSRef=[80C]}' type_modifier='n'/>
+<retval type='^{__DRTrack=}'/>
+</function>
+<function name='DRAudioTrackCreateWithURL'>
+<arg type='^{__CFURL=}'/>
+<retval type='^{__DRTrack=}'/>
+</function>
+<function name='DRBurnAbort'>
+<arg type='^{__DRBurn=}'/>
+</function>
+<function name='DRBurnCopyStatus'>
+<arg type='^{__DRBurn=}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='DRBurnCreate'>
+<arg type='^{__DRDevice=}'/>
+<retval already_retained='true' type='^{__DRBurn=}'/>
+</function>
+<function name='DRBurnGetDevice'>
+<arg type='^{__DRBurn=}'/>
+<retval type='^{__DRDevice=}'/>
+</function>
+<function name='DRBurnGetProperties'>
+<arg type='^{__DRBurn=}'/>
+<retval type='^{__CFDictionary=}'/>
+</function>
+<function name='DRBurnGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='DRBurnSetProperties'>
+<arg type='^{__DRBurn=}'/>
+<arg type='^{__CFDictionary=}'/>
+</function>
+<function name='DRBurnWriteLayout'>
+<arg type='^{__DRBurn=}'/>
+<arg type='@'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DRCDTextBlockCreate'>
+<arg type='^{__CFString=}'/>
+<arg type64='I' type='L'/>
+<retval already_retained='true' type='^{__DRCDTextBlock=}'/>
+</function>
+<function name='DRCDTextBlockCreateArrayFromPackList'>
+<arg type='^{__CFData=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='DRCDTextBlockFlatten'>
+<arg type='^{__DRCDTextBlock=}'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='DRCDTextBlockGetProperties'>
+<arg type='^{__DRCDTextBlock=}'/>
+<retval type='^{__CFDictionary=}'/>
+</function>
+<function name='DRCDTextBlockGetTrackDictionaries'>
+<arg type='^{__DRCDTextBlock=}'/>
+<retval type='^{__CFArray=}'/>
+</function>
+<function name='DRCDTextBlockGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='DRCDTextBlockGetValue'>
+<arg type='^{__DRCDTextBlock=}'/>
+<arg type64='q' type='l'/>
+<arg type='^{__CFString=}'/>
+<retval type='@'/>
+</function>
+<function name='DRCDTextBlockSetProperties'>
+<arg type='^{__DRCDTextBlock=}'/>
+<arg type='^{__CFDictionary=}'/>
+</function>
+<function name='DRCDTextBlockSetTrackDictionaries'>
+<arg type='^{__DRCDTextBlock=}'/>
+<arg type='^{__CFArray=}'/>
+</function>
+<function name='DRCDTextBlockSetValue'>
+<arg type='^{__DRCDTextBlock=}'/>
+<arg type64='q' type='l'/>
+<arg type='^{__CFString=}'/>
+<arg type='@'/>
+</function>
+<function name='DRCopyDeviceArray'>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='DRCopyLocalizedStringForAdditionalSense'>
+<arg type='C'/>
+<arg type='C'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='DRCopyLocalizedStringForDiscRecordingError'>
+<arg type64='i' type='l'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='DRCopyLocalizedStringForSenseCode'>
+<arg type='C'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='DRCopyLocalizedStringForValue'>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='DRDeviceAcquireExclusiveAccess'>
+<arg type='^{__DRDevice=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DRDeviceAcquireMediaReservation'>
+<arg type='^{__DRDevice=}'/>
+</function>
+<function name='DRDeviceCloseTray'>
+<arg type='^{__DRDevice=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DRDeviceCopyDeviceForBSDName'>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__DRDevice=}'/>
+</function>
+<function name='DRDeviceCopyDeviceForIORegistryEntryPath'>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__DRDevice=}'/>
+</function>
+<function name='DRDeviceCopyInfo'>
+<arg type='^{__DRDevice=}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='DRDeviceCopyStatus'>
+<arg type='^{__DRDevice=}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='DRDeviceEjectMedia'>
+<arg type='^{__DRDevice=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DRDeviceGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='DRDeviceIsValid'>
+<arg type='^{__DRDevice=}'/>
+<retval type='B'/>
+</function>
+<function name='DRDeviceKPSForXFactor'>
+<arg type='@'/>
+<arg type='f'/>
+<retval type='f'/>
+</function>
+<function name='DRDeviceOpenTray'>
+<arg type='^{__DRDevice=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DRDeviceReleaseExclusiveAccess'>
+<arg type='^{__DRDevice=}'/>
+</function>
+<function name='DRDeviceReleaseMediaReservation'>
+<arg type='^{__DRDevice=}'/>
+</function>
+<function name='DRDeviceXFactorForKPS'>
+<arg type='@'/>
+<arg type='f'/>
+<retval type='f'/>
+</function>
+<function name='DREraseCopyStatus'>
+<arg type='^{__DRErase=}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='DREraseCreate'>
+<arg type='^{__DRDevice=}'/>
+<retval already_retained='true' type='^{__DRErase=}'/>
+</function>
+<function name='DREraseGetDevice'>
+<arg type='^{__DRErase=}'/>
+<retval type='^{__DRDevice=}'/>
+</function>
+<function name='DREraseGetProperties'>
+<arg type='^{__DRErase=}'/>
+<retval type='^{__CFDictionary=}'/>
+</function>
+<function name='DREraseGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='DREraseSetProperties'>
+<arg type='^{__DRErase=}'/>
+<arg type='^{__CFDictionary=}'/>
+</function>
+<function name='DREraseStart'>
+<arg type='^{__DRErase=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DRFSObjectCopyBaseName'>
+<arg type='@'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='DRFSObjectCopyFilesystemProperties'>
+<arg type='@'/>
+<arg type='^{__CFString=}'/>
+<arg type='B'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='DRFSObjectCopyFilesystemProperty'>
+<arg type='@'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='B'/>
+<retval already_retained='true' type='@'/>
+</function>
+<function name='DRFSObjectCopyMangledName'>
+<arg type='@'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='DRFSObjectCopyMangledNames'>
+<arg type='@'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='DRFSObjectCopyRealURL'>
+<arg type='@'/>
+<retval already_retained='true' type='^{__CFURL=}'/>
+</function>
+<function name='DRFSObjectCopySpecificName'>
+<arg type='@'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='DRFSObjectCopySpecificNames'>
+<arg type='@'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='DRFSObjectGetFilesystemMask'>
+<arg type='@'/>
+<arg type='^I' type_modifier='o'/>
+<arg type='^I' type_modifier='o'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='DRFSObjectGetParent'>
+<arg type='@'/>
+<retval type='^{__DRFolder=}'/>
+</function>
+<function name='DRFSObjectGetRealFSRef'>
+<arg type='@'/>
+<arg type='^{FSRef=[80C]}' type_modifier='o'/>
+</function>
+<function name='DRFSObjectIsVirtual'>
+<arg type='@'/>
+<retval type='B'/>
+</function>
+<function name='DRFSObjectSetBaseName'>
+<arg type='@'/>
+<arg type='^{__CFString=}'/>
+</function>
+<function name='DRFSObjectSetFilesystemMask'>
+<arg type='@'/>
+<arg type64='I' type='L'/>
+</function>
+<function name='DRFSObjectSetFilesystemProperties'>
+<arg type='@'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFDictionary=}'/>
+</function>
+<function name='DRFSObjectSetFilesystemProperty'>
+<arg type='@'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='@'/>
+</function>
+<function name='DRFSObjectSetSpecificName'>
+<arg type='@'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+</function>
+<function name='DRFSObjectSetSpecificNames'>
+<arg type='@'/>
+<arg type='^{__CFDictionary=}'/>
+</function>
+<function name='DRFileCreateReal'>
+<arg type='^{FSRef=[80C]}' type_modifier='n'/>
+<retval already_retained='true' type='^{__DRFile=}'/>
+</function>
+<function name='DRFileCreateRealWithURL'>
+<arg type='^{__CFURL=}'/>
+<retval already_retained='true' type='^{__DRFile=}'/>
+</function>
+<function name='DRFileCreateVirtualLink'>
+<arg type='@'/>
+<arg type64='I' type='L'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__DRFile=}'/>
+</function>
+<function name='DRFileCreateVirtualWithCallback'>
+<arg type='^{__CFString=}'/>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type='^v'/>
+<arg type='^{__DRFile=}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg type='^v' type_modifier='n'/>
+<retval already_retained='true' type='^{__DRFile=}'/>
+</function>
+<function name='DRFileCreateVirtualWithData'>
+<arg type='^{__CFString=}'/>
+<arg type='^v' type_modifier='n'/>
+<arg type64='I' type='L'/>
+<retval already_retained='true' type='^{__DRFile=}'/>
+</function>
+<function name='DRFileGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='DRFilesystemTrackCreate'>
+<arg type='^{__DRFolder=}'/>
+<retval type='^{__DRTrack=}'/>
+</function>
+<function name='DRFilesystemTrackEstimateOverhead'>
+<arg type='Q'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<retval type='Q'/>
+</function>
+<function name='DRFolderAddChild'>
+<arg type='^{__DRFolder=}'/>
+<arg type='@'/>
+</function>
+<function name='DRFolderConvertRealToVirtual'>
+<arg type='^{__DRFolder=}'/>
+</function>
+<function name='DRFolderCopyChildren'>
+<arg type='^{__DRFolder=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='DRFolderCountChildren'>
+<arg type='^{__DRFolder=}'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='DRFolderCreateReal'>
+<arg type='^{FSRef=[80C]}' type_modifier='n'/>
+<retval already_retained='true' type='^{__DRFolder=}'/>
+</function>
+<function name='DRFolderCreateRealWithURL'>
+<arg type='^{__CFURL=}'/>
+<retval already_retained='true' type='^{__DRFolder=}'/>
+</function>
+<function name='DRFolderCreateVirtual'>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__DRFolder=}'/>
+</function>
+<function name='DRFolderGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='DRFolderRemoveChild'>
+<arg type='^{__DRFolder=}'/>
+<arg type='@'/>
+</function>
+<function name='DRGetRefCon'>
+<arg type='@'/>
+<retval type='^v'/>
+</function>
+<function name='DRGetVersion'>
+<retval type='{NumVersion=CCCC}'/>
+</function>
+<function name='DRNotificationCenterAddObserver'>
+<arg type='^{__DRNotificationCenter=}'/>
+<arg type='^v' type_modifier='n'/>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type='^{__DRNotificationCenter=}'/>
+<arg type='^v'/>
+<arg type='^{__CFString=}'/>
+<arg type='@'/>
+<arg type='^{__CFDictionary=}'/>
+<retval type='v'/>
+</arg>
+<arg type='^{__CFString=}'/>
+<arg type='@'/>
+</function>
+<function name='DRNotificationCenterCreate'>
+<retval already_retained='true' type='^{__DRNotificationCenter=}'/>
+</function>
+<function name='DRNotificationCenterCreateRunLoopSource'>
+<arg type='^{__DRNotificationCenter=}'/>
+<retval already_retained='true' type='^{__CFRunLoopSource=}'/>
+</function>
+<function name='DRNotificationCenterGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='DRNotificationCenterRemoveObserver'>
+<arg type='^{__DRNotificationCenter=}'/>
+<arg type='^v' type_modifier='n'/>
+<arg type='^{__CFString=}'/>
+<arg type='@'/>
+</function>
+<function name='DRSetRefCon'>
+<arg type='@'/>
+<arg type='^v' type_modifier='n'/>
+<arg type64='^{DRRefConCallbacks=Q^?^?}' type='^{DRRefConCallbacks=L^?^?}' type_modifier='n'/>
+</function>
+<function name='DRTrackCreate'>
+<arg type='^{__CFDictionary=}'/>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type='^{__DRTrack=}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval already_retained='true' type='^{__DRTrack=}'/>
+</function>
+<function name='DRTrackEstimateLength'>
+<arg type='^{__DRTrack=}'/>
+<retval type='Q'/>
+</function>
+<function name='DRTrackGetProperties'>
+<arg type='^{__DRTrack=}'/>
+<retval type='^{__CFDictionary=}'/>
+</function>
+<function name='DRTrackGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='DRTrackSetProperties'>
+<arg type='^{__DRTrack=}'/>
+<arg type='^{__CFDictionary=}'/>
+</function>
+<function name='DRTrackSpeedTest'>
+<arg type='^{__DRTrack=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<retval type='f'/>
+</function>
+<class name='DRBurn'>
+<method selector='appendable'>
+<retval type='B'/>
+</method>
+<method selector='setAppendable:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='setVerifyDisc:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='verifyDisc'>
+<retval type='B'/>
+</method>
+</class>
+<class name='DRDevice'>
+<method selector='acquireExclusiveAccess'>
+<retval type='B'/>
+</method>
+<method selector='closeTray'>
+<retval type='B'/>
+</method>
+<method selector='ejectMedia'>
+<retval type='B'/>
+</method>
+<method selector='isEqualToDevice:'>
+<retval type='B'/>
+</method>
+<method selector='isValid'>
+<retval type='B'/>
+</method>
+<method selector='mediaIsAppendable'>
+<retval type='B'/>
+</method>
+<method selector='mediaIsBlank'>
+<retval type='B'/>
+</method>
+<method selector='mediaIsBusy'>
+<retval type='B'/>
+</method>
+<method selector='mediaIsErasable'>
+<retval type='B'/>
+</method>
+<method selector='mediaIsOverwritable'>
+<retval type='B'/>
+</method>
+<method selector='mediaIsPresent'>
+<retval type='B'/>
+</method>
+<method selector='mediaIsReserved'>
+<retval type='B'/>
+</method>
+<method selector='mediaIsTransitioning'>
+<retval type='B'/>
+</method>
+<method selector='openTray'>
+<retval type='B'/>
+</method>
+<method selector='trayIsOpen'>
+<retval type='B'/>
+</method>
+<method selector='writesCD'>
+<retval type='B'/>
+</method>
+<method selector='writesDVD'>
+<retval type='B'/>
+</method>
+</class>
+<class name='DRFSObject'>
+<method selector='isVirtual'>
+<retval type='B'/>
+</method>
+<method selector='propertiesForFilesystem:mergeWithOtherFilesystems:'>
+<arg type='B' index='1'/>
+</method>
+<method selector='propertyForKey:inFilesystem:mergeWithOtherFilesystems:'>
+<arg type='B' index='2'/>
+</method>
+</class>
+<class name='DRMSF'>
+<method selector='isEqualToMSF:'>
+<retval type='B'/>
+</method>
+</class>
+<class name='DRNotificationCenter'>
+<method selector='addObserver:selector:name:object:'>
+<arg sel_of_type='v12@0:4@8' index='1' sel_of_type64='v24@0:8@16'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='calculateSizeOfFile:fork:estimating:'>
+<arg type='B' index='2'/>
+</method>
+<method selector='cleanupTrackAfterVerification:'>
+<retval type='B'/>
+</method>
+<method selector='prepareFileForBurn:'>
+<retval type='B'/>
+</method>
+<method selector='prepareFileForVerification:'>
+<retval type='B'/>
+</method>
+<method selector='prepareTrack:forBurn:toMedia:'>
+<retval type='B'/>
+</method>
+<method selector='prepareTrackForVerification:'>
+<retval type='B'/>
+</method>
+<method selector='produceDataForTrack:intoBuffer:length:atAddress:blockSize:ioFlags:'>
+<arg c_array_length_in_arg='2' index='1' type_modifier='o'/>
+<arg index='5' type_modifier='n'/>
+</method>
+<method selector='produceFile:fork:intoBuffer:length:atAddress:blockSize:'>
+<arg c_array_length_in_arg='3' index='2' type_modifier='o'/>
+</method>
+<method selector='producePreGapForTrack:intoBuffer:length:atAddress:blockSize:ioFlags:'>
+<arg c_array_length_in_arg='2' index='1' type_modifier='o'/>
+<arg index='5' type_modifier='n'/>
+</method>
+<method selector='verifyDataForTrack:inBuffer:length:atAddress:blockSize:ioFlags:'>
+<arg c_array_length_in_arg='2' index='1' type_modifier='n'/>
+<arg index='5' type_modifier='n'/>
+<retval type='B'/>
+</method>
+<method selector='verifyPreGapForTrack:inBuffer:length:atAddress:blockSize:ioFlags:'>
+<arg c_array_length_in_arg='2' index='1' type_modifier='n'/>
+<arg index='5' type_modifier='n'/>
+<retval type='B'/>
+</method>
+</class>
+<informal_protocol name='DRFileDataProduction'>
+<method type64='Q32@0:8@16I24B28' type='Q20@0:4@8L12B16' selector='calculateSizeOfFile:fork:estimating:'/>
+<method type64='v24@0:8@16' type='v12@0:4@8' selector='cleanupFileAfterBurn:'/>
+<method type64='B24@0:8@16' type='B12@0:4@8' selector='prepareFileForBurn:'/>
+<method type64='B24@0:8@16' type='B12@0:4@8' selector='prepareFileForVerification:'/>
+<method type64='I52@0:8@16I24*28I36Q40I48' type='I36@0:4@8L12*16I20Q24I32' selector='produceFile:fork:intoBuffer:length:atAddress:blockSize:'/>
+</informal_protocol>
+<informal_protocol name='DRTrackDataProduction'>
+<method type64='v24@0:8@16' type='v12@0:4@8' selector='cleanupTrackAfterBurn:'/>
+<method type64='B24@0:8@16' type='B12@0:4@8' selector='cleanupTrackAfterVerification:'/>
+<method type64='Q24@0:8@16' type='Q12@0:4@8' selector='estimateLengthOfTrack:'/>
+<method type64='B40@0:8@16@24@32' type='B20@0:4@8@12@16' selector='prepareTrack:forBurn:toMedia:'/>
+<method type64='B24@0:8@16' type='B12@0:4@8' selector='prepareTrackForVerification:'/>
+<method type64='I56@0:8@16*24I32Q36I44^I48' type='I36@0:4@8*12I16Q20I28^I32' selector='produceDataForTrack:intoBuffer:length:atAddress:blockSize:ioFlags:'/>
+<method type64='I56@0:8@16*24I32Q36I44^I48' type='I36@0:4@8*12I16Q20I28^I32' selector='producePreGapForTrack:intoBuffer:length:atAddress:blockSize:ioFlags:'/>
+<method type64='B56@0:8@16r*24I32Q36I44^I48' type='B36@0:4@8r*12I16Q20I28^I32' selector='verifyDataForTrack:inBuffer:length:atAddress:blockSize:ioFlags:'/>
+<method type64='B56@0:8@16r*24I32Q36I44^I48' type='B36@0:4@8r*12I16Q20I28^I32' selector='verifyPreGapForTrack:inBuffer:length:atAddress:blockSize:ioFlags:'/>
+</informal_protocol>
+</signatures>

@@ -1,0 +1,343 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<cftype name='DAApprovalSessionRef' gettypeid_func='DAApprovalSessionGetTypeID' type='^{__DASession=}'/>
+<cftype name='DADiskRef' gettypeid_func='DADiskGetTypeID' type='^{__DADisk=}'/>
+<cftype name='DADissenterRef' type='^{__DADissenter=}'/>
+<cftype name='DASessionRef' gettypeid_func='DASessionGetTypeID' type='^{__DASession=}'/>
+<constant name='kDADiskDescriptionBusNameKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionBusPathKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionDeviceGUIDKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionDeviceInternalKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionDeviceModelKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionDevicePathKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionDeviceProtocolKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionDeviceRevisionKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionDeviceUnitKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionDeviceVendorKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMatchMediaUnformatted' type='^{__CFDictionary=}'/>
+<constant name='kDADiskDescriptionMatchMediaWhole' type='^{__CFDictionary=}'/>
+<constant name='kDADiskDescriptionMatchVolumeMountable' type='^{__CFDictionary=}'/>
+<constant name='kDADiskDescriptionMatchVolumeUnrecognized' type='^{__CFDictionary=}'/>
+<constant name='kDADiskDescriptionMediaBSDMajorKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMediaBSDMinorKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMediaBSDNameKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMediaBSDUnitKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMediaBlockSizeKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMediaContentKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMediaEjectableKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMediaIconKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMediaKindKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMediaLeafKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMediaNameKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMediaPathKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMediaRemovableKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMediaSizeKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMediaTypeKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMediaUUIDKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMediaWholeKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionMediaWritableKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionVolumeKindKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionVolumeMountableKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionVolumeNameKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionVolumeNetworkKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionVolumePathKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionVolumeUUIDKey' type='^{__CFString=}'/>
+<constant name='kDADiskDescriptionWatchVolumeName' type='^{__CFArray=}'/>
+<constant name='kDADiskDescriptionWatchVolumePath' type='^{__CFArray=}'/>
+<enum name='err_local_diskarbitration' value='14286848'/>
+<enum name='kDADiskClaimOptionDefault' value='0'/>
+<enum name='kDADiskEjectOptionDefault' value='0'/>
+<enum name='kDADiskMountOptionDefault' value='0'/>
+<enum name='kDADiskMountOptionWhole' value='1'/>
+<enum name='kDADiskOptionDefault' value='0'/>
+<enum name='kDADiskOptionEjectUponLogout' value='1'/>
+<enum name='kDADiskOptionMountAutomatic' value='16'/>
+<enum name='kDADiskOptionMountAutomaticNoDefer' value='32'/>
+<enum name='kDADiskOptionPrivate' value='256'/>
+<enum name='kDADiskRenameOptionDefault' value='0'/>
+<enum name='kDADiskUnmountOptionDefault' value='0'/>
+<enum name='kDADiskUnmountOptionForce' value='524288'/>
+<enum name='kDADiskUnmountOptionWhole' value='1'/>
+<enum name='kDAReturnBadArgument' value='-119930877'/>
+<enum name='kDAReturnBusy' value='-119930878'/>
+<enum name='kDAReturnError' value='-119930879'/>
+<enum name='kDAReturnExclusiveAccess' value='-119930876'/>
+<enum name='kDAReturnNoResources' value='-119930875'/>
+<enum name='kDAReturnNotFound' value='-119930874'/>
+<enum name='kDAReturnNotMounted' value='-119930873'/>
+<enum name='kDAReturnNotPermitted' value='-119930872'/>
+<enum name='kDAReturnNotPrivileged' value='-119930871'/>
+<enum name='kDAReturnNotReady' value='-119930870'/>
+<enum name='kDAReturnNotWritable' value='-119930869'/>
+<enum name='kDAReturnSuccess' value='0'/>
+<enum name='kDAReturnUnsupported' value='-119930868'/>
+<function name='DAApprovalSessionCreate'>
+<arg type='^{__CFAllocator=}'/>
+<retval already_retained='true' type='^{__DASession=}'/>
+</function>
+<function name='DAApprovalSessionGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='DAApprovalSessionScheduleWithRunLoop'>
+<arg type='^{__DASession=}'/>
+<arg type='^{__CFRunLoop=}'/>
+<arg type='^{__CFString=}'/>
+</function>
+<function name='DAApprovalSessionUnscheduleFromRunLoop'>
+<arg type='^{__DASession=}'/>
+<arg type='^{__CFRunLoop=}'/>
+<arg type='^{__CFString=}'/>
+</function>
+<function name='DADiskClaim'>
+<arg type='^{__DADisk=}'/>
+<arg type64='I' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{__DADisk=}'/>
+<arg type='^v'/>
+<retval type='^{__DADissenter=}'/>
+</arg>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{__DADisk=}'/>
+<arg type='^{__DADissenter=}'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+</function>
+<function name='DADiskCopyDescription'>
+<arg type='^{__DADisk=}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='DADiskCopyIOMedia'>
+<arg type='^{__DADisk=}'/>
+<retval type='I'/>
+</function>
+<function name='DADiskCopyWholeDisk'>
+<arg type='^{__DADisk=}'/>
+<retval already_retained='true' type='^{__DADisk=}'/>
+</function>
+<function name='DADiskCreateFromBSDName'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__DASession=}'/>
+<arg type='*'/>
+<retval already_retained='true' type='^{__DADisk=}'/>
+</function>
+<function name='DADiskCreateFromIOMedia'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__DASession=}'/>
+<arg type='I'/>
+<retval already_retained='true' type='^{__DADisk=}'/>
+</function>
+<function name='DADiskCreateFromVolumePath'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__DASession=}'/>
+<arg type='^{__CFURL=}'/>
+<retval already_retained='true' type='^{__DADisk=}'/>
+</function>
+<function name='DADiskEject'>
+<arg type='^{__DADisk=}'/>
+<arg type64='I' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{__DADisk=}'/>
+<arg type='^{__DADissenter=}'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+</function>
+<function name='DADiskGetBSDName'>
+<arg type='^{__DADisk=}'/>
+<retval type='*'/>
+</function>
+<function name='DADiskGetOptions'>
+<arg type='^{__DADisk=}'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='DADiskGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='DADiskIsClaimed'>
+<arg type='^{__DADisk=}'/>
+<retval type='B'/>
+</function>
+<function name='DADiskMount'>
+<arg type='^{__DADisk=}'/>
+<arg type='^{__CFURL=}'/>
+<arg type64='I' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{__DADisk=}'/>
+<arg type='^{__DADissenter=}'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+</function>
+<function name='DADiskMountWithArguments'>
+<arg type='^{__DADisk=}'/>
+<arg type='^{__CFURL=}'/>
+<arg type64='I' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{__DADisk=}'/>
+<arg type='^{__DADissenter=}'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+<arg type='^^{__CFString}'/>
+</function>
+<function name='DADiskRename'>
+<arg type='^{__DADisk=}'/>
+<arg type='^{__CFString=}'/>
+<arg type64='I' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{__DADisk=}'/>
+<arg type='^{__DADissenter=}'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+</function>
+<function name='DADiskSetOptions'>
+<arg type='^{__DADisk=}'/>
+<arg type64='I' type='L'/>
+<arg type='B'/>
+<retval type='i'/>
+</function>
+<function name='DADiskUnclaim'>
+<arg type='^{__DADisk=}'/>
+</function>
+<function name='DADiskUnmount'>
+<arg type='^{__DADisk=}'/>
+<arg type64='I' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{__DADisk=}'/>
+<arg type='^{__DADissenter=}'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+</function>
+<function name='DADissenterCreate'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='i'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__DADissenter=}'/>
+</function>
+<function name='DADissenterGetStatus'>
+<arg type='^{__DADissenter=}'/>
+<retval type='i'/>
+</function>
+<function name='DADissenterGetStatusString'>
+<arg type='^{__DADissenter=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='DARegisterDiskAppearedCallback'>
+<arg type='^{__DASession=}'/>
+<arg type='^{__CFDictionary=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{__DADisk=}'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+</function>
+<function name='DARegisterDiskDescriptionChangedCallback'>
+<arg type='^{__DASession=}'/>
+<arg type='^{__CFDictionary=}'/>
+<arg type='^{__CFArray=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{__DADisk=}'/>
+<arg type='^{__CFArray=}'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+</function>
+<function name='DARegisterDiskDisappearedCallback'>
+<arg type='^{__DASession=}'/>
+<arg type='^{__CFDictionary=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{__DADisk=}'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+</function>
+<function name='DARegisterDiskEjectApprovalCallback'>
+<arg type='^{__DASession=}'/>
+<arg type='^{__CFDictionary=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{__DADisk=}'/>
+<arg type='^v'/>
+<retval type='^{__DADissenter=}'/>
+</arg>
+<arg type='^v'/>
+</function>
+<function name='DARegisterDiskMountApprovalCallback'>
+<arg type='^{__DASession=}'/>
+<arg type='^{__CFDictionary=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{__DADisk=}'/>
+<arg type='^v'/>
+<retval type='^{__DADissenter=}'/>
+</arg>
+<arg type='^v'/>
+</function>
+<function name='DARegisterDiskPeekCallback'>
+<arg type='^{__DASession=}'/>
+<arg type='^{__CFDictionary=}'/>
+<arg type64='q' type='l'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{__DADisk=}'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+</function>
+<function name='DARegisterDiskUnmountApprovalCallback'>
+<arg type='^{__DASession=}'/>
+<arg type='^{__CFDictionary=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{__DADisk=}'/>
+<arg type='^v'/>
+<retval type='^{__DADissenter=}'/>
+</arg>
+<arg type='^v'/>
+</function>
+<function name='DASessionCreate'>
+<arg type='^{__CFAllocator=}'/>
+<retval already_retained='true' type='^{__DASession=}'/>
+</function>
+<function name='DASessionGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='DASessionScheduleWithRunLoop'>
+<arg type='^{__DASession=}'/>
+<arg type='^{__CFRunLoop=}'/>
+<arg type='^{__CFString=}'/>
+</function>
+<function name='DASessionSetDispatchQueue'>
+<arg type='^{__DASession=}'/>
+<arg type='^{dispatch_queue_s=}'/>
+</function>
+<function name='DASessionUnscheduleFromRunLoop'>
+<arg type='^{__DASession=}'/>
+<arg type='^{__CFRunLoop=}'/>
+<arg type='^{__CFString=}'/>
+</function>
+<function name='DAUnregisterApprovalCallback'>
+<arg type='^{__DASession=}'/>
+<arg type='^v'/>
+<arg type='^v'/>
+</function>
+<function name='DAUnregisterCallback'>
+<arg type='^{__DASession=}'/>
+<arg type='^v'/>
+<arg type='^v'/>
+</function>
+</signatures>

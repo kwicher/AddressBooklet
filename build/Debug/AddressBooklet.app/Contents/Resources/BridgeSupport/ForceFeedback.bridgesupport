@@ -1,0 +1,263 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<struct name='FFCAPABILITIES' type='{FFCAPABILITIES=&quot;ffSpecVer&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}&quot;supportedEffects&quot;I&quot;emulatedEffects&quot;I&quot;subType&quot;I&quot;numFfAxes&quot;I&quot;ffAxes&quot;[32C]&quot;storageCapacity&quot;I&quot;playbackCapacity&quot;I&quot;firmwareVer&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}&quot;hardwareVer&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}&quot;driverVer&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}}'/>
+<struct name='FFCONDITION' type='{FFCONDITION=&quot;lOffset&quot;i&quot;lPositiveCoefficient&quot;i&quot;lNegativeCoefficient&quot;i&quot;dwPositiveSaturation&quot;I&quot;dwNegativeSaturation&quot;I&quot;lDeadBand&quot;i}'/>
+<struct name='FFCONSTANTFORCE' type='{FFCONSTANTFORCE=&quot;lMagnitude&quot;i}'/>
+<struct name='FFCUSTOMFORCE' type='{FFCUSTOMFORCE=&quot;cChannels&quot;I&quot;dwSamplePeriod&quot;I&quot;cSamples&quot;I&quot;rglForceData&quot;^i}'/>
+<struct name='FFDeviceObjectReference' type='{_FFDeviceObjectReference=}'/>
+<struct name='FFEFFECT' type='{FFEFFECT=&quot;dwSize&quot;I&quot;dwFlags&quot;I&quot;dwDuration&quot;I&quot;dwSamplePeriod&quot;I&quot;dwGain&quot;I&quot;dwTriggerButton&quot;I&quot;dwTriggerRepeatInterval&quot;I&quot;cAxes&quot;I&quot;rgdwAxes&quot;^I&quot;rglDirection&quot;^i&quot;lpEnvelope&quot;^{FFENVELOPE}&quot;cbTypeSpecificParams&quot;I&quot;lpvTypeSpecificParams&quot;^v&quot;dwStartDelay&quot;I}'/>
+<struct name='FFEFFESCAPE' type='{FFEFFESCAPE=&quot;dwSize&quot;I&quot;dwCommand&quot;I&quot;lpvInBuffer&quot;^v&quot;cbInBuffer&quot;I&quot;lpvOutBuffer&quot;^v&quot;cbOutBuffer&quot;I}'/>
+<struct name='FFENVELOPE' type='{FFENVELOPE=&quot;dwSize&quot;I&quot;dwAttackLevel&quot;I&quot;dwAttackTime&quot;I&quot;dwFadeLevel&quot;I&quot;dwFadeTime&quot;I}'/>
+<struct name='FFEffectObjectReference' type='{_FFEffectObjectReference=}'/>
+<struct name='FFPERIODIC' type='{FFPERIODIC=&quot;dwMagnitude&quot;I&quot;lOffset&quot;i&quot;dwPhase&quot;I&quot;dwPeriod&quot;I}'/>
+<struct name='FFRAMPFORCE' type='{FFRAMPFORCE=&quot;lStart&quot;i&quot;lEnd&quot;i}'/>
+<struct name='ForceFeedbackDeviceState' type='{ForceFeedbackDeviceState=&quot;dwSize&quot;I&quot;dwState&quot;I&quot;dwLoad&quot;I}'/>
+<struct name='ForceFeedbackVersion' type='{ForceFeedbackVersion=&quot;apiVersion&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}&quot;plugInVersion&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}}'/>
+<struct name='IOForceFeedbackDeviceInterface' type='{IOForceFeedbackDeviceInterface=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?&quot;ForceFeedbackGetVersion&quot;^?&quot;InitializeTerminate&quot;^?&quot;DestroyEffect&quot;^?&quot;DownloadEffect&quot;^?&quot;Escape&quot;^?&quot;GetEffectStatus&quot;^?&quot;GetForceFeedbackCapabilities&quot;^?&quot;GetForceFeedbackState&quot;^?&quot;SendForceFeedbackCommand&quot;^?&quot;SetProperty&quot;^?&quot;StartEffect&quot;^?&quot;StopEffect&quot;^?}'/>
+<enum name='E_PENDING' value='2147483658'/>
+<enum name='FFCAP_ET_CONSTANTFORCE' value='1'/>
+<enum name='FFCAP_ET_CUSTOMFORCE' value='2048'/>
+<enum name='FFCAP_ET_DAMPER' value='256'/>
+<enum name='FFCAP_ET_FRICTION' value='1024'/>
+<enum name='FFCAP_ET_INERTIA' value='512'/>
+<enum name='FFCAP_ET_RAMPFORCE' value='2'/>
+<enum name='FFCAP_ET_SAWTOOTHDOWN' value='64'/>
+<enum name='FFCAP_ET_SAWTOOTHUP' value='32'/>
+<enum name='FFCAP_ET_SINE' value='8'/>
+<enum name='FFCAP_ET_SPRING' value='128'/>
+<enum name='FFCAP_ET_SQUARE' value='4'/>
+<enum name='FFCAP_ET_TRIANGLE' value='16'/>
+<enum name='FFCAP_ST_KINESTHETIC' value='1'/>
+<enum name='FFCAP_ST_VIBRATION' value='2'/>
+<enum name='FFEB_NOTRIGGER' value='4294967295'/>
+<enum name='FFEFF_CARTESIAN' value='16'/>
+<enum name='FFEFF_OBJECTOFFSETS' value='2'/>
+<enum name='FFEFF_POLAR' value='32'/>
+<enum name='FFEFF_SPHERICAL' value='64'/>
+<enum name='FFEGES_EMULATED' value='2'/>
+<enum name='FFEGES_NOTPLAYING' value='0'/>
+<enum name='FFEGES_PLAYING' value='1'/>
+<enum name='FFEP_ALLPARAMS' value='1023'/>
+<enum name='FFEP_AXES' value='32'/>
+<enum name='FFEP_DIRECTION' value='64'/>
+<enum name='FFEP_DURATION' value='1'/>
+<enum name='FFEP_ENVELOPE' value='128'/>
+<enum name='FFEP_GAIN' value='4'/>
+<enum name='FFEP_NODOWNLOAD' value='2147483648'/>
+<enum name='FFEP_NORESTART' value='1073741824'/>
+<enum name='FFEP_SAMPLEPERIOD' value='2'/>
+<enum name='FFEP_START' value='536870912'/>
+<enum name='FFEP_STARTDELAY' value='512'/>
+<enum name='FFEP_TRIGGERBUTTON' value='8'/>
+<enum name='FFEP_TRIGGERREPEATINTERVAL' value='16'/>
+<enum name='FFEP_TYPESPECIFICPARAMS' value='256'/>
+<enum name='FFERR_DEVICEFULL' value='2147746305'/>
+<enum name='FFERR_DEVICEPAUSED' value='2147746561'/>
+<enum name='FFERR_DEVICERELEASED' value='2147746567'/>
+<enum name='FFERR_EFFECTPLAYING' value='2147746312'/>
+<enum name='FFERR_EFFECTTYPEMISMATCH' value='2147746563'/>
+<enum name='FFERR_EFFECTTYPENOTSUPPORTED' value='2147746566'/>
+<enum name='FFERR_GENERIC' value='-2147483640'/>
+<enum name='FFERR_HASEFFECTS' value='2147746308'/>
+<enum name='FFERR_INCOMPLETEEFFECT' value='2147746310'/>
+<enum name='FFERR_INTERNAL' value='2147746562'/>
+<enum name='FFERR_INVALIDDOWNLOADID' value='2147746560'/>
+<enum name='FFERR_INVALIDPARAM' value='-2147483645'/>
+<enum name='FFERR_MOREDATA' value='2147746306'/>
+<enum name='FFERR_NOINTERFACE' value='-2147483644'/>
+<enum name='FFERR_NOTDOWNLOADED' value='2147746307'/>
+<enum name='FFERR_NOTINITIALIZED' value='2147746565'/>
+<enum name='FFERR_OUTOFMEMORY' value='-2147483646'/>
+<enum name='FFERR_UNPLUGGED' value='2147746313'/>
+<enum name='FFERR_UNSUPPORTED' value='-2147483647'/>
+<enum name='FFERR_UNSUPPORTEDAXIS' value='2147746564'/>
+<enum name='FFES_NODOWNLOAD' value='2147483648'/>
+<enum name='FFES_SOLO' value='1'/>
+<enum name='FFGFFS_ACTUATORSOFF' value='32'/>
+<enum name='FFGFFS_ACTUATORSON' value='16'/>
+<enum name='FFGFFS_DEVICELOST' value='2147483648'/>
+<enum name='FFGFFS_EMPTY' value='1'/>
+<enum name='FFGFFS_PAUSED' value='4'/>
+<enum name='FFGFFS_POWEROFF' value='128'/>
+<enum name='FFGFFS_POWERON' value='64'/>
+<enum name='FFGFFS_SAFETYSWITCHOFF' value='512'/>
+<enum name='FFGFFS_SAFETYSWITCHON' value='256'/>
+<enum name='FFGFFS_STOPPED' value='2'/>
+<enum name='FFGFFS_USERFFSWITCHOFF' value='2048'/>
+<enum name='FFGFFS_USERFFSWITCHON' value='1024'/>
+<enum name='FFJOFS_BUTTON0' value='48'/>
+<enum name='FFJOFS_BUTTON1' value='49'/>
+<enum name='FFJOFS_BUTTON10' value='58'/>
+<enum name='FFJOFS_BUTTON11' value='59'/>
+<enum name='FFJOFS_BUTTON12' value='60'/>
+<enum name='FFJOFS_BUTTON13' value='61'/>
+<enum name='FFJOFS_BUTTON14' value='62'/>
+<enum name='FFJOFS_BUTTON15' value='63'/>
+<enum name='FFJOFS_BUTTON16' value='64'/>
+<enum name='FFJOFS_BUTTON17' value='65'/>
+<enum name='FFJOFS_BUTTON18' value='66'/>
+<enum name='FFJOFS_BUTTON19' value='67'/>
+<enum name='FFJOFS_BUTTON2' value='50'/>
+<enum name='FFJOFS_BUTTON20' value='68'/>
+<enum name='FFJOFS_BUTTON21' value='69'/>
+<enum name='FFJOFS_BUTTON22' value='70'/>
+<enum name='FFJOFS_BUTTON23' value='71'/>
+<enum name='FFJOFS_BUTTON24' value='72'/>
+<enum name='FFJOFS_BUTTON25' value='73'/>
+<enum name='FFJOFS_BUTTON26' value='74'/>
+<enum name='FFJOFS_BUTTON27' value='75'/>
+<enum name='FFJOFS_BUTTON28' value='76'/>
+<enum name='FFJOFS_BUTTON29' value='77'/>
+<enum name='FFJOFS_BUTTON3' value='51'/>
+<enum name='FFJOFS_BUTTON30' value='78'/>
+<enum name='FFJOFS_BUTTON31' value='79'/>
+<enum name='FFJOFS_BUTTON4' value='52'/>
+<enum name='FFJOFS_BUTTON5' value='53'/>
+<enum name='FFJOFS_BUTTON6' value='54'/>
+<enum name='FFJOFS_BUTTON7' value='55'/>
+<enum name='FFJOFS_BUTTON8' value='56'/>
+<enum name='FFJOFS_BUTTON9' value='57'/>
+<enum name='FFJOFS_RX' value='12'/>
+<enum name='FFJOFS_RY' value='16'/>
+<enum name='FFJOFS_RZ' value='20'/>
+<enum name='FFJOFS_X' value='0'/>
+<enum name='FFJOFS_Y' value='4'/>
+<enum name='FFJOFS_Z' value='8'/>
+<enum name='FFPROP_AUTOCENTER' value='3'/>
+<enum name='FFPROP_FFGAIN' value='1'/>
+<enum name='FFSCL_BACKGROUND' value='8'/>
+<enum name='FFSCL_EXCLUSIVE' value='1'/>
+<enum name='FFSCL_FOREGROUND' value='4'/>
+<enum name='FFSCL_NONEXCLUSIVE' value='2'/>
+<enum name='FFSFFC_CONTINUE' value='8'/>
+<enum name='FFSFFC_PAUSE' value='4'/>
+<enum name='FFSFFC_RESET' value='1'/>
+<enum name='FFSFFC_SETACTUATORSOFF' value='32'/>
+<enum name='FFSFFC_SETACTUATORSON' value='16'/>
+<enum name='FFSFFC_STOPALL' value='2'/>
+<enum name='FF_DEGREES' value='100'/>
+<enum name='FF_DOWNLOADSKIPPED' value='3'/>
+<enum name='FF_EFFECTRESTARTED' value='4'/>
+<enum name='FF_FALSE' value='1'/>
+<enum name='FF_FFNOMINALMAX' value='10000'/>
+<enum name='FF_INFINITE' value='4294967295'/>
+<enum name='FF_OK' value='0'/>
+<enum name='FF_SECONDS' value='1000000'/>
+<enum name='FF_TRUNCATED' value='8'/>
+<enum name='FF_TRUNCATEDANDRESTARTED' value='12'/>
+<enum name='kFFAPIMajorRev' value='1'/>
+<enum name='kFFAPIMinorAndBugRev' value='0'/>
+<enum name='kFFAPINonRelRev' value='0'/>
+<enum name='kFFAPIStage' value='128'/>
+<enum name='kFFPlugInAPIMajorRev' value='1'/>
+<enum name='kFFPlugInAPIMinorAndBugRev' value='0'/>
+<enum name='kFFPlugInAPINonRelRev' value='0'/>
+<enum name='kFFPlugInAPIStage' value='128'/>
+<function name='FFCreateDevice'>
+<arg type='I'/>
+<arg type='^^{?}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFDeviceCreateEffect'>
+<arg type='^{_FFDeviceObjectReference=}'/>
+<arg type='^{__CFUUID=}'/>
+<arg type='^{FFEFFECT=IIIIIIII^I^i^{FFENVELOPE}I^vI}'/>
+<arg type='^^{?}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFDeviceEscape'>
+<arg type='^{_FFDeviceObjectReference=}'/>
+<arg type='^{FFEFFESCAPE=II^vI^vI}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFDeviceGetForceFeedbackCapabilities'>
+<arg type='^{_FFDeviceObjectReference=}'/>
+<arg type='^{FFCAPABILITIES={NumVersion=CCCC}IIII[32C]II{NumVersion=CCCC}{NumVersion=CCCC}{NumVersion=CCCC}}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFDeviceGetForceFeedbackProperty'>
+<arg type='^{_FFDeviceObjectReference=}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFDeviceGetForceFeedbackState'>
+<arg type='^{_FFDeviceObjectReference=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFDeviceReleaseEffect'>
+<arg type='^{_FFDeviceObjectReference=}'/>
+<arg type='^{_FFEffectObjectReference=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFDeviceSendForceFeedbackCommand'>
+<arg type='^{_FFDeviceObjectReference=}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFDeviceSetCooperativeLevel'>
+<arg type='^{_FFDeviceObjectReference=}'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFDeviceSetForceFeedbackProperty'>
+<arg type='^{_FFDeviceObjectReference=}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFEffectDownload'>
+<arg type='^{_FFEffectObjectReference=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFEffectEscape'>
+<arg type='^{_FFEffectObjectReference=}'/>
+<arg type='^{FFEFFESCAPE=II^vI^vI}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFEffectGetEffectStatus'>
+<arg type='^{_FFEffectObjectReference=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFEffectGetParameters'>
+<arg type='^{_FFEffectObjectReference=}'/>
+<arg type='^{FFEFFECT=IIIIIIII^I^i^{FFENVELOPE}I^vI}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFEffectSetParameters'>
+<arg type='^{_FFEffectObjectReference=}'/>
+<arg type='^{FFEFFECT=IIIIIIII^I^i^{FFENVELOPE}I^vI}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFEffectStart'>
+<arg type='^{_FFEffectObjectReference=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFEffectStop'>
+<arg type='^{_FFEffectObjectReference=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFEffectUnload'>
+<arg type='^{_FFEffectObjectReference=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFIsForceFeedback'>
+<arg type='I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FFReleaseDevice'>
+<arg type='^{_FFDeviceObjectReference=}'/>
+<retval type64='i' type='l'/>
+</function>
+</signatures>

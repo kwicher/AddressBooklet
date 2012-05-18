@@ -1,0 +1,2715 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/vecLib.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<struct name='AUNodeConnection' type='{AudioUnitNodeConnection=&quot;sourceNode&quot;i&quot;sourceOutputNumber&quot;I&quot;destNode&quot;i&quot;destInputNumber&quot;I}'/>
+<struct name='AUNodeInteraction' type='{AUNodeInteraction=&quot;nodeInteractionType&quot;I&quot;nodeInteraction&quot;(?=&quot;connection&quot;{AudioUnitNodeConnection=&quot;sourceNode&quot;i&quot;sourceOutputNumber&quot;I&quot;destNode&quot;i&quot;destInputNumber&quot;I}&quot;inputCallback&quot;{AUNodeRenderCallback=&quot;destNode&quot;i&quot;destInputNumber&quot;I&quot;cback&quot;{AURenderCallbackStruct=&quot;inputProc&quot;^?&quot;inputProcRefCon&quot;^v}})}'/>
+<struct name='AUNodeRenderCallback' type='{AUNodeRenderCallback=&quot;destNode&quot;i&quot;destInputNumber&quot;I&quot;cback&quot;{AURenderCallbackStruct=&quot;inputProc&quot;^?&quot;inputProcRefCon&quot;^v}}'/>
+<struct name='AUPresetEvent' type='{AUPresetEvent=&quot;scope&quot;I&quot;element&quot;I&quot;preset&quot;^v}'/>
+<struct name='AudioBalanceFade' type='{AudioBalanceFade=&quot;mLeftRightBalance&quot;f&quot;mBackFrontFade&quot;f&quot;mType&quot;I&quot;mChannelLayout&quot;^{AudioChannelLayout}}'/>
+<struct name='AudioBytePacketTranslation' type='{AudioBytePacketTranslation=&quot;mByte&quot;q&quot;mPacket&quot;q&quot;mByteOffsetInPacket&quot;I&quot;mFlags&quot;I}'/>
+<struct name='AudioConverterPrimeInfo' type='{AudioConverterPrimeInfo=&quot;leadingFrames&quot;I&quot;trailingFrames&quot;I}'/>
+<struct name='AudioFileFDFTable' type='{AudioFileFDFTable=&quot;mComponentStorage&quot;^v&quot;mReadBytesFDF&quot;^?&quot;mWriteBytesFDF&quot;^?&quot;mReadPacketsFDF&quot;^?&quot;mWritePacketsFDF&quot;^?&quot;mGetPropertyInfoFDF&quot;^?&quot;mGetPropertyFDF&quot;^?&quot;mSetPropertyFDF&quot;^?&quot;mCountUserDataFDF&quot;^?&quot;mGetUserDataSizeFDF&quot;^?&quot;mGetUserDataFDF&quot;^?&quot;mSetUserDataFDF&quot;^?}'/>
+<struct name='AudioFileFDFTableExtended' type='{AudioFileFDFTableExtended=&quot;mComponentStorage&quot;^v&quot;mReadBytesFDF&quot;^?&quot;mWriteBytesFDF&quot;^?&quot;mReadPacketsFDF&quot;^?&quot;mWritePacketsFDF&quot;^?&quot;mGetPropertyInfoFDF&quot;^?&quot;mGetPropertyFDF&quot;^?&quot;mSetPropertyFDF&quot;^?&quot;mCountUserDataFDF&quot;^?&quot;mGetUserDataSizeFDF&quot;^?&quot;mGetUserDataFDF&quot;^?&quot;mSetUserDataFDF&quot;^?&quot;mReadPacketDataFDF&quot;^?}'/>
+<struct name='AudioFileMarker' type='{AudioFileMarker=&quot;mFramePosition&quot;d&quot;mName&quot;^{__CFString}&quot;mMarkerID&quot;i&quot;mSMPTETime&quot;{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}&quot;mType&quot;I&quot;mReserved&quot;S&quot;mChannel&quot;S}'/>
+<struct name='AudioFileMarkerList' type='{AudioFileMarkerList=&quot;mSMPTE_TimeType&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{AudioFileMarker=&quot;mFramePosition&quot;d&quot;mName&quot;^{__CFString}&quot;mMarkerID&quot;i&quot;mSMPTETime&quot;{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}&quot;mType&quot;I&quot;mReserved&quot;S&quot;mChannel&quot;S}]}'/>
+<struct name='AudioFilePacketTableInfo' type='{AudioFilePacketTableInfo=&quot;mNumberValidFrames&quot;q&quot;mPrimingFrames&quot;i&quot;mRemainderFrames&quot;i}'/>
+<struct name='AudioFileRegion' type='{AudioFileRegion=&quot;mRegionID&quot;I&quot;mName&quot;^{__CFString}&quot;mFlags&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{AudioFileMarker=&quot;mFramePosition&quot;d&quot;mName&quot;^{__CFString}&quot;mMarkerID&quot;i&quot;mSMPTETime&quot;{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}&quot;mType&quot;I&quot;mReserved&quot;S&quot;mChannel&quot;S}]}'/>
+<struct name='AudioFileRegionList' type='{AudioFileRegionList=&quot;mSMPTE_TimeType&quot;I&quot;mNumberRegions&quot;I&quot;mRegions&quot;[1{AudioFileRegion=&quot;mRegionID&quot;I&quot;mName&quot;^{__CFString}&quot;mFlags&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{AudioFileMarker=&quot;mFramePosition&quot;d&quot;mName&quot;^{__CFString}&quot;mMarkerID&quot;i&quot;mSMPTETime&quot;{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}&quot;mType&quot;I&quot;mReserved&quot;S&quot;mChannel&quot;S}]}]}'/>
+<struct name='AudioFileTypeAndFormatID' type='{AudioFileTypeAndFormatID=&quot;mFileType&quot;I&quot;mFormatID&quot;I}'/>
+<struct name='AudioFile_SMPTE_Time' type='{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}'/>
+<struct name='AudioFormatInfo' type='{AudioFormatInfo=&quot;mASBD&quot;{AudioStreamBasicDescription=&quot;mSampleRate&quot;d&quot;mFormatID&quot;I&quot;mFormatFlags&quot;I&quot;mBytesPerPacket&quot;I&quot;mFramesPerPacket&quot;I&quot;mBytesPerFrame&quot;I&quot;mChannelsPerFrame&quot;I&quot;mBitsPerChannel&quot;I&quot;mReserved&quot;I}&quot;mMagicCookie&quot;^v&quot;mMagicCookieSize&quot;I}'/>
+<struct name='AudioFormatListItem' type='{AudioFormatListItem=&quot;mASBD&quot;{AudioStreamBasicDescription=&quot;mSampleRate&quot;d&quot;mFormatID&quot;I&quot;mFormatFlags&quot;I&quot;mBytesPerPacket&quot;I&quot;mFramesPerPacket&quot;I&quot;mBytesPerFrame&quot;I&quot;mChannelsPerFrame&quot;I&quot;mBitsPerChannel&quot;I&quot;mReserved&quot;I}&quot;mChannelLayoutTag&quot;I}'/>
+<struct name='AudioFramePacketTranslation' type='{AudioFramePacketTranslation=&quot;mFrame&quot;q&quot;mPacket&quot;q&quot;mFrameOffsetInPacket&quot;I}'/>
+<struct name='AudioPanningInfo' type='{AudioPanningInfo=&quot;mPanningMode&quot;I&quot;mCoordinateFlags&quot;I&quot;mCoordinates&quot;[3f]&quot;mGainScale&quot;f&quot;mOutputChannelMap&quot;^{AudioChannelLayout}}'/>
+<struct name='AudioQueueBuffer' type='{AudioQueueBuffer=&quot;mAudioDataBytesCapacity&quot;I&quot;mAudioData&quot;^v&quot;mAudioDataByteSize&quot;I&quot;mUserData&quot;^v&quot;mPacketDescriptionCapacity&quot;I&quot;mPacketDescriptions&quot;^{AudioStreamPacketDescription}&quot;mPacketDescriptionCount&quot;I}'/>
+<struct name='AudioQueueLevelMeterState' type='{AudioQueueLevelMeterState=&quot;mAveragePower&quot;f&quot;mPeakPower&quot;f}'/>
+<struct name='AudioQueueParameterEvent' type='{AudioQueueParameterEvent=&quot;mID&quot;I&quot;mValue&quot;f}'/>
+<struct name='AudioUnitEvent' type='{AudioUnitEvent=&quot;mEventType&quot;I&quot;mArgument&quot;(?=&quot;mParameter&quot;{AudioUnitParameter=&quot;mAudioUnit&quot;^{ComponentInstanceRecord}&quot;mParameterID&quot;I&quot;mScope&quot;I&quot;mElement&quot;I}&quot;mProperty&quot;{AudioUnitProperty=&quot;mAudioUnit&quot;^{ComponentInstanceRecord}&quot;mPropertyID&quot;I&quot;mScope&quot;I&quot;mElement&quot;I})}'/>
+<struct name='AudioUnitNodeConnection' type='{AudioUnitNodeConnection=&quot;sourceNode&quot;i&quot;sourceOutputNumber&quot;I&quot;destNode&quot;i&quot;destInputNumber&quot;I}'/>
+<struct name='CABarBeatTime' type='{CABarBeatTime=&quot;bar&quot;i&quot;beat&quot;S&quot;subbeat&quot;S&quot;subbeatDivisor&quot;S&quot;reserved&quot;S}'/>
+<struct name='CAClockTime' type='{CAClockTime=&quot;format&quot;I&quot;reserved&quot;I&quot;time&quot;(?=&quot;hostTime&quot;Q&quot;samples&quot;d&quot;beats&quot;d&quot;seconds&quot;d&quot;smpte&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s})}'/>
+<struct name='CAFAudioDescription' type='{CAFAudioDescription=&quot;mSampleRate&quot;d&quot;mFormatID&quot;I&quot;mFormatFlags&quot;I&quot;mBytesPerPacket&quot;I&quot;mFramesPerPacket&quot;I&quot;mChannelsPerFrame&quot;I&quot;mBitsPerChannel&quot;I}'/>
+<struct name='CAFAudioFormatListItem' type='{CAFAudioFormatListItem=&quot;mFormat&quot;{CAFAudioDescription=&quot;mSampleRate&quot;d&quot;mFormatID&quot;I&quot;mFormatFlags&quot;I&quot;mBytesPerPacket&quot;I&quot;mFramesPerPacket&quot;I&quot;mChannelsPerFrame&quot;I&quot;mBitsPerChannel&quot;I}&quot;mChannelLayoutTag&quot;I}'/>
+<struct name='CAFChunkHeader' type='{CAFChunkHeader=&quot;mChunkType&quot;I&quot;mChunkSize&quot;q}'/>
+<struct name='CAFDataChunk' type='{CAFDataChunk=&quot;mEditCount&quot;I&quot;mData&quot;[1C]}'/>
+<struct name='CAFFileHeader' type='{CAFFileHeader=&quot;mFileType&quot;I&quot;mFileVersion&quot;S&quot;mFileFlags&quot;S}'/>
+<struct name='CAFInfoStrings' type='{CAFInfoStrings=&quot;mNumEntries&quot;I}'/>
+<struct name='CAFInstrumentChunk' type='{CAFInstrumentChunk=&quot;mBaseNote&quot;f&quot;mMIDILowNote&quot;C&quot;mMIDIHighNote&quot;C&quot;mMIDILowVelocity&quot;C&quot;mMIDIHighVelocity&quot;C&quot;mdBGain&quot;f&quot;mStartRegionID&quot;I&quot;mSustainRegionID&quot;I&quot;mReleaseRegionID&quot;I&quot;mInstrumentID&quot;I}'/>
+<struct name='CAFMarker' type='{CAFMarker=&quot;mType&quot;I&quot;mFramePosition&quot;d&quot;mMarkerID&quot;I&quot;mSMPTETime&quot;{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}&quot;mChannel&quot;I}'/>
+<struct name='CAFMarkerChunk' type='{CAFMarkerChunk=&quot;mSMPTE_TimeType&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{CAFMarker=&quot;mType&quot;I&quot;mFramePosition&quot;d&quot;mMarkerID&quot;I&quot;mSMPTETime&quot;{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}&quot;mChannel&quot;I}]}'/>
+<struct name='CAFOverviewChunk' type='{CAFOverviewChunk=&quot;mEditCount&quot;I&quot;mNumFramesPerOVWSample&quot;I&quot;mData&quot;[1{CAFOverviewSample=&quot;mMinValue&quot;s&quot;mMaxValue&quot;s}]}'/>
+<struct name='CAFOverviewSample' type='{CAFOverviewSample=&quot;mMinValue&quot;s&quot;mMaxValue&quot;s}'/>
+<struct name='CAFPacketTableHeader' type='{CAFPacketTableHeader=&quot;mNumberPackets&quot;q&quot;mNumberValidFrames&quot;q&quot;mPrimingFrames&quot;i&quot;mRemainderFrames&quot;i&quot;mPacketDescriptions&quot;[1C]}'/>
+<struct name='CAFPeakChunk' type='{CAFPeakChunk=&quot;mEditCount&quot;I&quot;mPeaks&quot;[1{CAFPositionPeak=&quot;mValue&quot;f&quot;mFrameNumber&quot;Q}]}'/>
+<struct name='CAFPositionPeak' type='{CAFPositionPeak=&quot;mValue&quot;f&quot;mFrameNumber&quot;Q}'/>
+<struct name='CAFRegion' type='{CAFRegion=&quot;mRegionID&quot;I&quot;mFlags&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{CAFMarker=&quot;mType&quot;I&quot;mFramePosition&quot;d&quot;mMarkerID&quot;I&quot;mSMPTETime&quot;{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}&quot;mChannel&quot;I}]}'/>
+<struct name='CAFRegionChunk' type='{CAFRegionChunk=&quot;mSMPTE_TimeType&quot;I&quot;mNumberRegions&quot;I&quot;mRegions&quot;[1{CAFRegion=&quot;mRegionID&quot;I&quot;mFlags&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{CAFMarker=&quot;mType&quot;I&quot;mFramePosition&quot;d&quot;mMarkerID&quot;I&quot;mSMPTETime&quot;{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}&quot;mChannel&quot;I}]}]}'/>
+<struct name='CAFStringID' type='{CAFStringID=&quot;mStringID&quot;I&quot;mStringStartByteOffset&quot;q}'/>
+<struct name='CAFStrings' type='{CAFStrings=&quot;mNumEntries&quot;I&quot;mStringsIDs&quot;[1{CAFStringID=&quot;mStringID&quot;I&quot;mStringStartByteOffset&quot;q}]}'/>
+<struct name='CAFUMIDChunk' type='{CAFUMIDChunk=&quot;mBytes&quot;[64C]}'/>
+<struct name='CAF_SMPTE_Time' type='{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}'/>
+<struct name='CAF_UUID_ChunkHeader' type='{CAF_UUID_ChunkHeader=&quot;mHeader&quot;{CAFChunkHeader=&quot;mChunkType&quot;I&quot;mChunkSize&quot;q}&quot;mUUID&quot;[16C]}'/>
+<struct name='CAMeterTrackEntry' type='{CAMeterTrackEntry=&quot;beats&quot;d&quot;meterNumer&quot;S&quot;meterDenom&quot;S}'/>
+<struct name='CATempoMapEntry' type='{CATempoMapEntry=&quot;beats&quot;d&quot;tempoBPM&quot;d}'/>
+<struct name='ExtendedAudioFormatInfo' type='{ExtendedAudioFormatInfo=&quot;mASBD&quot;{AudioStreamBasicDescription=&quot;mSampleRate&quot;d&quot;mFormatID&quot;I&quot;mFormatFlags&quot;I&quot;mBytesPerPacket&quot;I&quot;mFramesPerPacket&quot;I&quot;mBytesPerFrame&quot;I&quot;mChannelsPerFrame&quot;I&quot;mBitsPerChannel&quot;I&quot;mReserved&quot;I}&quot;mMagicCookie&quot;^v&quot;mMagicCookieSize&quot;I&quot;mClassDescription&quot;{AudioClassDescription=&quot;mType&quot;I&quot;mSubType&quot;I&quot;mManufacturer&quot;I}}'/>
+<struct name='ExtendedControlEvent' type='{ExtendedControlEvent=&quot;groupID&quot;I&quot;controlID&quot;I&quot;value&quot;f}'/>
+<struct name='ExtendedNoteOnEvent' type='{ExtendedNoteOnEvent=&quot;instrumentID&quot;I&quot;groupID&quot;I&quot;duration&quot;f&quot;extendedParams&quot;{MusicDeviceNoteParams=&quot;argCount&quot;I&quot;mPitch&quot;f&quot;mVelocity&quot;f&quot;mControls&quot;[1{NoteParamsControlValue=&quot;mID&quot;I&quot;mValue&quot;f}]}}'/>
+<struct name='ExtendedTempoEvent' type='{ExtendedTempoEvent=&quot;bpm&quot;d}'/>
+<struct name='MIDIChannelMessage' type='{MIDIChannelMessage=&quot;status&quot;C&quot;data1&quot;C&quot;data2&quot;C&quot;reserved&quot;C}'/>
+<struct name='MIDIMetaEvent' type='{MIDIMetaEvent=&quot;metaEventType&quot;C&quot;unused1&quot;C&quot;unused2&quot;C&quot;unused3&quot;C&quot;dataLength&quot;I&quot;data&quot;[1C]}'/>
+<struct name='MIDINoteMessage' type='{MIDINoteMessage=&quot;channel&quot;C&quot;note&quot;C&quot;velocity&quot;C&quot;releaseVelocity&quot;C&quot;duration&quot;f}'/>
+<struct name='MIDIRawData' type='{MIDIRawData=&quot;length&quot;I&quot;data&quot;[1C]}'/>
+<struct name='MusicEventUserData' type='{MusicEventUserData=&quot;length&quot;I&quot;data&quot;[1C]}'/>
+<struct name='MusicTrackLoopInfo' type='{MusicTrackLoopInfo=&quot;loopDuration&quot;d&quot;numberOfLoops&quot;i}'/>
+<struct name='ParameterEvent' type='{ParameterEvent=&quot;parameterID&quot;I&quot;scope&quot;I&quot;element&quot;I&quot;value&quot;f}'/>
+<cftype name='AUParameterListenerRef' type='^{AUListenerBase=}'/>
+<cftype name='AudioConverterRef' type='^{OpaqueAudioConverter=}'/>
+<cftype name='AudioQueueBufferRef' type='^{AudioQueueBuffer=I^vI^vI^{AudioStreamPacketDescription}I}'/>
+<cftype name='AudioQueueProcessingTapRef' type='^{OpaqueAudioQueueProcessingTap=}'/>
+<cftype name='AudioQueueRef' type='^{OpaqueAudioQueue=}'/>
+<cftype name='AudioQueueTimelineRef' type='^{OpaqueAudioQueueTimeline=}'/>
+<cftype name='CAClockRef' type='^{OpaqueCAClock=}'/>
+<cftype name='ExtAudioFileRef' type='^{OpaqueExtAudioFile=}'/>
+<opaque name='AUGraph' type='^{OpaqueAUGraph=}'/>
+<opaque name='AudioFileID' type='^{OpaqueAudioFileID=}'/>
+<opaque name='AudioFileStreamID' type='^{OpaqueAudioFileStreamID=}'/>
+<opaque name='MusicEventIterator' type='^{OpaqueMusicEventIterator=}'/>
+<opaque name='MusicPlayer' type='^{OpaqueMusicPlayer=}'/>
+<opaque name='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+<opaque name='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+<string_constant name='kAFInfoDictionary_Album' value='album'/>
+<string_constant name='kAFInfoDictionary_ApproximateDurationInSeconds' value='approximate duration in seconds'/>
+<string_constant name='kAFInfoDictionary_Artist' value='artist'/>
+<string_constant name='kAFInfoDictionary_ChannelLayout' value='channel layout'/>
+<string_constant name='kAFInfoDictionary_Comments' value='comments'/>
+<string_constant name='kAFInfoDictionary_Composer' value='composer'/>
+<string_constant name='kAFInfoDictionary_Copyright' value='copyright'/>
+<string_constant name='kAFInfoDictionary_EncodingApplication' value='encoding application'/>
+<string_constant name='kAFInfoDictionary_Genre' value='genre'/>
+<string_constant name='kAFInfoDictionary_ISRC' value='ISRC'/>
+<string_constant name='kAFInfoDictionary_KeySignature' value='key signature'/>
+<string_constant name='kAFInfoDictionary_Lyricist' value='lyricist'/>
+<string_constant name='kAFInfoDictionary_NominalBitRate' value='nominal bit rate'/>
+<string_constant name='kAFInfoDictionary_RecordedDate' value='recorded date'/>
+<string_constant name='kAFInfoDictionary_SourceBitDepth' value='source bit depth'/>
+<string_constant name='kAFInfoDictionary_SourceEncoder' value='source encoder'/>
+<string_constant name='kAFInfoDictionary_SubTitle' value='subtitle'/>
+<string_constant name='kAFInfoDictionary_Tempo' value='tempo'/>
+<string_constant name='kAFInfoDictionary_TimeSignature' value='time signature'/>
+<string_constant name='kAFInfoDictionary_Title' value='title'/>
+<string_constant name='kAFInfoDictionary_TrackNumber' value='track number'/>
+<string_constant name='kAFInfoDictionary_Year' value='year'/>
+<enum name='AUDIO_TOOLBOX_VERSION' value='1060'/>
+<enum name='kAUGraphErr_CannotDoInCurrentContext' value='-10863'/>
+<enum name='kAUGraphErr_InvalidAudioUnit' value='-10864'/>
+<enum name='kAUGraphErr_InvalidConnection' value='-10861'/>
+<enum name='kAUGraphErr_NodeNotFound' value='-10860'/>
+<enum name='kAUGraphErr_OutputNodeErr' value='-10862'/>
+<enum name='kAUNodeInteraction_Connection' value='1'/>
+<enum name='kAUNodeInteraction_InputCallback' value='2'/>
+<enum name='kAUParameterListener_AnyParameter' value='4294967295'/>
+<enum name='kAudioBalanceFadeType_EqualPower' value='1'/>
+<enum name='kAudioBalanceFadeType_MaxUnityGain' value='0'/>
+<enum name='kAudioConverterApplicableEncodeBitRates' value='1634034290'/>
+<enum name='kAudioConverterApplicableEncodeSampleRates' value='1634038642'/>
+<enum name='kAudioConverterAvailableEncodeBitRates' value='1986355826'/>
+<enum name='kAudioConverterAvailableEncodeChannelLayoutTags' value='1634034540'/>
+<enum name='kAudioConverterAvailableEncodeSampleRates' value='1986360178'/>
+<enum name='kAudioConverterChannelMap' value='1667788144'/>
+<enum name='kAudioConverterCodecQuality' value='1667527029'/>
+<enum name='kAudioConverterCompressionMagicCookie' value='1668114275'/>
+<enum name='kAudioConverterCurrentInputStreamDescription' value='1633904996'/>
+<enum name='kAudioConverterCurrentOutputStreamDescription' value='1633906532'/>
+<enum name='kAudioConverterDecompressionMagicCookie' value='1684891491'/>
+<enum name='kAudioConverterEncodeAdjustableSampleRate' value='1634366322'/>
+<enum name='kAudioConverterEncodeBitRate' value='1651663220'/>
+<enum name='kAudioConverterErr_BadPropertySizeError' value='561211770'/>
+<enum name='kAudioConverterErr_FormatNotSupported' value='1718449215'/>
+<enum name='kAudioConverterErr_InputSampleRateOutOfRange' value='560558962'/>
+<enum name='kAudioConverterErr_InvalidInputSize' value='1768846202'/>
+<enum name='kAudioConverterErr_InvalidOutputSize' value='1869902714'/>
+<enum name='kAudioConverterErr_OperationNotSupported' value='1869627199'/>
+<enum name='kAudioConverterErr_OutputSampleRateOutOfRange' value='560952178'/>
+<enum name='kAudioConverterErr_PropertyNotSupported' value='1886547824'/>
+<enum name='kAudioConverterErr_RequiresPacketDescriptionsError' value='561015652'/>
+<enum name='kAudioConverterErr_UnspecifiedError' value='2003329396'/>
+<enum name='kAudioConverterInputChannelLayout' value='1768123424'/>
+<enum name='kAudioConverterOutputChannelLayout' value='1868786720'/>
+<enum name='kAudioConverterPrimeInfo' value='1886546285'/>
+<enum name='kAudioConverterPrimeMethod' value='1886547309'/>
+<enum name='kAudioConverterPropertyBitDepthHint' value='1633903204'/>
+<enum name='kAudioConverterPropertyCalculateInputBufferSize' value='1667850867'/>
+<enum name='kAudioConverterPropertyCalculateOutputBufferSize' value='1668244083'/>
+<enum name='kAudioConverterPropertyDitherBitDepth' value='1684171124'/>
+<enum name='kAudioConverterPropertyDithering' value='1684632680'/>
+<enum name='kAudioConverterPropertyFormatList' value='1718383476'/>
+<enum name='kAudioConverterPropertyInputCodecParameters' value='1768121456'/>
+<enum name='kAudioConverterPropertyMaximumInputBufferSize' value='2020172403'/>
+<enum name='kAudioConverterPropertyMaximumInputPacketSize' value='2020175987'/>
+<enum name='kAudioConverterPropertyMaximumOutputPacketSize' value='2020569203'/>
+<enum name='kAudioConverterPropertyMinimumInputBufferSize' value='1835623027'/>
+<enum name='kAudioConverterPropertyMinimumOutputBufferSize' value='1836016243'/>
+<enum name='kAudioConverterPropertyOutputCodecParameters' value='1868784752'/>
+<enum name='kAudioConverterPropertySettings' value='1633906803'/>
+<enum name='kAudioConverterQuality_High' value='96'/>
+<enum name='kAudioConverterQuality_Low' value='32'/>
+<enum name='kAudioConverterQuality_Max' value='127'/>
+<enum name='kAudioConverterQuality_Medium' value='64'/>
+<enum name='kAudioConverterQuality_Min' value='0'/>
+<enum name='kAudioConverterSampleRateConverterAlgorithm' value='1936876393'/>
+<enum name='kAudioConverterSampleRateConverterComplexity' value='1936876385'/>
+<enum name='kAudioConverterSampleRateConverterComplexity_Linear' value='1818848869'/>
+<enum name='kAudioConverterSampleRateConverterComplexity_Mastering' value='1650553971'/>
+<enum name='kAudioConverterSampleRateConverterComplexity_Normal' value='1852797549'/>
+<enum name='kAudioConverterSampleRateConverterInitialPhase' value='1936876400'/>
+<enum name='kAudioConverterSampleRateConverterQuality' value='1936876401'/>
+<enum name='kAudioFile3GP2Type' value='862416946'/>
+<enum name='kAudioFile3GPType' value='862417008'/>
+<enum name='kAudioFileAAC_ADTSType' value='1633973363'/>
+<enum name='kAudioFileAC3Type' value='1633889587'/>
+<enum name='kAudioFileAIFCType' value='1095321155'/>
+<enum name='kAudioFileAIFFType' value='1095321158'/>
+<enum name='kAudioFileAMRType' value='1634562662'/>
+<enum name='kAudioFileBadPropertySizeError' value='561211770'/>
+<enum name='kAudioFileCAFType' value='1667327590'/>
+<enum name='kAudioFileCloseSelect' value='6'/>
+<enum name='kAudioFileComponent_AvailableFormatIDs' value='1718446436'/>
+<enum name='kAudioFileComponent_AvailableStreamDescriptionsForFormat' value='1935960420'/>
+<enum name='kAudioFileComponent_CanRead' value='1668182628'/>
+<enum name='kAudioFileComponent_CanWrite' value='1668183922'/>
+<enum name='kAudioFileComponent_ExtensionsForType' value='1717926004'/>
+<enum name='kAudioFileComponent_FastDispatchTable' value='1717855860'/>
+<enum name='kAudioFileComponent_FileTypeName' value='1718906477'/>
+<enum name='kAudioFileComponent_HFSTypeCodesForType' value='1718118003'/>
+<enum name='kAudioFileComponent_MIMETypesForType' value='1718446445'/>
+<enum name='kAudioFileComponent_UTIsForType' value='1718973545'/>
+<enum name='kAudioFileCountUserDataSelect' value='20'/>
+<enum name='kAudioFileCreateSelect' value='1'/>
+<enum name='kAudioFileCreateURLSelect' value='25'/>
+<enum name='kAudioFileDataIsThisFormatSelect' value='17'/>
+<enum name='kAudioFileDoesNotAllow64BitDataSizeError' value='1868981823'/>
+<enum name='kAudioFileEndOfFileError' value='-39'/>
+<enum name='kAudioFileExtensionIsThisFormatSelect' value='15'/>
+<enum name='kAudioFileFileDataIsThisFormatSelect' value='27'/>
+<enum name='kAudioFileFileIsThisFormatSelect' value='16'/>
+<enum name='kAudioFileFlags_DontPageAlignAudioData' value='2'/>
+<enum name='kAudioFileFlags_EraseFile' value='1'/>
+<enum name='kAudioFileGetGlobalInfoSelect' value='19'/>
+<enum name='kAudioFileGetGlobalInfoSizeSelect' value='18'/>
+<enum name='kAudioFileGetPropertyInfoSelect' value='12'/>
+<enum name='kAudioFileGetPropertySelect' value='13'/>
+<enum name='kAudioFileGetUserDataSelect' value='22'/>
+<enum name='kAudioFileGetUserDataSizeSelect' value='21'/>
+<enum name='kAudioFileGlobalInfo_AllExtensions' value='1634498676'/>
+<enum name='kAudioFileGlobalInfo_AllHFSTypeCodes' value='1634231923'/>
+<enum name='kAudioFileGlobalInfo_AllMIMETypes' value='1634560365'/>
+<enum name='kAudioFileGlobalInfo_AllUTIs' value='1635087465'/>
+<enum name='kAudioFileGlobalInfo_AvailableFormatIDs' value='1718446436'/>
+<enum name='kAudioFileGlobalInfo_AvailableStreamDescriptionsForFormat' value='1935960420'/>
+<enum name='kAudioFileGlobalInfo_ExtensionsForType' value='1717926004'/>
+<enum name='kAudioFileGlobalInfo_FileTypeName' value='1718906477'/>
+<enum name='kAudioFileGlobalInfo_HFSTypeCodesForType' value='1718118003'/>
+<enum name='kAudioFileGlobalInfo_MIMETypesForType' value='1718446445'/>
+<enum name='kAudioFileGlobalInfo_ReadableTypes' value='1634103910'/>
+<enum name='kAudioFileGlobalInfo_TypesForExtension' value='1952807028'/>
+<enum name='kAudioFileGlobalInfo_TypesForHFSTypeCode' value='1952999027'/>
+<enum name='kAudioFileGlobalInfo_TypesForMIMEType' value='1953327469'/>
+<enum name='kAudioFileGlobalInfo_TypesForUTI' value='1953854569'/>
+<enum name='kAudioFileGlobalInfo_UTIsForType' value='1718973545'/>
+<enum name='kAudioFileGlobalInfo_WritableTypes' value='1634105190'/>
+<enum name='kAudioFileInitializeSelect' value='3'/>
+<enum name='kAudioFileInitializeWithCallbacksSelect' value='5'/>
+<enum name='kAudioFileInvalidChunkError' value='1667787583'/>
+<enum name='kAudioFileInvalidFileError' value='1685348671'/>
+<enum name='kAudioFileInvalidPacketOffsetError' value='1885563711'/>
+<enum name='kAudioFileLoopDirection_Backward' value='3'/>
+<enum name='kAudioFileLoopDirection_Forward' value='1'/>
+<enum name='kAudioFileLoopDirection_ForwardAndBackward' value='2'/>
+<enum name='kAudioFileLoopDirection_NoLooping' value='0'/>
+<enum name='kAudioFileM4AType' value='1832149350'/>
+<enum name='kAudioFileMP1Type' value='1297106737'/>
+<enum name='kAudioFileMP2Type' value='1297106738'/>
+<enum name='kAudioFileMP3Type' value='1297106739'/>
+<enum name='kAudioFileMPEG4Type' value='1836069990'/>
+<enum name='kAudioFileMarkerType_Generic' value='0'/>
+<enum name='kAudioFileNextType' value='1315264596'/>
+<enum name='kAudioFileNotOpenError' value='-38'/>
+<enum name='kAudioFileNotOptimizedError' value='1869640813'/>
+<enum name='kAudioFileOpenSelect' value='2'/>
+<enum name='kAudioFileOpenURLSelect' value='26'/>
+<enum name='kAudioFileOpenWithCallbacksSelect' value='4'/>
+<enum name='kAudioFileOperationNotSupportedError' value='1869627199'/>
+<enum name='kAudioFileOptimizeSelect' value='7'/>
+<enum name='kAudioFilePermissionsError' value='1886547263'/>
+<enum name='kAudioFilePositionError' value='-40'/>
+<enum name='kAudioFilePropertyAlbumArtwork' value='1633776244'/>
+<enum name='kAudioFilePropertyAudioDataByteCount' value='1650683508'/>
+<enum name='kAudioFilePropertyAudioDataPacketCount' value='1885564532'/>
+<enum name='kAudioFilePropertyBitRate' value='1651663220'/>
+<enum name='kAudioFilePropertyByteToPacket' value='1652125803'/>
+<enum name='kAudioFilePropertyChannelLayout' value='1668112752'/>
+<enum name='kAudioFilePropertyChunkIDs' value='1667787108'/>
+<enum name='kAudioFilePropertyDataFormat' value='1684434292'/>
+<enum name='kAudioFilePropertyDataFormatName' value='1718512997'/>
+<enum name='kAudioFilePropertyDataOffset' value='1685022310'/>
+<enum name='kAudioFilePropertyDeferSizeUpdates' value='1685289589'/>
+<enum name='kAudioFilePropertyEstimatedDuration' value='1701082482'/>
+<enum name='kAudioFilePropertyFileFormat' value='1717988724'/>
+<enum name='kAudioFilePropertyFormatList' value='1718383476'/>
+<enum name='kAudioFilePropertyFrameToPacket' value='1718775915'/>
+<enum name='kAudioFilePropertyID3Tag' value='1768174452'/>
+<enum name='kAudioFilePropertyInfoDictionary' value='1768842863'/>
+<enum name='kAudioFilePropertyIsOptimized' value='1869640813'/>
+<enum name='kAudioFilePropertyMagicCookieData' value='1835493731'/>
+<enum name='kAudioFilePropertyMarkerList' value='1835756659'/>
+<enum name='kAudioFilePropertyMaximumPacketSize' value='1886616165'/>
+<enum name='kAudioFilePropertyPacketSizeUpperBound' value='1886090594'/>
+<enum name='kAudioFilePropertyPacketTableInfo' value='1886283375'/>
+<enum name='kAudioFilePropertyPacketToByte' value='1886085753'/>
+<enum name='kAudioFilePropertyPacketToFrame' value='1886086770'/>
+<enum name='kAudioFilePropertyRegionList' value='1919380595'/>
+<enum name='kAudioFilePropertyReserveDuration' value='1920168566'/>
+<enum name='kAudioFilePropertySourceBitDepth' value='1935832164'/>
+<enum name='kAudioFileReadBytesSelect' value='8'/>
+<enum name='kAudioFileReadPacketDataSelect' value='28'/>
+<enum name='kAudioFileReadPacketsSelect' value='10'/>
+<enum name='kAudioFileReadPermission' value='1'/>
+<enum name='kAudioFileReadWritePermission' value='3'/>
+<enum name='kAudioFileRegionFlag_LoopEnable' value='1'/>
+<enum name='kAudioFileRegionFlag_PlayBackward' value='4'/>
+<enum name='kAudioFileRegionFlag_PlayForward' value='2'/>
+<enum name='kAudioFileRemoveUserDataSelect' value='24'/>
+<enum name='kAudioFileSetPropertySelect' value='14'/>
+<enum name='kAudioFileSetUserDataSelect' value='23'/>
+<enum name='kAudioFileSoundDesigner2Type' value='1399075430'/>
+<enum name='kAudioFileStreamError_BadPropertySize' value='561211770'/>
+<enum name='kAudioFileStreamError_DataUnavailable' value='1836020325'/>
+<enum name='kAudioFileStreamError_DiscontinuityCantRecover' value='1685283617'/>
+<enum name='kAudioFileStreamError_IllegalOperation' value='1852797029'/>
+<enum name='kAudioFileStreamError_InvalidFile' value='1685348671'/>
+<enum name='kAudioFileStreamError_InvalidPacketOffset' value='1885563711'/>
+<enum name='kAudioFileStreamError_NotOptimized' value='1869640813'/>
+<enum name='kAudioFileStreamError_UnspecifiedError' value='2003334207'/>
+<enum name='kAudioFileStreamError_UnsupportedDataFormat' value='1718449215'/>
+<enum name='kAudioFileStreamError_UnsupportedFileType' value='1954115647'/>
+<enum name='kAudioFileStreamError_UnsupportedProperty' value='1886681407'/>
+<enum name='kAudioFileStreamError_ValueUnknown' value='1970170687'/>
+<enum name='kAudioFileStreamParseFlag_Discontinuity' value='1'/>
+<enum name='kAudioFileStreamPropertyFlag_CacheProperty' value='2'/>
+<enum name='kAudioFileStreamPropertyFlag_PropertyIsCached' value='1'/>
+<enum name='kAudioFileStreamProperty_AudioDataByteCount' value='1650683508'/>
+<enum name='kAudioFileStreamProperty_AudioDataPacketCount' value='1885564532'/>
+<enum name='kAudioFileStreamProperty_AverageBytesPerPacket' value='1633841264'/>
+<enum name='kAudioFileStreamProperty_BitRate' value='1651663220'/>
+<enum name='kAudioFileStreamProperty_ByteToPacket' value='1652125803'/>
+<enum name='kAudioFileStreamProperty_ChannelLayout' value='1668112752'/>
+<enum name='kAudioFileStreamProperty_DataFormat' value='1684434292'/>
+<enum name='kAudioFileStreamProperty_DataOffset' value='1685022310'/>
+<enum name='kAudioFileStreamProperty_FileFormat' value='1717988724'/>
+<enum name='kAudioFileStreamProperty_FormatList' value='1718383476'/>
+<enum name='kAudioFileStreamProperty_FrameToPacket' value='1718775915'/>
+<enum name='kAudioFileStreamProperty_MagicCookieData' value='1835493731'/>
+<enum name='kAudioFileStreamProperty_MaximumPacketSize' value='1886616165'/>
+<enum name='kAudioFileStreamProperty_PacketSizeUpperBound' value='1886090594'/>
+<enum name='kAudioFileStreamProperty_PacketTableInfo' value='1886283375'/>
+<enum name='kAudioFileStreamProperty_PacketToByte' value='1886085753'/>
+<enum name='kAudioFileStreamProperty_PacketToFrame' value='1886086770'/>
+<enum name='kAudioFileStreamProperty_ReadyToProducePackets' value='1919247481'/>
+<enum name='kAudioFileStreamSeekFlag_OffsetIsEstimated' value='1'/>
+<enum name='kAudioFileUnspecifiedError' value='2003334207'/>
+<enum name='kAudioFileUnsupportedDataFormatError' value='1718449215'/>
+<enum name='kAudioFileUnsupportedFileTypeError' value='1954115647'/>
+<enum name='kAudioFileUnsupportedPropertyError' value='1886681407'/>
+<enum name='kAudioFileWAVEType' value='1463899717'/>
+<enum name='kAudioFileWriteBytesSelect' value='9'/>
+<enum name='kAudioFileWritePacketsSelect' value='11'/>
+<enum name='kAudioFileWritePermission' value='2'/>
+<enum name='kAudioFormatBadPropertySizeError' value='561211770'/>
+<enum name='kAudioFormatBadSpecifierSizeError' value='561213539'/>
+<enum name='kAudioFormatProperty_ASBDFromESDS' value='1702064996'/>
+<enum name='kAudioFormatProperty_ASBDFromMPEGPacket' value='1633971568'/>
+<enum name='kAudioFormatProperty_AvailableEncodeBitRates' value='1634034290'/>
+<enum name='kAudioFormatProperty_AvailableEncodeChannelLayoutTags' value='1634034540'/>
+<enum name='kAudioFormatProperty_AvailableEncodeNumberChannels' value='1635151459'/>
+<enum name='kAudioFormatProperty_AvailableEncodeSampleRates' value='1634038642'/>
+<enum name='kAudioFormatProperty_BalanceFade' value='1650551910'/>
+<enum name='kAudioFormatProperty_BitmapForLayoutTag' value='1651340391'/>
+<enum name='kAudioFormatProperty_ChannelLayoutForBitmap' value='1668116578'/>
+<enum name='kAudioFormatProperty_ChannelLayoutForTag' value='1668116588'/>
+<enum name='kAudioFormatProperty_ChannelLayoutFromESDS' value='1702060908'/>
+<enum name='kAudioFormatProperty_ChannelLayoutName' value='1819242093'/>
+<enum name='kAudioFormatProperty_ChannelLayoutSimpleName' value='1819504237'/>
+<enum name='kAudioFormatProperty_ChannelMap' value='1667788144'/>
+<enum name='kAudioFormatProperty_ChannelName' value='1668178285'/>
+<enum name='kAudioFormatProperty_ChannelShortName' value='1668509293'/>
+<enum name='kAudioFormatProperty_DecodeFormatIDs' value='1633904998'/>
+<enum name='kAudioFormatProperty_Decoders' value='1635148901'/>
+<enum name='kAudioFormatProperty_EncodeFormatIDs' value='1633906534'/>
+<enum name='kAudioFormatProperty_Encoders' value='1635149166'/>
+<enum name='kAudioFormatProperty_FirstPlayableFormatFromList' value='1718642284'/>
+<enum name='kAudioFormatProperty_FormatInfo' value='1718449257'/>
+<enum name='kAudioFormatProperty_FormatIsExternallyFramed' value='1717925990'/>
+<enum name='kAudioFormatProperty_FormatIsVBR' value='1719034482'/>
+<enum name='kAudioFormatProperty_FormatList' value='1718383476'/>
+<enum name='kAudioFormatProperty_FormatName' value='1718509933'/>
+<enum name='kAudioFormatProperty_ID3TagSize' value='1768174451'/>
+<enum name='kAudioFormatProperty_ID3TagToDictionary' value='1768174436'/>
+<enum name='kAudioFormatProperty_MatrixMixMap' value='1835884912'/>
+<enum name='kAudioFormatProperty_NumberOfChannelsForLayout' value='1852008557'/>
+<enum name='kAudioFormatProperty_OutputFormatList' value='1868983411'/>
+<enum name='kAudioFormatProperty_PanningMatrix' value='1885433453'/>
+<enum name='kAudioFormatProperty_TagForChannelLayout' value='1668116596'/>
+<enum name='kAudioFormatProperty_TagsForNumberOfChannels' value='1952540515'/>
+<enum name='kAudioFormatProperty_ValidateChannelLayout' value='1986093932'/>
+<enum name='kAudioFormatUnknownFormatError' value='560360820'/>
+<enum name='kAudioFormatUnspecifiedError' value='2003329396'/>
+<enum name='kAudioFormatUnsupportedDataFormatError' value='1718449215'/>
+<enum name='kAudioFormatUnsupportedPropertyError' value='1886547824'/>
+<enum name='kAudioHardwareServiceDeviceProperty_VirtualMasterBalance' value='1986880099'/>
+<enum name='kAudioHardwareServiceDeviceProperty_VirtualMasterVolume' value='1986885219'/>
+<enum name='kAudioHardwareServiceProperty_ServiceRestarted' value='1936880500'/>
+<enum name='kAudioQueueDeviceProperty_NumberChannels' value='1634821219'/>
+<enum name='kAudioQueueDeviceProperty_SampleRate' value='1634825074'/>
+<enum name='kAudioQueueErr_BufferEmpty' value='-66686'/>
+<enum name='kAudioQueueErr_BufferInQueue' value='-66679'/>
+<enum name='kAudioQueueErr_CannotStart' value='-66681'/>
+<enum name='kAudioQueueErr_CodecNotFound' value='-66673'/>
+<enum name='kAudioQueueErr_DisposalPending' value='-66685'/>
+<enum name='kAudioQueueErr_EnqueueDuringReset' value='-66632'/>
+<enum name='kAudioQueueErr_InvalidBuffer' value='-66687'/>
+<enum name='kAudioQueueErr_InvalidCodecAccess' value='-66672'/>
+<enum name='kAudioQueueErr_InvalidDevice' value='-66680'/>
+<enum name='kAudioQueueErr_InvalidOfflineMode' value='-66626'/>
+<enum name='kAudioQueueErr_InvalidParameter' value='-66682'/>
+<enum name='kAudioQueueErr_InvalidProperty' value='-66684'/>
+<enum name='kAudioQueueErr_InvalidPropertySize' value='-66683'/>
+<enum name='kAudioQueueErr_InvalidPropertyValue' value='-66675'/>
+<enum name='kAudioQueueErr_InvalidQueueType' value='-66677'/>
+<enum name='kAudioQueueErr_InvalidRunState' value='-66678'/>
+<enum name='kAudioQueueErr_InvalidTapContext' value='-66669'/>
+<enum name='kAudioQueueErr_Permissions' value='-66676'/>
+<enum name='kAudioQueueErr_PrimeTimedOut' value='-66674'/>
+<enum name='kAudioQueueErr_QueueInvalidated' value='-66671'/>
+<enum name='kAudioQueueErr_TooManyTaps' value='-66670'/>
+<enum name='kAudioQueueParam_Pan' value='13'/>
+<enum name='kAudioQueueParam_Pitch' value='3'/>
+<enum name='kAudioQueueParam_PlayRate' value='2'/>
+<enum name='kAudioQueueParam_Volume' value='1'/>
+<enum name='kAudioQueueParam_VolumeRampTime' value='4'/>
+<enum name='kAudioQueueProcessingTap_EndOfStream' value='512'/>
+<enum name='kAudioQueueProcessingTap_PostEffects' value='2'/>
+<enum name='kAudioQueueProcessingTap_PreEffects' value='1'/>
+<enum name='kAudioQueueProcessingTap_Siphon' value='4'/>
+<enum name='kAudioQueueProcessingTap_StartOfStream' value='256'/>
+<enum name='kAudioQueueProperty_ChannelLayout' value='1634820972'/>
+<enum name='kAudioQueueProperty_CurrentDevice' value='1634820964'/>
+<enum name='kAudioQueueProperty_CurrentLevelMeter' value='1634823542'/>
+<enum name='kAudioQueueProperty_CurrentLevelMeterDB' value='1634823524'/>
+<enum name='kAudioQueueProperty_DecodeBufferSizeFrames' value='1684234854'/>
+<enum name='kAudioQueueProperty_EnableLevelMetering' value='1634823525'/>
+<enum name='kAudioQueueProperty_EnableTimePitch' value='1902081136'/>
+<enum name='kAudioQueueProperty_IsRunning' value='1634824814'/>
+<enum name='kAudioQueueProperty_MagicCookie' value='1634823523'/>
+<enum name='kAudioQueueProperty_MaximumOutputPacketSize' value='2020569203'/>
+<enum name='kAudioQueueProperty_StreamDescription' value='1634821748'/>
+<enum name='kAudioQueueProperty_TimePitchAlgorithm' value='1903456353'/>
+<enum name='kAudioQueueProperty_TimePitchBypass' value='1903456354'/>
+<enum name='kAudioQueueTimePitchAlgorithm_Spectral' value='1936745827'/>
+<enum name='kAudioQueueTimePitchAlgorithm_TimeDomain' value='1953064047'/>
+<enum name='kAudioServicesBadPropertySizeError' value='561211770'/>
+<enum name='kAudioServicesBadSpecifierSizeError' value='561213539'/>
+<enum name='kAudioServicesNoError' value='0'/>
+<enum name='kAudioServicesPropertyCompletePlaybackIfAppDies' value='1768318057'/>
+<enum name='kAudioServicesPropertyIsUISound' value='1769174377'/>
+<enum name='kAudioServicesSystemSoundClientTimedOutError' value='-1501'/>
+<enum name='kAudioServicesSystemSoundUnspecifiedError' value='-1500'/>
+<enum name='kAudioServicesUnsupportedPropertyError' value='1886681407'/>
+<enum name='kAudioToolboxErr_CannotDoInCurrentContext' value='-10863'/>
+<enum name='kAudioToolboxErr_EndOfTrack' value='-10857'/>
+<enum name='kAudioToolboxErr_IllegalTrackDestination' value='-10855'/>
+<enum name='kAudioToolboxErr_InvalidEventType' value='-10853'/>
+<enum name='kAudioToolboxErr_InvalidPlayerState' value='-10852'/>
+<enum name='kAudioToolboxErr_InvalidSequenceType' value='-10846'/>
+<enum name='kAudioToolboxErr_NoSequence' value='-10854'/>
+<enum name='kAudioToolboxErr_StartOfTrack' value='-10856'/>
+<enum name='kAudioToolboxErr_TrackIndexError' value='-10859'/>
+<enum name='kAudioToolboxErr_TrackNotFound' value='-10858'/>
+<enum name='kAudioUnitEvent_BeginParameterChangeGesture' value='1'/>
+<enum name='kAudioUnitEvent_EndParameterChangeGesture' value='2'/>
+<enum name='kAudioUnitEvent_ParameterValueChange' value='0'/>
+<enum name='kAudioUnitEvent_PropertyChange' value='3'/>
+<enum name='kBytePacketTranslationFlag_IsEstimate' value='1'/>
+<enum name='kCAClockMessage_Armed' value='1634889060'/>
+<enum name='kCAClockMessage_Disarmed' value='1684107885'/>
+<enum name='kCAClockMessage_PropertyChanged' value='1885562983'/>
+<enum name='kCAClockMessage_StartTimeSet' value='1937009005'/>
+<enum name='kCAClockMessage_Started' value='1937011316'/>
+<enum name='kCAClockMessage_Stopped' value='1937010544'/>
+<enum name='kCAClockMessage_WrongSMPTEFormat' value='1064529264'/>
+<enum name='kCAClockProperty_InternalTimebase' value='1768846434'/>
+<enum name='kCAClockProperty_MIDIClockDestinations' value='1835164516'/>
+<enum name='kCAClockProperty_MTCDestinations' value='1836344164'/>
+<enum name='kCAClockProperty_MTCFreewheelTime' value='1836344951'/>
+<enum name='kCAClockProperty_MeterTrack' value='1835365490'/>
+<enum name='kCAClockProperty_Name' value='1851878757'/>
+<enum name='kCAClockProperty_SMPTEFormat' value='1936552038'/>
+<enum name='kCAClockProperty_SMPTEOffset' value='1936552047'/>
+<enum name='kCAClockProperty_SendMIDISPP' value='1836281968'/>
+<enum name='kCAClockProperty_SyncMode' value='1937337965'/>
+<enum name='kCAClockProperty_SyncSource' value='1937337971'/>
+<enum name='kCAClockProperty_TempoMap' value='1953329263'/>
+<enum name='kCAClockProperty_TimebaseSource' value='1769235059'/>
+<enum name='kCAClockSyncMode_Internal' value='1768846450'/>
+<enum name='kCAClockSyncMode_MIDIClockTransport' value='1835232363'/>
+<enum name='kCAClockSyncMode_MTCTransport' value='1835889763'/>
+<enum name='kCAClockTimeFormat_Beats' value='1650811252'/>
+<enum name='kCAClockTimeFormat_HostTime' value='1752134516'/>
+<enum name='kCAClockTimeFormat_SMPTESeconds' value='1936552051'/>
+<enum name='kCAClockTimeFormat_SMPTETime' value='1936552052'/>
+<enum name='kCAClockTimeFormat_Samples' value='1935764848'/>
+<enum name='kCAClockTimeFormat_Seconds' value='1936024435'/>
+<enum name='kCAClockTimebase_AudioDevice' value='1635083369'/>
+<enum name='kCAClockTimebase_AudioOutputUnit' value='1635086197'/>
+<enum name='kCAClockTimebase_HostTime' value='1752134516'/>
+<enum name='kCAClock_CannotSetTimeError' value='-66805'/>
+<enum name='kCAClock_InvalidPlayRateError' value='-66806'/>
+<enum name='kCAClock_InvalidPropertySizeError' value='-66815'/>
+<enum name='kCAClock_InvalidSMPTEFormatError' value='-66809'/>
+<enum name='kCAClock_InvalidSMPTEOffsetError' value='-66808'/>
+<enum name='kCAClock_InvalidSyncModeError' value='-66813'/>
+<enum name='kCAClock_InvalidSyncSourceError' value='-66812'/>
+<enum name='kCAClock_InvalidTimeFormatError' value='-66814'/>
+<enum name='kCAClock_InvalidTimebaseError' value='-66811'/>
+<enum name='kCAClock_InvalidTimebaseSourceError' value='-66810'/>
+<enum name='kCAClock_InvalidUnitError' value='-66807'/>
+<enum name='kCAClock_UnknownPropertyError' value='-66816'/>
+<enum name='kCAFLinearPCMFormatFlagIsFloat' value='1'/>
+<enum name='kCAFLinearPCMFormatFlagIsLittleEndian' value='2'/>
+<enum name='kCAFMarkerChunkHdrSize' value='8'/>
+<enum name='kCAFMarkerType_EditDestinationBegin' value='1684170087'/>
+<enum name='kCAFMarkerType_EditDestinationEnd' value='1684368996'/>
+<enum name='kCAFMarkerType_EditSourceBegin' value='1667392871'/>
+<enum name='kCAFMarkerType_EditSourceEnd' value='1667591780'/>
+<enum name='kCAFMarkerType_Generic' value='0'/>
+<enum name='kCAFMarkerType_Index' value='1768842360'/>
+<enum name='kCAFMarkerType_KeySignature' value='1802725735'/>
+<enum name='kCAFMarkerType_ProgramEnd' value='1885695588'/>
+<enum name='kCAFMarkerType_ProgramStart' value='1885496679'/>
+<enum name='kCAFMarkerType_RegionEnd' value='1919250020'/>
+<enum name='kCAFMarkerType_RegionStart' value='1919051111'/>
+<enum name='kCAFMarkerType_RegionSyncPoint' value='1920170339'/>
+<enum name='kCAFMarkerType_ReleaseLoopEnd' value='1919706478'/>
+<enum name='kCAFMarkerType_ReleaseLoopStart' value='1919705703'/>
+<enum name='kCAFMarkerType_SavedPlayPosition' value='1936747641'/>
+<enum name='kCAFMarkerType_SelectionEnd' value='1936027236'/>
+<enum name='kCAFMarkerType_SelectionStart' value='1935828327'/>
+<enum name='kCAFMarkerType_SustainLoopEnd' value='1936483694'/>
+<enum name='kCAFMarkerType_SustainLoopStart' value='1936482919'/>
+<enum name='kCAFMarkerType_Tempo' value='1953329263'/>
+<enum name='kCAFMarkerType_TimeSignature' value='1953720679'/>
+<enum name='kCAFMarkerType_TrackEnd' value='1952804452'/>
+<enum name='kCAFMarkerType_TrackStart' value='1952605543'/>
+<enum name='kCAFRegionChunkHdrSize' value='8'/>
+<enum name='kCAFRegionFlag_LoopEnable' value='1'/>
+<enum name='kCAFRegionFlag_PlayBackward' value='4'/>
+<enum name='kCAFRegionFlag_PlayForward' value='2'/>
+<enum name='kCAF_AudioDataChunkID' value='1684108385'/>
+<enum name='kCAF_ChannelLayoutChunkID' value='1667785070'/>
+<enum name='kCAF_EditCommentsChunkID' value='1701077876'/>
+<enum name='kCAF_FileType' value='1667327590'/>
+<enum name='kCAF_FileVersion_Initial' value='1'/>
+<enum name='kCAF_FillerChunkID' value='1718773093'/>
+<enum name='kCAF_FormatListID' value='1818522467'/>
+<enum name='kCAF_InfoStringsChunkID' value='1768842863'/>
+<enum name='kCAF_InstrumentChunkID' value='1768846196'/>
+<enum name='kCAF_MIDIChunkID' value='1835623529'/>
+<enum name='kCAF_MagicCookieID' value='1802857321'/>
+<enum name='kCAF_MarkerChunkID' value='1835102827'/>
+<enum name='kCAF_OverviewChunkID' value='1870034551'/>
+<enum name='kCAF_PacketTableChunkID' value='1885432692'/>
+<enum name='kCAF_PeakChunkID' value='1885692267'/>
+<enum name='kCAF_RegionChunkID' value='1919248238'/>
+<enum name='kCAF_SMPTE_TimeType2398' value='12'/>
+<enum name='kCAF_SMPTE_TimeType24' value='1'/>
+<enum name='kCAF_SMPTE_TimeType25' value='2'/>
+<enum name='kCAF_SMPTE_TimeType2997' value='5'/>
+<enum name='kCAF_SMPTE_TimeType2997Drop' value='6'/>
+<enum name='kCAF_SMPTE_TimeType30' value='4'/>
+<enum name='kCAF_SMPTE_TimeType30Drop' value='3'/>
+<enum name='kCAF_SMPTE_TimeType50' value='11'/>
+<enum name='kCAF_SMPTE_TimeType5994' value='8'/>
+<enum name='kCAF_SMPTE_TimeType5994Drop' value='10'/>
+<enum name='kCAF_SMPTE_TimeType60' value='7'/>
+<enum name='kCAF_SMPTE_TimeType60Drop' value='9'/>
+<enum name='kCAF_SMPTE_TimeTypeNone' value='0'/>
+<enum name='kCAF_StreamDescriptionChunkID' value='1684370275'/>
+<enum name='kCAF_StringsChunkID' value='1937011303'/>
+<enum name='kCAF_UMIDChunkID' value='1970104676'/>
+<enum name='kCAF_UUIDChunkID' value='1970628964'/>
+<enum name='kCAF_iXMLChunkID' value='1767394636'/>
+<enum name='kConverterPrimeMethod_None' value='2'/>
+<enum name='kConverterPrimeMethod_Normal' value='1'/>
+<enum name='kConverterPrimeMethod_Pre' value='0'/>
+<enum name='kDitherAlgorithm_NoiseShaping' value='2'/>
+<enum name='kDitherAlgorithm_TPDF' value='1'/>
+<enum name='kExtAudioFileError_AsyncWriteBufferOverflow' value='-66570'/>
+<enum name='kExtAudioFileError_AsyncWriteTooLarge' value='-66569'/>
+<enum name='kExtAudioFileError_InvalidChannelMap' value='-66564'/>
+<enum name='kExtAudioFileError_InvalidDataFormat' value='-66566'/>
+<enum name='kExtAudioFileError_InvalidOperationOrder' value='-66565'/>
+<enum name='kExtAudioFileError_InvalidProperty' value='-66561'/>
+<enum name='kExtAudioFileError_InvalidPropertySize' value='-66562'/>
+<enum name='kExtAudioFileError_InvalidSeek' value='-66568'/>
+<enum name='kExtAudioFileError_MaxPacketSizeUnknown' value='-66567'/>
+<enum name='kExtAudioFileError_NonPCMClientFormat' value='-66563'/>
+<enum name='kExtAudioFileProperty_AudioConverter' value='1633906294'/>
+<enum name='kExtAudioFileProperty_AudioFile' value='1634101612'/>
+<enum name='kExtAudioFileProperty_ClientChannelLayout' value='1667460207'/>
+<enum name='kExtAudioFileProperty_ClientDataFormat' value='1667657076'/>
+<enum name='kExtAudioFileProperty_ClientMaxPacketSize' value='1668116595'/>
+<enum name='kExtAudioFileProperty_CodecManufacturer' value='1668112750'/>
+<enum name='kExtAudioFileProperty_ConverterConfig' value='1633903462'/>
+<enum name='kExtAudioFileProperty_FileChannelLayout' value='1717791855'/>
+<enum name='kExtAudioFileProperty_FileDataFormat' value='1717988724'/>
+<enum name='kExtAudioFileProperty_FileLengthFrames' value='593916525'/>
+<enum name='kExtAudioFileProperty_FileMaxPacketSize' value='1718448243'/>
+<enum name='kExtAudioFileProperty_IOBuffer' value='1768907366'/>
+<enum name='kExtAudioFileProperty_IOBufferSizeBytes' value='1768907379'/>
+<enum name='kExtAudioFileProperty_PacketTable' value='2020635753'/>
+<enum name='kMusicEventType_AUPreset' value='10'/>
+<enum name='kMusicEventType_ExtendedControl' value='2'/>
+<enum name='kMusicEventType_ExtendedNote' value='1'/>
+<enum name='kMusicEventType_ExtendedTempo' value='3'/>
+<enum name='kMusicEventType_MIDIChannelMessage' value='7'/>
+<enum name='kMusicEventType_MIDINoteMessage' value='6'/>
+<enum name='kMusicEventType_MIDIRawData' value='8'/>
+<enum name='kMusicEventType_Meta' value='5'/>
+<enum name='kMusicEventType_NULL' value='0'/>
+<enum name='kMusicEventType_Parameter' value='9'/>
+<enum name='kMusicEventType_User' value='4'/>
+<enum name='kMusicSequenceFileFlags_EraseFile' value='1'/>
+<enum name='kMusicSequenceFile_MIDIType' value='1835623529'/>
+<enum name='kMusicSequenceFile_iMelodyType' value='1768777068'/>
+<enum name='kMusicSequenceLoadSMF_ChannelsToTracks' value='1'/>
+<enum name='kMusicSequenceType_Beats' value='1650811252'/>
+<enum name='kMusicSequenceType_Samples' value='1935764848'/>
+<enum name='kMusicSequenceType_Seconds' value='1936024435'/>
+<enum name='kMusicTimeStamp_EndOfTrack' value='1.797693134862316E+308'/>
+<enum name='kPanningMode_SoundField' value='3'/>
+<enum name='kPanningMode_VectorBasedPanning' value='4'/>
+<enum name='kSequenceTrackProperty_AutomatedParameters' value='4'/>
+<enum name='kSequenceTrackProperty_LoopInfo' value='0'/>
+<enum name='kSequenceTrackProperty_MuteStatus' value='2'/>
+<enum name='kSequenceTrackProperty_OffsetTime' value='1'/>
+<enum name='kSequenceTrackProperty_SoloStatus' value='3'/>
+<enum name='kSequenceTrackProperty_TimeResolution' value='6'/>
+<enum name='kSequenceTrackProperty_TrackLength' value='5'/>
+<enum name='kSystemSoundID_FlashScreen' value='4094'/>
+<enum name='kSystemSoundID_UserPreferredAlert' value='4096'/>
+<enum name='kUserPreferredAlert' value='4096'/>
+<function name='AUEventListenerAddEventType'>
+<arg type='^{AUListenerBase=}'/>
+<arg type='^v'/>
+<arg type='^{AudioUnitEvent=I(?={AudioUnitParameter=^{ComponentInstanceRecord}III}{AudioUnitProperty=^{ComponentInstanceRecord}III})}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUEventListenerCreate'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='^v'/>
+<arg type='^{AudioUnitEvent=I(?={AudioUnitParameter=^{ComponentInstanceRecord}III}{AudioUnitProperty=^{ComponentInstanceRecord}III})}'/>
+<arg type='Q'/>
+<arg type='f'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+<arg type='^{__CFRunLoop=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='f'/>
+<arg type='f'/>
+<arg type='^^{AUListenerBase}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUEventListenerCreateWithDispatchQueue'>
+<arg type='^^{AUListenerBase}'/>
+<arg type='f'/>
+<arg type='f'/>
+<arg type='^{dispatch_queue_s=}'/>
+<arg function_pointer='true' type='@?'>
+<arg type='^v'/>
+<arg type='^{AudioUnitEvent=I(?={AudioUnitParameter=^{ComponentInstanceRecord}III}{AudioUnitProperty=^{ComponentInstanceRecord}III})}'/>
+<arg type='Q'/>
+<arg type='f'/>
+<retval type='v'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUEventListenerNotify'>
+<arg type='^{AUListenerBase=}'/>
+<arg type='^v'/>
+<arg type='^{AudioUnitEvent=I(?={AudioUnitParameter=^{ComponentInstanceRecord}III}{AudioUnitProperty=^{ComponentInstanceRecord}III})}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUEventListenerRemoveEventType'>
+<arg type='^{AUListenerBase=}'/>
+<arg type='^v'/>
+<arg type='^{AudioUnitEvent=I(?={AudioUnitParameter=^{ComponentInstanceRecord}III}{AudioUnitProperty=^{ComponentInstanceRecord}III})}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphAddNode'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type='^{AudioComponentDescription=IIIII}'/>
+<arg type='^i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphAddRenderNotify'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='^I'/>
+<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphClearConnections'>
+<arg type='^{OpaqueAUGraph=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphClose'>
+<arg type='^{OpaqueAUGraph=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphConnectNodeInput'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type64='i' type='l'/>
+<arg type64='I' type='L'/>
+<arg type64='i' type='l'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphCountNodeConnections'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type64='i' type='l'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphCountNodeInteractions'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type64='i' type='l'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphDisconnectNodeInput'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type64='i' type='l'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphGetCPULoad'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type='^f'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphGetConnectionInfo'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type64='I' type='L'/>
+<arg type='^i'/>
+<arg type='^I'/>
+<arg type='^i'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphGetIndNode'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type64='I' type='L'/>
+<arg type='^i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphGetInteractionInfo'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type64='I' type='L'/>
+<arg type='^{AUNodeInteraction=I(?={AudioUnitNodeConnection=iIiI}{AUNodeRenderCallback=iI{AURenderCallbackStruct=^?^v}})}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphGetMaxCPULoad'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type='^f'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphGetNodeConnections'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type64='i' type='l'/>
+<arg type='^{AudioUnitNodeConnection=iIiI}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphGetNodeCount'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphGetNodeInfo'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type64='i' type='l'/>
+<arg type='^{ComponentDescription=IIIII}'/>
+<arg type='^I'/>
+<arg type='^^v'/>
+<arg type='^^{ComponentInstanceRecord}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphGetNodeInfoSubGraph'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type64='i' type='l'/>
+<arg type='^^{OpaqueAUGraph}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphGetNodeInteractions'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type64='i' type='l'/>
+<arg type='^I'/>
+<arg type='^{AUNodeInteraction=I(?={AudioUnitNodeConnection=iIiI}{AUNodeRenderCallback=iI{AURenderCallbackStruct=^?^v}})}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphGetNumberOfConnections'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphGetNumberOfInteractions'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphInitialize'>
+<arg type='^{OpaqueAUGraph=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphIsInitialized'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphIsNodeSubGraph'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type64='i' type='l'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphIsOpen'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphIsRunning'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphNewNode'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type='^{ComponentDescription=IIIII}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphNewNodeSubGraph'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type='^i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphNodeInfo'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type64='i' type='l'/>
+<arg type='^{AudioComponentDescription=IIIII}'/>
+<arg type='^^{ComponentInstanceRecord}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphOpen'>
+<arg type='^{OpaqueAUGraph=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphRemoveNode'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type64='i' type='l'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphRemoveRenderNotify'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='^I'/>
+<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphSetNodeInputCallback'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type64='i' type='l'/>
+<arg type64='I' type='L'/>
+<arg type='^{AURenderCallbackStruct=^?^v}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphStart'>
+<arg type='^{OpaqueAUGraph=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphStop'>
+<arg type='^{OpaqueAUGraph=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphUninitialize'>
+<arg type='^{OpaqueAUGraph=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUGraphUpdate'>
+<arg type='^{OpaqueAUGraph=}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUListenerAddParameter'>
+<arg type='^{AUListenerBase=}'/>
+<arg type='^v'/>
+<arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUListenerCreate'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='^v'/>
+<arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
+<arg type='f'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+<arg type='^{__CFRunLoop=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='f'/>
+<arg type='^^{AUListenerBase}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUListenerCreateWithDispatchQueue'>
+<arg type='^^{AUListenerBase}'/>
+<arg type='f'/>
+<arg type='^{dispatch_queue_s=}'/>
+<arg function_pointer='true' type='@?'>
+<arg type='^v'/>
+<arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
+<arg type='f'/>
+<retval type='v'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUListenerDispose'>
+<arg type='^{AUListenerBase=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUListenerRemoveParameter'>
+<arg type='^{AUListenerBase=}'/>
+<arg type='^v'/>
+<arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUParameterFormatValue'>
+<arg type='d'/>
+<arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
+<arg type='*'/>
+<arg type64='I' type='L'/>
+<retval type='*'/>
+</function>
+<function name='AUParameterListenerNotify'>
+<arg type='^{AUListenerBase=}'/>
+<arg type='^v'/>
+<arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUParameterSet'>
+<arg type='^{AUListenerBase=}'/>
+<arg type='^v'/>
+<arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
+<arg type='f'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AUParameterValueFromLinear'>
+<arg type='f'/>
+<arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
+<retval type='f'/>
+</function>
+<function name='AUParameterValueToLinear'>
+<arg type='f'/>
+<arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
+<retval type='f'/>
+</function>
+<function name='AudioConverterConvertBuffer'>
+<arg type='^{OpaqueAudioConverter=}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioConverterConvertComplexBuffer'>
+<arg type='^{OpaqueAudioConverter=}'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioConverterDispose'>
+<arg type='^{OpaqueAudioConverter=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioConverterFillBuffer'>
+<arg type='^{OpaqueAudioConverter=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{OpaqueAudioConverter=}'/>
+<arg type='^I'/>
+<arg type='^^v'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg type='^v'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioConverterFillComplexBuffer'>
+<arg type='^{OpaqueAudioConverter=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{OpaqueAudioConverter=}'/>
+<arg type='^I'/>
+<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg type='^^{AudioStreamPacketDescription}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg type='^v'/>
+<arg type='^I'/>
+<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg type='^{AudioStreamPacketDescription=qII}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioConverterGetProperty'>
+<arg type='^{OpaqueAudioConverter=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioConverterGetPropertyInfo'>
+<arg type='^{OpaqueAudioConverter=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioConverterNew'>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type='^^{OpaqueAudioConverter}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioConverterNewSpecific'>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioClassDescription=III}'/>
+<arg type='^^{OpaqueAudioConverter}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioConverterReset'>
+<arg type='^{OpaqueAudioConverter=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioConverterSetProperty'>
+<arg type='^{OpaqueAudioConverter=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileClose'>
+<arg type='^{OpaqueAudioFileID=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentCloseFile'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentCountUserData'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentCreate'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='^{FSRef=[80C]}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type64='I' type='L'/>
+<arg type='^{FSRef=[80C]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentCreateURL'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='^{__CFURL=}'/>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentDataIsThisFormat'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='q'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='q'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='q'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='q'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentExtensionIsThisFormat'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentFileDataIsThisFormat'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentFileIsThisFormat'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='s'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentGetGlobalInfo'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentGetGlobalInfoSize'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentGetProperty'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentGetPropertyInfo'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentGetUserData'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentGetUserDataSize'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentInitialize'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='^{FSRef=[80C]}'/>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentInitializeWithCallbacks'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='q'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='q'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='q'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='q'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg type64='I' type='L'/>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentOpenFile'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='^{FSRef=[80C]}'/>
+<arg type='c'/>
+<arg type='s'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentOpenURL'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='^{__CFURL=}'/>
+<arg type='c'/>
+<arg type='i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentOpenWithCallbacks'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='q'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='q'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='q'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='q'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentOptimize'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentReadBytes'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='B'/>
+<arg type='q'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentReadPacketData'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='B'/>
+<arg type='^I'/>
+<arg type='^{AudioStreamPacketDescription=qII}'/>
+<arg type='q'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentReadPackets'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='B'/>
+<arg type='^I'/>
+<arg type='^{AudioStreamPacketDescription=qII}'/>
+<arg type='q'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentRemoveUserData'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentSetProperty'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentSetUserData'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentWriteBytes'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='B'/>
+<arg type='q'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileComponentWritePackets'>
+<arg type64='^{ComponentInstanceRecord=[1q]}' type='^{ComponentInstanceRecord=[1l]}'/>
+<arg type='B'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioStreamPacketDescription=qII}'/>
+<arg type='q'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileCountUserData'>
+<arg type='^{OpaqueAudioFileID=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileCreate'>
+<arg type='^{FSRef=[80C]}'/>
+<arg type='^{__CFString=}'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type64='I' type='L'/>
+<arg type='^{FSRef=[80C]}'/>
+<arg type='^^{OpaqueAudioFileID}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileCreateWithURL'>
+<arg type='^{__CFURL=}'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueAudioFileID}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileGetGlobalInfo'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileGetGlobalInfoSize'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileGetProperty'>
+<arg type='^{OpaqueAudioFileID=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileGetPropertyInfo'>
+<arg type='^{OpaqueAudioFileID=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileGetUserData'>
+<arg type='^{OpaqueAudioFileID=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileGetUserDataSize'>
+<arg type='^{OpaqueAudioFileID=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileInitialize'>
+<arg type='^{FSRef=[80C]}'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueAudioFileID}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileInitializeWithCallbacks'>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='q'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='q'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='q'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='q'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg type64='I' type='L'/>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueAudioFileID}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileOpen'>
+<arg type='^{FSRef=[80C]}'/>
+<arg type='c'/>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueAudioFileID}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileOpenURL'>
+<arg type='^{__CFURL=}'/>
+<arg type='c'/>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueAudioFileID}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileOpenWithCallbacks'>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='q'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='q'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='q'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='q'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueAudioFileID}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileOptimize'>
+<arg type='^{OpaqueAudioFileID=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileReadBytes'>
+<arg type='^{OpaqueAudioFileID=}'/>
+<arg type='B'/>
+<arg type='q'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileReadPacketData'>
+<arg type='^{OpaqueAudioFileID=}'/>
+<arg type='B'/>
+<arg type='^I'/>
+<arg type='^{AudioStreamPacketDescription=qII}'/>
+<arg type='q'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileReadPackets'>
+<arg type='^{OpaqueAudioFileID=}'/>
+<arg type='B'/>
+<arg type='^I'/>
+<arg type='^{AudioStreamPacketDescription=qII}'/>
+<arg type='q'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileRemoveUserData'>
+<arg type='^{OpaqueAudioFileID=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileSetProperty'>
+<arg type='^{OpaqueAudioFileID=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileSetUserData'>
+<arg type='^{OpaqueAudioFileID=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileStreamClose'>
+<arg type='^{OpaqueAudioFileStreamID=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileStreamGetProperty'>
+<arg type='^{OpaqueAudioFileStreamID=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileStreamGetPropertyInfo'>
+<arg type='^{OpaqueAudioFileStreamID=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileStreamOpen'>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='^{OpaqueAudioFileStreamID=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<retval type='v'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^{AudioStreamPacketDescription=qII}'/>
+<retval type='v'/>
+</arg>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueAudioFileStreamID}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileStreamParseBytes'>
+<arg type='^{OpaqueAudioFileStreamID=}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileStreamSeek'>
+<arg type='^{OpaqueAudioFileStreamID=}'/>
+<arg type='q'/>
+<arg type='^q'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileStreamSetProperty'>
+<arg type='^{OpaqueAudioFileStreamID=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileWriteBytes'>
+<arg type='^{OpaqueAudioFileID=}'/>
+<arg type='B'/>
+<arg type='q'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFileWritePackets'>
+<arg type='^{OpaqueAudioFileID=}'/>
+<arg type='B'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioStreamPacketDescription=qII}'/>
+<arg type='q'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFormatGetProperty'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioFormatGetPropertyInfo'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioHardwareServiceAddPropertyListener'>
+<arg type64='I' type='L'/>
+<arg type='^{AudioObjectPropertyAddress=III}'/>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioObjectPropertyAddress=III}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioHardwareServiceGetPropertyData'>
+<arg type64='I' type='L'/>
+<arg type='^{AudioObjectPropertyAddress=III}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioHardwareServiceGetPropertyDataSize'>
+<arg type64='I' type='L'/>
+<arg type='^{AudioObjectPropertyAddress=III}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioHardwareServiceHasProperty'>
+<arg type64='I' type='L'/>
+<arg type='^{AudioObjectPropertyAddress=III}'/>
+<retval type='B'/>
+</function>
+<function name='AudioHardwareServiceIsPropertySettable'>
+<arg type64='I' type='L'/>
+<arg type='^{AudioObjectPropertyAddress=III}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioHardwareServiceRemovePropertyListener'>
+<arg type64='I' type='L'/>
+<arg type='^{AudioObjectPropertyAddress=III}'/>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioObjectPropertyAddress=III}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioHardwareServiceSetPropertyData'>
+<arg type64='I' type='L'/>
+<arg type='^{AudioObjectPropertyAddress=III}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueAddPropertyListener'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type64='I' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type64='I' type='L'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueAllocateBuffer'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type64='I' type='L'/>
+<arg type='^^{AudioQueueBuffer}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueAllocateBufferWithPacketDescriptions'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^^{AudioQueueBuffer}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueCreateTimeline'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='^^{OpaqueAudioQueueTimeline}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueDeviceGetCurrentTime'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueDeviceGetNearestStartTime'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueDeviceTranslateTime'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueDispose'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueDisposeTimeline'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='^{OpaqueAudioQueueTimeline=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueEnqueueBuffer'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='^{AudioQueueBuffer=I^vI^vI^{AudioStreamPacketDescription}I}'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioStreamPacketDescription=qII}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueEnqueueBufferWithParameters'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='^{AudioQueueBuffer=I^vI^vI^{AudioStreamPacketDescription}I}'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioStreamPacketDescription=qII}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioQueueParameterEvent=If}'/>
+<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueFlush'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueFreeBuffer'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='^{AudioQueueBuffer=I^vI^vI^{AudioStreamPacketDescription}I}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueGetCurrentTime'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='^{OpaqueAudioQueueTimeline=}'/>
+<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueGetParameter'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type64='I' type='L'/>
+<arg type='^f'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueGetProperty'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueGetPropertySize'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueNewInput'>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='^{AudioQueueBuffer=I^vI^vI^{AudioStreamPacketDescription}I}'/>
+<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioStreamPacketDescription=qII}'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+<arg type='^{__CFRunLoop=}'/>
+<arg type='^{__CFString=}'/>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueAudioQueue}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueNewInputWithDispatchQueue'>
+<arg type='^^{OpaqueAudioQueue}'/>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type64='I' type='L'/>
+<arg type='^{dispatch_queue_s=}'/>
+<arg function_pointer='true' type='@?'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='^{AudioQueueBuffer=I^vI^vI^{AudioStreamPacketDescription}I}'/>
+<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioStreamPacketDescription=qII}'/>
+<retval type='v'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueNewOutput'>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='^{AudioQueueBuffer=I^vI^vI^{AudioStreamPacketDescription}I}'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+<arg type='^{__CFRunLoop=}'/>
+<arg type='^{__CFString=}'/>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueAudioQueue}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueNewOutputWithDispatchQueue'>
+<arg type='^^{OpaqueAudioQueue}'/>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type64='I' type='L'/>
+<arg type='^{dispatch_queue_s=}'/>
+<arg function_pointer='true' type='@?'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='^{AudioQueueBuffer=I^vI^vI^{AudioStreamPacketDescription}I}'/>
+<retval type='v'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueOfflineRender'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg type='^{AudioQueueBuffer=I^vI^vI^{AudioStreamPacketDescription}I}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueuePause'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueuePrime'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueProcessingTapDispose'>
+<arg type='^{OpaqueAudioQueueProcessingTap=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueProcessingTapGetSourceAudio'>
+<arg type='^{OpaqueAudioQueueProcessingTap=}'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueProcessingTapNew'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='^{OpaqueAudioQueueProcessingTap=}'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type='^^{OpaqueAudioQueueProcessingTap}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueRemovePropertyListener'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type64='I' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type64='I' type='L'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueReset'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueSetOfflineRenderFormat'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type='^{AudioChannelLayout=III[1{AudioChannelDescription=II[3f]}]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueSetParameter'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type64='I' type='L'/>
+<arg type='f'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueSetProperty'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueStart'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioQueueStop'>
+<arg type='^{OpaqueAudioQueue=}'/>
+<arg type='B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioServicesAddSystemSoundCompletion'>
+<arg type64='I' type='L'/>
+<arg type='^{__CFRunLoop=}'/>
+<arg type='^{__CFString=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioServicesCreateSystemSoundID'>
+<arg type='^{__CFURL=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioServicesDisposeSystemSoundID'>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioServicesGetProperty'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioServicesGetPropertyInfo'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='AudioServicesPlayAlertSound'>
+<arg type64='I' type='L'/>
+</function>
+<function name='AudioServicesPlaySystemSound'>
+<arg type64='I' type='L'/>
+</function>
+<function name='AudioServicesRemoveSystemSoundCompletion'>
+<arg type64='I' type='L'/>
+</function>
+<function name='AudioServicesSetProperty'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockAddListener'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockArm'>
+<arg type='^{OpaqueCAClock=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockBarBeatTimeToBeats'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg type='^{CABarBeatTime=iSSSS}'/>
+<arg type='^d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockBeatsToBarBeatTime'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg type='d'/>
+<arg type='S'/>
+<arg type='^{CABarBeatTime=iSSSS}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockDisarm'>
+<arg type='^{OpaqueCAClock=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockDispose'>
+<arg type='^{OpaqueCAClock=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockGetCurrentTempo'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg type='^d'/>
+<arg type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockGetCurrentTime'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg type64='I' type='L'/>
+<arg type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockGetPlayRate'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg type='^d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockGetProperty'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockGetPropertyInfo'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockGetStartTime'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg type64='I' type='L'/>
+<arg type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockNew'>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueCAClock}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockParseMIDI'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg type='^{MIDIPacketList=I[1{MIDIPacket=QS[256C]}]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockRemoveListener'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockSMPTETimeToSeconds'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg type='^{SMPTETime=ssIIIssss}'/>
+<arg type='^d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockSecondsToSMPTETime'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg type='d'/>
+<arg type='S'/>
+<arg type='^{SMPTETime=ssIIIssss}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockSetCurrentTempo'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg type='d'/>
+<arg type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockSetCurrentTime'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockSetPlayRate'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg type='d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockSetProperty'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockStart'>
+<arg type='^{OpaqueCAClock=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockStop'>
+<arg type='^{OpaqueCAClock=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAClockTranslateTime'>
+<arg type='^{OpaqueCAClock=}'/>
+<arg type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
+<arg type64='I' type='L'/>
+<arg type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CAShow'>
+<arg type='^v'/>
+</function>
+<function name='CAShowFile'>
+<arg type='^v'/>
+<arg type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
+</function>
+<function name='CopyNameFromSoundBank'>
+<arg type='^{__CFURL=}'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DisposeAUGraph'>
+<arg type='^{OpaqueAUGraph=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DisposeMusicEventIterator'>
+<arg type='^{OpaqueMusicEventIterator=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DisposeMusicPlayer'>
+<arg type='^{OpaqueMusicPlayer=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DisposeMusicSequence'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ExtAudioFileCreateNew'>
+<arg type='^{FSRef=[80C]}'/>
+<arg type='^{__CFString=}'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type='^{AudioChannelLayout=III[1{AudioChannelDescription=II[3f]}]}'/>
+<arg type='^^{OpaqueExtAudioFile}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ExtAudioFileCreateWithURL'>
+<arg type='^{__CFURL=}'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg type='^{AudioChannelLayout=III[1{AudioChannelDescription=II[3f]}]}'/>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueExtAudioFile}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ExtAudioFileDispose'>
+<arg type='^{OpaqueExtAudioFile=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ExtAudioFileGetProperty'>
+<arg type='^{OpaqueExtAudioFile=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ExtAudioFileGetPropertyInfo'>
+<arg type='^{OpaqueExtAudioFile=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ExtAudioFileOpen'>
+<arg type='^{FSRef=[80C]}'/>
+<arg type='^^{OpaqueExtAudioFile}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ExtAudioFileOpenURL'>
+<arg type='^{__CFURL=}'/>
+<arg type='^^{OpaqueExtAudioFile}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ExtAudioFileRead'>
+<arg type='^{OpaqueExtAudioFile=}'/>
+<arg type='^I'/>
+<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ExtAudioFileSeek'>
+<arg type='^{OpaqueExtAudioFile=}'/>
+<arg type='q'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ExtAudioFileSetProperty'>
+<arg type='^{OpaqueExtAudioFile=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ExtAudioFileTell'>
+<arg type='^{OpaqueExtAudioFile=}'/>
+<arg type='^q'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ExtAudioFileWrapAudioFileID'>
+<arg type='^{OpaqueAudioFileID=}'/>
+<arg type='B'/>
+<arg type='^^{OpaqueExtAudioFile}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ExtAudioFileWrite'>
+<arg type='^{OpaqueExtAudioFile=}'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ExtAudioFileWriteAsync'>
+<arg type='^{OpaqueExtAudioFile=}'/>
+<arg type64='I' type='L'/>
+<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='GetNameFromSoundBank'>
+<arg type='^{FSRef=[80C]}'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicEventIteratorDeleteEvent'>
+<arg type='^{OpaqueMusicEventIterator=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicEventIteratorGetEventInfo'>
+<arg type='^{OpaqueMusicEventIterator=}'/>
+<arg type='^d'/>
+<arg type='^I'/>
+<arg type='^^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicEventIteratorHasCurrentEvent'>
+<arg type='^{OpaqueMusicEventIterator=}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicEventIteratorHasNextEvent'>
+<arg type='^{OpaqueMusicEventIterator=}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicEventIteratorHasPreviousEvent'>
+<arg type='^{OpaqueMusicEventIterator=}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicEventIteratorNextEvent'>
+<arg type='^{OpaqueMusicEventIterator=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicEventIteratorPreviousEvent'>
+<arg type='^{OpaqueMusicEventIterator=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicEventIteratorSeek'>
+<arg type='^{OpaqueMusicEventIterator=}'/>
+<arg type='d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicEventIteratorSetEventInfo'>
+<arg type='^{OpaqueMusicEventIterator=}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicEventIteratorSetEventTime'>
+<arg type='^{OpaqueMusicEventIterator=}'/>
+<arg type='d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicPlayerGetBeatsForHostTime'>
+<arg type='^{OpaqueMusicPlayer=}'/>
+<arg type='Q'/>
+<arg type='^d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicPlayerGetHostTimeForBeats'>
+<arg type='^{OpaqueMusicPlayer=}'/>
+<arg type='d'/>
+<arg type='^Q'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicPlayerGetPlayRateScalar'>
+<arg type='^{OpaqueMusicPlayer=}'/>
+<arg type='^d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicPlayerGetSequence'>
+<arg type='^{OpaqueMusicPlayer=}'/>
+<arg type='^^{OpaqueMusicSequence}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicPlayerGetTime'>
+<arg type='^{OpaqueMusicPlayer=}'/>
+<arg type='^d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicPlayerIsPlaying'>
+<arg type='^{OpaqueMusicPlayer=}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicPlayerPreroll'>
+<arg type='^{OpaqueMusicPlayer=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicPlayerSetPlayRateScalar'>
+<arg type='^{OpaqueMusicPlayer=}'/>
+<arg type='d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicPlayerSetSequence'>
+<arg type='^{OpaqueMusicPlayer=}'/>
+<arg type='^{OpaqueMusicSequence=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicPlayerSetTime'>
+<arg type='^{OpaqueMusicPlayer=}'/>
+<arg type='d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicPlayerStart'>
+<arg type='^{OpaqueMusicPlayer=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicPlayerStop'>
+<arg type='^{OpaqueMusicPlayer=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceBarBeatTimeToBeats'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='^{CABarBeatTime=iSSSS}'/>
+<arg type='^d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceBeatsToBarBeatTime'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='d'/>
+<arg type64='I' type='L'/>
+<arg type='^{CABarBeatTime=iSSSS}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceDisposeTrack'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='^{OpaqueMusicTrack=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceFileCreate'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='^{__CFURL=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='s'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceFileCreateData'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='s'/>
+<arg type='^^{__CFData}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceFileLoad'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='^{__CFURL=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceFileLoadData'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='^{__CFData=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceGetAUGraph'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='^^{OpaqueAUGraph}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceGetBeatsForSeconds'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='d'/>
+<arg type='^d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceGetIndTrack'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueMusicTrack}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceGetInfoDictionary'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<retval type='^{__CFDictionary=}'/>
+</function>
+<function name='MusicSequenceGetSMPTEResolution' inline='true'>
+<arg type='s'/>
+<arg type='*'/>
+<arg type='*'/>
+</function>
+<function name='MusicSequenceGetSecondsForBeats'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='d'/>
+<arg type='^d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceGetSequenceType'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceGetTempoTrack'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='^^{OpaqueMusicTrack}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceGetTrackCount'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceGetTrackIndex'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceLoadSMFDataWithFlags'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='^{__CFData=}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceLoadSMFWithFlags'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='^{FSRef=[80C]}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceNewTrack'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='^^{OpaqueMusicTrack}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceReverse'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceSaveMIDIFile'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='^{FSRef=[80C]}'/>
+<arg type='^{__CFString=}'/>
+<arg type='S'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceSaveSMFData'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='^^{__CFData}'/>
+<arg type='S'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceSetAUGraph'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='^{OpaqueAUGraph=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceSetMIDIEndpoint'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type64='I' type='^{OpaqueMIDIEndpoint=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceSetSMPTEResolution' inline='true'>
+<arg type='c'/>
+<arg type='C'/>
+<retval type='s'/>
+</function>
+<function name='MusicSequenceSetSequenceType'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicSequenceSetUserCallback'>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='^{OpaqueMusicSequence=}'/>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<arg type='^{MusicEventUserData=I[1C]}'/>
+<arg type='d'/>
+<arg type='d'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackClear'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<arg type='d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackCopyInsert'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackCut'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<arg type='d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackGetDestMIDIEndpoint'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type64='^I' type='^^{OpaqueMIDIEndpoint}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackGetDestNode'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='^i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackGetProperty'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackGetSequence'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='^^{OpaqueMusicSequence}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackMerge'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackMoveEvents'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackNewAUPresetEvent'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<arg type='^{AUPresetEvent=II^v}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackNewExtendedControlEvent'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<arg type='^{ExtendedControlEvent=IIf}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackNewExtendedNoteEvent'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<arg type='^{ExtendedNoteOnEvent=IIf{MusicDeviceNoteParams=Iff[1{NoteParamsControlValue=If}]}}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackNewExtendedTempoEvent'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<arg type='d'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackNewMIDIChannelEvent'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<arg type='^{MIDIChannelMessage=CCCC}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackNewMIDINoteEvent'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<arg type='^{MIDINoteMessage=CCCCf}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackNewMIDIRawDataEvent'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<arg type='^{MIDIRawData=I[1C]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackNewMetaEvent'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<arg type='^{MIDIMetaEvent=CCCCI[1C]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackNewParameterEvent'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<arg type='^{ParameterEvent=IIIf}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackNewUserEvent'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<arg type='^{MusicEventUserData=I[1C]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackSetDestMIDIEndpoint'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type64='I' type='^{OpaqueMIDIEndpoint=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackSetDestNode'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type64='i' type='l'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='MusicTrackSetProperty'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='NewAUGraph'>
+<arg type='^^{OpaqueAUGraph}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='NewMusicEventIterator'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='^^{OpaqueMusicEventIterator}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='NewMusicPlayer'>
+<arg type='^^{OpaqueMusicPlayer}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='NewMusicSequence'>
+<arg type='^^{OpaqueMusicSequence}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='NewMusicTrackFrom'>
+<arg type='^{OpaqueMusicTrack=}'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='^^{OpaqueMusicTrack}'/>
+<retval type64='i' type='l'/>
+</function>
+</signatures>

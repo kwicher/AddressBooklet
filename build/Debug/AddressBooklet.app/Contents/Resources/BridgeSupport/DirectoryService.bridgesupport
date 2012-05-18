@@ -1,0 +1,1375 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/OpenDirectory.framework/Versions/A/Frameworks/CFOpenDirectory.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<struct name='tAccessControlEntry' type='{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;I&quot;fDirMemberFlags&quot;I&quot;fDirNodeMemberFlags&quot;I&quot;fOwnerFlags&quot;I&quot;fAdministratorFlags&quot;I}'/>
+<struct name='tAttributeEntry' type='{_tAttributeEntry=&quot;fReserved1&quot;I&quot;fReserved2&quot;{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;I&quot;fDirMemberFlags&quot;I&quot;fDirNodeMemberFlags&quot;I&quot;fOwnerFlags&quot;I&quot;fAdministratorFlags&quot;I}&quot;fAttributeValueCount&quot;I&quot;fAttributeDataSize&quot;I&quot;fAttributeValueMaxSize&quot;I&quot;fAttributeSignature&quot;{_tDataNode=&quot;fBufferSize&quot;I&quot;fBufferLength&quot;I&quot;fBufferData&quot;[1c]}}'/>
+<struct name='tAttributeValueEntry' type='{_tAttributeValueEntry=&quot;fAttributeValueID&quot;I&quot;fAttributeValueData&quot;{_tDataNode=&quot;fBufferSize&quot;I&quot;fBufferLength&quot;I&quot;fBufferData&quot;[1c]}}'/>
+<struct name='tDataBuffer' type='{_tDataBuffer=&quot;fBufferSize&quot;I&quot;fBufferLength&quot;I&quot;fBufferData&quot;[1c]}'/>
+<struct name='tDataList' type='{_tDataList=&quot;fDataNodeCount&quot;I&quot;fDataListHead&quot;^{?}}'/>
+<struct name='tDataNode' type='{_tDataNode=&quot;fBufferSize&quot;I&quot;fBufferLength&quot;I&quot;fBufferData&quot;[1c]}'/>
+<struct name='tRecordEntry' type='{_tRecordEntry=&quot;fReserved1&quot;I&quot;fReserved2&quot;{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;I&quot;fDirMemberFlags&quot;I&quot;fDirNodeMemberFlags&quot;I&quot;fOwnerFlags&quot;I&quot;fAdministratorFlags&quot;I}&quot;fRecordAttributeCount&quot;I&quot;fRecordNameAndType&quot;{_tDataNode=&quot;fBufferSize&quot;I&quot;fBufferLength&quot;I&quot;fBufferData&quot;[1c]}}'/>
+<string_constant name='kDS1AttrAdminLimits' value='dsAttrTypeStandard:AdminLimits'/>
+<string_constant name='kDS1AttrAdminStatus' value='dsAttrTypeStandard:AdminStatus'/>
+<string_constant name='kDS1AttrAlias' value='dsAttrTypeStandard:Alias'/>
+<string_constant name='kDS1AttrAliasData' value='dsAttrTypeStandard:AppleAliasData'/>
+<string_constant name='kDS1AttrAlternateDatastoreLocation' value='dsAttrTypeStandard:AlternateDatastoreLocation'/>
+<string_constant name='kDS1AttrAttrListRefCount' value='dsAttrTypeStandard:AttrListRefCount'/>
+<string_constant name='kDS1AttrAttrListValueRefCount' value='dsAttrTypeStandard:AttrListValueRefCount'/>
+<string_constant name='kDS1AttrAuthCredential' value='dsAttrTypeStandard:AuthCredential'/>
+<string_constant name='kDS1AttrAuthenticationHint' value='dsAttrTypeStandard:AuthenticationHint'/>
+<string_constant name='kDS1AttrAuthorityRevocationList' value='dsAttrTypeStandard:AuthorityRevocationList'/>
+<string_constant name='kDS1AttrBirthday' value='dsAttrTypeStandard:Birthday'/>
+<string_constant name='kDS1AttrBootFile' value='dsAttrTypeStandard:BootFile'/>
+<string_constant name='kDS1AttrBuildVersion' value='dsAttrTypeStandard:BuildVersion'/>
+<string_constant name='kDS1AttrCACertificate' value='dsAttrTypeStandard:CACertificate'/>
+<string_constant name='kDS1AttrCSPSearchPath' value='dsAttrTypeStandard:CSPSearchPath'/>
+<string_constant name='kDS1AttrCapabilities' value='dsAttrTypeStandard:Capabilities'/>
+<string_constant name='kDS1AttrCapacity' value='dsAttrTypeStandard:Capacity'/>
+<string_constant name='kDS1AttrCategory' value='dsAttrTypeStandard:Category'/>
+<string_constant name='kDS1AttrCertificateRevocationList' value='dsAttrTypeStandard:CertificateRevocationList'/>
+<string_constant name='kDS1AttrChange' value='dsAttrTypeStandard:Change'/>
+<string_constant name='kDS1AttrComment' value='dsAttrTypeStandard:Comment'/>
+<string_constant name='kDS1AttrConfigAvail' value='dsAttrTypeStandard:ConfigAvail'/>
+<string_constant name='kDS1AttrConfigFile' value='dsAttrTypeStandard:ConfigFile'/>
+<string_constant name='kDS1AttrContactGUID' value='dsAttrTypeStandard:ContactGUID'/>
+<string_constant name='kDS1AttrContactPerson' value='dsAttrTypeStandard:ContactPerson'/>
+<string_constant name='kDS1AttrCopyTimestamp' value='dsAttrTypeStandard:CopyTimestamp'/>
+<string_constant name='kDS1AttrCoreFWVersion' value='dsAttrTypeStandard:CoreFWVersion'/>
+<string_constant name='kDS1AttrCreationTimestamp' value='dsAttrTypeStandard:CreationTimestamp'/>
+<string_constant name='kDS1AttrCrossCertificatePair' value='dsAttrTypeStandard:CrossCertificatePair'/>
+<string_constant name='kDS1AttrDNSDomain' value='dsAttrTypeStandard:DNSDomain'/>
+<string_constant name='kDS1AttrDNSNameServer' value='dsAttrTypeStandard:DNSNameServer'/>
+<string_constant name='kDS1AttrDataStamp' value='dsAttrTypeStandard:DataStamp'/>
+<string_constant name='kDS1AttrDateRecordCreated' value='dsAttrTypeStandard:DateRecordCreated'/>
+<string_constant name='kDS1AttrDirRefCount' value='dsAttrTypeStandard:DirRefCount'/>
+<string_constant name='kDS1AttrDistinguishedName' value='dsAttrTypeStandard:RealName'/>
+<string_constant name='kDS1AttrENetAddress' value='dsAttrTypeStandard:ENetAddress'/>
+<string_constant name='kDS1AttrExpire' value='dsAttrTypeStandard:Expire'/>
+<string_constant name='kDS1AttrFWVersion' value='dsAttrTypeStandard:FWVersion'/>
+<string_constant name='kDS1AttrFirstName' value='dsAttrTypeStandard:FirstName'/>
+<string_constant name='kDS1AttrFunctionalState' value='dsAttrTypeStandard:FunctionalState'/>
+<string_constant name='kDS1AttrGeneratedUID' value='dsAttrTypeStandard:GeneratedUID'/>
+<string_constant name='kDS1AttrHomeDirectoryQuota' value='dsAttrTypeStandard:HomeDirectoryQuota'/>
+<string_constant name='kDS1AttrHomeDirectorySoftQuota' value='dsAttrTypeStandard:HomeDirectorySoftQuota'/>
+<string_constant name='kDS1AttrHomeLocOwner' value='dsAttrTypeStandard:HomeLocOwner'/>
+<string_constant name='kDS1AttrInternetAlias' value='dsAttrTypeStandard:InetAlias'/>
+<string_constant name='kDS1AttrKDCConfigData' value='dsAttrTypeStandard:KDCConfigData'/>
+<string_constant name='kDS1AttrKerberosRealm' value='dsAttrTypeStandard:KerberosRealm'/>
+<string_constant name='kDS1AttrLDAPSearchBaseSuffix' value='dsAttrTypeStandard:LDAPSearchBaseSuffix'/>
+<string_constant name='kDS1AttrLSPSearchPath' value='dsAttrTypeStandard:LSPSearchPath'/>
+<string_constant name='kDS1AttrLastName' value='dsAttrTypeStandard:LastName'/>
+<string_constant name='kDS1AttrLocation' value='dsAttrTypeStandard:Location'/>
+<string_constant name='kDS1AttrMCXFlags' value='dsAttrTypeStandard:MCXFlags'/>
+<string_constant name='kDS1AttrMCXSettings' value='dsAttrTypeStandard:MCXSettings'/>
+<string_constant name='kDS1AttrMailAttribute' value='dsAttrTypeStandard:MailAttribute'/>
+<string_constant name='kDS1AttrMapGUID' value='dsAttrTypeStandard:MapGUID'/>
+<string_constant name='kDS1AttrMetaAutomountMap' value='dsAttrTypeStandard:MetaAutomountMap'/>
+<string_constant name='kDS1AttrMiddleName' value='dsAttrTypeStandard:MiddleName'/>
+<string_constant name='kDS1AttrModificationTimestamp' value='dsAttrTypeStandard:ModificationTimestamp'/>
+<string_constant name='kDS1AttrNFSHomeDirectory' value='dsAttrTypeStandard:NFSHomeDirectory'/>
+<string_constant name='kDS1AttrNSPSearchPath' value='dsAttrTypeStandard:NSPSearchPath'/>
+<string_constant name='kDS1AttrNTDomainComputerAccount' value='dsAttrTypeStandard:NTDomainComputerAccount'/>
+<string_constant name='kDS1AttrNeighborhoodType' value='dsAttrTypeStandard:NeighborhoodType'/>
+<string_constant name='kDS1AttrNetworkNumber' value='dsAttrTypeStandard:NetworkNumber'/>
+<string_constant name='kDS1AttrNetworkView' value='dsAttrTypeStandard:NetworkView'/>
+<string_constant name='kDS1AttrNodeRefCount' value='dsAttrTypeStandard:NodeRefCount'/>
+<string_constant name='kDS1AttrNote' value='dsAttrTypeStandard:Note'/>
+<string_constant name='kDS1AttrOriginalNFSHomeDirectory' value='dsAttrTypeStandard:OriginalNFSHomeDirectory'/>
+<string_constant name='kDS1AttrOriginalNodeName' value='dsAttrTypeStandard:OriginalNodeName'/>
+<string_constant name='kDS1AttrOwner' value='dsAttrTypeStandard:Owner'/>
+<string_constant name='kDS1AttrOwnerGUID' value='dsAttrTypeStandard:OwnerGUID'/>
+<string_constant name='kDS1AttrPIDValue' value='dsAttrTypeStandard:PIDValue'/>
+<string_constant name='kDS1AttrPassword' value='dsAttrTypeStandard:Password'/>
+<string_constant name='kDS1AttrPasswordPlus' value='dsAttrTypeStandard:PasswordPlus'/>
+<string_constant name='kDS1AttrPasswordPolicyOptions' value='dsAttrTypeStandard:PasswordPolicyOptions'/>
+<string_constant name='kDS1AttrPasswordServerList' value='dsAttrTypeStandard:PasswordServerList'/>
+<string_constant name='kDS1AttrPasswordServerLocation' value='dsAttrTypeStandard:PasswordServerLocation'/>
+<string_constant name='kDS1AttrPicture' value='dsAttrTypeStandard:Picture'/>
+<string_constant name='kDS1AttrPluginIndex' value='dsAttrTypeStandard:PluginIndex'/>
+<string_constant name='kDS1AttrPort' value='dsAttrTypeStandard:Port'/>
+<string_constant name='kDS1AttrPresetUserIsAdmin' value='dsAttrTypeStandard:PresetUserIsAdmin'/>
+<string_constant name='kDS1AttrPrimaryComputerGUID' value='dsAttrTypeStandard:PrimaryComputerGUID'/>
+<string_constant name='kDS1AttrPrimaryComputerList' value='dsAttrTypeStandard:PrimaryComputerList'/>
+<string_constant name='kDS1AttrPrimaryGroupID' value='dsAttrTypeStandard:PrimaryGroupID'/>
+<string_constant name='kDS1AttrPrimaryNTDomain' value='dsAttrTypeStandard:PrimaryNTDomain'/>
+<string_constant name='kDS1AttrPrintServiceInfoText' value='dsAttrTypeStandard:PrintServiceInfoText'/>
+<string_constant name='kDS1AttrPrintServiceInfoXML' value='dsAttrTypeStandard:PrintServiceInfoXML'/>
+<string_constant name='kDS1AttrPrintServiceUserData' value='dsAttrTypeStandard:PrintServiceUserData'/>
+<string_constant name='kDS1AttrPrinter1284DeviceID' value='dsAttrTypeStandard:Printer1284DeviceID'/>
+<string_constant name='kDS1AttrPrinterLPRHost' value='dsAttrTypeStandard:PrinterLPRHost'/>
+<string_constant name='kDS1AttrPrinterLPRQueue' value='dsAttrTypeStandard:PrinterLPRQueue'/>
+<string_constant name='kDS1AttrPrinterMakeAndModel' value='dsAttrTypeStandard:PrinterMakeAndModel'/>
+<string_constant name='kDS1AttrPrinterType' value='dsAttrTypeStandard:PrinterType'/>
+<string_constant name='kDS1AttrPrinterURI' value='dsAttrTypeStandard:PrinterURI'/>
+<string_constant name='kDS1AttrProcessName' value='dsAttrTypeStandard:ProcessName'/>
+<string_constant name='kDS1AttrProtocolNumber' value='dsAttrTypeStandard:ProtocolNumber'/>
+<string_constant name='kDS1AttrPwdAgingPolicy' value='dsAttrTypeStandard:PwdAgingPolicy'/>
+<string_constant name='kDS1AttrRARA' value='dsAttrTypeStandard:RARA'/>
+<string_constant name='kDS1AttrRPCNumber' value='dsAttrTypeStandard:RPCNumber'/>
+<string_constant name='kDS1AttrReadOnlyNode' value='dsAttrTypeStandard:ReadOnlyNode'/>
+<string_constant name='kDS1AttrRealUserID' value='dsAttrTypeStandard:RealUserID'/>
+<string_constant name='kDS1AttrRecRefCount' value='dsAttrTypeStandard:RecRefCount'/>
+<string_constant name='kDS1AttrRecordImage' value='dsAttrTypeStandard:RecordImage'/>
+<string_constant name='kDS1AttrRefNumTableList' value='dsAttrTypeStandard:RefNumTableList'/>
+<string_constant name='kDS1AttrRelativeDNPrefix' value='dsAttrTypeStandard:RelativeDNPrefix'/>
+<string_constant name='kDS1AttrSMBAcctFlags' value='dsAttrTypeStandard:SMBAccountFlags'/>
+<string_constant name='kDS1AttrSMBGroupRID' value='dsAttrTypeStandard:SMBGroupRID'/>
+<string_constant name='kDS1AttrSMBHome' value='dsAttrTypeStandard:SMBHome'/>
+<string_constant name='kDS1AttrSMBHomeDrive' value='dsAttrTypeStandard:SMBHomeDrive'/>
+<string_constant name='kDS1AttrSMBKickoffTime' value='dsAttrTypeStandard:SMBKickoffTime'/>
+<string_constant name='kDS1AttrSMBLogoffTime' value='dsAttrTypeStandard:SMBLogoffTime'/>
+<string_constant name='kDS1AttrSMBLogonTime' value='dsAttrTypeStandard:SMBLogonTime'/>
+<string_constant name='kDS1AttrSMBPWDLastSet' value='dsAttrTypeStandard:SMBPasswordLastSet'/>
+<string_constant name='kDS1AttrSMBPrimaryGroupSID' value='dsAttrTypeStandard:SMBPrimaryGroupSID'/>
+<string_constant name='kDS1AttrSMBProfilePath' value='dsAttrTypeStandard:SMBProfilePath'/>
+<string_constant name='kDS1AttrSMBRID' value='dsAttrTypeStandard:SMBRID'/>
+<string_constant name='kDS1AttrSMBSID' value='dsAttrTypeStandard:SMBSID'/>
+<string_constant name='kDS1AttrSMBScriptPath' value='dsAttrTypeStandard:SMBScriptPath'/>
+<string_constant name='kDS1AttrSMBUserWorkstations' value='dsAttrTypeStandard:SMBUserWorkstations'/>
+<string_constant name='kDS1AttrSearchPath' value='dsAttrTypeStandard:SearchPath'/>
+<string_constant name='kDS1AttrSearchPolicy' value='dsAttrTypeStandard:SearchPolicy'/>
+<string_constant name='kDS1AttrServiceType' value='dsAttrTypeStandard:ServiceType'/>
+<string_constant name='kDS1AttrSetupAdvertising' value='dsAttrTypeStandard:SetupAssistantAdvertising'/>
+<string_constant name='kDS1AttrSetupAutoRegister' value='dsAttrTypeStandard:SetupAssistantAutoRegister'/>
+<string_constant name='kDS1AttrSetupLocation' value='dsAttrTypeStandard:SetupAssistantLocation'/>
+<string_constant name='kDS1AttrSetupOccupation' value='dsAttrTypeStandard:Occupation'/>
+<string_constant name='kDS1AttrTimePackage' value='dsAttrTypeStandard:TimePackage'/>
+<string_constant name='kDS1AttrTimeToLive' value='dsAttrTypeStandard:TimeToLive'/>
+<string_constant name='kDS1AttrTotalRefCount' value='dsAttrTypeStandard:TotalRefCount'/>
+<string_constant name='kDS1AttrTotalSize' value='dsAttrTypeStandard:TotalSize'/>
+<string_constant name='kDS1AttrUniqueID' value='dsAttrTypeStandard:UniqueID'/>
+<string_constant name='kDS1AttrUserCertificate' value='dsAttrTypeStandard:UserCertificate'/>
+<string_constant name='kDS1AttrUserPKCS12Data' value='dsAttrTypeStandard:UserPKCS12Data'/>
+<string_constant name='kDS1AttrUserSMIMECertificate' value='dsAttrTypeStandard:UserSMIMECertificate'/>
+<string_constant name='kDS1AttrUserShell' value='dsAttrTypeStandard:UserShell'/>
+<string_constant name='kDS1AttrVFSDumpFreq' value='dsAttrTypeStandard:VFSDumpFreq'/>
+<string_constant name='kDS1AttrVFSLinkDir' value='dsAttrTypeStandard:VFSLinkDir'/>
+<string_constant name='kDS1AttrVFSPassNo' value='dsAttrTypeStandard:VFSPassNo'/>
+<string_constant name='kDS1AttrVFSType' value='dsAttrTypeStandard:VFSType'/>
+<string_constant name='kDS1AttrVersion' value='dsAttrTypeStandard:Version'/>
+<string_constant name='kDS1AttrWeblogURI' value='dsAttrTypeStandard:WeblogURI'/>
+<string_constant name='kDS1AttrXMLPlist' value='dsAttrTypeStandard:XMLPlist'/>
+<string_constant name='kDS1StandardAttrHomeLocOwner' value='dsAttrTypeStandard:HomeLocOwner'/>
+<string_constant name='kDSAttrNone' value='dsNone'/>
+<string_constant name='kDSAttributesAll' value='dsAttributesAll'/>
+<string_constant name='kDSAttributesNativeAll' value='dsAttributesNativeAll'/>
+<string_constant name='kDSAttributesStandardAll' value='dsAttributesStandardAll'/>
+<string_constant name='kDSNAttrAccessControlEntry' value='dsAttrTypeStandard:AccessControlEntry'/>
+<string_constant name='kDSNAttrAddressLine1' value='dsAttrTypeStandard:AddressLine1'/>
+<string_constant name='kDSNAttrAddressLine2' value='dsAttrTypeStandard:AddressLine2'/>
+<string_constant name='kDSNAttrAddressLine3' value='dsAttrTypeStandard:AddressLine3'/>
+<string_constant name='kDSNAttrAllNames' value='dsAttrTypeStandard:AllNames'/>
+<string_constant name='kDSNAttrAreaCode' value='dsAttrTypeStandard:AreaCode'/>
+<string_constant name='kDSNAttrAttrListRefs' value='dsAttrTypeStandard:AttrListRefs'/>
+<string_constant name='kDSNAttrAttrListValueRefs' value='dsAttrTypeStandard:AttrListValueRefs'/>
+<string_constant name='kDSNAttrAttributeTypes' value='dsAttrTypeStandard:AttributeTypes'/>
+<string_constant name='kDSNAttrAuthMethod' value='dsAttrTypeStandard:AuthMethod'/>
+<string_constant name='kDSNAttrAuthenticationAuthority' value='dsAttrTypeStandard:AuthenticationAuthority'/>
+<string_constant name='kDSNAttrAutomountInformation' value='dsAttrTypeStandard:AutomountInformation'/>
+<string_constant name='kDSNAttrBootParams' value='dsAttrTypeStandard:BootParams'/>
+<string_constant name='kDSNAttrBuilding' value='dsAttrTypeStandard:Building'/>
+<string_constant name='kDSNAttrCSPSearchPath' value='dsAttrTypeStandard:CSPSearchPath'/>
+<string_constant name='kDSNAttrCity' value='dsAttrTypeStandard:City'/>
+<string_constant name='kDSNAttrCompany' value='dsAttrTypeStandard:Company'/>
+<string_constant name='kDSNAttrComputerAlias' value='dsAttrTypeStandard:ComputerAlias'/>
+<string_constant name='kDSNAttrComputers' value='dsAttrTypeStandard:Computers'/>
+<string_constant name='kDSNAttrCountry' value='dsAttrTypeStandard:Country'/>
+<string_constant name='kDSNAttrDNSName' value='dsAttrTypeStandard:DNSName'/>
+<string_constant name='kDSNAttrDepartment' value='dsAttrTypeStandard:Department'/>
+<string_constant name='kDSNAttrDirRefs' value='dsAttrTypeStandard:DirRefs'/>
+<string_constant name='kDSNAttrEMailAddress' value='dsAttrTypeStandard:EMailAddress'/>
+<string_constant name='kDSNAttrEMailContacts' value='dsAttrTypeStandard:EMailContacts'/>
+<string_constant name='kDSNAttrFaxNumber' value='dsAttrTypeStandard:FAXNumber'/>
+<string_constant name='kDSNAttrGroup' value='dsAttrTypeStandard:Group'/>
+<string_constant name='kDSNAttrGroupMembers' value='dsAttrTypeStandard:GroupMembers'/>
+<string_constant name='kDSNAttrGroupMembership' value='dsAttrTypeStandard:GroupMembership'/>
+<string_constant name='kDSNAttrGroupServices' value='dsAttrTypeStandard:GroupServices'/>
+<string_constant name='kDSNAttrHTML' value='dsAttrTypeStandard:HTML'/>
+<string_constant name='kDSNAttrHomeDirectory' value='dsAttrTypeStandard:HomeDirectory'/>
+<string_constant name='kDSNAttrHomePhoneNumber' value='dsAttrTypeStandard:HomePhoneNumber'/>
+<string_constant name='kDSNAttrIMHandle' value='dsAttrTypeStandard:IMHandle'/>
+<string_constant name='kDSNAttrIPAddress' value='dsAttrTypeStandard:IPAddress'/>
+<string_constant name='kDSNAttrIPAddressAndENetAddress' value='dsAttrTypeStandard:IPAddressAndENetAddress'/>
+<string_constant name='kDSNAttrIPv6Address' value='dsAttrTypeStandard:IPv6Address'/>
+<string_constant name='kDSNAttrJPEGPhoto' value='dsAttrTypeStandard:JPEGPhoto'/>
+<string_constant name='kDSNAttrJobTitle' value='dsAttrTypeStandard:JobTitle'/>
+<string_constant name='kDSNAttrKDCAuthKey' value='dsAttrTypeStandard:KDCAuthKey'/>
+<string_constant name='kDSNAttrKeywords' value='dsAttrTypeStandard:Keywords'/>
+<string_constant name='kDSNAttrLDAPReadReplicas' value='dsAttrTypeStandard:LDAPReadReplicas'/>
+<string_constant name='kDSNAttrLDAPWriteReplicas' value='dsAttrTypeStandard:LDAPWriteReplicas'/>
+<string_constant name='kDSNAttrLSPSearchPath' value='dsAttrTypeStandard:LSPSearchPath'/>
+<string_constant name='kDSNAttrMCXSettings' value='dsAttrTypeStandard:MCXSettings'/>
+<string_constant name='kDSNAttrMIME' value='dsAttrTypeStandard:MIME'/>
+<string_constant name='kDSNAttrMachineServes' value='dsAttrTypeStandard:MachineServes'/>
+<string_constant name='kDSNAttrMapCoordinates' value='dsAttrTypeStandard:MapCoordinates'/>
+<string_constant name='kDSNAttrMapURI' value='dsAttrTypeStandard:MapURI'/>
+<string_constant name='kDSNAttrMember' value='dsAttrTypeStandard:Member'/>
+<string_constant name='kDSNAttrMetaNodeLocation' value='dsAttrTypeStandard:AppleMetaNodeLocation'/>
+<string_constant name='kDSNAttrMobileNumber' value='dsAttrTypeStandard:MobileNumber'/>
+<string_constant name='kDSNAttrNBPEntry' value='dsAttrTypeStandard:NBPEntry'/>
+<string_constant name='kDSNAttrNSPSearchPath' value='dsAttrTypeStandard:NSPSearchPath'/>
+<string_constant name='kDSNAttrNamePrefix' value='dsAttrTypeStandard:NamePrefix'/>
+<string_constant name='kDSNAttrNameSuffix' value='dsAttrTypeStandard:NameSuffix'/>
+<string_constant name='kDSNAttrNeighborhoodAlias' value='dsAttrTypeStandard:NeighborhoodAlias'/>
+<string_constant name='kDSNAttrNestedGroups' value='dsAttrTypeStandard:NestedGroups'/>
+<string_constant name='kDSNAttrNetGroupTriplet' value='dsAttrTypeStandard:NetGroupTriplet'/>
+<string_constant name='kDSNAttrNetGroups' value='dsAttrTypeStandard:NetGroups'/>
+<string_constant name='kDSNAttrNickName' value='dsAttrTypeStandard:NickName'/>
+<string_constant name='kDSNAttrNodePath' value='dsAttrTypeStandard:NodePath'/>
+<string_constant name='kDSNAttrNodePathXMLPlist' value='dsAttrTypeStandard:NodePathXMLPlist'/>
+<string_constant name='kDSNAttrNodeRefs' value='dsAttrTypeStandard:NodeRefs'/>
+<string_constant name='kDSNAttrOrganizationInfo' value='dsAttrTypeStandard:OrganizationInfo'/>
+<string_constant name='kDSNAttrOrganizationName' value='dsAttrTypeStandard:OrganizationName'/>
+<string_constant name='kDSNAttrOriginalHomeDirectory' value='dsAttrTypeStandard:OriginalHomeDirectory'/>
+<string_constant name='kDSNAttrPGPPublicKey' value='dsAttrTypeStandard:PGPPublicKey'/>
+<string_constant name='kDSNAttrPagerNumber' value='dsAttrTypeStandard:PagerNumber'/>
+<string_constant name='kDSNAttrPhoneContacts' value='dsAttrTypeStandard:PhoneContacts'/>
+<string_constant name='kDSNAttrPhoneNumber' value='dsAttrTypeStandard:PhoneNumber'/>
+<string_constant name='kDSNAttrPlugInInfo' value='dsAttrTypeStandard:PlugInInfo'/>
+<string_constant name='kDSNAttrPostalAddress' value='dsAttrTypeStandard:PostalAddress'/>
+<string_constant name='kDSNAttrPostalAddressContacts' value='dsAttrTypeStandard:PostalAddressContacts'/>
+<string_constant name='kDSNAttrPostalCode' value='dsAttrTypeStandard:PostalCode'/>
+<string_constant name='kDSNAttrPrinterXRISupported' value='dsAttrTypeStandard:PrinterXRISupported'/>
+<string_constant name='kDSNAttrProtocols' value='dsAttrTypeStandard:Protocols'/>
+<string_constant name='kDSNAttrRecRefs' value='dsAttrTypeStandard:RecRefs'/>
+<string_constant name='kDSNAttrRecordAlias' value='dsAttrTypeStandard:RecordAlias'/>
+<string_constant name='kDSNAttrRecordName' value='dsAttrTypeStandard:RecordName'/>
+<string_constant name='kDSNAttrRecordType' value='dsAttrTypeStandard:RecordType'/>
+<string_constant name='kDSNAttrRelationships' value='dsAttrTypeStandard:Relationships'/>
+<string_constant name='kDSNAttrResourceInfo' value='dsAttrTypeStandard:ResourceInfo'/>
+<string_constant name='kDSNAttrResourceType' value='dsAttrTypeStandard:ResourceType'/>
+<string_constant name='kDSNAttrSchema' value='dsAttrTypeStandard:Scheama'/>
+<string_constant name='kDSNAttrSearchPath' value='dsAttrTypeStandard:SearchPath'/>
+<string_constant name='kDSNAttrServicesLocator' value='dsAttrTypeStandard:ServicesLocator'/>
+<string_constant name='kDSNAttrSetPasswdMethod' value='dsAttrTypeStandard:SetPasswdMethod'/>
+<string_constant name='kDSNAttrState' value='dsAttrTypeStandard:State'/>
+<string_constant name='kDSNAttrStreet' value='dsAttrTypeStandard:Street'/>
+<string_constant name='kDSNAttrSubNodes' value='dsAttrTypeStandard:SubNodes'/>
+<string_constant name='kDSNAttrURL' value='dsAttrTypeStandard:URL'/>
+<string_constant name='kDSNAttrURLForNSL' value='dsAttrTypeStandard:URLForNSL'/>
+<string_constant name='kDSNAttrVFSOpts' value='dsAttrTypeStandard:VFSOpts'/>
+<string_constant name='kDSNativeAttrTypePrefix' value='dsAttrTypeNative:'/>
+<string_constant name='kDSNativeAuthMethodPrefix' value='dsAuthMethodNative:'/>
+<string_constant name='kDSNativeRecordTypePrefix' value='dsRecTypeNative:'/>
+<string_constant name='kDSRecordsAll' value='dsRecordsAll'/>
+<string_constant name='kDSRecordsNativeAll' value='dsRecordsNativeAll'/>
+<string_constant name='kDSRecordsStandardAll' value='dsRecordsStandardAll'/>
+<string_constant name='kDSSetPasswdBestOf' value='dsSetPasswdBestOf'/>
+<string_constant name='kDSStdAttrTypePrefix' value='dsAttrTypeStandard:'/>
+<string_constant name='kDSStdAuth2WayRandom' value='dsAuthMethodStandard:dsAuth2WayRandom'/>
+<string_constant name='kDSStdAuth2WayRandomChangePasswd' value='dsAuthMethodStandard:dsAuth2WayRandomChangePasswd'/>
+<string_constant name='kDSStdAuthAPOP' value='dsAuthMethodStandard:dsAuthAPOP'/>
+<string_constant name='kDSStdAuthCHAP' value='dsAuthMethodStandard:dsAuthCHAP'/>
+<string_constant name='kDSStdAuthCRAM_MD5' value='dsAuthMethodStandard:dsAuthNodeCRAM-MD5'/>
+<string_constant name='kDSStdAuthChangePasswd' value='dsAuthMethodStandard:dsAuthChangePasswd'/>
+<string_constant name='kDSStdAuthClearText' value='dsAuthMethodStandard:dsAuthClearText'/>
+<string_constant name='kDSStdAuthCrypt' value='dsAuthMethodStandard:dsAuthCrypt'/>
+<string_constant name='kDSStdAuthDIGEST_MD5' value='dsAuthMethodStandard:dsAuthNodeDIGEST-MD5'/>
+<string_constant name='kDSStdAuthDeleteUser' value='dsAuthMethodStandard:dsAuthDeleteUser'/>
+<string_constant name='kDSStdAuthGetEffectivePolicy' value='dsAuthMethodStandard:dsAuthGetEffectivePolicy'/>
+<string_constant name='kDSStdAuthGetGlobalPolicy' value='dsAuthMethodStandard:dsAuthGetGlobalPolicy'/>
+<string_constant name='kDSStdAuthGetKerberosPrincipal' value='dsAuthMethodStandard:dsAuthGetKerberosPrincipal'/>
+<string_constant name='kDSStdAuthGetMethodsForUser' value='dsAuthMethodStandard:dsAuthGetMethodsForUser'/>
+<string_constant name='kDSStdAuthGetPolicy' value='dsAuthMethodStandard:dsAuthGetPolicy'/>
+<string_constant name='kDSStdAuthGetUserData' value='dsAuthMethodStandard:dsAuthGetUserData'/>
+<string_constant name='kDSStdAuthGetUserName' value='dsAuthMethodStandard:dsAuthGetUserName'/>
+<string_constant name='kDSStdAuthKerberosTickets' value='dsAuthMethodStandard:dsAuthKerberosTickets'/>
+<string_constant name='kDSStdAuthMASKE_A' value='dsAuthMethodStandard:dsAuthMASKE-A'/>
+<string_constant name='kDSStdAuthMASKE_B' value='dsAuthMethodStandard:dsAuthMASKE-B'/>
+<string_constant name='kDSStdAuthMPPEMasterKeys' value='dsAuthMethodStandard:dsAuthMPPEMasterKeys'/>
+<string_constant name='kDSStdAuthMSCHAP1' value='dsAuthMethodStandard:dsAuthMSCHAP1'/>
+<string_constant name='kDSStdAuthMSCHAP2' value='dsAuthMethodStandard:dsAuthMSCHAP2'/>
+<string_constant name='kDSStdAuthMethodPrefix' value='dsAuthMethodStandard:'/>
+<string_constant name='kDSStdAuthNTLMv2' value='dsAuthMethodStandard:dsAuthNodeNTLMv2'/>
+<string_constant name='kDSStdAuthNTLMv2WithSessionKey' value='dsAuthMethodStandard:dsAuthNodeNTLMv2WithSessionKey'/>
+<string_constant name='kDSStdAuthNewUser' value='dsAuthMethodStandard:dsAuthNewUser'/>
+<string_constant name='kDSStdAuthNewUserWithPolicy' value='dsAuthMethodStandard:dsAuthNewUserWithPolicy'/>
+<string_constant name='kDSStdAuthNodeNativeClearTextOK' value='dsAuthMethodStandard:dsAuthNodeNativeCanUseClearText'/>
+<string_constant name='kDSStdAuthNodeNativeNoClearText' value='dsAuthMethodStandard:dsAuthNodeNativeCannotUseClearText'/>
+<string_constant name='kDSStdAuthReadSecureHash' value='dsAuthMethodStandard:dsAuthReadSecureHash'/>
+<string_constant name='kDSStdAuthSMBNTv2UserSessionKey' value='dsAuthMethodStandard:dsSMBNTv2UserSessionKey'/>
+<string_constant name='kDSStdAuthSMBWorkstationCredentialSessionKey' value='dsAuthMethodStandard:dsAuthSMBWorkstationCredentialSessionKey'/>
+<string_constant name='kDSStdAuthSMB_LM_Key' value='dsAuthMethodStandard:dsAuthSMBLMKey'/>
+<string_constant name='kDSStdAuthSMB_NT_Key' value='dsAuthMethodStandard:dsAuthSMBNTKey'/>
+<string_constant name='kDSStdAuthSMB_NT_UserSessionKey' value='dsAuthMethodStandard:dsAuthSMBNTUserSessionKey'/>
+<string_constant name='kDSStdAuthSMB_NT_WithUserSessionKey' value='dsAuthMethodStandard:dsAuthNTWithSessionKey'/>
+<string_constant name='kDSStdAuthSecureHash' value='dsAuthMethodStandard:dsAuthSecureHash'/>
+<string_constant name='kDSStdAuthSetGlobalPolicy' value='dsAuthMethodStandard:dsAuthSetGlobalPolicy'/>
+<string_constant name='kDSStdAuthSetLMHash' value='dsAuthMethodStandard:dsAuthSetLMHash'/>
+<string_constant name='kDSStdAuthSetNTHash' value='dsAuthMethodStandard:dsAuthSetNTHash'/>
+<string_constant name='kDSStdAuthSetPasswd' value='dsAuthMethodStandard:dsAuthSetPasswd'/>
+<string_constant name='kDSStdAuthSetPasswdAsRoot' value='dsAuthMethodStandard:dsAuthSetPasswdAsRoot'/>
+<string_constant name='kDSStdAuthSetPolicy' value='dsAuthMethodStandard:dsAuthSetPolicy'/>
+<string_constant name='kDSStdAuthSetPolicyAsRoot' value='dsAuthMethodStandard:dsAuthSetPolicyAsRoot'/>
+<string_constant name='kDSStdAuthSetUserData' value='dsAuthMethodStandard:dsAuthSetUserData'/>
+<string_constant name='kDSStdAuthSetUserName' value='dsAuthMethodStandard:dsAuthSetUserName'/>
+<string_constant name='kDSStdAuthSetWorkstationPasswd' value='dsAuthMethodStandard:dsAuthSetWorkstationPasswd'/>
+<string_constant name='kDSStdAuthWithAuthorizationRef' value='dsAuthMethodStandard:dsAuthWithAuthorizationRef'/>
+<string_constant name='kDSStdAuthWriteSecureHash' value='dsAuthMethodStandard:dsAuthWriteSecureHash'/>
+<string_constant name='kDSStdMachDSLookupPortName' value='com.apple.system.DirectoryService.libinfo_v1'/>
+<string_constant name='kDSStdMachDebugPortName' value='com.apple.DirectoryServiceDebug'/>
+<string_constant name='kDSStdMachLocalPortName' value='com.apple.DirectoryService.localonly'/>
+<string_constant name='kDSStdMachPortName' value='com.apple.DirectoryService'/>
+<string_constant name='kDSStdRecordTypMounts' value='dsRecTypeStandard:Mounts'/>
+<string_constant name='kDSStdRecordTypProtocols' value='dsRecTypeStandard:Protocols'/>
+<string_constant name='kDSStdRecordTypRPC' value='dsRecTypeStandard:RPC'/>
+<string_constant name='kDSStdRecordTypeAFPServer' value='dsRecTypeStandard:AFPServer'/>
+<string_constant name='kDSStdRecordTypeAFPUserAliases' value='dsRecTypeStandard:AFPUserAliases'/>
+<string_constant name='kDSStdRecordTypeAccessControls' value='dsRecTypeStandard:AccessControls'/>
+<string_constant name='kDSStdRecordTypeAliases' value='dsRecTypeStandard:Aliases'/>
+<string_constant name='kDSStdRecordTypeAll' value='dsRecTypeStandard:All'/>
+<string_constant name='kDSStdRecordTypeAttributeTypes' value='dsRecTypeStandard:AttributeTypes'/>
+<string_constant name='kDSStdRecordTypeAugments' value='dsRecTypeStandard:Augments'/>
+<string_constant name='kDSStdRecordTypeAutoServerSetup' value='dsRecTypeStandard:AutoServerSetup'/>
+<string_constant name='kDSStdRecordTypeAutomount' value='dsRecTypeStandard:Automount'/>
+<string_constant name='kDSStdRecordTypeAutomountMap' value='dsRecTypeStandard:AutomountMap'/>
+<string_constant name='kDSStdRecordTypeBootp' value='dsRecTypeStandard:Bootp'/>
+<string_constant name='kDSStdRecordTypeCertificateAuthorities' value='dsRecTypeStandard:CertificateAuthorities'/>
+<string_constant name='kDSStdRecordTypeComputerGroups' value='dsRecTypeStandard:ComputerGroups'/>
+<string_constant name='kDSStdRecordTypeComputerLists' value='dsRecTypeStandard:ComputerLists'/>
+<string_constant name='kDSStdRecordTypeComputers' value='dsRecTypeStandard:Computers'/>
+<string_constant name='kDSStdRecordTypeConfig' value='dsRecTypeStandard:Config'/>
+<string_constant name='kDSStdRecordTypeEthernets' value='dsRecTypeStandard:Ethernets'/>
+<string_constant name='kDSStdRecordTypeFTPServer' value='dsRecTypeStandard:FTPServer'/>
+<string_constant name='kDSStdRecordTypeFileMakerServers' value='dsRecTypeStandard:FileMakerServers'/>
+<string_constant name='kDSStdRecordTypeGroupAliases' value='dsRecTypeStandard:GroupAliases'/>
+<string_constant name='kDSStdRecordTypeGroups' value='dsRecTypeStandard:Groups'/>
+<string_constant name='kDSStdRecordTypeHostServices' value='dsRecTypeStandard:HostServices'/>
+<string_constant name='kDSStdRecordTypeHosts' value='dsRecTypeStandard:Hosts'/>
+<string_constant name='kDSStdRecordTypeLDAPServer' value='dsRecTypeStandard:LDAPServer'/>
+<string_constant name='kDSStdRecordTypeLocations' value='dsRecTypeStandard:Locations'/>
+<string_constant name='kDSStdRecordTypeMachines' value='dsRecTypeStandard:Machines'/>
+<string_constant name='kDSStdRecordTypeMeta' value='dsRecTypeStandard:AppleMetaRecord'/>
+<string_constant name='kDSStdRecordTypeMounts' value='dsRecTypeStandard:Mounts'/>
+<string_constant name='kDSStdRecordTypeNFS' value='dsRecTypeStandard:NFS'/>
+<string_constant name='kDSStdRecordTypeNeighborhoods' value='dsRecTypeStandard:Neighborhoods'/>
+<string_constant name='kDSStdRecordTypeNetDomains' value='dsRecTypeStandard:NetDomains'/>
+<string_constant name='kDSStdRecordTypeNetGroups' value='dsRecTypeStandard:NetGroups'/>
+<string_constant name='kDSStdRecordTypeNetworks' value='dsRecTypeStandard:Networks'/>
+<string_constant name='kDSStdRecordTypePasswordServer' value='dsRecTypeStandard:PasswordServer'/>
+<string_constant name='kDSStdRecordTypePeople' value='dsRecTypeStandard:People'/>
+<string_constant name='kDSStdRecordTypePlugins' value='dsRecTypeStandard:Plugins'/>
+<string_constant name='kDSStdRecordTypePrefix' value='dsRecTypeStandard:'/>
+<string_constant name='kDSStdRecordTypePresetComputerGroups' value='dsRecTypeStandard:PresetComputerGroups'/>
+<string_constant name='kDSStdRecordTypePresetComputerLists' value='dsRecTypeStandard:PresetComputerLists'/>
+<string_constant name='kDSStdRecordTypePresetComputers' value='dsRecTypeStandard:PresetComputers'/>
+<string_constant name='kDSStdRecordTypePresetGroups' value='dsRecTypeStandard:PresetGroups'/>
+<string_constant name='kDSStdRecordTypePresetUsers' value='dsRecTypeStandard:PresetUsers'/>
+<string_constant name='kDSStdRecordTypePrintService' value='dsRecTypeStandard:PrintService'/>
+<string_constant name='kDSStdRecordTypePrintServiceUser' value='dsRecTypeStandard:PrintServiceUser'/>
+<string_constant name='kDSStdRecordTypePrinters' value='dsRecTypeStandard:Printers'/>
+<string_constant name='kDSStdRecordTypeProtocols' value='dsRecTypeStandard:Protocols'/>
+<string_constant name='kDSStdRecordTypeQTSServer' value='dsRecTypeStandard:QTSServer'/>
+<string_constant name='kDSStdRecordTypeRPC' value='dsRecTypeStandard:RPC'/>
+<string_constant name='kDSStdRecordTypeRecordTypes' value='dsRecTypeStandard:RecordTypes'/>
+<string_constant name='kDSStdRecordTypeRefTableEntries' value='dsRecTypeStandard:RefTableEntries'/>
+<string_constant name='kDSStdRecordTypeResources' value='dsRecTypeStandard:Resources'/>
+<string_constant name='kDSStdRecordTypeSMBServer' value='dsRecTypeStandard:SMBServer'/>
+<string_constant name='kDSStdRecordTypeServer' value='dsRecTypeStandard:Server'/>
+<string_constant name='kDSStdRecordTypeServices' value='dsRecTypeStandard:Services'/>
+<string_constant name='kDSStdRecordTypeSharePoints' value='dsRecTypeStandard:SharePoints'/>
+<string_constant name='kDSStdRecordTypeUserAliases' value='dsRecTypeStandard:UserAliases'/>
+<string_constant name='kDSStdRecordTypeUsers' value='dsRecTypeStandard:Users'/>
+<string_constant name='kDSStdRecordTypeWebServer' value='dsRecTypeStandard:WebServer'/>
+<string_constant name='kDSStdUserNamesMeta' value='dsRecTypeStandard:MetaUserNames'/>
+<string_constant name='kDSTagAuthAuthorityBasic' value='basic'/>
+<string_constant name='kDSTagAuthAuthorityBetterHashOnly' value='BetterHashOnly'/>
+<string_constant name='kDSTagAuthAuthorityDisabledUser' value='DisabledUser'/>
+<string_constant name='kDSTagAuthAuthorityKerberosv5' value='Kerberosv5'/>
+<string_constant name='kDSTagAuthAuthorityLocalCachedUser' value='LocalCachedUser'/>
+<string_constant name='kDSTagAuthAuthorityLocalWindowsHash' value='LocalWindowsHash'/>
+<string_constant name='kDSTagAuthAuthorityPasswordServer' value='ApplePasswordServer'/>
+<string_constant name='kDSTagAuthAuthorityShadowHash' value='ShadowHash'/>
+<string_constant name='kDSValueAuthAuthorityBasic' value=';basic;'/>
+<string_constant name='kDSValueAuthAuthorityDefault' value=';basic;'/>
+<string_constant name='kDSValueAuthAuthorityDisabledUser' value=';DisabledUser;'/>
+<string_constant name='kDSValueAuthAuthorityKerberosv5' value=';Kerberosv5;'/>
+<string_constant name='kDSValueAuthAuthorityLocalCachedUser' value=';LocalCachedUser;'/>
+<string_constant name='kDSValueAuthAuthorityLocalWindowsHash' value=';LocalWindowsHash;'/>
+<string_constant name='kDSValueAuthAuthorityPasswordServerPrefix' value=';ApplePasswordServer;'/>
+<string_constant name='kDSValueAuthAuthorityShadowHash' value=';ShadowHash;'/>
+<string_constant name='kDSValueNSLDynamicNeighborhoodType' value='NSLDynamicNeighborhoodType'/>
+<string_constant name='kDSValueNSLLocalNeighborhoodType' value='NSLLocalNeighborhoodType'/>
+<string_constant name='kDSValueNSLStaticNeighborhoodType' value='NSLStaticNeighborhoodType'/>
+<string_constant name='kDSValueNSLTopLevelNeighborhoodType' value='NSLTopLevelNeighborhoodType'/>
+<string_constant name='kDSValueNonCryptPasswordMarker' value='********'/>
+<string_constant name='kStandardSourceAlias' value='dsAttrTypeStandard:AppleMetaAliasSource'/>
+<string_constant name='kStandardTargetAlias' value='dsAttrTypeStandard:AppleMetaAliasTarget'/>
+<enum name='DSPROXY' value='1'/>
+<enum name='dDSBeginPlugInCustom' value='12288'/>
+<enum name='eCFBndleGetInfoDictErr' value='-14454'/>
+<enum name='eCFDictGetValueErr' value='-14456'/>
+<enum name='eCFMGetFileSysRepErr' value='-14450'/>
+<enum name='eCFPlugInGetBundleErr' value='-14452'/>
+<enum name='eDSAllocationFailed' value='-14050'/>
+<enum name='eDSAnyMatch' value='1'/>
+<enum name='eDSAttrListError' value='-14264'/>
+<enum name='eDSAttributeDoesNotExist' value='-14137'/>
+<enum name='eDSAttributeNotFound' value='-14134'/>
+<enum name='eDSAttributeValueNotFound' value='-14143'/>
+<enum name='eDSAuthAccountDisabled' value='-14167'/>
+<enum name='eDSAuthAccountExpired' value='-14168'/>
+<enum name='eDSAuthAccountInactive' value='-14169'/>
+<enum name='eDSAuthBadPassword' value='-14096'/>
+<enum name='eDSAuthCannotRecoverPasswd' value='-14100'/>
+<enum name='eDSAuthContinueDataBad' value='-14097'/>
+<enum name='eDSAuthFailed' value='-14090'/>
+<enum name='eDSAuthFailedClearTextOnly' value='-14101'/>
+<enum name='eDSAuthInBuffFormatError' value='-14094'/>
+<enum name='eDSAuthInvalidComputer' value='-14176'/>
+<enum name='eDSAuthInvalidLogonHours' value='-14175'/>
+<enum name='eDSAuthInvalidUserName' value='-14099'/>
+<enum name='eDSAuthMasterUnreachable' value='-14177'/>
+<enum name='eDSAuthMethodNotSupported' value='-14091'/>
+<enum name='eDSAuthNewPasswordRequired' value='-14161'/>
+<enum name='eDSAuthNoAuthServerFound' value='-14102'/>
+<enum name='eDSAuthNoSuchEntity' value='-14095'/>
+<enum name='eDSAuthParameterError' value='-14093'/>
+<enum name='eDSAuthPasswordChangeTooSoon' value='-14174'/>
+<enum name='eDSAuthPasswordExpired' value='-14162'/>
+<enum name='eDSAuthPasswordNeedsDigit' value='-14173'/>
+<enum name='eDSAuthPasswordNeedsLetter' value='-14172'/>
+<enum name='eDSAuthPasswordQualityCheckFailed' value='-14165'/>
+<enum name='eDSAuthPasswordTooLong' value='-14171'/>
+<enum name='eDSAuthPasswordTooShort' value='-14170'/>
+<enum name='eDSAuthResponseBufTooSmall' value='-14092'/>
+<enum name='eDSAuthServerError' value='-14103'/>
+<enum name='eDSAuthUnknownUser' value='-14098'/>
+<enum name='eDSAuthenticationFailed' value='-14481'/>
+<enum name='eDSAuthenticationSearchNodeName' value='8705'/>
+<enum name='eDSBadContextData' value='-14105'/>
+<enum name='eDSBadDataNodeFormat' value='-14256'/>
+<enum name='eDSBadDataNodeLength' value='-14255'/>
+<enum name='eDSBadDirRefences' value='-14003'/>
+<enum name='eDSBadPacket' value='-14475'/>
+<enum name='eDSBadSourceDataNode' value='-14257'/>
+<enum name='eDSBadTargetDataNode' value='-14258'/>
+<enum name='eDSBeginAppleReserve1' value='2'/>
+<enum name='eDSBeginAppleReserve2' value='20480'/>
+<enum name='eDSBogusServer' value='-14482'/>
+<enum name='eDSBufferTooSmall' value='-14260'/>
+<enum name='eDSCacheNodeName' value='8711'/>
+<enum name='eDSCannotAccessSession' value='-14006'/>
+<enum name='eDSCloseFailed' value='-14001'/>
+<enum name='eDSCompoundExpression' value='8203'/>
+<enum name='eDSConfigNodeName' value='8706'/>
+<enum name='eDSContactMaster' value='-14486'/>
+<enum name='eDSContactsSearchNodeName' value='8708'/>
+<enum name='eDSContains' value='8196'/>
+<enum name='eDSContinue' value='-14471'/>
+<enum name='eDSCorruptBuffer' value='-14060'/>
+<enum name='eDSCorruptRecEntryData' value='-14065'/>
+<enum name='eDSCustomBlockFailed' value='-14052'/>
+<enum name='eDSCustomUnblockFailed' value='-14053'/>
+<enum name='eDSCustomYieldFailed' value='-14054'/>
+<enum name='eDSDeAllocateFailed' value='-14051'/>
+<enum name='eDSDefaultNetworkNodes' value='8710'/>
+<enum name='eDSDirSrvcNotOpened' value='-14007'/>
+<enum name='eDSEmptyAttribute' value='-14240'/>
+<enum name='eDSEmptyAttributeRequestList' value='-14244'/>
+<enum name='eDSEmptyAttributeType' value='-14241'/>
+<enum name='eDSEmptyAttributeTypeList' value='-14242'/>
+<enum name='eDSEmptyAttributeValue' value='-14243'/>
+<enum name='eDSEmptyAuthMethod' value='-14247'/>
+<enum name='eDSEmptyAuthStepData' value='-14248'/>
+<enum name='eDSEmptyAuthStepDataResp' value='-14249'/>
+<enum name='eDSEmptyBuffer' value='-14231'/>
+<enum name='eDSEmptyDataList' value='-14245'/>
+<enum name='eDSEmptyNodeInfoTypeList' value='-14246'/>
+<enum name='eDSEmptyNodeName' value='-14232'/>
+<enum name='eDSEmptyNodeNamePattern' value='-14239'/>
+<enum name='eDSEmptyParameter' value='-14230'/>
+<enum name='eDSEmptyPattern2Match' value='-14250'/>
+<enum name='eDSEmptyPatternMatch' value='-14238'/>
+<enum name='eDSEmptyRecordEntry' value='-14237'/>
+<enum name='eDSEmptyRecordName' value='-14233'/>
+<enum name='eDSEmptyRecordNameList' value='-14234'/>
+<enum name='eDSEmptyRecordType' value='-14235'/>
+<enum name='eDSEmptyRecordTypeList' value='-14236'/>
+<enum name='eDSEndAppleReserve1' value='8191'/>
+<enum name='eDSEndAppleReserve2' value='65534'/>
+<enum name='eDSEndPlugInCustom' value='20479'/>
+<enum name='eDSEndsWith' value='8195'/>
+<enum name='eDSExact' value='8193'/>
+<enum name='eDSGetCustomFailed' value='-14011'/>
+<enum name='eDSGreaterEqual' value='8200'/>
+<enum name='eDSGreaterThan' value='8198'/>
+<enum name='eDSIPUnreachable' value='-14353'/>
+<enum name='eDSIndexNotFound' value='-14063'/>
+<enum name='eDSIndexOutOfRange' value='-14062'/>
+<enum name='eDSInvalDataList' value='-14263'/>
+<enum name='eDSInvalidAttrListRef' value='-14076'/>
+<enum name='eDSInvalidAttrValueRef' value='-14077'/>
+<enum name='eDSInvalidAttributeType' value='-14131'/>
+<enum name='eDSInvalidBuffFormat' value='-14079'/>
+<enum name='eDSInvalidContext' value='-14104'/>
+<enum name='eDSInvalidContinueData' value='-14078'/>
+<enum name='eDSInvalidDirRef' value='-14073'/>
+<enum name='eDSInvalidDomain' value='-14122'/>
+<enum name='eDSInvalidFilePath' value='-14488'/>
+<enum name='eDSInvalidHandle' value='-14472'/>
+<enum name='eDSInvalidIndex' value='-14061'/>
+<enum name='eDSInvalidName' value='-14478'/>
+<enum name='eDSInvalidNativeMapping' value='-14141'/>
+<enum name='eDSInvalidNodeRef' value='-14074'/>
+<enum name='eDSInvalidPatternMatchType' value='-14080'/>
+<enum name='eDSInvalidPlugInConfigData' value='-14151'/>
+<enum name='eDSInvalidRecordName' value='-14133'/>
+<enum name='eDSInvalidRecordRef' value='-14075'/>
+<enum name='eDSInvalidRecordType' value='-14130'/>
+<enum name='eDSInvalidRefType' value='-14072'/>
+<enum name='eDSInvalidReference' value='-14071'/>
+<enum name='eDSInvalidSession' value='-14477'/>
+<enum name='eDSInvalidTag' value='-14476'/>
+<enum name='eDSLastValue' value='-14999'/>
+<enum name='eDSLessEqual' value='8199'/>
+<enum name='eDSLessThan' value='8197'/>
+<enum name='eDSLocalDSDaemonInUse' value='-14015'/>
+<enum name='eDSLocalHostedNodes' value='8707'/>
+<enum name='eDSLocalNodeNames' value='8704'/>
+<enum name='eDSMaxSessionsOpen' value='-14005'/>
+<enum name='eDSNetInfoError' value='-14485'/>
+<enum name='eDSNetworkSearchNodeName' value='8709'/>
+<enum name='eDSNoErr' value='0'/>
+<enum name='eDSNoMatch1' value='0'/>
+<enum name='eDSNoMatch2' value='65535'/>
+<enum name='eDSNoStdMappingAvailable' value='-14140'/>
+<enum name='eDSNodeNotFound' value='-14008'/>
+<enum name='eDSNormalDSDaemonInUse' value='-14016'/>
+<enum name='eDSNotAuthorized' value='-14484'/>
+<enum name='eDSNullAttribute' value='-14208'/>
+<enum name='eDSNullAttributeAccess' value='-14209'/>
+<enum name='eDSNullAttributeControlPtr' value='-14213'/>
+<enum name='eDSNullAttributeRequestList' value='-14214'/>
+<enum name='eDSNullAttributeType' value='-14211'/>
+<enum name='eDSNullAttributeTypeList' value='-14212'/>
+<enum name='eDSNullAttributeValue' value='-14210'/>
+<enum name='eDSNullAutMethod' value='-14217'/>
+<enum name='eDSNullAuthStepData' value='-14218'/>
+<enum name='eDSNullAuthStepDataResp' value='-14219'/>
+<enum name='eDSNullDataBuff' value='-14201'/>
+<enum name='eDSNullDataList' value='-14215'/>
+<enum name='eDSNullDirNodeTypeList' value='-14216'/>
+<enum name='eDSNullNodeInfoTypeList' value='-14220'/>
+<enum name='eDSNullNodeName' value='-14202'/>
+<enum name='eDSNullNodeNamePattern' value='-14222'/>
+<enum name='eDSNullParameter' value='-14200'/>
+<enum name='eDSNullPatternMatch' value='-14221'/>
+<enum name='eDSNullRecEntryPtr' value='-14203'/>
+<enum name='eDSNullRecName' value='-14204'/>
+<enum name='eDSNullRecNameList' value='-14205'/>
+<enum name='eDSNullRecType' value='-14206'/>
+<enum name='eDSNullRecTypeList' value='-14207'/>
+<enum name='eDSNullRecordReference' value='-14004'/>
+<enum name='eDSNullTargetArgument' value='-14223'/>
+<enum name='eDSOpenFailed' value='-14000'/>
+<enum name='eDSOpenNodeFailed' value='-14002'/>
+<enum name='eDSOperationFailed' value='-14483'/>
+<enum name='eDSOperationTimeout' value='-14489'/>
+<enum name='eDSPermissionError' value='-14120'/>
+<enum name='eDSPlugInConfigFileError' value='-14150'/>
+<enum name='eDSReadOnly' value='-14121'/>
+<enum name='eDSReceiveFailed' value='-14474'/>
+<enum name='eDSRecordAlreadyExists' value='-14135'/>
+<enum name='eDSRecordNotFound' value='-14136'/>
+<enum name='eDSRecordTypeDisabled' value='-14138'/>
+<enum name='eDSRefSpaceFull' value='-14069'/>
+<enum name='eDSRefTableAllocError' value='-14070'/>
+<enum name='eDSRefTableCSBPAllocError' value='-14085'/>
+<enum name='eDSRefTableEntryNilError' value='-14084'/>
+<enum name='eDSRefTableError' value='-14081'/>
+<enum name='eDSRefTableFWAllocError' value='-14086'/>
+<enum name='eDSRefTableIndexOutOfBoundsError' value='-14083'/>
+<enum name='eDSRefTableNilError' value='-14082'/>
+<enum name='eDSRegisterCustomFailed' value='-14010'/>
+<enum name='eDSRegularExpression' value='8202'/>
+<enum name='eDSSchemaError' value='-14142'/>
+<enum name='eDSSearchNodeName' value='8705'/>
+<enum name='eDSSendFailed' value='-14473'/>
+<enum name='eDSServerTimeout' value='-14470'/>
+<enum name='eDSServiceUnavailable' value='-14487'/>
+<enum name='eDSStartsWith' value='8194'/>
+<enum name='eDSTCPReceiveError' value='-14351'/>
+<enum name='eDSTCPSendError' value='-14350'/>
+<enum name='eDSTCPVersionMismatch' value='-14352'/>
+<enum name='eDSUnRegisterFailed' value='-14012'/>
+<enum name='eDSUnSupportedMatchType' value='-14262'/>
+<enum name='eDSUnknownHost' value='-14354'/>
+<enum name='eDSUnknownMatchType' value='-14261'/>
+<enum name='eDSUnknownNodeName' value='-14009'/>
+<enum name='eDSUnrecoverablePassword' value='-14480'/>
+<enum name='eDSUserUnknown' value='-14479'/>
+<enum name='eDSVersionMismatch' value='-14149'/>
+<enum name='eDSWildCardPattern' value='8201'/>
+<enum name='eDSiCompoundExpression' value='8459'/>
+<enum name='eDSiContains' value='8452'/>
+<enum name='eDSiEndsWith' value='8451'/>
+<enum name='eDSiExact' value='8449'/>
+<enum name='eDSiGreaterEqual' value='8456'/>
+<enum name='eDSiGreaterThan' value='8454'/>
+<enum name='eDSiLessEqual' value='8455'/>
+<enum name='eDSiLessThan' value='8453'/>
+<enum name='eDSiRegularExpression' value='8458'/>
+<enum name='eDSiStartsWith' value='8450'/>
+<enum name='eDSiWildCardPattern' value='8457'/>
+<enum name='eDataReceiveErr_NoAttrCount' value='-14957'/>
+<enum name='eDataReceiveErr_NoAttrEntry' value='-14954'/>
+<enum name='eDataReceiveErr_NoAttrListRef' value='-14952'/>
+<enum name='eDataReceiveErr_NoAttrValueEntry' value='-14955'/>
+<enum name='eDataReceiveErr_NoAttrValueListRef' value='-14953'/>
+<enum name='eDataReceiveErr_NoContinueData' value='-14962'/>
+<enum name='eDataReceiveErr_NoDataBuff' value='-14961'/>
+<enum name='eDataReceiveErr_NoDirRef' value='-14950'/>
+<enum name='eDataReceiveErr_NoNodeChangeToken' value='-14963'/>
+<enum name='eDataReceiveErr_NoNodeCount' value='-14956'/>
+<enum name='eDataReceiveErr_NoRecEntry' value='-14958'/>
+<enum name='eDataReceiveErr_NoRecEntryCount' value='-14959'/>
+<enum name='eDataReceiveErr_NoRecMatchCount' value='-14960'/>
+<enum name='eDataReceiveErr_NoRecRef' value='-14951'/>
+<enum name='eFWGetDirNodeNameErr1' value='-14501'/>
+<enum name='eFWGetDirNodeNameErr2' value='-14502'/>
+<enum name='eFWGetDirNodeNameErr3' value='-14503'/>
+<enum name='eFWGetDirNodeNameErr4' value='-14504'/>
+<enum name='eIPCReceiveError' value='-14331'/>
+<enum name='eIPCSendError' value='-14330'/>
+<enum name='eMemoryAllocError' value='-14901'/>
+<enum name='eMemoryError' value='-14900'/>
+<enum name='eNetInfoError' value='-14123'/>
+<enum name='eNoLongerSupported' value='-14986'/>
+<enum name='eNoPluginFactoriesFound' value='-14410'/>
+<enum name='eNoPluginsLoaded' value='-14402'/>
+<enum name='eNoSearchNodesFound' value='-14290'/>
+<enum name='eNotHandledByThisNode' value='-14292'/>
+<enum name='eNotYetImplemented' value='-14988'/>
+<enum name='eParameterError' value='-14915'/>
+<enum name='eParameterReceiveError' value='-14720'/>
+<enum name='eParameterSendError' value='-14700'/>
+<enum name='ePlugInCallTimedOut' value='-14280'/>
+<enum name='ePlugInDataError' value='-14274'/>
+<enum name='ePlugInError' value='-14276'/>
+<enum name='ePlugInFailedToInitialize' value='-14279'/>
+<enum name='ePlugInInitError' value='-14277'/>
+<enum name='ePlugInNotActive' value='-14278'/>
+<enum name='ePlugInNotFound' value='-14275'/>
+<enum name='ePluginAlreadyLoaded' value='-14404'/>
+<enum name='ePluginConfigAvailNotFound' value='-14412'/>
+<enum name='ePluginConfigFileNotFound' value='-14414'/>
+<enum name='ePluginHandlerNotLoaded' value='-14400'/>
+<enum name='ePluginNameNotFound' value='-14408'/>
+<enum name='ePluginVersionNotFound' value='-14406'/>
+<enum name='eSearchPathNotDefined' value='-14291'/>
+<enum name='eServerError' value='-14910'/>
+<enum name='eServerNotRunning' value='-14270'/>
+<enum name='eServerReceiveError' value='-14760'/>
+<enum name='eServerReplyError' value='-14332'/>
+<enum name='eServerSendError' value='-14740'/>
+<enum name='eUndefinedError' value='-14987'/>
+<enum name='eUnknownAPICall' value='-14271'/>
+<enum name='eUnknownPlugIn' value='-14273'/>
+<enum name='eUnknownServerError' value='-14272'/>
+<function name='dsAddAttribute'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='^{_tAccessControlEntryPtr=IIIII}' type_modifier='n'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsAddAttributeValue'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsAddChildPIDToReference'>
+<arg type64='I' type='L'/>
+<arg type64='i' type='l'/>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='dsAllocAttributeValueEntry'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v' type_modifier='n'/>
+<arg type64='I' type='L'/>
+<retval type='^{_tAttributeValueEntryPtr=I{?=II[1c]}}'/>
+</function>
+<function name='dsAllocStringsFromList'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataList=I^{?}}' type_modifier='n'/>
+<retval type='^*'/>
+</function>
+<function name='dsAppendAuthBuffer' variadic='true'>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='N'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsAppendAuthBufferWithAuthorityAttribute'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='n'/>
+<arg type='^{_tAttributeEntryPtr=I{?=IIIII}III{?=II[1c]}}' type_modifier='n'/>
+<arg type64='I' type='L'/>
+<arg type='*'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='N'/>
+<retval type='i'/>
+</function>
+<function name='dsAppendAuthBufferWithAuthorityStrings'>
+<arg type='*'/>
+<arg type='^*' type_modifier='n' c_array_delimited_by_null='true'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='N'/>
+<retval type='i'/>
+</function>
+<function name='dsAppendStringToList'>
+<arg type='^{_tDataListPtr=I^{?}}'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='dsAppendStringToListAlloc'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='dsBuildFromPath'>
+<arg type64='I' type='L'/>
+<arg type='*'/>
+<arg type='*'/>
+<retval type='^{_tDataListPtr=I^{?}}'/>
+</function>
+<function name='dsBuildListFromNodes' variadic='true'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}'/>
+<retval type='^{_tDataListPtr=I^{?}}'/>
+</function>
+<function name='dsBuildListFromNodesAlloc' variadic='true'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsBuildListFromPathAlloc'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='*'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='dsBuildListFromStrings' variadic='true'>
+<arg type64='I' type='L'/>
+<arg type='*'/>
+<retval type='^{_tDataListPtr=I^{?}}'/>
+</function>
+<function name='dsBuildListFromStringsAlloc' variadic='true'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='dsBuildListFromStringsAllocV'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataList=I^{?}}' type_modifier='n'/>
+<arg type='*'/>
+<arg type64='^{__va_list_tag=II^v^v}' type='*'/>
+<retval type='i'/>
+</function>
+<function name='dsCloseAttributeList'>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='dsCloseAttributeValueList'>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='dsCloseDirNode'>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='dsCloseDirService'>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='dsCloseRecord'>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='dsCopyDirStatusName'>
+<arg type64='i' type='l'/>
+<retval type='*'/>
+</function>
+<function name='dsCreateRecord'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsCreateRecordAndOpen'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='^I' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsDataBufferAllocate'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<retval type='^{_tDataBufferPtr=II[1c]}'/>
+</function>
+<function name='dsDataBufferDeAllocate'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsDataListAllocate'>
+<arg type64='I' type='L'/>
+<retval type='^{_tDataListPtr=I^{?}}'/>
+</function>
+<function name='dsDataListCopyList'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataList=I^{?}}' type_modifier='n'/>
+<retval type='^{_tDataListPtr=I^{?}}'/>
+</function>
+<function name='dsDataListDeAllocate'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='dsDataListDeallocate'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsDataListDeleteThisNode'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='dsDataListGetNode'>
+<arg type='^{_tDataListPtr=I^{?}}'/>
+<arg type64='I' type='L'/>
+<arg type='^^{?}'/>
+<retval type='i'/>
+</function>
+<function name='dsDataListGetNodeAlloc'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataList=I^{?}}' type_modifier='n'/>
+<arg type64='I' type='L'/>
+<arg type='^^{?}' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsDataListGetNodeCount'>
+<arg type='^{_tDataList=I^{?}}' type_modifier='n'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='dsDataListInsertAfter'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='dsDataListInsertNode'>
+<arg type='^{_tDataListPtr=I^{?}}'/>
+<arg type='^{_tDataNodePtr=II[1c]}'/>
+<arg type='^{_tDataNodePtr=II[1c]}'/>
+<retval type='i'/>
+</function>
+<function name='dsDataListMergeList'>
+<arg type='^{_tDataListPtr=I^{?}}'/>
+<arg type='^{_tDataNodePtr=II[1c]}'/>
+<arg type='^{_tDataListPtr=I^{?}}'/>
+<retval type='i'/>
+</function>
+<function name='dsDataListMergeListAfter'>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='dsDataListRemoveNodes'>
+<arg type='^{_tDataListPtr=I^{?}}'/>
+<arg type='^{_tDataNodePtr=II[1c]}'/>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='dsDataListRemoveThisNode'>
+<arg type='^{_tDataListPtr=I^{?}}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='dsDataNodeAllocateBlock'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v' type_modifier='n'/>
+<retval type='^{_tDataNodePtr=II[1c]}'/>
+</function>
+<function name='dsDataNodeAllocateString'>
+<arg type64='I' type='L'/>
+<arg type='*'/>
+<retval type='^{_tDataNodePtr=II[1c]}'/>
+</function>
+<function name='dsDataNodeDeAllocate'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsDataNodeGetLength'>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='dsDataNodeGetSize'>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='dsDataNodeSetLength'>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='dsDeallocAttributeEntry'>
+<arg type64='I' type='L'/>
+<arg type='^{_tAttributeEntryPtr=I{?=IIIII}III{?=II[1c]}}' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsDeallocAttributeValueEntry'>
+<arg type64='I' type='L'/>
+<arg type='^{_tAttributeValueEntryPtr=I{?=II[1c]}}' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsDeallocRecordEntry'>
+<arg type64='I' type='L'/>
+<arg type='^{_tRecordEntryPtr=I{?=IIIII}I{?=II[1c]}}' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsDeleteRecord'>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='dsDoAttributeValueSearch'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='n'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='i'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='^I' type_modifier='n'/>
+<arg type='^I' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsDoAttributeValueSearchWithData'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='n'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='i'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='i'/>
+<arg type='^I' type_modifier='n'/>
+<arg type='^I' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsDoDirNodeAuth'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='i'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='n'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='o'/>
+<arg type='^I' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsDoDirNodeAuthOnRecordType'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='i'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='n'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='o'/>
+<arg type='^I' type_modifier='N'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsDoMultipleAttributeValueSearch'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='N'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='i'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='^I' type_modifier='N'/>
+<arg type='^I' type_modifier='N'/>
+<retval type='i'/>
+</function>
+<function name='dsDoMultipleAttributeValueSearchWithData'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='N'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='i'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='i'/>
+<arg type='^I' type_modifier='N'/>
+<arg type='^I' type_modifier='N'/>
+<retval type='i'/>
+</function>
+<function name='dsDoPlugInCustomCall'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='n'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsFillAuthBuffer' variadic='true'>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='N'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsFindDirNodes'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='N'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='i'/>
+<arg type='^I' type_modifier='n'/>
+<arg type='^I' type_modifier='N'/>
+<retval type='i'/>
+</function>
+<function name='dsFlushRecord'>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='dsGetAttributeEntry'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='N'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^I' type_modifier='o'/>
+<arg type='^^{?}' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsGetAttributeValue'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='N'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^^{?}' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsGetCustomAllocate'>
+<arg type64='I' type='L'/>
+<arg type='^^?'/>
+<arg type='^^?'/>
+<arg type='^^v'/>
+<retval type='i'/>
+</function>
+<function name='dsGetCustomThread'>
+<arg type64='I' type='L'/>
+<arg type='^^?'/>
+<arg type='^^?'/>
+<arg type='^^?'/>
+<arg type='^^v'/>
+<retval type='i'/>
+</function>
+<function name='dsGetDataLength'>
+<arg type='^{_tDataList=I^{?}}' type_modifier='n'/>
+<retval type64='I' type='L'/>
+</function>
+<function name='dsGetDirNodeCount'>
+<arg type64='I' type='L'/>
+<arg type='^I' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsGetDirNodeCountWithInfo'>
+<arg type64='I' type='L'/>
+<arg type='^I' type_modifier='o'/>
+<arg type='^I' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsGetDirNodeInfo'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='N'/>
+<arg type='i'/>
+<arg type='^I' type_modifier='o'/>
+<arg type='^I' type_modifier='o'/>
+<arg type='^I' type_modifier='N'/>
+<retval type='i'/>
+</function>
+<function name='dsGetDirNodeList'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='N'/>
+<arg type='^I' type_modifier='o'/>
+<arg type='^I' type_modifier='N'/>
+<retval type='i'/>
+</function>
+<function name='dsGetDirNodeName'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='N'/>
+<arg type64='I' type='L'/>
+<arg type='^^{?}' type_modifier='N'/>
+<retval type='i'/>
+</function>
+<function name='dsGetNextAttributeEntry'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='N'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^i' type_modifier='N'/>
+<arg type='^I' type_modifier='o'/>
+<arg type='^^{?}' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsGetNextAttributeValue'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='N'/>
+<arg type64='I' type='L'/>
+<arg type='^i' type_modifier='N'/>
+<arg type64='I' type='L'/>
+<arg type='^^{?}' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsGetPathFromList'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataList=I^{?}}' type_modifier='n'/>
+<arg type='*'/>
+<retval type='*'/>
+</function>
+<function name='dsGetRecordAttributeInfo'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='^^{?}' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsGetRecordAttributeValueByID'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type64='I' type='L'/>
+<arg type='^^{?}' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsGetRecordAttributeValueByIndex'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type64='I' type='L'/>
+<arg type='^^{?}' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsGetRecordAttributeValueByValue'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='^^{?}' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsGetRecordEntry'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='N'/>
+<arg type64='I' type='L'/>
+<arg type='^I' type_modifier='o'/>
+<arg type='^^{?}' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsGetRecordList'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='N'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='i'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='i'/>
+<arg type='^I' type_modifier='N'/>
+<arg type='^I' type_modifier='N'/>
+<retval type='i'/>
+</function>
+<function name='dsGetRecordNameFromEntry'>
+<arg type='^{_tRecordEntryPtr=I{?=IIIII}I{?=II[1c]}}' type_modifier='n'/>
+<arg type='^*' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsGetRecordReferenceInfo'>
+<arg type64='I' type='L'/>
+<arg type='^^{?}' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsGetRecordTypeFromEntry'>
+<arg type='^{_tRecordEntryPtr=I{?=IIIII}I{?=II[1c]}}' type_modifier='n'/>
+<arg type='^*' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsIsDirServiceLocalRunning'>
+<retval type='i'/>
+</function>
+<function name='dsIsDirServiceRunning'>
+<retval type='i'/>
+</function>
+<function name='dsOpenDirNode'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<arg type='^I' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsOpenDirService'>
+<arg type='^I' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsOpenDirServiceLocal'>
+<arg type='^I' type_modifier='o'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='dsOpenDirServiceProxy'>
+<arg type='^I' type_modifier='o'/>
+<arg type='*'/>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='n'/>
+<arg type='^{_tDataBufferPtr=II[1c]}' type_modifier='o'/>
+<arg type='^I' type_modifier='N'/>
+<retval type='i'/>
+</function>
+<function name='dsOpenRecord'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='^I' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsParseAuthAuthority'>
+<arg type='*'/>
+<arg type='^*' type_modifier='o'/>
+<arg type='^*' type_modifier='o'/>
+<arg type='^*' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsRegisterCustomMemory'>
+<arg type64='I' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<arg type='^^v'/>
+<retval type='i'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^v'/>
+<retval type='i'/>
+</arg>
+<arg type='^v'/>
+<retval type='i'/>
+</function>
+<function name='dsRegisterCustomThread'>
+<arg type64='I' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type='i'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type='i'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type='i'/>
+</arg>
+<arg type='^v'/>
+<retval type='i'/>
+</function>
+<function name='dsReleaseContinueData'>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsRemoveAttribute'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsRemoveAttributeValue'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+<function name='dsServiceInformationAllocate'>
+<arg type='^{__CFDictionary=}'/>
+<arg type64='I' type='L'/>
+<arg type='^^{?}' type_modifier='o'/>
+<retval type='i'/>
+</function>
+<function name='dsSetAttributeValue'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='^{_tAttributeValueEntryPtr=I{?=II[1c]}}' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsSetAttributeValues'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<arg type='^{_tDataListPtr=I^{?}}' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsSetRecordName'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsSetRecordType'>
+<arg type64='I' type='L'/>
+<arg type='^{_tDataNodePtr=II[1c]}' type_modifier='n'/>
+<retval type='i'/>
+</function>
+<function name='dsUnRegisterCustomMemory'>
+<arg type64='I' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<arg type='^^v'/>
+<retval type='i'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^v'/>
+<retval type='i'/>
+</arg>
+<arg type='^v'/>
+<retval type='i'/>
+</function>
+<function name='dsUnRegisterCustomThread'>
+<arg type64='I' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type='i'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type='i'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<retval type='i'/>
+</arg>
+<arg type='^v'/>
+<retval type='i'/>
+</function>
+<function name='dsVerifyDirRefNum'>
+<arg type64='I' type='L'/>
+<retval type='i'/>
+</function>
+</signatures>

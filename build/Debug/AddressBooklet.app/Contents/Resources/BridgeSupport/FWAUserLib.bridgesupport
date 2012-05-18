@@ -1,0 +1,1009 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<struct name='FWACreateDeviceRec' type='{FWACreateDeviceRec=&quot;vendorID&quot;I&quot;deviceName&quot;[64c]&quot;guidStr&quot;[64c]}'/>
+<struct name='FWACreateDeviceRecPtr' type='{FWACreateDeviceRec=&quot;vendorID&quot;I&quot;deviceName&quot;[64c]&quot;guidStr&quot;[64c]}'/>
+<struct name='FWACreateFWAudioPlugRec' type='{FWACreateFWAudioPlugRec=&quot;owningAudioStreamRef&quot;I&quot;channelID&quot;I&quot;plugName&quot;[64c]&quot;plugIdent&quot;[36C]&quot;plugIdentIsNull&quot;B}'/>
+<struct name='FWACreateFWAudioPlugRecPtr' type='{FWACreateFWAudioPlugRec=&quot;owningAudioStreamRef&quot;I&quot;channelID&quot;I&quot;plugName&quot;[64c]&quot;plugIdent&quot;[36C]&quot;plugIdentIsNull&quot;B}'/>
+<struct name='FWACreateMIDIDeviceNubRec' type='{FWACreateMIDIDeviceNubRec=&quot;owningDevice&quot;I&quot;vendorID&quot;I&quot;modelID&quot;I&quot;deviceName&quot;[64c]&quot;guidStr&quot;[64c]&quot;iconFilePath&quot;[256c]&quot;editorPath&quot;[256c]}'/>
+<struct name='FWACreateMIDIDeviceNubRecPtr' type='{FWACreateMIDIDeviceNubRec=&quot;owningDevice&quot;I&quot;vendorID&quot;I&quot;modelID&quot;I&quot;deviceName&quot;[64c]&quot;guidStr&quot;[64c]&quot;iconFilePath&quot;[256c]&quot;editorPath&quot;[256c]}'/>
+<struct name='FWACreateMIDIPlugRec' type='{FWACreateMIDIPlugRec=&quot;owningMIDIStreamRef&quot;I&quot;mpxID&quot;I&quot;plugName&quot;[64c]&quot;plugIdent&quot;[36C]&quot;plugIdentIsNull&quot;B}'/>
+<struct name='FWACreateMIDIPlugRecPtr' type='{FWACreateMIDIPlugRec=&quot;owningMIDIStreamRef&quot;I&quot;mpxID&quot;I&quot;plugName&quot;[64c]&quot;plugIdent&quot;[36C]&quot;plugIdentIsNull&quot;B}'/>
+<struct name='FWACreateStreamRec' type='{FWACreateStreamRec=&quot;owningIsochStreamRef&quot;I&quot;channelNumber&quot;I&quot;direction&quot;I&quot;numAudioChannels&quot;I&quot;streamName&quot;[64c]&quot;streamIdent&quot;[36C]&quot;streamIdentIsNull&quot;B}'/>
+<struct name='FWACreateStreamRecPtr' type='{FWACreateStreamRec=&quot;owningIsochStreamRef&quot;I&quot;channelNumber&quot;I&quot;direction&quot;I&quot;numAudioChannels&quot;I&quot;streamName&quot;[64c]&quot;streamIdent&quot;[36C]&quot;streamIdentIsNull&quot;B}'/>
+<struct name='FWADeviceStatus' type64='{FWADeviceStatus=&quot;version&quot;I&quot;sampleCounter&quot;I&quot;inputSampleFrame&quot;I&quot;outputSampleFrame&quot;I&quot;inputClipSampleFrame&quot;I&quot;outputClipSampleFrame&quot;I&quot;meterData&quot;[1I]}' type='{FWADeviceStatus=&quot;version&quot;I&quot;sampleCounter&quot;I&quot;inputSampleFrame&quot;I&quot;outputSampleFrame&quot;I&quot;inputClipSampleFrame&quot;I&quot;outputClipSampleFrame&quot;I&quot;meterData&quot;[1L]}'/>
+<struct name='FWADeviceStatusRec' type64='{FWADeviceStatus=&quot;version&quot;I&quot;sampleCounter&quot;I&quot;inputSampleFrame&quot;I&quot;outputSampleFrame&quot;I&quot;inputClipSampleFrame&quot;I&quot;outputClipSampleFrame&quot;I&quot;meterData&quot;[1I]}' type='{FWADeviceStatus=&quot;version&quot;I&quot;sampleCounter&quot;I&quot;inputSampleFrame&quot;I&quot;outputSampleFrame&quot;I&quot;inputClipSampleFrame&quot;I&quot;outputClipSampleFrame&quot;I&quot;meterData&quot;[1L]}'/>
+<struct name='FWADeviceStatusRecPtr' type64='{FWADeviceStatus=&quot;version&quot;I&quot;sampleCounter&quot;I&quot;inputSampleFrame&quot;I&quot;outputSampleFrame&quot;I&quot;inputClipSampleFrame&quot;I&quot;outputClipSampleFrame&quot;I&quot;meterData&quot;[1I]}' type='{FWADeviceStatus=&quot;version&quot;I&quot;sampleCounter&quot;I&quot;inputSampleFrame&quot;I&quot;outputSampleFrame&quot;I&quot;inputClipSampleFrame&quot;I&quot;outputClipSampleFrame&quot;I&quot;meterData&quot;[1L]}'/>
+<struct name='FWAGetPropertyRec' type='{FWAGetPropertyRec=&quot;key&quot;I&quot;size&quot;I&quot;data&quot;[1024c]}'/>
+<struct name='FWAGetPropertyRecPtr' type='{FWAGetPropertyRec=&quot;key&quot;I&quot;size&quot;I&quot;data&quot;[1024c]}'/>
+<struct name='FWAMIDIInputBufferWithTimeStamp' type='{FWAMIDIInputBufferWithTimeStamp=&quot;timeStamp&quot;Q&quot;midiBuffer&quot;[64C]}'/>
+<struct name='FWAMIDIOutputBufferWithTimeStamp' type='{FWAMIDIOutputBufferWithTimeStamp=&quot;timeStamp&quot;Q&quot;midiBuffer&quot;[64C]}'/>
+<struct name='FWAMIDIReadBuf' type64='{FWAMIDIReadBuffer=&quot;bufSize&quot;I&quot;mrBuf&quot;[64I]}' type='{FWAMIDIReadBuffer=&quot;bufSize&quot;I&quot;mrBuf&quot;[64L]}'/>
+<struct name='FWAMIDIReadBuffer' type64='{FWAMIDIReadBuffer=&quot;bufSize&quot;I&quot;mrBuf&quot;[64I]}' type='{FWAMIDIReadBuffer=&quot;bufSize&quot;I&quot;mrBuf&quot;[64L]}'/>
+<struct name='FWASetPlugPropertyRec' type='{FWASetPlugPropertyRec=&quot;owningPlugRef&quot;I&quot;plugPropertyKey&quot;[256c]&quot;plugPropertyValue&quot;[3832c]&quot;plugPropertyValueIsNull&quot;B}'/>
+<struct name='FWASetPlugPropertyRecPtr' type='{FWASetPlugPropertyRec=&quot;owningPlugRef&quot;I&quot;plugPropertyKey&quot;[256c]&quot;plugPropertyValue&quot;[3832c]&quot;plugPropertyValueIsNull&quot;B}'/>
+<struct name='FWASetPluginPathRec' type='{FWASetPluginPathRec=&quot;owningEngineRef&quot;I&quot;vendorID&quot;I&quot;modelID&quot;I&quot;pluginPath&quot;[512c]&quot;pluginPathIsNull&quot;B&quot;cacheValues&quot;B}'/>
+<struct name='FWASetPluginPathRecPtr' type='{FWASetPluginPathRec=&quot;owningEngineRef&quot;I&quot;vendorID&quot;I&quot;modelID&quot;I&quot;pluginPath&quot;[512c]&quot;pluginPathIsNull&quot;B&quot;cacheValues&quot;B}'/>
+<cftype name='FWAAudioPlugRef' type='^{OpaqueFWAAudioPlugRef=}'/>
+<cftype name='FWAAudioStreamRef' type='^{OpaqueFWAAudioStreamRef=}'/>
+<cftype name='FWADeviceRef' type='^{OpaqueFWADeviceRef=}'/>
+<cftype name='FWAEngineRef' type='^{OpaqueFWAEngineRef=}'/>
+<cftype name='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+<cftype name='FWAMIDIDeviceNubRef' type='^{OpaqueFWAMIDIDeviceNubRef=}'/>
+<cftype name='FWAMIDIPlugRef' type='^{OpaqueFWAMIDIPlugRef=}'/>
+<cftype name='FWAMIDIStreamRef' type='^{OpaqueFWAMIDIStreamRef=}'/>
+<cftype name='FWARef' type='^{OpaqueFWARef=}'/>
+<string_constant name='kAudioPlugPropertiesKey' value='AudioPlugProperties'/>
+<string_constant name='kFWAStreamEndpointIndentifier' value='kFWAudioStreamEndpointIdentifier'/>
+<string_constant name='kMIDIPlugPropertiesKey' value='MIDIPlugProperties'/>
+<string_constant name='kMIDIPropertiesIsEmbeddedKey' value='MIDIPropertyIsEmbedded'/>
+<string_constant name='kMIDIPropertiesIsPrivateKey' value='MIDIPropertyIsPrivate'/>
+<enum name='CURRENT_DEVICE_STATUS_VERSION' value='73728'/>
+<enum name='kAllEventTypes' value='255'/>
+<enum name='kAncillaryData' value='192'/>
+<enum name='kAttachFWAudioMIDIStreamInParamCount' value='2'/>
+<enum name='kAttachFWAudioMIDIStreamOutParamCount' value='0'/>
+<enum name='kAttachFWAudioStreamInParamCount' value='2'/>
+<enum name='kAttachFWAudioStreamOutParamCount' value='0'/>
+<enum name='kCreateAudioStreamInParamCount' value='4294967295'/>
+<enum name='kCreateAudioStreamOutParamCount' value='4294967295'/>
+<enum name='kCreateFWAudioDeviceInParamCount' value='4294967295'/>
+<enum name='kCreateFWAudioDeviceOutParamCount' value='4294967295'/>
+<enum name='kCreateFWAudioEngineInParamCount' value='3'/>
+<enum name='kCreateFWAudioEngineOutParamCount' value='1'/>
+<enum name='kCreateFWAudioMIDIDeviceNubInParamCount' value='4294967295'/>
+<enum name='kCreateFWAudioMIDIDeviceNubOutParamCount' value='4294967295'/>
+<enum name='kCreateFWAudioMIDIPlugInParamCount' value='4294967295'/>
+<enum name='kCreateFWAudioMIDIPlugOutParamCount' value='4294967295'/>
+<enum name='kCreateFWAudioMIDIStreamInParamCount' value='3'/>
+<enum name='kCreateFWAudioMIDIStreamOutParamCount' value='1'/>
+<enum name='kCreateFWAudioPlugInParamCount' value='4294967295'/>
+<enum name='kCreateFWAudioPlugOutParamCount' value='4294967295'/>
+<enum name='kCreateFWAudioStreamInParamCount' value='4294967295'/>
+<enum name='kCreateFWAudioStreamOutParamCount' value='4294967295'/>
+<enum name='kCreateIsochStreamInParamCount' value='4'/>
+<enum name='kCreateIsochStreamOutParamCount' value='1'/>
+<enum name='kCurrentEraseHeadMeterArrayOffset' value='0'/>
+<enum name='kCurrentInputDMASampleFrameMeterArrayOffset' value='2'/>
+<enum name='kCurrentOutputDMASampleFrameMeterArrayOffset' value='3'/>
+<enum name='kDisposeAudioStreamInParamCount' value='1'/>
+<enum name='kDisposeAudioStreamOutParamCount' value='0'/>
+<enum name='kDisposeFWAudioDeviceInParamCount' value='1'/>
+<enum name='kDisposeFWAudioDeviceOutParamCount' value='0'/>
+<enum name='kDisposeFWAudioEngineInParamCount' value='1'/>
+<enum name='kDisposeFWAudioEngineOutParamCount' value='0'/>
+<enum name='kDisposeFWAudioMIDIDeviceNubInParamCount' value='1'/>
+<enum name='kDisposeFWAudioMIDIDeviceNubOutParamCount' value='0'/>
+<enum name='kDisposeFWAudioMIDIPlugInParamCount' value='1'/>
+<enum name='kDisposeFWAudioMIDIPlugOutParamCount' value='0'/>
+<enum name='kDisposeFWAudioMIDIStreamInParamCount' value='1'/>
+<enum name='kDisposeFWAudioMIDIStreamOutParamCount' value='0'/>
+<enum name='kDisposeFWAudioPlugInParamCount' value='1'/>
+<enum name='kDisposeFWAudioPlugOutParamCount' value='0'/>
+<enum name='kDisposeFWAudioStreamInParamCount' value='1'/>
+<enum name='kDisposeFWAudioStreamOutParamCount' value='0'/>
+<enum name='kDisposeIsochStreamInParamCount' value='1'/>
+<enum name='kDisposeIsochStreamOutParamCount' value='0'/>
+<enum name='kFWAAttachFWAudioMIDIStream' value='79'/>
+<enum name='kFWAAttachFWAudioStream' value='78'/>
+<enum name='kFWACloseIndex' value='1'/>
+<enum name='kFWACreateAudioStream' value='26'/>
+<enum name='kFWACreateFWAudioDevice' value='54'/>
+<enum name='kFWACreateFWAudioEngine' value='58'/>
+<enum name='kFWACreateFWAudioMIDIDeviceNub' value='87'/>
+<enum name='kFWACreateFWAudioMIDIPlug' value='66'/>
+<enum name='kFWACreateFWAudioMIDIStream' value='64'/>
+<enum name='kFWACreateFWAudioPlug' value='72'/>
+<enum name='kFWACreateFWAudioStream' value='60'/>
+<enum name='kFWACreateIsochStream' value='46'/>
+<enum name='kFWACreateMIDIStream' value='12'/>
+<enum name='kFWADeviceStatusCurrentVersion' value='73728'/>
+<enum name='kFWADisposeAudioStream' value='27'/>
+<enum name='kFWADisposeFWAudioDevice' value='55'/>
+<enum name='kFWADisposeFWAudioEngine' value='59'/>
+<enum name='kFWADisposeFWAudioMIDIDeviceNub' value='88'/>
+<enum name='kFWADisposeFWAudioMIDIPlug' value='67'/>
+<enum name='kFWADisposeFWAudioMIDIStream' value='65'/>
+<enum name='kFWADisposeFWAudioPlug' value='73'/>
+<enum name='kFWADisposeFWAudioStream' value='61'/>
+<enum name='kFWADisposeIsochStream' value='47'/>
+<enum name='kFWADisposeMIDIStream' value='13'/>
+<enum name='kFWAExecuteAVC' value='8'/>
+<enum name='kFWAGetClockSource' value='62'/>
+<enum name='kFWAGetCurrentClockSourcePlugKey' value='1668049776'/>
+<enum name='kFWAGetCurrentStreamRefs' value='34'/>
+<enum name='kFWAGetCycleTimeOffset' value='2'/>
+<enum name='kFWAGetDeviceName' value='18'/>
+<enum name='kFWAGetDeviceSampleRate' value='28'/>
+<enum name='kFWAGetDeviceSendMode' value='29'/>
+<enum name='kFWAGetDeviceStatus' value='30'/>
+<enum name='kFWAGetDeviceStreamInfo' value='31'/>
+<enum name='kFWAGetFWAudioMIDIPlugChannel' value='76'/>
+<enum name='kFWAGetFWAudioPlugChannel' value='77'/>
+<enum name='kFWAGetGUID' value='5'/>
+<enum name='kFWAGetIndexedFWAudioMIDIPlug' value='90'/>
+<enum name='kFWAGetIndexedFWAudioPlug' value='89'/>
+<enum name='kFWAGetIsochStreamAudioChannelCount' value='50'/>
+<enum name='kFWAGetIsochStreamChannelID' value='37'/>
+<enum name='kFWAGetIsochStreamDirection' value='36'/>
+<enum name='kFWAGetIsochStreamMIDIChannelCount' value='52'/>
+<enum name='kFWAGetMacGUID' value='11'/>
+<enum name='kFWAGetMaxSpeed' value='85'/>
+<enum name='kFWAGetNodeID' value='4'/>
+<enum name='kFWAGetNumAudioInputPlugs' value='24'/>
+<enum name='kFWAGetNumAudioOutputPlugs' value='25'/>
+<enum name='kFWAGetNumMIDIInputPlugs' value='20'/>
+<enum name='kFWAGetNumMIDIOutputPlugs' value='21'/>
+<enum name='kFWAGetProperty' value='69'/>
+<enum name='kFWAGetSessionRef' value='84'/>
+<enum name='kFWAGetStreamAudioType' value='43'/>
+<enum name='kFWAGetStreamOutputSpeed' value='41'/>
+<enum name='kFWAGetStreamSampleRate' value='39'/>
+<enum name='kFWAGetStreamState' value='35'/>
+<enum name='kFWAGetVendorID' value='17'/>
+<enum name='kFWAGetVendorName' value='19'/>
+<enum name='kFWAIsMIDICapable' value='16'/>
+<enum name='kFWAMIDIDeviceNubAttachMIDIPlug' value='91'/>
+<enum name='kFWAMIDIDeviceNubDetachMIDIPlug' value='92'/>
+<enum name='kFWAMIDIGetIndexedPlug' value='4294967295'/>
+<enum name='kFWAMIDIPlugIdent' value='1835623534'/>
+<enum name='kFWAMIDIPlugName' value='1835950445'/>
+<enum name='kFWAMIDIPlugPropertyEmbedded' value='1701667428'/>
+<enum name='kFWAMIDIPlugPropertyPrivate' value='1886546294'/>
+<enum name='kFWAMaxPathLength' value='512'/>
+<enum name='kFWAMaxPropertyKeyLength' value='256'/>
+<enum name='kFWAMaxPropertyValueLength' value='3832'/>
+<enum name='kFWANumberFWAMethods' value='96'/>
+<enum name='kFWAOpenIndex' value='0'/>
+<enum name='kFWAOpenLocalWithInterface' value='82'/>
+<enum name='kFWAOpenWithService' value='83'/>
+<enum name='kFWAPlugNotConnected' value='255'/>
+<enum name='kFWAReadBlock' value='7'/>
+<enum name='kFWAReadMIDIData' value='15'/>
+<enum name='kFWAReadQuadlet' value='6'/>
+<enum name='kFWAReserveIsochSequences' value='86'/>
+<enum name='kFWASetAsyncPort' value='93'/>
+<enum name='kFWASetAutoLoad' value='68'/>
+<enum name='kFWASetClockSource' value='63'/>
+<enum name='kFWASetCycleTimeOffset' value='3'/>
+<enum name='kFWASetDeviceStreamInfo' value='32'/>
+<enum name='kFWASetFWAudioMIDIPlugChannel' value='74'/>
+<enum name='kFWASetFWAudioMIDIPlugProperty' value='81'/>
+<enum name='kFWASetFWAudioPlugChannel' value='75'/>
+<enum name='kFWASetFWAudioPlugProperty' value='80'/>
+<enum name='kFWASetIsochStreamAudioChannelCount' value='51'/>
+<enum name='kFWASetIsochStreamChannelID' value='38'/>
+<enum name='kFWASetIsochStreamMIDIChannelCount' value='53'/>
+<enum name='kFWASetNumMIDIInputPlugs' value='22'/>
+<enum name='kFWASetNumMIDIOutputPlugs' value='23'/>
+<enum name='kFWASetPluginPath' value='71'/>
+<enum name='kFWASetProperty' value='70'/>
+<enum name='kFWASetStreamAudioType' value='44'/>
+<enum name='kFWASetStreamCallbackFunction' value='45'/>
+<enum name='kFWASetStreamOutputSpeed' value='42'/>
+<enum name='kFWASetStreamSampleRate' value='40'/>
+<enum name='kFWAStartFWAudioDevice' value='56'/>
+<enum name='kFWAStartIsochStream' value='48'/>
+<enum name='kFWAStopFWAudioDevice' value='57'/>
+<enum name='kFWAStopIsochStream' value='49'/>
+<enum name='kFWAStreamIdentSize' value='36'/>
+<enum name='kFWAStreamIn' value='1'/>
+<enum name='kFWAStreamOptionsDefault' value='0'/>
+<enum name='kFWAStreamOptionsForceLegacyDCL' value='131072'/>
+<enum name='kFWAStreamOptionsForceNuDCL' value='65536'/>
+<enum name='kFWAStreamOut' value='0'/>
+<enum name='kFWAStreamPaused' value='2'/>
+<enum name='kFWAStreamResumed' value='3'/>
+<enum name='kFWAStreamRunning' value='1'/>
+<enum name='kFWAStreamStopped' value='0'/>
+<enum name='kFWASyncUpDevice' value='33'/>
+<enum name='kFWAUnusedIsochChannelID' value='255'/>
+<enum name='kFWAWriteBlock' value='10'/>
+<enum name='kFWAWriteMIDIData' value='14'/>
+<enum name='kFWAWriteQuadlet' value='9'/>
+<enum name='kFWAudioMaxNameSize' value='64'/>
+<enum name='kGetBadHeaderCountMeterArrayOffset' value='4'/>
+<enum name='kGetBigPacketCountMeterArrayOffset' value='6'/>
+<enum name='kGetClockSourceInParamCount' value='0'/>
+<enum name='kGetClockSourceOutParamCount' value='2'/>
+<enum name='kGetCurrentStreamRefsInParamCount' value='1'/>
+<enum name='kGetCurrentStreamRefsOutParamCount' value='4294967295'/>
+<enum name='kGetCycleTimeOffsetInParamCount' value='0'/>
+<enum name='kGetCycleTimeOffsetOutParamCount' value='1'/>
+<enum name='kGetDeviceNameInParamCount' value='0'/>
+<enum name='kGetDeviceNameOutParamCount' value='4294967295'/>
+<enum name='kGetDeviceSampleRateInParamCount' value='0'/>
+<enum name='kGetDeviceSampleRateOutParamCount' value='1'/>
+<enum name='kGetDeviceSendModeInParamCount' value='0'/>
+<enum name='kGetDeviceSendModeOutParamCount' value='1'/>
+<enum name='kGetDeviceStatusInParamCount' value='1'/>
+<enum name='kGetDeviceStatusOutParamCount' value='4294967295'/>
+<enum name='kGetDeviceStreamInfoInParamCount' value='1'/>
+<enum name='kGetDeviceStreamInfoOutParamCount' value='4'/>
+<enum name='kGetFWAudioMIDIPlugChannelInParamCount' value='1'/>
+<enum name='kGetFWAudioMIDIPlugChannelOutParamCount' value='2'/>
+<enum name='kGetFWAudioPlugChannelInParamCount' value='1'/>
+<enum name='kGetFWAudioPlugChannelOutParamCount' value='1'/>
+<enum name='kGetFixedHeaderCountMeterArrayOffset' value='5'/>
+<enum name='kGetIndexedFWAudioMIDIPlugInParamCount' value='3'/>
+<enum name='kGetIndexedFWAudioMIDIPlugOutParamCount' value='1'/>
+<enum name='kGetIndexedFWAudioPlugInParamCount' value='3'/>
+<enum name='kGetIndexedFWAudioPlugOutParamCount' value='1'/>
+<enum name='kGetIsochStreamAudioChannelCountInParamCount' value='1'/>
+<enum name='kGetIsochStreamAudioChannelCountOutParamCount' value='1'/>
+<enum name='kGetIsochStreamChannelIDInParamCount' value='1'/>
+<enum name='kGetIsochStreamChannelIDOutParamCount' value='1'/>
+<enum name='kGetIsochStreamDirectionInParamCount' value='1'/>
+<enum name='kGetIsochStreamDirectionOutParamCount' value='1'/>
+<enum name='kGetIsochStreamMIDIChannelCountInParamCount' value='1'/>
+<enum name='kGetIsochStreamMIDIChannelCountOutParamCount' value='1'/>
+<enum name='kGetMaxSpeedInParamCount' value='0'/>
+<enum name='kGetMaxSpeedOutParamCount' value='1'/>
+<enum name='kGetNumAudioInputPlugsInParamCount' value='0'/>
+<enum name='kGetNumAudioInputPlugsOutParamCount' value='1'/>
+<enum name='kGetNumAudioOutputPlugsInParamCount' value='0'/>
+<enum name='kGetNumAudioOutputPlugsOutParamCount' value='1'/>
+<enum name='kGetNumMIDIInputPlugsInParamCount' value='0'/>
+<enum name='kGetNumMIDIInputPlugsOutParamCount' value='1'/>
+<enum name='kGetNumMIDIOutputPlugsInParamCount' value='0'/>
+<enum name='kGetNumMIDIOutputPlugsOutParamCount' value='1'/>
+<enum name='kGetPropertyInParamCount' value='4294967295'/>
+<enum name='kGetPropertyOutParamCount' value='4294967295'/>
+<enum name='kGetSessionRefInParamCount' value='0'/>
+<enum name='kGetSessionRefOutParamCount' value='0'/>
+<enum name='kGetStreamAudioTypeInParamCount' value='1'/>
+<enum name='kGetStreamAudioTypeOutParamCount' value='1'/>
+<enum name='kGetStreamOutputSpeedInParamCount' value='1'/>
+<enum name='kGetStreamOutputSpeedOutParamCount' value='1'/>
+<enum name='kGetStreamSampleRateInParamCount' value='1'/>
+<enum name='kGetStreamSampleRateOutParamCount' value='1'/>
+<enum name='kGetStreamStateInParamCount' value='1'/>
+<enum name='kGetStreamStateOutParamCount' value='1'/>
+<enum name='kGetVendorNameInParamCount' value='0'/>
+<enum name='kGetVendorNameOutParamCount' value='4294967295'/>
+<enum name='kIEC60958' value='0'/>
+<enum name='kInputPacketCountMeterArrayOffset' value='9'/>
+<enum name='kIsMIDICapableInParamCount' value='0'/>
+<enum name='kIsMIDICapableOutParamCount' value='1'/>
+<enum name='kLastTimeStampMeterArrayOffset' value='7'/>
+<enum name='kLastTimeStampMeterArrayOffset2' value='8'/>
+<enum name='kMIDI' value='128'/>
+<enum name='kMIDIAdvanceSchedule' value='1073741824'/>
+<enum name='kMIDIDeviceNubAttachMIDIPlugInParamCount' value='2'/>
+<enum name='kMIDIDeviceNubAttachMIDIPlugOutParamCount' value='0'/>
+<enum name='kMIDIDeviceNubDetachMIDIPlugInParamCount' value='1'/>
+<enum name='kMIDIDeviceNubDetachMIDIPlugOutParamCount' value='0'/>
+<enum name='kMIDIInputClientBufferSize' value='64'/>
+<enum name='kMIDIInputRingBufferSize' value='512'/>
+<enum name='kMIDIOutputClientBufferSize' value='64'/>
+<enum name='kMIDIOutputRingBufferSize' value='512'/>
+<enum name='kMIDIStreamIn' value='1'/>
+<enum name='kMIDIStreamOut' value='0'/>
+<enum name='kMIDITimeStamp' value='2147483648'/>
+<enum name='kNumInputClientBuffers' value='1'/>
+<enum name='kNumOutputClientBuffers' value='1'/>
+<enum name='kNumSamplesFramesInBufferMeterArrayOffset' value='1'/>
+<enum name='kOpenLocalWithInterfaceInParamCount' value='0'/>
+<enum name='kOpenLocalWithInterfaceOutParamCount' value='0'/>
+<enum name='kOpenWithServiceInParamCount' value='0'/>
+<enum name='kOpenWithServiceOutParamCount' value='0'/>
+<enum name='kRawAudio' value='64'/>
+<enum name='kReadBlockInParamCount' value='1'/>
+<enum name='kReadBlockOutParamCount' value='4294967295'/>
+<enum name='kReadMIDIAsync' value='95'/>
+<enum name='kReadQuadletInParamCount' value='1'/>
+<enum name='kReadQuadletOutParamCount' value='1'/>
+<enum name='kReserveIsochSequencesInParamCount' value='3'/>
+<enum name='kReserveIsochSequencesOutParamCount' value='0'/>
+<enum name='kSetAutoLoadInParamCount' value='1'/>
+<enum name='kSetAutoLoadOutParamCount' value='0'/>
+<enum name='kSetClockSourceInParamCount' value='2'/>
+<enum name='kSetClockSourceOutParamCount' value='0'/>
+<enum name='kSetCycleTimeOffsetInParamCount' value='1'/>
+<enum name='kSetCycleTimeOffsetOutParamCount' value='0'/>
+<enum name='kSetDeviceStreamInfoInParamCount' value='6'/>
+<enum name='kSetDeviceStreamInfoOutParamCount' value='0'/>
+<enum name='kSetFWAudioMIDIPlugChannelInParamCount' value='2'/>
+<enum name='kSetFWAudioMIDIPlugChannelOutParamCount' value='0'/>
+<enum name='kSetFWAudioMIDIPlugPropertyInParamCount' value='4294967295'/>
+<enum name='kSetFWAudioMIDIPlugPropertyOutParamCount' value='4294967295'/>
+<enum name='kSetFWAudioPlugChannelInParamCount' value='2'/>
+<enum name='kSetFWAudioPlugChannelOutParamCount' value='0'/>
+<enum name='kSetFWAudioPlugPropertyInParamCount' value='4294967295'/>
+<enum name='kSetFWAudioPlugPropertyOutParamCount' value='4294967295'/>
+<enum name='kSetIsochStreamAudioChannelCountInParamCount' value='2'/>
+<enum name='kSetIsochStreamAudioChannelCountOutParamCount' value='0'/>
+<enum name='kSetIsochStreamChannelIDInParamCount' value='2'/>
+<enum name='kSetIsochStreamChannelIDOutParamCount' value='0'/>
+<enum name='kSetIsochStreamMIDIChannelCountInParamCount' value='2'/>
+<enum name='kSetIsochStreamMIDIChannelCountOutParamCount' value='0'/>
+<enum name='kSetNumMIDIInputPlugsInParamCount' value='1'/>
+<enum name='kSetNumMIDIInputPlugsOutParamCount' value='0'/>
+<enum name='kSetNumMIDIOutputPlugsInParamCount' value='1'/>
+<enum name='kSetNumMIDIOutputPlugsOutParamCount' value='0'/>
+<enum name='kSetPluginPathInParamCount' value='4294967295'/>
+<enum name='kSetPluginPathOutParamCount' value='4294967295'/>
+<enum name='kSetPropertyInParamCount' value='2'/>
+<enum name='kSetPropertyOutParamCount' value='0'/>
+<enum name='kSetStreamAudioTypeInParamCount' value='2'/>
+<enum name='kSetStreamAudioTypeOutParamCount' value='0'/>
+<enum name='kSetStreamCallbackFunctionInParamCount' value='3'/>
+<enum name='kSetStreamCallbackFunctionOutParamCount' value='0'/>
+<enum name='kSetStreamOutputSpeedInParamCount' value='2'/>
+<enum name='kSetStreamOutputSpeedOutParamCount' value='0'/>
+<enum name='kSetStreamSampleRateInParamCount' value='2'/>
+<enum name='kSetStreamSampleRateOutParamCount' value='0'/>
+<enum name='kStartFWAudioDeviceInParamCount' value='1'/>
+<enum name='kStartFWAudioDeviceOutParamCount' value='0'/>
+<enum name='kStartIsochStreamInParamCount' value='1'/>
+<enum name='kStartIsochStreamOutParamCount' value='0'/>
+<enum name='kStopFWAudioDeviceInParamCount' value='1'/>
+<enum name='kStopFWAudioDeviceOutParamCount' value='0'/>
+<enum name='kStopIsochStreamInParamCount' value='1'/>
+<enum name='kStopIsochStreamOutParamCount' value='0'/>
+<enum name='kSyncUpDeviceInParamCount' value='0'/>
+<enum name='kSyncUpDeviceOutParamCount' value='0'/>
+<enum name='kWriteBlockInParamCount' value='1'/>
+<enum name='kWriteBlockOutParamCount' value='4294967295'/>
+<enum name='kWriteMIDIAsync' value='94'/>
+<enum name='kWriteQuadletInParamCount' value='2'/>
+<enum name='kWriteQuadletOutParamCount' value='0'/>
+<function name='CreateAsyncWakePort'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAAttachFWAudioMIDIStream'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAMIDIStreamRef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAAttachFWAudioStream'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAAudioStreamRef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAClose'>
+<arg type='^{OpaqueFWARef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWACountDevices'>
+<arg type='^S'/>
+<arg type='^S'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWACreateAudioStream'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWACreateFWAudioDevice'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='*'/>
+<arg type64='I' type='L'/>
+<arg type='*'/>
+<arg type='^^{OpaqueFWADeviceRef}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWACreateFWAudioEngine'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWADeviceRef=}'/>
+<arg type='B'/>
+<arg type='B'/>
+<arg type='^^{OpaqueFWAEngineRef}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWACreateFWAudioMIDIDeviceNub'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWADeviceRef=}'/>
+<arg type='*'/>
+<arg type64='I' type='L'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type64='I' type='L'/>
+<arg type='*'/>
+<arg type='^^{OpaqueFWAMIDIDeviceNubRef}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWACreateFWAudioMIDIPlug'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAMIDIStreamRef=}'/>
+<arg type='C'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='^^{OpaqueFWAMIDIPlugRef}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWACreateFWAudioMIDIStream'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueFWAMIDIStreamRef}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWACreateFWAudioPlug'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAAudioStreamRef=}'/>
+<arg type64='I' type='L'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='^^{OpaqueFWAAudioPlugRef}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWACreateFWAudioStream'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='^^{OpaqueFWAAudioStreamRef}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWACreateIsochStream'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type64='I' type='L'/>
+<arg type='i'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueFWAIsochStreamRef}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWACreateMIDIStream'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWADisposeAudioStream'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWADisposeFWAudioDevice'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWADeviceRef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWADisposeFWAudioEngine'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAEngineRef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWADisposeFWAudioMIDIDeviceNub'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAMIDIDeviceNubRef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWADisposeFWAudioMIDIPlug'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAMIDIPlugRef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWADisposeFWAudioMIDIStream'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAMIDIStreamRef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWADisposeFWAudioPlug'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAAudioPlugRef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWADisposeFWAudioStream'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAAudioStreamRef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWADisposeIsochStream'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWADisposeMIDIStream'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAExecuteAVC'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='*'/>
+<arg type64='I' type='L'/>
+<arg type='*'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetAEvntSource'>
+<arg type='^{OpaqueFWARef=}'/>
+<retval type='^{__CFRunLoopSource=}'/>
+</function>
+<function name='FWAGetClockSource'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^^{OpaqueFWAIsochStreamRef}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetCurrentIsochStreamRefs'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^^{OpaqueFWAIsochStreamRef}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetCycleTimeOffset'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetDeviceName'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='*'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetDeviceSampleRate'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetDeviceSendMode'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetDeviceStatus'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetDeviceStreamInfo'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type64='I' type='L'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetFWAudioMIDIPlugChannel'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAMIDIPlugRef=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetFWAudioPlugChannel'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAAudioPlugRef=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetGUID'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^Q'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetIndexedFWAudioMIDIPlug'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAMIDIDeviceNubRef=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueFWAMIDIPlugRef}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetIndexedFWAudioPlug'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWADeviceRef=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueFWAAudioPlugRef}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetIsochStreamAudioSequenceCount'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetIsochStreamAudioType'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type='^i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetIsochStreamChannelID'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetIsochStreamDirection'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type='^i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetIsochStreamMIDISequenceCount'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetIsochStreamOutputSpeed'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type='^i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetIsochStreamSampleRate'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetIsochStreamState'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type='^i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetMacGUID'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^Q'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetMaxIsochChannels'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetMaxSequences'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetMaxSpeed'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetNodeID'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetNumAudioInputPlugs'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetNumAudioOutputPlugs'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetNumMIDIInputPlugs'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetNumMIDIOutputPlugs'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetProperty'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetSessionRef'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^^{IOFireWireSessionRefOpaqueStuct}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetSupportedAudioTypes'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^i'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetSupportedSampleRates'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetVendorID'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAGetVendorName'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='*'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAInitAEvntSource'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^^{__CFRunLoopSource}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAIsMIDICapable'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAMIDIDeviceNubAttachMIDIPlug'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAMIDIDeviceNubRef=}'/>
+<arg type='^{OpaqueFWAMIDIPlugRef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAMIDIDeviceNubDetachMIDIPlug'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAMIDIPlugRef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAOpen'>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueFWARef}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAOpenLocal'>
+<arg type='^^{OpaqueFWARef}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAOpenLocalWithInterface'>
+<arg type='Q'/>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueFWARef}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAOpenWithService'>
+<arg type='I'/>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueFWARef}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWARead'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='C'/>
+<arg type='C'/>
+<arg type64='Q' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAReadBlock'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{FWAddressStruct=SSI}'/>
+<arg type='^I'/>
+<arg type='*'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAReadMIDIData'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type64='I' type='L'/>
+<arg type64='^{FWAMIDIReadBuffer=I[64I]}' type='^{FWAMIDIReadBuffer=I[64L]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAReadMIDIDataAsync'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='i'/>
+<arg type='^v'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAReadQuadlet'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{FWAddressStruct=SSI}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAReserveIsochSequences'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type='i'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetAutoLoad'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetClockSource'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetCycleTimeOffset'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetDeviceStreamInfo'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetFWAudioMIDIPlugChannel'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAMIDIPlugRef=}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetFWAudioMIDIPlugProperty'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAMIDIPlugRef=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetFWAudioPlugChannel'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAAudioPlugRef=}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetFWAudioPlugProperty'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAAudioPlugRef=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetIsochStreamAudioSequenceCount'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetIsochStreamAudioType'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type='i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetIsochStreamChannelID'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetIsochStreamMIDISequenceCount'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetIsochStreamOutputSpeed'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type='i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetIsochStreamSampleRate'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetNumMIDIInputPlugs'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetNumMIDIOutputPlugs'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetPluginPath'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAEngineRef=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='*'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASetProperty'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type64='I' type='L'/>
+<arg type='^v'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAStartFWAudioDevice'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWADeviceRef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAStartIsochStream'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAStopFWAudioDevice'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWADeviceRef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAStopIsochStream'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{OpaqueFWAIsochStreamRef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWASyncUpDevice'>
+<arg type='^{OpaqueFWARef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAWrite'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='C'/>
+<arg type='C'/>
+<arg type64='Q' type='L'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAWriteBlock'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{FWAddressStruct=SSI}'/>
+<arg type64='I' type='L'/>
+<arg type='*'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAWriteMIDIData'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg type='*'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAWriteMIDIDataAsync'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type64='I' type='L'/>
+<arg type64='I' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='i'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='FWAWriteQuadlet'>
+<arg type='^{OpaqueFWARef=}'/>
+<arg type='^{FWAddressStruct=SSI}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+</signatures>

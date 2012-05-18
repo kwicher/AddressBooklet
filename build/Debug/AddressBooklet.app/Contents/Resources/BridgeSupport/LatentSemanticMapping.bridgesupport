@@ -1,0 +1,193 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SpeechRecognition.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<cftype name='LSMMapRef' gettypeid_func='LSMMapGetTypeID' type='^{__LSMMap=}' tollfree='__NSCFType'/>
+<cftype name='LSMResultRef' gettypeid_func='LSMResultGetTypeID' type='^{__LSMResult=}' tollfree='__NSCFType'/>
+<cftype name='LSMTextRef' gettypeid_func='LSMTextGetTypeID' type='^{__LSMText=}' tollfree='__NSCFType'/>
+<string_constant name='kLSMAlgorithmDense' nsstring='true' value='LSMAlgorithmDense'/>
+<string_constant name='kLSMAlgorithmKey' nsstring='true' value='LSMAlgorithm'/>
+<string_constant name='kLSMAlgorithmSparse' nsstring='true' value='LSMAlgorithmSparse'/>
+<string_constant name='kLSMDimensionKey' nsstring='true' value='LSMDimension'/>
+<string_constant name='kLSMIterationsKey' nsstring='true' value='LSMIterations'/>
+<string_constant name='kLSMPrecisionDouble' nsstring='true' value='LSMPrecisionDouble'/>
+<string_constant name='kLSMPrecisionFloat' nsstring='true' value='LSMPrecisionFloat'/>
+<string_constant name='kLSMPrecisionKey' nsstring='true' value='LSMPrecision'/>
+<string_constant name='kLSMSweepAgeKey' nsstring='true' value='LSMSweepAge'/>
+<string_constant name='kLSMSweepCutoffKey' nsstring='true' value='LSMSweepCutoff'/>
+<enum name='kLSMClusterAgglomerative' value='4'/>
+<enum name='kLSMClusterCategories' value='0'/>
+<enum name='kLSMClusterKMeans' value='0'/>
+<enum name='kLSMClusterTokens' value='2'/>
+<enum name='kLSMClusterWords' value='1'/>
+<enum name='kLSMMapBadCluster' value='-6644'/>
+<enum name='kLSMMapBadPath' value='-6643'/>
+<enum name='kLSMMapDiscardCounts' value='1'/>
+<enum name='kLSMMapHashText' value='256'/>
+<enum name='kLSMMapLoadMutable' value='2'/>
+<enum name='kLSMMapNoSuchCategory' value='-6641'/>
+<enum name='kLSMMapOutOfState' value='-6640'/>
+<enum name='kLSMMapOverflow' value='-6645'/>
+<enum name='kLSMMapPairs' value='1'/>
+<enum name='kLSMMapTriplets' value='2'/>
+<enum name='kLSMMapWriteError' value='-6642'/>
+<enum name='kLSMResultBestWords' value='1'/>
+<enum name='kLSMTextApplySpamHeuristics' value='4'/>
+<enum name='kLSMTextPreserveAcronyms' value='2'/>
+<enum name='kLSMTextPreserveCase' value='1'/>
+<function name='LSMMapAddCategory'>
+<arg type='^{__LSMMap=}'/>
+<retval type='I'/>
+</function>
+<function name='LSMMapAddText'>
+<arg type='^{__LSMMap=}'/>
+<arg type='^{__LSMText=}'/>
+<arg type='I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='LSMMapAddTextWithWeight'>
+<arg type='^{__LSMMap=}'/>
+<arg type='^{__LSMText=}'/>
+<arg type='I'/>
+<arg type='f'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='LSMMapApplyClusters'>
+<arg type='^{__LSMMap=}'/>
+<arg type='^{__CFArray=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='LSMMapCompile'>
+<arg type='^{__LSMMap=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='LSMMapCreate'>
+<arg type='^{__CFAllocator=}'/>
+<arg type64='Q' type='L'/>
+<retval already_retained='true' type='^{__LSMMap=}'/>
+</function>
+<function name='LSMMapCreateClusters'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__LSMMap=}'/>
+<arg type='^{__CFArray=}'/>
+<arg type64='q' type='l'/>
+<arg type64='Q' type='L'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='LSMMapCreateFromURL'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__CFURL=}'/>
+<arg type64='Q' type='L'/>
+<retval already_retained='true' type='^{__LSMMap=}'/>
+</function>
+<function name='LSMMapGetCategoryCount'>
+<arg type='^{__LSMMap=}'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='LSMMapGetProperties'>
+<arg type='^{__LSMMap=}'/>
+<retval type='^{__CFDictionary=}'/>
+</function>
+<function name='LSMMapGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='LSMMapSetProperties'>
+<arg type='^{__LSMMap=}'/>
+<arg type='^{__CFDictionary=}'/>
+</function>
+<function name='LSMMapSetStopWords'>
+<arg type='^{__LSMMap=}'/>
+<arg type='^{__LSMText=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='LSMMapStartTraining'>
+<arg type='^{__LSMMap=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='LSMMapWriteToStream'>
+<arg type='^{__LSMMap=}'/>
+<arg type='^{__LSMText=}'/>
+<arg type='^{__CFWriteStream=}'/>
+<arg type64='Q' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='LSMMapWriteToURL'>
+<arg type='^{__LSMMap=}'/>
+<arg type='^{__CFURL=}'/>
+<arg type64='Q' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='LSMResultCopyToken'>
+<arg type='^{__LSMResult=}'/>
+<arg type64='q' type='l'/>
+<retval already_retained='true' type='^{__CFData=}'/>
+</function>
+<function name='LSMResultCopyTokenCluster'>
+<arg type='^{__LSMResult=}'/>
+<arg type64='q' type='l'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='LSMResultCopyWord'>
+<arg type='^{__LSMResult=}'/>
+<arg type64='q' type='l'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='LSMResultCopyWordCluster'>
+<arg type='^{__LSMResult=}'/>
+<arg type64='q' type='l'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='LSMResultCreate'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__LSMMap=}'/>
+<arg type='^{__LSMText=}'/>
+<arg type64='q' type='l'/>
+<arg type64='Q' type='L'/>
+<retval already_retained='true' type='^{__LSMResult=}'/>
+</function>
+<function name='LSMResultGetCategory'>
+<arg type='^{__LSMResult=}'/>
+<arg type64='q' type='l'/>
+<retval type='I'/>
+</function>
+<function name='LSMResultGetCount'>
+<arg type='^{__LSMResult=}'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='LSMResultGetScore'>
+<arg type='^{__LSMResult=}'/>
+<arg type64='q' type='l'/>
+<retval type='f'/>
+</function>
+<function name='LSMResultGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='LSMTextAddToken'>
+<arg type='^{__LSMText=}'/>
+<arg type='^{__CFData=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='LSMTextAddWord'>
+<arg type='^{__LSMText=}'/>
+<arg type='^{__CFString=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='LSMTextAddWords'>
+<arg type='^{__LSMText=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFLocale=}'/>
+<arg type64='Q' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='LSMTextCreate'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__LSMMap=}'/>
+<retval already_retained='true' type='^{__LSMText=}'/>
+</function>
+<function name='LSMTextGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+</signatures>

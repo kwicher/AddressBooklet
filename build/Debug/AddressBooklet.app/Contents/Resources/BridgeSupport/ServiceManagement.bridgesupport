@@ -1,0 +1,60 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<constant name='kSMDomainSystemLaunchd' type='^{__CFString=}'/>
+<constant name='kSMDomainUserLaunchd' type='^{__CFString=}'/>
+<constant name='kSMErrorDomainFramework' type='^{__CFString=}'/>
+<constant name='kSMErrorDomainIPC' type='^{__CFString=}'/>
+<constant name='kSMErrorDomainLaunchd' type='^{__CFString=}'/>
+<constant name='kSMInfoKeyAuthorizedClients' type='^{__CFString=}'/>
+<constant name='kSMInfoKeyPrivilegedExecutables' type='^{__CFString=}'/>
+<string_constant name='kSMRightBlessPrivilegedHelper' value='com.apple.ServiceManagement.blesshelper'/>
+<string_constant name='kSMRightModifySystemDaemons' value='com.apple.ServiceManagement.daemons.modify'/>
+<enum name='kSMErrorAuthorizationFailure' value='4'/>
+<enum name='kSMErrorInternalFailure' value='2'/>
+<enum name='kSMErrorInvalidSignature' value='3'/>
+<enum name='kSMErrorJobMustBeEnabled' value='9'/>
+<enum name='kSMErrorJobNotFound' value='6'/>
+<enum name='kSMErrorJobPlistNotFound' value='8'/>
+<enum name='kSMErrorServiceUnavailable' value='7'/>
+<enum name='kSMErrorToolNotValid' value='5'/>
+<function name='SMCopyAllJobDictionaries'>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='SMJobBless'>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{AuthorizationOpaqueRef=}'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='SMJobCopyDictionary'>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='SMJobRemove'>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{AuthorizationOpaqueRef=}'/>
+<arg type='B'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='SMJobSubmit'>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFDictionary=}'/>
+<arg type='^{AuthorizationOpaqueRef=}'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='SMLoginItemSetEnabled'>
+<arg type='^{__CFString=}'/>
+<arg type='B'/>
+<retval type='B'/>
+</function>
+</signatures>

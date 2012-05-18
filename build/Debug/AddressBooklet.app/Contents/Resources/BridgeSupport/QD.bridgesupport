@@ -1,0 +1,1322 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<struct name='ATSFlatDataFontNameDataHeader' type='{ATSFlatDataFontNameDataHeader=&quot;nameSpecifierType&quot;I&quot;nameSpecifierSize&quot;I}'/>
+<struct name='ATSFlatDataFontSpecRawNameData' type='{ATSFlatDataFontSpecRawNameData=&quot;fontNameType&quot;I&quot;fontNamePlatform&quot;I&quot;fontNameScript&quot;I&quot;fontNameLanguage&quot;I&quot;fontNameLength&quot;I}'/>
+<struct name='ATSFlatDataFontSpecRawNameDataHeader' type='{ATSFlatDataFontSpecRawNameDataHeader=&quot;numberOfFlattenedNames&quot;I&quot;nameDataArray&quot;[1{ATSFlatDataFontSpecRawNameData=&quot;fontNameType&quot;I&quot;fontNamePlatform&quot;I&quot;fontNameScript&quot;I&quot;fontNameLanguage&quot;I&quot;fontNameLength&quot;I}]}'/>
+<struct name='ATSFlatDataLayoutControlsDataHeader' type64='{ATSFlatDataLayoutControlsDataHeader=&quot;numberOfLayoutControls&quot;I&quot;controlArray&quot;[1{ATSUAttributeInfo=&quot;fTag&quot;I&quot;fValueSize&quot;Q}]}' type='{ATSFlatDataLayoutControlsDataHeader=&quot;numberOfLayoutControls&quot;I&quot;controlArray&quot;[1{ATSUAttributeInfo=&quot;fTag&quot;I&quot;fValueSize&quot;I}]}'/>
+<struct name='ATSFlatDataLineInfoData' type='{ATSFlatDataLineInfoData=&quot;lineLength&quot;I&quot;numberOfLineControls&quot;I}'/>
+<struct name='ATSFlatDataLineInfoHeader' type='{ATSFlatDataLineInfoHeader=&quot;numberOfLines&quot;I&quot;lineInfoArray&quot;[1{ATSFlatDataLineInfoData=&quot;lineLength&quot;I&quot;numberOfLineControls&quot;I}]}'/>
+<struct name='ATSFlatDataMainHeaderBlock' type='{ATSFlatDataMainHeaderBlock=&quot;version&quot;I&quot;sizeOfDataBlock&quot;I&quot;offsetToTextLayouts&quot;I&quot;offsetToStyleRuns&quot;I&quot;offsetToStyleList&quot;I}'/>
+<struct name='ATSFlatDataStyleListFeatureData' type='{ATSFlatDataStyleListFeatureData=&quot;theFeatureType&quot;S&quot;theFeatureSelector&quot;S}'/>
+<struct name='ATSFlatDataStyleListHeader' type='{ATSFlatDataStyleListHeader=&quot;numberOfStyles&quot;I&quot;styleDataArray&quot;[1{ATSFlatDataStyleListStyleDataHeader=&quot;sizeOfStyleInfo&quot;I&quot;numberOfSetAttributes&quot;I&quot;numberOfSetFeatures&quot;I&quot;numberOfSetVariations&quot;I}]}'/>
+<struct name='ATSFlatDataStyleListStyleDataHeader' type='{ATSFlatDataStyleListStyleDataHeader=&quot;sizeOfStyleInfo&quot;I&quot;numberOfSetAttributes&quot;I&quot;numberOfSetFeatures&quot;I&quot;numberOfSetVariations&quot;I}'/>
+<struct name='ATSFlatDataStyleListVariationData' type='{ATSFlatDataStyleListVariationData=&quot;theVariationAxis&quot;I&quot;theVariationValue&quot;i}'/>
+<struct name='ATSFlatDataStyleRunDataHeader' type='{ATSFlatDataStyleRunDataHeader=&quot;numberOfStyleRuns&quot;I&quot;styleRunArray&quot;[1{ATSUStyleRunInfo=&quot;runLength&quot;I&quot;styleObjectIndex&quot;I}]}'/>
+<struct name='ATSFlatDataTextLayoutDataHeader' type='{ATSFlatDataTextLayoutDataHeader=&quot;sizeOfLayoutData&quot;I&quot;textLayoutLength&quot;I&quot;offsetToLayoutControls&quot;I&quot;offsetToLineInfo&quot;I}'/>
+<struct name='ATSFlatDataTextLayoutHeader' type='{ATSFlatDataTextLayoutHeader=&quot;numFlattenedTextLayouts&quot;I&quot;flattenedTextLayouts&quot;[1{ATSFlatDataTextLayoutDataHeader=&quot;sizeOfLayoutData&quot;I&quot;textLayoutLength&quot;I&quot;offsetToLayoutControls&quot;I&quot;offsetToLineInfo&quot;I}]}'/>
+<struct name='ATSUAttributeInfo' type64='{ATSUAttributeInfo=&quot;fTag&quot;I&quot;fValueSize&quot;Q}' type='{ATSUAttributeInfo=&quot;fTag&quot;I&quot;fValueSize&quot;I}'/>
+<struct name='ATSUBackgroundColor' type='{ATSURGBAlphaColor=&quot;red&quot;f&quot;green&quot;f&quot;blue&quot;f&quot;alpha&quot;f}'/>
+<struct name='ATSUCaret' type='{ATSUCaret=&quot;fX&quot;i&quot;fY&quot;i&quot;fDeltaX&quot;i&quot;fDeltaY&quot;i}'/>
+<struct name='ATSUGlyphInfo' type64='{ATSUGlyphInfo=&quot;glyphID&quot;S&quot;reserved&quot;S&quot;layoutFlags&quot;I&quot;charIndex&quot;Q&quot;style&quot;^{OpaqueATSUStyle}&quot;deltaY&quot;f&quot;idealX&quot;f&quot;screenX&quot;s&quot;caretX&quot;s}' type='{ATSUGlyphInfo=&quot;glyphID&quot;S&quot;reserved&quot;S&quot;layoutFlags&quot;I&quot;charIndex&quot;I&quot;style&quot;^{OpaqueATSUStyle}&quot;deltaY&quot;f&quot;idealX&quot;f&quot;screenX&quot;s&quot;caretX&quot;s}'/>
+<struct name='ATSUGlyphInfoArray' type64='{ATSUGlyphInfoArray=&quot;layout&quot;^{OpaqueATSUTextLayout}&quot;numGlyphs&quot;Q&quot;glyphs&quot;[1{ATSUGlyphInfo=&quot;glyphID&quot;S&quot;reserved&quot;S&quot;layoutFlags&quot;I&quot;charIndex&quot;Q&quot;style&quot;^{OpaqueATSUStyle}&quot;deltaY&quot;f&quot;idealX&quot;f&quot;screenX&quot;s&quot;caretX&quot;s}]}' type='{ATSUGlyphInfoArray=&quot;layout&quot;^{OpaqueATSUTextLayout}&quot;numGlyphs&quot;I&quot;glyphs&quot;[1{ATSUGlyphInfo=&quot;glyphID&quot;S&quot;reserved&quot;S&quot;layoutFlags&quot;I&quot;charIndex&quot;I&quot;style&quot;^{OpaqueATSUStyle}&quot;deltaY&quot;f&quot;idealX&quot;f&quot;screenX&quot;s&quot;caretX&quot;s}]}'/>
+<struct name='ATSUGlyphSelector' type='{ATSUGlyphSelector=&quot;collection&quot;S&quot;glyphID&quot;S}'/>
+<struct name='ATSURGBAlphaColor' type='{ATSURGBAlphaColor=&quot;red&quot;f&quot;green&quot;f&quot;blue&quot;f&quot;alpha&quot;f}'/>
+<struct name='ATSUStyleRunInfo' type='{ATSUStyleRunInfo=&quot;runLength&quot;I&quot;styleObjectIndex&quot;I}'/>
+<struct name='ATSUTab' type='{ATSUTab=&quot;tabPosition&quot;i&quot;tabType&quot;S}'/>
+<struct name='ATSUUnhighlightData' type='{ATSUUnhighlightData=&quot;dataType&quot;I&quot;unhighlightData&quot;(ATSUBackgroundData=&quot;backgroundColor&quot;{ATSURGBAlphaColor=&quot;red&quot;f&quot;green&quot;f&quot;blue&quot;f&quot;alpha&quot;f}&quot;backgroundUPP&quot;^?)}'/>
+<struct name='AsscEntry' type='{AsscEntry=&quot;fontSize&quot;s&quot;fontStyle&quot;s&quot;fontID&quot;s}'/>
+<struct name='BitMap' type='{BitMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}}'/>
+<struct name='CGrafPort' type='{GrafPort=&quot;whatever&quot;[87s]}'/>
+<struct name='CQDProcs' type='{CQDProcs=&quot;textProc&quot;^?&quot;lineProc&quot;^?&quot;rectProc&quot;^?&quot;rRectProc&quot;^?&quot;ovalProc&quot;^?&quot;arcProc&quot;^?&quot;polyProc&quot;^?&quot;rgnProc&quot;^?&quot;bitsProc&quot;^?&quot;commentProc&quot;^?&quot;txMeasProc&quot;^?&quot;getPicProc&quot;^?&quot;putPicProc&quot;^?&quot;opcodeProc&quot;^?&quot;newProc1&quot;^?&quot;glyphsProc&quot;^?&quot;printerStatusProc&quot;^?&quot;newProc4&quot;^?&quot;newProc5&quot;^?&quot;newProc6&quot;^?}'/>
+<struct name='ColorSpec' type='{ColorSpec=&quot;value&quot;s&quot;rgb&quot;{RGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}}'/>
+<struct name='ColorTable' type='{ColorTable=&quot;ctSeed&quot;i&quot;ctFlags&quot;s&quot;ctSize&quot;s&quot;ctTable&quot;[1{ColorSpec=&quot;value&quot;s&quot;rgb&quot;{RGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}}]}'/>
+<struct name='FMInput' type='{FMInput=&quot;family&quot;s&quot;size&quot;s&quot;face&quot;C&quot;needBits&quot;B&quot;device&quot;s&quot;numer&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;denom&quot;{Point=&quot;v&quot;s&quot;h&quot;s}}'/>
+<struct name='FamRec' type='{FamRec=&quot;ffFlags&quot;s&quot;ffFamID&quot;s&quot;ffFirstChar&quot;s&quot;ffLastChar&quot;s&quot;ffAscent&quot;s&quot;ffDescent&quot;s&quot;ffLeading&quot;s&quot;ffWidMax&quot;s&quot;ffWTabOff&quot;i&quot;ffKernOff&quot;i&quot;ffStylOff&quot;i&quot;ffProperty&quot;[9s]&quot;ffIntl&quot;[2s]&quot;ffVersion&quot;s}'/>
+<struct name='FontAssoc' type='{FontAssoc=&quot;numAssoc&quot;s}'/>
+<struct name='FontInfo' type='{FontInfo=&quot;ascent&quot;s&quot;descent&quot;s&quot;widMax&quot;s&quot;leading&quot;s}'/>
+<struct name='FontRec' type='{FontRec=&quot;fontType&quot;s&quot;firstChar&quot;s&quot;lastChar&quot;s&quot;widMax&quot;s&quot;kernMax&quot;s&quot;nDescent&quot;s&quot;fRectWidth&quot;s&quot;fRectHeight&quot;s&quot;owTLoc&quot;S&quot;ascent&quot;s&quot;descent&quot;s&quot;leading&quot;s&quot;rowWords&quot;s}'/>
+<struct name='GDevice' type='{GDevice=&quot;gdRefNum&quot;s&quot;gdID&quot;s&quot;gdType&quot;s&quot;gdITable&quot;^*&quot;gdResPref&quot;s&quot;gdSearchProc&quot;^*&quot;gdCompProc&quot;^*&quot;gdFlags&quot;s&quot;gdPMap&quot;^^{PixMap}&quot;gdRefCon&quot;i&quot;gdNextGD&quot;^^{GDevice}&quot;gdRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;gdMode&quot;i&quot;gdCCBytes&quot;s&quot;gdCCDepth&quot;s&quot;gdCCXData&quot;^*&quot;gdCCXMask&quot;^*&quot;gdExt&quot;^*}'/>
+<struct name='GrafPort' type='{GrafPort=&quot;whatever&quot;[87s]}'/>
+<struct name='KernEntry' type='{KernEntry=&quot;kernStyle&quot;s&quot;kernLength&quot;s}'/>
+<struct name='KernPair' type='{KernPair=&quot;kernFirst&quot;c&quot;kernSecond&quot;c&quot;kernWidth&quot;s}'/>
+<struct name='KernTable' type='{KernTable=&quot;numKerns&quot;s}'/>
+<struct name='MacPolygon' type='{MacPolygon=&quot;polySize&quot;s&quot;polyBBox&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;polyPoints&quot;[1{Point=&quot;v&quot;s&quot;h&quot;s}]}'/>
+<struct name='NameTable' type='{NameTable=&quot;stringCount&quot;s&quot;baseFontName&quot;[256C]}'/>
+<struct name='OpenCPicParams' type='{OpenCPicParams=&quot;srcRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;hRes&quot;i&quot;vRes&quot;i&quot;version&quot;s&quot;reserved1&quot;s&quot;reserved2&quot;i}'/>
+<struct name='Pattern' type='{Pattern=&quot;pat&quot;[8C]}'/>
+<struct name='Picture' type='{Picture=&quot;picSize&quot;s&quot;picFrame&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}}'/>
+<struct name='PixMap' type='{PixMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;pmVersion&quot;s&quot;packType&quot;s&quot;packSize&quot;i&quot;hRes&quot;i&quot;vRes&quot;i&quot;pixelType&quot;s&quot;pixelSize&quot;s&quot;cmpCount&quot;s&quot;cmpSize&quot;s&quot;pixelFormat&quot;I&quot;pmTable&quot;^^{ColorTable}&quot;pmExt&quot;^v}'/>
+<struct name='PixPat' type='{PixPat=&quot;patType&quot;s&quot;patMap&quot;^^{PixMap}&quot;patData&quot;^*&quot;patXData&quot;^*&quot;patXValid&quot;s&quot;patXMap&quot;^*&quot;pat1Data&quot;{Pattern=&quot;pat&quot;[8C]}}'/>
+<struct name='Polygon' type='{MacPolygon=&quot;polySize&quot;s&quot;polyBBox&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;polyPoints&quot;[1{Point=&quot;v&quot;s&quot;h&quot;s}]}'/>
+<struct name='RGBColor' type='{RGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}'/>
+<struct name='StyleTable' type='{StyleTable=&quot;fontClass&quot;s&quot;offset&quot;i&quot;reserved&quot;i&quot;indexes&quot;[48c]}'/>
+<struct name='VDGammaRecord' type='{VDGammaRecord=&quot;csGTable&quot;*}'/>
+<cftype name='ATSUStyleSettingRef' type='^{LLCStyleInfo=}'/>
+<opaque name='ATSUFontFallbacks' type='^{OpaqueATSUFontFallbacks=}'/>
+<opaque name='ATSUStyle' type='^{OpaqueATSUStyle=}'/>
+<opaque name='ATSUTextLayout' type='^{OpaqueATSUTextLayout=}'/>
+<opaque name='DialogPtr' type='^{OpaqueDialogPtr=}'/>
+<opaque name='GrafPtr' type='^{OpaqueGrafPtr=}'/>
+<opaque name='RgnHandle' type='^{OpaqueRgnHandle=}'/>
+<opaque name='WindowPtr' type='^{OpaqueWindowPtr=}'/>
+<enum name='QD_HEADERS_ARE_PRIVATE' value='1'/>
+<enum name='k16BE555PixelFormat' value='16'/>
+<enum name='k16BE565PixelFormat' value='1110783541'/>
+<enum name='k16LE5551PixelFormat' value='892679473'/>
+<enum name='k16LE555PixelFormat' value='1278555445'/>
+<enum name='k16LE565PixelFormat' value='1278555701'/>
+<enum name='k1IndexedGrayPixelFormat' value='33'/>
+<enum name='k1MonochromePixelFormat' value='1'/>
+<enum name='k24BGRPixelFormat' value='842285639'/>
+<enum name='k24RGBPixelFormat' value='24'/>
+<enum name='k2IndexedGrayPixelFormat' value='34'/>
+<enum name='k2IndexedPixelFormat' value='2'/>
+<enum name='k2vuyPixelFormat' value='846624121'/>
+<enum name='k32ABGRPixelFormat' value='1094862674'/>
+<enum name='k32ARGBPixelFormat' value='32'/>
+<enum name='k32BGRAPixelFormat' value='1111970369'/>
+<enum name='k32RGBAPixelFormat' value='1380401729'/>
+<enum name='k4IndexedGrayPixelFormat' value='36'/>
+<enum name='k4IndexedPixelFormat' value='4'/>
+<enum name='k8IndexedGrayPixelFormat' value='40'/>
+<enum name='k8IndexedPixelFormat' value='8'/>
+<enum name='kATSFlatDataUstlCurrentVersion' value='2'/>
+<enum name='kATSFlatDataUstlVersion0' value='0'/>
+<enum name='kATSFlatDataUstlVersion1' value='1'/>
+<enum name='kATSFlatDataUstlVersion2' value='2'/>
+<enum name='kATSFlattenedFontSpecifierRawNameData' value='1851878756'/>
+<enum name='kATSUAfterWithStreamShiftTag' value='268'/>
+<enum name='kATSUAscentTag' value='284'/>
+<enum name='kATSUBackgroundCallback' value='1'/>
+<enum name='kATSUBackgroundColor' value='0'/>
+<enum name='kATSUBaselineClassTag' value='274'/>
+<enum name='kATSUBeforeWithStreamShiftTag' value='267'/>
+<enum name='kATSUByCharacter' value='0'/>
+<enum name='kATSUByCharacterCluster' value='3'/>
+<enum name='kATSUByCluster' value='1'/>
+<enum name='kATSUByTypographicCluster' value='1'/>
+<enum name='kATSUByWord' value='2'/>
+<enum name='kATSUCGContextTag' value='32767'/>
+<enum name='kATSUCenterAlignment' value='536870912'/>
+<enum name='kATSUCenterTab' value='1'/>
+<enum name='kATSUClearAll' value='4294967295'/>
+<enum name='kATSUColorTag' value='263'/>
+<enum name='kATSUCrossStreamShiftTag' value='269'/>
+<enum name='kATSUDataStreamUnicodeStyledText' value='1970500716'/>
+<enum name='kATSUDecimalTab' value='3'/>
+<enum name='kATSUDecompositionFactorTag' value='273'/>
+<enum name='kATSUDefaultFontFallbacks' value='0'/>
+<enum name='kATSUDescentTag' value='285'/>
+<enum name='kATSUDirectDataAdvanceDeltaFixedArray' value='0'/>
+<enum name='kATSUDirectDataBaselineDeltaFixedArray' value='1'/>
+<enum name='kATSUDirectDataDeviceDeltaSInt16Array' value='2'/>
+<enum name='kATSUDirectDataLayoutRecordATSLayoutRecordCurrent' value='100'/>
+<enum name='kATSUDirectDataLayoutRecordATSLayoutRecordVersion1' value='100'/>
+<enum name='kATSUDirectDataStyleIndexUInt16Array' value='3'/>
+<enum name='kATSUDirectDataStyleSettingATSUStyleSettingRefArray' value='4'/>
+<enum name='kATSUEndAlignment' value='1073741824'/>
+<enum name='kATSUFlattenOptionNoOptionsMask' value='0'/>
+<enum name='kATSUFontMatrixTag' value='289'/>
+<enum name='kATSUFontTag' value='261'/>
+<enum name='kATSUForceHangingTag' value='280'/>
+<enum name='kATSUFromFollowingLayout' value='4294967293'/>
+<enum name='kATSUFromPreviousLayout' value='4294967294'/>
+<enum name='kATSUFromTextBeginning' value='4294967295'/>
+<enum name='kATSUFullJustification' value='1073741824'/>
+<enum name='kATSUGlyphSelectorTag' value='287'/>
+<enum name='kATSUHangingInhibitFactorTag' value='271'/>
+<enum name='kATSUImposeWidthTag' value='266'/>
+<enum name='kATSUInvalidFontID' value='0'/>
+<enum name='kATSUKerningInhibitFactorTag' value='272'/>
+<enum name='kATSULangRegionTag' value='264'/>
+<enum name='kATSULanguageTag' value='264'/>
+<enum name='kATSULastResortOnlyFallback' value='1'/>
+<enum name='kATSULayoutOperationOverrideTag' value='15'/>
+<enum name='kATSULeadingTag' value='286'/>
+<enum name='kATSULeftTab' value='0'/>
+<enum name='kATSULeftToRightBaseDirection' value='0'/>
+<enum name='kATSULineAscentTag' value='8'/>
+<enum name='kATSULineBaselineValuesTag' value='6'/>
+<enum name='kATSULineDecimalTabCharacterTag' value='14'/>
+<enum name='kATSULineDescentTag' value='9'/>
+<enum name='kATSULineDirectionTag' value='3'/>
+<enum name='kATSULineFlushFactorTag' value='5'/>
+<enum name='kATSULineFontFallbacksTag' value='13'/>
+<enum name='kATSULineHighlightCGColorTag' value='17'/>
+<enum name='kATSULineJustificationFactorTag' value='4'/>
+<enum name='kATSULineLangRegionTag' value='10'/>
+<enum name='kATSULineLanguageTag' value='10'/>
+<enum name='kATSULineLayoutOptionsTag' value='7'/>
+<enum name='kATSULineRotationTag' value='2'/>
+<enum name='kATSULineTextLocatorTag' value='11'/>
+<enum name='kATSULineTruncationTag' value='12'/>
+<enum name='kATSULineWidthTag' value='1'/>
+<enum name='kATSUMaxATSUITagValue' value='65535'/>
+<enum name='kATSUMaxLineTag' value='18'/>
+<enum name='kATSUMaxStyleTag' value='299'/>
+<enum name='kATSUNoCaretAngleTag' value='277'/>
+<enum name='kATSUNoJustification' value='0'/>
+<enum name='kATSUNoLigatureSplitTag' value='276'/>
+<enum name='kATSUNoOpticalAlignmentTag' value='279'/>
+<enum name='kATSUNoSelector' value='65535'/>
+<enum name='kATSUNoSpecialJustificationTag' value='281'/>
+<enum name='kATSUNumberTabTypes' value='4'/>
+<enum name='kATSUPriorityJustOverrideTag' value='275'/>
+<enum name='kATSUQDBoldfaceTag' value='256'/>
+<enum name='kATSUQDCondensedTag' value='259'/>
+<enum name='kATSUQDExtendedTag' value='260'/>
+<enum name='kATSUQDItalicTag' value='257'/>
+<enum name='kATSUQDUnderlineTag' value='258'/>
+<enum name='kATSURGBAlphaColorTag' value='288'/>
+<enum name='kATSURightTab' value='2'/>
+<enum name='kATSURightToLeftBaseDirection' value='1'/>
+<enum name='kATSUSequentialFallbacksExclusive' value='3'/>
+<enum name='kATSUSequentialFallbacksPreferred' value='2'/>
+<enum name='kATSUSizeTag' value='262'/>
+<enum name='kATSUStartAlignment' value='0'/>
+<enum name='kATSUStronglyHorizontal' value='0'/>
+<enum name='kATSUStronglyVertical' value='1'/>
+<enum name='kATSUStyleContainedBy' value='3'/>
+<enum name='kATSUStyleContains' value='1'/>
+<enum name='kATSUStyleDoubleLineCount' value='2'/>
+<enum name='kATSUStyleDropShadowBlurOptionTag' value='296'/>
+<enum name='kATSUStyleDropShadowColorOptionTag' value='298'/>
+<enum name='kATSUStyleDropShadowOffsetOptionTag' value='297'/>
+<enum name='kATSUStyleDropShadowTag' value='295'/>
+<enum name='kATSUStyleEquals' value='2'/>
+<enum name='kATSUStyleRenderingOptionsTag' value='283'/>
+<enum name='kATSUStyleSingleLineCount' value='1'/>
+<enum name='kATSUStyleStrikeThroughColorOptionTag' value='294'/>
+<enum name='kATSUStyleStrikeThroughCountOptionTag' value='293'/>
+<enum name='kATSUStyleStrikeThroughTag' value='292'/>
+<enum name='kATSUStyleTextLocatorTag' value='282'/>
+<enum name='kATSUStyleUnderlineColorOptionTag' value='291'/>
+<enum name='kATSUStyleUnderlineCountOptionTag' value='290'/>
+<enum name='kATSUStyleUnequal' value='0'/>
+<enum name='kATSUSuppressCrossKerningTag' value='278'/>
+<enum name='kATSUToTextEnd' value='4294967295'/>
+<enum name='kATSUTrackingTag' value='270'/>
+<enum name='kATSUTruncFeatNoSquishing' value='8'/>
+<enum name='kATSUTruncateEnd' value='2'/>
+<enum name='kATSUTruncateMiddle' value='3'/>
+<enum name='kATSUTruncateNone' value='0'/>
+<enum name='kATSUTruncateSpecificationMask' value='7'/>
+<enum name='kATSUTruncateStart' value='1'/>
+<enum name='kATSUUnFlattenOptionNoOptionsMask' value='0'/>
+<enum name='kATSUUseGrafPortPenLoc' value='4294967295'/>
+<enum name='kATSUUseLineControlWidth' value='2147483647'/>
+<enum name='kATSUVerticalCharacterTag' value='265'/>
+<enum name='kGlyphCollectionAdobeCNS1' value='1'/>
+<enum name='kGlyphCollectionAdobeGB1' value='2'/>
+<enum name='kGlyphCollectionAdobeJapan1' value='3'/>
+<enum name='kGlyphCollectionAdobeJapan2' value='4'/>
+<enum name='kGlyphCollectionAdobeKorea1' value='5'/>
+<enum name='kGlyphCollectionGID' value='0'/>
+<enum name='kGlyphCollectionUnspecified' value='255'/>
+<enum name='kHorizontalConstraint' value='2'/>
+<enum name='kInvertHighlighting' value='0'/>
+<enum name='kNoConstraint' value='0'/>
+<enum name='kRedrawHighlighting' value='1'/>
+<enum name='kUYVY422PixelFormat' value='1431918169'/>
+<enum name='kVerticalConstraint' value='1'/>
+<enum name='kYUV211PixelFormat' value='1496461617'/>
+<enum name='kYUV411PixelFormat' value='1496592689'/>
+<enum name='kYUVSPixelFormat' value='2037741171'/>
+<enum name='kYUVUPixelFormat' value='2037741173'/>
+<enum name='kYVU9PixelFormat' value='1498830137'/>
+<enum name='kYVYU422PixelFormat' value='1498831189'/>
+<enum name='srcCopy' value='0'/>
+<function name='ATSUClearLayoutCache'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type64='Q' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSUCreateStyle'>
+<arg type='^^{OpaqueATSUStyle}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSUCreateTextLayoutWithTextPtr'>
+<arg type='^S'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='^Q' type='^I'/>
+<arg type='^^{OpaqueATSUStyle}'/>
+<arg type='^^{OpaqueATSUTextLayout}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSUDirectGetLayoutDataArrayPtrFromLineRef'>
+<arg type='^{ATSGlyphVector=}'/>
+<arg type64='I' type='L'/>
+<arg type='B'/>
+<arg type='^^v'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSUDirectReleaseLayoutDataArrayPtr'>
+<arg type='^{ATSGlyphVector=}'/>
+<arg type64='I' type='L'/>
+<arg type='^^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSUDisposeStyle'>
+<arg type='^{OpaqueATSUStyle=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSUDisposeTextLayout'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSUDrawText'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='i' type='l'/>
+<arg type64='i' type='l'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSUGetGlyphBounds'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type64='i' type='l'/>
+<arg type64='i' type='l'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='S'/>
+<arg type64='Q' type='L'/>
+<arg type='^{ATSTrapezoid={FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}}'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSUMatchFontsToText'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='^I'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSUPositionToOffset'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type64='i' type='l'/>
+<arg type64='i' type='l'/>
+<arg type64='^Q' type='^I'/>
+<arg type='^B'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSUSetAttributes'>
+<arg type='^{OpaqueATSUStyle=}'/>
+<arg type64='Q' type='L'/>
+<arg type='^I'/>
+<arg type64='^Q' type='^I'/>
+<arg type='^^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSUSetFontFeatures'>
+<arg type='^{OpaqueATSUStyle=}'/>
+<arg type64='Q' type='L'/>
+<arg type='^S'/>
+<arg type='^S'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSUSetLayoutControls'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type64='Q' type='L'/>
+<arg type='^I'/>
+<arg type64='^Q' type='^I'/>
+<arg type='^^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSUSetRunStyle'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='^{OpaqueATSUStyle=}'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSUSetTextLayoutRefCon'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type64='^v' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSUSetTransientFontMatching'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='ATSUTextMoved'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='^S'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DisposeATSCubicClosePathUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+</function>
+<function name='DisposeATSCubicCurveToUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+</function>
+<function name='DisposeATSCubicLineToUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+</function>
+<function name='DisposeATSCubicMoveToUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+</function>
+<function name='DisposeATSQuadraticClosePathUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+</function>
+<function name='DisposeATSQuadraticCurveUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+</function>
+<function name='DisposeATSQuadraticLineUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+</function>
+<function name='DisposeATSQuadraticNewPathUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+</function>
+<function name='DisposeColorComplementUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{RGBColor=SSS}'/>
+<retval type='B'/>
+</arg>
+</function>
+<function name='DisposeColorSearchUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{RGBColor=SSS}'/>
+<arg type64='^q' type='^l'/>
+<retval type='B'/>
+</arg>
+</function>
+<function name='DisposeDragGrayRgnUPP'>
+<arg function_pointer='true' type='^?'>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDArcUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDBitsUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{BitMap=*s{Rect=ssss}}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDCommentUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='^*'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDGetPicUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDJShieldCursorUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDLineUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='{Point=ss}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDOpcodeUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='S'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDOvalUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDPolyUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^^{MacPolygon}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDPrinterStatusUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type64='i' type='l'/>
+<arg type='^{OpaqueGrafPtr=}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+</function>
+<function name='DisposeQDPutPicUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDRRectUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDRectUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDRgnUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDStdGlyphsUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type64='Q' type='L'/>
+<retval type64='i' type='l'/>
+</arg>
+</function>
+<function name='DisposeQDTextUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='{Point=ss}'/>
+<arg type='{Point=ss}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDTxMeasUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{FontInfo=ssss}'/>
+<retval type='s'/>
+</arg>
+</function>
+<function name='DisposeRedrawBackgroundUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='^{ATSTrapezoid={FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}}'/>
+<arg type64='Q' type='L'/>
+<retval type='B'/>
+</arg>
+</function>
+<function name='DisposeRegionToRectsUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='S'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+</function>
+<function name='InvokeATSCubicClosePathUPP'>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='InvokeATSCubicCurveToUPP'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='InvokeATSCubicLineToUPP'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='InvokeATSCubicMoveToUPP'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='InvokeATSQuadraticClosePathUPP'>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='InvokeATSQuadraticCurveUPP'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='InvokeATSQuadraticLineUPP'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='InvokeATSQuadraticNewPathUPP'>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='InvokeColorComplementUPP'>
+<arg type='^{RGBColor=SSS}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{RGBColor=SSS}'/>
+<retval type='B'/>
+</arg>
+<retval type='B'/>
+</function>
+<function name='InvokeColorSearchUPP'>
+<arg type='^{RGBColor=SSS}'/>
+<arg type64='^q' type='^l'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{RGBColor=SSS}'/>
+<arg type64='^q' type='^l'/>
+<retval type='B'/>
+</arg>
+<retval type='B'/>
+</function>
+<function name='InvokeDragGrayRgnUPP'>
+<arg function_pointer='true' type='^?'>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDArcUPP'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDBitsUPP'>
+<arg type='^{BitMap=*s{Rect=ssss}}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{BitMap=*s{Rect=ssss}}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDCommentUPP'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='^*'/>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='^*'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDGetPicUPP'>
+<arg type='^v'/>
+<arg type='s'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDJShieldCursorUPP'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDLineUPP'>
+<arg type='{Point=ss}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='{Point=ss}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDOpcodeUPP'>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='S'/>
+<arg type='s'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='S'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDOvalUPP'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDPolyUPP'>
+<arg type='c'/>
+<arg type='^^{MacPolygon}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^^{MacPolygon}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDPrinterStatusUPP'>
+<arg type64='i' type='l'/>
+<arg type='^{OpaqueGrafPtr=}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type64='i' type='l'/>
+<arg type='^{OpaqueGrafPtr=}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='InvokeQDPutPicUPP'>
+<arg type='^v'/>
+<arg type='s'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDRRectUPP'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDRectUPP'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDRgnUPP'>
+<arg type='c'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDStdGlyphsUPP'>
+<arg type='^v'/>
+<arg type64='Q' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type64='Q' type='L'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='InvokeQDTextUPP'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='{Point=ss}'/>
+<arg type='{Point=ss}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='{Point=ss}'/>
+<arg type='{Point=ss}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDTxMeasUPP'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{FontInfo=ssss}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{FontInfo=ssss}'/>
+<retval type='s'/>
+</arg>
+<retval type='s'/>
+</function>
+<function name='InvokeRedrawBackgroundUPP'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='^{ATSTrapezoid={FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}}'/>
+<arg type64='Q' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='^{ATSTrapezoid={FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}}'/>
+<arg type64='Q' type='L'/>
+<retval type='B'/>
+</arg>
+<retval type='B'/>
+</function>
+<function name='InvokeRegionToRectsUPP'>
+<arg type='S'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='S'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval type64='i' type='l'/>
+</function>
+<function name='NewATSCubicClosePathUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</retval>
+</function>
+<function name='NewATSCubicCurveToUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</retval>
+</function>
+<function name='NewATSCubicLineToUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</retval>
+</function>
+<function name='NewATSCubicMoveToUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</retval>
+</function>
+<function name='NewATSQuadraticClosePathUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</retval>
+</function>
+<function name='NewATSQuadraticCurveUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</retval>
+</function>
+<function name='NewATSQuadraticLineUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</retval>
+</function>
+<function name='NewATSQuadraticNewPathUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</retval>
+</function>
+<function name='NewColorComplementUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{RGBColor=SSS}'/>
+<retval type='B'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{RGBColor=SSS}'/>
+<retval type='B'/>
+</retval>
+</function>
+<function name='NewColorSearchUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{RGBColor=SSS}'/>
+<arg type64='^q' type='^l'/>
+<retval type='B'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{RGBColor=SSS}'/>
+<arg type64='^q' type='^l'/>
+<retval type='B'/>
+</retval>
+</function>
+<function name='NewDragGrayRgnUPP'>
+<arg function_pointer='true' type='^?'>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDArcUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDBitsUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{BitMap=*s{Rect=ssss}}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{BitMap=*s{Rect=ssss}}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDCommentUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='^*'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='^*'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDGetPicUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDJShieldCursorUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDLineUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='{Point=ss}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='{Point=ss}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDOpcodeUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='S'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='S'/>
+<arg type='s'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDOvalUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDPolyUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^^{MacPolygon}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^^{MacPolygon}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDPrinterStatusUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type64='i' type='l'/>
+<arg type='^{OpaqueGrafPtr=}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type64='i' type='l'/>
+<arg type='^{OpaqueGrafPtr=}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</retval>
+</function>
+<function name='NewQDPutPicUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDRRectUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDRectUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDRgnUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDStdGlyphsUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type64='Q' type='L'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type64='Q' type='L'/>
+<retval type64='i' type='l'/>
+</retval>
+</function>
+<function name='NewQDTextUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='{Point=ss}'/>
+<arg type='{Point=ss}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='{Point=ss}'/>
+<arg type='{Point=ss}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDTxMeasUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{FontInfo=ssss}'/>
+<retval type='s'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{FontInfo=ssss}'/>
+<retval type='s'/>
+</retval>
+</function>
+<function name='NewRedrawBackgroundUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='^{ATSTrapezoid={FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}}'/>
+<arg type64='Q' type='L'/>
+<retval type='B'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='^{ATSTrapezoid={FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}}'/>
+<arg type64='Q' type='L'/>
+<retval type='B'/>
+</retval>
+</function>
+<function name='NewRegionToRectsUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='S'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='S'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</retval>
+</function>
+</signatures>

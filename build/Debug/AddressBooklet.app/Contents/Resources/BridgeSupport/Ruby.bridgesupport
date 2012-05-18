@@ -1,0 +1,3401 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<struct name='FRAME' type64='{FRAME=&quot;self&quot;Q&quot;argc&quot;i&quot;last_func&quot;Q&quot;orig_func&quot;Q&quot;last_class&quot;Q&quot;prev&quot;^{FRAME}&quot;tmp&quot;^{FRAME}&quot;node&quot;^{RNode}&quot;iter&quot;i&quot;flags&quot;i&quot;uniq&quot;Q}' type='{FRAME=&quot;self&quot;I&quot;argc&quot;i&quot;last_func&quot;I&quot;orig_func&quot;I&quot;last_class&quot;I&quot;prev&quot;^{FRAME}&quot;tmp&quot;^{FRAME}&quot;node&quot;^{RNode}&quot;iter&quot;i&quot;flags&quot;i&quot;uniq&quot;L}'/>
+<struct name='NODE' type64='{RNode=&quot;flags&quot;Q&quot;nd_file&quot;*&quot;u1&quot;(?=&quot;node&quot;^{RNode}&quot;id&quot;Q&quot;value&quot;Q&quot;cfunc&quot;^?&quot;tbl&quot;^Q)&quot;u2&quot;(?=&quot;node&quot;^{RNode}&quot;id&quot;Q&quot;argc&quot;q&quot;value&quot;Q)&quot;u3&quot;(?=&quot;node&quot;^{RNode}&quot;id&quot;Q&quot;state&quot;q&quot;entry&quot;^{global_entry}&quot;cnt&quot;q&quot;value&quot;Q)}' type='{RNode=&quot;flags&quot;L&quot;nd_file&quot;*&quot;u1&quot;(?=&quot;node&quot;^{RNode}&quot;id&quot;I&quot;value&quot;I&quot;cfunc&quot;^?&quot;tbl&quot;^I)&quot;u2&quot;(?=&quot;node&quot;^{RNode}&quot;id&quot;I&quot;argc&quot;l&quot;value&quot;I)&quot;u3&quot;(?=&quot;node&quot;^{RNode}&quot;id&quot;I&quot;state&quot;l&quot;entry&quot;^{global_entry}&quot;cnt&quot;l&quot;value&quot;I)}'/>
+<struct name='RArray' type64='{RArray=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;len&quot;q&quot;aux&quot;(?=&quot;capa&quot;q&quot;shared&quot;Q)&quot;ptr&quot;^Q}' type='{RArray=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;len&quot;l&quot;aux&quot;(?=&quot;capa&quot;l&quot;shared&quot;I)&quot;ptr&quot;^I}'/>
+<struct name='RBasic' type64='{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}' type='{RBasic=&quot;flags&quot;L&quot;klass&quot;I}'/>
+<struct name='RBignum' type64='{RBignum=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;sign&quot;c&quot;len&quot;q&quot;digits&quot;^v}' type='{RBignum=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;sign&quot;c&quot;len&quot;l&quot;digits&quot;^v}'/>
+<struct name='RClass' type64='{RClass=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;iv_tbl&quot;^{st_table}&quot;m_tbl&quot;^{st_table}&quot;super&quot;Q}' type='{RClass=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;iv_tbl&quot;^{st_table}&quot;m_tbl&quot;^{st_table}&quot;super&quot;I}'/>
+<struct name='RData' type64='{RData=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;dmark&quot;^?&quot;dfree&quot;^?&quot;data&quot;^v}' type='{RData=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;dmark&quot;^?&quot;dfree&quot;^?&quot;data&quot;^v}'/>
+<struct name='RFile' type64='{RFile=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;fptr&quot;^{rb_io_t}}' type='{RFile=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;fptr&quot;^{rb_io_t}}'/>
+<struct name='RFloat' type64='{RFloat=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;value&quot;d}' type='{RFloat=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;value&quot;d}'/>
+<struct name='RHash' type64='{RHash=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;tbl&quot;^{st_table}&quot;iter_lev&quot;i&quot;ifnone&quot;Q}' type='{RHash=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;tbl&quot;^{st_table}&quot;iter_lev&quot;i&quot;ifnone&quot;I}'/>
+<struct name='RMatch' type64='{RMatch=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;str&quot;Q&quot;regs&quot;^{re_registers}}' type='{RMatch=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;str&quot;I&quot;regs&quot;^{re_registers}}'/>
+<struct name='RNode' type64='{RNode=&quot;flags&quot;Q&quot;nd_file&quot;*&quot;u1&quot;(?=&quot;node&quot;^{RNode}&quot;id&quot;Q&quot;value&quot;Q&quot;cfunc&quot;^?&quot;tbl&quot;^Q)&quot;u2&quot;(?=&quot;node&quot;^{RNode}&quot;id&quot;Q&quot;argc&quot;q&quot;value&quot;Q)&quot;u3&quot;(?=&quot;node&quot;^{RNode}&quot;id&quot;Q&quot;state&quot;q&quot;entry&quot;^{global_entry}&quot;cnt&quot;q&quot;value&quot;Q)}' type='{RNode=&quot;flags&quot;L&quot;nd_file&quot;*&quot;u1&quot;(?=&quot;node&quot;^{RNode}&quot;id&quot;I&quot;value&quot;I&quot;cfunc&quot;^?&quot;tbl&quot;^I)&quot;u2&quot;(?=&quot;node&quot;^{RNode}&quot;id&quot;I&quot;argc&quot;l&quot;value&quot;I)&quot;u3&quot;(?=&quot;node&quot;^{RNode}&quot;id&quot;I&quot;state&quot;l&quot;entry&quot;^{global_entry}&quot;cnt&quot;l&quot;value&quot;I)}'/>
+<struct name='RObject' type64='{RObject=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;iv_tbl&quot;^{st_table}}' type='{RObject=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;iv_tbl&quot;^{st_table}}'/>
+<struct name='RRegexp' type64='{RRegexp=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;ptr&quot;^{re_pattern_buffer}&quot;len&quot;q&quot;str&quot;*}' type='{RRegexp=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;ptr&quot;^{re_pattern_buffer}&quot;len&quot;l&quot;str&quot;*}'/>
+<struct name='RString' type64='{RString=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;len&quot;q&quot;ptr&quot;*&quot;aux&quot;(?=&quot;capa&quot;q&quot;shared&quot;Q)}' type='{RString=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;len&quot;l&quot;ptr&quot;*&quot;aux&quot;(?=&quot;capa&quot;l&quot;shared&quot;I)}'/>
+<struct name='RStruct' type64='{RStruct=&quot;basic&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;len&quot;q&quot;ptr&quot;^Q}' type='{RStruct=&quot;basic&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;len&quot;l&quot;ptr&quot;^I}'/>
+<struct name='RVarmap' type64='{RVarmap=&quot;super&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;id&quot;Q&quot;val&quot;Q&quot;next&quot;^{RVarmap}}' type='{RVarmap=&quot;super&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;id&quot;I&quot;val&quot;I&quot;next&quot;^{RVarmap}}'/>
+<struct name='Regexp' type64='{re_pattern_buffer=&quot;buffer&quot;*&quot;allocated&quot;i&quot;used&quot;i&quot;fastmap&quot;*&quot;must&quot;*&quot;must_skip&quot;^i&quot;options&quot;q&quot;re_nsub&quot;q&quot;fastmap_accurate&quot;c&quot;can_be_null&quot;c&quot;regstart&quot;^*&quot;regend&quot;^*&quot;old_regstart&quot;^*&quot;old_regend&quot;^*&quot;reg_info&quot;^(?)&quot;best_regstart&quot;^*&quot;best_regend&quot;^*}' type='{re_pattern_buffer=&quot;buffer&quot;*&quot;allocated&quot;i&quot;used&quot;i&quot;fastmap&quot;*&quot;must&quot;*&quot;must_skip&quot;^i&quot;options&quot;l&quot;re_nsub&quot;l&quot;fastmap_accurate&quot;c&quot;can_be_null&quot;c&quot;regstart&quot;^*&quot;regend&quot;^*&quot;old_regstart&quot;^*&quot;old_regend&quot;^*&quot;reg_info&quot;^(?)&quot;best_regstart&quot;^*&quot;best_regend&quot;^*}'/>
+<struct name='SCOPE' type64='{SCOPE=&quot;super&quot;{RBasic=&quot;flags&quot;Q&quot;klass&quot;Q}&quot;local_tbl&quot;^Q&quot;local_vars&quot;^Q&quot;flags&quot;i}' type='{SCOPE=&quot;super&quot;{RBasic=&quot;flags&quot;L&quot;klass&quot;I}&quot;local_tbl&quot;^I&quot;local_vars&quot;^I&quot;flags&quot;i}'/>
+<struct name='dl_handle' type='{dl_handle=&quot;ptr&quot;^v&quot;open&quot;i&quot;enable_close&quot;i}'/>
+<struct name='ptr_data' type64='{ptr_data=&quot;ptr&quot;^v&quot;free&quot;^?&quot;stype&quot;*&quot;ssize&quot;^i&quot;slen&quot;i&quot;ids&quot;^Q&quot;ids_num&quot;i&quot;ctype&quot;i&quot;size&quot;q}' type='{ptr_data=&quot;ptr&quot;^v&quot;free&quot;^?&quot;stype&quot;*&quot;ssize&quot;^i&quot;slen&quot;i&quot;ids&quot;^I&quot;ids_num&quot;i&quot;ctype&quot;i&quot;size&quot;l}'/>
+<struct name='rb_digest_metadata_t' type64='{_rb_digest_metadata_t=&quot;api_version&quot;i&quot;digest_len&quot;Q&quot;block_len&quot;Q&quot;ctx_size&quot;Q&quot;init_func&quot;^?&quot;update_func&quot;^?&quot;finish_func&quot;^?}' type='{_rb_digest_metadata_t=&quot;api_version&quot;i&quot;digest_len&quot;I&quot;block_len&quot;I&quot;ctx_size&quot;I&quot;init_func&quot;^?&quot;update_func&quot;^?&quot;finish_func&quot;^?}'/>
+<struct name='rb_io_t' type='{rb_io_t=&quot;f&quot;^{__sFILE}&quot;f2&quot;^{__sFILE}&quot;mode&quot;i&quot;pid&quot;i&quot;lineno&quot;i&quot;path&quot;*&quot;finalize&quot;^?}'/>
+<struct name='rb_thread' type64='{rb_thread=&quot;next&quot;^{rb_thread}&quot;prev&quot;^{rb_thread}&quot;context&quot;[37i]&quot;result&quot;Q&quot;stk_len&quot;Q&quot;stk_max&quot;Q&quot;stk_ptr&quot;^Q&quot;stk_pos&quot;^Q&quot;frame&quot;^{FRAME}&quot;scope&quot;^{SCOPE}&quot;dyna_vars&quot;^{RVarmap}&quot;block&quot;^{BLOCK}&quot;iter&quot;^{iter}&quot;tag&quot;^{tag}&quot;klass&quot;Q&quot;wrapper&quot;Q&quot;cref&quot;^{RNode}&quot;flags&quot;i&quot;node&quot;^{RNode}&quot;tracing&quot;i&quot;errinfo&quot;Q&quot;last_status&quot;Q&quot;last_line&quot;Q&quot;last_match&quot;Q&quot;safe&quot;i&quot;status&quot;i&quot;wait_for&quot;i&quot;fd&quot;i&quot;readfds&quot;{fd_set=&quot;fds_bits&quot;[32i]}&quot;writefds&quot;{fd_set=&quot;fds_bits&quot;[32i]}&quot;exceptfds&quot;{fd_set=&quot;fds_bits&quot;[32i]}&quot;select_value&quot;i&quot;delay&quot;d&quot;join&quot;^{rb_thread}&quot;abort&quot;i&quot;priority&quot;i&quot;thgroup&quot;Q&quot;locals&quot;^{st_table}&quot;thread&quot;Q&quot;sandbox&quot;Q}' type='{rb_thread=&quot;next&quot;^{rb_thread}&quot;prev&quot;^{rb_thread}&quot;context&quot;[18i]&quot;result&quot;I&quot;stk_len&quot;I&quot;stk_max&quot;I&quot;stk_ptr&quot;^I&quot;stk_pos&quot;^I&quot;frame&quot;^{FRAME}&quot;scope&quot;^{SCOPE}&quot;dyna_vars&quot;^{RVarmap}&quot;block&quot;^{BLOCK}&quot;iter&quot;^{iter}&quot;tag&quot;^{tag}&quot;klass&quot;I&quot;wrapper&quot;I&quot;cref&quot;^{RNode}&quot;flags&quot;i&quot;node&quot;^{RNode}&quot;tracing&quot;i&quot;errinfo&quot;I&quot;last_status&quot;I&quot;last_line&quot;I&quot;last_match&quot;I&quot;safe&quot;i&quot;status&quot;i&quot;wait_for&quot;i&quot;fd&quot;i&quot;readfds&quot;{fd_set=&quot;fds_bits&quot;[32i]}&quot;writefds&quot;{fd_set=&quot;fds_bits&quot;[32i]}&quot;exceptfds&quot;{fd_set=&quot;fds_bits&quot;[32i]}&quot;select_value&quot;i&quot;delay&quot;d&quot;join&quot;^{rb_thread}&quot;abort&quot;i&quot;priority&quot;i&quot;thgroup&quot;I&quot;locals&quot;^{st_table}&quot;thread&quot;I&quot;sandbox&quot;I}'/>
+<struct name='rb_thread_t' type64='{rb_thread=&quot;next&quot;^{rb_thread}&quot;prev&quot;^{rb_thread}&quot;context&quot;[37i]&quot;result&quot;Q&quot;stk_len&quot;Q&quot;stk_max&quot;Q&quot;stk_ptr&quot;^Q&quot;stk_pos&quot;^Q&quot;frame&quot;^{FRAME}&quot;scope&quot;^{SCOPE}&quot;dyna_vars&quot;^{RVarmap}&quot;block&quot;^{BLOCK}&quot;iter&quot;^{iter}&quot;tag&quot;^{tag}&quot;klass&quot;Q&quot;wrapper&quot;Q&quot;cref&quot;^{RNode}&quot;flags&quot;i&quot;node&quot;^{RNode}&quot;tracing&quot;i&quot;errinfo&quot;Q&quot;last_status&quot;Q&quot;last_line&quot;Q&quot;last_match&quot;Q&quot;safe&quot;i&quot;status&quot;i&quot;wait_for&quot;i&quot;fd&quot;i&quot;readfds&quot;{fd_set=&quot;fds_bits&quot;[32i]}&quot;writefds&quot;{fd_set=&quot;fds_bits&quot;[32i]}&quot;exceptfds&quot;{fd_set=&quot;fds_bits&quot;[32i]}&quot;select_value&quot;i&quot;delay&quot;d&quot;join&quot;^{rb_thread}&quot;abort&quot;i&quot;priority&quot;i&quot;thgroup&quot;Q&quot;locals&quot;^{st_table}&quot;thread&quot;Q&quot;sandbox&quot;Q}' type='{rb_thread=&quot;next&quot;^{rb_thread}&quot;prev&quot;^{rb_thread}&quot;context&quot;[18i]&quot;result&quot;I&quot;stk_len&quot;I&quot;stk_max&quot;I&quot;stk_ptr&quot;^I&quot;stk_pos&quot;^I&quot;frame&quot;^{FRAME}&quot;scope&quot;^{SCOPE}&quot;dyna_vars&quot;^{RVarmap}&quot;block&quot;^{BLOCK}&quot;iter&quot;^{iter}&quot;tag&quot;^{tag}&quot;klass&quot;I&quot;wrapper&quot;I&quot;cref&quot;^{RNode}&quot;flags&quot;i&quot;node&quot;^{RNode}&quot;tracing&quot;i&quot;errinfo&quot;I&quot;last_status&quot;I&quot;last_line&quot;I&quot;last_match&quot;I&quot;safe&quot;i&quot;status&quot;i&quot;wait_for&quot;i&quot;fd&quot;i&quot;readfds&quot;{fd_set=&quot;fds_bits&quot;[32i]}&quot;writefds&quot;{fd_set=&quot;fds_bits&quot;[32i]}&quot;exceptfds&quot;{fd_set=&quot;fds_bits&quot;[32i]}&quot;select_value&quot;i&quot;delay&quot;d&quot;join&quot;^{rb_thread}&quot;abort&quot;i&quot;priority&quot;i&quot;thgroup&quot;I&quot;locals&quot;^{st_table}&quot;thread&quot;I&quot;sandbox&quot;I}'/>
+<struct name='re_pattern_buffer' type64='{re_pattern_buffer=&quot;buffer&quot;*&quot;allocated&quot;i&quot;used&quot;i&quot;fastmap&quot;*&quot;must&quot;*&quot;must_skip&quot;^i&quot;options&quot;q&quot;re_nsub&quot;q&quot;fastmap_accurate&quot;c&quot;can_be_null&quot;c&quot;regstart&quot;^*&quot;regend&quot;^*&quot;old_regstart&quot;^*&quot;old_regend&quot;^*&quot;reg_info&quot;^(?)&quot;best_regstart&quot;^*&quot;best_regend&quot;^*}' type='{re_pattern_buffer=&quot;buffer&quot;*&quot;allocated&quot;i&quot;used&quot;i&quot;fastmap&quot;*&quot;must&quot;*&quot;must_skip&quot;^i&quot;options&quot;l&quot;re_nsub&quot;l&quot;fastmap_accurate&quot;c&quot;can_be_null&quot;c&quot;regstart&quot;^*&quot;regend&quot;^*&quot;old_regstart&quot;^*&quot;old_regend&quot;^*&quot;reg_info&quot;^(?)&quot;best_regstart&quot;^*&quot;best_regend&quot;^*}'/>
+<struct name='re_registers' type='{re_registers=&quot;allocated&quot;i&quot;num_regs&quot;i&quot;beg&quot;^i&quot;end&quot;^i}'/>
+<struct name='regex_t' type64='{re_pattern_buffer=&quot;buffer&quot;*&quot;allocated&quot;i&quot;used&quot;i&quot;fastmap&quot;*&quot;must&quot;*&quot;must_skip&quot;^i&quot;options&quot;q&quot;re_nsub&quot;q&quot;fastmap_accurate&quot;c&quot;can_be_null&quot;c&quot;regstart&quot;^*&quot;regend&quot;^*&quot;old_regstart&quot;^*&quot;old_regend&quot;^*&quot;reg_info&quot;^(?)&quot;best_regstart&quot;^*&quot;best_regend&quot;^*}' type='{re_pattern_buffer=&quot;buffer&quot;*&quot;allocated&quot;i&quot;used&quot;i&quot;fastmap&quot;*&quot;must&quot;*&quot;must_skip&quot;^i&quot;options&quot;l&quot;re_nsub&quot;l&quot;fastmap_accurate&quot;c&quot;can_be_null&quot;c&quot;regstart&quot;^*&quot;regend&quot;^*&quot;old_regstart&quot;^*&quot;old_regend&quot;^*&quot;reg_info&quot;^(?)&quot;best_regstart&quot;^*&quot;best_regend&quot;^*}'/>
+<struct name='regmatch_t' type64='{_regmatch_t=&quot;rm_so&quot;Q&quot;rm_eo&quot;Q}' type='{_regmatch_t=&quot;rm_so&quot;I&quot;rm_eo&quot;I}'/>
+<struct name='s_double' type='{_s_double=&quot;c&quot;c&quot;x&quot;d}'/>
+<struct name='s_float' type='{_s_float=&quot;c&quot;c&quot;x&quot;f}'/>
+<struct name='s_int' type='{_s_int=&quot;c&quot;c&quot;x&quot;i}'/>
+<struct name='s_long' type64='{_s_long=&quot;c&quot;c&quot;x&quot;q}' type='{_s_long=&quot;c&quot;c&quot;x&quot;l}'/>
+<struct name='s_short' type='{_s_short=&quot;c&quot;c&quot;x&quot;s}'/>
+<struct name='s_voidp' type='{_s_voidp=&quot;c&quot;c&quot;x&quot;^v}'/>
+<struct name='st_hash_type' type='{st_hash_type=&quot;compare&quot;^?&quot;hash&quot;^?}'/>
+<struct name='st_table' type='{st_table=&quot;type&quot;^{st_hash_type}&quot;num_bins&quot;i&quot;num_entries&quot;i&quot;bins&quot;^^{st_table_entry}}'/>
+<struct name='sym_data' type='{sym_data=&quot;func&quot;^v&quot;name&quot;*&quot;type&quot;*&quot;len&quot;i}'/>
+<constant name='rb_argv' type64='Q' type='L'/>
+<constant name='rb_argv0' type64='Q' type='L'/>
+<constant name='rb_cArray' type64='Q' type='L'/>
+<constant name='rb_cBignum' type64='Q' type='L'/>
+<constant name='rb_cBinding' type64='Q' type='L'/>
+<constant name='rb_cClass' type64='Q' type='L'/>
+<constant name='rb_cCont' type64='Q' type='L'/>
+<constant name='rb_cDLHandle' type64='Q' type='L'/>
+<constant name='rb_cDLPtrData' type64='Q' type='L'/>
+<constant name='rb_cDLStructData' type64='Q' type='L'/>
+<constant name='rb_cDLSymbol' type64='Q' type='L'/>
+<constant name='rb_cData' type64='Q' type='L'/>
+<constant name='rb_cDir' type64='Q' type='L'/>
+<constant name='rb_cEnumerator' type64='Q' type='L'/>
+<constant name='rb_cFalseClass' type64='Q' type='L'/>
+<constant name='rb_cFile' type64='Q' type='L'/>
+<constant name='rb_cFixnum' type64='Q' type='L'/>
+<constant name='rb_cFloat' type64='Q' type='L'/>
+<constant name='rb_cHash' type64='Q' type='L'/>
+<constant name='rb_cIO' type64='Q' type='L'/>
+<constant name='rb_cInteger' type64='Q' type='L'/>
+<constant name='rb_cMatch' type64='Q' type='L'/>
+<constant name='rb_cMethod' type64='Q' type='L'/>
+<constant name='rb_cModule' type64='Q' type='L'/>
+<constant name='rb_cNameErrorMesg' type64='Q' type='L'/>
+<constant name='rb_cNilClass' type64='Q' type='L'/>
+<constant name='rb_cNumeric' type64='Q' type='L'/>
+<constant name='rb_cObject' type64='Q' type='L'/>
+<constant name='rb_cProc' type64='Q' type='L'/>
+<constant name='rb_cRange' type64='Q' type='L'/>
+<constant name='rb_cRegexp' type64='Q' type='L'/>
+<constant name='rb_cStat' type64='Q' type='L'/>
+<constant name='rb_cString' type64='Q' type='L'/>
+<constant name='rb_cStruct' type64='Q' type='L'/>
+<constant name='rb_cSymbol' type64='Q' type='L'/>
+<constant name='rb_cThread' type64='Q' type='L'/>
+<constant name='rb_cTime' type64='Q' type='L'/>
+<constant name='rb_cTrueClass' type64='Q' type='L'/>
+<constant name='rb_cUnboundMethod' type64='Q' type='L'/>
+<constant name='rb_curr_thread' type64='^{rb_thread=^{rb_thread}^{rb_thread}[37i]QQQ^Q^Q^{FRAME}^{SCOPE}^{RVarmap}^{BLOCK}^{iter}^{tag}QQ^{RNode}i^{RNode}iQQQQiiii{fd_set=[32i]}{fd_set=[32i]}{fd_set=[32i]}id^{rb_thread}iiQ^{st_table}QQ}' type='^{rb_thread=^{rb_thread}^{rb_thread}[18i]III^I^I^{FRAME}^{SCOPE}^{RVarmap}^{BLOCK}^{iter}^{tag}II^{RNode}i^{RNode}iIIIIiiii{fd_set=[32i]}{fd_set=[32i]}{fd_set=[32i]}id^{rb_thread}iiI^{st_table}II}'/>
+<constant name='rb_default_rs' type64='Q' type='L'/>
+<constant name='rb_eArgError' type64='Q' type='L'/>
+<constant name='rb_eDLError' type64='Q' type='L'/>
+<constant name='rb_eDLTypeError' type64='Q' type='L'/>
+<constant name='rb_eEOFError' type64='Q' type='L'/>
+<constant name='rb_eException' type64='Q' type='L'/>
+<constant name='rb_eFatal' type64='Q' type='L'/>
+<constant name='rb_eFloatDomainError' type64='Q' type='L'/>
+<constant name='rb_eIOError' type64='Q' type='L'/>
+<constant name='rb_eIndexError' type64='Q' type='L'/>
+<constant name='rb_eInterrupt' type64='Q' type='L'/>
+<constant name='rb_eLoadError' type64='Q' type='L'/>
+<constant name='rb_eLocalJumpError' type64='Q' type='L'/>
+<constant name='rb_eNameError' type64='Q' type='L'/>
+<constant name='rb_eNoMemError' type64='Q' type='L'/>
+<constant name='rb_eNoMethodError' type64='Q' type='L'/>
+<constant name='rb_eNotImpError' type64='Q' type='L'/>
+<constant name='rb_eRangeError' type64='Q' type='L'/>
+<constant name='rb_eRegexpError' type64='Q' type='L'/>
+<constant name='rb_eRuntimeError' type64='Q' type='L'/>
+<constant name='rb_eScriptError' type64='Q' type='L'/>
+<constant name='rb_eSecurityError' type64='Q' type='L'/>
+<constant name='rb_eSignal' type64='Q' type='L'/>
+<constant name='rb_eStandardError' type64='Q' type='L'/>
+<constant name='rb_eStopIteration' type64='Q' type='L'/>
+<constant name='rb_eSyntaxError' type64='Q' type='L'/>
+<constant name='rb_eSysStackError' type64='Q' type='L'/>
+<constant name='rb_eSystemCallError' type64='Q' type='L'/>
+<constant name='rb_eSystemExit' type64='Q' type='L'/>
+<constant name='rb_eThreadError' type64='Q' type='L'/>
+<constant name='rb_eTypeError' type64='Q' type='L'/>
+<constant name='rb_eZeroDivError' type64='Q' type='L'/>
+<constant name='rb_fs' type64='Q' type='L'/>
+<constant name='rb_mComparable' type64='Q' type='L'/>
+<constant name='rb_mDL' type64='Q' type='L'/>
+<constant name='rb_mDLMemorySpace' type64='Q' type='L'/>
+<constant name='rb_mEnumerable' type64='Q' type='L'/>
+<constant name='rb_mErrno' type64='Q' type='L'/>
+<constant name='rb_mFileTest' type64='Q' type='L'/>
+<constant name='rb_mGC' type64='Q' type='L'/>
+<constant name='rb_mKernel' type64='Q' type='L'/>
+<constant name='rb_mMath' type64='Q' type='L'/>
+<constant name='rb_mPrecision' type64='Q' type='L'/>
+<constant name='rb_mProcess' type64='Q' type='L'/>
+<constant name='rb_main_thread' type64='^{rb_thread=^{rb_thread}^{rb_thread}[37i]QQQ^Q^Q^{FRAME}^{SCOPE}^{RVarmap}^{BLOCK}^{iter}^{tag}QQ^{RNode}i^{RNode}iQQQQiiii{fd_set=[32i]}{fd_set=[32i]}{fd_set=[32i]}id^{rb_thread}iiQ^{st_table}QQ}' type='^{rb_thread=^{rb_thread}^{rb_thread}[18i]III^I^I^{FRAME}^{SCOPE}^{RVarmap}^{BLOCK}^{iter}^{tag}II^{RNode}i^{RNode}iIIIIiiii{fd_set=[32i]}{fd_set=[32i]}{fd_set=[32i]}id^{rb_thread}iiI^{st_table}II}'/>
+<constant name='rb_output_fs' type64='Q' type='L'/>
+<constant name='rb_output_rs' type64='Q' type='L'/>
+<constant name='rb_prohibit_interrupt' type='i'/>
+<constant name='rb_rs' type64='Q' type='L'/>
+<constant name='rb_stderr' type64='Q' type='L'/>
+<constant name='rb_stdin' type64='Q' type='L'/>
+<constant name='rb_stdout' type64='Q' type='L'/>
+<constant name='rb_thread_critical' type='i'/>
+<constant name='rb_thread_pending' type='i'/>
+<constant name='rb_trap_immediate' type='i'/>
+<constant name='rb_trap_pending' type='i'/>
+<constant name='re_mbctab' type='*'/>
+<constant name='ruby_class' type64='Q' type='L'/>
+<constant name='ruby_copyright' type='*'/>
+<constant name='ruby_cref' type64='^{RNode=Q*(?=^{RNode}QQ^?^Q)(?=^{RNode}QqQ)(?=^{RNode}Qq^{global_entry}qQ)}' type='^{RNode=L*(?=^{RNode}II^?^I)(?=^{RNode}IlI)(?=^{RNode}Il^{global_entry}lI)}'/>
+<constant name='ruby_current_node' type64='^{RNode=Q*(?=^{RNode}QQ^?^Q)(?=^{RNode}QqQ)(?=^{RNode}Qq^{global_entry}qQ)}' type='^{RNode=L*(?=^{RNode}II^?^I)(?=^{RNode}IlI)(?=^{RNode}Il^{global_entry}lI)}'/>
+<constant name='ruby_debug' type64='Q' type='L'/>
+<constant name='ruby_description' type='*'/>
+<constant name='ruby_dyna_vars' type64='^{RVarmap={RBasic=QQ}QQ^{RVarmap}}' type='^{RVarmap={RBasic=LI}II^{RVarmap}}'/>
+<constant name='ruby_errinfo' type64='Q' type='L'/>
+<constant name='ruby_frame' type64='^{FRAME=QiQQQ^{FRAME}^{FRAME}^{RNode}iiQ}' type='^{FRAME=IiIII^{FRAME}^{FRAME}^{RNode}iiL}'/>
+<constant name='ruby_ignorecase' type='i'/>
+<constant name='ruby_in_eval' type='i'/>
+<constant name='ruby_nerrs' type='i'/>
+<constant name='ruby_patchlevel' type='i'/>
+<constant name='ruby_platform' type='^c'/>
+<constant name='ruby_release_date' type='^c'/>
+<constant name='ruby_safe_level' type='i'/>
+<constant name='ruby_scope' type64='^{SCOPE={RBasic=QQ}^Q^Qi}' type='^{SCOPE={RBasic=LI}^I^Ii}'/>
+<constant name='ruby_sourcefile' type='*'/>
+<constant name='ruby_sourceline' type='i'/>
+<constant name='ruby_top_cref' type64='^{RNode=Q*(?=^{RNode}QQ^?^Q)(?=^{RNode}QqQ)(?=^{RNode}Qq^{global_entry}qQ)}' type='^{RNode=L*(?=^{RNode}II^?^I)(?=^{RNode}IlI)(?=^{RNode}Il^{global_entry}lI)}'/>
+<constant name='ruby_verbose' type64='Q' type='L'/>
+<constant name='ruby_version' type='^c'/>
+<string_constant name='DLEXT' value='.bundle'/>
+<string_constant name='DLSTACK_METHOD' value='none'/>
+<string_constant name='PACKAGE_BUGREPORT' value=''/>
+<string_constant name='PACKAGE_NAME' value=''/>
+<string_constant name='PACKAGE_STRING' value=''/>
+<string_constant name='PACKAGE_TARNAME' value=''/>
+<string_constant name='PACKAGE_VERSION' value=''/>
+<string_constant name='PATH_ENV' value='PATH'/>
+<string_constant name='PATH_SEP' value=':'/>
+<string_constant name='RUBY_ARCHLIB' value='/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin11.0'/>
+<string_constant name='RUBY_AUTHOR' value='Yukihiro Matsumoto'/>
+<string_constant name='RUBY_LIB' value='/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8'/>
+<string_constant name='RUBY_PLATFORM' value='universal-darwin11.0'/>
+<string_constant name='RUBY_RELEASE_DATE' value='2010-01-10'/>
+<string_constant name='RUBY_RELEASE_STR' value='patchlevel'/>
+<string_constant name='RUBY_SITE_ARCHLIB' value='/Library/Ruby/Site/1.8/universal-darwin11.0'/>
+<string_constant name='RUBY_SITE_LIB' value='/Library/Ruby/Site'/>
+<string_constant name='RUBY_SITE_LIB2' value='/Library/Ruby/Site/1.8'/>
+<string_constant name='RUBY_SITE_THIN_ARCHLIB' value='/Library/Ruby/Site/1.8/powerpc-darwin11.0'/>
+<string_constant name='RUBY_STABILITY' value='___dtrace_stability$ruby$v1$5_5_5_1_1_5_1_1_5_5_5_5_5_5_5'/>
+<string_constant name='RUBY_THIN_ARCHLIB' value='/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/powerpc-darwin11.0'/>
+<string_constant name='RUBY_TYPEDEFS' value='___dtrace_typedefs$ruby$v2'/>
+<string_constant name='RUBY_VENDOR_ARCHLIB' value='/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/vendor_ruby/1.8/universal-darwin11.0'/>
+<string_constant name='RUBY_VENDOR_LIB' value='/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/vendor_ruby'/>
+<string_constant name='RUBY_VENDOR_LIB2' value='/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/vendor_ruby/1.8'/>
+<string_constant name='RUBY_VERSION' value='1.8.7'/>
+<enum name='ALIGN_DOUBLE' value64='8' value='4'/>
+<enum name='ALIGN_FLOAT' value='4'/>
+<enum name='ALIGN_INT' value='4'/>
+<enum name='ALIGN_LONG' value64='8' value='4'/>
+<enum name='ALIGN_SHORT' value='2'/>
+<enum name='ALIGN_VOIDP' value64='8' value='4'/>
+<enum name='BYTEWIDTH' value='8'/>
+<enum name='CALLBACK_TYPES' value='8'/>
+<enum name='CASEFOLD_FILESYSTEM' value='0'/>
+<enum name='CHAR_DLTYPE' value='1'/>
+<enum name='DLEXT_MAXLEN' value='7'/>
+<enum name='DLPTR_CTYPE_STRUCT' value='1'/>
+<enum name='DLPTR_CTYPE_UNION' value='2'/>
+<enum name='DLPTR_CTYPE_UNKNOWN' value='0'/>
+<enum name='DOUBLE_ALIGN' value64='8' value='4'/>
+<enum name='DOUBLE_DLTYPE' value='6'/>
+<enum name='ELTS_SHARED' value='8192'/>
+<enum name='FIXNUM_FLAG' value='1'/>
+<enum name='FIXNUM_MAX' value64='4611686018427387903' value='1073741823'/>
+<enum name='FIXNUM_MIN' value64='-4611686018427387904' value='-1073741824'/>
+<enum name='FLOAT_ALIGN' value='4'/>
+<enum name='FLOAT_DLTYPE' value='5'/>
+<enum name='FL_EXIVAR' value='512'/>
+<enum name='FL_FINALIZE' value='128'/>
+<enum name='FL_FREEZE' value='1024'/>
+<enum name='FL_MARK' value='64'/>
+<enum name='FL_SINGLETON' value='2048'/>
+<enum name='FL_TAINT' value='256'/>
+<enum name='FL_UMASK' value='522240'/>
+<enum name='FL_USER0' value='2048'/>
+<enum name='FL_USER1' value='4096'/>
+<enum name='FL_USER2' value='8192'/>
+<enum name='FL_USER3' value='16384'/>
+<enum name='FL_USER4' value='32768'/>
+<enum name='FL_USER5' value='65536'/>
+<enum name='FL_USER6' value='131072'/>
+<enum name='FL_USER7' value='262144'/>
+<enum name='FL_USHIFT' value='11'/>
+<enum name='FMODE_APPEND' value='64'/>
+<enum name='FMODE_BINMODE' value='4'/>
+<enum name='FMODE_CREATE' value='128'/>
+<enum name='FMODE_RBUF' value='32'/>
+<enum name='FMODE_READABLE' value='1'/>
+<enum name='FMODE_READWRITE' value='3'/>
+<enum name='FMODE_SYNC' value='8'/>
+<enum name='FMODE_WBUF' value='16'/>
+<enum name='FMODE_WRITABLE' value='2'/>
+<enum name='FMODE_WSPLIT' value='512'/>
+<enum name='FMODE_WSPLIT_INITIALIZED' value='1024'/>
+<enum name='FRAME_DMETH' value='1'/>
+<enum name='FRAME_FUNC' value='2'/>
+<enum name='GETPGRP_VOID' value='1'/>
+<enum name='HAVE_ACOSH' value='1'/>
+<enum name='HAVE_ALLOCA' value='1'/>
+<enum name='HAVE_ALLOCA_H' value='1'/>
+<enum name='HAVE_CHROOT' value='1'/>
+<enum name='HAVE_COSH' value='1'/>
+<enum name='HAVE_CRYPT' value='1'/>
+<enum name='HAVE_DAYLIGHT' value='1'/>
+<enum name='HAVE_DECL_SYS_NERR' value='1'/>
+<enum name='HAVE_DIRENT_H' value='1'/>
+<enum name='HAVE_DLOPEN' value='1'/>
+<enum name='HAVE_DUP2' value='1'/>
+<enum name='HAVE_ERF' value='1'/>
+<enum name='HAVE_FCHMOD' value='1'/>
+<enum name='HAVE_FCNTL' value='1'/>
+<enum name='HAVE_FCNTL_H' value='1'/>
+<enum name='HAVE_FINITE' value='1'/>
+<enum name='HAVE_FLOAT_H' value='1'/>
+<enum name='HAVE_FLOCK' value='1'/>
+<enum name='HAVE_FMOD' value='1'/>
+<enum name='HAVE_FSEEKO' value='1'/>
+<enum name='HAVE_FSYNC' value='1'/>
+<enum name='HAVE_FTELLO' value='1'/>
+<enum name='HAVE_FTRUNCATE' value='1'/>
+<enum name='HAVE_GETCWD' value='1'/>
+<enum name='HAVE_GETGROUPS' value='1'/>
+<enum name='HAVE_GETPGID' value='1'/>
+<enum name='HAVE_GETPGRP' value='1'/>
+<enum name='HAVE_GETPRIORITY' value='1'/>
+<enum name='HAVE_GETRLIMIT' value='1'/>
+<enum name='HAVE_GETTIMEOFDAY' value='1'/>
+<enum name='HAVE_GRP_H' value='1'/>
+<enum name='HAVE_HYPOT' value='1'/>
+<enum name='HAVE_INITGROUPS' value='1'/>
+<enum name='HAVE_INTTYPES_H' value='1'/>
+<enum name='HAVE_ISINF' value='1'/>
+<enum name='HAVE_ISNAN' value='1'/>
+<enum name='HAVE_ISSETUGID' value='1'/>
+<enum name='HAVE_KILLPG' value='1'/>
+<enum name='HAVE_LCHMOD' value='1'/>
+<enum name='HAVE_LCHOWN' value='1'/>
+<enum name='HAVE_LIBDL' value='1'/>
+<enum name='HAVE_LIBPTHREAD' value='1'/>
+<enum name='HAVE_LIMITS_H' value='1'/>
+<enum name='HAVE_LINK' value='1'/>
+<enum name='HAVE_LOCKF' value='1'/>
+<enum name='HAVE_LONG_LONG' value='1'/>
+<enum name='HAVE_LSTAT' value='1'/>
+<enum name='HAVE_MEMMOVE' value='1'/>
+<enum name='HAVE_MEMORY_H' value='1'/>
+<enum name='HAVE_MKTIME' value='1'/>
+<enum name='HAVE_NANOSLEEP' value='1'/>
+<enum name='HAVE_NETINET_IN_SYSTM_H' value='1'/>
+<enum name='HAVE_OFF_T' value='1'/>
+<enum name='HAVE_PAUSE' value='1'/>
+<enum name='HAVE_PROTOTYPES' value='1'/>
+<enum name='HAVE_PTHREAD_H' value='1'/>
+<enum name='HAVE_PWD_H' value='1'/>
+<enum name='HAVE_RB_DEFINE_ALLOC_FUNC' value='1'/>
+<enum name='HAVE_RB_IO_T' value='1'/>
+<enum name='HAVE_READLINK' value='1'/>
+<enum name='HAVE_ROUND' value='1'/>
+<enum name='HAVE_SEEKDIR' value='1'/>
+<enum name='HAVE_SETEGID' value='1'/>
+<enum name='HAVE_SETENV' value='1'/>
+<enum name='HAVE_SETEUID' value='1'/>
+<enum name='HAVE_SETGID' value='1'/>
+<enum name='HAVE_SETGROUPS' value='1'/>
+<enum name='HAVE_SETITIMER' value='1'/>
+<enum name='HAVE_SETPGID' value='1'/>
+<enum name='HAVE_SETPGRP' value='1'/>
+<enum name='HAVE_SETREGID' value='1'/>
+<enum name='HAVE_SETREUID' value='1'/>
+<enum name='HAVE_SETRGID' value='1'/>
+<enum name='HAVE_SETRLIMIT' value='1'/>
+<enum name='HAVE_SETRUID' value='1'/>
+<enum name='HAVE_SETSID' value='1'/>
+<enum name='HAVE_SETUID' value='1'/>
+<enum name='HAVE_SIGACTION' value='1'/>
+<enum name='HAVE_SIGPROCMASK' value='1'/>
+<enum name='HAVE_SIGSETJMP' value='1'/>
+<enum name='HAVE_SINH' value='1'/>
+<enum name='HAVE_STDARG_PROTOTYPES' value='1'/>
+<enum name='HAVE_STDINT_H' value='1'/>
+<enum name='HAVE_STDLIB_H' value='1'/>
+<enum name='HAVE_STRCASECMP' value='1'/>
+<enum name='HAVE_STRCHR' value='1'/>
+<enum name='HAVE_STRERROR' value='1'/>
+<enum name='HAVE_STRFTIME' value='1'/>
+<enum name='HAVE_STRINGS_H' value='1'/>
+<enum name='HAVE_STRING_H' value='1'/>
+<enum name='HAVE_STRNCASECMP' value='1'/>
+<enum name='HAVE_STRSTR' value='1'/>
+<enum name='HAVE_STRTOUL' value='1'/>
+<enum name='HAVE_STRUCT_STAT_ST_BLKSIZE' value='1'/>
+<enum name='HAVE_STRUCT_STAT_ST_BLOCKS' value='1'/>
+<enum name='HAVE_STRUCT_STAT_ST_RDEV' value='1'/>
+<enum name='HAVE_STRUCT_TM_TM_GMTOFF' value='1'/>
+<enum name='HAVE_STRUCT_TM_TM_ZONE' value='1'/>
+<enum name='HAVE_ST_BLKSIZE' value='1'/>
+<enum name='HAVE_ST_BLOCKS' value='1'/>
+<enum name='HAVE_ST_RDEV' value='1'/>
+<enum name='HAVE_SYMLINK' value='1'/>
+<enum name='HAVE_SYSCALL' value='1'/>
+<enum name='HAVE_SYSCONF' value='1'/>
+<enum name='HAVE_SYS_FCNTL_H' value='1'/>
+<enum name='HAVE_SYS_FILE_H' value='1'/>
+<enum name='HAVE_SYS_IOCTL_H' value='1'/>
+<enum name='HAVE_SYS_PARAM_H' value='1'/>
+<enum name='HAVE_SYS_RESOURCE_H' value='1'/>
+<enum name='HAVE_SYS_SELECT_H' value='1'/>
+<enum name='HAVE_SYS_STAT_H' value='1'/>
+<enum name='HAVE_SYS_SYSCALL_H' value='1'/>
+<enum name='HAVE_SYS_TIMES_H' value='1'/>
+<enum name='HAVE_SYS_TIME_H' value='1'/>
+<enum name='HAVE_SYS_TYPES_H' value='1'/>
+<enum name='HAVE_SYS_WAIT_H' value='1'/>
+<enum name='HAVE_TANH' value='1'/>
+<enum name='HAVE_TELLDIR' value='1'/>
+<enum name='HAVE_TIMEGM' value='1'/>
+<enum name='HAVE_TIMES' value='1'/>
+<enum name='HAVE_TM_ZONE' value='1'/>
+<enum name='HAVE_TRUNCATE' value='1'/>
+<enum name='HAVE_UCONTEXT_H' value='1'/>
+<enum name='HAVE_UNISTD_H' value='1'/>
+<enum name='HAVE_UNSETENV' value='1'/>
+<enum name='HAVE_UTIMES' value='1'/>
+<enum name='HAVE_UTIME_H' value='1'/>
+<enum name='HAVE_VAR_TIMEZONE' value='1'/>
+<enum name='HAVE_VSNPRINTF' value='1'/>
+<enum name='HAVE_WAIT4' value='1'/>
+<enum name='HAVE_WAITPID' value='1'/>
+<enum name='HAVE__LONGJMP' value='1'/>
+<enum name='HAVE__SC_CLK_TCK' value='1'/>
+<enum name='HAVE__SETJMP' value='1'/>
+<enum name='ID_ALLOCATOR' value='1'/>
+<enum name='IMMEDIATE_MASK' value='3'/>
+<enum name='INT_ALIGN' value='4'/>
+<enum name='INT_DLTYPE' value='3'/>
+<enum name='LONG_ALIGN' value64='8' value='4'/>
+<enum name='LONG_DLTYPE' value='4'/>
+<enum name='MAX_ARG' value='0'/>
+<enum name='MAX_CALLBACK' value='10'/>
+<enum name='MBCTYPE_ASCII' value='0'/>
+<enum name='MBCTYPE_EUC' value='1'/>
+<enum name='MBCTYPE_SJIS' value='2'/>
+<enum name='MBCTYPE_UTF8' value='3'/>
+<enum name='NEED_IO_SEEK_BETWEEN_RW' value='1'/>
+<enum name='NEGATIVE_TIME_T' value='1'/>
+<enum name='NODE_ALIAS' value='76'/>
+<enum name='NODE_ALLOCA' value='97'/>
+<enum name='NODE_AND' value='21'/>
+<enum name='NODE_ARGS' value='66'/>
+<enum name='NODE_ARGSCAT' value='67'/>
+<enum name='NODE_ARGSPUSH' value='68'/>
+<enum name='NODE_ARRAY' value='42'/>
+<enum name='NODE_ATTRASGN' value='103'/>
+<enum name='NODE_ATTRSET' value='89'/>
+<enum name='NODE_BACK_REF' value='54'/>
+<enum name='NODE_BEGIN' value='17'/>
+<enum name='NODE_BLOCK' value='4'/>
+<enum name='NODE_BLOCK_ARG' value='72'/>
+<enum name='NODE_BLOCK_PASS' value='73'/>
+<enum name='NODE_BMETHOD' value='99'/>
+<enum name='NODE_BREAK' value='13'/>
+<enum name='NODE_CALL' value='37'/>
+<enum name='NODE_CASE' value='6'/>
+<enum name='NODE_CDECL' value='30'/>
+<enum name='NODE_CFUNC' value='2'/>
+<enum name='NODE_CLASS' value='79'/>
+<enum name='NODE_COLON2' value='82'/>
+<enum name='NODE_COLON3' value='83'/>
+<enum name='NODE_CONST' value='51'/>
+<enum name='NODE_CREF' value='84'/>
+<enum name='NODE_CVAR' value='52'/>
+<enum name='NODE_CVASGN' value='31'/>
+<enum name='NODE_CVDECL' value='32'/>
+<enum name='NODE_DASGN' value='26'/>
+<enum name='NODE_DASGN_CURR' value='27'/>
+<enum name='NODE_DEFINED' value='94'/>
+<enum name='NODE_DEFN' value='74'/>
+<enum name='NODE_DEFS' value='75'/>
+<enum name='NODE_DMETHOD' value='98'/>
+<enum name='NODE_DOT2' value='85'/>
+<enum name='NODE_DOT3' value='86'/>
+<enum name='NODE_DREGX' value='64'/>
+<enum name='NODE_DREGX_ONCE' value='65'/>
+<enum name='NODE_DSTR' value='60'/>
+<enum name='NODE_DSYM' value='102'/>
+<enum name='NODE_DVAR' value='48'/>
+<enum name='NODE_DXSTR' value='62'/>
+<enum name='NODE_ENSURE' value='20'/>
+<enum name='NODE_EVSTR' value='63'/>
+<enum name='NODE_FALSE' value='93'/>
+<enum name='NODE_FBODY' value='1'/>
+<enum name='NODE_FCALL' value='38'/>
+<enum name='NODE_FLIP2' value='87'/>
+<enum name='NODE_FLIP3' value='88'/>
+<enum name='NODE_FOR' value='12'/>
+<enum name='NODE_GASGN' value='28'/>
+<enum name='NODE_GVAR' value='49'/>
+<enum name='NODE_HASH' value='44'/>
+<enum name='NODE_IASGN' value='29'/>
+<enum name='NODE_IF' value='5'/>
+<enum name='NODE_IFUNC' value='101'/>
+<enum name='NODE_ITER' value='11'/>
+<enum name='NODE_IVAR' value='50'/>
+<enum name='NODE_LASGN' value='25'/>
+<enum name='NODE_LAST' value='104'/>
+<enum name='NODE_LIT' value='58'/>
+<enum name='NODE_LMASK' value64='35184372088831' value='8191'/>
+<enum name='NODE_LSHIFT' value='19'/>
+<enum name='NODE_LVAR' value='47'/>
+<enum name='NODE_MASGN' value='24'/>
+<enum name='NODE_MATCH' value='55'/>
+<enum name='NODE_MATCH2' value='56'/>
+<enum name='NODE_MATCH3' value='57'/>
+<enum name='NODE_MEMO' value='100'/>
+<enum name='NODE_METHOD' value='0'/>
+<enum name='NODE_MODULE' value='80'/>
+<enum name='NODE_NEWLINE' value='95'/>
+<enum name='NODE_NEXT' value='14'/>
+<enum name='NODE_NIL' value='91'/>
+<enum name='NODE_NOT' value='23'/>
+<enum name='NODE_NTH_REF' value='53'/>
+<enum name='NODE_OPT_N' value='8'/>
+<enum name='NODE_OP_ASGN1' value='33'/>
+<enum name='NODE_OP_ASGN2' value='34'/>
+<enum name='NODE_OP_ASGN_AND' value='35'/>
+<enum name='NODE_OP_ASGN_OR' value='36'/>
+<enum name='NODE_OR' value='22'/>
+<enum name='NODE_POSTEXE' value='96'/>
+<enum name='NODE_REDO' value='15'/>
+<enum name='NODE_RESBODY' value='19'/>
+<enum name='NODE_RESCUE' value='18'/>
+<enum name='NODE_RETRY' value='16'/>
+<enum name='NODE_RETURN' value='45'/>
+<enum name='NODE_SCLASS' value='81'/>
+<enum name='NODE_SCOPE' value='3'/>
+<enum name='NODE_SELF' value='90'/>
+<enum name='NODE_SPLAT' value='69'/>
+<enum name='NODE_STR' value='59'/>
+<enum name='NODE_SUPER' value='40'/>
+<enum name='NODE_SVALUE' value='71'/>
+<enum name='NODE_TO_ARY' value='70'/>
+<enum name='NODE_TRUE' value='92'/>
+<enum name='NODE_UNDEF' value='78'/>
+<enum name='NODE_UNTIL' value='10'/>
+<enum name='NODE_VALIAS' value='77'/>
+<enum name='NODE_VCALL' value='39'/>
+<enum name='NODE_WHEN' value='7'/>
+<enum name='NODE_WHILE' value='9'/>
+<enum name='NODE_XSTR' value='61'/>
+<enum name='NODE_YIELD' value='46'/>
+<enum name='NODE_ZARRAY' value='43'/>
+<enum name='NODE_ZSUPER' value='41'/>
+<enum name='NOEX_MASK' value='6'/>
+<enum name='NOEX_NOSUPER' value='1'/>
+<enum name='NOEX_PRIVATE' value='2'/>
+<enum name='NOEX_PROTECTED' value='4'/>
+<enum name='NOEX_PUBLIC' value='0'/>
+<enum name='NOEX_UNDEF' value='1'/>
+<enum name='NORETURN_STYLE_NEW' value='1'/>
+<enum name='POSIX_SIGNAL' value='1'/>
+<enum name='Qfalse' value='0'/>
+<enum name='Qnil' value='4'/>
+<enum name='Qtrue' value='2'/>
+<enum name='Qundef' value='6'/>
+<enum name='RAISED_EXCEPTION' value='4096'/>
+<enum name='RAISED_MASK' value='61440'/>
+<enum name='RAISED_NOMEMORY' value='16384'/>
+<enum name='RAISED_STACKOVERFLOW' value='8192'/>
+<enum name='RB_CVAR_SET_4ARGS' value='1'/>
+<enum name='RE_CHAR_CLASSES' value='512'/>
+<enum name='RE_MAY_IGNORECASE' value='32'/>
+<enum name='RE_NREGS' value='10'/>
+<enum name='RE_OPTIMIZE_ANCHOR' value='64'/>
+<enum name='RE_OPTIMIZE_BMATCH' value='512'/>
+<enum name='RE_OPTIMIZE_EXACTN' value='128'/>
+<enum name='RE_OPTIMIZE_NO_BM' value='256'/>
+<enum name='RE_OPTION_EXTENDED' value='2'/>
+<enum name='RE_OPTION_IGNORECASE' value='1'/>
+<enum name='RE_OPTION_LONGEST' value='16'/>
+<enum name='RE_OPTION_MULTILINE' value='4'/>
+<enum name='RE_OPTION_SINGLELINE' value='8'/>
+<enum name='RE_REG_MAX' value='255'/>
+<enum name='RUBY_BIRTH_DAY' value='24'/>
+<enum name='RUBY_BIRTH_MONTH' value='2'/>
+<enum name='RUBY_BIRTH_YEAR' value='1993'/>
+<enum name='RUBY_DIGEST_API_VERSION' value='2'/>
+<enum name='RUBY_EVENT_ALL' value='255'/>
+<enum name='RUBY_EVENT_CALL' value='8'/>
+<enum name='RUBY_EVENT_CLASS' value='2'/>
+<enum name='RUBY_EVENT_C_CALL' value='32'/>
+<enum name='RUBY_EVENT_C_RETURN' value='64'/>
+<enum name='RUBY_EVENT_END' value='4'/>
+<enum name='RUBY_EVENT_LINE' value='1'/>
+<enum name='RUBY_EVENT_NONE' value='0'/>
+<enum name='RUBY_EVENT_RAISE' value='128'/>
+<enum name='RUBY_EVENT_RETURN' value='16'/>
+<enum name='RUBY_MBCHAR_MAXSIZE' value='2147483647'/>
+<enum name='RUBY_PATCHLEVEL' value='249'/>
+<enum name='RUBY_RELEASE_CODE' value='20100110'/>
+<enum name='RUBY_RELEASE_DAY' value='10'/>
+<enum name='RUBY_RELEASE_MONTH' value='1'/>
+<enum name='RUBY_RELEASE_NUM' value='249'/>
+<enum name='RUBY_RELEASE_YEAR' value='2010'/>
+<enum name='RUBY_VERSION_CODE' value='187'/>
+<enum name='RUBY_VERSION_MAJOR' value='1'/>
+<enum name='RUBY_VERSION_MINOR' value='8'/>
+<enum name='RUBY_VERSION_TEENY' value='7'/>
+<enum name='SCOPE_ALLOCA' value='0'/>
+<enum name='SCOPE_CLONE' value='8'/>
+<enum name='SCOPE_DONT_RECYCLE' value='4'/>
+<enum name='SCOPE_MALLOC' value='1'/>
+<enum name='SCOPE_NOSTACK' value='2'/>
+<enum name='SETPGRP_VOID' value='1'/>
+<enum name='SHORT_ALIGN' value='2'/>
+<enum name='SHORT_DLTYPE' value='2'/>
+<enum name='SIZEOF_BDIGITS' value='4'/>
+<enum name='SIZEOF_DOUBLE' value='8'/>
+<enum name='SIZEOF_FLOAT' value='4'/>
+<enum name='SIZEOF_INT' value='4'/>
+<enum name='SIZEOF_LONG' value64='8' value='4'/>
+<enum name='SIZEOF_LONG_LONG' value='8'/>
+<enum name='SIZEOF_OFF_T' value='8'/>
+<enum name='SIZEOF_RLIM_T' value='8'/>
+<enum name='SIZEOF_SHORT' value='2'/>
+<enum name='SIZEOF_TIME_T' value64='8' value='4'/>
+<enum name='SIZEOF_VOIDP' value64='8' value='4'/>
+<enum name='SIZEOF___INT64' value='0'/>
+<enum name='STACK_GROW_DIRECTION' value='-1'/>
+<enum name='STDC_HEADERS' value='1'/>
+<enum name='ST_CHECK' value='3'/>
+<enum name='ST_CONTINUE' value='0'/>
+<enum name='ST_DELETE' value='2'/>
+<enum name='ST_STOP' value='1'/>
+<enum name='SYMBOL_FLAG' value='14'/>
+<enum name='THREAD_KILLED' value='3'/>
+<enum name='THREAD_RUNNABLE' value='1'/>
+<enum name='THREAD_STOPPED' value='2'/>
+<enum name='THREAD_TO_KILL' value='0'/>
+<enum name='T_ARRAY' value='9'/>
+<enum name='T_BIGNUM' value='13'/>
+<enum name='T_BLKTAG' value='59'/>
+<enum name='T_CLASS' value='3'/>
+<enum name='T_DATA' value='34'/>
+<enum name='T_FALSE' value='33'/>
+<enum name='T_FILE' value='14'/>
+<enum name='T_FIXNUM' value='10'/>
+<enum name='T_FLOAT' value='6'/>
+<enum name='T_HASH' value='11'/>
+<enum name='T_ICLASS' value='4'/>
+<enum name='T_MASK' value='63'/>
+<enum name='T_MATCH' value='35'/>
+<enum name='T_MODULE' value='5'/>
+<enum name='T_NIL' value='1'/>
+<enum name='T_NODE' value='63'/>
+<enum name='T_NONE' value='0'/>
+<enum name='T_OBJECT' value='2'/>
+<enum name='T_REGEXP' value='8'/>
+<enum name='T_SCOPE' value='62'/>
+<enum name='T_STRING' value='7'/>
+<enum name='T_STRUCT' value='12'/>
+<enum name='T_SYMBOL' value='36'/>
+<enum name='T_TRUE' value='32'/>
+<enum name='T_UNDEF' value='60'/>
+<enum name='T_VARMAP' value='61'/>
+<enum name='USE_BUILTIN_FRAME_ADDRESS' value='1'/>
+<enum name='VOIDP_ALIGN' value64='8' value='4'/>
+<enum name='VOIDP_DLTYPE' value='7'/>
+<enum name='VOID_DLTYPE' value='0'/>
+<function name='dlfree'>
+<arg type='^v'/>
+</function>
+<function name='dlmalloc'>
+<arg type64='Q' type='L'/>
+<retval type='^v'/>
+</function>
+<function name='dln_find_exe'>
+<arg type='*'/>
+<arg type='*'/>
+<retval type='*'/>
+</function>
+<function name='dln_find_file'>
+<arg type='*'/>
+<arg type='*'/>
+<retval type='*'/>
+</function>
+<function name='dln_load'>
+<arg type='*'/>
+<retval type='^v'/>
+</function>
+<function name='dlptr_free'>
+<arg type64='^{ptr_data=^v^?*^ii^Qiiq}' type='^{ptr_data=^v^?*^ii^Iiil}'/>
+</function>
+<function name='dlptr_init'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='dlrealloc'>
+<arg type='^v'/>
+<arg type64='Q' type='L'/>
+<retval type='^v'/>
+</function>
+<function name='dlsizeof'>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='dlstrdup'>
+<arg type='*'/>
+<retval type='*'/>
+</function>
+<function name='eaccess'>
+<arg type='*'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='is_ruby_native_thread'>
+<retval type='i'/>
+</function>
+<function name='rb_Array'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_Float'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_Integer'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_String'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_add_event_hook'>
+<arg function_pointer='true' type='^?'>
+<arg type='I'/>
+<arg type64='^{RNode=Q*(?=^{RNode}QQ^?^Q)(?=^{RNode}QqQ)(?=^{RNode}Qq^{global_entry}qQ)}' type='^{RNode=L*(?=^{RNode}II^?^I)(?=^{RNode}IlI)(?=^{RNode}Il^{global_entry}lI)}'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type='v'/>
+</arg>
+<arg type='I'/>
+</function>
+<function name='rb_add_method'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='^{RNode=Q*(?=^{RNode}QQ^?^Q)(?=^{RNode}QqQ)(?=^{RNode}Qq^{global_entry}qQ)}' type='^{RNode=L*(?=^{RNode}II^?^I)(?=^{RNode}IlI)(?=^{RNode}Il^{global_entry}lI)}'/>
+<arg type='i'/>
+</function>
+<function name='rb_alias'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_alias_variable'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_any_to_s'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_apply'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary2cary'>
+<arg type='c'/>
+<arg type64='Q' type='L'/>
+<arg type64='^q' type='^l'/>
+<retval type='^v'/>
+</function>
+<function name='rb_ary_aref'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_assoc'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_clear'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_cmp'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_concat'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_delete'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_delete_at'>
+<arg type64='Q' type='L'/>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_dup'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_each'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_entry'>
+<arg type64='Q' type='L'/>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_freeze'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_includes'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_join'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_new'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_new2'>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_new3' variadic='true'>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_new4'>
+<arg type64='q' type='l'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_plus'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_pop'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_print_on'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_push'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_rassoc'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_reverse'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_shift'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_sort'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_sort_bang'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_store'>
+<arg type64='Q' type='L'/>
+<arg type64='q' type='l'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_ary_to_ary'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_to_s'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ary_unshift'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_assoc_new'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_attr'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='rb_attr_get'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_autoload'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+</function>
+<function name='rb_autoload_load'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_autoload_p'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_backref_get'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_backref_set'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_backtrace'/>
+<function name='rb_big2dbl'>
+<arg type64='Q' type='L'/>
+<retval type='d'/>
+</function>
+<function name='rb_big2ll'>
+<arg type64='Q' type='L'/>
+<retval type='q'/>
+</function>
+<function name='rb_big2long'>
+<arg type64='Q' type='L'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='rb_big2str'>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_big2str0'>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_big2ull'>
+<arg type64='Q' type='L'/>
+<retval type='Q'/>
+</function>
+<function name='rb_big2ulong'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_big_2comp'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_big_and'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_big_clone'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_big_divmod'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_big_lshift'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_big_minus'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_big_mul'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_big_norm'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_big_or'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_big_plus'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_big_pow'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_big_rand'>
+<arg type64='Q' type='L'/>
+<arg type='^d'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_big_rshift'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_big_xor'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_block_call'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_block_dup'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_block_given_p'>
+<retval type='i'/>
+</function>
+<function name='rb_block_proc'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_call_super'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_catch'>
+<arg type='*'/>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_check_array_type'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_check_array_value'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_check_convert_type'>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<arg type='*'/>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_check_frozen'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_check_inheritable'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_check_safe_obj'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_check_safe_str'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_check_string_type'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_check_to_integer'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_check_type'>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+</function>
+<function name='rb_class2name'>
+<arg type64='Q' type='L'/>
+<retval type='*'/>
+</function>
+<function name='rb_class_boot'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_class_inherited'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_class_inherited_p'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_class_init_copy'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_class_instance_methods'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_class_name'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_class_new'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_class_new_instance'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_class_of' inline='true'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_class_path'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_class_private_instance_methods'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_class_protected_instance_methods'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_class_public_instance_methods'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_class_real'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_clear_cache'/>
+<function name='rb_clear_cache_by_class'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_cmpint'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_compile_cstr'>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='i'/>
+<arg type='i'/>
+<retval type64='^{RNode=Q*(?=^{RNode}QQ^?^Q)(?=^{RNode}QqQ)(?=^{RNode}Qq^{global_entry}qQ)}' type='^{RNode=L*(?=^{RNode}II^?^I)(?=^{RNode}IlI)(?=^{RNode}Il^{global_entry}lI)}'/>
+</function>
+<function name='rb_compile_error' variadic='true'>
+<arg type='*'/>
+</function>
+<function name='rb_compile_error_append' variadic='true'>
+<arg type='*'/>
+</function>
+<function name='rb_compile_file'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<retval type64='^{RNode=Q*(?=^{RNode}QQ^?^Q)(?=^{RNode}QqQ)(?=^{RNode}Qq^{global_entry}qQ)}' type='^{RNode=L*(?=^{RNode}II^?^I)(?=^{RNode}IlI)(?=^{RNode}Il^{global_entry}lI)}'/>
+</function>
+<function name='rb_compile_string'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<retval type64='^{RNode=Q*(?=^{RNode}QQ^?^Q)(?=^{RNode}QqQ)(?=^{RNode}Qq^{global_entry}qQ)}' type='^{RNode=L*(?=^{RNode}II^?^I)(?=^{RNode}IlI)(?=^{RNode}Il^{global_entry}lI)}'/>
+</function>
+<function name='rb_const_defined'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_const_defined_at'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_const_defined_from'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_const_get'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_const_get_at'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_const_get_from'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_const_list'>
+<arg type='^v'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_const_set'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_convert_type'>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<arg type='*'/>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_copy_generic_ivar'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_copy_node_scope'>
+<arg type64='^{RNode=Q*(?=^{RNode}QQ^?^Q)(?=^{RNode}QqQ)(?=^{RNode}Qq^{global_entry}qQ)}' type='^{RNode=L*(?=^{RNode}II^?^I)(?=^{RNode}IlI)(?=^{RNode}Il^{global_entry}lI)}'/>
+<arg type64='^{RNode=Q*(?=^{RNode}QQ^?^Q)(?=^{RNode}QqQ)(?=^{RNode}Qq^{global_entry}qQ)}' type='^{RNode=L*(?=^{RNode}II^?^I)(?=^{RNode}IlI)(?=^{RNode}Il^{global_entry}lI)}'/>
+<retval type64='^{RNode=Q*(?=^{RNode}QQ^?^Q)(?=^{RNode}QqQ)(?=^{RNode}Qq^{global_entry}qQ)}' type='^{RNode=L*(?=^{RNode}II^?^I)(?=^{RNode}IlI)(?=^{RNode}Il^{global_entry}lI)}'/>
+</function>
+<function name='rb_cstr2inum'>
+<arg type='*'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_cstr_to_dbl'>
+<arg type='*'/>
+<arg type='i'/>
+<retval type='d'/>
+</function>
+<function name='rb_cstr_to_inum'>
+<arg type='*'/>
+<arg type='i'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_cv_get'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_cv_set'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_cvar_defined'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_cvar_get'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_cvar_set'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+</function>
+<function name='rb_data_object_alloc'>
+<arg type64='Q' type='L'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_dbl2big'>
+<arg type='d'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_dbl_cmp'>
+<arg type='d'/>
+<arg type='d'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_define_alias'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg type='*'/>
+</function>
+<function name='rb_define_alloc_func'>
+<arg type64='Q' type='L'/>
+<arg function_pointer='true' type='^?'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</arg>
+</function>
+<function name='rb_define_attr'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='rb_define_class'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_define_class_id'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_define_class_under'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_define_class_variable'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_define_const'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_define_global_const'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_define_global_function'>
+<arg type='*'/>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type='i'/>
+</function>
+<function name='rb_define_hooked_variable'>
+<arg type='*'/>
+<arg type64='^Q' type='^I'/>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<retval type='v'/>
+</arg>
+</function>
+<function name='rb_define_method'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type='i'/>
+</function>
+<function name='rb_define_method_id'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type='i'/>
+</function>
+<function name='rb_define_module'>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_define_module_function'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type='i'/>
+</function>
+<function name='rb_define_module_id'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_define_module_under'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_define_private_method'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type='i'/>
+</function>
+<function name='rb_define_protected_method'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type='i'/>
+</function>
+<function name='rb_define_readonly_variable'>
+<arg type='*'/>
+<arg type64='^Q' type='^I'/>
+</function>
+<function name='rb_define_singleton_method'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type='i'/>
+</function>
+<function name='rb_define_variable'>
+<arg type='*'/>
+<arg type64='^Q' type='^I'/>
+</function>
+<function name='rb_define_virtual_variable'>
+<arg type='*'/>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg function_pointer='true' type='^?'>
+<retval type='v'/>
+</arg>
+</function>
+<function name='rb_detach_process'>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_dlptr2cptr'>
+<arg type64='Q' type='L'/>
+<retval type='^v'/>
+</function>
+<function name='rb_dlptr_malloc'>
+<arg type64='q' type='l'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_dlptr_new'>
+<arg type='^v'/>
+<arg type64='q' type='l'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_dlptr_new2'>
+<arg type64='Q' type='L'/>
+<arg type='^v'/>
+<arg type64='q' type='l'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_dlsym2csym'>
+<arg type64='Q' type='L'/>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='rb_dlsym_new'>
+<arg function_pointer='true' type='^?'>
+<retval type='v'/>
+</arg>
+<arg type='*'/>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_during_gc'>
+<retval type='i'/>
+</function>
+<function name='rb_dvar_asgn'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_dvar_curr'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_dvar_defined'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_dvar_push'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_dvar_ref'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_each'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ensure'>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type64='Q' type='L'/>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_enumeratorize'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_env_path_tainted'>
+<retval type='i'/>
+</function>
+<function name='rb_eql'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_equal'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_eval_cmd'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_eval_string'>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_eval_string_protect'>
+<arg type='*'/>
+<arg type='^i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_eval_string_wrap'>
+<arg type='*'/>
+<arg type='^i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_exc_new'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_exc_new2'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_exc_new3'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_exec_end_proc'/>
+<function name='rb_exec_recursive'>
+<arg function_pointer='true' type='^?'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_extend_object'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_f_abort'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_f_exec'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_f_exit'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_f_global_variables'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_f_kill'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_f_lambda'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_f_require'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_f_sprintf'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_f_trace_var'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_f_untrace_var'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_fdopen'>
+<arg type='i'/>
+<arg type='*'/>
+<retval type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
+</function>
+<function name='rb_file_const'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_file_directory_p'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_file_expand_path'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_file_open'>
+<arg type='*'/>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_file_s_expand_path'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_find_file'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_find_file_ext'>
+<arg type64='^Q' type='^I'/>
+<arg type='^*'/>
+<retval type='i'/>
+</function>
+<function name='rb_fix2int'>
+<arg type64='Q'/>
+<retval type64='q'/>
+</function>
+<function name='rb_fix2str'>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_fix2uint'>
+<arg type64='Q'/>
+<retval type64='Q'/>
+</function>
+<function name='rb_float_new'>
+<arg type='d'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_fopen'>
+<arg type='*'/>
+<arg type='*'/>
+<retval type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
+</function>
+<function name='rb_frame_last_func'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_frame_this_func'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_free_generic_ivar'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_frozen_class_p'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_funcall' variadic='true'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_funcall2'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_funcall3'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_funcall_rescue' variadic='true'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_gc'/>
+<function name='rb_gc_call_finalizer_at_exit'/>
+<function name='rb_gc_copy_finalizer'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_gc_disable'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_gc_enable'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_gc_finalize_deferred'/>
+<function name='rb_gc_force_recycle'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_gc_mark'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_gc_mark_frame'>
+<arg type64='^{FRAME=QiQQQ^{FRAME}^{FRAME}^{RNode}iiQ}' type='^{FRAME=IiIII^{FRAME}^{FRAME}^{RNode}iiL}'/>
+</function>
+<function name='rb_gc_mark_global_tbl'/>
+<function name='rb_gc_mark_locations'>
+<arg type64='^Q' type='^I'/>
+<arg type64='^Q' type='^I'/>
+</function>
+<function name='rb_gc_mark_maybe'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_gc_mark_parser'/>
+<function name='rb_gc_mark_threads'/>
+<function name='rb_gc_mark_trap_list'/>
+<function name='rb_gc_register_address'>
+<arg type64='^Q' type='^I'/>
+</function>
+<function name='rb_gc_start'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_gc_unregister_address'>
+<arg type64='^Q' type='^I'/>
+</function>
+<function name='rb_generic_ivar_table'>
+<arg type64='Q' type='L'/>
+<retval type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+</function>
+<function name='rb_genrand_int32'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_genrand_real'>
+<retval type='d'/>
+</function>
+<function name='rb_get_kcode'>
+<retval type='*'/>
+</function>
+<function name='rb_getc'>
+<arg type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
+<retval type='i'/>
+</function>
+<function name='rb_gets'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_glob'>
+<arg type='*'/>
+<arg function_pointer='true' type='^?'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<retval type='v'/>
+</arg>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_global_entry'>
+<arg type64='Q' type='L'/>
+<retval type='^{global_entry=}'/>
+</function>
+<function name='rb_global_variable'>
+<arg type64='^Q' type='^I'/>
+</function>
+<function name='rb_globi'>
+<arg type='*'/>
+<arg function_pointer='true' type='^?'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<retval type='v'/>
+</arg>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_gv_get'>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_gv_set'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_gvar_defined'>
+<arg type='^{global_entry=}'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_gvar_get'>
+<arg type='^{global_entry=}'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_gvar_set'>
+<arg type='^{global_entry=}'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_hash'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_hash_aref'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_hash_aset'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_hash_delete'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_hash_delete_if'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_hash_foreach'>
+<arg type64='Q' type='L'/>
+<arg function_pointer='true' type='^?'>
+<retval type='i'/>
+</arg>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_hash_freeze'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_hash_lookup'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_hash_new'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_id2name'>
+<arg type64='Q' type='L'/>
+<retval type='*'/>
+</function>
+<function name='rb_id_attrset'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_include_module'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_inspect'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_inspecting_p'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_int2big'>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_int2inum'>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_intern'>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_interrupt'/>
+<function name='rb_io_addstr'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_io_binmode'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_io_check_closed'>
+<arg type='^{rb_io_t=^{__sFILE}^{__sFILE}iii*^?}'/>
+</function>
+<function name='rb_io_check_initialized'>
+<arg type='^{rb_io_t=^{__sFILE}^{__sFILE}iii*^?}'/>
+</function>
+<function name='rb_io_check_readable'>
+<arg type='^{rb_io_t=^{__sFILE}^{__sFILE}iii*^?}'/>
+</function>
+<function name='rb_io_check_writable'>
+<arg type='^{rb_io_t=^{__sFILE}^{__sFILE}iii*^?}'/>
+</function>
+<function name='rb_io_close'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_io_eof'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_io_fptr_finalize'>
+<arg type='^{rb_io_t=^{__sFILE}^{__sFILE}iii*^?}'/>
+</function>
+<function name='rb_io_fread'>
+<arg type='*'/>
+<arg type64='q' type='l'/>
+<arg type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='rb_io_fwrite'>
+<arg type='*'/>
+<arg type64='q' type='l'/>
+<arg type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='rb_io_getc'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_io_gets'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_io_mode_flags'>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='rb_io_modenum_flags'>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='rb_io_print'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_io_printf'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_io_puts'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_io_set_nonblock'>
+<arg type='^{rb_io_t=^{__sFILE}^{__sFILE}iii*^?}'/>
+</function>
+<function name='rb_io_synchronized'>
+<arg type='^{rb_io_t=^{__sFILE}^{__sFILE}iii*^?}'/>
+</function>
+<function name='rb_io_taint_check'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_io_ungetc'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_io_wait_readable'>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='rb_io_wait_writable'>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='rb_io_write'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_is_class_id'>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_is_const_id'>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_is_instance_id'>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_is_junk_id'>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_is_local_id'>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_iterate'>
+<arg function_pointer='true' type='^?'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type64='Q' type='L'/>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_iv_get'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_iv_set'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ivar_defined'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ivar_get'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ivar_set'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_kcode_reset_option'/>
+<function name='rb_kcode_set_option'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_lastline_get'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_lastline_set'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_length_by_each'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ll2inum'>
+<arg type='q'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_load'>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+</function>
+<function name='rb_load_file'>
+<arg type='*'/>
+</function>
+<function name='rb_load_protect'>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<arg type='^i'/>
+</function>
+<function name='rb_make_metaclass'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_mark_end_proc'/>
+<function name='rb_mark_generic_ivar'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_mark_generic_ivar_tbl'/>
+<function name='rb_mark_hash'>
+<arg type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+</function>
+<function name='rb_mark_set'>
+<arg type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+</function>
+<function name='rb_mark_tbl'>
+<arg type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+</function>
+<function name='rb_marshal_dump'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_marshal_load'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_match_busy'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_mem_clear'>
+<arg type64='^Q' type='^I'/>
+<arg type64='q' type='l'/>
+</function>
+<function name='rb_memcicmp'>
+<arg type='^v'/>
+<arg type='^v'/>
+<arg type64='q' type='l'/>
+<retval type='i'/>
+</function>
+<function name='rb_memcmp'>
+<arg type='^v'/>
+<arg type='^v'/>
+<arg type64='q' type='l'/>
+<retval type='i'/>
+</function>
+<function name='rb_memsearch'>
+<arg type='^v'/>
+<arg type64='q' type='l'/>
+<arg type='^v'/>
+<arg type64='q' type='l'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='rb_method_boundp'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='rb_method_dup'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_method_node'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='^{RNode=Q*(?=^{RNode}QQ^?^Q)(?=^{RNode}QqQ)(?=^{RNode}Qq^{global_entry}qQ)}' type='^{RNode=L*(?=^{RNode}II^?^I)(?=^{RNode}IlI)(?=^{RNode}Il^{global_entry}lI)}'/>
+</function>
+<function name='rb_mod_ancestors'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_mod_class_variables'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_mod_const_at'>
+<arg type64='Q' type='L'/>
+<arg type='^v'/>
+<retval type='^v'/>
+</function>
+<function name='rb_mod_const_missing'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_mod_const_of'>
+<arg type64='Q' type='L'/>
+<arg type='^v'/>
+<retval type='^v'/>
+</function>
+<function name='rb_mod_constants'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_mod_include_p'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_mod_included_modules'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_mod_init_copy'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_mod_module_eval'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_mod_name'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_mod_remove_const'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_mod_remove_cvar'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_module_new'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_name_class'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_need_block'/>
+<function name='rb_newobj'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_node_newnode'>
+<arg type='i'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='^{RNode=Q*(?=^{RNode}QQ^?^Q)(?=^{RNode}QqQ)(?=^{RNode}Qq^{global_entry}qQ)}' type='^{RNode=L*(?=^{RNode}II^?^I)(?=^{RNode}IlI)(?=^{RNode}Il^{global_entry}lI)}'/>
+</function>
+<function name='rb_num2dbl'>
+<arg type64='Q' type='L'/>
+<retval type='d'/>
+</function>
+<function name='rb_num2fix'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_num2int'>
+<arg type64='Q'/>
+<retval type64='q'/>
+</function>
+<function name='rb_num2ll'>
+<arg type64='Q' type='L'/>
+<retval type='q'/>
+</function>
+<function name='rb_num2long'>
+<arg type64='Q' type='L'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='rb_num2uint'>
+<arg type64='Q'/>
+<retval type64='Q'/>
+</function>
+<function name='rb_num2ull'>
+<arg type64='Q' type='L'/>
+<retval type='Q'/>
+</function>
+<function name='rb_num2ulong'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_num_coerce_bin'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_num_coerce_cmp'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_num_coerce_relop'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_num_zerodiv'/>
+<function name='rb_obj_alloc'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_obj_as_string'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_obj_call_init'>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+</function>
+<function name='rb_obj_class'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_obj_classname'>
+<arg type64='Q' type='L'/>
+<retval type='*'/>
+</function>
+<function name='rb_obj_clone'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_obj_dup'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_obj_freeze'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_obj_id'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_obj_infect'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_obj_init_copy'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_obj_instance_eval'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_obj_instance_variables'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_obj_is_instance_of'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_obj_is_kind_of'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_obj_method'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_obj_remove_instance_variable'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_obj_respond_to'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='rb_obj_singleton_methods'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_obj_taint'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_obj_tainted'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_obj_untaint'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_p'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_parser_append_print'/>
+<function name='rb_parser_while_loop'>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='rb_path2class'>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_path_check'>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='rb_path_end'>
+<arg type='*'/>
+<retval type='*'/>
+</function>
+<function name='rb_path_last_separator'>
+<arg type='*'/>
+<retval type='*'/>
+</function>
+<function name='rb_path_next'>
+<arg type='*'/>
+<retval type='*'/>
+</function>
+<function name='rb_path_skip_prefix'>
+<arg type='*'/>
+<retval type='*'/>
+</function>
+<function name='rb_proc_call'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_proc_exec'>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='rb_proc_times'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_protect'>
+<arg function_pointer='true' type='^?'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type64='Q' type='L'/>
+<arg type='^i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_protect_inspect'>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_provide'>
+<arg type='*'/>
+</function>
+<function name='rb_provided'>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='rb_quad_pack'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_quad_unpack'>
+<arg type='*'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_range_beg_len'>
+<arg type64='Q' type='L'/>
+<arg type64='^q' type='^l'/>
+<arg type64='^q' type='^l'/>
+<arg type64='q' type='l'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_range_new'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_read_check'>
+<arg type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
+</function>
+<function name='rb_read_pending'>
+<arg type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
+<retval type='i'/>
+</function>
+<function name='rb_reg_adjust_startpos'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='q' type='l'/>
+<arg type64='q' type='l'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='rb_reg_last_match'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_reg_match'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_reg_match2'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_reg_match_last'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_reg_match_post'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_reg_match_pre'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_reg_mbclen2'>
+<arg type='I'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_reg_new'>
+<arg type='*'/>
+<arg type64='q' type='l'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_reg_nth_defined'>
+<arg type='i'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_reg_nth_match'>
+<arg type='i'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_reg_options'>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_reg_quote'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_reg_regcomp'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_reg_regsub'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='^{re_registers=ii^i^i}'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_reg_search'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='q' type='l'/>
+<arg type64='q' type='l'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='rb_remove_event_hook'>
+<arg function_pointer='true' type='^?'>
+<arg type='I'/>
+<arg type64='^{RNode=Q*(?=^{RNode}QQ^?^Q)(?=^{RNode}QqQ)(?=^{RNode}Qq^{global_entry}qQ)}' type='^{RNode=L*(?=^{RNode}II^?^I)(?=^{RNode}IlI)(?=^{RNode}Il^{global_entry}lI)}'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type='v'/>
+</arg>
+<retval type='i'/>
+</function>
+<function name='rb_remove_method'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+</function>
+<function name='rb_require'>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_require_safe'>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_rescue'>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type64='Q' type='L'/>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_rescue2' variadic='true'>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type64='Q' type='L'/>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_respond_to'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_scan_args' variadic='true'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='rb_secure'>
+<arg type='i'/>
+</function>
+<function name='rb_secure_update'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_set_class_path'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+</function>
+<function name='rb_set_end_proc'>
+<arg function_pointer='true' type='^?'>
+<arg type64='Q' type='L'/>
+<retval type='v'/>
+</arg>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_set_kcode'>
+<arg type='*'/>
+</function>
+<function name='rb_set_safe_level'>
+<arg type='i'/>
+</function>
+<function name='rb_singleton_class'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_singleton_class_attached'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_singleton_class_clone'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_source_filename'>
+<arg type='*'/>
+<retval type='*'/>
+</function>
+<function name='rb_special_const_p' inline='true'>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_str2cstr'>
+<arg type64='Q' type='L'/>
+<arg type64='^q' type='^l'/>
+<retval type='*'/>
+</function>
+<function name='rb_str2inum'>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_append'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_associate'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_str_associated'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_buf_append'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_buf_cat'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_buf_cat2'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_buf_new'>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_buf_new2'>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_cat'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_cat2'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_cmp'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_str_concat'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_dump'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_dup'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_dup_frozen'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_format'>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_freeze'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_hash'>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_str_inspect'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_intern'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_locktmp'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_modify'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_str_new'>
+<arg type='*'/>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_new2'>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_new3'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_new4'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_new5'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_plus'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_resize'>
+<arg type64='Q' type='L'/>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_set_len'>
+<arg type64='Q' type='L'/>
+<arg type64='q' type='l'/>
+</function>
+<function name='rb_str_setter'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='^Q' type='^I'/>
+</function>
+<function name='rb_str_split'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_substr'>
+<arg type64='Q' type='L'/>
+<arg type64='q' type='l'/>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_times'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_tmp_new'>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_to_dbl'>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<retval type='d'/>
+</function>
+<function name='rb_str_to_inum'>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_to_str'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_unlocktmp'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_str_update'>
+<arg type64='Q' type='L'/>
+<arg type64='q' type='l'/>
+<arg type64='q' type='l'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_str_upto'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_string_value'>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_string_value_cstr'>
+<arg type64='^Q' type='^I'/>
+<retval type='*'/>
+</function>
+<function name='rb_string_value_ptr'>
+<arg type64='^Q' type='^I'/>
+<retval type='*'/>
+</function>
+<function name='rb_struct_alloc'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_struct_aref'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_struct_aset'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_struct_define' variadic='true'>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_struct_getmember'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_struct_iv_get'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_struct_members'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_struct_new' variadic='true'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_struct_s_members'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_svar'>
+<arg type='i'/>
+<retval type64='^Q' type='^I'/>
+</function>
+<function name='rb_sym_all_symbols'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_sym_interned_p'>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_symname_p'>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='rb_sys_warning' variadic='true'>
+<arg type='*'/>
+</function>
+<function name='rb_syswait'>
+<arg type='i'/>
+</function>
+<function name='rb_tainted_str_new'>
+<arg type='*'/>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_tainted_str_new2'>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_thread_alive_p'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_thread_alone'>
+<retval type='i'/>
+</function>
+<function name='rb_thread_atfork'/>
+<function name='rb_thread_create'>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type='^v'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_thread_current'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_thread_fd_close'>
+<arg type='i'/>
+</function>
+<function name='rb_thread_fd_writable'>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='rb_thread_interrupt'/>
+<function name='rb_thread_kill'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_thread_local_aref'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_thread_local_aset'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_thread_main'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_thread_polling'/>
+<function name='rb_thread_reset_raised'>
+<arg type64='^{rb_thread=^{rb_thread}^{rb_thread}[37i]QQQ^Q^Q^{FRAME}^{SCOPE}^{RVarmap}^{BLOCK}^{iter}^{tag}QQ^{RNode}i^{RNode}iQQQQiiii{fd_set=[32i]}{fd_set=[32i]}{fd_set=[32i]}id^{rb_thread}iiQ^{st_table}QQ}' type='^{rb_thread=^{rb_thread}^{rb_thread}[18i]III^I^I^{FRAME}^{SCOPE}^{RVarmap}^{BLOCK}^{iter}^{tag}II^{RNode}i^{RNode}iIIIIiiii{fd_set=[32i]}{fd_set=[32i]}{fd_set=[32i]}id^{rb_thread}iiI^{st_table}II}'/>
+<retval type='i'/>
+</function>
+<function name='rb_thread_run'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_thread_schedule'/>
+<function name='rb_thread_select'>
+<arg type='i'/>
+<arg type='^{fd_set=[32i]}'/>
+<arg type='^{fd_set=[32i]}'/>
+<arg type='^{fd_set=[32i]}'/>
+<arg type64='^{timeval=qi}' type='^{timeval=ii}'/>
+<retval type='i'/>
+</function>
+<function name='rb_thread_set_raised'>
+<arg type64='^{rb_thread=^{rb_thread}^{rb_thread}[37i]QQQ^Q^Q^{FRAME}^{SCOPE}^{RVarmap}^{BLOCK}^{iter}^{tag}QQ^{RNode}i^{RNode}iQQQQiiii{fd_set=[32i]}{fd_set=[32i]}{fd_set=[32i]}id^{rb_thread}iiQ^{st_table}QQ}' type='^{rb_thread=^{rb_thread}^{rb_thread}[18i]III^I^I^{FRAME}^{SCOPE}^{RVarmap}^{BLOCK}^{iter}^{tag}II^{RNode}i^{RNode}iIIIIiiii{fd_set=[32i]}{fd_set=[32i]}{fd_set=[32i]}id^{rb_thread}iiI^{st_table}II}'/>
+<retval type='i'/>
+</function>
+<function name='rb_thread_signal_exit'/>
+<function name='rb_thread_signal_raise'>
+<arg type='i'/>
+</function>
+<function name='rb_thread_sleep'>
+<arg type='i'/>
+</function>
+<function name='rb_thread_sleep_forever'/>
+<function name='rb_thread_start_timer'/>
+<function name='rb_thread_stop'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_thread_stop_timer'/>
+<function name='rb_thread_trap_eval'>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='rb_thread_wait_fd'>
+<arg type='i'/>
+</function>
+<function name='rb_thread_wait_for'>
+<arg type64='{timeval=qi}' type='{timeval=ii}'/>
+</function>
+<function name='rb_thread_wakeup'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_thread_wakeup_alive'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_time_new'>
+<arg type64='q' type='l'/>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_to_id'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_to_int'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_trap_exec'/>
+<function name='rb_trap_exit'/>
+<function name='rb_trap_restore_mask'/>
+<function name='rb_type' inline='true'>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='rb_uint2big'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_uint2inum'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_ull2inum'>
+<arg type='Q'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_undef'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_undef_alloc_func'>
+<arg type64='Q' type='L'/>
+</function>
+<function name='rb_undef_method'>
+<arg type64='Q' type='L'/>
+<arg type='*'/>
+</function>
+<function name='rb_values_at'>
+<arg type64='Q' type='L'/>
+<arg type64='q' type='l'/>
+<arg type='i'/>
+<arg type64='^Q' type='^I'/>
+<arg function_pointer='true' type='^?'>
+<arg type64='Q' type='L'/>
+<arg type64='q' type='l'/>
+<retval type64='Q' type='L'/>
+</arg>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_waitpid'>
+<arg type='i'/>
+<arg type='^i'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='rb_warn' variadic='true'>
+<arg type='*'/>
+</function>
+<function name='rb_warning' variadic='true'>
+<arg type='*'/>
+</function>
+<function name='rb_with_disable_interrupt'>
+<arg function_pointer='true' type='^?'>
+<retval type64='Q' type='L'/>
+</arg>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_write_error'>
+<arg type='*'/>
+</function>
+<function name='rb_write_error2'>
+<arg type='*'/>
+<arg type64='q' type='l'/>
+</function>
+<function name='rb_yield'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_yield_splat'>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='rb_yield_values' variadic='true'>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ruby_brace_expand'>
+<arg type='*'/>
+<arg type='i'/>
+<arg function_pointer='true' type='^?'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</arg>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='ruby_brace_glob'>
+<arg type='*'/>
+<arg type='i'/>
+<arg function_pointer='true' type='^?'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</arg>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='ruby_cleanup'>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ruby_default_signal'>
+<arg type='i'/>
+</function>
+<function name='ruby_exec'>
+<retval type='i'/>
+</function>
+<function name='ruby_finalize'/>
+<function name='ruby_getcwd'>
+<retval type='*'/>
+</function>
+<function name='ruby_glob'>
+<arg type='*'/>
+<arg type='i'/>
+<arg function_pointer='true' type='^?'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</arg>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='ruby_globi'>
+<arg type='*'/>
+<arg type='i'/>
+<arg function_pointer='true' type='^?'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</arg>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='ruby_incpush'>
+<arg type='*'/>
+</function>
+<function name='ruby_init'/>
+<function name='ruby_init_loadpath'/>
+<function name='ruby_init_stack'>
+<arg type64='^Q' type='^I'/>
+</function>
+<function name='ruby_load_script'/>
+<function name='ruby_native_thread_kill'>
+<arg type='i'/>
+</function>
+<function name='ruby_options'>
+<arg type='i'/>
+<arg type='^*'/>
+</function>
+<function name='ruby_parser_stack_on_heap'>
+<retval type='i'/>
+</function>
+<function name='ruby_process_options'>
+<arg type='i'/>
+<arg type='^*'/>
+</function>
+<function name='ruby_prog_init'/>
+<function name='ruby_qsort'>
+<arg type='^v'/>
+<arg type='i'/>
+<arg type='i'/>
+<arg function_pointer='true' type='^?'>
+<retval type='i'/>
+</arg>
+<arg type='^v'/>
+</function>
+<function name='ruby_script'>
+<arg type='*'/>
+</function>
+<function name='ruby_set_argv'>
+<arg type='i'/>
+<arg type='^*'/>
+</function>
+<function name='ruby_set_current_source'/>
+<function name='ruby_setenv'>
+<arg type='*'/>
+<arg type='*'/>
+</function>
+<function name='ruby_show_copyright'/>
+<function name='ruby_show_version'/>
+<function name='ruby_signal_name'>
+<arg type='i'/>
+<retval type='*'/>
+</function>
+<function name='ruby_stack_check'>
+<retval type='i'/>
+</function>
+<function name='ruby_stack_length'>
+<arg type64='^^Q' type='^^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ruby_strdup'>
+<arg type='*'/>
+<retval type='*'/>
+</function>
+<function name='ruby_strtod'>
+<arg type='*'/>
+<arg type='^*'/>
+<retval type='d'/>
+</function>
+<function name='ruby_unsetenv'>
+<arg type='*'/>
+</function>
+<function name='ruby_yyparse'>
+<retval type='i'/>
+</function>
+<function name='st_add_direct'>
+<arg type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='st_cleanup_safe'>
+<arg type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='st_copy'>
+<arg type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+<retval type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+</function>
+<function name='st_delete'>
+<arg type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='^Q' type='^I'/>
+<retval type='i'/>
+</function>
+<function name='st_delete_safe'>
+<arg type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='^Q' type='^I'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='st_foreach'>
+<arg type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+<arg function_pointer='true' type='^?'>
+<retval type='i'/>
+</arg>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='st_foreach_safe'>
+<arg type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+<arg function_pointer='true' type='^?'>
+<retval type='i'/>
+</arg>
+<arg type64='Q' type='L'/>
+</function>
+<function name='st_free_table'>
+<arg type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+</function>
+<function name='st_init_numtable'>
+<retval type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+</function>
+<function name='st_init_numtable_with_size'>
+<arg type='i'/>
+<retval type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+</function>
+<function name='st_init_strtable'>
+<retval type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+</function>
+<function name='st_init_strtable_with_size'>
+<arg type='i'/>
+<retval type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+</function>
+<function name='st_init_table'>
+<arg type='^{st_hash_type=^?^?}'/>
+<retval type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+</function>
+<function name='st_init_table_with_size'>
+<arg type='^{st_hash_type=^?^?}'/>
+<arg type='i'/>
+<retval type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+</function>
+<function name='st_insert'>
+<arg type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='st_lookup'>
+<arg type='^{st_table=^{st_hash_type}ii^^{st_table_entry}}'/>
+<arg type64='Q' type='L'/>
+<arg type64='^Q' type='^I'/>
+<retval type='i'/>
+</function>
+<function name='st_strhash'>
+<retval type='i'/>
+</function>
+<function_alias name='posix_signal' original='ruby_posix_signal'/>
+<function_alias name='re_adjust_startpos' original='ruby_re_adjust_startpos'/>
+<function_alias name='re_compile_fastmap' original='ruby_re_compile_fastmap'/>
+<function_alias name='re_compile_pattern' original='ruby_re_compile_pattern'/>
+<function_alias name='re_copy_registers' original='ruby_re_copy_registers'/>
+<function_alias name='re_free_pattern' original='ruby_re_free_pattern'/>
+<function_alias name='re_free_registers' original='ruby_re_free_registers'/>
+<function_alias name='re_match' original='ruby_re_match'/>
+<function_alias name='re_mbcinit' original='ruby_re_mbcinit'/>
+<function_alias name='re_search' original='ruby_re_search'/>
+<function_alias name='re_set_casetable' original='ruby_re_set_casetable'/>
+<function_alias name='scan_hex' original='ruby_scan_hex'/>
+<function_alias name='scan_oct' original='ruby_scan_oct'/>
+<function_alias name='xcalloc' original='ruby_xcalloc'/>
+<function_alias name='xfree' original='ruby_xfree'/>
+<function_alias name='xmalloc' original='ruby_xmalloc'/>
+<function_alias name='xrealloc' original='ruby_xrealloc'/>
+</signatures>

@@ -1,0 +1,713 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<cftype name='ODContextRef' gettypeid_func='ODContextGetTypeID' type='^{__ODContext=}' tollfree='NSODContext'/>
+<cftype name='ODNodeRef' gettypeid_func='ODNodeGetTypeID' type='^{__ODNode=}' tollfree='NSODNode'/>
+<cftype name='ODQueryRef' gettypeid_func='ODQueryGetTypeID' type='^{__ODQuery=}' tollfree='NSODQuery'/>
+<cftype name='ODRecordRef' gettypeid_func='ODRecordGetTypeID' type='^{__ODRecord=}' tollfree='NSODRecord'/>
+<cftype name='ODSessionRef' gettypeid_func='ODSessionGetTypeID' type='^{__ODSession=}' tollfree='NSODSession'/>
+<constant name='kODAttributeTypeAccessControlEntry' type='@'/>
+<constant name='kODAttributeTypeAddressLine1' type='@'/>
+<constant name='kODAttributeTypeAddressLine2' type='@'/>
+<constant name='kODAttributeTypeAddressLine3' type='@'/>
+<constant name='kODAttributeTypeAdminLimits' type='@'/>
+<constant name='kODAttributeTypeAdvertisedServices' type='@'/>
+<constant name='kODAttributeTypeAlias' type='@'/>
+<constant name='kODAttributeTypeAllAttributes' type='@'/>
+<constant name='kODAttributeTypeAllTypes' type='@'/>
+<constant name='kODAttributeTypeAltSecurityIdentities' type='@'/>
+<constant name='kODAttributeTypeAreaCode' type='@'/>
+<constant name='kODAttributeTypeAttrListRefCount' type='@'/>
+<constant name='kODAttributeTypeAttrListRefs' type='@'/>
+<constant name='kODAttributeTypeAttrListValueRefCount' type='@'/>
+<constant name='kODAttributeTypeAttrListValueRefs' type='@'/>
+<constant name='kODAttributeTypeAuthCredential' type='@'/>
+<constant name='kODAttributeTypeAuthMethod' type='@'/>
+<constant name='kODAttributeTypeAuthenticationAuthority' type='@'/>
+<constant name='kODAttributeTypeAuthenticationHint' type='@'/>
+<constant name='kODAttributeTypeAuthorityRevocationList' type='@'/>
+<constant name='kODAttributeTypeAutomaticSearchPath' type='@'/>
+<constant name='kODAttributeTypeAutomountInformation' type='@'/>
+<constant name='kODAttributeTypeBirthday' type='@'/>
+<constant name='kODAttributeTypeBootParams' type='@'/>
+<constant name='kODAttributeTypeBuildVersion' type='@'/>
+<constant name='kODAttributeTypeBuilding' type='@'/>
+<constant name='kODAttributeTypeCACertificate' type='@'/>
+<constant name='kODAttributeTypeCapacity' type='@'/>
+<constant name='kODAttributeTypeCertificateRevocationList' type='@'/>
+<constant name='kODAttributeTypeCity' type='@'/>
+<constant name='kODAttributeTypeComment' type='@'/>
+<constant name='kODAttributeTypeCompany' type='@'/>
+<constant name='kODAttributeTypeComputers' type='@'/>
+<constant name='kODAttributeTypeConfigAvailable' type='@'/>
+<constant name='kODAttributeTypeConfigFile' type='@'/>
+<constant name='kODAttributeTypeContactGUID' type='@'/>
+<constant name='kODAttributeTypeContactPerson' type='@'/>
+<constant name='kODAttributeTypeCopyTimestamp' type='@'/>
+<constant name='kODAttributeTypeCoreFWVersion' type='@'/>
+<constant name='kODAttributeTypeCountry' type='@'/>
+<constant name='kODAttributeTypeCreationTimestamp' type='@'/>
+<constant name='kODAttributeTypeCrossCertificatePair' type='@'/>
+<constant name='kODAttributeTypeCustomSearchPath' type='@'/>
+<constant name='kODAttributeTypeDNSDomain' type='@'/>
+<constant name='kODAttributeTypeDNSName' type='@'/>
+<constant name='kODAttributeTypeDNSNameServer' type='@'/>
+<constant name='kODAttributeTypeDataStamp' type='@'/>
+<constant name='kODAttributeTypeDateRecordCreated' type='@'/>
+<constant name='kODAttributeTypeDepartment' type='@'/>
+<constant name='kODAttributeTypeDirRefCount' type='@'/>
+<constant name='kODAttributeTypeDirRefs' type='@'/>
+<constant name='kODAttributeTypeEMailAddress' type='@'/>
+<constant name='kODAttributeTypeEMailContacts' type='@'/>
+<constant name='kODAttributeTypeENetAddress' type='@'/>
+<constant name='kODAttributeTypeExpire' type='@'/>
+<constant name='kODAttributeTypeFWVersion' type='@'/>
+<constant name='kODAttributeTypeFaxNumber' type='@'/>
+<constant name='kODAttributeTypeFirstName' type='@'/>
+<constant name='kODAttributeTypeFullName' type='@'/>
+<constant name='kODAttributeTypeFunctionalState' type='@'/>
+<constant name='kODAttributeTypeGUID' type='@'/>
+<constant name='kODAttributeTypeGroup' type='@'/>
+<constant name='kODAttributeTypeGroupMembers' type='@'/>
+<constant name='kODAttributeTypeGroupMembership' type='@'/>
+<constant name='kODAttributeTypeGroupServices' type='@'/>
+<constant name='kODAttributeTypeHTML' type='@'/>
+<constant name='kODAttributeTypeHardwareUUID' type='@'/>
+<constant name='kODAttributeTypeHomeDirectory' type='@'/>
+<constant name='kODAttributeTypeHomeDirectoryQuota' type='@'/>
+<constant name='kODAttributeTypeHomeDirectorySoftQuota' type='@'/>
+<constant name='kODAttributeTypeHomeLocOwner' type='@'/>
+<constant name='kODAttributeTypeHomePhoneNumber' type='@'/>
+<constant name='kODAttributeTypeIMHandle' type='@'/>
+<constant name='kODAttributeTypeIPAddress' type='@'/>
+<constant name='kODAttributeTypeIPAddressAndENetAddress' type='@'/>
+<constant name='kODAttributeTypeIPv6Address' type='@'/>
+<constant name='kODAttributeTypeInternetAlias' type='@'/>
+<constant name='kODAttributeTypeJPEGPhoto' type='@'/>
+<constant name='kODAttributeTypeJobTitle' type='@'/>
+<constant name='kODAttributeTypeKDCAuthKey' type='@'/>
+<constant name='kODAttributeTypeKDCConfigData' type='@'/>
+<constant name='kODAttributeTypeKerberosRealm' type='@'/>
+<constant name='kODAttributeTypeKerberosServices' type='@'/>
+<constant name='kODAttributeTypeKeywords' type='@'/>
+<constant name='kODAttributeTypeLDAPReadReplicas' type='@'/>
+<constant name='kODAttributeTypeLDAPSearchBaseSuffix' type='@'/>
+<constant name='kODAttributeTypeLDAPWriteReplicas' type='@'/>
+<constant name='kODAttributeTypeLastName' type='@'/>
+<constant name='kODAttributeTypeLocalOnlySearchPath' type='@'/>
+<constant name='kODAttributeTypeLocaleRelay' type='@'/>
+<constant name='kODAttributeTypeLocaleSubnets' type='@'/>
+<constant name='kODAttributeTypeLocation' type='@'/>
+<constant name='kODAttributeTypeMCXFlags' type='@'/>
+<constant name='kODAttributeTypeMCXSettings' type='@'/>
+<constant name='kODAttributeTypeMIME' type='@'/>
+<constant name='kODAttributeTypeMailAttribute' type='@'/>
+<constant name='kODAttributeTypeMapCoordinates' type='@'/>
+<constant name='kODAttributeTypeMapGUID' type='@'/>
+<constant name='kODAttributeTypeMapURI' type='@'/>
+<constant name='kODAttributeTypeMetaAmbiguousName' type='@'/>
+<constant name='kODAttributeTypeMetaAugmentedAttributes' type='@'/>
+<constant name='kODAttributeTypeMetaAutomountMap' type='@'/>
+<constant name='kODAttributeTypeMetaNodeLocation' type='@'/>
+<constant name='kODAttributeTypeMetaRecordName' type='@'/>
+<constant name='kODAttributeTypeMiddleName' type='@'/>
+<constant name='kODAttributeTypeMobileNumber' type='@'/>
+<constant name='kODAttributeTypeModificationTimestamp' type='@'/>
+<constant name='kODAttributeTypeNFSHomeDirectory' type='@'/>
+<constant name='kODAttributeTypeNTDomainComputerAccount' type='@'/>
+<constant name='kODAttributeTypeNamePrefix' type='@'/>
+<constant name='kODAttributeTypeNameSuffix' type='@'/>
+<constant name='kODAttributeTypeNativeOnly' type='@'/>
+<constant name='kODAttributeTypeNestedGroups' type='@'/>
+<constant name='kODAttributeTypeNetGroupTriplet' type='@'/>
+<constant name='kODAttributeTypeNetGroups' type='@'/>
+<constant name='kODAttributeTypeNetworkInterfaces' type='@'/>
+<constant name='kODAttributeTypeNetworkNumber' type='@'/>
+<constant name='kODAttributeTypeNickName' type='@'/>
+<constant name='kODAttributeTypeNodePath' type='@'/>
+<constant name='kODAttributeTypeNodeRefCount' type='@'/>
+<constant name='kODAttributeTypeNodeRefs' type='@'/>
+<constant name='kODAttributeTypeNote' type='@'/>
+<constant name='kODAttributeTypeNumTableList' type='@'/>
+<constant name='kODAttributeTypeOperatingSystem' type='@'/>
+<constant name='kODAttributeTypeOperatingSystemVersion' type='@'/>
+<constant name='kODAttributeTypeOrganizationInfo' type='@'/>
+<constant name='kODAttributeTypeOrganizationName' type='@'/>
+<constant name='kODAttributeTypeOriginalHomeDirectory' type='@'/>
+<constant name='kODAttributeTypeOriginalNFSHomeDirectory' type='@'/>
+<constant name='kODAttributeTypeOriginalNodeName' type='@'/>
+<constant name='kODAttributeTypeOwner' type='@'/>
+<constant name='kODAttributeTypeOwnerGUID' type='@'/>
+<constant name='kODAttributeTypePGPPublicKey' type='@'/>
+<constant name='kODAttributeTypePIDValue' type='@'/>
+<constant name='kODAttributeTypePagerNumber' type='@'/>
+<constant name='kODAttributeTypeParentLocales' type='@'/>
+<constant name='kODAttributeTypePassword' type='@'/>
+<constant name='kODAttributeTypePasswordPlus' type='@'/>
+<constant name='kODAttributeTypePasswordPolicyOptions' type='@'/>
+<constant name='kODAttributeTypePasswordServerList' type='@'/>
+<constant name='kODAttributeTypePasswordServerLocation' type='@'/>
+<constant name='kODAttributeTypePhoneContacts' type='@'/>
+<constant name='kODAttributeTypePhoneNumber' type='@'/>
+<constant name='kODAttributeTypePicture' type='@'/>
+<constant name='kODAttributeTypePlugInInfo' type='@'/>
+<constant name='kODAttributeTypePluginIndex' type='@'/>
+<constant name='kODAttributeTypePort' type='@'/>
+<constant name='kODAttributeTypePostalAddress' type='@'/>
+<constant name='kODAttributeTypePostalAddressContacts' type='@'/>
+<constant name='kODAttributeTypePostalCode' type='@'/>
+<constant name='kODAttributeTypePresetUserIsAdmin' type='@'/>
+<constant name='kODAttributeTypePrimaryComputerGUID' type='@'/>
+<constant name='kODAttributeTypePrimaryComputerList' type='@'/>
+<constant name='kODAttributeTypePrimaryGroupID' type='@'/>
+<constant name='kODAttributeTypePrimaryLocale' type='@'/>
+<constant name='kODAttributeTypePrimaryNTDomain' type='@'/>
+<constant name='kODAttributeTypePrintServiceInfoText' type='@'/>
+<constant name='kODAttributeTypePrintServiceInfoXML' type='@'/>
+<constant name='kODAttributeTypePrintServiceUserData' type='@'/>
+<constant name='kODAttributeTypePrinter1284DeviceID' type='@'/>
+<constant name='kODAttributeTypePrinterLPRHost' type='@'/>
+<constant name='kODAttributeTypePrinterLPRQueue' type='@'/>
+<constant name='kODAttributeTypePrinterMakeAndModel' type='@'/>
+<constant name='kODAttributeTypePrinterType' type='@'/>
+<constant name='kODAttributeTypePrinterURI' type='@'/>
+<constant name='kODAttributeTypePrinterXRISupported' type='@'/>
+<constant name='kODAttributeTypeProcessName' type='@'/>
+<constant name='kODAttributeTypeProtocolNumber' type='@'/>
+<constant name='kODAttributeTypeProtocols' type='@'/>
+<constant name='kODAttributeTypePwdAgingPolicy' type='@'/>
+<constant name='kODAttributeTypeRPCNumber' type='@'/>
+<constant name='kODAttributeTypeReadOnlyNode' type='@'/>
+<constant name='kODAttributeTypeRealUserID' type='@'/>
+<constant name='kODAttributeTypeRecRefCount' type='@'/>
+<constant name='kODAttributeTypeRecRefs' type='@'/>
+<constant name='kODAttributeTypeRecordName' type='@'/>
+<constant name='kODAttributeTypeRecordType' type='@'/>
+<constant name='kODAttributeTypeRelationships' type='@'/>
+<constant name='kODAttributeTypeRelativeDNPrefix' type='@'/>
+<constant name='kODAttributeTypeResourceInfo' type='@'/>
+<constant name='kODAttributeTypeResourceType' type='@'/>
+<constant name='kODAttributeTypeSMBAcctFlags' type='@'/>
+<constant name='kODAttributeTypeSMBGroupRID' type='@'/>
+<constant name='kODAttributeTypeSMBHome' type='@'/>
+<constant name='kODAttributeTypeSMBHomeDrive' type='@'/>
+<constant name='kODAttributeTypeSMBKickoffTime' type='@'/>
+<constant name='kODAttributeTypeSMBLogoffTime' type='@'/>
+<constant name='kODAttributeTypeSMBLogonTime' type='@'/>
+<constant name='kODAttributeTypeSMBPWDLastSet' type='@'/>
+<constant name='kODAttributeTypeSMBPrimaryGroupSID' type='@'/>
+<constant name='kODAttributeTypeSMBProfilePath' type='@'/>
+<constant name='kODAttributeTypeSMBRID' type='@'/>
+<constant name='kODAttributeTypeSMBSID' type='@'/>
+<constant name='kODAttributeTypeSMBScriptPath' type='@'/>
+<constant name='kODAttributeTypeSMBUserWorkstations' type='@'/>
+<constant name='kODAttributeTypeSchema' type='@'/>
+<constant name='kODAttributeTypeSearchPath' type='@'/>
+<constant name='kODAttributeTypeSearchPolicy' type='@'/>
+<constant name='kODAttributeTypeServiceType' type='@'/>
+<constant name='kODAttributeTypeServicesLocator' type='@'/>
+<constant name='kODAttributeTypeSetupAdvertising' type='@'/>
+<constant name='kODAttributeTypeSetupAutoRegister' type='@'/>
+<constant name='kODAttributeTypeSetupLocation' type='@'/>
+<constant name='kODAttributeTypeSetupOccupation' type='@'/>
+<constant name='kODAttributeTypeStandardOnly' type='@'/>
+<constant name='kODAttributeTypeState' type='@'/>
+<constant name='kODAttributeTypeStreet' type='@'/>
+<constant name='kODAttributeTypeSubNodes' type='@'/>
+<constant name='kODAttributeTypeTimePackage' type='@'/>
+<constant name='kODAttributeTypeTimeToLive' type='@'/>
+<constant name='kODAttributeTypeTotalRefCount' type='@'/>
+<constant name='kODAttributeTypeTotalSize' type='@'/>
+<constant name='kODAttributeTypeTrustInformation' type='@'/>
+<constant name='kODAttributeTypeURL' type='@'/>
+<constant name='kODAttributeTypeUniqueID' type='@'/>
+<constant name='kODAttributeTypeUserCertificate' type='@'/>
+<constant name='kODAttributeTypeUserPKCS12Data' type='@'/>
+<constant name='kODAttributeTypeUserSMIMECertificate' type='@'/>
+<constant name='kODAttributeTypeUserShell' type='@'/>
+<constant name='kODAttributeTypeVFSDumpFreq' type='@'/>
+<constant name='kODAttributeTypeVFSLinkDir' type='@'/>
+<constant name='kODAttributeTypeVFSOpts' type='@'/>
+<constant name='kODAttributeTypeVFSPassNo' type='@'/>
+<constant name='kODAttributeTypeVFSType' type='@'/>
+<constant name='kODAttributeTypeVersion' type='@'/>
+<constant name='kODAttributeTypeWeblogURI' type='@'/>
+<constant name='kODAttributeTypeXMLPlist' type='@'/>
+<constant name='kODAuthenticationType2WayRandom' type='@'/>
+<constant name='kODAuthenticationType2WayRandomChangePasswd' type='@'/>
+<constant name='kODAuthenticationTypeAPOP' type='@'/>
+<constant name='kODAuthenticationTypeCRAM_MD5' type='@'/>
+<constant name='kODAuthenticationTypeChangePasswd' type='@'/>
+<constant name='kODAuthenticationTypeClearText' type='@'/>
+<constant name='kODAuthenticationTypeCrypt' type='@'/>
+<constant name='kODAuthenticationTypeDIGEST_MD5' type='@'/>
+<constant name='kODAuthenticationTypeDeleteUser' type='@'/>
+<constant name='kODAuthenticationTypeGetEffectivePolicy' type='@'/>
+<constant name='kODAuthenticationTypeGetGlobalPolicy' type='@'/>
+<constant name='kODAuthenticationTypeGetKerberosPrincipal' type='@'/>
+<constant name='kODAuthenticationTypeGetPolicy' type='@'/>
+<constant name='kODAuthenticationTypeGetUserData' type='@'/>
+<constant name='kODAuthenticationTypeGetUserName' type='@'/>
+<constant name='kODAuthenticationTypeKerberosTickets' type='@'/>
+<constant name='kODAuthenticationTypeMPPEMasterKeys' type='@'/>
+<constant name='kODAuthenticationTypeMSCHAP2' type='@'/>
+<constant name='kODAuthenticationTypeNTLMv2' type='@'/>
+<constant name='kODAuthenticationTypeNTLMv2WithSessionKey' type='@'/>
+<constant name='kODAuthenticationTypeNewUser' type='@'/>
+<constant name='kODAuthenticationTypeNewUserWithPolicy' type='@'/>
+<constant name='kODAuthenticationTypeNodeNativeClearTextOK' type='@'/>
+<constant name='kODAuthenticationTypeNodeNativeNoClearText' type='@'/>
+<constant name='kODAuthenticationTypeReadSecureHash' type='@'/>
+<constant name='kODAuthenticationTypeSMBNTv2UserSessionKey' type='@'/>
+<constant name='kODAuthenticationTypeSMBWorkstationCredentialSessionKey' type='@'/>
+<constant name='kODAuthenticationTypeSMB_LM_Key' type='@'/>
+<constant name='kODAuthenticationTypeSMB_NT_Key' type='@'/>
+<constant name='kODAuthenticationTypeSMB_NT_UserSessionKey' type='@'/>
+<constant name='kODAuthenticationTypeSMB_NT_WithUserSessionKey' type='@'/>
+<constant name='kODAuthenticationTypeSecureHash' type='@'/>
+<constant name='kODAuthenticationTypeSetCertificateHashAsCurrent' type='@'/>
+<constant name='kODAuthenticationTypeSetGlobalPolicy' type='@'/>
+<constant name='kODAuthenticationTypeSetLMHash' type='@'/>
+<constant name='kODAuthenticationTypeSetNTHash' type='@'/>
+<constant name='kODAuthenticationTypeSetPassword' type='@'/>
+<constant name='kODAuthenticationTypeSetPasswordAsCurrent' type='@'/>
+<constant name='kODAuthenticationTypeSetPolicy' type='@'/>
+<constant name='kODAuthenticationTypeSetPolicyAsCurrent' type='@'/>
+<constant name='kODAuthenticationTypeSetUserData' type='@'/>
+<constant name='kODAuthenticationTypeSetUserName' type='@'/>
+<constant name='kODAuthenticationTypeSetWorkstationPassword' type='@'/>
+<constant name='kODAuthenticationTypeWithAuthorizationRef' type='@'/>
+<constant name='kODAuthenticationTypeWriteSecureHash' type='@'/>
+<constant name='kODErrorDomainFramework' type='^{__CFString=}'/>
+<constant name='kODRecordTypeAFPServer' type='@'/>
+<constant name='kODRecordTypeAliases' type='@'/>
+<constant name='kODRecordTypeAttributeTypes' type='@'/>
+<constant name='kODRecordTypeAugments' type='@'/>
+<constant name='kODRecordTypeAutoServerSetup' type='@'/>
+<constant name='kODRecordTypeAutomount' type='@'/>
+<constant name='kODRecordTypeAutomountMap' type='@'/>
+<constant name='kODRecordTypeBootp' type='@'/>
+<constant name='kODRecordTypeCertificateAuthorities' type='@'/>
+<constant name='kODRecordTypeComputerGroups' type='@'/>
+<constant name='kODRecordTypeComputerLists' type='@'/>
+<constant name='kODRecordTypeComputers' type='@'/>
+<constant name='kODRecordTypeConfiguration' type='@'/>
+<constant name='kODRecordTypeEthernets' type='@'/>
+<constant name='kODRecordTypeFTPServer' type='@'/>
+<constant name='kODRecordTypeFileMakerServers' type='@'/>
+<constant name='kODRecordTypeGroups' type='@'/>
+<constant name='kODRecordTypeHostServices' type='@'/>
+<constant name='kODRecordTypeHosts' type='@'/>
+<constant name='kODRecordTypeLDAPServer' type='@'/>
+<constant name='kODRecordTypeLocations' type='@'/>
+<constant name='kODRecordTypeMounts' type='@'/>
+<constant name='kODRecordTypeNFS' type='@'/>
+<constant name='kODRecordTypeNetDomains' type='@'/>
+<constant name='kODRecordTypeNetGroups' type='@'/>
+<constant name='kODRecordTypeNetworks' type='@'/>
+<constant name='kODRecordTypePeople' type='@'/>
+<constant name='kODRecordTypePresetComputerGroups' type='@'/>
+<constant name='kODRecordTypePresetComputerLists' type='@'/>
+<constant name='kODRecordTypePresetComputers' type='@'/>
+<constant name='kODRecordTypePresetGroups' type='@'/>
+<constant name='kODRecordTypePresetUsers' type='@'/>
+<constant name='kODRecordTypePrintService' type='@'/>
+<constant name='kODRecordTypePrintServiceUser' type='@'/>
+<constant name='kODRecordTypePrinters' type='@'/>
+<constant name='kODRecordTypeProtocols' type='@'/>
+<constant name='kODRecordTypeQTSServer' type='@'/>
+<constant name='kODRecordTypeRPC' type='@'/>
+<constant name='kODRecordTypeRecordTypes' type='@'/>
+<constant name='kODRecordTypeResources' type='@'/>
+<constant name='kODRecordTypeSMBServer' type='@'/>
+<constant name='kODRecordTypeServer' type='@'/>
+<constant name='kODRecordTypeServices' type='@'/>
+<constant name='kODRecordTypeSharePoints' type='@'/>
+<constant name='kODRecordTypeUsers' type='@'/>
+<constant name='kODRecordTypeWebServer' type='@'/>
+<constant name='kODSessionDefault' type='^{__ODSession=}'/>
+<constant name='kODSessionProxyAddress' type='^{__CFString=}'/>
+<constant name='kODSessionProxyPassword' type='^{__CFString=}'/>
+<constant name='kODSessionProxyPort' type='^{__CFString=}'/>
+<constant name='kODSessionProxyUsername' type='^{__CFString=}'/>
+<enum name='kODErrorCredentialsAccountDisabled' value='5301'/>
+<enum name='kODErrorCredentialsAccountExpired' value='5302'/>
+<enum name='kODErrorCredentialsAccountInactive' value='5303'/>
+<enum name='kODErrorCredentialsAccountNotFound' value='5300'/>
+<enum name='kODErrorCredentialsContactMaster' value='5204'/>
+<enum name='kODErrorCredentialsInvalid' value='5000'/>
+<enum name='kODErrorCredentialsInvalidComputer' value='5501'/>
+<enum name='kODErrorCredentialsInvalidLogonHours' value='5500'/>
+<enum name='kODErrorCredentialsMethodNotSupported' value='5100'/>
+<enum name='kODErrorCredentialsNotAuthorized' value='5101'/>
+<enum name='kODErrorCredentialsOperationFailed' value='5103'/>
+<enum name='kODErrorCredentialsParameterError' value='5102'/>
+<enum name='kODErrorCredentialsPasswordChangeRequired' value='5401'/>
+<enum name='kODErrorCredentialsPasswordChangeTooSoon' value='5407'/>
+<enum name='kODErrorCredentialsPasswordExpired' value='5400'/>
+<enum name='kODErrorCredentialsPasswordNeedsDigit' value='5406'/>
+<enum name='kODErrorCredentialsPasswordNeedsLetter' value='5405'/>
+<enum name='kODErrorCredentialsPasswordQualityFailed' value='5402'/>
+<enum name='kODErrorCredentialsPasswordTooLong' value='5404'/>
+<enum name='kODErrorCredentialsPasswordTooShort' value='5403'/>
+<enum name='kODErrorCredentialsPasswordUnrecoverable' value='5408'/>
+<enum name='kODErrorCredentialsServerCommunicationError' value='5205'/>
+<enum name='kODErrorCredentialsServerError' value='5202'/>
+<enum name='kODErrorCredentialsServerNotFound' value='5201'/>
+<enum name='kODErrorCredentialsServerTimeout' value='5203'/>
+<enum name='kODErrorCredentialsServerUnreachable' value='5200'/>
+<enum name='kODErrorDaemonError' value='10002'/>
+<enum name='kODErrorNodeConnectionFailed' value='2100'/>
+<enum name='kODErrorNodeDisabled' value='2002'/>
+<enum name='kODErrorNodeUnknownHost' value='2200'/>
+<enum name='kODErrorNodeUnknownName' value='2000'/>
+<enum name='kODErrorNodeUnknownType' value='2001'/>
+<enum name='kODErrorPluginError' value='10001'/>
+<enum name='kODErrorPluginOperationNotSupported' value='10000'/>
+<enum name='kODErrorPluginOperationTimeout' value='10003'/>
+<enum name='kODErrorQueryInvalidMatchType' value='3100'/>
+<enum name='kODErrorQuerySynchronize' value='3000'/>
+<enum name='kODErrorQueryTimeout' value='3102'/>
+<enum name='kODErrorQueryUnsupportedMatchType' value='3101'/>
+<enum name='kODErrorRecordAlreadyExists' value='4102'/>
+<enum name='kODErrorRecordAttributeNotFound' value='4201'/>
+<enum name='kODErrorRecordAttributeUnknownType' value='4200'/>
+<enum name='kODErrorRecordAttributeValueNotFound' value='4203'/>
+<enum name='kODErrorRecordAttributeValueSchemaError' value='4202'/>
+<enum name='kODErrorRecordInvalidType' value='4101'/>
+<enum name='kODErrorRecordNoLongerExists' value='4104'/>
+<enum name='kODErrorRecordParameterError' value='4100'/>
+<enum name='kODErrorRecordPermissionError' value='4001'/>
+<enum name='kODErrorRecordReadOnlyNode' value='4000'/>
+<enum name='kODErrorRecordTypeDisabled' value='4103'/>
+<enum name='kODErrorSessionDaemonNotRunning' value='1002'/>
+<enum name='kODErrorSessionDaemonRefused' value='1003'/>
+<enum name='kODErrorSessionLocalOnlyDaemonInUse' value='1000'/>
+<enum name='kODErrorSessionNormalDaemonInUse' value='1001'/>
+<enum name='kODErrorSessionProxyCommunicationError' value='1100'/>
+<enum name='kODErrorSessionProxyIPUnreachable' value='1102'/>
+<enum name='kODErrorSessionProxyUnknownHost' value='1103'/>
+<enum name='kODErrorSessionProxyVersionMismatch' value='1101'/>
+<enum name='kODErrorSuccess' value='0'/>
+<enum name='kODMatchAny' value='1'/>
+<enum name='kODMatchBeginsWith' value='8194'/>
+<enum name='kODMatchContains' value='8196'/>
+<enum name='kODMatchEndsWith' value='8195'/>
+<enum name='kODMatchEqualTo' value='8193'/>
+<enum name='kODMatchGreaterThan' value='8198'/>
+<enum name='kODMatchInsensitiveBeginsWith' value='8450'/>
+<enum name='kODMatchInsensitiveContains' value='8452'/>
+<enum name='kODMatchInsensitiveEndsWith' value='8451'/>
+<enum name='kODMatchInsensitiveEqualTo' value='8449'/>
+<enum name='kODMatchLessThan' value='8199'/>
+<enum name='kODNodeTypeAuthentication' value='8705'/>
+<enum name='kODNodeTypeConfigure' value='8706'/>
+<enum name='kODNodeTypeContacts' value='8708'/>
+<enum name='kODNodeTypeLocalNodes' value='8704'/>
+<enum name='kODNodeTypeNetwork' value='8709'/>
+<function name='ODContextGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ODNodeCopyDetails'>
+<arg type='^{__ODNode=}'/>
+<arg type='^{__CFArray=}'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='ODNodeCopyRecord'>
+<arg type='^{__ODNode=}'/>
+<arg type='@'/>
+<arg type='^{__CFString=}'/>
+<arg type='@'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__ODRecord=}'/>
+</function>
+<function name='ODNodeCopySubnodeNames'>
+<arg type='^{__ODNode=}'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='ODNodeCopySupportedAttributes'>
+<arg type='^{__ODNode=}'/>
+<arg type='@'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='ODNodeCopySupportedRecordTypes'>
+<arg type='^{__ODNode=}'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='ODNodeCopyUnreachableSubnodeNames'>
+<arg type='^{__ODNode=}'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='ODNodeCreateCopy'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__ODNode=}'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__ODNode=}'/>
+</function>
+<function name='ODNodeCreateRecord'>
+<arg type='^{__ODNode=}'/>
+<arg type='@'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFDictionary=}'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__ODRecord=}'/>
+</function>
+<function name='ODNodeCreateWithName'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__ODSession=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__ODNode=}'/>
+</function>
+<function name='ODNodeCreateWithNodeType'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__ODSession=}'/>
+<arg type='I'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__ODNode=}'/>
+</function>
+<function name='ODNodeCustomCall'>
+<arg type='^{__ODNode=}'/>
+<arg type64='q' type='l'/>
+<arg type='^{__CFData=}'/>
+<arg type='^^{__CFError}'/>
+<retval type='^{__CFData=}'/>
+</function>
+<function name='ODNodeGetName'>
+<arg type='^{__ODNode=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='ODNodeGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ODNodeSetCredentials'>
+<arg type='^{__ODNode=}'/>
+<arg type='@'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='ODNodeSetCredentialsExtended'>
+<arg type='^{__ODNode=}'/>
+<arg type='@'/>
+<arg type='@'/>
+<arg type='^{__CFArray=}'/>
+<arg type='^^{__CFArray}'/>
+<arg type='^^{__ODContext}'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='ODNodeSetCredentialsUsingKerberosCache'>
+<arg type='^{__ODNode=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='ODQueryCopyResults'>
+<arg type='^{__ODQuery=}'/>
+<arg type='B'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='ODQueryCreateWithNode'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__ODNode=}'/>
+<arg type='@'/>
+<arg type='@'/>
+<arg type='I'/>
+<arg type='@'/>
+<arg type='@'/>
+<arg type64='q' type='l'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__ODQuery=}'/>
+</function>
+<function name='ODQueryCreateWithNodeType'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='I'/>
+<arg type='@'/>
+<arg type='@'/>
+<arg type='I'/>
+<arg type='@'/>
+<arg type='@'/>
+<arg type64='q' type='l'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__ODQuery=}'/>
+</function>
+<function name='ODQueryGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ODQueryScheduleWithRunLoop'>
+<arg type='^{__ODQuery=}'/>
+<arg type='^{__CFRunLoop=}'/>
+<arg type='^{__CFString=}'/>
+</function>
+<function name='ODQuerySetCallback'>
+<arg type='^{__ODQuery=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{__ODQuery=}'/>
+<arg type='^{__CFArray=}'/>
+<arg type='^{__CFError=}'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+</function>
+<function name='ODQuerySetDispatchQueue'>
+<arg type='^{__ODQuery=}'/>
+<arg type='^{dispatch_queue_s=}'/>
+</function>
+<function name='ODQuerySynchronize'>
+<arg type='^{__ODQuery=}'/>
+</function>
+<function name='ODQueryUnscheduleFromRunLoop'>
+<arg type='^{__ODQuery=}'/>
+<arg type='^{__CFRunLoop=}'/>
+<arg type='^{__CFString=}'/>
+</function>
+<function name='ODRecordAddMember'>
+<arg type='^{__ODRecord=}'/>
+<arg type='^{__ODRecord=}'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='ODRecordAddValue'>
+<arg type='^{__ODRecord=}'/>
+<arg type='@'/>
+<arg type='@'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='ODRecordChangePassword'>
+<arg type='^{__ODRecord=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='ODRecordContainsMember'>
+<arg type='^{__ODRecord=}'/>
+<arg type='^{__ODRecord=}'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='ODRecordCopyDetails'>
+<arg type='^{__ODRecord=}'/>
+<arg type='^{__CFArray=}'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='ODRecordCopyPasswordPolicy'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__ODRecord=}'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='ODRecordCopyValues'>
+<arg type='^{__ODRecord=}'/>
+<arg type='@'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='ODRecordDelete'>
+<arg type='^{__ODRecord=}'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='ODRecordGetRecordName'>
+<arg type='^{__ODRecord=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='ODRecordGetRecordType'>
+<arg type='^{__ODRecord=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='ODRecordGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ODRecordRemoveMember'>
+<arg type='^{__ODRecord=}'/>
+<arg type='^{__ODRecord=}'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='ODRecordRemoveValue'>
+<arg type='^{__ODRecord=}'/>
+<arg type='@'/>
+<arg type='@'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='ODRecordSetNodeCredentials'>
+<arg type='^{__ODRecord=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='ODRecordSetNodeCredentialsExtended'>
+<arg type='^{__ODRecord=}'/>
+<arg type='@'/>
+<arg type='@'/>
+<arg type='^{__CFArray=}'/>
+<arg type='^^{__CFArray}'/>
+<arg type='^^{__ODContext}'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='ODRecordSetNodeCredentialsUsingKerberosCache'>
+<arg type='^{__ODRecord=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='ODRecordSetValue'>
+<arg type='^{__ODRecord=}'/>
+<arg type='@'/>
+<arg type='@'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='ODRecordSynchronize'>
+<arg type='^{__ODRecord=}'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='ODRecordVerifyPassword'>
+<arg type='^{__ODRecord=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='ODRecordVerifyPasswordExtended'>
+<arg type='^{__ODRecord=}'/>
+<arg type='@'/>
+<arg type='^{__CFArray=}'/>
+<arg type='^^{__CFArray}'/>
+<arg type='^^{__ODContext}'/>
+<arg type='^^{__CFError}'/>
+<retval type='B'/>
+</function>
+<function name='ODSessionCopyNodeNames'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__ODSession=}'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='ODSessionCreate'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__CFDictionary=}'/>
+<arg type='^^{__CFError}'/>
+<retval already_retained='true' type='^{__ODSession=}'/>
+</function>
+<function name='ODSessionGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+</signatures>

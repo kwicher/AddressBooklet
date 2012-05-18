@@ -1,0 +1,35 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant name='SKErrorDomain' type='@'/>
+<enum name='SKErrorClientInvalid' value='1'/>
+<enum name='SKErrorPaymentCancelled' value='2'/>
+<enum name='SKErrorPaymentInvalid' value='3'/>
+<enum name='SKErrorPaymentNotAllowed' value='4'/>
+<enum name='SKErrorUnknown' value='0'/>
+<enum name='SKPaymentTransactionStateFailed' value='2'/>
+<enum name='SKPaymentTransactionStatePurchased' value='1'/>
+<enum name='SKPaymentTransactionStatePurchasing' value='0'/>
+<enum name='SKPaymentTransactionStateRestored' value='3'/>
+<class name='SKPaymentQueue'>
+<method selector='canMakePayments' class_method='true'>
+<retval type='B'/>
+</method>
+</class>
+<informal_protocol name='SKPaymentTransactionObserver'>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='paymentQueue:removedTransactions:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='paymentQueue:restoreCompletedTransactionsFailedWithError:'/>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='paymentQueue:updatedTransactions:'/>
+<method type64='v24@0:8@16' type='v12@0:4@8' selector='paymentQueueRestoreCompletedTransactionsFinished:'/>
+</informal_protocol>
+<informal_protocol name='SKProductsRequestDelegate'>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='productsRequest:didReceiveResponse:'/>
+</informal_protocol>
+<informal_protocol name='SKRequestDelegate'>
+<method type64='v32@0:8@16@24' type='v16@0:4@8@12' selector='request:didFailWithError:'/>
+<method type64='v24@0:8@16' type='v12@0:4@8' selector='requestDidFinish:'/>
+</informal_protocol>
+</signatures>

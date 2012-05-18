@@ -1,0 +1,14 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/CommonPanels.framework'/>
+<depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Help.framework'/>
+<depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/ImageCapture.framework'/>
+<depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Ink.framework'/>
+<depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/OpenScripting.framework'/>
+<depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Print.framework'/>
+<depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SecurityHI.framework'/>
+<depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SpeechRecognition.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+</signatures>

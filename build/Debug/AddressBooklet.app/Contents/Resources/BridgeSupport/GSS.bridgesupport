@@ -1,0 +1,606 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/OpenDirectory.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<struct name='gss_OID' type='{gss_OID_desc_struct=&quot;length&quot;I&quot;elements&quot;^v}'/>
+<struct name='gss_OID_desc' type='{gss_OID_desc_struct=&quot;length&quot;I&quot;elements&quot;^v}'/>
+<struct name='gss_OID_desc_struct' type='{gss_OID_desc_struct=&quot;length&quot;I&quot;elements&quot;^v}'/>
+<struct name='gss_OID_set' type64='{gss_OID_set_desc_struct=&quot;count&quot;Q&quot;elements&quot;^{gss_OID_desc_struct}}' type='{gss_OID_set_desc_struct=&quot;count&quot;I&quot;elements&quot;^{gss_OID_desc_struct}}'/>
+<struct name='gss_OID_set_desc' type64='{gss_OID_set_desc_struct=&quot;count&quot;Q&quot;elements&quot;^{gss_OID_desc_struct}}' type='{gss_OID_set_desc_struct=&quot;count&quot;I&quot;elements&quot;^{gss_OID_desc_struct}}'/>
+<struct name='gss_OID_set_desc_struct' type64='{gss_OID_set_desc_struct=&quot;count&quot;Q&quot;elements&quot;^{gss_OID_desc_struct}}' type='{gss_OID_set_desc_struct=&quot;count&quot;I&quot;elements&quot;^{gss_OID_desc_struct}}'/>
+<struct name='gss_auth_identity_t' type='{gss_auth_identity=&quot;type&quot;I&quot;flags&quot;I&quot;username&quot;*&quot;realm&quot;*&quot;password&quot;*&quot;credentialsRef&quot;^^{gss_buffer_desc_struct}}'/>
+<struct name='gss_buffer_desc' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}'/>
+<struct name='gss_buffer_desc_struct' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}'/>
+<struct name='gss_buffer_set_desc' type64='{gss_buffer_set_desc_struct=&quot;count&quot;Q&quot;elements&quot;^{gss_buffer_desc_struct}}' type='{gss_buffer_set_desc_struct=&quot;count&quot;I&quot;elements&quot;^{gss_buffer_desc_struct}}'/>
+<struct name='gss_buffer_set_desc_struct' type64='{gss_buffer_set_desc_struct=&quot;count&quot;Q&quot;elements&quot;^{gss_buffer_desc_struct}}' type='{gss_buffer_set_desc_struct=&quot;count&quot;I&quot;elements&quot;^{gss_buffer_desc_struct}}'/>
+<struct name='gss_buffer_set_t' type64='{gss_buffer_set_desc_struct=&quot;count&quot;Q&quot;elements&quot;^{gss_buffer_desc_struct}}' type='{gss_buffer_set_desc_struct=&quot;count&quot;I&quot;elements&quot;^{gss_buffer_desc_struct}}'/>
+<struct name='gss_buffer_t' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}'/>
+<struct name='gss_channel_bindings_struct' type64='{gss_channel_bindings_struct=&quot;initiator_addrtype&quot;I&quot;initiator_address&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}&quot;acceptor_addrtype&quot;I&quot;acceptor_address&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}&quot;application_data&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}}' type='{gss_channel_bindings_struct=&quot;initiator_addrtype&quot;I&quot;initiator_address&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}&quot;acceptor_addrtype&quot;I&quot;acceptor_address&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}&quot;application_data&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}}'/>
+<struct name='gss_channel_bindings_t' type64='{gss_channel_bindings_struct=&quot;initiator_addrtype&quot;I&quot;initiator_address&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}&quot;acceptor_addrtype&quot;I&quot;acceptor_address&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}&quot;application_data&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}}' type='{gss_channel_bindings_struct=&quot;initiator_addrtype&quot;I&quot;initiator_address&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}&quot;acceptor_addrtype&quot;I&quot;acceptor_address&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}&quot;application_data&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}}'/>
+<struct name='gss_iov_buffer_desc' type64='{gss_iov_buffer_desc_struct=&quot;type&quot;I&quot;buffer&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}}' type='{gss_iov_buffer_desc_struct=&quot;type&quot;I&quot;buffer&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}}'/>
+<struct name='gss_iov_buffer_desc_struct' type64='{gss_iov_buffer_desc_struct=&quot;type&quot;I&quot;buffer&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}}' type='{gss_iov_buffer_desc_struct=&quot;type&quot;I&quot;buffer&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}}'/>
+<struct name='gss_iov_buffer_t' type64='{gss_iov_buffer_desc_struct=&quot;type&quot;I&quot;buffer&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}}' type='{gss_iov_buffer_desc_struct=&quot;type&quot;I&quot;buffer&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}}'/>
+<struct name='gss_krb5_cfx_keydata' type='{gss_krb5_cfx_keydata=&quot;have_acceptor_subkey&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}&quot;acceptor_subkey&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}'/>
+<struct name='gss_krb5_cfx_keydata_t' type='{gss_krb5_cfx_keydata=&quot;have_acceptor_subkey&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}&quot;acceptor_subkey&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}'/>
+<struct name='gss_krb5_lucid_context_v1' type='{gss_krb5_lucid_context_v1=&quot;version&quot;I&quot;initiate&quot;I&quot;endtime&quot;I&quot;send_seq&quot;Q&quot;recv_seq&quot;Q&quot;protocol&quot;I&quot;rfc1964_kd&quot;{gss_krb5_rfc1964_keydata=&quot;sign_alg&quot;I&quot;seal_alg&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}&quot;cfx_kd&quot;{gss_krb5_cfx_keydata=&quot;have_acceptor_subkey&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}&quot;acceptor_subkey&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}}'/>
+<struct name='gss_krb5_lucid_context_v1_t' type='{gss_krb5_lucid_context_v1=&quot;version&quot;I&quot;initiate&quot;I&quot;endtime&quot;I&quot;send_seq&quot;Q&quot;recv_seq&quot;Q&quot;protocol&quot;I&quot;rfc1964_kd&quot;{gss_krb5_rfc1964_keydata=&quot;sign_alg&quot;I&quot;seal_alg&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}&quot;cfx_kd&quot;{gss_krb5_cfx_keydata=&quot;have_acceptor_subkey&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}&quot;acceptor_subkey&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}}'/>
+<struct name='gss_krb5_lucid_context_version' type='{gss_krb5_lucid_context_version=&quot;version&quot;I}'/>
+<struct name='gss_krb5_lucid_context_version_t' type='{gss_krb5_lucid_context_version=&quot;version&quot;I}'/>
+<struct name='gss_krb5_lucid_key' type='{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}'/>
+<struct name='gss_krb5_lucid_key_t' type='{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}'/>
+<struct name='gss_krb5_rfc1964_keydata' type='{gss_krb5_rfc1964_keydata=&quot;sign_alg&quot;I&quot;seal_alg&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}'/>
+<struct name='gss_krb5_rfc1964_keydata_t' type='{gss_krb5_rfc1964_keydata=&quot;sign_alg&quot;I&quot;seal_alg&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}'/>
+<opaque name='gss_cred_id_t' type='^{gss_cred_id_t_desc_struct=}'/>
+<opaque name='gss_ctx_id_t' type='^{gss_ctx_id_t_desc_struct=}'/>
+<opaque name='gss_name_t' type='^{gss_name_t_desc_struct=}'/>
+<string_constant name='kGSSCredentialUsage' nsstring='true' value='kGSSCredentialUsage'/>
+<string_constant name='kGSSICCertificate' nsstring='true' value='kGSSICCertificate'/>
+<string_constant name='kGSSICPassword' nsstring='true' value='kGSSICPassword'/>
+<string_constant name='kGSS_C_ACCEPT' nsstring='true' value='kGSS_C_ACCEPT'/>
+<string_constant name='kGSS_C_BOTH' nsstring='true' value='kGSS_C_BOTH'/>
+<string_constant name='kGSS_C_INITIATE' nsstring='true' value='kGSS_C_INITIATE'/>
+<enum name='GSS_C_ACCEPT' value='2'/>
+<enum name='GSS_C_AF_APPLETALK' value='16'/>
+<enum name='GSS_C_AF_BSC' value='17'/>
+<enum name='GSS_C_AF_CCITT' value='10'/>
+<enum name='GSS_C_AF_CHAOS' value='5'/>
+<enum name='GSS_C_AF_DATAKIT' value='9'/>
+<enum name='GSS_C_AF_DECnet' value='12'/>
+<enum name='GSS_C_AF_DLI' value='13'/>
+<enum name='GSS_C_AF_DSS' value='18'/>
+<enum name='GSS_C_AF_ECMA' value='8'/>
+<enum name='GSS_C_AF_HYLINK' value='15'/>
+<enum name='GSS_C_AF_IMPLINK' value='3'/>
+<enum name='GSS_C_AF_INET' value='2'/>
+<enum name='GSS_C_AF_INET6' value='24'/>
+<enum name='GSS_C_AF_LAT' value='14'/>
+<enum name='GSS_C_AF_LOCAL' value='1'/>
+<enum name='GSS_C_AF_NBS' value='7'/>
+<enum name='GSS_C_AF_NS' value='6'/>
+<enum name='GSS_C_AF_NULLADDR' value='255'/>
+<enum name='GSS_C_AF_OSI' value='19'/>
+<enum name='GSS_C_AF_PUP' value='4'/>
+<enum name='GSS_C_AF_SNA' value='11'/>
+<enum name='GSS_C_AF_UNSPEC' value='0'/>
+<enum name='GSS_C_AF_X25' value='21'/>
+<enum name='GSS_C_ANON_FLAG' value='64'/>
+<enum name='GSS_C_BOTH' value='0'/>
+<enum name='GSS_C_CALLING_ERROR_MASK' value='255'/>
+<enum name='GSS_C_CALLING_ERROR_OFFSET' value='24'/>
+<enum name='GSS_C_CONF_FLAG' value='16'/>
+<enum name='GSS_C_CRED_NO_UI' value='65536'/>
+<enum name='GSS_C_DCE_STYLE' value='4096'/>
+<enum name='GSS_C_DELEG_FLAG' value='1'/>
+<enum name='GSS_C_DELEG_POLICY_FLAG' value='32768'/>
+<enum name='GSS_C_EXTENDED_ERROR_FLAG' value='16384'/>
+<enum name='GSS_C_GSS_CODE' value='1'/>
+<enum name='GSS_C_IDENTIFY_FLAG' value='8192'/>
+<enum name='GSS_C_INDEFINITE' value='4294967295'/>
+<enum name='GSS_C_INITIATE' value='1'/>
+<enum name='GSS_C_INTEG_FLAG' value='32'/>
+<enum name='GSS_C_MECH_CODE' value='2'/>
+<enum name='GSS_C_MUTUAL_FLAG' value='2'/>
+<enum name='GSS_C_OPTION_MASK' value='65535'/>
+<enum name='GSS_C_PRF_KEY_FULL' value='0'/>
+<enum name='GSS_C_PRF_KEY_PARTIAL' value='1'/>
+<enum name='GSS_C_PROT_READY_FLAG' value='128'/>
+<enum name='GSS_C_QOP_DEFAULT' value='0'/>
+<enum name='GSS_C_REPLAY_FLAG' value='4'/>
+<enum name='GSS_C_ROUTINE_ERROR_MASK' value='255'/>
+<enum name='GSS_C_ROUTINE_ERROR_OFFSET' value='16'/>
+<enum name='GSS_C_SEQUENCE_FLAG' value='8'/>
+<enum name='GSS_C_SUPPLEMENTARY_MASK' value='65535'/>
+<enum name='GSS_C_SUPPLEMENTARY_OFFSET' value='0'/>
+<enum name='GSS_C_TRANS_FLAG' value='256'/>
+<enum name='GSS_IOV_BUFFER_TYPE_DATA' value='1'/>
+<enum name='GSS_IOV_BUFFER_TYPE_EMPTY' value='0'/>
+<enum name='GSS_IOV_BUFFER_TYPE_FLAG_ALLOCATE' value='65536'/>
+<enum name='GSS_IOV_BUFFER_TYPE_FLAG_ALLOCATED' value='131072'/>
+<enum name='GSS_IOV_BUFFER_TYPE_FLAG_MASK' value='4294901760'/>
+<enum name='GSS_IOV_BUFFER_TYPE_HEADER' value='2'/>
+<enum name='GSS_IOV_BUFFER_TYPE_MECH_PARAMS' value='3'/>
+<enum name='GSS_IOV_BUFFER_TYPE_PADDING' value='9'/>
+<enum name='GSS_IOV_BUFFER_TYPE_SIGN_ONLY' value='11'/>
+<enum name='GSS_IOV_BUFFER_TYPE_STREAM' value='10'/>
+<enum name='GSS_IOV_BUFFER_TYPE_TRAILER' value='7'/>
+<enum name='GSS_KRB5_CONF_C_QOP_DES' value='256'/>
+<enum name='GSS_KRB5_CONF_C_QOP_DES3_KD' value='512'/>
+<enum name='GSS_S_BAD_BINDINGS' value='262144'/>
+<enum name='GSS_S_BAD_MECH' value='65536'/>
+<enum name='GSS_S_BAD_MIC' value='393216'/>
+<enum name='GSS_S_BAD_NAME' value='131072'/>
+<enum name='GSS_S_BAD_NAMETYPE' value='196608'/>
+<enum name='GSS_S_BAD_QOP' value='917504'/>
+<enum name='GSS_S_BAD_SIG' value='393216'/>
+<enum name='GSS_S_BAD_STATUS' value='327680'/>
+<enum name='GSS_S_CALL_BAD_STRUCTURE' value='50331648'/>
+<enum name='GSS_S_CALL_INACCESSIBLE_READ' value='16777216'/>
+<enum name='GSS_S_CALL_INACCESSIBLE_WRITE' value='33554432'/>
+<enum name='GSS_S_COMPLETE' value='0'/>
+<enum name='GSS_S_CONTEXT_EXPIRED' value='786432'/>
+<enum name='GSS_S_CONTINUE_NEEDED' value='1'/>
+<enum name='GSS_S_CREDENTIALS_EXPIRED' value='720896'/>
+<enum name='GSS_S_DEFECTIVE_CREDENTIAL' value='655360'/>
+<enum name='GSS_S_DEFECTIVE_TOKEN' value='589824'/>
+<enum name='GSS_S_DUPLICATE_ELEMENT' value='1114112'/>
+<enum name='GSS_S_DUPLICATE_TOKEN' value='2'/>
+<enum name='GSS_S_FAILURE' value='851968'/>
+<enum name='GSS_S_GAP_TOKEN' value='16'/>
+<enum name='GSS_S_NAME_NOT_MN' value='1179648'/>
+<enum name='GSS_S_NO_CONTEXT' value='524288'/>
+<enum name='GSS_S_NO_CRED' value='458752'/>
+<enum name='GSS_S_OLD_TOKEN' value='4'/>
+<enum name='GSS_S_UNAUTHORIZED' value='983040'/>
+<enum name='GSS_S_UNAVAILABLE' value='1048576'/>
+<enum name='GSS_S_UNSEQ_TOKEN' value='8'/>
+<function name='gss_aapl_initial_cred'>
+<arg type='^{gss_name_t_desc_struct=}'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type='^{__CFDictionary=}'/>
+<arg type='^^{gss_cred_id_t_desc_struct}'/>
+<arg type='^^{__CFError}'/>
+<retval type='I'/>
+</function>
+<function name='gss_accept_sec_context'>
+<arg type='^I'/>
+<arg type='^^{gss_ctx_id_t_desc_struct}'/>
+<arg type='^{gss_cred_id_t_desc_struct=}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type64='^{gss_channel_bindings_struct=I{gss_buffer_desc_struct=Q^v}I{gss_buffer_desc_struct=Q^v}{gss_buffer_desc_struct=Q^v}}' type='^{gss_channel_bindings_struct=I{gss_buffer_desc_struct=I^v}I{gss_buffer_desc_struct=I^v}{gss_buffer_desc_struct=I^v}}'/>
+<arg type='^^{gss_name_t_desc_struct}'/>
+<arg type='^^{gss_OID_desc_struct}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<arg type='^^{gss_cred_id_t_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_acquire_cred'>
+<arg type='^I'/>
+<arg type='^{gss_name_t_desc_struct=}'/>
+<arg type='I'/>
+<arg type64='^{gss_OID_set_desc_struct=Q^{gss_OID_desc_struct}}' type='^{gss_OID_set_desc_struct=I^{gss_OID_desc_struct}}'/>
+<arg type='i'/>
+<arg type='^^{gss_cred_id_t_desc_struct}'/>
+<arg type='^^{gss_OID_set_desc_struct}'/>
+<arg type='^I'/>
+<retval type='I'/>
+</function>
+<function name='gss_add_buffer_set_member'>
+<arg type='^I'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type='^^{gss_buffer_set_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_add_cred'>
+<arg type='^I'/>
+<arg type='^{gss_cred_id_t_desc_struct=}'/>
+<arg type='^{gss_name_t_desc_struct=}'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type='i'/>
+<arg type='I'/>
+<arg type='I'/>
+<arg type='^^{gss_cred_id_t_desc_struct}'/>
+<arg type='^^{gss_OID_set_desc_struct}'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<retval type='I'/>
+</function>
+<function name='gss_add_oid_set_member'>
+<arg type='^I'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type='^^{gss_OID_set_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_canonicalize_name'>
+<arg type='^I'/>
+<arg type='^{gss_name_t_desc_struct=}'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type='^^{gss_name_t_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_compare_name'>
+<arg type='^I'/>
+<arg type='^{gss_name_t_desc_struct=}'/>
+<arg type='^{gss_name_t_desc_struct=}'/>
+<arg type='^i'/>
+<retval type='I'/>
+</function>
+<function name='gss_context_time'>
+<arg type='^I'/>
+<arg type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg type='^I'/>
+<retval type='I'/>
+</function>
+<function name='gss_create_empty_buffer_set'>
+<arg type='^I'/>
+<arg type='^^{gss_buffer_set_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_create_empty_oid_set'>
+<arg type='^I'/>
+<arg type='^^{gss_OID_set_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_delete_sec_context'>
+<arg type='^I'/>
+<arg type='^^{gss_ctx_id_t_desc_struct}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<retval type='I'/>
+</function>
+<function name='gss_destroy_cred'>
+<arg type='^I'/>
+<arg type='^^{gss_cred_id_t_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_display_name'>
+<arg type='^I'/>
+<arg type='^{gss_name_t_desc_struct=}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type='^^{gss_OID_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_display_status'>
+<arg type='^I'/>
+<arg type='I'/>
+<arg type='i'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type='^I'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<retval type='I'/>
+</function>
+<function name='gss_duplicate_name'>
+<arg type='^I'/>
+<arg type='^{gss_name_t_desc_struct=}'/>
+<arg type='^^{gss_name_t_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_duplicate_oid'>
+<arg type='^I'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type='^^{gss_OID_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_export_name'>
+<arg type='^I'/>
+<arg type='^{gss_name_t_desc_struct=}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<retval type='I'/>
+</function>
+<function name='gss_export_sec_context'>
+<arg type='^I'/>
+<arg type='^^{gss_ctx_id_t_desc_struct}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<retval type='I'/>
+</function>
+<function name='gss_get_mic'>
+<arg type='^I'/>
+<arg type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg type='I'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<retval type='I'/>
+</function>
+<function name='gss_import_name'>
+<arg type='^I'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type='^^{gss_name_t_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_import_sec_context'>
+<arg type='^I'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type='^^{gss_ctx_id_t_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_indicate_mechs'>
+<arg type='^I'/>
+<arg type='^^{gss_OID_set_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_init_sec_context'>
+<arg type='^I'/>
+<arg type='^{gss_cred_id_t_desc_struct=}'/>
+<arg type='^^{gss_ctx_id_t_desc_struct}'/>
+<arg type='^{gss_name_t_desc_struct=}'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type='I'/>
+<arg type='I'/>
+<arg type64='^{gss_channel_bindings_struct=I{gss_buffer_desc_struct=Q^v}I{gss_buffer_desc_struct=Q^v}{gss_buffer_desc_struct=Q^v}}' type='^{gss_channel_bindings_struct=I{gss_buffer_desc_struct=I^v}I{gss_buffer_desc_struct=I^v}{gss_buffer_desc_struct=I^v}}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type='^^{gss_OID_desc_struct}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<retval type='I'/>
+</function>
+<function name='gss_inquire_context'>
+<arg type='^I'/>
+<arg type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg type='^^{gss_name_t_desc_struct}'/>
+<arg type='^^{gss_name_t_desc_struct}'/>
+<arg type='^I'/>
+<arg type='^^{gss_OID_desc_struct}'/>
+<arg type='^I'/>
+<arg type='^i'/>
+<arg type='^i'/>
+<retval type='I'/>
+</function>
+<function name='gss_inquire_cred'>
+<arg type='^I'/>
+<arg type='^{gss_cred_id_t_desc_struct=}'/>
+<arg type='^^{gss_name_t_desc_struct}'/>
+<arg type='^I'/>
+<arg type='^i'/>
+<arg type='^^{gss_OID_set_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_inquire_cred_by_mech'>
+<arg type='^I'/>
+<arg type='^{gss_cred_id_t_desc_struct=}'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type='^^{gss_name_t_desc_struct}'/>
+<arg type='^I'/>
+<arg type='^I'/>
+<arg type='^i'/>
+<retval type='I'/>
+</function>
+<function name='gss_inquire_cred_by_oid'>
+<arg type='^I'/>
+<arg type='^{gss_cred_id_t_desc_struct=}'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type='^^{gss_buffer_set_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_inquire_mechs_for_name'>
+<arg type='^I'/>
+<arg type='^{gss_name_t_desc_struct=}'/>
+<arg type='^^{gss_OID_set_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_inquire_names_for_mech'>
+<arg type='^I'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type='^^{gss_OID_set_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_inquire_sec_context_by_oid'>
+<arg type='^I'/>
+<arg type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type='^^{gss_buffer_set_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_iter_creds'>
+<arg type='^I'/>
+<arg type='I'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg function_pointer='true' type='@?'>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type='^{gss_cred_id_t_desc_struct=}'/>
+<retval type='v'/>
+</arg>
+<retval type='I'/>
+</function>
+<function name='gss_iter_creds_f'>
+<arg type='^I'/>
+<arg type='I'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type='^{gss_cred_id_t_desc_struct=}'/>
+<retval type='v'/>
+</arg>
+<retval type='I'/>
+</function>
+<function name='gss_krb5_ccache_name'>
+<arg type='^I'/>
+<arg type='*'/>
+<arg type='^*'/>
+<retval type='I'/>
+</function>
+<function name='gss_krb5_copy_ccache'>
+<arg type='^I'/>
+<arg type='^{gss_cred_id_t_desc_struct=}'/>
+<arg type='^{krb5_ccache_data=}'/>
+<retval type='I'/>
+</function>
+<function name='gss_krb5_export_lucid_sec_context'>
+<arg type='^I'/>
+<arg type='^^{gss_ctx_id_t_desc_struct}'/>
+<arg type='I'/>
+<arg type='^^v'/>
+<retval type='I'/>
+</function>
+<function name='gss_krb5_free_lucid_sec_context'>
+<arg type='^I'/>
+<arg type='^v'/>
+<retval type='I'/>
+</function>
+<function name='gss_krb5_set_allowable_enctypes'>
+<arg type='^I'/>
+<arg type='^{gss_cred_id_t_desc_struct=}'/>
+<arg type='I'/>
+<arg type='^i'/>
+<retval type='I'/>
+</function>
+<function name='gss_oid_equal'>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<retval type='i'/>
+</function>
+<function name='gss_oid_to_str'>
+<arg type='^I'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<retval type='I'/>
+</function>
+<function name='gss_process_context_token'>
+<arg type='^I'/>
+<arg type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<retval type='I'/>
+</function>
+<function name='gss_pseudo_random'>
+<arg type='^I'/>
+<arg type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg type='i'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type64='q' type='l'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<retval type='I'/>
+</function>
+<function name='gss_release_buffer'>
+<arg type='^I'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<retval type='I'/>
+</function>
+<function name='gss_release_buffer_set'>
+<arg type='^I'/>
+<arg type='^^{gss_buffer_set_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_release_cred'>
+<arg type='^I'/>
+<arg type='^^{gss_cred_id_t_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_release_name'>
+<arg type='^I'/>
+<arg type='^^{gss_name_t_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_release_oid'>
+<arg type='^I'/>
+<arg type='^^{gss_OID_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_release_oid_set'>
+<arg type='^I'/>
+<arg type='^^{gss_OID_set_desc_struct}'/>
+<retval type='I'/>
+</function>
+<function name='gss_seal'>
+<arg type='^I'/>
+<arg type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg type='i'/>
+<arg type='i'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type='^i'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<retval type='I'/>
+</function>
+<function name='gss_set_cred_option'>
+<arg type='^I'/>
+<arg type='^^{gss_cred_id_t_desc_struct}'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<retval type='I'/>
+</function>
+<function name='gss_set_sec_context_option'>
+<arg type='^I'/>
+<arg type='^^{gss_ctx_id_t_desc_struct}'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<retval type='I'/>
+</function>
+<function name='gss_sign'>
+<arg type='^I'/>
+<arg type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg type='i'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<retval type='I'/>
+</function>
+<function name='gss_store_cred'>
+<arg type='^I'/>
+<arg type='^{gss_cred_id_t_desc_struct=}'/>
+<arg type='i'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type='I'/>
+<arg type='I'/>
+<arg type='^^{gss_OID_set_desc_struct}'/>
+<arg type='^i'/>
+<retval type='I'/>
+</function>
+<function name='gss_test_oid_set_member'>
+<arg type='^I'/>
+<arg type='^{gss_OID_desc_struct=I^v}'/>
+<arg type64='^{gss_OID_set_desc_struct=Q^{gss_OID_desc_struct}}' type='^{gss_OID_set_desc_struct=I^{gss_OID_desc_struct}}'/>
+<arg type='^i'/>
+<retval type='I'/>
+</function>
+<function name='gss_unseal'>
+<arg type='^I'/>
+<arg type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type='^i'/>
+<arg type='^i'/>
+<retval type='I'/>
+</function>
+<function name='gss_unwrap'>
+<arg type='^I'/>
+<arg type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type='^i'/>
+<arg type='^I'/>
+<retval type='I'/>
+</function>
+<function name='gss_verify'>
+<arg type='^I'/>
+<arg type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type='^i'/>
+<retval type='I'/>
+</function>
+<function name='gss_verify_mic'>
+<arg type='^I'/>
+<arg type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type='^I'/>
+<retval type='I'/>
+</function>
+<function name='gss_wrap'>
+<arg type='^I'/>
+<arg type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg type='i'/>
+<arg type='I'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<arg type='^i'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<retval type='I'/>
+</function>
+<function name='gss_wrap_size_limit'>
+<arg type='^I'/>
+<arg type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg type='i'/>
+<arg type='I'/>
+<arg type='I'/>
+<arg type='^I'/>
+<retval type='I'/>
+</function>
+<function name='gsskrb5_extract_authz_data_from_sec_context'>
+<arg type='^I'/>
+<arg type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg type='i'/>
+<arg type64='^{gss_buffer_desc_struct=Q^v}' type='^{gss_buffer_desc_struct=I^v}'/>
+<retval type='I'/>
+</function>
+<function name='gsskrb5_register_acceptor_identity'>
+<arg type='*'/>
+<retval type='I'/>
+</function>
+<function name='krb5_gss_register_acceptor_identity'>
+<arg type='*'/>
+<retval type='I'/>
+</function>
+</signatures>

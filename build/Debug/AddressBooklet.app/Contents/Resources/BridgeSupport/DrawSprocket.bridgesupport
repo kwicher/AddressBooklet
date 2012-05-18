@@ -1,0 +1,208 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Carbon.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<struct name='DSpAltBufferAttributes' type64='{DSpAltBufferAttributes=&quot;width&quot;I&quot;height&quot;I&quot;options&quot;i&quot;reserved&quot;[4I]}' type='{DSpAltBufferAttributes=&quot;width&quot;I&quot;height&quot;I&quot;options&quot;i&quot;reserved&quot;[4L]}'/>
+<struct name='DSpBlitInfo' type64='{DSpBlitInfo=&quot;completionFlag&quot;B&quot;filler&quot;[3c]&quot;completionProc&quot;^?&quot;srcContext&quot;^{OpaqueDSpContextReference}&quot;srcBuffer&quot;^{OpaqueGrafPtr}&quot;srcRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;srcKey&quot;I&quot;dstContext&quot;^{OpaqueDSpContextReference}&quot;dstBuffer&quot;^{OpaqueGrafPtr}&quot;dstRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;dstKey&quot;I&quot;mode&quot;i&quot;reserved&quot;[4I]}' type='{DSpBlitInfo=&quot;completionFlag&quot;B&quot;filler&quot;[3c]&quot;completionProc&quot;^?&quot;srcContext&quot;^{OpaqueDSpContextReference}&quot;srcBuffer&quot;^{OpaqueGrafPtr}&quot;srcRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;srcKey&quot;I&quot;dstContext&quot;^{OpaqueDSpContextReference}&quot;dstBuffer&quot;^{OpaqueGrafPtr}&quot;dstRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;dstKey&quot;I&quot;mode&quot;i&quot;reserved&quot;[4L]}'/>
+<struct name='DSpContextAttributes' type64='{DSpContextAttributes=&quot;frequency&quot;i&quot;displayWidth&quot;I&quot;displayHeight&quot;I&quot;reserved1&quot;I&quot;reserved2&quot;I&quot;colorNeeds&quot;I&quot;colorTable&quot;^^{ColorTable}&quot;contextOptions&quot;I&quot;backBufferDepthMask&quot;I&quot;displayDepthMask&quot;I&quot;backBufferBestDepth&quot;I&quot;displayBestDepth&quot;I&quot;pageCount&quot;I&quot;filler&quot;[3c]&quot;gameMustConfirmSwitch&quot;B&quot;reserved3&quot;[4I]}' type='{DSpContextAttributes=&quot;frequency&quot;i&quot;displayWidth&quot;I&quot;displayHeight&quot;I&quot;reserved1&quot;I&quot;reserved2&quot;I&quot;colorNeeds&quot;I&quot;colorTable&quot;^^{ColorTable}&quot;contextOptions&quot;I&quot;backBufferDepthMask&quot;I&quot;displayDepthMask&quot;I&quot;backBufferBestDepth&quot;I&quot;displayBestDepth&quot;I&quot;pageCount&quot;I&quot;filler&quot;[3c]&quot;gameMustConfirmSwitch&quot;B&quot;reserved3&quot;[4L]}'/>
+<opaque name='DSpAltBufferReference' type='^{OpaqueDSpAltBufferReference=}'/>
+<opaque name='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+<opaque name='DSpContextReferenceConst' type='^{OpaqueDSpContextReference=}'/>
+<enum name='kDSpAltBufferOption_RowBytesEqualsWidth' value='1'/>
+<enum name='kDSpBlitMode_DstKey' value='2'/>
+<enum name='kDSpBlitMode_Interpolation' value='4'/>
+<enum name='kDSpBlitMode_Plain' value='0'/>
+<enum name='kDSpBlitMode_SrcKey' value='1'/>
+<enum name='kDSpBufferKind_Normal' value='0'/>
+<enum name='kDSpColorNeeds_DontCare' value='0'/>
+<enum name='kDSpColorNeeds_Request' value='1'/>
+<enum name='kDSpColorNeeds_Require' value='2'/>
+<enum name='kDSpContextOption_DontSyncVBL' value='4'/>
+<enum name='kDSpContextOption_PageFlip' value='2'/>
+<enum name='kDSpContextOption_Stereoscopic' value='8'/>
+<enum name='kDSpContextState_Active' value='0'/>
+<enum name='kDSpContextState_Inactive' value='2'/>
+<enum name='kDSpContextState_Paused' value='1'/>
+<enum name='kDSpDepthMask_1' value='1'/>
+<enum name='kDSpDepthMask_16' value='16'/>
+<enum name='kDSpDepthMask_2' value='2'/>
+<enum name='kDSpDepthMask_32' value='32'/>
+<enum name='kDSpDepthMask_4' value='4'/>
+<enum name='kDSpDepthMask_8' value='8'/>
+<enum name='kDSpDepthMask_All' value='-1'/>
+<function name='DSpContext_Dispose'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_FadeGamma'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type64='i' type='l'/>
+<arg type='^{RGBColor=SSS}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_FadeGammaIn'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type='^{RGBColor=SSS}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_FadeGammaOut'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type='^{RGBColor=SSS}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_GetAttributes'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type64='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4I]}' type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_GetBackBuffer'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type='i'/>
+<arg type='^^{OpaqueGrafPtr}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_GetCLUTEntries'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type='^{ColorSpec=s{RGBColor=SSS}}'/>
+<arg type='S'/>
+<arg type='S'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_GetDisplayID'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type='^I'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_GetFrontBuffer'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type='^^{OpaqueGrafPtr}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_GetMonitorFrequency'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type='^i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_GetState'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type='^i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_GlobalToLocal'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type='^{Point=ss}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_IsBusy'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_LocalToGlobal'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type='^{Point=ss}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_Queue'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type64='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4I]}' type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_Release'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_Reserve'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type64='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4I]}' type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_SetCLUTEntries'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type='^{ColorSpec=s{RGBColor=SSS}}'/>
+<arg type='S'/>
+<arg type='S'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_SetState'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type='i'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_SwapBuffers'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type='^v'/>
+<retval type='B'/>
+</arg>
+<arg type='^v'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpContext_Switch'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpFindBestContext'>
+<arg type64='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4I]}' type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}'/>
+<arg type='^^{OpaqueDSpContextReference}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpFindBestContextOnDisplayID'>
+<arg type64='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4I]}' type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}'/>
+<arg type='^^{OpaqueDSpContextReference}'/>
+<arg type64='I' type='L'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpFindContextFromPoint'>
+<arg type='{Point=ss}'/>
+<arg type='^^{OpaqueDSpContextReference}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpGetCurrentContext'>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueDSpContextReference}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpGetFirstContext'>
+<arg type64='I' type='L'/>
+<arg type='^^{OpaqueDSpContextReference}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpGetMouse'>
+<arg type='^{Point=ss}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpGetNextContext'>
+<arg type='^{OpaqueDSpContextReference=}'/>
+<arg type='^^{OpaqueDSpContextReference}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpGetVersion'>
+<retval type='{NumVersion=CCCC}'/>
+</function>
+<function name='DSpProcessEvent'>
+<arg type64='^{EventRecord=SQI{Point=ss}S}' type='^{EventRecord=SLI{Point=ss}S}'/>
+<arg type='^B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpSetBlankingColor'>
+<arg type='^{RGBColor=SSS}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpSetDebugMode'>
+<arg type='B'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpShutdown'>
+<retval type64='i' type='l'/>
+</function>
+<function name='DSpStartup'>
+<retval type64='i' type='l'/>
+</function>
+</signatures>

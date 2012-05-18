@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/QuartzComposer.framework'/>
+<depends_on path='/System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/PDFKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/QuartzFilters.framework'/>
+<depends_on path='/System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/ImageKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/QuickLookUI.framework'/>
+</signatures>

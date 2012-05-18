@@ -1,0 +1,1301 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenGL.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/QTKit.framework'/>
+<struct name='BitmapCharPtr' type='{_BitmapCharPtr=&quot;width&quot;i&quot;height&quot;i&quot;xorig&quot;f&quot;yorig&quot;f&quot;advance&quot;f&quot;bitmap&quot;*}'/>
+<struct name='BitmapCharRec' type='{_BitmapCharRec=&quot;width&quot;i&quot;height&quot;i&quot;xorig&quot;f&quot;yorig&quot;f&quot;advance&quot;f&quot;bitmap&quot;*}'/>
+<struct name='BitmapFontPtr' type='{_BitmapFontPtr=&quot;name&quot;*&quot;num_chars&quot;i&quot;first&quot;i&quot;ch&quot;^^{?}}'/>
+<struct name='BitmapFontRec' type='{_BitmapFontRec=&quot;name&quot;*&quot;num_chars&quot;i&quot;first&quot;i&quot;ch&quot;^^{?}}'/>
+<struct name='CoordPtr' type='{_CoordPtr=&quot;x&quot;f&quot;y&quot;f}'/>
+<struct name='CoordRec' type='{_CoordRec=&quot;x&quot;f&quot;y&quot;f}'/>
+<struct name='STXY' type='{_STXY=&quot;s&quot;f&quot;t&quot;f&quot;x&quot;f&quot;y&quot;f}'/>
+<struct name='SphereMap' type='{_SphereMap=&quot;mesh&quot;^{_SphereMapMesh}&quot;smapTexObj&quot;I&quot;viewTexObjs&quot;[6I]&quot;viewTexObj&quot;I&quot;flags&quot;i&quot;viewTexDim&quot;i&quot;smapTexDim&quot;i&quot;viewOrigin&quot;[2i]&quot;smapOrigin&quot;[2i]&quot;eye&quot;[3f]&quot;up&quot;[3f]&quot;obj&quot;[3f]&quot;viewNear&quot;f&quot;viewFar&quot;f&quot;positionLights&quot;^?&quot;drawView&quot;^?&quot;context&quot;^v}'/>
+<struct name='SphereMapMesh' type='{_SphereMapMesh=&quot;refcnt&quot;i&quot;steps&quot;i&quot;rings&quot;i&quot;edgeExtend&quot;i&quot;face&quot;^{_STXY}&quot;back&quot;^{_STXY}}'/>
+<struct name='StrokeCharPtr' type='{_StrokeCharPtr=&quot;num_strokes&quot;i&quot;stroke&quot;^{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}&quot;center&quot;f&quot;right&quot;f}'/>
+<struct name='StrokeCharRec' type='{_StrokeCharRec=&quot;num_strokes&quot;i&quot;stroke&quot;^{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}&quot;center&quot;f&quot;right&quot;f}'/>
+<struct name='StrokeFontPtr' type='{_StrokeFontPtr=&quot;name&quot;*&quot;num_chars&quot;i&quot;ch&quot;^{_StrokeCharRec=&quot;num_strokes&quot;i&quot;stroke&quot;^{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}&quot;center&quot;f&quot;right&quot;f}&quot;top&quot;f&quot;bottom&quot;f}'/>
+<struct name='StrokeFontRec' type='{_StrokeFontRec=&quot;name&quot;*&quot;num_chars&quot;i&quot;ch&quot;^{_StrokeCharRec=&quot;num_strokes&quot;i&quot;stroke&quot;^{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}&quot;center&quot;f&quot;right&quot;f}&quot;top&quot;f&quot;bottom&quot;f}'/>
+<struct name='StrokePtr' type='{_StrokePtr=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}'/>
+<struct name='StrokeRec' type='{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}'/>
+<struct name='gleGC' type='{_gleGC=&quot;bgn_gen_texture&quot;^?&quot;n3f_gen_texture&quot;^?&quot;n3d_gen_texture&quot;^?&quot;v3f_gen_texture&quot;^?&quot;v3d_gen_texture&quot;^?&quot;end_gen_texture&quot;^?&quot;join_style&quot;i&quot;ncp&quot;i&quot;contour&quot;^[2d]&quot;cont_normal&quot;^[2d]&quot;up&quot;^d&quot;npoints&quot;i&quot;point_array&quot;^[3d]&quot;color_array&quot;^[3f]&quot;xform_array&quot;^[2[3d]]&quot;num_vert&quot;i&quot;segment_number&quot;i&quot;segment_length&quot;d&quot;accum_seg_len&quot;d&quot;prev_x&quot;d&quot;prev_y&quot;d&quot;save_bgn_gen_texture&quot;^?&quot;save_n3f_gen_texture&quot;^?&quot;save_n3d_gen_texture&quot;^?&quot;save_v3f_gen_texture&quot;^?&quot;save_v3d_gen_texture&quot;^?&quot;save_end_gen_texture&quot;^?}'/>
+<constant name='glutBitmap8By13' type='^v'/>
+<constant name='glutBitmap9By15' type='^v'/>
+<constant name='glutBitmapHelvetica10' type='^v'/>
+<constant name='glutBitmapHelvetica12' type='^v'/>
+<constant name='glutBitmapHelvetica18' type='^v'/>
+<constant name='glutBitmapTimesRoman10' type='^v'/>
+<constant name='glutBitmapTimesRoman24' type='^v'/>
+<constant name='glutStrokeMonoRoman' type='^v'/>
+<constant name='glutStrokeRoman' type='^v'/>
+<enum name='BACKWARDS_INTERSECT' value='2'/>
+<enum name='BACK_CAP' value='4'/>
+<enum name='DEGENERATE_TOLERANCE' value='0.000002'/>
+<enum name='FILLET' value='5'/>
+<enum name='FRONT' value='1'/>
+<enum name='FRONT_CAP' value='3'/>
+<enum name='GLE_API_VERSION' value='228'/>
+<enum name='GLE_TEXTURE_ENABLE' value='65536'/>
+<enum name='GLE_TEXTURE_NORMAL_CYL' value='4'/>
+<enum name='GLE_TEXTURE_NORMAL_FLAT' value='2'/>
+<enum name='GLE_TEXTURE_NORMAL_MODEL_CYL' value='10'/>
+<enum name='GLE_TEXTURE_NORMAL_MODEL_FLAT' value='8'/>
+<enum name='GLE_TEXTURE_NORMAL_MODEL_SPH' value='12'/>
+<enum name='GLE_TEXTURE_NORMAL_SPH' value='6'/>
+<enum name='GLE_TEXTURE_STYLE_MASK' value='255'/>
+<enum name='GLE_TEXTURE_VERTEX_CYL' value='3'/>
+<enum name='GLE_TEXTURE_VERTEX_FLAT' value='1'/>
+<enum name='GLE_TEXTURE_VERTEX_MODEL_CYL' value='9'/>
+<enum name='GLE_TEXTURE_VERTEX_MODEL_FLAT' value='7'/>
+<enum name='GLE_TEXTURE_VERTEX_MODEL_SPH' value='11'/>
+<enum name='GLE_TEXTURE_VERTEX_SPH' value='5'/>
+<enum name='GLUT_ACCUM' value='4'/>
+<enum name='GLUT_ACTIVE_ALT' value='4'/>
+<enum name='GLUT_ACTIVE_CTRL' value='2'/>
+<enum name='GLUT_ACTIVE_SHIFT' value='1'/>
+<enum name='GLUT_ALPHA' value='8'/>
+<enum name='GLUT_API_VERSION' value='5'/>
+<enum name='GLUT_BLUE' value='2'/>
+<enum name='GLUT_CURSOR_BOTTOM_LEFT_CORNER' value='19'/>
+<enum name='GLUT_CURSOR_BOTTOM_RIGHT_CORNER' value='18'/>
+<enum name='GLUT_CURSOR_BOTTOM_SIDE' value='13'/>
+<enum name='GLUT_CURSOR_CROSSHAIR' value='9'/>
+<enum name='GLUT_CURSOR_CYCLE' value='5'/>
+<enum name='GLUT_CURSOR_DESTROY' value='3'/>
+<enum name='GLUT_CURSOR_FULL_CROSSHAIR' value='102'/>
+<enum name='GLUT_CURSOR_HELP' value='4'/>
+<enum name='GLUT_CURSOR_INFO' value='2'/>
+<enum name='GLUT_CURSOR_INHERIT' value='100'/>
+<enum name='GLUT_CURSOR_LEFT_ARROW' value='1'/>
+<enum name='GLUT_CURSOR_LEFT_RIGHT' value='11'/>
+<enum name='GLUT_CURSOR_LEFT_SIDE' value='14'/>
+<enum name='GLUT_CURSOR_NONE' value='101'/>
+<enum name='GLUT_CURSOR_RIGHT_ARROW' value='0'/>
+<enum name='GLUT_CURSOR_RIGHT_SIDE' value='15'/>
+<enum name='GLUT_CURSOR_SPRAY' value='6'/>
+<enum name='GLUT_CURSOR_TEXT' value='8'/>
+<enum name='GLUT_CURSOR_TOP_LEFT_CORNER' value='16'/>
+<enum name='GLUT_CURSOR_TOP_RIGHT_CORNER' value='17'/>
+<enum name='GLUT_CURSOR_TOP_SIDE' value='12'/>
+<enum name='GLUT_CURSOR_UP_DOWN' value='10'/>
+<enum name='GLUT_CURSOR_WAIT' value='7'/>
+<enum name='GLUT_DEPTH' value='16'/>
+<enum name='GLUT_DEVICE_IGNORE_KEY_REPEAT' value='610'/>
+<enum name='GLUT_DEVICE_KEY_REPEAT' value='611'/>
+<enum name='GLUT_DISPLAY_MODE_POSSIBLE' value='400'/>
+<enum name='GLUT_DOUBLE' value='2'/>
+<enum name='GLUT_DOWN' value='0'/>
+<enum name='GLUT_ELAPSED_TIME' value='700'/>
+<enum name='GLUT_ENTERED' value='1'/>
+<enum name='GLUT_FCB_BUTTON_BOX' value='12'/>
+<enum name='GLUT_FCB_DIALS' value='13'/>
+<enum name='GLUT_FCB_DISPLAY' value='0'/>
+<enum name='GLUT_FCB_ENTRY' value='5'/>
+<enum name='GLUT_FCB_JOYSTICK' value='19'/>
+<enum name='GLUT_FCB_KEYBOARD' value='6'/>
+<enum name='GLUT_FCB_KEYBOARD_UP' value='7'/>
+<enum name='GLUT_FCB_MOTION' value='3'/>
+<enum name='GLUT_FCB_MOUSE' value='2'/>
+<enum name='GLUT_FCB_OVERLAY_DISPLAY' value='100'/>
+<enum name='GLUT_FCB_PASSIVE' value='4'/>
+<enum name='GLUT_FCB_RESHAPE' value='1'/>
+<enum name='GLUT_FCB_SELECT' value='101'/>
+<enum name='GLUT_FCB_SPACE_BUTTON' value='16'/>
+<enum name='GLUT_FCB_SPACE_MOTION' value='14'/>
+<enum name='GLUT_FCB_SPACE_ROTATE' value='15'/>
+<enum name='GLUT_FCB_SPECIAL' value='10'/>
+<enum name='GLUT_FCB_SPECIAL_UP' value='11'/>
+<enum name='GLUT_FCB_TABLET_BUTTON' value='18'/>
+<enum name='GLUT_FCB_TABLET_MOTION' value='17'/>
+<enum name='GLUT_FCB_TIMER' value='102'/>
+<enum name='GLUT_FCB_VISIBILITY' value='9'/>
+<enum name='GLUT_FCB_WINDOW_STATUS' value='8'/>
+<enum name='GLUT_FCB_WMCLOSE' value='20'/>
+<enum name='GLUT_FULLY_COVERED' value='3'/>
+<enum name='GLUT_FULLY_RETAINED' value='1'/>
+<enum name='GLUT_GAME_MODE_ACTIVE' value='0'/>
+<enum name='GLUT_GAME_MODE_DISPLAY_CHANGED' value='6'/>
+<enum name='GLUT_GAME_MODE_HEIGHT' value='3'/>
+<enum name='GLUT_GAME_MODE_PIXEL_DEPTH' value='4'/>
+<enum name='GLUT_GAME_MODE_POSSIBLE' value='1'/>
+<enum name='GLUT_GAME_MODE_REFRESH_RATE' value='5'/>
+<enum name='GLUT_GAME_MODE_WIDTH' value='2'/>
+<enum name='GLUT_GREEN' value='1'/>
+<enum name='GLUT_HAS_DIAL_AND_BUTTON_BOX' value='603'/>
+<enum name='GLUT_HAS_JOYSTICK' value='612'/>
+<enum name='GLUT_HAS_KEYBOARD' value='600'/>
+<enum name='GLUT_HAS_MOUSE' value='601'/>
+<enum name='GLUT_HAS_OVERLAY' value='802'/>
+<enum name='GLUT_HAS_SPACEBALL' value='602'/>
+<enum name='GLUT_HAS_TABLET' value='604'/>
+<enum name='GLUT_HIDDEN' value='0'/>
+<enum name='GLUT_INDEX' value='1'/>
+<enum name='GLUT_INIT_DISPLAY_MODE' value='504'/>
+<enum name='GLUT_INIT_WINDOW_HEIGHT' value='503'/>
+<enum name='GLUT_INIT_WINDOW_WIDTH' value='502'/>
+<enum name='GLUT_INIT_WINDOW_X' value='500'/>
+<enum name='GLUT_INIT_WINDOW_Y' value='501'/>
+<enum name='GLUT_JOYSTICK_AXES' value='615'/>
+<enum name='GLUT_JOYSTICK_BUTTONS' value='614'/>
+<enum name='GLUT_JOYSTICK_BUTTON_A' value='1'/>
+<enum name='GLUT_JOYSTICK_BUTTON_B' value='2'/>
+<enum name='GLUT_JOYSTICK_BUTTON_C' value='4'/>
+<enum name='GLUT_JOYSTICK_BUTTON_D' value='8'/>
+<enum name='GLUT_JOYSTICK_POLL_RATE' value='616'/>
+<enum name='GLUT_KEY_DOWN' value='103'/>
+<enum name='GLUT_KEY_END' value='107'/>
+<enum name='GLUT_KEY_F1' value='1'/>
+<enum name='GLUT_KEY_F10' value='10'/>
+<enum name='GLUT_KEY_F11' value='11'/>
+<enum name='GLUT_KEY_F12' value='12'/>
+<enum name='GLUT_KEY_F2' value='2'/>
+<enum name='GLUT_KEY_F3' value='3'/>
+<enum name='GLUT_KEY_F4' value='4'/>
+<enum name='GLUT_KEY_F5' value='5'/>
+<enum name='GLUT_KEY_F6' value='6'/>
+<enum name='GLUT_KEY_F7' value='7'/>
+<enum name='GLUT_KEY_F8' value='8'/>
+<enum name='GLUT_KEY_F9' value='9'/>
+<enum name='GLUT_KEY_HOME' value='106'/>
+<enum name='GLUT_KEY_INSERT' value='108'/>
+<enum name='GLUT_KEY_LEFT' value='100'/>
+<enum name='GLUT_KEY_PAGE_DOWN' value='105'/>
+<enum name='GLUT_KEY_PAGE_UP' value='104'/>
+<enum name='GLUT_KEY_REPEAT_DEFAULT' value='2'/>
+<enum name='GLUT_KEY_REPEAT_OFF' value='0'/>
+<enum name='GLUT_KEY_REPEAT_ON' value='1'/>
+<enum name='GLUT_KEY_RIGHT' value='102'/>
+<enum name='GLUT_KEY_UP' value='101'/>
+<enum name='GLUT_LAYER_IN_USE' value='801'/>
+<enum name='GLUT_LEFT' value='0'/>
+<enum name='GLUT_LEFT_BUTTON' value='0'/>
+<enum name='GLUT_LUMINANCE' value='512'/>
+<enum name='GLUT_MACOSX_IMPLEMENTATION' value='2'/>
+<enum name='GLUT_MENU_IN_USE' value='1'/>
+<enum name='GLUT_MENU_NOT_IN_USE' value='0'/>
+<enum name='GLUT_MENU_NUM_ITEMS' value='300'/>
+<enum name='GLUT_MIDDLE_BUTTON' value='1'/>
+<enum name='GLUT_MULTISAMPLE' value='128'/>
+<enum name='GLUT_NORMAL' value='0'/>
+<enum name='GLUT_NORMAL_DAMAGED' value='804'/>
+<enum name='GLUT_NOT_VISIBLE' value='0'/>
+<enum name='GLUT_NO_RECOVERY' value='1024'/>
+<enum name='GLUT_NUM_BUTTON_BOX_BUTTONS' value='607'/>
+<enum name='GLUT_NUM_DIALS' value='608'/>
+<enum name='GLUT_NUM_MOUSE_BUTTONS' value='605'/>
+<enum name='GLUT_NUM_SPACEBALL_BUTTONS' value='606'/>
+<enum name='GLUT_NUM_TABLET_BUTTONS' value='609'/>
+<enum name='GLUT_OVERLAY' value='1'/>
+<enum name='GLUT_OVERLAY_DAMAGED' value='805'/>
+<enum name='GLUT_OVERLAY_POSSIBLE' value='800'/>
+<enum name='GLUT_OWNS_JOYSTICK' value='613'/>
+<enum name='GLUT_PARTIALLY_RETAINED' value='2'/>
+<enum name='GLUT_RED' value='0'/>
+<enum name='GLUT_RGB' value='0'/>
+<enum name='GLUT_RGBA' value='0'/>
+<enum name='GLUT_RIGHT_BUTTON' value='2'/>
+<enum name='GLUT_SCREEN_HEIGHT' value='201'/>
+<enum name='GLUT_SCREEN_HEIGHT_MM' value='203'/>
+<enum name='GLUT_SCREEN_WIDTH' value='200'/>
+<enum name='GLUT_SCREEN_WIDTH_MM' value='202'/>
+<enum name='GLUT_SINGLE' value='0'/>
+<enum name='GLUT_STENCIL' value='32'/>
+<enum name='GLUT_STEREO' value='256'/>
+<enum name='GLUT_TRANSPARENT_INDEX' value='803'/>
+<enum name='GLUT_UP' value='1'/>
+<enum name='GLUT_VIDEO_RESIZE_HEIGHT' value='909'/>
+<enum name='GLUT_VIDEO_RESIZE_HEIGHT_DELTA' value='905'/>
+<enum name='GLUT_VIDEO_RESIZE_IN_USE' value='901'/>
+<enum name='GLUT_VIDEO_RESIZE_POSSIBLE' value='900'/>
+<enum name='GLUT_VIDEO_RESIZE_WIDTH' value='908'/>
+<enum name='GLUT_VIDEO_RESIZE_WIDTH_DELTA' value='904'/>
+<enum name='GLUT_VIDEO_RESIZE_X' value='906'/>
+<enum name='GLUT_VIDEO_RESIZE_X_DELTA' value='902'/>
+<enum name='GLUT_VIDEO_RESIZE_Y' value='907'/>
+<enum name='GLUT_VIDEO_RESIZE_Y_DELTA' value='903'/>
+<enum name='GLUT_VISIBLE' value='1'/>
+<enum name='GLUT_WINDOW_ACCUM_ALPHA_SIZE' value='114'/>
+<enum name='GLUT_WINDOW_ACCUM_BLUE_SIZE' value='113'/>
+<enum name='GLUT_WINDOW_ACCUM_GREEN_SIZE' value='112'/>
+<enum name='GLUT_WINDOW_ACCUM_RED_SIZE' value='111'/>
+<enum name='GLUT_WINDOW_ALPHA_SIZE' value='110'/>
+<enum name='GLUT_WINDOW_BLUE_SIZE' value='109'/>
+<enum name='GLUT_WINDOW_BUFFER_SIZE' value='104'/>
+<enum name='GLUT_WINDOW_COLORMAP_SIZE' value='119'/>
+<enum name='GLUT_WINDOW_CURSOR' value='122'/>
+<enum name='GLUT_WINDOW_DEPTH_SIZE' value='106'/>
+<enum name='GLUT_WINDOW_DOUBLEBUFFER' value='115'/>
+<enum name='GLUT_WINDOW_FORMAT_ID' value='123'/>
+<enum name='GLUT_WINDOW_GREEN_SIZE' value='108'/>
+<enum name='GLUT_WINDOW_HEIGHT' value='103'/>
+<enum name='GLUT_WINDOW_NUM_CHILDREN' value='118'/>
+<enum name='GLUT_WINDOW_NUM_SAMPLES' value='120'/>
+<enum name='GLUT_WINDOW_PARENT' value='117'/>
+<enum name='GLUT_WINDOW_RED_SIZE' value='107'/>
+<enum name='GLUT_WINDOW_RGBA' value='116'/>
+<enum name='GLUT_WINDOW_STENCIL_SIZE' value='105'/>
+<enum name='GLUT_WINDOW_STEREO' value='121'/>
+<enum name='GLUT_WINDOW_WIDTH' value='102'/>
+<enum name='GLUT_WINDOW_X' value='100'/>
+<enum name='GLUT_WINDOW_Y' value='101'/>
+<enum name='GLUT_XLIB_IMPLEMENTATION' value='15'/>
+<enum name='SMAP_BACK' value='5'/>
+<enum name='SMAP_BOTTOM' value='2'/>
+<enum name='SMAP_CLEAR_SMAP_TEXTURE' value='1'/>
+<enum name='SMAP_FRONT' value='0'/>
+<enum name='SMAP_GENERATE_MIPMAPS' value='6'/>
+<enum name='SMAP_GENERATE_SMAP_MIPMAPS' value='4'/>
+<enum name='SMAP_GENERATE_VIEW_MIPMAPS' value='2'/>
+<enum name='SMAP_LEFT' value='3'/>
+<enum name='SMAP_RIGHT' value='4'/>
+<enum name='SMAP_TOP' value='1'/>
+<enum name='TUBE_CONTOUR_CLOSED' value='4096'/>
+<enum name='TUBE_JN_ANGLE' value='2'/>
+<enum name='TUBE_JN_CAP' value='16'/>
+<enum name='TUBE_JN_CUT' value='3'/>
+<enum name='TUBE_JN_MASK' value='15'/>
+<enum name='TUBE_JN_RAW' value='1'/>
+<enum name='TUBE_JN_ROUND' value='4'/>
+<enum name='TUBE_NORM_EDGE' value='512'/>
+<enum name='TUBE_NORM_FACET' value='256'/>
+<enum name='TUBE_NORM_MASK' value='3840'/>
+<enum name='TUBE_NORM_PATH_EDGE' value='1024'/>
+<enum name='X' value='0'/>
+<enum name='Y' value='1'/>
+<enum name='Z' value='2'/>
+<function name='bisecting_plane'>
+<arg type='^d'/>
+<arg type='^d'/>
+<arg type='^d'/>
+<arg type='^d'/>
+<retval type='i'/>
+</function>
+<function name='draw_angle_style_back_cap'>
+<arg type='i'/>
+<arg type='^d'/>
+<arg type='^[3d]'/>
+</function>
+<function name='draw_angle_style_front_cap'>
+<arg type='i'/>
+<arg type='^d'/>
+<arg type='^[3d]'/>
+</function>
+<function name='draw_binorm_segment_c_and_edge_n'>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='^f'/>
+<arg type='^f'/>
+<arg type='i'/>
+<arg type='d'/>
+</function>
+<function name='draw_binorm_segment_c_and_facet_n'>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='^f'/>
+<arg type='^f'/>
+<arg type='i'/>
+<arg type='d'/>
+</function>
+<function name='draw_binorm_segment_edge_n'>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='i'/>
+<arg type='d'/>
+</function>
+<function name='draw_binorm_segment_facet_n'>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='i'/>
+<arg type='d'/>
+</function>
+<function name='draw_raw_style_end_cap'>
+<arg type='i'/>
+<arg type='^[2d]'/>
+<arg type='d'/>
+<arg type='i'/>
+</function>
+<function name='draw_round_style_cap_callback'>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^f'/>
+<arg type='^d'/>
+<arg type='^d'/>
+<arg type='^[3d]'/>
+<arg type='i'/>
+</function>
+<function name='draw_segment_c_and_edge_n'>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='^f'/>
+<arg type='^f'/>
+<arg type='i'/>
+<arg type='d'/>
+</function>
+<function name='draw_segment_c_and_facet_n'>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='^f'/>
+<arg type='^f'/>
+<arg type='i'/>
+<arg type='d'/>
+</function>
+<function name='draw_segment_color'>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='^f'/>
+<arg type='^f'/>
+<arg type='i'/>
+<arg type='d'/>
+</function>
+<function name='draw_segment_edge_n'>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='i'/>
+<arg type='d'/>
+</function>
+<function name='draw_segment_facet_n'>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='i'/>
+<arg type='d'/>
+</function>
+<function name='draw_segment_plain'>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='i'/>
+<arg type='d'/>
+</function>
+<function name='extrusion_angle_join'>
+<arg type='i'/>
+<arg type='^[2d]'/>
+<arg type='^[2d]'/>
+<arg type='^d'/>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3f]'/>
+<arg type='^[2[3d]]'/>
+</function>
+<function name='extrusion_raw_join'>
+<arg type='i'/>
+<arg type='^[2d]'/>
+<arg type='^[2d]'/>
+<arg type='^d'/>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3f]'/>
+<arg type='^[2[3d]]'/>
+</function>
+<function name='extrusion_round_or_cut_join'>
+<arg type='i'/>
+<arg type='^[2d]'/>
+<arg type='^[2d]'/>
+<arg type='^d'/>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3f]'/>
+<arg type='^[2[3d]]'/>
+</function>
+<function name='gleCreateGC'>
+<retval type='^{_gleGC=^?^?^?^?^?^?ii^[2d]^[2d]^di^[3d]^[3f]^[2[3d]]iidddd^?^?^?^?^?^?}'/>
+</function>
+<function name='gleExtrusion'>
+<arg type='i'/>
+<arg type='^[2d]'/>
+<arg type='^[2d]'/>
+<arg type='^d'/>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3f]'/>
+</function>
+<function name='gleGetJoinStyle'>
+<retval type='i'/>
+</function>
+<function name='gleGetNumSlices'>
+<retval type='i'/>
+</function>
+<function name='gleHelicoid'>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='d'/>
+<arg type='d'/>
+</function>
+<function name='gleLathe'>
+<arg type='i'/>
+<arg type='^[2d]'/>
+<arg type='^[2d]'/>
+<arg type='^d'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='d'/>
+<arg type='d'/>
+</function>
+<function name='glePolyCone'>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3f]'/>
+<arg type='^d'/>
+</function>
+<function name='glePolyCylinder'>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3f]'/>
+<arg type='d'/>
+</function>
+<function name='gleScrew'>
+<arg type='i'/>
+<arg type='^[2d]'/>
+<arg type='^[2d]'/>
+<arg type='^d'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='d'/>
+</function>
+<function name='gleSetJoinStyle'>
+<arg type='i'/>
+</function>
+<function name='gleSetNumSlices'>
+<arg type='i'/>
+</function>
+<function name='gleSpiral'>
+<arg type='i'/>
+<arg type='^[2d]'/>
+<arg type='^[2d]'/>
+<arg type='^d'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='d'/>
+<arg type='d'/>
+</function>
+<function name='gleSuperExtrusion'>
+<arg type='i'/>
+<arg type='^[2d]'/>
+<arg type='^[2d]'/>
+<arg type='^d'/>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3f]'/>
+<arg type='^[2[3d]]'/>
+</function>
+<function name='gleTextureMode'>
+<arg type='i'/>
+</function>
+<function name='gleToroid'>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='^[3d]'/>
+<arg type='^[3d]'/>
+<arg type='d'/>
+<arg type='d'/>
+</function>
+<function name='gleTwistExtrusion'>
+<arg type='i'/>
+<arg type='^[2d]'/>
+<arg type='^[2d]'/>
+<arg type='^d'/>
+<arg type='i'/>
+<arg type='^[3d]'/>
+<arg type='^[3f]'/>
+<arg type='^d'/>
+</function>
+<function name='glutAddMenuEntry'>
+<arg type='*'/>
+<arg type='i'/>
+</function>
+<function name='glutAddSubMenu'>
+<arg type='*'/>
+<arg type='i'/>
+</function>
+<function name='glutAttachMenu'>
+<arg type='i'/>
+</function>
+<function name='glutBitmapCharacter'>
+<arg type='^v'/>
+<arg type='i'/>
+</function>
+<function name='glutBitmapLength'>
+<arg type='^v'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='glutBitmapWidth'>
+<arg type='^v'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='glutButtonBoxFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutChangeToMenuEntry'>
+<arg type='i'/>
+<arg type='*'/>
+<arg type='i'/>
+</function>
+<function name='glutChangeToSubMenu'>
+<arg type='i'/>
+<arg type='*'/>
+<arg type='i'/>
+</function>
+<function name='glutCheckLoop'/>
+<function name='glutCopyColormap'>
+<arg type='i'/>
+</function>
+<function name='glutCreateMenu'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+<retval type='i'/>
+</function>
+<function name='glutCreateSubWindow'>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='glutCreateWindow'>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='glutDestroyMenu'>
+<arg type='i'/>
+</function>
+<function name='glutDestroyWindow'>
+<arg type='i'/>
+</function>
+<function name='glutDetachMenu'>
+<arg type='i'/>
+</function>
+<function name='glutDeviceGet'>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='glutDialsFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutDisplayFunc'>
+<arg function_pointer='true' type='^?'>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutEnterGameMode'>
+<retval type='i'/>
+</function>
+<function name='glutEntryFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutEstablishOverlay'/>
+<function name='glutExtensionSupported'>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='glutForceJoystickFunc'/>
+<function name='glutFullScreen'/>
+<function name='glutGameModeGet'>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='glutGameModeString'>
+<arg type='*'/>
+</function>
+<function name='glutGet'>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='glutGetColor'>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='f'/>
+</function>
+<function name='glutGetMenu'>
+<retval type='i'/>
+</function>
+<function name='glutGetModifiers'>
+<retval type='i'/>
+</function>
+<function name='glutGetProcAddress'>
+<arg type='*'/>
+<retval type='^v'/>
+</function>
+<function name='glutGetWindow'>
+<retval type='i'/>
+</function>
+<function name='glutHideOverlay'/>
+<function name='glutHideWindow'/>
+<function name='glutIconifyWindow'/>
+<function name='glutIdleFunc'>
+<arg function_pointer='true' type='^?'>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutIgnoreKeyRepeat'>
+<arg type='i'/>
+</function>
+<function name='glutInit'>
+<arg type='^i'/>
+<arg type='^*'/>
+</function>
+<function name='glutInitDisplayMode'>
+<arg type='I'/>
+</function>
+<function name='glutInitDisplayString'>
+<arg type='*'/>
+</function>
+<function name='glutInitWindowPosition'>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='glutInitWindowSize'>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='glutJoystickFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='I'/>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+<arg type='i'/>
+</function>
+<function name='glutKeyboardFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='C'/>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutKeyboardUpFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='C'/>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutLayerGet'>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='glutLeaveGameMode'/>
+<function name='glutMainLoop'/>
+<function name='glutMenuStateFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutMenuStatusFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutMotionFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutMouseFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutOverlayDisplayFunc'>
+<arg function_pointer='true' type='^?'>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutPassiveMotionFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutPopWindow'/>
+<function name='glutPositionWindow'>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='glutPostOverlayRedisplay'/>
+<function name='glutPostRedisplay'/>
+<function name='glutPostWindowOverlayRedisplay'>
+<arg type='i'/>
+</function>
+<function name='glutPostWindowRedisplay'>
+<arg type='i'/>
+</function>
+<function name='glutPushWindow'/>
+<function name='glutRemoveMenuItem'>
+<arg type='i'/>
+</function>
+<function name='glutRemoveOverlay'/>
+<function name='glutReportErrors'/>
+<function name='glutReshapeFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutReshapeWindow'>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='glutSetColor'>
+<arg type='i'/>
+<arg type='f'/>
+<arg type='f'/>
+<arg type='f'/>
+</function>
+<function name='glutSetCursor'>
+<arg type='i'/>
+</function>
+<function name='glutSetIconTitle'>
+<arg type='*'/>
+</function>
+<function name='glutSetKeyRepeat'>
+<arg type='i'/>
+</function>
+<function name='glutSetMenu'>
+<arg type='i'/>
+</function>
+<function name='glutSetWindow'>
+<arg type='i'/>
+</function>
+<function name='glutSetWindowTitle'>
+<arg type='*'/>
+</function>
+<function name='glutSetupVideoResizing'/>
+<function name='glutShowOverlay'/>
+<function name='glutShowWindow'/>
+<function name='glutSolidCone'>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='glutSolidCube'>
+<arg type='d'/>
+</function>
+<function name='glutSolidDodecahedron'/>
+<function name='glutSolidIcosahedron'/>
+<function name='glutSolidOctahedron'/>
+<function name='glutSolidSphere'>
+<arg type='d'/>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='glutSolidTeapot'>
+<arg type='d'/>
+</function>
+<function name='glutSolidTetrahedron'/>
+<function name='glutSolidTorus'>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='glutSpaceballButtonFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutSpaceballMotionFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutSpaceballRotateFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutSpecialFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutSpecialUpFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutStopVideoResizing'/>
+<function name='glutStrokeCharacter'>
+<arg type='^v'/>
+<arg type='i'/>
+</function>
+<function name='glutStrokeLength'>
+<arg type='^v'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='glutStrokeWidth'>
+<arg type='^v'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='glutSurfaceTexture'>
+<arg type='I'/>
+<arg type='I'/>
+<arg type='i'/>
+</function>
+<function name='glutSwapBuffers'/>
+<function name='glutTabletButtonFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutTabletMotionFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutTimerFunc'>
+<arg type='I'/>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+<arg type='i'/>
+</function>
+<function name='glutUseLayer'>
+<arg type='I'/>
+</function>
+<function name='glutVideoPan'>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='glutVideoResize'>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='glutVideoResizeGet'>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='glutVisibilityFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutWMCloseFunc'>
+<arg function_pointer='true' type='^?'>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutWarpPointer'>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='glutWindowStatusFunc'>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='glutWireCone'>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='glutWireCube'>
+<arg type='d'/>
+</function>
+<function name='glutWireDodecahedron'/>
+<function name='glutWireIcosahedron'/>
+<function name='glutWireOctahedron'/>
+<function name='glutWireSphere'>
+<arg type='d'/>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='glutWireTeapot'>
+<arg type='d'/>
+</function>
+<function name='glutWireTetrahedron'/>
+<function name='glutWireTorus'>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='rot_about_axis_d'>
+<arg type='d'/>
+<arg type='^d'/>
+</function>
+<function name='rot_about_axis_f'>
+<arg type='f'/>
+<arg type='^f'/>
+</function>
+<function name='rot_axis_d'>
+<arg type='d'/>
+<arg type='^d'/>
+</function>
+<function name='rot_axis_f'>
+<arg type='f'/>
+<arg type='^f'/>
+</function>
+<function name='rot_omega_d'>
+<arg type='^d'/>
+</function>
+<function name='rot_omega_f'>
+<arg type='^f'/>
+</function>
+<function name='smapConfigureSphereMapMesh'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='smapCreateSphereMap'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<retval type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+</function>
+<function name='smapDestroySphereMap'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+</function>
+<function name='smapGenSphereMap'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+</function>
+<function name='smapGenSphereMapFromViewTexs'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+</function>
+<function name='smapGenSphereMapWithOneViewTex'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+</function>
+<function name='smapGenViewTex'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='i'/>
+</function>
+<function name='smapGenViewTexs'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+</function>
+<function name='smapGetContextData'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^^v'/>
+</function>
+<function name='smapGetDrawViewFunc'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^^?'/>
+</function>
+<function name='smapGetEye'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^f'/>
+<arg type='^f'/>
+<arg type='^f'/>
+</function>
+<function name='smapGetEyeVector'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^f'/>
+</function>
+<function name='smapGetFlags'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^i'/>
+</function>
+<function name='smapGetNearFar'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^f'/>
+<arg type='^f'/>
+</function>
+<function name='smapGetObject'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^f'/>
+<arg type='^f'/>
+<arg type='^f'/>
+</function>
+<function name='smapGetObjectVector'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^f'/>
+</function>
+<function name='smapGetPositionLightsFunc'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^^?'/>
+</function>
+<function name='smapGetSphereMapOrigin'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^i'/>
+<arg type='^i'/>
+</function>
+<function name='smapGetSphereMapTexDim'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^i'/>
+</function>
+<function name='smapGetSphereMapTexObj'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^I'/>
+</function>
+<function name='smapGetUp'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^f'/>
+<arg type='^f'/>
+<arg type='^f'/>
+</function>
+<function name='smapGetUpVector'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^f'/>
+</function>
+<function name='smapGetViewOrigin'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^i'/>
+<arg type='^i'/>
+</function>
+<function name='smapGetViewTexDim'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^i'/>
+</function>
+<function name='smapGetViewTexObj'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^I'/>
+</function>
+<function name='smapGetViewTexObjs'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^I'/>
+</function>
+<function name='smapRvecToSt'>
+<arg type='^f'/>
+<arg type='^f'/>
+<retval type='i'/>
+</function>
+<function name='smapSetContextData'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^v'/>
+</function>
+<function name='smapSetDrawViewFunc'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='smapSetEye'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='f'/>
+<arg type='f'/>
+<arg type='f'/>
+</function>
+<function name='smapSetEyeVector'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^f'/>
+</function>
+<function name='smapSetFlags'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='i'/>
+</function>
+<function name='smapSetNearFar'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='f'/>
+<arg type='f'/>
+</function>
+<function name='smapSetObject'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='f'/>
+<arg type='f'/>
+<arg type='f'/>
+</function>
+<function name='smapSetObjectVector'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^f'/>
+</function>
+<function name='smapSetPositionLightsFunc'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='i'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='smapSetSphereMapOrigin'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='smapSetSphereMapTexDim'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='i'/>
+</function>
+<function name='smapSetSphereMapTexObj'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='I'/>
+</function>
+<function name='smapSetUp'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='f'/>
+<arg type='f'/>
+<arg type='f'/>
+</function>
+<function name='smapSetUpVector'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^f'/>
+</function>
+<function name='smapSetViewOrigin'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='i'/>
+<arg type='i'/>
+</function>
+<function name='smapSetViewTexDim'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='i'/>
+</function>
+<function name='smapSetViewTexObj'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='I'/>
+</function>
+<function name='smapSetViewTexObjs'>
+<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg type='^I'/>
+</function>
+<function name='smapStToRvec'>
+<arg type='^f'/>
+<arg type='^f'/>
+</function>
+<function name='up_sanity_check'>
+<arg type='^d'/>
+<arg type='i'/>
+<arg type='^[3d]'/>
+</function>
+<function name='urot_about_axis_d'>
+<arg type='^[4d]'/>
+<arg type='d'/>
+<arg type='^d'/>
+</function>
+<function name='urot_about_axis_f'>
+<arg type='^[4f]'/>
+<arg type='f'/>
+<arg type='^f'/>
+</function>
+<function name='urot_axis_d'>
+<arg type='^[4d]'/>
+<arg type='d'/>
+<arg type='^d'/>
+</function>
+<function name='urot_axis_f'>
+<arg type='^[4f]'/>
+<arg type='f'/>
+<arg type='^f'/>
+</function>
+<function name='urot_omega_d'>
+<arg type='^[4d]'/>
+<arg type='^d'/>
+</function>
+<function name='urot_omega_f'>
+<arg type='^[4f]'/>
+<arg type='^f'/>
+</function>
+<function name='uview_direction_d'>
+<arg type='^[4d]'/>
+<arg type='^d'/>
+<arg type='^d'/>
+</function>
+<function name='uview_direction_f'>
+<arg type='^[4f]'/>
+<arg type='^f'/>
+<arg type='^f'/>
+</function>
+<function name='uviewpoint_d'>
+<arg type='^[4d]'/>
+<arg type='^d'/>
+<arg type='^d'/>
+<arg type='^d'/>
+</function>
+<function name='uviewpoint_f'>
+<arg type='^[4f]'/>
+<arg type='^f'/>
+<arg type='^f'/>
+<arg type='^f'/>
+</function>
+</signatures>

@@ -1,0 +1,412 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/SecurityFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant name='CWBSSIDDidChangeNotification' type='@'/>
+<constant name='CWCountryCodeDidChangeNotification' type='@'/>
+<constant name='CWErrorDomain' type='@'/>
+<constant name='CWLinkDidChangeNotification' type='@'/>
+<constant name='CWLinkQualityDidChangeNotification' type='@'/>
+<constant name='CWLinkQualityNotificationRSSIKey' type='@'/>
+<constant name='CWLinkQualityNotificationTransmitRateKey' type='@'/>
+<constant name='CWModeDidChangeNotification' type='@'/>
+<constant name='CWPowerDidChangeNotification' type='@'/>
+<constant name='CWSSIDDidChangeNotification' type='@'/>
+<constant name='CWScanCacheDidUpdateNotification' type='@'/>
+<constant name='CWServiceDidChangeNotification' type='@'/>
+<constant name='CoreWLANFrameworkVersionNumber' type='d'/>
+<constant name='kCWAssocKey8021XProfile' type='@'/>
+<constant name='kCWAssocKeyPassphrase' type='@'/>
+<constant name='kCWBSSIDDidChangeNotification' type='@'/>
+<constant name='kCWCountryCodeDidChangeNotification' type='@'/>
+<constant name='kCWErrorDomain' type='@'/>
+<constant name='kCWIBSSKeyChannel' type='@'/>
+<constant name='kCWIBSSKeyPassphrase' type='@'/>
+<constant name='kCWIBSSKeySSID' type='@'/>
+<constant name='kCWLinkDidChangeNotification' type='@'/>
+<constant name='kCWModeDidChangeNotification' type='@'/>
+<constant name='kCWPowerDidChangeNotification' type='@'/>
+<constant name='kCWSSIDDidChangeNotification' type='@'/>
+<constant name='kCWScanKeyBSSID' type='@'/>
+<constant name='kCWScanKeyDwellTime' type='@'/>
+<constant name='kCWScanKeyMerge' type='@'/>
+<constant name='kCWScanKeyRestTime' type='@'/>
+<constant name='kCWScanKeySSID' type='@'/>
+<constant name='kCWScanKeyScanType' type='@'/>
+<enum name='CoreWLANFrameworkVersionNumber2_0' value='200'/>
+<enum name='kCWAPFullErr' value='-3913'/>
+<enum name='kCWAssociationDeniedErr' value='-3909'/>
+<enum name='kCWAuthAlgUnsupportedErr' value='-3910'/>
+<enum name='kCWAuthenticationAlgorithmUnsupportedErr' value='-3910'/>
+<enum name='kCWChallengeFailureErr' value='-3912'/>
+<enum name='kCWChannelBand2GHz' value='1'/>
+<enum name='kCWChannelBand5GHz' value='2'/>
+<enum name='kCWChannelBandUnknown' value='0'/>
+<enum name='kCWChannelWidth20MHz' value='1'/>
+<enum name='kCWChannelWidth40MHz' value='2'/>
+<enum name='kCWChannelWidthUnknown' value='0'/>
+<enum name='kCWCipherKeyFlagsMulticast' value='4'/>
+<enum name='kCWCipherKeyFlagsNone' value='0'/>
+<enum name='kCWCipherKeyFlagsRx' value='16'/>
+<enum name='kCWCipherKeyFlagsTx' value='8'/>
+<enum name='kCWCipherKeyFlagsUnicast' value='2'/>
+<enum name='kCWCipherSuiteRejectedErr' value='-3923'/>
+<enum name='kCWDSSSOFDMUnsupportedErr' value='-3916'/>
+<enum name='kCWEAPOLErr' value='1'/>
+<enum name='kCWErr' value='-3931'/>
+<enum name='kCWError' value='-3931'/>
+<enum name='kCWFormatErr' value='-3904'/>
+<enum name='kCWHTFeaturesNotSupported' value='-3926'/>
+<enum name='kCWHTFeaturesNotSupportedErr' value='-3926'/>
+<enum name='kCWIBSSModeSecurityNone' value='0'/>
+<enum name='kCWIBSSModeSecurityWEP104' value='2'/>
+<enum name='kCWIBSSModeSecurityWEP40' value='1'/>
+<enum name='kCWIPCError' value='-3929'/>
+<enum name='kCWIPCFailureErr' value='-3929'/>
+<enum name='kCWInterfaceModeHostAP' value='3'/>
+<enum name='kCWInterfaceModeIBSS' value='2'/>
+<enum name='kCWInterfaceModeNone' value='0'/>
+<enum name='kCWInterfaceModeStation' value='1'/>
+<enum name='kCWInterfaceStateAssociating' value='3'/>
+<enum name='kCWInterfaceStateAuthenticating' value='2'/>
+<enum name='kCWInterfaceStateInactive' value='0'/>
+<enum name='kCWInterfaceStateRunning' value='4'/>
+<enum name='kCWInterfaceStateScanning' value='1'/>
+<enum name='kCWInvalidAKMPErr' value='-3920'/>
+<enum name='kCWInvalidAuthSeqNumErr' value='-3911'/>
+<enum name='kCWInvalidAuthenticationSequenceNumberErr' value='-3911'/>
+<enum name='kCWInvalidFormatErr' value='-3904'/>
+<enum name='kCWInvalidGroupCipherErr' value='-3918'/>
+<enum name='kCWInvalidInfoElementErr' value='-3917'/>
+<enum name='kCWInvalidInformationElementErr' value='-3917'/>
+<enum name='kCWInvalidPMKErr' value='-3924'/>
+<enum name='kCWInvalidPairwiseCipherErr' value='-3919'/>
+<enum name='kCWInvalidParameterErr' value='-3900'/>
+<enum name='kCWInvalidRSNCapabilitiesErr' value='-3922'/>
+<enum name='kCWNoErr' value='0'/>
+<enum name='kCWNoMemErr' value='-3901'/>
+<enum name='kCWNoMemoryErr' value='-3901'/>
+<enum name='kCWNotSupportedErr' value='-3903'/>
+<enum name='kCWOpModeHostAP' value='2'/>
+<enum name='kCWOpModeIBSS' value='1'/>
+<enum name='kCWOpModeMonitorMode' value='3'/>
+<enum name='kCWOpModeStation' value='0'/>
+<enum name='kCWOpNotPermitted' value='-3930'/>
+<enum name='kCWOperationNotPermittedErr' value='-3930'/>
+<enum name='kCWPCOTransitionTimeNotSupported' value='-3927'/>
+<enum name='kCWPCOTransitionTimeNotSupportedErr' value='-3927'/>
+<enum name='kCWPHYMode11A' value='0'/>
+<enum name='kCWPHYMode11B' value='1'/>
+<enum name='kCWPHYMode11G' value='2'/>
+<enum name='kCWPHYMode11N' value='3'/>
+<enum name='kCWPHYMode11a' value='1'/>
+<enum name='kCWPHYMode11b' value='2'/>
+<enum name='kCWPHYMode11g' value='3'/>
+<enum name='kCWPHYMode11n' value='4'/>
+<enum name='kCWPHYModeNone' value='0'/>
+<enum name='kCWParamErr' value='-3900'/>
+<enum name='kCWReassociationDeniedErr' value='-3908'/>
+<enum name='kCWRefNotBoundErr' value='-3928'/>
+<enum name='kCWReferenceNotBoundErr' value='-3928'/>
+<enum name='kCWScanTypeActive' value='0'/>
+<enum name='kCWScanTypeFast' value='2'/>
+<enum name='kCWScanTypePassive' value='1'/>
+<enum name='kCWSecurityDynamicWEP' value='6'/>
+<enum name='kCWSecurityEnterprise' value='10'/>
+<enum name='kCWSecurityModeDynamicWEP' value='4'/>
+<enum name='kCWSecurityModeOpen' value='0'/>
+<enum name='kCWSecurityModeWEP' value='1'/>
+<enum name='kCWSecurityModeWPA2_Enterprise' value='6'/>
+<enum name='kCWSecurityModeWPA2_PSK' value='3'/>
+<enum name='kCWSecurityModeWPA_Enterprise' value='5'/>
+<enum name='kCWSecurityModeWPA_PSK' value='2'/>
+<enum name='kCWSecurityModeWPS' value='7'/>
+<enum name='kCWSecurityNone' value='0'/>
+<enum name='kCWSecurityPersonal' value='5'/>
+<enum name='kCWSecurityUnknown' value64='9223372036854775807' value='2147483647'/>
+<enum name='kCWSecurityWEP' value='1'/>
+<enum name='kCWSecurityWPA2Enterprise' value='9'/>
+<enum name='kCWSecurityWPA2Personal' value='4'/>
+<enum name='kCWSecurityWPAEnterprise' value='7'/>
+<enum name='kCWSecurityWPAEnterpriseMixed' value='8'/>
+<enum name='kCWSecurityWPAPersonal' value='2'/>
+<enum name='kCWSecurityWPAPersonalMixed' value='3'/>
+<enum name='kCWShortSlotUnsupportedErr' value='-3915'/>
+<enum name='kCWSupplicantTimeoutErr' value='-3925'/>
+<enum name='kCWTimeoutErr' value='-3905'/>
+<enum name='kCWUknownErr' value='-3902'/>
+<enum name='kCWUnknownErr' value='-3902'/>
+<enum name='kCWUnspecifiedFailureErr' value='-3906'/>
+<enum name='kCWUnsupportedCapabilitiesErr' value='-3907'/>
+<enum name='kCWUnsupportedRSNVersionErr' value='-3921'/>
+<enum name='kCWUnsupportedRateSetErr' value='-3914'/>
+<function name='CWKeychainCopyEAPIdentity'>
+<arg type='^{__CFData=}'/>
+<arg type='^^{OpaqueSecIdentityRef}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CWKeychainCopyEAPIdentityList'>
+<arg type='^^{__CFArray}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CWKeychainCopyEAPUsernameAndPassword'>
+<arg type='^{__CFData=}'/>
+<arg type='^^{__CFString}'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CWKeychainCopyPassword'>
+<arg type='^{__CFData=}'/>
+<arg type='^^{__CFString}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CWKeychainDeleteEAPUsernameAndPassword'>
+<arg type='^{__CFData=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CWKeychainDeletePassword'>
+<arg type='^{__CFData=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CWKeychainSetEAPIdentity'>
+<arg type='^{__CFData=}'/>
+<arg type='^{OpaqueSecIdentityRef=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CWKeychainSetEAPUsernameAndPassword'>
+<arg type='^{__CFData=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CWKeychainSetPassword'>
+<arg type='^{__CFData=}'/>
+<arg type='^{__CFString=}'/>
+<retval type64='i' type='l'/>
+</function>
+<function name='CWMergeNetworks'>
+<arg type='@'/>
+<retval type='@'/>
+</function>
+<class name='CW8021XProfile'>
+<method selector='alwaysPromptForPassword'>
+<retval type='B'/>
+</method>
+<method selector='isEqualToProfile:'>
+<retval type='B'/>
+</method>
+<method selector='setAlwaysPromptForPassword:'>
+<arg type='B' index='0'/>
+</method>
+</class>
+<class name='CWChannel'>
+<method selector='isEqualToChannel:'>
+<retval type='B'/>
+</method>
+</class>
+<class name='CWConfiguration'>
+<method selector='alwaysRememberNetworks'>
+<retval type='B'/>
+</method>
+<method selector='disconnectOnLogout'>
+<retval type='B'/>
+</method>
+<method selector='isEqualToConfiguration:'>
+<retval type='B'/>
+</method>
+<method selector='rememberJoinedNetworks'>
+<retval type='B'/>
+</method>
+<method selector='requireAdminForIBSSCreation'>
+<retval type='B'/>
+</method>
+<method selector='requireAdminForNetworkChange'>
+<retval type='B'/>
+</method>
+<method selector='requireAdminForPowerChange'>
+<retval type='B'/>
+</method>
+<method selector='requireAdministratorForAssociation'>
+<retval type='B'/>
+</method>
+<method selector='requireAdministratorForIBSSMode'>
+<retval type='B'/>
+</method>
+<method selector='requireAdministratorForPower'>
+<retval type='B'/>
+</method>
+<method selector='setAlwaysRememberNetworks:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='setDisconnectOnLogout:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='setRequireAdminForIBSSCreation:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='setRequireAdminForNetworkChange:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='setRequireAdminForPowerChange:'>
+<arg type='B' index='0'/>
+</method>
+</class>
+<class name='CWInterface'>
+<method selector='associateToEnterpriseNetwork:identity:username:password:error:'>
+<retval type='B'/>
+</method>
+<method selector='associateToNetwork:parameters:error:'>
+<retval type='B'/>
+</method>
+<method selector='associateToNetwork:password:error:'>
+<retval type='B'/>
+</method>
+<method selector='commitConfiguration:authorization:error:'>
+<retval type='B'/>
+</method>
+<method selector='commitConfiguration:error:'>
+<retval type='B'/>
+</method>
+<method selector='deviceAttached'>
+<retval type='B'/>
+</method>
+<method selector='enableIBSSWithParameters:error:'>
+<retval type='B'/>
+</method>
+<method selector='isEqualToInterface:'>
+<retval type='B'/>
+</method>
+<method selector='power'>
+<retval type='B'/>
+</method>
+<method selector='powerOn'>
+<retval type='B'/>
+</method>
+<method selector='powerSave'>
+<retval type='B'/>
+</method>
+<method selector='serviceActive'>
+<retval type='B'/>
+</method>
+<method selector='setChannel:error:'>
+<retval type='B'/>
+</method>
+<method selector='setPairwiseMasterKey:error:'>
+<retval type='B'/>
+</method>
+<method selector='setPower:error:'>
+<arg type='B' index='0'/>
+<retval type='B'/>
+</method>
+<method selector='setWEPKey:flags:index:error:'>
+<retval type='B'/>
+</method>
+<method selector='setWLANChannel:error:'>
+<retval type='B'/>
+</method>
+<method selector='startIBSSModeWithSSID:security:channel:password:error:'>
+<retval type='B'/>
+</method>
+<method selector='supportsAES_CCM'>
+<retval type='B'/>
+</method>
+<method selector='supportsHostAP'>
+<retval type='B'/>
+</method>
+<method selector='supportsIBSS'>
+<retval type='B'/>
+</method>
+<method selector='supportsMonitorMode'>
+<retval type='B'/>
+</method>
+<method selector='supportsPMGT'>
+<retval type='B'/>
+</method>
+<method selector='supportsShortGI20MHz'>
+<retval type='B'/>
+</method>
+<method selector='supportsShortGI40MHz'>
+<retval type='B'/>
+</method>
+<method selector='supportsTKIP'>
+<retval type='B'/>
+</method>
+<method selector='supportsTSN'>
+<retval type='B'/>
+</method>
+<method selector='supportsWEP'>
+<retval type='B'/>
+</method>
+<method selector='supportsWME'>
+<retval type='B'/>
+</method>
+<method selector='supportsWPA'>
+<retval type='B'/>
+</method>
+<method selector='supportsWPA2'>
+<retval type='B'/>
+</method>
+<method selector='supportsWoW'>
+<retval type='B'/>
+</method>
+</class>
+<class name='CWMutableConfiguration'>
+<method selector='rememberJoinedNetworks'>
+<retval type='B'/>
+</method>
+<method selector='requireAdministratorForAssociation'>
+<retval type='B'/>
+</method>
+<method selector='requireAdministratorForIBSSMode'>
+<retval type='B'/>
+</method>
+<method selector='requireAdministratorForPower'>
+<retval type='B'/>
+</method>
+<method selector='setRememberJoinedNetworks:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='setRequireAdministratorForAssociation:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='setRequireAdministratorForIBSSMode:'>
+<arg type='B' index='0'/>
+</method>
+<method selector='setRequireAdministratorForPower:'>
+<arg type='B' index='0'/>
+</method>
+</class>
+<class name='CWNetwork'>
+<method selector='ibss'>
+<retval type='B'/>
+</method>
+<method selector='isEqualToNetwork:'>
+<retval type='B'/>
+</method>
+<method selector='isIBSS'>
+<retval type='B'/>
+</method>
+<method selector='supportsPHYMode:'>
+<retval type='B'/>
+</method>
+<method selector='supportsSecurity:'>
+<retval type='B'/>
+</method>
+</class>
+<class name='CWNetworkProfile'>
+<method selector='isEqualToNetworkProfile:'>
+<retval type='B'/>
+</method>
+</class>
+<class name='CWWirelessProfile'>
+<method selector='isEqualToProfile:'>
+<retval type='B'/>
+</method>
+</class>
+</signatures>

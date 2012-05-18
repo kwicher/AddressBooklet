@@ -1,0 +1,958 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<struct name='SCDynamicStoreContext' type64='{_SCDynamicStoreContext=&quot;version&quot;q&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}' type='{_SCDynamicStoreContext=&quot;version&quot;i&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}'/>
+<struct name='SCNetworkConnectionContext' type64='{_SCNetworkConnectionContext=&quot;version&quot;q&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}' type='{_SCNetworkConnectionContext=&quot;version&quot;i&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}'/>
+<struct name='SCNetworkReachabilityContext' type64='{_SCNetworkReachabilityContext=&quot;version&quot;q&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}' type='{_SCNetworkReachabilityContext=&quot;version&quot;i&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}'/>
+<struct name='SCPreferencesContext' type64='{_SCPreferencesContext=&quot;version&quot;q&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}' type='{_SCPreferencesContext=&quot;version&quot;i&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}'/>
+<cftype name='SCBondStatusRef' gettypeid_func='SCBondStatusGetTypeID' type='^{__SCBondStatus=}' tollfree='__NSCFType'/>
+<cftype name='SCDynamicStoreRef' gettypeid_func='SCDynamicStoreGetTypeID' type='^{__SCDynamicStore=}' tollfree='__NSCFType'/>
+<cftype name='SCNetworkConnectionRef' gettypeid_func='SCNetworkConnectionGetTypeID' type='^{__SCNetworkConnection=}' tollfree='__NSCFType'/>
+<cftype name='SCNetworkInterfaceRef' gettypeid_func='SCNetworkInterfaceGetTypeID' type='^{__SCNetworkInterface=}' tollfree='__NSCFType'/>
+<cftype name='SCNetworkProtocolRef' gettypeid_func='SCNetworkProtocolGetTypeID' type='^{__SCNetworkProtocol=}' tollfree='__NSCFType'/>
+<cftype name='SCNetworkReachabilityRef' gettypeid_func='SCNetworkReachabilityGetTypeID' type='^{__SCNetworkReachability=}' tollfree='__NSCFType'/>
+<cftype name='SCNetworkServiceRef' gettypeid_func='SCNetworkServiceGetTypeID' type='^{__SCNetworkService=}' tollfree='__NSCFType'/>
+<cftype name='SCNetworkSetRef' gettypeid_func='SCNetworkSetGetTypeID' type='^{__SCNetworkSet=}' tollfree='__NSCFType'/>
+<cftype name='SCPreferencesRef' gettypeid_func='SCPreferencesGetTypeID' type='^{__SCPreferences=}' tollfree='__NSCFType'/>
+<constant name='kCFErrorDomainSystemConfiguration' type='^{__CFString=}'/>
+<constant name='kSCBondStatusDeviceAggregationStatus' type='^{__CFString=}'/>
+<constant name='kSCBondStatusDeviceCollecting' type='^{__CFString=}'/>
+<constant name='kSCBondStatusDeviceDistributing' type='^{__CFString=}'/>
+<constant name='kSCDynamicStoreUseSessionKeys' type='^{__CFString=}'/>
+<constant name='kSCNetworkInterfaceIPv4' type='^{__SCNetworkInterface=}'/>
+<constant name='kSCNetworkInterfaceType6to4' type='^{__CFString=}'/>
+<constant name='kSCNetworkInterfaceTypeBluetooth' type='^{__CFString=}'/>
+<constant name='kSCNetworkInterfaceTypeBond' type='^{__CFString=}'/>
+<constant name='kSCNetworkInterfaceTypeEthernet' type='^{__CFString=}'/>
+<constant name='kSCNetworkInterfaceTypeFireWire' type='^{__CFString=}'/>
+<constant name='kSCNetworkInterfaceTypeIEEE80211' type='^{__CFString=}'/>
+<constant name='kSCNetworkInterfaceTypeIPSec' type='^{__CFString=}'/>
+<constant name='kSCNetworkInterfaceTypeIPv4' type='^{__CFString=}'/>
+<constant name='kSCNetworkInterfaceTypeIrDA' type='^{__CFString=}'/>
+<constant name='kSCNetworkInterfaceTypeL2TP' type='^{__CFString=}'/>
+<constant name='kSCNetworkInterfaceTypeModem' type='^{__CFString=}'/>
+<constant name='kSCNetworkInterfaceTypePPP' type='^{__CFString=}'/>
+<constant name='kSCNetworkInterfaceTypePPTP' type='^{__CFString=}'/>
+<constant name='kSCNetworkInterfaceTypeSerial' type='^{__CFString=}'/>
+<constant name='kSCNetworkInterfaceTypeVLAN' type='^{__CFString=}'/>
+<constant name='kSCNetworkInterfaceTypeWWAN' type='^{__CFString=}'/>
+<constant name='kSCNetworkProtocolTypeAppleTalk' type='^{__CFString=}'/>
+<constant name='kSCNetworkProtocolTypeDNS' type='^{__CFString=}'/>
+<constant name='kSCNetworkProtocolTypeIPv4' type='^{__CFString=}'/>
+<constant name='kSCNetworkProtocolTypeIPv6' type='^{__CFString=}'/>
+<constant name='kSCNetworkProtocolTypeProxies' type='^{__CFString=}'/>
+<constant name='kSCNetworkProtocolTypeSMB' type='^{__CFString=}'/>
+<string_constant name='kSCNetworkConnectionBytesIn' nsstring='true' value='BytesIn'/>
+<string_constant name='kSCNetworkConnectionBytesOut' nsstring='true' value='BytesOut'/>
+<string_constant name='kSCNetworkConnectionErrorsIn' nsstring='true' value='ErrorsIn'/>
+<string_constant name='kSCNetworkConnectionErrorsOut' nsstring='true' value='ErrorsOut'/>
+<string_constant name='kSCNetworkConnectionPacketsIn' nsstring='true' value='PacketsIn'/>
+<string_constant name='kSCNetworkConnectionPacketsOut' nsstring='true' value='PacketsOut'/>
+<string_constant name='kSCNetworkConnectionSelectionOptionOnDemandHostName' nsstring='true' value='OnDemandHostName'/>
+<string_constant name='kSCNetworkConnectionSelectionOptionOnDemandRetry' nsstring='true' value='OnDemandRetry'/>
+<enum name='kSCBondStatusLinkInvalid' value='1'/>
+<enum name='kSCBondStatusNoPartner' value='2'/>
+<enum name='kSCBondStatusNotInActiveGroup' value='3'/>
+<enum name='kSCBondStatusOK' value='0'/>
+<enum name='kSCBondStatusUnknown' value='999'/>
+<enum name='kSCNetworkConnectionConnected' value='2'/>
+<enum name='kSCNetworkConnectionConnecting' value='1'/>
+<enum name='kSCNetworkConnectionDisconnected' value='0'/>
+<enum name='kSCNetworkConnectionDisconnecting' value='3'/>
+<enum name='kSCNetworkConnectionInvalid' value='-1'/>
+<enum name='kSCNetworkConnectionPPPAuthenticating' value='5'/>
+<enum name='kSCNetworkConnectionPPPConnected' value='8'/>
+<enum name='kSCNetworkConnectionPPPConnectingLink' value='2'/>
+<enum name='kSCNetworkConnectionPPPDialOnTraffic' value='3'/>
+<enum name='kSCNetworkConnectionPPPDisconnected' value='0'/>
+<enum name='kSCNetworkConnectionPPPDisconnectingLink' value='10'/>
+<enum name='kSCNetworkConnectionPPPHoldingLinkOff' value='11'/>
+<enum name='kSCNetworkConnectionPPPInitializing' value='1'/>
+<enum name='kSCNetworkConnectionPPPNegotiatingLink' value='4'/>
+<enum name='kSCNetworkConnectionPPPNegotiatingNetwork' value='7'/>
+<enum name='kSCNetworkConnectionPPPSuspended' value='12'/>
+<enum name='kSCNetworkConnectionPPPTerminating' value='9'/>
+<enum name='kSCNetworkConnectionPPPWaitingForCallBack' value='6'/>
+<enum name='kSCNetworkConnectionPPPWaitingForRedial' value='13'/>
+<enum name='kSCNetworkFlagsConnectionAutomatic' value='8'/>
+<enum name='kSCNetworkFlagsConnectionRequired' value='4'/>
+<enum name='kSCNetworkFlagsInterventionRequired' value='16'/>
+<enum name='kSCNetworkFlagsIsDirect' value='131072'/>
+<enum name='kSCNetworkFlagsIsLocalAddress' value='65536'/>
+<enum name='kSCNetworkFlagsReachable' value='2'/>
+<enum name='kSCNetworkFlagsTransientConnection' value='1'/>
+<enum name='kSCNetworkReachabilityFlagsConnectionAutomatic' value='8'/>
+<enum name='kSCNetworkReachabilityFlagsConnectionOnDemand' value='32'/>
+<enum name='kSCNetworkReachabilityFlagsConnectionOnTraffic' value='8'/>
+<enum name='kSCNetworkReachabilityFlagsConnectionRequired' value='4'/>
+<enum name='kSCNetworkReachabilityFlagsInterventionRequired' value='16'/>
+<enum name='kSCNetworkReachabilityFlagsIsDirect' value='131072'/>
+<enum name='kSCNetworkReachabilityFlagsIsLocalAddress' value='65536'/>
+<enum name='kSCNetworkReachabilityFlagsReachable' value='2'/>
+<enum name='kSCNetworkReachabilityFlagsTransientConnection' value='1'/>
+<enum name='kSCPreferencesNotificationApply' value='2'/>
+<enum name='kSCPreferencesNotificationCommit' value='1'/>
+<enum name='kSCStatusAccessError' value='1003'/>
+<enum name='kSCStatusConnectionNoService' value='5001'/>
+<enum name='kSCStatusFailed' value='1001'/>
+<enum name='kSCStatusInvalidArgument' value='1002'/>
+<enum name='kSCStatusKeyExists' value='1005'/>
+<enum name='kSCStatusLocked' value='1006'/>
+<enum name='kSCStatusMaxLink' value='3006'/>
+<enum name='kSCStatusNeedLock' value='1007'/>
+<enum name='kSCStatusNoConfigFile' value='3003'/>
+<enum name='kSCStatusNoKey' value='1004'/>
+<enum name='kSCStatusNoLink' value='3004'/>
+<enum name='kSCStatusNoPrefsSession' value='3001'/>
+<enum name='kSCStatusNoStoreServer' value='2002'/>
+<enum name='kSCStatusNoStoreSession' value='2001'/>
+<enum name='kSCStatusNotifierActive' value='2003'/>
+<enum name='kSCStatusOK' value='0'/>
+<enum name='kSCStatusPrefsBusy' value='3002'/>
+<enum name='kSCStatusReachabilityUnknown' value='4001'/>
+<enum name='kSCStatusStale' value='3005'/>
+<function name='DHCPClientPreferencesCopyApplicationOptions'>
+<arg type='^{__CFString=}'/>
+<arg type64='^q' type='^i' type_modifier='o'/>
+<retval c_array_length_in_arg='1' type='*'/>
+</function>
+<function name='DHCPClientPreferencesSetApplicationOptions'>
+<arg type='^{__CFString=}'/>
+<arg c_array_length_in_arg='2' type='*' type_modifier='n'/>
+<arg type64='q' type='l'/>
+<retval type='B'/>
+</function>
+<function name='DHCPInfoGetLeaseStartTime'>
+<arg type='^{__CFDictionary=}'/>
+<retval type='^{__CFDate=}'/>
+</function>
+<function name='DHCPInfoGetOptionData'>
+<arg type='^{__CFDictionary=}'/>
+<arg type='C'/>
+<retval type='^{__CFData=}'/>
+</function>
+<function name='SCBondInterfaceCopyAll'>
+<arg type='^{__SCPreferences=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='SCBondInterfaceCopyAvailableMemberInterfaces'>
+<arg type='^{__SCPreferences=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='SCBondInterfaceCopyStatus'>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval already_retained='true' type='^{__SCBondStatus=}'/>
+</function>
+<function name='SCBondInterfaceCreate'>
+<arg type='^{__SCPreferences=}'/>
+<retval type='^{__SCNetworkInterface=}'/>
+</function>
+<function name='SCBondInterfaceGetMemberInterfaces'>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='^{__CFArray=}'/>
+</function>
+<function name='SCBondInterfaceGetOptions'>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='^{__CFDictionary=}'/>
+</function>
+<function name='SCBondInterfaceRemove'>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='B'/>
+</function>
+<function name='SCBondInterfaceSetLocalizedDisplayName'>
+<arg type='^{__SCNetworkInterface=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCBondInterfaceSetMemberInterfaces'>
+<arg type='^{__SCNetworkInterface=}'/>
+<arg type='^{__CFArray=}'/>
+<retval type='B'/>
+</function>
+<function name='SCBondInterfaceSetOptions'>
+<arg type='^{__SCNetworkInterface=}'/>
+<arg type='^{__CFDictionary=}'/>
+<retval type='B'/>
+</function>
+<function name='SCBondStatusGetInterfaceStatus'>
+<arg type='^{__SCBondStatus=}'/>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='^{__CFDictionary=}'/>
+</function>
+<function name='SCBondStatusGetMemberInterfaces'>
+<arg type='^{__SCBondStatus=}'/>
+<retval type='^{__CFArray=}'/>
+</function>
+<function name='SCBondStatusGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='SCCopyLastError'>
+<retval already_retained='true' type='^{__CFError=}'/>
+</function>
+<function name='SCDynamicStoreAddTemporaryValue'>
+<arg type='^{__SCDynamicStore=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='@'/>
+<retval type='B'/>
+</function>
+<function name='SCDynamicStoreAddValue'>
+<arg type='^{__SCDynamicStore=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='@'/>
+<retval type='B'/>
+</function>
+<function name='SCDynamicStoreCopyComputerName'>
+<arg type='^{__SCDynamicStore=}'/>
+<arg type='^I' type_modifier='o'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='SCDynamicStoreCopyConsoleUser'>
+<arg type='^{__SCDynamicStore=}'/>
+<arg type='^I' type_modifier='o'/>
+<arg type='^I' type_modifier='o'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='SCDynamicStoreCopyDHCPInfo'>
+<arg type='^{__SCDynamicStore=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='SCDynamicStoreCopyKeyList'>
+<arg type='^{__SCDynamicStore=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='SCDynamicStoreCopyLocalHostName'>
+<arg type='^{__SCDynamicStore=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='SCDynamicStoreCopyLocation'>
+<arg type='^{__SCDynamicStore=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='SCDynamicStoreCopyMultiple'>
+<arg type='^{__SCDynamicStore=}'/>
+<arg type='^{__CFArray=}'/>
+<arg type='^{__CFArray=}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='SCDynamicStoreCopyNotifiedKeys'>
+<arg type='^{__SCDynamicStore=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='SCDynamicStoreCopyProxies'>
+<arg type='^{__SCDynamicStore=}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='SCDynamicStoreCopyValue'>
+<arg type='^{__SCDynamicStore=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='@'/>
+</function>
+<function name='SCDynamicStoreCreate'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__CFString=}'/>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type='^{__SCDynamicStore=}'/>
+<arg type='^{__CFArray=}'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type64='^{_SCDynamicStoreContext=q^v^?^?^?}' type='^{_SCDynamicStoreContext=i^v^?^?^?}' type_modifier='n'/>
+<retval already_retained='true' type='^{__SCDynamicStore=}'/>
+</function>
+<function name='SCDynamicStoreCreateRunLoopSource'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__SCDynamicStore=}'/>
+<arg type64='q' type='l'/>
+<retval already_retained='true' type='^{__CFRunLoopSource=}'/>
+</function>
+<function name='SCDynamicStoreCreateWithOptions'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFDictionary=}'/>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type='^{__SCDynamicStore=}'/>
+<arg type='^{__CFArray=}'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type64='^{_SCDynamicStoreContext=q^v^?^?^?}' type='^{_SCDynamicStoreContext=i^v^?^?^?}' type_modifier='n'/>
+<retval already_retained='true' type='^{__SCDynamicStore=}'/>
+</function>
+<function name='SCDynamicStoreGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='SCDynamicStoreKeyCreate' variadic='true'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='SCDynamicStoreKeyCreateComputerName'>
+<arg type='^{__CFAllocator=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='SCDynamicStoreKeyCreateConsoleUser'>
+<arg type='^{__CFAllocator=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='SCDynamicStoreKeyCreateHostNames'>
+<arg type='^{__CFAllocator=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='SCDynamicStoreKeyCreateLocation'>
+<arg type='^{__CFAllocator=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='SCDynamicStoreKeyCreateNetworkGlobalEntity'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='SCDynamicStoreKeyCreateNetworkInterface'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='SCDynamicStoreKeyCreateNetworkInterfaceEntity'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='SCDynamicStoreKeyCreateNetworkServiceEntity'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='SCDynamicStoreKeyCreateProxies'>
+<arg type='^{__CFAllocator=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='SCDynamicStoreNotifyValue'>
+<arg type='^{__SCDynamicStore=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCDynamicStoreRemoveValue'>
+<arg type='^{__SCDynamicStore=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCDynamicStoreSetDispatchQueue'>
+<arg type='^{__SCDynamicStore=}'/>
+<arg type='^{dispatch_queue_s=}'/>
+<retval type='B'/>
+</function>
+<function name='SCDynamicStoreSetMultiple'>
+<arg type='^{__SCDynamicStore=}'/>
+<arg type='^{__CFDictionary=}'/>
+<arg type='^{__CFArray=}'/>
+<arg type='^{__CFArray=}'/>
+<retval type='B'/>
+</function>
+<function name='SCDynamicStoreSetNotificationKeys'>
+<arg type='^{__SCDynamicStore=}'/>
+<arg type='^{__CFArray=}'/>
+<arg type='^{__CFArray=}'/>
+<retval type='B'/>
+</function>
+<function name='SCDynamicStoreSetValue'>
+<arg type='^{__SCDynamicStore=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='@'/>
+<retval type='B'/>
+</function>
+<function name='SCError'>
+<retval type='i'/>
+</function>
+<function name='SCErrorString'>
+<arg type='i'/>
+<retval type='*'/>
+</function>
+<function name='SCNetworkCheckReachabilityByAddress'>
+<arg type='^{sockaddr=CC[14c]}' type_modifier='n'/>
+<arg type='I'/>
+<arg type='^I' type_modifier='o'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkCheckReachabilityByName'>
+<arg type='*'/>
+<arg type='^I' type_modifier='o'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkConnectionCopyExtendedStatus'>
+<arg type='^{__SCNetworkConnection=}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='SCNetworkConnectionCopyServiceID'>
+<arg type='^{__SCNetworkConnection=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='SCNetworkConnectionCopyStatistics'>
+<arg type='^{__SCNetworkConnection=}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='SCNetworkConnectionCopyUserOptions'>
+<arg type='^{__SCNetworkConnection=}'/>
+<retval already_retained='true' type='^{__CFDictionary=}'/>
+</function>
+<function name='SCNetworkConnectionCopyUserPreferences'>
+<arg type='^{__CFDictionary=}'/>
+<arg type='^^{__CFString}' type_modifier='o'/>
+<arg type='^^{__CFDictionary}' type_modifier='o'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkConnectionCreateWithServiceID'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__CFString=}'/>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type='^{__SCNetworkConnection=}'/>
+<arg type='i'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type64='^{_SCNetworkConnectionContext=q^v^?^?^?}' type='^{_SCNetworkConnectionContext=i^v^?^?^?}' type_modifier='n'/>
+<retval already_retained='true' type='^{__SCNetworkConnection=}'/>
+</function>
+<function name='SCNetworkConnectionGetStatus'>
+<arg type='^{__SCNetworkConnection=}'/>
+<retval type='i'/>
+</function>
+<function name='SCNetworkConnectionGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='SCNetworkConnectionScheduleWithRunLoop'>
+<arg type='^{__SCNetworkConnection=}'/>
+<arg type='^{__CFRunLoop=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkConnectionSetDispatchQueue'>
+<arg type='^{__SCNetworkConnection=}'/>
+<arg type='^{dispatch_queue_s=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkConnectionStart'>
+<arg type='^{__SCNetworkConnection=}'/>
+<arg type='^{__CFDictionary=}'/>
+<arg type='B'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkConnectionStop'>
+<arg type='^{__SCNetworkConnection=}'/>
+<arg type='B'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkConnectionUnscheduleFromRunLoop'>
+<arg type='^{__SCNetworkConnection=}'/>
+<arg type='^{__CFRunLoop=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkInterfaceCopyAll'>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='SCNetworkInterfaceCopyMTU'>
+<arg type='^{__SCNetworkInterface=}'/>
+<arg type='^i' type_modifier='o'/>
+<arg type='^i' type_modifier='o'/>
+<arg type='^i' type_modifier='o'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkInterfaceCopyMediaOptions'>
+<arg type='^{__SCNetworkInterface=}'/>
+<arg type='^^{__CFDictionary}' type_modifier='o'/>
+<arg type='^^{__CFDictionary}' type_modifier='o'/>
+<arg type='^^{__CFArray}' type_modifier='o'/>
+<arg type='B'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkInterfaceCopyMediaSubTypeOptions'>
+<arg type='^{__CFArray=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='SCNetworkInterfaceCopyMediaSubTypes'>
+<arg type='^{__CFArray=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='SCNetworkInterfaceCreateWithInterface'>
+<arg type='^{__SCNetworkInterface=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__SCNetworkInterface=}'/>
+</function>
+<function name='SCNetworkInterfaceForceConfigurationRefresh'>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkInterfaceGetBSDName'>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='SCNetworkInterfaceGetConfiguration'>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='^{__CFDictionary=}'/>
+</function>
+<function name='SCNetworkInterfaceGetExtendedConfiguration'>
+<arg type='^{__SCNetworkInterface=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='^{__CFDictionary=}'/>
+</function>
+<function name='SCNetworkInterfaceGetHardwareAddressString'>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='SCNetworkInterfaceGetInterface'>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='^{__SCNetworkInterface=}'/>
+</function>
+<function name='SCNetworkInterfaceGetInterfaceType'>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='SCNetworkInterfaceGetLocalizedDisplayName'>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='SCNetworkInterfaceGetSupportedInterfaceTypes'>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='^{__CFArray=}'/>
+</function>
+<function name='SCNetworkInterfaceGetSupportedProtocolTypes'>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='^{__CFArray=}'/>
+</function>
+<function name='SCNetworkInterfaceGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='SCNetworkInterfaceRefreshConfiguration'>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkInterfaceSetConfiguration'>
+<arg type='^{__SCNetworkInterface=}'/>
+<arg type='^{__CFDictionary=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkInterfaceSetExtendedConfiguration'>
+<arg type='^{__SCNetworkInterface=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFDictionary=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkInterfaceSetMTU'>
+<arg type='^{__SCNetworkInterface=}'/>
+<arg type='i'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkInterfaceSetMediaOptions'>
+<arg type='^{__SCNetworkInterface=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFArray=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkProtocolGetConfiguration'>
+<arg type='^{__SCNetworkProtocol=}'/>
+<retval type='^{__CFDictionary=}'/>
+</function>
+<function name='SCNetworkProtocolGetEnabled'>
+<arg type='^{__SCNetworkProtocol=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkProtocolGetProtocolType'>
+<arg type='^{__SCNetworkProtocol=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='SCNetworkProtocolGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='SCNetworkProtocolSetConfiguration'>
+<arg type='^{__SCNetworkProtocol=}'/>
+<arg type='^{__CFDictionary=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkProtocolSetEnabled'>
+<arg type='^{__SCNetworkProtocol=}'/>
+<arg type='B'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkReachabilityCreateWithAddress'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{sockaddr=CC[14c]}' type_modifier='n'/>
+<retval already_retained='true' type='^{__SCNetworkReachability=}'/>
+</function>
+<function name='SCNetworkReachabilityCreateWithAddressPair'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{sockaddr=CC[14c]}' type_modifier='n'/>
+<arg type='^{sockaddr=CC[14c]}' type_modifier='n'/>
+<retval already_retained='true' type='^{__SCNetworkReachability=}'/>
+</function>
+<function name='SCNetworkReachabilityCreateWithName'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='*'/>
+<retval already_retained='true' type='^{__SCNetworkReachability=}'/>
+</function>
+<function name='SCNetworkReachabilityGetFlags'>
+<arg type='^{__SCNetworkReachability=}'/>
+<arg type='^I' type_modifier='o'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkReachabilityGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='SCNetworkReachabilityScheduleWithRunLoop'>
+<arg type='^{__SCNetworkReachability=}'/>
+<arg type='^{__CFRunLoop=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkReachabilitySetCallback'>
+<arg type='^{__SCNetworkReachability=}'/>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type='^{__SCNetworkReachability=}'/>
+<arg type='I'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type64='^{_SCNetworkReachabilityContext=q^v^?^?^?}' type='^{_SCNetworkReachabilityContext=i^v^?^?^?}' type_modifier='n'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkReachabilitySetDispatchQueue'>
+<arg type='^{__SCNetworkReachability=}'/>
+<arg type='^{dispatch_queue_s=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkReachabilityUnscheduleFromRunLoop'>
+<arg type='^{__SCNetworkReachability=}'/>
+<arg type='^{__CFRunLoop=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkServiceAddProtocolType'>
+<arg type='^{__SCNetworkService=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkServiceCopy'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__SCNetworkService=}'/>
+</function>
+<function name='SCNetworkServiceCopyAll'>
+<arg type='^{__SCPreferences=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='SCNetworkServiceCopyProtocol'>
+<arg type='^{__SCNetworkService=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__SCNetworkProtocol=}'/>
+</function>
+<function name='SCNetworkServiceCopyProtocols'>
+<arg type='^{__SCNetworkService=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='SCNetworkServiceCreate'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval already_retained='true' type='^{__SCNetworkService=}'/>
+</function>
+<function name='SCNetworkServiceEstablishDefaultConfiguration'>
+<arg type='^{__SCNetworkService=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkServiceGetEnabled'>
+<arg type='^{__SCNetworkService=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkServiceGetInterface'>
+<arg type='^{__SCNetworkService=}'/>
+<retval type='^{__SCNetworkInterface=}'/>
+</function>
+<function name='SCNetworkServiceGetName'>
+<arg type='^{__SCNetworkService=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='SCNetworkServiceGetServiceID'>
+<arg type='^{__SCNetworkService=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='SCNetworkServiceGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='SCNetworkServiceRemove'>
+<arg type='^{__SCNetworkService=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkServiceRemoveProtocolType'>
+<arg type='^{__SCNetworkService=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkServiceSetEnabled'>
+<arg type='^{__SCNetworkService=}'/>
+<arg type='B'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkServiceSetName'>
+<arg type='^{__SCNetworkService=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkSetAddService'>
+<arg type='^{__SCNetworkSet=}'/>
+<arg type='^{__SCNetworkService=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkSetContainsInterface'>
+<arg type='^{__SCNetworkSet=}'/>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkSetCopy'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__SCNetworkSet=}'/>
+</function>
+<function name='SCNetworkSetCopyAll'>
+<arg type='^{__SCPreferences=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='SCNetworkSetCopyCurrent'>
+<arg type='^{__SCPreferences=}'/>
+<retval already_retained='true' type='^{__SCNetworkSet=}'/>
+</function>
+<function name='SCNetworkSetCopyServices'>
+<arg type='^{__SCNetworkSet=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='SCNetworkSetCreate'>
+<arg type='^{__SCPreferences=}'/>
+<retval already_retained='true' type='^{__SCNetworkSet=}'/>
+</function>
+<function name='SCNetworkSetGetName'>
+<arg type='^{__SCNetworkSet=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='SCNetworkSetGetServiceOrder'>
+<arg type='^{__SCNetworkSet=}'/>
+<retval type='^{__CFArray=}'/>
+</function>
+<function name='SCNetworkSetGetSetID'>
+<arg type='^{__SCNetworkSet=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='SCNetworkSetGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='SCNetworkSetRemove'>
+<arg type='^{__SCNetworkSet=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkSetRemoveService'>
+<arg type='^{__SCNetworkSet=}'/>
+<arg type='^{__SCNetworkService=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkSetSetCurrent'>
+<arg type='^{__SCNetworkSet=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkSetSetName'>
+<arg type='^{__SCNetworkSet=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCNetworkSetSetServiceOrder'>
+<arg type='^{__SCNetworkSet=}'/>
+<arg type='^{__CFArray=}'/>
+<retval type='B'/>
+</function>
+<function name='SCPreferencesAddValue'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='@'/>
+<retval type='B'/>
+</function>
+<function name='SCPreferencesApplyChanges'>
+<arg type='^{__SCPreferences=}'/>
+<retval type='B'/>
+</function>
+<function name='SCPreferencesCommitChanges'>
+<arg type='^{__SCPreferences=}'/>
+<retval type='B'/>
+</function>
+<function name='SCPreferencesCopyKeyList'>
+<arg type='^{__SCPreferences=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='SCPreferencesCreate'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__SCPreferences=}'/>
+</function>
+<function name='SCPreferencesCreateWithAuthorization'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{AuthorizationOpaqueRef=}'/>
+<retval already_retained='true' type='^{__SCPreferences=}'/>
+</function>
+<function name='SCPreferencesGetSignature'>
+<arg type='^{__SCPreferences=}'/>
+<retval type='^{__CFData=}'/>
+</function>
+<function name='SCPreferencesGetTypeID'>
+<retval type64='Q' type='L'/>
+</function>
+<function name='SCPreferencesGetValue'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='@'/>
+</function>
+<function name='SCPreferencesLock'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='B'/>
+<retval type='B'/>
+</function>
+<function name='SCPreferencesPathCreateUniqueChild'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__CFString=}'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='SCPreferencesPathGetLink'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='^{__CFString=}'/>
+</function>
+<function name='SCPreferencesPathGetValue'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='^{__CFDictionary=}'/>
+</function>
+<function name='SCPreferencesPathRemoveValue'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCPreferencesPathSetLink'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCPreferencesPathSetValue'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFDictionary=}'/>
+<retval type='B'/>
+</function>
+<function name='SCPreferencesRemoveValue'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCPreferencesScheduleWithRunLoop'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__CFRunLoop=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCPreferencesSetCallback'>
+<arg type='^{__SCPreferences=}'/>
+<arg function_pointer='true' type='^?' type_modifier='n'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='I'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type64='^{_SCPreferencesContext=q^v^?^?^?}' type='^{_SCPreferencesContext=i^v^?^?^?}' type_modifier='n'/>
+<retval type='B'/>
+</function>
+<function name='SCPreferencesSetComputerName'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__CFString=}'/>
+<arg type64='I' type='L'/>
+<retval type='B'/>
+</function>
+<function name='SCPreferencesSetDispatchQueue'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{dispatch_queue_s=}'/>
+<retval type='B'/>
+</function>
+<function name='SCPreferencesSetLocalHostName'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCPreferencesSetValue'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='@'/>
+<retval type='B'/>
+</function>
+<function name='SCPreferencesSynchronize'>
+<arg type='^{__SCPreferences=}'/>
+</function>
+<function name='SCPreferencesUnlock'>
+<arg type='^{__SCPreferences=}'/>
+<retval type='B'/>
+</function>
+<function name='SCPreferencesUnscheduleFromRunLoop'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__CFRunLoop=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCVLANInterfaceCopyAll'>
+<arg type='^{__SCPreferences=}'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='SCVLANInterfaceCopyAvailablePhysicalInterfaces'>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='SCVLANInterfaceCreate'>
+<arg type='^{__SCPreferences=}'/>
+<arg type='^{__SCNetworkInterface=}'/>
+<arg type='^{__CFNumber=}'/>
+<retval type='^{__SCNetworkInterface=}'/>
+</function>
+<function name='SCVLANInterfaceGetOptions'>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='^{__CFDictionary=}'/>
+</function>
+<function name='SCVLANInterfaceGetPhysicalInterface'>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='^{__SCNetworkInterface=}'/>
+</function>
+<function name='SCVLANInterfaceGetTag'>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='^{__CFNumber=}'/>
+</function>
+<function name='SCVLANInterfaceRemove'>
+<arg type='^{__SCNetworkInterface=}'/>
+<retval type='B'/>
+</function>
+<function name='SCVLANInterfaceSetLocalizedDisplayName'>
+<arg type='^{__SCNetworkInterface=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='SCVLANInterfaceSetOptions'>
+<arg type='^{__SCNetworkInterface=}'/>
+<arg type='^{__CFDictionary=}'/>
+<retval type='B'/>
+</function>
+<function name='SCVLANInterfaceSetPhysicalInterfaceAndTag'>
+<arg type='^{__SCNetworkInterface=}'/>
+<arg type='^{__SCNetworkInterface=}'/>
+<arg type='^{__CFNumber=}'/>
+<retval type='B'/>
+</function>
+</signatures>

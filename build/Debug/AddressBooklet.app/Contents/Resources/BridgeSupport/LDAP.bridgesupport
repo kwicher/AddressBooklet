@@ -1,0 +1,2131 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<struct name='BerMemoryFunctions' type='{lber_memory_fns=&quot;bmf_malloc&quot;^?&quot;bmf_calloc&quot;^?&quot;bmf_realloc&quot;^?&quot;bmf_free&quot;^?}'/>
+<struct name='BerValue' type64='{berval=&quot;bv_len&quot;Q&quot;bv_val&quot;*}' type='{berval=&quot;bv_len&quot;I&quot;bv_val&quot;*}'/>
+<struct name='LDAPAPIFeatureInfo' type='{ldap_apifeature_info=&quot;ldapaif_info_version&quot;i&quot;ldapaif_name&quot;*&quot;ldapaif_version&quot;i}'/>
+<struct name='LDAPAPIInfo' type='{ldapapiinfo=&quot;ldapai_info_version&quot;i&quot;ldapai_api_version&quot;i&quot;ldapai_protocol_version&quot;i&quot;ldapai_extensions&quot;^*&quot;ldapai_vendor_name&quot;*&quot;ldapai_vendor_version&quot;i}'/>
+<struct name='LDAPAVA' type64='{ldap_ava=&quot;la_attr&quot;{berval=&quot;bv_len&quot;Q&quot;bv_val&quot;*}&quot;la_value&quot;{berval=&quot;bv_len&quot;Q&quot;bv_val&quot;*}&quot;la_flags&quot;I&quot;la_private&quot;^v}' type='{ldap_ava=&quot;la_attr&quot;{berval=&quot;bv_len&quot;I&quot;bv_val&quot;*}&quot;la_value&quot;{berval=&quot;bv_len&quot;I&quot;bv_val&quot;*}&quot;la_flags&quot;I&quot;la_private&quot;^v}'/>
+<struct name='LDAPControl' type64='{ldapcontrol=&quot;ldctl_oid&quot;*&quot;ldctl_value&quot;{berval=&quot;bv_len&quot;Q&quot;bv_val&quot;*}&quot;ldctl_iscritical&quot;c}' type='{ldapcontrol=&quot;ldctl_oid&quot;*&quot;ldctl_value&quot;{berval=&quot;bv_len&quot;I&quot;bv_val&quot;*}&quot;ldctl_iscritical&quot;c}'/>
+<struct name='LDAPDerefRes' type64='{LDAPDerefRes=&quot;derefAttr&quot;*&quot;derefVal&quot;{berval=&quot;bv_len&quot;Q&quot;bv_val&quot;*}&quot;attrVals&quot;^{LDAPDerefVal}&quot;next&quot;^{LDAPDerefRes}}' type='{LDAPDerefRes=&quot;derefAttr&quot;*&quot;derefVal&quot;{berval=&quot;bv_len&quot;I&quot;bv_val&quot;*}&quot;attrVals&quot;^{LDAPDerefVal}&quot;next&quot;^{LDAPDerefRes}}'/>
+<struct name='LDAPDerefSpec' type='{LDAPDerefSpec=&quot;derefAttr&quot;*&quot;attributes&quot;^*}'/>
+<struct name='LDAPDerefVal' type='{LDAPDerefVal=&quot;type&quot;*&quot;vals&quot;^{berval}&quot;next&quot;^{LDAPDerefVal}}'/>
+<struct name='LDAPMod' type='{ldapmod=&quot;mod_op&quot;i&quot;mod_type&quot;*&quot;mod_vals&quot;(mod_vals_u=&quot;modv_strvals&quot;^*&quot;modv_bvals&quot;^^{berval})}'/>
+<struct name='LDAPSortKey' type='{ldapsortkey=&quot;attributeType&quot;*&quot;orderingRule&quot;*&quot;reverseOrder&quot;i}'/>
+<struct name='LDAPURLDesc' type='{ldap_url_desc=&quot;lud_next&quot;^{ldap_url_desc}&quot;lud_scheme&quot;*&quot;lud_host&quot;*&quot;lud_port&quot;i&quot;lud_dn&quot;*&quot;lud_attrs&quot;^*&quot;lud_scope&quot;i&quot;lud_filter&quot;*&quot;lud_exts&quot;^*&quot;lud_crit_exts&quot;i}'/>
+<struct name='LDAPVLVInfo' type='{ldapvlvinfo=&quot;ldvlv_version&quot;i&quot;ldvlv_before_count&quot;i&quot;ldvlv_after_count&quot;i&quot;ldvlv_offset&quot;i&quot;ldvlv_count&quot;i&quot;ldvlv_attrvalue&quot;^{berval}&quot;ldvlv_context&quot;^{berval}&quot;ldvlv_extradata&quot;^v}'/>
+<struct name='Sockbuf_IO' type='{sockbuf_io=&quot;sbi_setup&quot;^?&quot;sbi_remove&quot;^?&quot;sbi_ctrl&quot;^?&quot;sbi_read&quot;^?&quot;sbi_write&quot;^?&quot;sbi_close&quot;^?}'/>
+<struct name='Sockbuf_IO_Desc' type='{sockbuf_io_desc=&quot;sbiod_level&quot;i&quot;sbiod_sb&quot;^{sockbuf}&quot;sbiod_io&quot;^{sockbuf_io}&quot;sbiod_pvt&quot;^v&quot;sbiod_next&quot;^{sockbuf_io_desc}}'/>
+<struct name='berval' type64='{berval=&quot;bv_len&quot;Q&quot;bv_val&quot;*}' type='{berval=&quot;bv_len&quot;I&quot;bv_val&quot;*}'/>
+<struct name='lber_memory_fns' type='{lber_memory_fns=&quot;bmf_malloc&quot;^?&quot;bmf_calloc&quot;^?&quot;bmf_realloc&quot;^?&quot;bmf_free&quot;^?}'/>
+<struct name='ldap_apifeature_info' type='{ldap_apifeature_info=&quot;ldapaif_info_version&quot;i&quot;ldapaif_name&quot;*&quot;ldapaif_version&quot;i}'/>
+<struct name='ldap_ava' type64='{ldap_ava=&quot;la_attr&quot;{berval=&quot;bv_len&quot;Q&quot;bv_val&quot;*}&quot;la_value&quot;{berval=&quot;bv_len&quot;Q&quot;bv_val&quot;*}&quot;la_flags&quot;I&quot;la_private&quot;^v}' type='{ldap_ava=&quot;la_attr&quot;{berval=&quot;bv_len&quot;I&quot;bv_val&quot;*}&quot;la_value&quot;{berval=&quot;bv_len&quot;I&quot;bv_val&quot;*}&quot;la_flags&quot;I&quot;la_private&quot;^v}'/>
+<struct name='ldap_conncb' type='{ldap_conncb=&quot;lc_add&quot;^?&quot;lc_del&quot;^?&quot;lc_arg&quot;^v}'/>
+<struct name='ldap_sync_t' type64='{ldap_sync_t=&quot;ls_base&quot;*&quot;ls_scope&quot;i&quot;ls_filter&quot;*&quot;ls_attrs&quot;^*&quot;ls_timelimit&quot;i&quot;ls_sizelimit&quot;i&quot;ls_timeout&quot;i&quot;ls_search_entry&quot;^?&quot;ls_search_reference&quot;^?&quot;ls_intermediate&quot;^?&quot;ls_search_result&quot;^?&quot;ls_private&quot;^v&quot;ls_ld&quot;^{ldap}&quot;ls_msgid&quot;i&quot;ls_reloadHint&quot;i&quot;ls_cookie&quot;{berval=&quot;bv_len&quot;Q&quot;bv_val&quot;*}&quot;ls_refreshPhase&quot;i}' type='{ldap_sync_t=&quot;ls_base&quot;*&quot;ls_scope&quot;i&quot;ls_filter&quot;*&quot;ls_attrs&quot;^*&quot;ls_timelimit&quot;i&quot;ls_sizelimit&quot;i&quot;ls_timeout&quot;i&quot;ls_search_entry&quot;^?&quot;ls_search_reference&quot;^?&quot;ls_intermediate&quot;^?&quot;ls_search_result&quot;^?&quot;ls_private&quot;^v&quot;ls_ld&quot;^{ldap}&quot;ls_msgid&quot;i&quot;ls_reloadHint&quot;i&quot;ls_cookie&quot;{berval=&quot;bv_len&quot;I&quot;bv_val&quot;*}&quot;ls_refreshPhase&quot;i}'/>
+<struct name='ldap_url_desc' type='{ldap_url_desc=&quot;lud_next&quot;^{ldap_url_desc}&quot;lud_scheme&quot;*&quot;lud_host&quot;*&quot;lud_port&quot;i&quot;lud_dn&quot;*&quot;lud_attrs&quot;^*&quot;lud_scope&quot;i&quot;lud_filter&quot;*&quot;lud_exts&quot;^*&quot;lud_crit_exts&quot;i}'/>
+<struct name='ldapapiinfo' type='{ldapapiinfo=&quot;ldapai_info_version&quot;i&quot;ldapai_api_version&quot;i&quot;ldapai_protocol_version&quot;i&quot;ldapai_extensions&quot;^*&quot;ldapai_vendor_name&quot;*&quot;ldapai_vendor_version&quot;i}'/>
+<struct name='ldapcontrol' type64='{ldapcontrol=&quot;ldctl_oid&quot;*&quot;ldctl_value&quot;{berval=&quot;bv_len&quot;Q&quot;bv_val&quot;*}&quot;ldctl_iscritical&quot;c}' type='{ldapcontrol=&quot;ldctl_oid&quot;*&quot;ldctl_value&quot;{berval=&quot;bv_len&quot;I&quot;bv_val&quot;*}&quot;ldctl_iscritical&quot;c}'/>
+<struct name='ldapmod' type='{ldapmod=&quot;mod_op&quot;i&quot;mod_type&quot;*&quot;mod_vals&quot;(mod_vals_u=&quot;modv_strvals&quot;^*&quot;modv_bvals&quot;^^{berval})}'/>
+<struct name='ldapsortkey' type='{ldapsortkey=&quot;attributeType&quot;*&quot;orderingRule&quot;*&quot;reverseOrder&quot;i}'/>
+<struct name='ldapvlvinfo' type='{ldapvlvinfo=&quot;ldvlv_version&quot;i&quot;ldvlv_before_count&quot;i&quot;ldvlv_after_count&quot;i&quot;ldvlv_offset&quot;i&quot;ldvlv_count&quot;i&quot;ldvlv_attrvalue&quot;^{berval}&quot;ldvlv_context&quot;^{berval}&quot;ldvlv_extradata&quot;^v}'/>
+<struct name='sockbuf_io' type='{sockbuf_io=&quot;sbi_setup&quot;^?&quot;sbi_remove&quot;^?&quot;sbi_ctrl&quot;^?&quot;sbi_read&quot;^?&quot;sbi_write&quot;^?&quot;sbi_close&quot;^?}'/>
+<struct name='sockbuf_io_desc' type='{sockbuf_io_desc=&quot;sbiod_level&quot;i&quot;sbiod_sb&quot;^{sockbuf}&quot;sbiod_io&quot;^{sockbuf_io}&quot;sbiod_pvt&quot;^v&quot;sbiod_next&quot;^{sockbuf_io_desc}}'/>
+<opaque name='BerElement' type='^{berelement=}'/>
+<opaque name='LDAP' type='^{ldap=}'/>
+<opaque name='LDAPMessage' type='^{ldapmsg=}'/>
+<opaque name='Sockbuf' type='^{sockbuf=}'/>
+<constant name='ber_pvt_opt_on' type='c'/>
+<constant name='ber_sockbuf_io_debug' type='{sockbuf_io=^?^?^?^?^?^?}'/>
+<constant name='ber_sockbuf_io_fd' type='{sockbuf_io=^?^?^?^?^?^?}'/>
+<constant name='ber_sockbuf_io_readahead' type='{sockbuf_io=^?^?^?^?^?^?}'/>
+<constant name='ber_sockbuf_io_tcp' type='{sockbuf_io=^?^?^?^?^?^?}'/>
+<constant name='ber_sockbuf_io_udp' type='{sockbuf_io=^?^?^?^?^?^?}'/>
+<string_constant name='LDAP_ALL_OPERATIONAL_ATTRIBUTES' value='+'/>
+<string_constant name='LDAP_ALL_USER_ATTRIBUTES' value='*'/>
+<string_constant name='LDAP_CONTROL_ASSERT' value='1.3.6.1.1.12'/>
+<string_constant name='LDAP_CONTROL_DONTUSECOPY' value='1.3.6.1.4.1.4203.666.5.15'/>
+<string_constant name='LDAP_CONTROL_DUPENT' value='2.16.840.1.113719.1.27.101.1'/>
+<string_constant name='LDAP_CONTROL_DUPENT_ENTRY' value='2.16.840.1.113719.1.27.101.3'/>
+<string_constant name='LDAP_CONTROL_DUPENT_REQUEST' value='2.16.840.1.113719.1.27.101.1'/>
+<string_constant name='LDAP_CONTROL_DUPENT_RESPONSE' value='2.16.840.1.113719.1.27.101.2'/>
+<string_constant name='LDAP_CONTROL_MANAGEDIT' value='1.3.6.1.4.1.4203.666.5.12'/>
+<string_constant name='LDAP_CONTROL_MANAGEDSAIT' value='2.16.840.1.113730.3.4.2'/>
+<string_constant name='LDAP_CONTROL_NOOP' value='1.3.6.1.4.1.4203.666.5.2'/>
+<string_constant name='LDAP_CONTROL_NO_SUBORDINATES' value='1.3.6.1.4.1.4203.666.5.11'/>
+<string_constant name='LDAP_CONTROL_PAGEDRESULTS' value='1.2.840.113556.1.4.319'/>
+<string_constant name='LDAP_CONTROL_PASSWORDPOLICYREQUEST' value='1.3.6.1.4.1.42.2.27.8.5.1'/>
+<string_constant name='LDAP_CONTROL_PASSWORDPOLICYRESPONSE' value='1.3.6.1.4.1.42.2.27.8.5.1'/>
+<string_constant name='LDAP_CONTROL_PERSIST_ENTRY_CHANGE_NOTICE' value='2.16.840.1.113730.3.4.7'/>
+<string_constant name='LDAP_CONTROL_PERSIST_REQUEST' value='2.16.840.1.113730.3.4.3'/>
+<string_constant name='LDAP_CONTROL_POST_READ' value='1.3.6.1.1.13.2'/>
+<string_constant name='LDAP_CONTROL_PRE_READ' value='1.3.6.1.1.13.1'/>
+<string_constant name='LDAP_CONTROL_PROXY_AUTHZ' value='2.16.840.1.113730.3.4.18'/>
+<string_constant name='LDAP_CONTROL_RELAX' value='1.3.6.1.4.1.4203.666.5.12'/>
+<string_constant name='LDAP_CONTROL_SLURP' value='1.3.6.1.4.1.4203.666.5.13'/>
+<string_constant name='LDAP_CONTROL_SORTREQUEST' value='1.2.840.113556.1.4.473'/>
+<string_constant name='LDAP_CONTROL_SORTRESPONSE' value='1.2.840.113556.1.4.474'/>
+<string_constant name='LDAP_CONTROL_SUBENTRIES' value='1.3.6.1.4.1.4203.1.10.1'/>
+<string_constant name='LDAP_CONTROL_SYNC' value='1.3.6.1.4.1.4203.1.9.1.1'/>
+<string_constant name='LDAP_CONTROL_SYNC_DONE' value='1.3.6.1.4.1.4203.1.9.1.3'/>
+<string_constant name='LDAP_CONTROL_SYNC_STATE' value='1.3.6.1.4.1.4203.1.9.1.2'/>
+<string_constant name='LDAP_CONTROL_VALSORT' value='1.3.6.1.4.1.4203.666.5.14'/>
+<string_constant name='LDAP_CONTROL_VALUESRETURNFILTER' value='1.2.826.0.1.3344810.2.3'/>
+<string_constant name='LDAP_CONTROL_VLVREQUEST' value='2.16.840.1.113730.3.4.9'/>
+<string_constant name='LDAP_CONTROL_VLVRESPONSE' value='2.16.840.1.113730.3.4.10'/>
+<string_constant name='LDAP_CONTROL_X_CHAINING_BEHAVIOR' value='1.3.6.1.4.1.4203.666.11.3'/>
+<string_constant name='LDAP_CONTROL_X_DEREF' value='1.3.6.1.4.1.4203.666.5.16'/>
+<string_constant name='LDAP_CONTROL_X_DOMAIN_SCOPE' value='1.2.840.113556.1.4.1339'/>
+<string_constant name='LDAP_CONTROL_X_EXTENDED_DN' value='1.2.840.113556.1.4.529'/>
+<string_constant name='LDAP_CONTROL_X_INCREMENTAL_VALUES' value='1.2.840.113556.1.4.802'/>
+<string_constant name='LDAP_CONTROL_X_PERMISSIVE_MODIFY' value='1.2.840.113556.1.4.1413'/>
+<string_constant name='LDAP_CONTROL_X_RETURNCONTREF' value='1.3.6.1.4.1.4203.666.11.6.3'/>
+<string_constant name='LDAP_CONTROL_X_SEARCH_OPTIONS' value='1.2.840.113556.1.4.1340'/>
+<string_constant name='LDAP_CONTROL_X_TREE_DELETE' value='1.2.840.113556.1.4.805'/>
+<string_constant name='LDAP_CONTROL_X_WHATFAILED' value='1.3.6.1.4.1.4203.666.5.17'/>
+<string_constant name='LDAP_EXOP_CANCEL' value='1.3.6.1.1.8'/>
+<string_constant name='LDAP_EXOP_MODIFY_PASSWD' value='1.3.6.1.4.1.4203.1.11.1'/>
+<string_constant name='LDAP_EXOP_REFRESH' value='1.3.6.1.4.1.1466.101.119.1'/>
+<string_constant name='LDAP_EXOP_START_TLS' value='1.3.6.1.4.1.1466.20037'/>
+<string_constant name='LDAP_EXOP_TURN' value='1.3.6.1.1.19'/>
+<string_constant name='LDAP_EXOP_WHO_AM_I' value='1.3.6.1.4.1.4203.1.11.3'/>
+<string_constant name='LDAP_EXOP_X_CANCEL' value='1.3.6.1.1.8'/>
+<string_constant name='LDAP_EXOP_X_CHAINEDREQUEST' value='1.3.6.1.4.1.4203.666.11.6.1'/>
+<string_constant name='LDAP_EXOP_X_TURN' value='1.3.6.1.1.19'/>
+<string_constant name='LDAP_EXOP_X_WHO_AM_I' value='1.3.6.1.4.1.4203.1.11.3'/>
+<string_constant name='LDAP_FEATURE_ABSOLUTE_FILTERS' value='1.3.6.1.4.1.4203.1.5.3'/>
+<string_constant name='LDAP_FEATURE_ALL_OP_ATTRS' value='1.3.6.1.4.1.4203.1.5.1'/>
+<string_constant name='LDAP_FEATURE_CHILDREN_SCOPE' value='1.3.6.1.4.1.4203.666.8.1'/>
+<string_constant name='LDAP_FEATURE_LANGUAGE_RANGE_OPTIONS' value='1.3.6.1.4.1.4203.1.5.5'/>
+<string_constant name='LDAP_FEATURE_LANGUAGE_TAG_OPTIONS' value='1.3.6.1.4.1.4203.1.5.4'/>
+<string_constant name='LDAP_FEATURE_MODIFY_INCREMENT' value='1.3.6.1.1.14'/>
+<string_constant name='LDAP_FEATURE_OBJECTCLASS_ATTRS' value='1.3.6.1.4.1.4203.1.5.2'/>
+<string_constant name='LDAP_FEATURE_SUBORDINATE_SCOPE' value='1.3.6.1.4.1.4203.666.8.1'/>
+<string_constant name='LDAP_FEATURE_X_CANCHAINOPS' value='1.3.6.1.4.1.4203.666.11.6.2'/>
+<string_constant name='LDAP_NOTICE_DISCONNECT' value='1.3.6.1.4.1.1466.20036'/>
+<string_constant name='LDAP_NOTICE_OF_DISCONNECTION' value='1.3.6.1.4.1.1466.20036'/>
+<string_constant name='LDAP_NO_ATTRS' value='1.1'/>
+<string_constant name='LDAP_ROOT_DSE' value=''/>
+<string_constant name='LDAP_SASL_NULL' value=''/>
+<string_constant name='LDAP_SYNC_INFO' value='1.3.6.1.4.1.4203.1.9.1.4'/>
+<string_constant name='LDAP_SYNC_OID' value='1.3.6.1.4.1.4203.1.9.1'/>
+<string_constant name='LDAP_URLEXT_X_FAILEDNAME' value='x-failedName'/>
+<string_constant name='LDAP_URLEXT_X_FAILEDNAMEOID' value='1.3.6.1.4.1.4203.666.11.6.7'/>
+<string_constant name='LDAP_URLEXT_X_LOCALREF' value='x-localReference'/>
+<string_constant name='LDAP_URLEXT_X_LOCALREFOID' value='1.3.6.1.4.1.4203.666.11.6.4'/>
+<string_constant name='LDAP_URLEXT_X_REFTYPE' value='x-referenceType'/>
+<string_constant name='LDAP_URLEXT_X_REFTYPEOID' value='1.3.6.1.4.1.4203.666.11.6.5'/>
+<string_constant name='LDAP_URLEXT_X_SEARCHEDSUBTREE' value='x-searchedSubtree'/>
+<string_constant name='LDAP_URLEXT_X_SEARCHEDSUBTREEOID' value='1.3.6.1.4.1.4203.666.11.6.6'/>
+<string_constant name='LDAP_VENDOR_NAME' value='OpenLDAP'/>
+<string_constant name='LDAP_X_DISTPROC_BASE' value='1.3.6.1.4.1.4203.666.11.6'/>
+<enum name='LBER_BIG_TAG_MASK' value='31'/>
+<enum name='LBER_BITSTRING' value='3'/>
+<enum name='LBER_BOOLEAN' value='1'/>
+<enum name='LBER_BV_ALLOC' value='1'/>
+<enum name='LBER_BV_NOTERM' value='2'/>
+<enum name='LBER_BV_STRING' value='4'/>
+<enum name='LBER_CLASS_APPLICATION' value='64'/>
+<enum name='LBER_CLASS_CONTEXT' value='128'/>
+<enum name='LBER_CLASS_MASK' value='192'/>
+<enum name='LBER_CLASS_PRIVATE' value='192'/>
+<enum name='LBER_CLASS_UNIVERSAL' value='0'/>
+<enum name='LBER_CONSTRUCTED' value='32'/>
+<enum name='LBER_DEFAULT' value64='18446744073709551615' value='4294967295'/>
+<enum name='LBER_ENCODING_MASK' value='32'/>
+<enum name='LBER_ENUMERATED' value='10'/>
+<enum name='LBER_ERROR' value64='18446744073709551615' value='4294967295'/>
+<enum name='LBER_ERROR_MEMORY' value='2'/>
+<enum name='LBER_ERROR_NONE' value='0'/>
+<enum name='LBER_ERROR_PARAM' value='1'/>
+<enum name='LBER_FLUSH_FREE_ALWAYS' value='3'/>
+<enum name='LBER_FLUSH_FREE_NEVER' value='0'/>
+<enum name='LBER_FLUSH_FREE_ON_ERROR' value='2'/>
+<enum name='LBER_FLUSH_FREE_ON_SUCCESS' value='1'/>
+<enum name='LBER_INTEGER' value='2'/>
+<enum name='LBER_MORE_TAG_MASK' value='128'/>
+<enum name='LBER_NULL' value='5'/>
+<enum name='LBER_OCTETSTRING' value='4'/>
+<enum name='LBER_OPT_BER_BYTES_TO_WRITE' value='5'/>
+<enum name='LBER_OPT_BER_DEBUG' value='2'/>
+<enum name='LBER_OPT_BER_MEMCTX' value='6'/>
+<enum name='LBER_OPT_BER_OPTIONS' value='1'/>
+<enum name='LBER_OPT_BER_REMAINING_BYTES' value='3'/>
+<enum name='LBER_OPT_BER_TOTAL_BYTES' value='4'/>
+<enum name='LBER_OPT_BYTES_TO_WRITE' value='5'/>
+<enum name='LBER_OPT_DEBUG_LEVEL' value='2'/>
+<enum name='LBER_OPT_ERROR' value='-1'/>
+<enum name='LBER_OPT_ERROR_FN' value='32771'/>
+<enum name='LBER_OPT_LOG_PRINT_FILE' value='32772'/>
+<enum name='LBER_OPT_LOG_PRINT_FN' value='32769'/>
+<enum name='LBER_OPT_LOG_PROC' value='32774'/>
+<enum name='LBER_OPT_MEMORY_FNS' value='32770'/>
+<enum name='LBER_OPT_MEMORY_INUSE' value='32773'/>
+<enum name='LBER_OPT_REMAINING_BYTES' value='3'/>
+<enum name='LBER_OPT_SOCKBUF_DEBUG' value='4098'/>
+<enum name='LBER_OPT_SOCKBUF_DESC' value='4096'/>
+<enum name='LBER_OPT_SOCKBUF_OPTIONS' value='4097'/>
+<enum name='LBER_OPT_SUCCESS' value='0'/>
+<enum name='LBER_OPT_TOTAL_BYTES' value='4'/>
+<enum name='LBER_PRIMITIVE' value='0'/>
+<enum name='LBER_SBIOD_LEVEL_APPLICATION' value='30'/>
+<enum name='LBER_SBIOD_LEVEL_PROVIDER' value='10'/>
+<enum name='LBER_SBIOD_LEVEL_TRANSPORT' value='20'/>
+<enum name='LBER_SB_OPT_DATA_READY' value='8'/>
+<enum name='LBER_SB_OPT_DRAIN' value='10'/>
+<enum name='LBER_SB_OPT_GET_FD' value='1'/>
+<enum name='LBER_SB_OPT_GET_MAX_INCOMING' value='13'/>
+<enum name='LBER_SB_OPT_GET_SSL' value='7'/>
+<enum name='LBER_SB_OPT_HAS_IO' value='3'/>
+<enum name='LBER_SB_OPT_NEEDS_READ' value='11'/>
+<enum name='LBER_SB_OPT_NEEDS_WRITE' value='12'/>
+<enum name='LBER_SB_OPT_OPT_MAX' value='15'/>
+<enum name='LBER_SB_OPT_SET_FD' value='2'/>
+<enum name='LBER_SB_OPT_SET_MAX_INCOMING' value='14'/>
+<enum name='LBER_SB_OPT_SET_NONBLOCK' value='4'/>
+<enum name='LBER_SB_OPT_SET_READAHEAD' value='9'/>
+<enum name='LBER_SB_OPT_UNGET_BUF' value='15'/>
+<enum name='LBER_SEQUENCE' value='48'/>
+<enum name='LBER_SET' value='49'/>
+<enum name='LBER_USE_DER' value='1'/>
+<enum name='LDAPS_PORT' value='636'/>
+<enum name='LDAP_ADMINLIMIT_EXCEEDED' value='11'/>
+<enum name='LDAP_AFFECTS_MULTIPLE_DSAS' value='71'/>
+<enum name='LDAP_ALIAS_DEREF_PROBLEM' value='36'/>
+<enum name='LDAP_ALIAS_PROBLEM' value='33'/>
+<enum name='LDAP_ALREADY_EXISTS' value='68'/>
+<enum name='LDAP_API_FEATURE_CANCEL' value='1000'/>
+<enum name='LDAP_API_FEATURE_PAGED_RESULTS' value='2000'/>
+<enum name='LDAP_API_FEATURE_PASSWD_MODIFY' value='1000'/>
+<enum name='LDAP_API_FEATURE_PASSWORD_POLICY' value='1000'/>
+<enum name='LDAP_API_FEATURE_REFRESH' value='1000'/>
+<enum name='LDAP_API_FEATURE_SERVER_SIDE_SORT' value='2000'/>
+<enum name='LDAP_API_FEATURE_TURN' value='1000'/>
+<enum name='LDAP_API_FEATURE_VIRTUAL_LIST_VIEW' value='2000'/>
+<enum name='LDAP_API_FEATURE_WHOAMI' value='1000'/>
+<enum name='LDAP_API_FEATURE_X_OPENLDAP' value='20423'/>
+<enum name='LDAP_API_INFO_VERSION' value='1'/>
+<enum name='LDAP_API_VERSION' value='3001'/>
+<enum name='LDAP_ASSERTION_FAILED' value='122'/>
+<enum name='LDAP_AUTH_KRBV4' value='255'/>
+<enum name='LDAP_AUTH_KRBV41' value='129'/>
+<enum name='LDAP_AUTH_KRBV42' value='130'/>
+<enum name='LDAP_AUTH_METHOD_NOT_SUPPORTED' value='7'/>
+<enum name='LDAP_AUTH_NEGOTIATE' value='1279'/>
+<enum name='LDAP_AUTH_NONE' value='0'/>
+<enum name='LDAP_AUTH_SASL' value='163'/>
+<enum name='LDAP_AUTH_SIMPLE' value='128'/>
+<enum name='LDAP_AUTH_UNKNOWN' value='-6'/>
+<enum name='LDAP_AVA_BINARY' value='2'/>
+<enum name='LDAP_AVA_FREE_ATTR' value='16'/>
+<enum name='LDAP_AVA_FREE_VALUE' value='32'/>
+<enum name='LDAP_AVA_NONPRINTABLE' value='4'/>
+<enum name='LDAP_AVA_NULL' value='0'/>
+<enum name='LDAP_AVA_STRING' value='1'/>
+<enum name='LDAP_BUSY' value='51'/>
+<enum name='LDAP_CANCELLED' value='118'/>
+<enum name='LDAP_CANNOT_CANCEL' value='121'/>
+<enum name='LDAP_CHAINING_PREFERRED' value='0'/>
+<enum name='LDAP_CHAINING_REQUIRED' value='1'/>
+<enum name='LDAP_CLIENT_LOOP' value='-16'/>
+<enum name='LDAP_COMPARE_FALSE' value='5'/>
+<enum name='LDAP_COMPARE_TRUE' value='6'/>
+<enum name='LDAP_CONFIDENTIALITY_REQUIRED' value='13'/>
+<enum name='LDAP_CONNECT_ERROR' value='-11'/>
+<enum name='LDAP_CONSTRAINT_VIOLATION' value='19'/>
+<enum name='LDAP_CONTROL_NOT_FOUND' value='-13'/>
+<enum name='LDAP_CONTROL_PERSIST_ENTRY_CHANGE_ADD' value='1'/>
+<enum name='LDAP_CONTROL_PERSIST_ENTRY_CHANGE_DELETE' value='2'/>
+<enum name='LDAP_CONTROL_PERSIST_ENTRY_CHANGE_MODIFY' value='4'/>
+<enum name='LDAP_CONTROL_PERSIST_ENTRY_CHANGE_RENAME' value='8'/>
+<enum name='LDAP_CUP_INVALID_DATA' value='115'/>
+<enum name='LDAP_CUP_RELOAD_REQUIRED' value='117'/>
+<enum name='LDAP_CUP_RESOURCES_EXHAUSTED' value='113'/>
+<enum name='LDAP_CUP_SECURITY_VIOLATION' value='114'/>
+<enum name='LDAP_CUP_UNSUPPORTED_SCHEME' value='116'/>
+<enum name='LDAP_DECODING_ERROR' value='-4'/>
+<enum name='LDAP_DEPRECATED' value='1'/>
+<enum name='LDAP_DEREF_ALWAYS' value='3'/>
+<enum name='LDAP_DEREF_FINDING' value='2'/>
+<enum name='LDAP_DEREF_NEVER' value='0'/>
+<enum name='LDAP_DEREF_SEARCHING' value='1'/>
+<enum name='LDAP_DN_FORMAT_AD_CANONICAL' value='80'/>
+<enum name='LDAP_DN_FORMAT_DCE' value='48'/>
+<enum name='LDAP_DN_FORMAT_LBER' value='240'/>
+<enum name='LDAP_DN_FORMAT_LDAP' value='0'/>
+<enum name='LDAP_DN_FORMAT_LDAPV2' value='32'/>
+<enum name='LDAP_DN_FORMAT_LDAPV3' value='16'/>
+<enum name='LDAP_DN_FORMAT_MASK' value='240'/>
+<enum name='LDAP_DN_FORMAT_UFN' value='64'/>
+<enum name='LDAP_DN_PEDANTIC' value='61440'/>
+<enum name='LDAP_DN_PRETTY' value='256'/>
+<enum name='LDAP_DN_P_NOLEADTRAILSPACES' value='4096'/>
+<enum name='LDAP_DN_P_NOSPACEAFTERRDN' value='8192'/>
+<enum name='LDAP_DN_SKIP' value='512'/>
+<enum name='LDAP_ENCODING_ERROR' value='-3'/>
+<enum name='LDAP_FEATURE_INFO_VERSION' value='1'/>
+<enum name='LDAP_FILTER_AND' value='160'/>
+<enum name='LDAP_FILTER_APPROX' value='168'/>
+<enum name='LDAP_FILTER_EQUALITY' value='163'/>
+<enum name='LDAP_FILTER_ERROR' value='-7'/>
+<enum name='LDAP_FILTER_EXT' value='169'/>
+<enum name='LDAP_FILTER_EXT_DNATTRS' value='132'/>
+<enum name='LDAP_FILTER_EXT_OID' value='129'/>
+<enum name='LDAP_FILTER_EXT_TYPE' value='130'/>
+<enum name='LDAP_FILTER_EXT_VALUE' value='131'/>
+<enum name='LDAP_FILTER_GE' value='165'/>
+<enum name='LDAP_FILTER_LE' value='166'/>
+<enum name='LDAP_FILTER_NOT' value='162'/>
+<enum name='LDAP_FILTER_OR' value='161'/>
+<enum name='LDAP_FILTER_PRESENT' value='135'/>
+<enum name='LDAP_FILTER_SUBSTRINGS' value='164'/>
+<enum name='LDAP_INAPPROPRIATE_AUTH' value='48'/>
+<enum name='LDAP_INAPPROPRIATE_MATCHING' value='18'/>
+<enum name='LDAP_INSUFFICIENT_ACCESS' value='50'/>
+<enum name='LDAP_INVALID_CREDENTIALS' value='49'/>
+<enum name='LDAP_INVALID_DN_SYNTAX' value='34'/>
+<enum name='LDAP_INVALID_SYNTAX' value='21'/>
+<enum name='LDAP_IS_LEAF' value='35'/>
+<enum name='LDAP_LOCAL_ERROR' value='-2'/>
+<enum name='LDAP_LOOP_DETECT' value='54'/>
+<enum name='LDAP_MAXINT' value='2147483647'/>
+<enum name='LDAP_MOD_ADD' value='0'/>
+<enum name='LDAP_MOD_BVALUES' value='128'/>
+<enum name='LDAP_MOD_DELETE' value='1'/>
+<enum name='LDAP_MOD_INCREMENT' value='3'/>
+<enum name='LDAP_MOD_OP' value='7'/>
+<enum name='LDAP_MOD_REPLACE' value='2'/>
+<enum name='LDAP_MORE_RESULTS_TO_RETURN' value='-15'/>
+<enum name='LDAP_MSG_ALL' value='1'/>
+<enum name='LDAP_MSG_ONE' value='0'/>
+<enum name='LDAP_MSG_RECEIVED' value='2'/>
+<enum name='LDAP_NAMING_VIOLATION' value='64'/>
+<enum name='LDAP_NOT_ALLOWED_ON_NONLEAF' value='66'/>
+<enum name='LDAP_NOT_ALLOWED_ON_RDN' value='67'/>
+<enum name='LDAP_NOT_SUPPORTED' value='-12'/>
+<enum name='LDAP_NO_LIMIT' value='0'/>
+<enum name='LDAP_NO_MEMORY' value='-10'/>
+<enum name='LDAP_NO_OBJECT_CLASS_MODS' value='69'/>
+<enum name='LDAP_NO_RESULTS_RETURNED' value='-14'/>
+<enum name='LDAP_NO_SUCH_ATTRIBUTE' value='16'/>
+<enum name='LDAP_NO_SUCH_OBJECT' value='32'/>
+<enum name='LDAP_NO_SUCH_OPERATION' value='119'/>
+<enum name='LDAP_OBJECT_CLASS_VIOLATION' value='65'/>
+<enum name='LDAP_OPERATIONS_ERROR' value='1'/>
+<enum name='LDAP_OPT_API_EXTENSION_BASE' value='16384'/>
+<enum name='LDAP_OPT_API_FEATURE_INFO' value='21'/>
+<enum name='LDAP_OPT_API_INFO' value='0'/>
+<enum name='LDAP_OPT_CLIENT_CONTROLS' value='19'/>
+<enum name='LDAP_OPT_CONNECT_ASYNC' value='20496'/>
+<enum name='LDAP_OPT_CONNECT_CB' value='20497'/>
+<enum name='LDAP_OPT_DEBUG_LEVEL' value='20481'/>
+<enum name='LDAP_OPT_DEFBASE' value='20489'/>
+<enum name='LDAP_OPT_DEREF' value='2'/>
+<enum name='LDAP_OPT_DESC' value='1'/>
+<enum name='LDAP_OPT_DIAGNOSTIC_MESSAGE' value='50'/>
+<enum name='LDAP_OPT_ENCRYPT' value='150'/>
+<enum name='LDAP_OPT_ERROR' value='-1'/>
+<enum name='LDAP_OPT_ERROR_NUMBER' value='49'/>
+<enum name='LDAP_OPT_ERROR_STRING' value='50'/>
+<enum name='LDAP_OPT_HOST_NAME' value='48'/>
+<enum name='LDAP_OPT_MATCHED_DN' value='51'/>
+<enum name='LDAP_OPT_NETWORK_TIMEOUT' value='20485'/>
+<enum name='LDAP_OPT_NOREVERSE_LOOKUP' value='24843'/>
+<enum name='LDAP_OPT_PRIVATE_EXTENSION_BASE' value='28672'/>
+<enum name='LDAP_OPT_PROTOCOL_VERSION' value='17'/>
+<enum name='LDAP_OPT_REFERRALS' value='8'/>
+<enum name='LDAP_OPT_REFERRAL_URLS' value='20487'/>
+<enum name='LDAP_OPT_REFHOPLIMIT' value='20483'/>
+<enum name='LDAP_OPT_RESTART' value='9'/>
+<enum name='LDAP_OPT_RESULT_CODE' value='49'/>
+<enum name='LDAP_OPT_SASL_METHOD' value='151'/>
+<enum name='LDAP_OPT_SECURITY_CONTEXT' value='153'/>
+<enum name='LDAP_OPT_SERVER_CONTROLS' value='18'/>
+<enum name='LDAP_OPT_SIGN' value='149'/>
+<enum name='LDAP_OPT_SIZELIMIT' value='3'/>
+<enum name='LDAP_OPT_SOCKBUF' value='20488'/>
+<enum name='LDAP_OPT_SSPI_FLAGS' value='146'/>
+<enum name='LDAP_OPT_SUCCESS' value='0'/>
+<enum name='LDAP_OPT_TIMELIMIT' value='4'/>
+<enum name='LDAP_OPT_TIMEOUT' value='20482'/>
+<enum name='LDAP_OPT_URI' value='20486'/>
+<enum name='LDAP_OPT_X_GSSAPI_ALLOW_REMOTE_PRINCIPAL' value='25089'/>
+<enum name='LDAP_OPT_X_GSSAPI_DO_NOT_FREE_CONTEXT' value='25088'/>
+<enum name='LDAP_OPT_X_KEEPALIVE_IDLE' value='25344'/>
+<enum name='LDAP_OPT_X_KEEPALIVE_INTERVAL' value='25346'/>
+<enum name='LDAP_OPT_X_KEEPALIVE_PROBES' value='25345'/>
+<enum name='LDAP_OPT_X_SASL_AUTHCID' value='24834'/>
+<enum name='LDAP_OPT_X_SASL_AUTHZID' value='24835'/>
+<enum name='LDAP_OPT_X_SASL_GSS_CREDS' value='24845'/>
+<enum name='LDAP_OPT_X_SASL_MAXBUFSIZE' value='24841'/>
+<enum name='LDAP_OPT_X_SASL_MECH' value='24832'/>
+<enum name='LDAP_OPT_X_SASL_MECHLIST' value='24842'/>
+<enum name='LDAP_OPT_X_SASL_NOCANON' value='24843'/>
+<enum name='LDAP_OPT_X_SASL_REALM' value='24833'/>
+<enum name='LDAP_OPT_X_SASL_SECPROPS' value='24838'/>
+<enum name='LDAP_OPT_X_SASL_SSF' value='24836'/>
+<enum name='LDAP_OPT_X_SASL_SSF_EXTERNAL' value='24837'/>
+<enum name='LDAP_OPT_X_SASL_SSF_MAX' value='24840'/>
+<enum name='LDAP_OPT_X_SASL_SSF_MIN' value='24839'/>
+<enum name='LDAP_OPT_X_SASL_USERNAME' value='24844'/>
+<enum name='LDAP_OPT_X_TLS' value='24576'/>
+<enum name='LDAP_OPT_X_TLS_ALLOW' value='3'/>
+<enum name='LDAP_OPT_X_TLS_CACERTDIR' value='24579'/>
+<enum name='LDAP_OPT_X_TLS_CACERTFILE' value='24578'/>
+<enum name='LDAP_OPT_X_TLS_CERTFILE' value='24580'/>
+<enum name='LDAP_OPT_X_TLS_CIPHER_SUITE' value='24584'/>
+<enum name='LDAP_OPT_X_TLS_CONNECT_ARG' value='24589'/>
+<enum name='LDAP_OPT_X_TLS_CONNECT_CB' value='24588'/>
+<enum name='LDAP_OPT_X_TLS_CRLCHECK' value='24587'/>
+<enum name='LDAP_OPT_X_TLS_CRLFILE' value='24592'/>
+<enum name='LDAP_OPT_X_TLS_CRL_ALL' value='2'/>
+<enum name='LDAP_OPT_X_TLS_CRL_NONE' value='0'/>
+<enum name='LDAP_OPT_X_TLS_CRL_PEER' value='1'/>
+<enum name='LDAP_OPT_X_TLS_CTX' value='24577'/>
+<enum name='LDAP_OPT_X_TLS_DEMAND' value='2'/>
+<enum name='LDAP_OPT_X_TLS_DHFILE' value='24590'/>
+<enum name='LDAP_OPT_X_TLS_HARD' value='1'/>
+<enum name='LDAP_OPT_X_TLS_KEYFILE' value='24581'/>
+<enum name='LDAP_OPT_X_TLS_NEVER' value='0'/>
+<enum name='LDAP_OPT_X_TLS_NEWCTX' value='24591'/>
+<enum name='LDAP_OPT_X_TLS_PASSPHRASE_TOOL' value='24831'/>
+<enum name='LDAP_OPT_X_TLS_PROTOCOL_MIN' value='24583'/>
+<enum name='LDAP_OPT_X_TLS_PROTOCOL_SSL2' value='512'/>
+<enum name='LDAP_OPT_X_TLS_PROTOCOL_SSL3' value='768'/>
+<enum name='LDAP_OPT_X_TLS_PROTOCOL_TLS1_0' value='769'/>
+<enum name='LDAP_OPT_X_TLS_PROTOCOL_TLS1_1' value='770'/>
+<enum name='LDAP_OPT_X_TLS_PROTOCOL_TLS1_2' value='771'/>
+<enum name='LDAP_OPT_X_TLS_RANDOM_FILE' value='24585'/>
+<enum name='LDAP_OPT_X_TLS_REQUIRE_CERT' value='24582'/>
+<enum name='LDAP_OPT_X_TLS_SSL_CTX' value='24586'/>
+<enum name='LDAP_OPT_X_TLS_TRY' value='4'/>
+<enum name='LDAP_OTHER' value='80'/>
+<enum name='LDAP_PARAM_ERROR' value='-9'/>
+<enum name='LDAP_PARTIAL_RESULTS' value='9'/>
+<enum name='LDAP_PORT' value='389'/>
+<enum name='LDAP_PROTOCOL_ERROR' value='2'/>
+<enum name='LDAP_PROXIED_AUTHORIZATION_DENIED' value='123'/>
+<enum name='LDAP_REFERRAL' value='10'/>
+<enum name='LDAP_REFERRALS_PREFERRED' value='2'/>
+<enum name='LDAP_REFERRALS_REQUIRED' value='3'/>
+<enum name='LDAP_REFERRAL_LIMIT_EXCEEDED' value='-17'/>
+<enum name='LDAP_REQ_ABANDON' value='80'/>
+<enum name='LDAP_REQ_ADD' value='104'/>
+<enum name='LDAP_REQ_BIND' value='96'/>
+<enum name='LDAP_REQ_COMPARE' value='110'/>
+<enum name='LDAP_REQ_DELETE' value='74'/>
+<enum name='LDAP_REQ_EXTENDED' value='119'/>
+<enum name='LDAP_REQ_MODDN' value='108'/>
+<enum name='LDAP_REQ_MODIFY' value='102'/>
+<enum name='LDAP_REQ_MODRDN' value='108'/>
+<enum name='LDAP_REQ_RENAME' value='108'/>
+<enum name='LDAP_REQ_SEARCH' value='99'/>
+<enum name='LDAP_REQ_UNBIND' value='66'/>
+<enum name='LDAP_RESULTS_TOO_LARGE' value='70'/>
+<enum name='LDAP_RES_ADD' value='105'/>
+<enum name='LDAP_RES_ANY' value='-1'/>
+<enum name='LDAP_RES_BIND' value='97'/>
+<enum name='LDAP_RES_COMPARE' value='111'/>
+<enum name='LDAP_RES_DELETE' value='107'/>
+<enum name='LDAP_RES_EXTENDED' value='120'/>
+<enum name='LDAP_RES_INTERMEDIATE' value='121'/>
+<enum name='LDAP_RES_MODDN' value='109'/>
+<enum name='LDAP_RES_MODIFY' value='103'/>
+<enum name='LDAP_RES_MODRDN' value='109'/>
+<enum name='LDAP_RES_RENAME' value='109'/>
+<enum name='LDAP_RES_SEARCH_ENTRY' value='100'/>
+<enum name='LDAP_RES_SEARCH_REFERENCE' value='115'/>
+<enum name='LDAP_RES_SEARCH_RESULT' value='101'/>
+<enum name='LDAP_RES_UNSOLICITED' value='0'/>
+<enum name='LDAP_SASL_AUTOMATIC' value='0'/>
+<enum name='LDAP_SASL_BIND_IN_PROGRESS' value='14'/>
+<enum name='LDAP_SASL_INTERACTIVE' value='1'/>
+<enum name='LDAP_SASL_QUIET' value='2'/>
+<enum name='LDAP_SCOPE_BASE' value='0'/>
+<enum name='LDAP_SCOPE_BASEOBJECT' value='0'/>
+<enum name='LDAP_SCOPE_CHILDREN' value='3'/>
+<enum name='LDAP_SCOPE_DEFAULT' value='-1'/>
+<enum name='LDAP_SCOPE_ONE' value='1'/>
+<enum name='LDAP_SCOPE_ONELEVEL' value='1'/>
+<enum name='LDAP_SCOPE_SUB' value='2'/>
+<enum name='LDAP_SCOPE_SUBORDINATE' value='3'/>
+<enum name='LDAP_SCOPE_SUBTREE' value='2'/>
+<enum name='LDAP_SEARCH_FLAG_DOMAIN_SCOPE' value='1'/>
+<enum name='LDAP_SEARCH_FLAG_PHANTOM_ROOT' value='2'/>
+<enum name='LDAP_SERVER_DOWN' value='-1'/>
+<enum name='LDAP_SIZELIMIT_EXCEEDED' value='4'/>
+<enum name='LDAP_STRONGER_AUTH_REQUIRED' value='8'/>
+<enum name='LDAP_STRONG_AUTH_NOT_SUPPORTED' value='7'/>
+<enum name='LDAP_STRONG_AUTH_REQUIRED' value='8'/>
+<enum name='LDAP_SUBSTRING_ANY' value='129'/>
+<enum name='LDAP_SUBSTRING_FINAL' value='130'/>
+<enum name='LDAP_SUBSTRING_INITIAL' value='128'/>
+<enum name='LDAP_SUCCESS' value='0'/>
+<enum name='LDAP_SYNC_ADD' value='1'/>
+<enum name='LDAP_SYNC_CAPI_ADD' value='1'/>
+<enum name='LDAP_SYNC_CAPI_DELETE' value='3'/>
+<enum name='LDAP_SYNC_CAPI_DELETES' value='19'/>
+<enum name='LDAP_SYNC_CAPI_DELETES_IDSET' value='51'/>
+<enum name='LDAP_SYNC_CAPI_DONE' value='80'/>
+<enum name='LDAP_SYNC_CAPI_DONE_FLAG' value='64'/>
+<enum name='LDAP_SYNC_CAPI_IDSET_FLAG' value='32'/>
+<enum name='LDAP_SYNC_CAPI_MODIFY' value='2'/>
+<enum name='LDAP_SYNC_CAPI_NONE' value='-1'/>
+<enum name='LDAP_SYNC_CAPI_PHASE_FLAG' value='16'/>
+<enum name='LDAP_SYNC_CAPI_PRESENT' value='0'/>
+<enum name='LDAP_SYNC_CAPI_PRESENTS' value='16'/>
+<enum name='LDAP_SYNC_CAPI_PRESENTS_IDSET' value='48'/>
+<enum name='LDAP_SYNC_DELETE' value='3'/>
+<enum name='LDAP_SYNC_MODIFY' value='2'/>
+<enum name='LDAP_SYNC_NEW_COOKIE' value='4'/>
+<enum name='LDAP_SYNC_NONE' value='0'/>
+<enum name='LDAP_SYNC_PRESENT' value='0'/>
+<enum name='LDAP_SYNC_REFRESH_AND_PERSIST' value='3'/>
+<enum name='LDAP_SYNC_REFRESH_DELETES' value='1'/>
+<enum name='LDAP_SYNC_REFRESH_ONLY' value='1'/>
+<enum name='LDAP_SYNC_REFRESH_PRESENTS' value='0'/>
+<enum name='LDAP_SYNC_REFRESH_REQUIRED' value='4096'/>
+<enum name='LDAP_SYNC_RESERVED' value='2'/>
+<enum name='LDAP_TAG_CONTROLS' value='160'/>
+<enum name='LDAP_TAG_EXOP_MODIFY_PASSWD_GEN' value='128'/>
+<enum name='LDAP_TAG_EXOP_MODIFY_PASSWD_ID' value='128'/>
+<enum name='LDAP_TAG_EXOP_MODIFY_PASSWD_NEW' value='130'/>
+<enum name='LDAP_TAG_EXOP_MODIFY_PASSWD_OLD' value='129'/>
+<enum name='LDAP_TAG_EXOP_REFRESH_REQ_DN' value='128'/>
+<enum name='LDAP_TAG_EXOP_REFRESH_REQ_TTL' value='129'/>
+<enum name='LDAP_TAG_EXOP_REFRESH_RES_TTL' value='128'/>
+<enum name='LDAP_TAG_EXOP_REQ_OID' value='128'/>
+<enum name='LDAP_TAG_EXOP_REQ_VALUE' value='129'/>
+<enum name='LDAP_TAG_EXOP_RES_OID' value='138'/>
+<enum name='LDAP_TAG_EXOP_RES_VALUE' value='139'/>
+<enum name='LDAP_TAG_IM_RES_OID' value='128'/>
+<enum name='LDAP_TAG_IM_RES_VALUE' value='129'/>
+<enum name='LDAP_TAG_LDAPCRED' value='4'/>
+<enum name='LDAP_TAG_LDAPDN' value='4'/>
+<enum name='LDAP_TAG_MESSAGE' value='48'/>
+<enum name='LDAP_TAG_MSGID' value='2'/>
+<enum name='LDAP_TAG_NEWSUPERIOR' value='128'/>
+<enum name='LDAP_TAG_REFERRAL' value='163'/>
+<enum name='LDAP_TAG_REFRESHDELETES' value='1'/>
+<enum name='LDAP_TAG_REFRESHDONE' value='1'/>
+<enum name='LDAP_TAG_RELOAD_HINT' value='1'/>
+<enum name='LDAP_TAG_SASL_RES_CREDS' value='135'/>
+<enum name='LDAP_TAG_SYNC_COOKIE' value='4'/>
+<enum name='LDAP_TAG_SYNC_ID_SET' value='163'/>
+<enum name='LDAP_TAG_SYNC_NEW_COOKIE' value='128'/>
+<enum name='LDAP_TAG_SYNC_REFRESH_DELETE' value='161'/>
+<enum name='LDAP_TAG_SYNC_REFRESH_PRESENT' value='162'/>
+<enum name='LDAP_TIMELIMIT_EXCEEDED' value='3'/>
+<enum name='LDAP_TIMEOUT' value='-5'/>
+<enum name='LDAP_TOO_LATE' value='120'/>
+<enum name='LDAP_TYPE_OR_VALUE_EXISTS' value='20'/>
+<enum name='LDAP_UNAVAILABLE' value='52'/>
+<enum name='LDAP_UNAVAILABLE_CRITICAL_EXTENSION' value='12'/>
+<enum name='LDAP_UNDEFINED_TYPE' value='17'/>
+<enum name='LDAP_UNWILLING_TO_PERFORM' value='53'/>
+<enum name='LDAP_URL_ERR_BADATTRS' value='7'/>
+<enum name='LDAP_URL_ERR_BADENCLOSURE' value='4'/>
+<enum name='LDAP_URL_ERR_BADEXTS' value='10'/>
+<enum name='LDAP_URL_ERR_BADFILTER' value='9'/>
+<enum name='LDAP_URL_ERR_BADHOST' value='6'/>
+<enum name='LDAP_URL_ERR_BADSCHEME' value='3'/>
+<enum name='LDAP_URL_ERR_BADSCOPE' value='8'/>
+<enum name='LDAP_URL_ERR_BADURL' value='5'/>
+<enum name='LDAP_URL_ERR_MEM' value='1'/>
+<enum name='LDAP_URL_ERR_PARAM' value='2'/>
+<enum name='LDAP_URL_SUCCESS' value='0'/>
+<enum name='LDAP_USER_CANCELLED' value='-8'/>
+<enum name='LDAP_VERSION' value='2'/>
+<enum name='LDAP_VERSION1' value='1'/>
+<enum name='LDAP_VERSION2' value='2'/>
+<enum name='LDAP_VERSION3' value='3'/>
+<enum name='LDAP_VERSION_MAX' value='3'/>
+<enum name='LDAP_VERSION_MIN' value='2'/>
+<enum name='LDAP_VLV_ERROR' value='76'/>
+<enum name='LDAP_X_ASSERTION_FAILED' value='16655'/>
+<enum name='LDAP_X_CANNOT_CHAIN' value='16657'/>
+<enum name='LDAP_X_CONNECTING' value='-18'/>
+<enum name='LDAP_X_INVALIDREFERENCE' value='16658'/>
+<enum name='LDAP_X_NO_OPERATION' value='16654'/>
+<enum name='LDAP_X_NO_REFERRALS_FOUND' value='16656'/>
+<enum name='LDAP_X_PROXY_AUTHZ_FAILURE' value='47'/>
+<enum name='LDAP_X_SYNC_REFRESH_REQUIRED' value='16640'/>
+<enum name='PP_accountLocked' value='1'/>
+<enum name='PP_changeAfterReset' value='2'/>
+<enum name='PP_insufficientPasswordQuality' value='5'/>
+<enum name='PP_mustSupplyOldPassword' value='4'/>
+<enum name='PP_noError' value='65535'/>
+<enum name='PP_passwordExpired' value='0'/>
+<enum name='PP_passwordInHistory' value='8'/>
+<enum name='PP_passwordModNotAllowed' value='3'/>
+<enum name='PP_passwordTooShort' value='6'/>
+<enum name='PP_passwordTooYoung' value='7'/>
+<function name='ber_alloc'>
+<retval type='^{berelement=}'/>
+</function>
+<function name='ber_alloc_t'>
+<arg type='i'/>
+<retval type='^{berelement=}'/>
+</function>
+<function name='ber_bprint'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+</function>
+<function name='ber_bvarray_add'>
+<arg type='^^{berval}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type='i'/>
+</function>
+<function name='ber_bvarray_free'>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+</function>
+<function name='ber_bvdup'>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type64='^{berval=Q*}' type='^{berval=I*}'/>
+</function>
+<function name='ber_bvecadd'>
+<arg type='^^^{berval}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type='i'/>
+</function>
+<function name='ber_bvecfree'>
+<arg type='^^{berval}'/>
+</function>
+<function name='ber_bvfree'>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+</function>
+<function name='ber_bvreplace'>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type64='^{berval=Q*}' type='^{berval=I*}'/>
+</function>
+<function name='ber_decode_oid'>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type='i'/>
+</function>
+<function name='ber_dump'>
+<arg type='^{berelement=}'/>
+<arg type='i'/>
+</function>
+<function name='ber_dup'>
+<arg type='^{berelement=}'/>
+<retval type='^{berelement=}'/>
+</function>
+<function name='ber_dupbv'>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type64='^{berval=Q*}' type='^{berval=I*}'/>
+</function>
+<function name='ber_encode_oid'>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type='i'/>
+</function>
+<function name='ber_errno_addr'>
+<retval type='^i'/>
+</function>
+<function name='ber_error_print'>
+<arg type='*'/>
+</function>
+<function name='ber_first_element'>
+<arg type='^{berelement=}'/>
+<arg type64='^Q' type='^I'/>
+<arg type='^*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_flatten'>
+<arg type='^{berelement=}'/>
+<arg type='^^{berval}'/>
+<retval type='i'/>
+</function>
+<function name='ber_flatten2'>
+<arg type='^{berelement=}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ber_flush'>
+<arg type='^{sockbuf=}'/>
+<arg type='^{berelement=}'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ber_flush2'>
+<arg type='^{sockbuf=}'/>
+<arg type='^{berelement=}'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ber_free'>
+<arg type='^{berelement=}'/>
+<arg type='i'/>
+</function>
+<function name='ber_free_buf'>
+<arg type='^{berelement=}'/>
+</function>
+<function name='ber_get_bitstringa'>
+<arg type='^{berelement=}'/>
+<arg type='^*'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_get_boolean'>
+<arg type='^{berelement=}'/>
+<arg type='^i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_get_enum'>
+<arg type='^{berelement=}'/>
+<arg type='^i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_get_int'>
+<arg type='^{berelement=}'/>
+<arg type='^i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_get_next'>
+<arg type='^{sockbuf=}'/>
+<arg type64='^Q' type='^I'/>
+<arg type='^{berelement=}'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_get_null'>
+<arg type='^{berelement=}'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_get_option'>
+<arg type='^v'/>
+<arg type='i'/>
+<arg type='^v'/>
+<retval type='i'/>
+</function>
+<function name='ber_get_stringa'>
+<arg type='^{berelement=}'/>
+<arg type='^*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_get_stringal'>
+<arg type='^{berelement=}'/>
+<arg type='^^{berval}'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_get_stringb'>
+<arg type='^{berelement=}'/>
+<arg type='*'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_get_stringbv'>
+<arg type='^{berelement=}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='i'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_get_tag'>
+<arg type='^{berelement=}'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_init'>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type='^{berelement=}'/>
+</function>
+<function name='ber_init2'>
+<arg type='^{berelement=}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='i'/>
+</function>
+<function name='ber_init_w_nullc'>
+<arg type='^{berelement=}'/>
+<arg type='i'/>
+</function>
+<function name='ber_mem2bv'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type64='^{berval=Q*}' type='^{berval=I*}'/>
+</function>
+<function name='ber_memalloc'>
+<arg type64='Q' type='L'/>
+<retval type='^v'/>
+</function>
+<function name='ber_memcalloc'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type='^v'/>
+</function>
+<function name='ber_memfree'>
+<arg type='^v'/>
+</function>
+<function name='ber_memrealloc'>
+<arg type='^v'/>
+<arg type64='Q' type='L'/>
+<retval type='^v'/>
+</function>
+<function name='ber_memvfree'>
+<arg type='^^v'/>
+</function>
+<function name='ber_next_element'>
+<arg type='^{berelement=}'/>
+<arg type64='^Q' type='^I'/>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_peek_element'>
+<arg type='^{berelement=}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_peek_tag'>
+<arg type='^{berelement=}'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_printf' variadic='true'>
+<arg type='^{berelement=}'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='ber_put_berval'>
+<arg type='^{berelement=}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='ber_put_bitstring'>
+<arg type='^{berelement=}'/>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='ber_put_boolean'>
+<arg type='^{berelement=}'/>
+<arg type='i'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='ber_put_enum'>
+<arg type='^{berelement=}'/>
+<arg type='i'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='ber_put_int'>
+<arg type='^{berelement=}'/>
+<arg type='i'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='ber_put_null'>
+<arg type='^{berelement=}'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='ber_put_ostring'>
+<arg type='^{berelement=}'/>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='ber_put_seq'>
+<arg type='^{berelement=}'/>
+<retval type='i'/>
+</function>
+<function name='ber_put_set'>
+<arg type='^{berelement=}'/>
+<retval type='i'/>
+</function>
+<function name='ber_put_string'>
+<arg type='^{berelement=}'/>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='ber_read'>
+<arg type='^{berelement=}'/>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='ber_remaining'>
+<arg type='^{berelement=}'/>
+<retval type='i'/>
+</function>
+<function name='ber_reset'>
+<arg type='^{berelement=}'/>
+<arg type='i'/>
+</function>
+<function name='ber_scanf' variadic='true'>
+<arg type='^{berelement=}'/>
+<arg type='*'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_set_option'>
+<arg type='^v'/>
+<arg type='i'/>
+<arg type='^v'/>
+<retval type='i'/>
+</function>
+<function name='ber_skip_data'>
+<arg type='^{berelement=}'/>
+<arg type64='Q' type='L'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='ber_skip_element'>
+<arg type='^{berelement=}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_skip_tag'>
+<arg type='^{berelement=}'/>
+<arg type64='^Q' type='^I'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_sockbuf_add_io'>
+<arg type='^{sockbuf=}'/>
+<arg type='^{sockbuf_io=^?^?^?^?^?^?}'/>
+<arg type='i'/>
+<arg type='^v'/>
+<retval type='i'/>
+</function>
+<function name='ber_sockbuf_alloc'>
+<retval type='^{sockbuf=}'/>
+</function>
+<function name='ber_sockbuf_ctrl'>
+<arg type='^{sockbuf=}'/>
+<arg type='i'/>
+<arg type='^v'/>
+<retval type='i'/>
+</function>
+<function name='ber_sockbuf_free'>
+<arg type='^{sockbuf=}'/>
+</function>
+<function name='ber_sockbuf_remove_io'>
+<arg type='^{sockbuf=}'/>
+<arg type='^{sockbuf_io=^?^?^?^?^?^?}'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ber_start_seq'>
+<arg type='^{berelement=}'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='ber_start_set'>
+<arg type='^{berelement=}'/>
+<arg type64='Q' type='L'/>
+<retval type='i'/>
+</function>
+<function name='ber_str2bv'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type64='^{berval=Q*}' type='^{berval=I*}'/>
+</function>
+<function name='ber_strdup'>
+<arg type='*'/>
+<retval type='*'/>
+</function>
+<function name='ber_strndup'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<retval type='*'/>
+</function>
+<function name='ber_strnlen'>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<retval type64='Q' type='L'/>
+</function>
+<function name='ber_write'>
+<arg type='^{berelement=}'/>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<retval type64='q' type='l'/>
+</function>
+<function name='der_alloc'>
+<retval type='^{berelement=}'/>
+</function>
+<function name='ldap_X509dn2bv'>
+<arg type='^v'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^^^{ldap_ava}'/>
+<arg type='I'/>
+<arg type='^v'/>
+<retval type='i'/>
+</arg>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='ldap_abandon'>
+<arg type='^{ldap=}'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_abandon_ext'>
+<arg type='^{ldap=}'/>
+<arg type='i'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_add'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='^^{ldapmod}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_add_ext'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='^^{ldapmod}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_add_ext_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='^^{ldapmod}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_add_result_entry'>
+<arg type='^^{ldapmsg}'/>
+<arg type='^{ldapmsg=}'/>
+</function>
+<function name='ldap_add_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='^^{ldapmod}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_bind'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_bind_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_bv2dn'>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='^^^^{ldap_ava}'/>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='ldap_bv2escaped_filter_value'>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_bv2rdn'>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='^^^{ldap_ava}'/>
+<arg type='^*'/>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='ldap_cancel'>
+<arg type='^{ldap=}'/>
+<arg type='i'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_cancel_s'>
+<arg type='^{ldap=}'/>
+<arg type='i'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_compare'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_compare_ext'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_compare_ext_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_compare_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_control_create'>
+<arg type='*'/>
+<arg type='i'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='i'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_control_dup'>
+<arg type64='^{ldapcontrol=*{berval=Q*}c}' type='^{ldapcontrol=*{berval=I*}c}'/>
+<retval type64='^{ldapcontrol=*{berval=Q*}c}' type='^{ldapcontrol=*{berval=I*}c}'/>
+</function>
+<function name='ldap_control_find'>
+<arg type='*'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^^{ldapcontrol}'/>
+<retval type64='^{ldapcontrol=*{berval=Q*}c}' type='^{ldapcontrol=*{berval=I*}c}'/>
+</function>
+<function name='ldap_control_free'>
+<arg type64='^{ldapcontrol=*{berval=Q*}c}' type='^{ldapcontrol=*{berval=I*}c}'/>
+</function>
+<function name='ldap_controls_dup'>
+<arg type='^^{ldapcontrol}'/>
+<retval type='^^{ldapcontrol}'/>
+</function>
+<function name='ldap_controls_free'>
+<arg type='^^{ldapcontrol}'/>
+</function>
+<function name='ldap_count_entries'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_count_messages'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_count_references'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_count_values'>
+<arg type='^*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_count_values_len'>
+<arg type='^^{berval}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_create'>
+<arg type='^^{ldap}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_create_assertion_control'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='i'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_create_assertion_control_value'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_create_control'>
+<arg type='*'/>
+<arg type='^{berelement=}'/>
+<arg type='i'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_create_deref_control'>
+<arg type='^{ldap=}'/>
+<arg type='^{LDAPDerefSpec=*^*}'/>
+<arg type='i'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_create_deref_control_value'>
+<arg type='^{ldap=}'/>
+<arg type='^{LDAPDerefSpec=*^*}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_create_page_control'>
+<arg type='^{ldap=}'/>
+<arg type='i'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='i'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_create_page_control_value'>
+<arg type='^{ldap=}'/>
+<arg type='i'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_create_passwordpolicy_control'>
+<arg type='^{ldap=}'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_create_sort_control'>
+<arg type='^{ldap=}'/>
+<arg type='^^{ldapsortkey}'/>
+<arg type='i'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_create_sort_control_value'>
+<arg type='^{ldap=}'/>
+<arg type='^^{ldapsortkey}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_create_sort_keylist'>
+<arg type='^^^{ldapsortkey}'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_create_vlv_control'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapvlvinfo=iiiii^{berval}^{berval}^v}'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_create_vlv_control_value'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapvlvinfo=iiiii^{berval}^{berval}^v}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_dcedn2dn'>
+<arg type='*'/>
+<retval type='*'/>
+</function>
+<function name='ldap_delete'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_delete_ext'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_delete_ext_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_delete_result_entry'>
+<arg type='^^{ldapmsg}'/>
+<arg type='^{ldapmsg=}'/>
+<retval type='^{ldapmsg=}'/>
+</function>
+<function name='ldap_delete_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_derefresponse_free'>
+<arg type64='^{LDAPDerefRes=*{berval=Q*}^{LDAPDerefVal}^{LDAPDerefRes}}' type='^{LDAPDerefRes=*{berval=I*}^{LDAPDerefVal}^{LDAPDerefRes}}'/>
+</function>
+<function name='ldap_dn2ad_canonical'>
+<arg type='*'/>
+<retval type='*'/>
+</function>
+<function name='ldap_dn2bv'>
+<arg type='^^^{ldap_ava}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='ldap_dn2dcedn'>
+<arg type='*'/>
+<retval type='*'/>
+</function>
+<function name='ldap_dn2domain'>
+<arg type='*'/>
+<arg type='^*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_dn2str'>
+<arg type='^^^{ldap_ava}'/>
+<arg type='^*'/>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='ldap_dn2ufn'>
+<arg type='*'/>
+<retval type='*'/>
+</function>
+<function name='ldap_dn_normalize'>
+<arg type='*'/>
+<arg type='I'/>
+<arg type='^*'/>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='ldap_dnfree'>
+<arg type='^^^{ldap_ava}'/>
+</function>
+<function name='ldap_domain2dn'>
+<arg type='*'/>
+<arg type='^*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_domain2hostlist'>
+<arg type='*'/>
+<arg type='^*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_err2string'>
+<arg type='i'/>
+<retval type='*'/>
+</function>
+<function name='ldap_explode_dn'>
+<arg type='*'/>
+<arg type='i'/>
+<retval type='^*'/>
+</function>
+<function name='ldap_explode_rdn'>
+<arg type='*'/>
+<arg type='i'/>
+<retval type='^*'/>
+</function>
+<function name='ldap_extended_operation'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_extended_operation_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^*'/>
+<arg type='^^{berval}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_find_control'>
+<arg type='*'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type64='^{ldapcontrol=*{berval=Q*}c}' type='^{ldapcontrol=*{berval=I*}c}'/>
+</function>
+<function name='ldap_first_attribute'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<arg type='^^{berelement}'/>
+<retval type='*'/>
+</function>
+<function name='ldap_first_entry'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<retval type='^{ldapmsg=}'/>
+</function>
+<function name='ldap_first_message'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<retval type='^{ldapmsg=}'/>
+</function>
+<function name='ldap_first_reference'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<retval type='^{ldapmsg=}'/>
+</function>
+<function name='ldap_free_sort_keylist'>
+<arg type='^^{ldapsortkey}'/>
+</function>
+<function name='ldap_free_urldesc'>
+<arg type='^{ldap_url_desc=^{ldap_url_desc}**i*^*i*^*i}'/>
+</function>
+<function name='ldap_get_attribute_ber'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<arg type='^{berelement=}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='^^{berval}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_get_dn'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<retval type='*'/>
+</function>
+<function name='ldap_get_dn_ber'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<arg type='^^{berelement}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_get_entry_controls'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<arg type='^^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_get_option'>
+<arg type='^{ldap=}'/>
+<arg type='i'/>
+<arg type='^v'/>
+<retval type='i'/>
+</function>
+<function name='ldap_get_values'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<arg type='*'/>
+<retval type='^*'/>
+</function>
+<function name='ldap_get_values_len'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<arg type='*'/>
+<retval type='^^{berval}'/>
+</function>
+<function name='ldap_gssapi_bind'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_gssapi_bind_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_init'>
+<arg type='*'/>
+<arg type='i'/>
+<retval type='^{ldap=}'/>
+</function>
+<function name='ldap_initialize'>
+<arg type='^^{ldap}'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_install_tls'>
+<arg type='^{ldap=}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_is_ldap_url'>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_is_ldapi_url'>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_is_ldaps_url'>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_memalloc'>
+<arg type64='Q' type='L'/>
+<retval type='^v'/>
+</function>
+<function name='ldap_memcalloc'>
+<arg type64='Q' type='L'/>
+<arg type64='Q' type='L'/>
+<retval type='^v'/>
+</function>
+<function name='ldap_memfree'>
+<arg type='^v'/>
+</function>
+<function name='ldap_memrealloc'>
+<arg type='^v'/>
+<arg type64='Q' type='L'/>
+<retval type='^v'/>
+</function>
+<function name='ldap_memvfree'>
+<arg type='^^v'/>
+</function>
+<function name='ldap_modify'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='^^{ldapmod}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_modify_ext'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='^^{ldapmod}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_modify_ext_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='^^{ldapmod}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_modify_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='^^{ldapmod}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_modrdn'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_modrdn2'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_modrdn2_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_modrdn_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_mods_free'>
+<arg type='^^{ldapmod}'/>
+<arg type='i'/>
+</function>
+<function name='ldap_msgdelete'>
+<arg type='^{ldap=}'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_msgfree'>
+<arg type='^{ldapmsg=}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_msgid'>
+<arg type='^{ldapmsg=}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_msgtype'>
+<arg type='^{ldapmsg=}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_next_attribute'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<arg type='^{berelement=}'/>
+<retval type='*'/>
+</function>
+<function name='ldap_next_entry'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<retval type='^{ldapmsg=}'/>
+</function>
+<function name='ldap_next_message'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<retval type='^{ldapmsg=}'/>
+</function>
+<function name='ldap_next_reference'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<retval type='^{ldapmsg=}'/>
+</function>
+<function name='ldap_open'>
+<arg type='*'/>
+<arg type='i'/>
+<retval type='^{ldap=}'/>
+</function>
+<function name='ldap_parse_deref_control'>
+<arg type='^{ldap=}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{LDAPDerefRes}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_parse_derefresponse_control'>
+<arg type='^{ldap=}'/>
+<arg type64='^{ldapcontrol=*{berval=Q*}c}' type='^{ldapcontrol=*{berval=I*}c}'/>
+<arg type='^^{LDAPDerefRes}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_parse_extended_result'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<arg type='^*'/>
+<arg type='^^{berval}'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_parse_intermediate'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<arg type='^*'/>
+<arg type='^^{berval}'/>
+<arg type='^^^{ldapcontrol}'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_parse_page_control'>
+<arg type='^{ldap=}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^i'/>
+<arg type='^^{berval}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_parse_pageresponse_control'>
+<arg type='^{ldap=}'/>
+<arg type64='^{ldapcontrol=*{berval=Q*}c}' type='^{ldapcontrol=*{berval=I*}c}'/>
+<arg type='^i'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_parse_passwd'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_parse_passwordpolicy_control'>
+<arg type='^{ldap=}'/>
+<arg type64='^{ldapcontrol=*{berval=Q*}c}' type='^{ldapcontrol=*{berval=I*}c}'/>
+<arg type='^i'/>
+<arg type='^i'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_parse_reference'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<arg type='^^*'/>
+<arg type='^^^{ldapcontrol}'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_parse_refresh'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_parse_result'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<arg type='^i'/>
+<arg type='^*'/>
+<arg type='^*'/>
+<arg type='^^*'/>
+<arg type='^^^{ldapcontrol}'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_parse_sasl_bind_result'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<arg type='^^{berval}'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_parse_sort_control'>
+<arg type='^{ldap=}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type64='^Q' type='^L'/>
+<arg type='^*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_parse_sortresponse_control'>
+<arg type='^{ldap=}'/>
+<arg type64='^{ldapcontrol=*{berval=Q*}c}' type='^{ldapcontrol=*{berval=I*}c}'/>
+<arg type='^i'/>
+<arg type='^*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_parse_vlv_control'>
+<arg type='^{ldap=}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type64='^Q' type='^L'/>
+<arg type64='^Q' type='^L'/>
+<arg type='^^{berval}'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_parse_vlvresponse_control'>
+<arg type='^{ldap=}'/>
+<arg type64='^{ldapcontrol=*{berval=Q*}c}' type='^{ldapcontrol=*{berval=I*}c}'/>
+<arg type='^i'/>
+<arg type='^i'/>
+<arg type='^^{berval}'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_parse_whoami'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<arg type='^^{berval}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_passwd'>
+<arg type='^{ldap=}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_passwd_s'>
+<arg type='^{ldap=}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_passwordpolicy_err2txt'>
+<arg type='i'/>
+<retval type='*'/>
+</function>
+<function name='ldap_perror'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+</function>
+<function name='ldap_put_vrFilter'>
+<arg type='^{berelement=}'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_rdn2bv'>
+<arg type='^^{ldap_ava}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='ldap_rdn2str'>
+<arg type='^^{ldap_ava}'/>
+<arg type='^*'/>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='ldap_rdnfree'>
+<arg type='^^{ldap_ava}'/>
+</function>
+<function name='ldap_refresh'>
+<arg type='^{ldap=}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='i'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_refresh_s'>
+<arg type='^{ldap=}'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='i'/>
+<arg type='^i'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_rename'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='i'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_rename2'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_rename2_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_rename_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='i'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_result'>
+<arg type='^{ldap=}'/>
+<arg type='i'/>
+<arg type='i'/>
+<arg type64='^{timeval=qi}' type='^{timeval=ii}'/>
+<arg type='^^{ldapmsg}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_result2error'>
+<arg type='^{ldap=}'/>
+<arg type='^{ldapmsg=}'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_sasl_bind'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_sasl_bind_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type64='^{berval=Q*}' type='^{berval=I*}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{berval}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_sasl_interactive_bind_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='I'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{ldap=}'/>
+<arg type='I'/>
+<arg type='^v'/>
+<arg type='^v'/>
+<retval type='i'/>
+</arg>
+<arg type='^v'/>
+<retval type='i'/>
+</function>
+<function name='ldap_search'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='i'/>
+<arg type='*'/>
+<arg type='^*'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_search_ext'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='i'/>
+<arg type='*'/>
+<arg type='^*'/>
+<arg type='i'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type64='^{timeval=qi}' type='^{timeval=ii}'/>
+<arg type='i'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_search_ext_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='i'/>
+<arg type='*'/>
+<arg type='^*'/>
+<arg type='i'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type64='^{timeval=qi}' type='^{timeval=ii}'/>
+<arg type='i'/>
+<arg type='^^{ldapmsg}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_search_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='i'/>
+<arg type='*'/>
+<arg type='^*'/>
+<arg type='i'/>
+<arg type='^^{ldapmsg}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_search_st'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='i'/>
+<arg type='*'/>
+<arg type='^*'/>
+<arg type='i'/>
+<arg type64='^{timeval=qi}' type='^{timeval=ii}'/>
+<arg type='^^{ldapmsg}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_set_nextref_proc'>
+<arg type='^{ldap=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{ldap=}'/>
+<arg type='^^*'/>
+<arg type='^i'/>
+<arg type='^v'/>
+<retval type='i'/>
+</arg>
+<arg type='^v'/>
+<retval type='i'/>
+</function>
+<function name='ldap_set_option'>
+<arg type='^{ldap=}'/>
+<arg type='i'/>
+<arg type='^v'/>
+<retval type='i'/>
+</function>
+<function name='ldap_set_rebind_proc'>
+<arg type='^{ldap=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type64='Q' type='L'/>
+<arg type='i'/>
+<arg type='^v'/>
+<retval type='i'/>
+</arg>
+<arg type='^v'/>
+<retval type='i'/>
+</function>
+<function name='ldap_set_urllist_proc'>
+<arg type='^{ldap=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{ldap=}'/>
+<arg type='^^{ldap_url_desc}'/>
+<arg type='^^{ldap_url_desc}'/>
+<arg type='^v'/>
+<retval type='i'/>
+</arg>
+<arg type='^v'/>
+<retval type='i'/>
+</function>
+<function name='ldap_simple_bind'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_simple_bind_s'>
+<arg type='^{ldap=}'/>
+<arg type='*'/>
+<arg type='*'/>
+<retval type='i'/>
+</function>
+<function name='ldap_sort_entries'>
+<arg type='^{ldap=}'/>
+<arg type='^^{ldapmsg}'/>
+<arg type='*'/>
+<arg function_pointer='true' type='^?'>
+<arg type='*'/>
+<arg type='*'/>
+<retval type='i'/>
+</arg>
+<retval type='i'/>
+</function>
+<function name='ldap_sort_strcasecmp'>
+<arg type='^v'/>
+<arg type='^v'/>
+<retval type='i'/>
+</function>
+<function name='ldap_sort_values'>
+<arg type='^{ldap=}'/>
+<arg type='^*'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='^v'/>
+<retval type='i'/>
+</arg>
+<retval type='i'/>
+</function>
+<function name='ldap_start_tls'>
+<arg type='^{ldap=}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_start_tls_s'>
+<arg type='^{ldap=}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_str2dn'>
+<arg type='*'/>
+<arg type='^^^^{ldap_ava}'/>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='ldap_str2rdn'>
+<arg type='*'/>
+<arg type='^^^{ldap_ava}'/>
+<arg type='^*'/>
+<arg type='I'/>
+<retval type='i'/>
+</function>
+<function name='ldap_strdup'>
+<arg type='*'/>
+<retval type='*'/>
+</function>
+<function name='ldap_sync_destroy'>
+<arg type64='^{ldap_sync_t=*i*^*iii^?^?^?^?^v^{ldap}ii{berval=Q*}i}' type='^{ldap_sync_t=*i*^*iii^?^?^?^?^v^{ldap}ii{berval=I*}i}'/>
+<arg type='i'/>
+</function>
+<function name='ldap_sync_init'>
+<arg type64='^{ldap_sync_t=*i*^*iii^?^?^?^?^v^{ldap}ii{berval=Q*}i}' type='^{ldap_sync_t=*i*^*iii^?^?^?^?^v^{ldap}ii{berval=I*}i}'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_sync_init_refresh_and_persist'>
+<arg type64='^{ldap_sync_t=*i*^*iii^?^?^?^?^v^{ldap}ii{berval=Q*}i}' type='^{ldap_sync_t=*i*^*iii^?^?^?^?^v^{ldap}ii{berval=I*}i}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_sync_init_refresh_only'>
+<arg type64='^{ldap_sync_t=*i*^*iii^?^?^?^?^v^{ldap}ii{berval=Q*}i}' type='^{ldap_sync_t=*i*^*iii^?^?^?^?^v^{ldap}ii{berval=I*}i}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_sync_initialize'>
+<arg type64='^{ldap_sync_t=*i*^*iii^?^?^?^?^v^{ldap}ii{berval=Q*}i}' type='^{ldap_sync_t=*i*^*iii^?^?^?^?^v^{ldap}ii{berval=I*}i}'/>
+<retval type64='^{ldap_sync_t=*i*^*iii^?^?^?^?^v^{ldap}ii{berval=Q*}i}' type='^{ldap_sync_t=*i*^*iii^?^?^?^?^v^{ldap}ii{berval=I*}i}'/>
+</function>
+<function name='ldap_sync_poll'>
+<arg type64='^{ldap_sync_t=*i*^*iii^?^?^?^?^v^{ldap}ii{berval=Q*}i}' type='^{ldap_sync_t=*i*^*iii^?^?^?^?^v^{ldap}ii{berval=I*}i}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_tls_inplace'>
+<arg type='^{ldap=}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_turn'>
+<arg type='^{ldap=}'/>
+<arg type='i'/>
+<arg type='*'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_turn_s'>
+<arg type='^{ldap=}'/>
+<arg type='i'/>
+<arg type='*'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_unbind'>
+<arg type='^{ldap=}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_unbind_ext'>
+<arg type='^{ldap=}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_unbind_ext_s'>
+<arg type='^{ldap=}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_unbind_s'>
+<arg type='^{ldap=}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_url_desc2str'>
+<arg type='^{ldap_url_desc=^{ldap_url_desc}**i*^*i*^*i}'/>
+<retval type='*'/>
+</function>
+<function name='ldap_url_parse'>
+<arg type='*'/>
+<arg type='^^{ldap_url_desc}'/>
+<retval type='i'/>
+</function>
+<function name='ldap_value_free'>
+<arg type='^*'/>
+</function>
+<function name='ldap_value_free_len'>
+<arg type='^^{berval}'/>
+</function>
+<function name='ldap_whoami'>
+<arg type='^{ldap=}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^i'/>
+<retval type='i'/>
+</function>
+<function name='ldap_whoami_s'>
+<arg type='^{ldap=}'/>
+<arg type='^^{berval}'/>
+<arg type='^^{ldapcontrol}'/>
+<arg type='^^{ldapcontrol}'/>
+<retval type='i'/>
+</function>
+</signatures>
