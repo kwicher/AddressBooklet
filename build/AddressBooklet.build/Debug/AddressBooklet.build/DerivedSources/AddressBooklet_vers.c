@@ -1,1 +1,0 @@
- const unsigned char AddressBookletVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:AddressBooklet  PROJECT:AddressBooklet-" "\n"; const double AddressBookletVersionNumber __attribute__ ((used)) = (double)0.;
